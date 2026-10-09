@@ -14,6 +14,35 @@ try{
  await page.goto(base+'werkstatt/');await page.waitForFunction(()=>document.querySelector('#storage-status').textContent.includes('Lokal gesichert'));
  await page.waitForFunction(()=>document.querySelector('#render-status').textContent.includes('Ziehen:'));
  const canvas=page.locator('#canvas-host canvas');
+ // The idle viewer must release the shared GPU; continuous redraw starved the
+ // second context's startup in field acceptance on software WebGL.
+ async function frameCount(){return Number(await canvas.getAttribute('data-render-count'))}
+ async function settled(){
+  await page.waitForFunction(()=>{
+   const count=document.querySelector('#canvas-host canvas')?.dataset.renderCount;
+   const now=performance.now();
+   if(window.__lastRenderCount!==count){window.__lastRenderCount=count;window.__lastRenderAt=now;return false}
+   return Number(count)>0&&now-window.__lastRenderAt>600;
+  },null,{polling:100});
+ }
+ await settled();const idle=await frameCount();await page.waitForTimeout(400);assert.equal(await frameCount(),idle,'idle scene keeps rendering');
+ const second=await browser.newContext(),secondPage=await second.newPage();
+ await secondPage.goto(base+'werkstatt/');
+ await secondPage.waitForFunction(()=>document.querySelector('#storage-status').textContent.includes('Lokal gesichert'));
+ await secondPage.waitForFunction(()=>Number(document.querySelector('#canvas-host canvas')?.dataset.renderCount)>0);
+ await second.close();
+ await page.locator('#scene-mode').selectOption('betrieb');await settled();
+ const stopped=await frameCount();await page.locator('#play').click();
+ await page.waitForFunction(n=>Number(document.querySelector('#canvas-host canvas').dataset.renderCount)>n+2,stopped);
+ await page.locator('#play').click();await settled();
+ const paused=await frameCount();await page.waitForTimeout(400);assert.equal(await frameCount(),paused,'paused operation keeps rendering');
+ await page.locator('#reset').click();await settled();
+ const beforeDrag=await frameCount(),bounds=await canvas.boundingBox();
+ await page.mouse.move(bounds.x+bounds.width/2,bounds.y+bounds.height/2);await page.mouse.down();
+ await page.mouse.move(bounds.x+bounds.width/2+80,bounds.y+bounds.height/2+30,{steps:4});await page.mouse.up();
+ await settled();assert.ok(await frameCount()>beforeDrag,'orbit interaction must redraw');
+ result.checks.push({idleRendering:'settled',concurrentContext:'ready',animation:'runs and pauses',orbit:'redraws'});
+
  for(const mode of ['truth','brute']){
   await page.locator('#model-mode').selectOption(mode);assert.equal(await canvas.getAttribute('data-model-mode'),mode);
   const stationary=Number(await canvas.getAttribute('data-stationary-count')),nails=Number(await canvas.getAttribute('data-nail-path-count'));
