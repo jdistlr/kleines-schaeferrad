@@ -1,0 +1,185 @@
+{
+  "base": "f7b9185517856b7881530ba9d0553f170787cb09",
+  "inputs": {
+    "src/workbench/geometry.mjs": "8f3446174a002a7282e2c445a3655632f08450db95fb6dd388d48b570025e385",
+    "src/workbench/calibration.mjs": "977d2510387241abfe86b4cee037da58f2369e61dfc12db76e7a79a6bb5da643",
+    "src/workbench/viewer.js": "447c04b4137cb9c124457f77f800c142bbf899ee882635640df39b4c74b66198",
+    "data/hypothesis.parameters.json": "4e56621f45e18d10660cf5781c29ff45d4c4eb96dbb127d25d77d68c2450edb0",
+    "data/calibration-v3.json": "6e753b5e62335c112dcf59fd031b00b5d18f7973ac56bc56fc352ffb95e80d1b"
+  },
+  "models": {
+    "brute": {
+      "meshes": 591,
+      "family_counts": {
+        "COMP-SHAFT": 3,
+        "COMP-ARMS": 6,
+        "COMP-FASTENERS": 36,
+        "COMP-KRUEMMLINGE": 12,
+        "COMP-FRAME-MAIN": 6,
+        "COMP-FRAME-LOWER": 4,
+        "COMP-FRAME-SIDE": 14,
+        "COMP-BEARING-STANDS": 2,
+        "COMP-BEARINGS": 2,
+        "COMP-TROUGH": 2,
+        "COMP-KUEMPFE": 288,
+        "COMP-KUMPF-BASE": 24,
+        "COMP-KUMPF-HOOPS": 72,
+        "COMP-KUMPF-NAILS": 96,
+        "COMP-PADDLES": 24
+      },
+      "vertices": 231360
+    },
+    "truth": {
+      "meshes": 70,
+      "family_counts": {
+        "COMP-SHAFT": 1,
+        "COMP-ARMS": 6,
+        "COMP-KRUEMMLINGE": 12,
+        "COMP-KUEMPFE": 36,
+        "COMP-KUMPF-BASE": 3,
+        "COMP-KUMPF-HOOPS": 9,
+        "COMP-PADDLES": 3
+      },
+      "vertices": 36036
+    },
+    "nail-reference": {
+      "meshes": 20,
+      "family_counts": {
+        "COMP-KUEMPFE": 12,
+        "COMP-KUMPF-BASE": 1,
+        "COMP-KUMPF-HOOPS": 3,
+        "COMP-KUMPF-NAILS": 4
+      },
+      "vertices": 8784
+    }
+  },
+  "parameters": {
+    "outerRadius": 2.13,
+    "innerRadius": 1.98,
+    "rimWidth": 0.14,
+    "ringDistance": 1.15,
+    "shaftLength": 3.7,
+    "shaftWidth": 0.37,
+    "armWidth": 0.14,
+    "armDepth": 0.12,
+    "vesselRadius": 0.16,
+    "vesselHeight": 0.44,
+    "vesselCount": 24,
+    "paddleCount": 24,
+    "armsPerPlane": 3,
+    "segmentsPerPlane": 6,
+    "stationaryContext": null,
+    "jointGeometry": null
+  },
+  "calibration": {
+    "radius": 2.095,
+    "centerX": -0.94,
+    "pitchDeg": 125,
+    "yawDeg": 60,
+    "overlapDirection": 1,
+    "nailMapping": "A",
+    "paddlePitchDeg": 0,
+    "paddleHeight": 0.43,
+    "paddleThickness": 0.055,
+    "paddleRadius": 2.23,
+    "paddlePhaseSlots": 0.45,
+    "waterLevel": -1.95,
+    "troughX": -1.45,
+    "troughHalfWidth": 0.16,
+    "troughZ": 1.4,
+    "troughY": [
+      -1.15,
+      1.25
+    ],
+    "variants": {},
+    "status": "ranked-synthetic-candidate-not-as-built",
+    "paddleAxialOverhang": 0.07,
+    "jetSpeed": 1.8,
+    "rotationRPM": 2.2
+  },
+  "rims": {
+    "inner_gap": 1.0099999904632568,
+    "outer_width": 1.2899999618530273,
+    "midplane_distance": 1.15,
+    "axial_width": 0.14,
+    "required_midplane_distance": 1.94,
+    "required_outer_width": 2.08,
+    "delta_midplane": 0.79
+  },
+  "topology": {
+    "arm_end_angles_deg": [
+      0,
+      60,
+      120,
+      180,
+      240,
+      300
+    ],
+    "segment_mid_angles_deg": [
+      30,
+      90,
+      150,
+      210,
+      270,
+      330
+    ],
+    "segment_boundary_phase_deg": 0,
+    "required_relative_phase_change_deg": 30,
+    "schettern_mesh_count": 0,
+    "wood_band_mesh_count": 0,
+    "shaft_clamp_mesh_count": 0
+  },
+  "paddles": {
+    "axial_span": 1.29,
+    "height": 0.43,
+    "thickness": 0.055,
+    "if_only_ring_distance_changed": 2.08,
+    "note": "2.08 m would end on rim outer faces, leaving no outer-face overhang; rebuild span semantics explicitly."
+  },
+  "nails": [
+    {
+      "start": [
+        -0.15066666666666667,
+        0,
+        0.10999999999999999
+      ],
+      "end": [
+        0.5756862828508118,
+        0,
+        0.10999999999999999
+      ],
+      "holes": [
+        "HA1",
+        "HB1"
+      ],
+      "name": "V3-KUM-01-NAIL-LONG",
+      "chord_length": 0.7263529495174785,
+      "shaft_diameter": 0.018,
+      "head_diameter": 0.048,
+      "head_axial_length": 0.025,
+      "exit_x_hardcoded": -0.495
+    },
+    {
+      "start": [
+        -0.16799999999999998,
+        0,
+        -0.15000000000000002
+      ],
+      "end": [
+        0.42687922391242444,
+        0,
+        -0.15000000000000002
+      ],
+      "holes": [
+        "HA2",
+        "HB2"
+      ],
+      "name": "V3-KUM-01-NAIL-SHORT",
+      "chord_length": 0.5948792239124244,
+      "shaft_diameter": 0.018,
+      "head_diameter": 0.048,
+      "head_axial_length": 0.025,
+      "exit_x_hardcoded": -0.495
+    }
+  ]
+}

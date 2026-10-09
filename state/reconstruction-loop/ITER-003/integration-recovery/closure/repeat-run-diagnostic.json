@@ -1,0 +1,9 @@
+{
+  "head": "04484c9a9edc217fec911a957d21a84a8f8da05d",
+  "run_id": 37992980382,
+  "journey": "integration",
+  "failure": "AssertionError: paused operation keeps rendering; 38 !== 36",
+  "location": "tests/browser-integration.mjs:38:72",
+  "cause": "Wall-clock quiet interval can occur while a software-GPU frame is pending; not a completed-frame idle assertion.",
+  "repair": "Require twelve consecutive animation frames with unchanged render counter; no timeout increase; runtime unchanged."
+}

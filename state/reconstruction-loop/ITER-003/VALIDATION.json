@@ -1,0 +1,21 @@
+{
+  "source_hashes_match_exports": {
+    "src/workbench/geometry.mjs": true,
+    "src/workbench/calibration.mjs": true,
+    "src/workbench/expert-corrections.mjs": true,
+    "data/reconstruction-constraints.json": true,
+    "data/calibration-v3.json": true,
+    "data/hypothesis.parameters.json": true
+  },
+  "render_count": 39,
+  "render_hashes_verified": true,
+  "tests": {
+    "passed": 35,
+    "failed": 0,
+    "log": "TEST-RESULTS.txt"
+  },
+  "astro_build": "passed; no deployment",
+  "diff_check": "passed",
+  "comparison_iteration": "ITER-002 unchanged",
+  "limitations": "See SELF-AUDIT.md; no full-cycle collision or assembly certificate"
+}

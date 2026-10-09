@@ -1,5 +1,14 @@
 {
   "schema": "ks-field-pack/v2",
+  "iteration": "ITER-003",
+  "geometry_dependencies": {
+    "src/workbench/geometry.mjs": "9ef3853fe1f87a8b00c9e2e4e57265d40edc3f3d20d4cde7468dbe79671f94b7",
+    "src/workbench/calibration.mjs": "1417dca167dc1e26639d1bb5195936f0b671fadc24c1266513ddaadbfc57d9a2",
+    "src/workbench/expert-corrections.mjs": "42dd3882abf115d805e3315c36b95b27442ee343feccb33ed7fd8aa2c88fd53a",
+    "data/hypothesis.parameters.json": "f1176440a9c78ba3cff6bdcef90edc270e7d0d9a1fbbb1328c75491545527e52",
+    "data/calibration-v3.json": "788f2c57d86538fa4d2e2b213c7dde4c0fd9894158d04ebc3043a089bd242af3",
+    "data/reconstruction-constraints.json": "7107eed171506485dc70ff09ad9d317aa5d1edac871e4ca7a7ffbdf9448df4ff"
+  },
   "task_source": "data/field-tasks.json",
   "task_source_sha256": "5240fac418bfc81c049bed6fdb8ae425daf31a02b91c955441070b7f8f446baa",
   "visual_source": "data/visual-guides.json",
@@ -63,82 +72,81 @@
       "code": "KS-00",
       "title": "Gesamtsystem und Standort",
       "visual": "frozen-mesh-projection / original-photo",
-      "status": "VISUALLY_REVIEWED"
+      "status": "REVIEW_REQUIRED"
     },
     {
       "page": 2,
       "code": "KS-10",
       "title": "Welle und gekröpfte Arme",
       "visual": "frozen-mesh-projection / original-photo",
-      "status": "VISUALLY_REVIEWED"
+      "status": "REVIEW_REQUIRED"
     },
     {
       "page": 3,
       "code": "KS-11",
       "title": "Innenverbindungen vergleichen",
       "visual": "existing-source-and-candidate-decision-view",
-      "status": "VISUALLY_REVIEWED"
+      "status": "REVIEW_REQUIRED"
     },
     {
       "page": 4,
       "code": "KS-20",
       "title": "Kranz und Krümmlingstoß",
       "visual": "frozen-mesh-projection / original-photo",
-      "status": "VISUALLY_REVIEWED"
+      "status": "REVIEW_REQUIRED"
     },
     {
       "page": 5,
       "code": "KS-30",
       "title": "Kumpf · Dauben, Boden, Reifen",
       "visual": "existing-source-and-candidate-decision-view",
-      "status": "VISUALLY_REVIEWED"
+      "status": "REVIEW_REQUIRED"
     },
     {
       "page": 6,
       "code": "KS-31",
       "title": "Kumpfnägel: Wege und Nachbarüberlappung",
       "visual": "existing-source-and-candidate-decision-view",
-      "status": "VISUALLY_REVIEWED"
+      "status": "REVIEW_REQUIRED"
     },
     {
       "page": 7,
       "code": "KS-40",
       "title": "Schaufel und Nachbarn",
       "visual": "existing-source-and-candidate-decision-view",
-      "status": "VISUALLY_REVIEWED"
+      "status": "REVIEW_REQUIRED"
     },
     {
       "page": 8,
       "code": "KS-50",
       "title": "Lager, Radstatt und unterer Rahmen",
       "visual": "frozen-mesh-projection / original-photo",
-      "status": "VISUALLY_REVIEWED"
+      "status": "REVIEW_REQUIRED"
     },
     {
       "page": 9,
       "code": "KS-51",
       "title": "Wasserweg · Kumpf, Trog, Rinne",
       "visual": "existing-source-and-candidate-decision-view",
-      "status": "VISUALLY_REVIEWED"
+      "status": "REVIEW_REQUIRED"
     },
     {
       "page": 10,
       "code": "KS-60",
       "title": "Baugruppen und Zusammenbau",
       "visual": "frozen-mesh-projection / original-photo",
-      "status": "VISUALLY_REVIEWED"
+      "status": "REVIEW_REQUIRED"
     },
     {
       "page": 11,
       "code": "KS-70",
       "title": "Fünf unersetzbare Aufnahmeereignisse",
       "visual": "five-original-photo-event-panels",
-      "status": "VISUALLY_REVIEWED"
+      "status": "REVIEW_REQUIRED"
     }
   ],
   "format": "A3 landscape",
   "physical_instances_precreated": 0,
-  "geometry_sha256": "8f3446174a002a7282e2c445a3655632f08450db95fb6dd388d48b570025e385",
-  "quality_gate": "EVIDENCE CAPTURE LAYOUT REVIEWED",
-  "review": "state/reconstruction-loop/ITER-001/truth-critic/pdf-visual-review.json"
+  "geometry_sha256": "9ef3853fe1f87a8b00c9e2e4e57265d40edc3f3d20d4cde7468dbe79671f94b7",
+  "quality_gate": "PENDING_VISUAL_AUDIT"
 }

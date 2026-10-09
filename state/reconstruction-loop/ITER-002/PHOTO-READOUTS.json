@@ -1,0 +1,440 @@
+{
+  "schema": "ks-photo-readouts/v1",
+  "all_values_review_only": true,
+  "uncertainty_policy": "Intervalle sind konservative manuelle Lesebänder unter genannten Annahmen, keine kalibrierten 95%-Intervalle. Unquantifizierte systematische Perspektivfehler sind ausdrücklich nicht darin enthalten. Unresolved numeric value is null.",
+  "readouts": [
+    {
+      "id": "PR-01",
+      "source": "evidence/raw/thorsten-20261009/image-1791543497527.jpg",
+      "property": "A-Bock obere Endkanten: Skalenkoordinate",
+      "pixel_regions_xyxy": [
+        [
+          400,
+          70,
+          620,
+          410
+        ]
+      ],
+      "pixel_frame": "EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen",
+      "zero": "Skalennull in diesem Detail nicht sichtbar; PR-02",
+      "endpoints": "Vordere obere Kante etwa147; hintere obere Kante etwa150–151 cm",
+      "reference_plane": "Maßstab längs schrägem Bein, Kanten nicht in identischer Tiefenebene",
+      "method": "Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung",
+      "status": "conditional-readout",
+      "value": [
+        147,
+        151
+      ],
+      "unit": "cm",
+      "uncertainty": "Konservatives Leseband; keine statistische Konfidenz, keine vollständige perspektivische Fehlergrenze",
+      "interpretation": "Skalenkoordinate belastbar im genannten Leseband; Beinlänge bleibt null, solange Fußanlage/Nullpunkt ungesichert. Nicht vertikale Höhe.",
+      "claim_ids": [
+        "TH-20261009-38"
+      ],
+      "canonical_promotion": false
+    },
+    {
+      "id": "PR-02",
+      "source": "evidence/raw/thorsten-20261009/image-1791543487137.jpg",
+      "property": "A-Bock Beinlänge und Fußbezug",
+      "pixel_regions_xyxy": [
+        [
+          535,
+          770,
+          790,
+          1070
+        ]
+      ],
+      "pixel_frame": "EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen",
+      "zero": "Fuß/unteres Zollstockende teilweise im Gras; Kontakt zu tatsächlicher Stirnfläche nicht eindeutig",
+      "endpoints": "Fußstirnfläche bis passende obere Stirnfläche aus PR-01",
+      "reference_plane": "Schräges Bein über lokal unebenem Gelände",
+      "method": "Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung",
+      "status": "unresolved",
+      "value": null,
+      "unit": "m",
+      "uncertainty": "Unbekannter Nullversatz dominiert; keine sichere metrische Länge",
+      "interpretation": "Die vorhandenen Fotos sind ausgewertet. Vor weiterer Längenableitung nur Nullanlage bestätigen; nicht pauschal neues Balkenmaß anfordern.",
+      "claim_ids": [
+        "TH-20261009-38",
+        "TH-20261009-37"
+      ],
+      "canonical_promotion": false
+    },
+    {
+      "id": "PR-03",
+      "source": "evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+      "property": "Nagelspitzen und projizierte Gesamtlängen",
+      "pixel_regions_xyxy": [
+        [
+          480,
+          80,
+          560,
+          230
+        ],
+        [
+          450,
+          350,
+          528,
+          470
+        ],
+        [
+          430,
+          1080,
+          610,
+          1240
+        ]
+      ],
+      "pixel_frame": "EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen",
+      "zero": "Zollstocknull bei y≈1190; beide Kopfstirnen liegen darunter",
+      "endpoints": "Lange Spitze nahe (545,112); kurze Spitze nahe (466,387); Kopfstirnen um y1210–1220",
+      "reference_plane": "Nägel auf Holzauflage; Zollstock daneben, gekrümmte Nägel teilweise aus Ebene",
+      "method": "Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung",
+      "status": "conditional-readout",
+      "value": {
+        "tip_long_ruler_cm": [
+          92,
+          96
+        ],
+        "tip_short_ruler_cm": [
+          68,
+          74
+        ],
+        "head_end_ruler_cm": [
+          -3,
+          -1
+        ],
+        "projected_total_long_m": [
+          0.93,
+          0.99
+        ],
+        "projected_total_short_m": [
+          0.69,
+          0.77
+        ],
+        "curved_total_length_m": null
+      },
+      "unit": null,
+      "uncertainty": "Breite manuelle Lesebänder; zusätzliche Parallaxe/Tiefenkrümmung unquantifiziert. Intervalle gelten nur bei annähernd koplanarer Projektion.",
+      "interpretation": "Gesamtlänge in Bildprojektion = Spitzenkoordinate minus Kopfendkoordinate; weder Kurvenlänge noch freier Überstand. Kein harter Sollwert, keine millimetergenaue Ableitung.",
+      "claim_ids": [
+        "TH-20261009-16"
+      ],
+      "canonical_promotion": false
+    },
+    {
+      "id": "PR-04",
+      "source": "evidence/raw/thorsten-20261009/image-1791542573592.jpg",
+      "property": "Kopfmaß entlang Nagelachse",
+      "pixel_regions_xyxy": [
+        [
+          240,
+          440,
+          680,
+          825
+        ]
+      ],
+      "pixel_frame": "EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen",
+      "zero": "Zollstockende nahe Schulter des unteren Nagels, nicht präzise angelegt",
+      "endpoints": "Kopf-Schulter bis äußere Stirnfläche des unteren Kopfes",
+      "reference_plane": "Kopfoberfläche neben Skalenebene; unregelmäßige Rinde",
+      "method": "Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung",
+      "status": "conditional-readout",
+      "value": [
+        0.025,
+        0.04
+      ],
+      "unit": "m",
+      "uncertainty": "Etwa3cm ablesbar, großzügiges Intervall wegen Anlage, Rinde und Perspektive",
+      "interpretation": "Kopfhöhe/-länge entlang Schaft, ausdrücklich nicht Kopfdurchmesser. Modell25mm liegt am unteren Intervallrand; aus Foto allein kein sicherer Höhenkonflikt.",
+      "claim_ids": [
+        "TH-20261009-17"
+      ],
+      "canonical_promotion": false
+    },
+    {
+      "id": "PR-05",
+      "source": "evidence/raw/thorsten-20261009/image-1791542586169.jpg",
+      "property": "Sichtbare Schaftbreite nahe Schulter",
+      "pixel_regions_xyxy": [
+        [
+          340,
+          550,
+          660,
+          960
+        ]
+      ],
+      "pixel_frame": "EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen",
+      "zero": "Zollstocknull etwa an einer Schaftkante",
+      "endpoints": "Sichtbare Seitenkanten unter schräg angelegtem Zollstock",
+      "reference_plane": "Geschnitzte breite Schaftfläche; kein Beweis für runden Querschnitt",
+      "method": "Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung",
+      "status": "conditional-readout",
+      "value": [
+        0.024,
+        0.029
+      ],
+      "unit": "m",
+      "uncertainty": "Leseband etwa26mm, +/-2–3mm plus unquantifizierte Perspektive",
+      "interpretation": "Mit Fachmaß26mm vereinbar; nicht als neue exakte Durchmesservermessung behandeln.",
+      "claim_ids": [
+        "TH-20261009-18"
+      ],
+      "canonical_promotion": false
+    },
+    {
+      "id": "PR-06",
+      "source": "evidence/raw/thorsten-20261009/1000046530.jpg",
+      "property": "Schetternbrettvorlage projizierte Länge",
+      "pixel_regions_xyxy": [
+        [
+          0,
+          365,
+          1280,
+          740
+        ]
+      ],
+      "pixel_frame": "EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen",
+      "zero": "Rechtes Nullende des horizontalen Zollstocks etwas außerhalb Brettende",
+      "endpoints": "Brettschnittkanten links etwa74cm, rechts etwa0–1cm der Skala",
+      "reference_plane": "Lose neue Brettvorlage auf Pflaster, Maßstab auf Oberfläche",
+      "method": "Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung",
+      "status": "conditional-readout",
+      "value": [
+        0.72,
+        0.76
+      ],
+      "unit": "m",
+      "uncertainty": "Konservatives Leseband über schrägen Schnittkanten; nicht Bogenlänge",
+      "interpretation": "Gilt für fotografierte neue Vorlage ohne Löcher; keine stillschweigende Übernahme als Länge aller eingebauten Altbretter.",
+      "claim_ids": [
+        "TH-20261009-04"
+      ],
+      "canonical_promotion": false
+    },
+    {
+      "id": "PR-07",
+      "source": "evidence/raw/thorsten-20261009/1000046530.jpg",
+      "property": "Schetternbrettvorlage mittlere sichtbare Tiefe",
+      "pixel_regions_xyxy": [
+        [
+          620,
+          365,
+          730,
+          740
+        ]
+      ],
+      "pixel_frame": "EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen",
+      "zero": "Senkrechter Zollstock an unterer Brettkante; Kante teils überlagert",
+      "endpoints": "Unterkante bis Oberkante nahe Brettmitte",
+      "reference_plane": "Brettflächenebene",
+      "method": "Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung",
+      "status": "conditional-readout",
+      "value": [
+        0.14,
+        0.16
+      ],
+      "unit": "m",
+      "uncertainty": "Etwa15cm; Endpunktauflösung/Anlage grob1cm",
+      "interpretation": "Keine axiale Dicke und keine Länge; neue Vorlage getrennt vom eingebauten Bestand.",
+      "claim_ids": [
+        "TH-20261009-04"
+      ],
+      "canonical_promotion": false
+    },
+    {
+      "id": "PR-08",
+      "source": "evidence/raw/thorsten-20261009/image-1791543505768.jpg",
+      "property": "A-Bock Aussparungslage und -höhe",
+      "pixel_regions_xyxy": [
+        [
+          325,
+          560,
+          470,
+          1060
+        ]
+      ],
+      "pixel_frame": "EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen",
+      "zero": "Zollstockverlauf sichtbar, Nullanlage nicht gesichert",
+      "endpoints": "Obere/untere Schlitzkante von Riegel/Keilen verdeckt",
+      "reference_plane": "Schräges Bein, Aussparung teilweise auf abgewandter Fläche",
+      "method": "Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung",
+      "status": "unresolved",
+      "value": null,
+      "unit": "m",
+      "uncertainty": "Keilränder sind keine Schlitzkanten; Lagefehler nicht begrenzbar",
+      "interpretation": "5cm Öffnungsbreite bleibt Fachangabe, kein Fotoablesewert. Höhe und Lage entlang Bein bleiben offen.",
+      "claim_ids": [
+        "TH-20261009-33",
+        "TH-20261009-34",
+        "TH-20261009-36",
+        "TH-20261009-38"
+      ],
+      "canonical_promotion": false
+    },
+    {
+      "id": "PR-09",
+      "source": "evidence/raw/thorsten-20261009/image-1791541247032.jpg",
+      "property": "Flügelbrett Gesamtlänge",
+      "pixel_regions_xyxy": [
+        [
+          400,
+          0,
+          635,
+          1280
+        ]
+      ],
+      "pixel_frame": "EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen",
+      "zero": "Nullende/Anlage am schrägen Endschnitt nicht eindeutig",
+      "endpoints": "Beide Brettendflächen nicht zugleich eindeutig zur Skala zuzuordnen",
+      "reference_plane": "Perspektivisch stark verkürztes Brett; Maßstab teils überstrahlt",
+      "method": "Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung",
+      "status": "unresolved",
+      "value": null,
+      "unit": "m",
+      "uncertainty": "Keine begrenzte Ableseunsicherheit möglich",
+      "interpretation": "35cm Breite ist nicht Gesamtlänge; Außenüberstände separat aufnehmen.",
+      "claim_ids": [
+        "TH-20261009-08",
+        "TH-20261009-07"
+      ],
+      "canonical_promotion": false
+    },
+    {
+      "id": "PR-10",
+      "source": "evidence/raw/thorsten-20261009/image-1791541641609.jpg",
+      "property": "Wellenschellen Breite und axialer Abstand",
+      "pixel_regions_xyxy": [
+        [
+          0,
+          665,
+          690,
+          850
+        ]
+      ],
+      "pixel_frame": "EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen",
+      "zero": "Maßstab nahe Stirnende, aber genaue Anlage auf Rund-/Facettenkontur unsicher",
+      "endpoints": "Vier Bandkanten nicht vollständig unverdeckt auf gleicher Skalenebene",
+      "reference_plane": "Maßstab längs gekrümmter Wellenoberfläche; Schellen über Oberfläche",
+      "method": "Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung",
+      "status": "unresolved",
+      "value": null,
+      "unit": "m",
+      "uncertainty": "Parallaxe und teilweise verdeckte Bandkanten",
+      "interpretation": "Zwei Schellen qualitativ gesichert. Keine präzisen Bandbreiten oder Abstände freigegeben.",
+      "claim_ids": [
+        "TH-20261009-14"
+      ],
+      "canonical_promotion": false
+    },
+    {
+      "id": "PR-11",
+      "source": "evidence/raw/thorsten-20261009/image-1791542108092.jpg",
+      "property": "Radbock Stützenhöhe",
+      "pixel_regions_xyxy": [
+        [
+          300,
+          80,
+          610,
+          1230
+        ]
+      ],
+      "pixel_frame": "EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen",
+      "zero": "Obere Maßstabanlage von Hand/Balken überlagert",
+      "endpoints": "Tragende Unter-/Oberflächen nicht beide mit Skalenmarke festgelegt",
+      "reference_plane": "Vertikale Stütze und seitlich angelegter Zollstock",
+      "method": "Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung",
+      "status": "unresolved",
+      "value": null,
+      "unit": "m",
+      "uncertainty": "Endpunktzuordnung nicht robust",
+      "interpretation": "14×14cm und Querbalken1,20m bleiben eigenständige Fachangaben.",
+      "claim_ids": [
+        "TH-20261009-21",
+        "TH-20261009-22"
+      ],
+      "canonical_promotion": false
+    },
+    {
+      "id": "PR-12",
+      "source": "evidence/raw/thorsten-20261009/image-1791541761724.jpg",
+      "property": "Kumpf-Kranz-Abstand auf Maßstabhöhe",
+      "pixel_regions_xyxy": [
+        [
+          350,
+          430,
+          960,
+          630
+        ]
+      ],
+      "pixel_frame": "EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen",
+      "zero": "Null am Kumpf nicht eindeutig",
+      "endpoints": "Kumpfwand und Kranzfläche in unterschiedlichen Tiefen",
+      "reference_plane": "Schräg liegender Maßstab bei geneigtem Gefäß",
+      "method": "Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung",
+      "status": "unresolved",
+      "value": null,
+      "unit": "m",
+      "uncertainty": "Abstand ändert sich mit Schnitthöhe; keine definierte Normaldistanz",
+      "interpretation": "Nicht zur Berechnung einer Nagelgesamt- oder Überstandslänge benutzen.",
+      "claim_ids": [
+        "TH-20261009-16"
+      ],
+      "canonical_promotion": false
+    },
+    {
+      "id": "PR-13",
+      "source": "evidence/raw/thorsten-20261009/image-1791541421696.jpg",
+      "property": "Holzband abgewickelte Länge",
+      "pixel_regions_xyxy": [
+        [
+          0,
+          0,
+          960,
+          1280
+        ]
+      ],
+      "pixel_frame": "EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen",
+      "zero": "Kein Längsmaßstab",
+      "endpoints": "Bogen und Schenkel mit verdeckten Enden",
+      "reference_plane": "U-Band in mehreren Ebenen",
+      "method": "Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung",
+      "status": "unresolved",
+      "value": null,
+      "unit": "m",
+      "uncertainty": "Verdeckte Enden und unbekannte Abwicklung",
+      "interpretation": "Fachwert etwa1,20m mit offenem Längenbezug erhalten.",
+      "claim_ids": [
+        "TH-20261009-11"
+      ],
+      "canonical_promotion": false
+    },
+    {
+      "id": "PR-14",
+      "source": "evidence/raw/thorsten-20261009/image-1791542028869.jpg",
+      "property": "Trog/Rinne Anschlussabstand",
+      "pixel_regions_xyxy": [
+        [
+          0,
+          0,
+          960,
+          1280
+        ]
+      ],
+      "pixel_frame": "EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen",
+      "zero": "Maßstab im Anschlussbereich, Anfangsbezug nicht eindeutig",
+      "endpoints": "Zu vergleichende Innen-/Außenflächen nicht festgelegt",
+      "reference_plane": "Mehrere Holzflächen in unterschiedlicher Tiefe",
+      "method": "Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung",
+      "status": "unresolved",
+      "value": null,
+      "unit": "m",
+      "uncertainty": "Ohne definierte Endpunkte kein belastbares Maß",
+      "interpretation": "Bestehendes Foto reicht zur Topologie, nicht zur Registrierung in Modellkoordinaten.",
+      "claim_ids": [
+        "TH-20261009-39"
+      ],
+      "canonical_promotion": false
+    }
+  ]
+}

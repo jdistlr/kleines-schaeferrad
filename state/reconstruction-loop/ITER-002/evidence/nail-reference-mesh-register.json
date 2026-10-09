@@ -1,0 +1,829 @@
+[
+  {
+    "name": "EXPECTED-KUM-01",
+    "first": 0,
+    "count": 1092,
+    "bounds": {
+      "min": [
+        0.0860000029206276,
+        -0.039842378348112106,
+        -0.30000001192092896
+      ],
+      "max": [
+        0.15000000596046448,
+        0.039842378348112106,
+        0.30000001192092896
+      ]
+    },
+    "id": "EXPECTED-KUM-01",
+    "family": "COMP-KUEMPFE",
+    "slot": 0,
+    "part": "COMP-KUEMPFE",
+    "stationary": false,
+    "baseColor": 10781534,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "staveIndex": 0,
+    "drilled": true,
+    "holes": [
+      {
+        "id": "HA1",
+        "offsetFromMouth": 0.19,
+        "metricStatus": "photo-estimate"
+      },
+      {
+        "id": "HA2",
+        "offsetFromMouth": 0.45,
+        "metricStatus": "photo-estimate"
+      }
+    ],
+    "groove": true
+  },
+  {
+    "name": "V3-KUM-01-STAVE-2",
+    "first": 1092,
+    "count": 108,
+    "bounds": {
+      "min": [
+        0.05991598218679428,
+        0.017777521163225174,
+        -0.30000001192092896
+      ],
+      "max": [
+        0.14982500672340393,
+        0.10950451344251633,
+        0.30000001192092896
+      ]
+    },
+    "id": "V3-KUM-01-STAVE-2",
+    "family": "COMP-KUEMPFE",
+    "slot": 0,
+    "part": "COMP-KUEMPFE",
+    "stationary": false,
+    "baseColor": 10978655,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "staveIndex": 1,
+    "drilled": false,
+    "holes": [],
+    "groove": true
+  },
+  {
+    "name": "V3-KUM-01-STAVE-3",
+    "first": 1200,
+    "count": 108,
+    "bounds": {
+      "min": [
+        0.017777521163225174,
+        0.05991598218679428,
+        -0.30000001192092896
+      ],
+      "max": [
+        0.10950451344251633,
+        0.14982500672340393,
+        0.30000001192092896
+      ]
+    },
+    "id": "V3-KUM-01-STAVE-3",
+    "family": "COMP-KUEMPFE",
+    "slot": 0,
+    "part": "COMP-KUEMPFE",
+    "stationary": false,
+    "baseColor": 11110497,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "staveIndex": 2,
+    "drilled": false,
+    "holes": [],
+    "groove": true
+  },
+  {
+    "name": "V3-KUM-01-STAVE-4",
+    "first": 1308,
+    "count": 108,
+    "bounds": {
+      "min": [
+        -0.039842378348112106,
+        0.0860000029206276,
+        -0.30000001192092896
+      ],
+      "max": [
+        0.039842378348112106,
+        0.15000000596046448,
+        0.30000001192092896
+      ]
+    },
+    "id": "V3-KUM-01-STAVE-4",
+    "family": "COMP-KUEMPFE",
+    "slot": 0,
+    "part": "COMP-KUEMPFE",
+    "stationary": false,
+    "baseColor": 11307619,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "staveIndex": 3,
+    "drilled": false,
+    "holes": [],
+    "groove": true
+  },
+  {
+    "name": "V3-KUM-01-STAVE-5",
+    "first": 1416,
+    "count": 108,
+    "bounds": {
+      "min": [
+        -0.10950451344251633,
+        0.05991598218679428,
+        -0.30000001192092896
+      ],
+      "max": [
+        -0.017777521163225174,
+        0.14982500672340393,
+        0.30000001192092896
+      ]
+    },
+    "id": "V3-KUM-01-STAVE-5",
+    "family": "COMP-KUEMPFE",
+    "slot": 0,
+    "part": "COMP-KUEMPFE",
+    "stationary": false,
+    "baseColor": 11504740,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "staveIndex": 4,
+    "drilled": false,
+    "holes": [],
+    "groove": true
+  },
+  {
+    "name": "V3-KUM-01-STAVE-6",
+    "first": 1524,
+    "count": 108,
+    "bounds": {
+      "min": [
+        -0.14982500672340393,
+        0.017777521163225174,
+        -0.30000001192092896
+      ],
+      "max": [
+        -0.05991598218679428,
+        0.10950451344251633,
+        0.30000001192092896
+      ]
+    },
+    "id": "V3-KUM-01-STAVE-6",
+    "family": "COMP-KUEMPFE",
+    "slot": 0,
+    "part": "COMP-KUEMPFE",
+    "stationary": false,
+    "baseColor": 10781534,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "staveIndex": 5,
+    "drilled": false,
+    "holes": [],
+    "groove": true
+  },
+  {
+    "name": "V3-KUM-01-STAVE-7",
+    "first": 1632,
+    "count": 1092,
+    "bounds": {
+      "min": [
+        -0.15000000596046448,
+        -0.039842378348112106,
+        -0.30000001192092896
+      ],
+      "max": [
+        -0.0860000029206276,
+        0.039842378348112106,
+        0.30000001192092896
+      ]
+    },
+    "id": "V3-KUM-01-STAVE-7",
+    "family": "COMP-KUEMPFE",
+    "slot": 0,
+    "part": "COMP-KUEMPFE",
+    "stationary": false,
+    "baseColor": 10978655,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "staveIndex": 6,
+    "drilled": true,
+    "holes": [
+      {
+        "id": "HB1",
+        "offsetFromMouth": 0.19,
+        "metricStatus": "photo-estimate"
+      },
+      {
+        "id": "HB2",
+        "offsetFromMouth": 0.45,
+        "metricStatus": "photo-estimate"
+      }
+    ],
+    "groove": true
+  },
+  {
+    "name": "V3-KUM-01-STAVE-8",
+    "first": 2724,
+    "count": 108,
+    "bounds": {
+      "min": [
+        -0.14982500672340393,
+        -0.10950451344251633,
+        -0.30000001192092896
+      ],
+      "max": [
+        -0.05991598218679428,
+        -0.017777521163225174,
+        0.30000001192092896
+      ]
+    },
+    "id": "V3-KUM-01-STAVE-8",
+    "family": "COMP-KUEMPFE",
+    "slot": 0,
+    "part": "COMP-KUEMPFE",
+    "stationary": false,
+    "baseColor": 11110497,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "staveIndex": 7,
+    "drilled": false,
+    "holes": [],
+    "groove": true
+  },
+  {
+    "name": "V3-KUM-01-STAVE-9",
+    "first": 2832,
+    "count": 108,
+    "bounds": {
+      "min": [
+        -0.10950451344251633,
+        -0.14982500672340393,
+        -0.30000001192092896
+      ],
+      "max": [
+        -0.017777521163225174,
+        -0.05991598218679428,
+        0.30000001192092896
+      ]
+    },
+    "id": "V3-KUM-01-STAVE-9",
+    "family": "COMP-KUEMPFE",
+    "slot": 0,
+    "part": "COMP-KUEMPFE",
+    "stationary": false,
+    "baseColor": 11307619,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "staveIndex": 8,
+    "drilled": false,
+    "holes": [],
+    "groove": true
+  },
+  {
+    "name": "V3-KUM-01-STAVE-10",
+    "first": 2940,
+    "count": 108,
+    "bounds": {
+      "min": [
+        -0.039842378348112106,
+        -0.15000000596046448,
+        -0.30000001192092896
+      ],
+      "max": [
+        0.039842378348112106,
+        -0.0860000029206276,
+        0.30000001192092896
+      ]
+    },
+    "id": "V3-KUM-01-STAVE-10",
+    "family": "COMP-KUEMPFE",
+    "slot": 0,
+    "part": "COMP-KUEMPFE",
+    "stationary": false,
+    "baseColor": 11504740,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "staveIndex": 9,
+    "drilled": false,
+    "holes": [],
+    "groove": true
+  },
+  {
+    "name": "V3-KUM-01-STAVE-11",
+    "first": 3048,
+    "count": 108,
+    "bounds": {
+      "min": [
+        0.017777521163225174,
+        -0.14982500672340393,
+        -0.30000001192092896
+      ],
+      "max": [
+        0.10950451344251633,
+        -0.05991598218679428,
+        0.30000001192092896
+      ]
+    },
+    "id": "V3-KUM-01-STAVE-11",
+    "family": "COMP-KUEMPFE",
+    "slot": 0,
+    "part": "COMP-KUEMPFE",
+    "stationary": false,
+    "baseColor": 10781534,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "staveIndex": 10,
+    "drilled": false,
+    "holes": [],
+    "groove": true
+  },
+  {
+    "name": "V3-KUM-01-STAVE-12",
+    "first": 3156,
+    "count": 108,
+    "bounds": {
+      "min": [
+        0.05991598218679428,
+        -0.10950451344251633,
+        -0.30000001192092896
+      ],
+      "max": [
+        0.14982500672340393,
+        -0.017777521163225174,
+        0.30000001192092896
+      ]
+    },
+    "id": "V3-KUM-01-STAVE-12",
+    "family": "COMP-KUEMPFE",
+    "slot": 0,
+    "part": "COMP-KUEMPFE",
+    "stationary": false,
+    "baseColor": 10978655,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "staveIndex": 11,
+    "drilled": false,
+    "holes": [],
+    "groove": true
+  },
+  {
+    "name": "V3-KUM-01-BASE",
+    "first": 3264,
+    "count": 144,
+    "bounds": {
+      "min": [
+        -0.1260533183813095,
+        -0.1260533183813095,
+        -0.2615000009536743
+      ],
+      "max": [
+        0.1260533183813095,
+        0.1260533183813095,
+        -0.2485000044107437
+      ]
+    },
+    "id": "V3-KUM-01-BASE",
+    "family": "COMP-KUMPF-BASE",
+    "slot": 0,
+    "part": "COMP-KUMPF-BASE",
+    "stationary": false,
+    "baseColor": 11241826,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "retention": "base-edge-in-real-stave-groove",
+    "grooveClearance": 0.001
+  },
+  {
+    "name": "V3-KUM-01-HOOP-1",
+    "first": 3408,
+    "count": 1152,
+    "bounds": {
+      "min": [
+        -0.123782217502594,
+        -0.123782217502594,
+        0.19099999964237213
+      ],
+      "max": [
+        0.123782217502594,
+        0.123782217502594,
+        0.20900000631809235
+      ]
+    },
+    "id": "V3-KUM-01-HOOP-1",
+    "family": "COMP-KUMPF-HOOPS",
+    "slot": 0,
+    "part": "COMP-KUMPF-HOOPS",
+    "stationary": false,
+    "baseColor": 6646633,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "offsetFromMouth": 0.1
+  },
+  {
+    "name": "V3-KUM-01-HOOP-2",
+    "first": 4560,
+    "count": 1152,
+    "bounds": {
+      "min": [
+        -0.13758590817451477,
+        -0.13758590817451477,
+        -0.008999999612569809
+      ],
+      "max": [
+        0.13758590817451477,
+        0.13758590817451477,
+        0.008999999612569809
+      ]
+    },
+    "id": "V3-KUM-01-HOOP-2",
+    "family": "COMP-KUMPF-HOOPS",
+    "slot": 0,
+    "part": "COMP-KUMPF-HOOPS",
+    "stationary": false,
+    "baseColor": 6646633,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "offsetFromMouth": 0.3
+  },
+  {
+    "name": "V3-KUM-01-HOOP-3",
+    "first": 5712,
+    "count": 1152,
+    "bounds": {
+      "min": [
+        -0.15138958394527435,
+        -0.15138958394527435,
+        -0.20900000631809235
+      ],
+      "max": [
+        0.15138958394527435,
+        0.15138958394527435,
+        -0.19099999964237213
+      ]
+    },
+    "id": "V3-KUM-01-HOOP-3",
+    "family": "COMP-KUMPF-HOOPS",
+    "slot": 0,
+    "part": "COMP-KUMPF-HOOPS",
+    "stationary": false,
+    "baseColor": 6646633,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "offsetFromMouth": 0.5
+  },
+  {
+    "name": "V3-KUM-01-NAIL-LONG",
+    "first": 6864,
+    "count": 864,
+    "bounds": {
+      "min": [
+        -0.15066668391227722,
+        -0.009162740781903267,
+        0.10100000351667404
+      ],
+      "max": [
+        0.5758190751075745,
+        0.011995580047369003,
+        0.11900000274181366
+      ]
+    },
+    "id": "V3-KUM-01-NAIL-LONG",
+    "family": "COMP-KUMPF-NAILS",
+    "slot": 0,
+    "part": "COMP-KUMPF-NAILS",
+    "stationary": false,
+    "baseColor": 12489308,
+    "iteration": "ITER-001",
+    "sources": [
+      "NARRATIVE-TH-KUMPF-20261008-02",
+      "NARRATIVE-TH-KUMPF-20261008-03",
+      "PHOTO-1000046423",
+      "V2-IMG_6822",
+      "V2-IMG_6832"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "fastenerCandidate": true,
+    "pair": "01",
+    "candidate": "A",
+    "nailPath": {
+      "start": [
+        -0.15066666666666667,
+        0,
+        0.10999999999999999
+      ],
+      "end": [
+        0.5756862828508118,
+        0,
+        0.10999999999999999
+      ],
+      "holes": [
+        "HA1",
+        "HB1"
+      ]
+    },
+    "role": "kumpf-to-kruemmling",
+    "lengthReason": "overlap-clearance-hypothesis"
+  },
+  {
+    "name": "V3-KUM-01-NAIL-LONG-HEAD",
+    "first": 7728,
+    "count": 96,
+    "bounds": {
+      "min": [
+        -0.16316667199134827,
+        -0.024000000208616257,
+        0.0860000029206276
+      ],
+      "max": [
+        -0.1381666660308838,
+        0.024000000208616257,
+        0.1340000033378601
+      ]
+    },
+    "id": "V3-KUM-01-NAIL-LONG-HEAD",
+    "family": "COMP-KUMPF-NAILS",
+    "slot": 0,
+    "part": "COMP-KUMPF-NAILS",
+    "stationary": false,
+    "baseColor": 12489308,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "fastenerCandidate": true,
+    "pair": "01",
+    "nailHead": true,
+    "candidate": "A"
+  },
+  {
+    "name": "V3-KUM-01-NAIL-SHORT",
+    "first": 7824,
+    "count": 864,
+    "bounds": {
+      "min": [
+        -0.1680000126361847,
+        -0.00916273146867752,
+        -0.1589999943971634
+      ],
+      "max": [
+        0.42704135179519653,
+        0.011995546519756317,
+        -0.14100000262260437
+      ]
+    },
+    "id": "V3-KUM-01-NAIL-SHORT",
+    "family": "COMP-KUMPF-NAILS",
+    "slot": 0,
+    "part": "COMP-KUMPF-NAILS",
+    "stationary": false,
+    "baseColor": 12489308,
+    "iteration": "ITER-001",
+    "sources": [
+      "NARRATIVE-TH-KUMPF-20261008-02",
+      "NARRATIVE-TH-KUMPF-20261008-03",
+      "PHOTO-1000046423",
+      "V2-IMG_6822",
+      "V2-IMG_6832"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "fastenerCandidate": true,
+    "pair": "01",
+    "candidate": "A",
+    "nailPath": {
+      "start": [
+        -0.16799999999999998,
+        0,
+        -0.15000000000000002
+      ],
+      "end": [
+        0.42687922391242444,
+        0,
+        -0.15000000000000002
+      ],
+      "holes": [
+        "HA2",
+        "HB2"
+      ]
+    },
+    "role": "kumpf-to-kruemmling",
+    "lengthReason": "overlap-clearance-hypothesis"
+  },
+  {
+    "name": "V3-KUM-01-NAIL-SHORT-HEAD",
+    "first": 8688,
+    "count": 96,
+    "bounds": {
+      "min": [
+        -0.18050000071525574,
+        -0.024000000208616257,
+        -0.17399999499320984
+      ],
+      "max": [
+        -0.15549999475479126,
+        0.024000000208616257,
+        -0.12600000202655792
+      ]
+    },
+    "id": "V3-KUM-01-NAIL-SHORT-HEAD",
+    "family": "COMP-KUMPF-NAILS",
+    "slot": 0,
+    "part": "COMP-KUMPF-NAILS",
+    "stationary": false,
+    "baseColor": 12489308,
+    "iteration": "ITER-001",
+    "sources": [
+      "PHOTO-1000046420",
+      "PHOTO-1000046421",
+      "PHOTO-1000046422",
+      "PHOTO-1000046423"
+    ],
+    "status": "reconstructed-candidate",
+    "metricStatus": "photo-readout-reference-only-not-current-installed-measurement",
+    "installedMetric": null,
+    "poseStatus": "candidate-layout-not-observed-pose",
+    "physicalInstanceId": null,
+    "fastenerCandidate": true,
+    "pair": "01",
+    "nailHead": true,
+    "candidate": "A"
+  }
+]

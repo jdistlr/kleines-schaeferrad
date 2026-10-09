@@ -1,0 +1,1535 @@
+{
+  "schema": "ks-astra-comparison/v1",
+  "base_commit": "f7b9185517856b7881530ba9d0553f170787cb09",
+  "canonical_changes": false,
+  "entries": [
+    {
+      "claim_id": "TH-20261009-01",
+      "subject": "COMP-ARMS/COMP-KRUEMMLINGE",
+      "property": "arm_passes_through_segment_midpoint",
+      "intake": {
+        "id": "TH-20261009-01",
+        "subject": "COMP-ARMS/COMP-KRUEMMLINGE",
+        "predicate": "arm_passes_through_segment_midpoint",
+        "value": true,
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Arm mittig im Krümmling, durchgesteckt; nicht am Segmentstoß.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791540525839.jpg",
+          "evidence/raw/thorsten-20261009/image-1791540649435.jpg",
+          "evidence/raw/thorsten-20261009/image-1791540668918.jpg"
+        ]
+      },
+      "comparison_status": "abweichend",
+      "current_runtime": {
+        "value": false,
+        "unit": null,
+        "anchor": "geometry.mjs: makeModel, Arm-/Sektorschleifen",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Armenden bei 0°+60°k; Segmentmitten bei 30°+60°k. Arme sitzen an Segmentstößen. Nahfotos zeigen Durchsteckung; die vollständige Segmentmitte ist zusätzlich Fachangabe.",
+      "proposed_action": "Relative Phase um 30° korrigieren; reale Stoßlagen und Armenden gemeinsam prüfen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-02",
+      "subject": "COMP-KRUEMMLINGE",
+      "property": "reinforced_at_arm_seat",
+      "intake": {
+        "id": "TH-20261009-02",
+        "subject": "COMP-KRUEMMLINGE",
+        "predicate": "reinforced_at_arm_seat",
+        "value": true,
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Krümmling am Armsitz örtlich verstärkt.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791540525839.jpg",
+          "evidence/raw/thorsten-20261009/image-1791540649435.jpg",
+          "evidence/raw/thorsten-20261009/image-1791540668918.jpg"
+        ]
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": false,
+        "unit": null,
+        "anchor": "geometry.mjs: ringSector",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "ringSector hat konstanten Innen-/Außenradius; Fotos zeigen örtlich verbreiterten Sitz.",
+      "proposed_action": "Lokale Sitzkontur separat parametrisieren; Ausdehnung/Tiefe noch offen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-03",
+      "subject": "COMP-ARMS/COMP-KRUEMMLINGE",
+      "property": "arm_seat_retention",
+      "intake": {
+        "id": "TH-20261009-03",
+        "subject": "COMP-ARMS/COMP-KRUEMMLINGE",
+        "predicate": "arm_seat_retention",
+        "value": {
+          "wedges": 2,
+          "location": "oben links und rechts",
+          "additional_pin": "von hinten durch Arm"
+        },
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Zwei Keile und rückseitig eingesteckter zusätzlicher Sicherungsstift.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791540525839.jpg",
+          "evidence/raw/thorsten-20261009/image-1791540649435.jpg",
+          "evidence/raw/thorsten-20261009/image-1791540668918.jpg"
+        ]
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": {
+          "rim_seat_wedges": 0,
+          "rear_pin": 0
+        },
+        "unit": null,
+        "anchor": "geometry.mjs: CAND-WEDGE",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Vorhandene CAND-WEDGE liegen am Zentrum bei Radius 0,21 m, nicht am Kranz. Fotos zeigen seitliche Keile und Querstift.",
+      "proposed_action": "Zwei Sitzkeile und rückseitigen Armstift als eigene Kontakte anlegen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-04",
+      "subject": "COMP-KRUEMMLINGE",
+      "property": "joint_connector",
+      "intake": {
+        "id": "TH-20261009-04",
+        "subject": "COMP-KRUEMMLINGE",
+        "predicate": "joint_connector",
+        "value": "Schetternbrett auf jeder Seite",
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Keine direkte Segmentendverbindung; beidseitige Schetternbretter verbinden die Krümmlinge.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/1000046530.jpg",
+          "evidence/raw/thorsten-20261009/image-1791540812566.jpg",
+          "evidence/raw/thorsten-20261009/image-1791540831514.jpg",
+          "evidence/raw/thorsten-20261009/1000046531.jpg",
+          "evidence/raw/thorsten-20261009/1000046532.jpg",
+          "evidence/raw/thorsten-20261009/1000046533.jpg",
+          "evidence/raw/thorsten-20261009/1000046534.jpg",
+          "evidence/raw/thorsten-20261009/1000046535.jpg",
+          "evidence/raw/thorsten-20261009/1000046536.jpg",
+          "evidence/raw/thorsten-20261009/1000046537.jpg",
+          "evidence/raw/thorsten-20261009/1000046538.jpg",
+          "evidence/raw/thorsten-20261009/1000046539.jpg",
+          "evidence/raw/thorsten-20261009/1000046540.jpg",
+          "evidence/raw/thorsten-20261009/1000046541.jpg",
+          "evidence/raw/thorsten-20261009/1000046542.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541084264.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542766365.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542778932.jpg"
+        ]
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": 0,
+        "unit": null,
+        "anchor": "geometry.mjs: ringSector, CAND-RIM-PIN",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Keine Schetternbretter. Nackte Sektoren mit synthetischen Endbohrungen/Stiften ersetzen keine beidseitigen Stoßbretter. Fotos zeigen Bretter in Gegenansichten.",
+      "proposed_action": "Paar je Stoß mit eigener Kontur und Quelle anlegen; keine direkte Endverbindung behaupten.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-05",
+      "subject": "COMP-SCHETTERNBRETTER",
+      "property": "nails_and_retention",
+      "intake": {
+        "id": "TH-20261009-05",
+        "subject": "COMP-SCHETTERNBRETTER",
+        "predicate": "nails_and_retention",
+        "value": {
+          "count": 4,
+          "from_each_side": 2,
+          "retention": "Gegenseite verkeilt"
+        },
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Holznägel durch Löcher; zwei von jeder Seite, auf Gegenseite verkeilt.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/1000046530.jpg",
+          "evidence/raw/thorsten-20261009/image-1791540812566.jpg",
+          "evidence/raw/thorsten-20261009/image-1791540831514.jpg",
+          "evidence/raw/thorsten-20261009/1000046531.jpg",
+          "evidence/raw/thorsten-20261009/1000046532.jpg",
+          "evidence/raw/thorsten-20261009/1000046533.jpg",
+          "evidence/raw/thorsten-20261009/1000046534.jpg",
+          "evidence/raw/thorsten-20261009/1000046535.jpg",
+          "evidence/raw/thorsten-20261009/1000046536.jpg",
+          "evidence/raw/thorsten-20261009/1000046537.jpg",
+          "evidence/raw/thorsten-20261009/1000046538.jpg",
+          "evidence/raw/thorsten-20261009/1000046539.jpg",
+          "evidence/raw/thorsten-20261009/1000046540.jpg",
+          "evidence/raw/thorsten-20261009/1000046541.jpg",
+          "evidence/raw/thorsten-20261009/1000046542.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541084264.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542766365.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542778932.jpg"
+        ],
+        "source_excerpt": "die Richtung aus der die holznägel durchgesteckt werden ist immer so dass zwei von der einen und zwei von der anderen Seite durchgesteckt werden"
+      },
+      "comparison_status": "abweichend",
+      "current_runtime": {
+        "value": {
+          "pins_per_joint": 2,
+          "alternating_insertion": false,
+          "wedges": false
+        },
+        "unit": null,
+        "anchor": "geometry.mjs: CAND-RIM-PIN",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Zwei kurze axial gleiche Stifte je Stoß statt vier durchgesteckter Nägel. Köpfe und verkeilte Enden in Fotos; genaue Lochkoordinaten noch verdeckt.",
+      "proposed_action": "Vier Nägel, zwei je Richtung, rückseitige Keile und durchgehende Kontakte planen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-06",
+      "subject": "COMP-PADDLES",
+      "property": "board_plane_to_rim",
+      "intake": {
+        "id": "TH-20261009-06",
+        "subject": "COMP-PADDLES",
+        "predicate": "board_plane_to_rim",
+        "value": 90,
+        "unit": "degree",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Flügelbrett im 90-Grad-Winkel zum Krümmling.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791541209669.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541224562.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541247032.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541265923.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541278244.jpg"
+        ],
+        "remaining_unknown": "Radial-/Tangentialpitch separat gegen Fotos prüfen."
+      },
+      "comparison_status": "teilweise-konsistent",
+      "current_runtime": {
+        "value": 90,
+        "unit": "degree",
+        "anchor": "calibration.mjs: calibrateModel, Paddle plane",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Aktive Brettfläche enthält Wellenachse X und radiale Richtung; ihre Ebene steht 90° zur Kranzebene YZ. Radialpitch 0° bleibt Kandidat und wird durch 90° nicht bewiesen.",
+      "proposed_action": "Ebenenbeziehung bewahren; Pitch separat bestimmen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-07",
+      "subject": "COMP-PADDLES",
+      "property": "land_side_bevel",
+      "intake": {
+        "id": "TH-20261009-07",
+        "subject": "COMP-PADDLES",
+        "predicate": "land_side_bevel",
+        "value": true,
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Landseite angeschrägt zur Kollisionsvermeidung mit als Schöpftröge bezeichneten Teilen.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791541209669.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541224562.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541247032.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541265923.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541278244.jpg"
+        ],
+        "remaining_unknown": "Kollisionspartner nicht stillschweigend als Kumpf oder feststehenden Trog deuten."
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": false,
+        "unit": null,
+        "anchor": "calibration.mjs: BoxGeometry",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Aktiver Quader ohne Abschrägung. Foto 1278244 zeigt Schräge nahe Kumpf; Kumpf als Kollisionspartner plausibel, noch nicht eindeutig belegt.",
+      "proposed_action": "Landseitige Kontur erfassen, Partner bestätigen, Swept-volume-Prüfung planen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-08",
+      "subject": "COMP-PADDLES",
+      "property": "width_approx",
+      "intake": {
+        "id": "TH-20261009-08",
+        "subject": "COMP-PADDLES",
+        "predicate": "width_approx",
+        "value": 0.35,
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Flügelbrett etwa 35 cm breit.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791541209669.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541224562.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541247032.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541265923.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541278244.jpg"
+        ],
+        "approximate": true
+      },
+      "comparison_status": "abweichend",
+      "current_runtime": {
+        "value": 0.43,
+        "unit": "m",
+        "anchor": "calibration.mjs: c.paddleHeight",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Brettbreite im Modell als paddleHeight 0,43 m; Fachangabe etwa 0,35 m. Differenz etwa 0,08 m, keine exakte Ist-Toleranz.",
+      "proposed_action": "Breite ungefähr 0,35 m hinterlegen; Gesamtlänge/Dicke getrennt halten.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-09",
+      "subject": "COMP-WOOD-BANDS",
+      "property": "craft",
+      "intake": {
+        "id": "TH-20261009-09",
+        "subject": "COMP-WOOD-BANDS",
+        "predicate": "craft",
+        "value": {
+          "wood": "Eiche",
+          "stock": "Ast",
+          "split": "mittig",
+          "boiled": "mehrere Stunden",
+          "shape": "U"
+        },
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Eichenast gespalten, mehrere Stunden gekocht, zum U gebogen.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791541421696.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541435456.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541442395.jpg"
+        ]
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": null,
+        "unit": null,
+        "anchor": "geometry.mjs/calibration.mjs: keine Bandbaugruppe",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Kein Holzband. U-Form fotografisch sichtbar; Eiche, Spalten und Kochen nur Fachangabe.",
+      "proposed_action": "Werkstoff/Herstellung als Fachwissen, U-Topologie als Verbindung aufnehmen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-10",
+      "subject": "COMP-WOOD-BANDS",
+      "property": "branch_diameter_range",
+      "intake": {
+        "id": "TH-20261009-10",
+        "subject": "COMP-WOOD-BANDS",
+        "predicate": "branch_diameter_range",
+        "value": [
+          0.04,
+          0.05
+        ],
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Ast vor Spaltung 4–5 cm stark.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791541421696.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541435456.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541442395.jpg"
+        ],
+        "approximate": true
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": null,
+        "unit": "m",
+        "anchor": "keine Bandbaugruppe",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "4–5 cm bezeichnet Ast vor Spaltung, nicht fertigen runden Bandquerschnitt.",
+      "proposed_action": "Rohmaterialbereich erhalten; gespaltenen Querschnitt nicht als Vollrund modellieren.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-11",
+      "subject": "COMP-WOOD-BANDS",
+      "property": "length_approx",
+      "intake": {
+        "id": "TH-20261009-11",
+        "subject": "COMP-WOOD-BANDS",
+        "predicate": "length_approx",
+        "value": 1.2,
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Band ungefähr 1,20 m lang.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791541421696.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541435456.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541442395.jpg"
+        ],
+        "approximate": true,
+        "remaining_unknown": "Abgewickelte Astlänge oder gebogenes Maß noch nicht ausdrücklich bezeichnet."
+      },
+      "comparison_status": "offener-bezug",
+      "current_runtime": {
+        "value": null,
+        "unit": "m",
+        "anchor": "keine Bandbaugruppe",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Etwa 1,20 m: abgewickelte Länge oder gebogenes Maß nicht ausdrücklich definiert; kein geeigneter Maßstab am gesamten Band.",
+      "proposed_action": "Längenbezug klären, bis dahin kein 1,20-m-U-Schenkel erfinden.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-12",
+      "subject": "COMP-WOOD-BANDS/COMP-PADDLES/COMP-KRUEMMLINGE",
+      "property": "retention_path",
+      "intake": {
+        "id": "TH-20261009-12",
+        "subject": "COMP-WOOD-BANDS/COMP-PADDLES/COMP-KRUEMMLINGE",
+        "predicate": "retention_path",
+        "value": [
+          "über Flügelbrett",
+          "durch Krümmling",
+          "hinten verkeilt"
+        ],
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Band befestigt Flügelbrett am Krümmling.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791541421696.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541435456.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541442395.jpg"
+        ],
+        "source_excerpt": "Ein Band wird über ein Flügelbrett gesteckt und durch den Krümling gesteckt und von hinten verkeilt.",
+        "supersedes": "Frühere Schetternbrett-Zuordnung in U-Band-Erklärung"
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": null,
+        "unit": null,
+        "anchor": "keine Bandbaugruppe",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Fotos zeigen U über Flügelbrett, Beine durch Krümmling, rückseitige Sicherung. Ältere Schettern-Zuordnung ist ersetzt.",
+      "proposed_action": "Verbindung Flügelbrett–Band–Krümmling mit hinteren Keilen anlegen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-13",
+      "subject": "COMP-SHAFT",
+      "property": "constant_wooden_shaft_diameter",
+      "intake": {
+        "id": "TH-20261009-13",
+        "subject": "COMP-SHAFT",
+        "predicate": "constant_wooden_shaft_diameter",
+        "value": true,
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Über komplette Holzwellenlänge gleichmäßiger Durchmesser.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791541554648.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541561160.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541576861.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541641609.jpg"
+        ],
+        "remaining_unknown": "Querschnittskontur/-maß; nicht automatisch perfekte Kreisform."
+      },
+      "comparison_status": "abweichend",
+      "current_runtime": {
+        "value": false,
+        "unit": null,
+        "anchor": "geometry.mjs: HYP-SHAFT/latheX",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Holzwelle verjüngt sich auf Radius 0,075 m an beiden Enden. Fotos zeigen kräftiges Holz bis zum Stirnende und separaten Dorn.",
+      "proposed_action": "Holzkörper ohne synthetische Schulterverjüngung; genaue Außenkontur/Querschnitt noch bestimmen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-14",
+      "subject": "COMP-SHAFT",
+      "property": "end_iron_clamps",
+      "intake": {
+        "id": "TH-20261009-14",
+        "subject": "COMP-SHAFT",
+        "predicate": "end_iron_clamps",
+        "value": {
+          "per_end": 2,
+          "total": 4
+        },
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Je zwei massive Eisenschellen an beiden Wellenenden.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791541554648.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541561160.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541576861.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541641609.jpg"
+        ]
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": 0,
+        "unit": null,
+        "anchor": "geometry.mjs: HYP-SHAFT",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Keine Wellenschellen. Fotos eines Endes zeigen zwei axial getrennte eiserne Schellen. Gesamtzahl vier ist Fachangabe, kein aus einem Foto verdoppelter Messbefund.",
+      "proposed_action": "Zwei Schellen je Ende; Breiten, Abstand, Schrauben und Sitz separat erfassen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-15",
+      "subject": "COMP-SHAFT/COMP-BEARINGS",
+      "property": "dorn_and_contact",
+      "intake": {
+        "id": "TH-20261009-15",
+        "subject": "COMP-SHAFT/COMP-BEARINGS",
+        "predicate": "dorn_and_contact",
+        "value": {
+          "dorn": "mittig eingearbeitet, beidseitig herausragend",
+          "contact": "direkt auf Lagerholz"
+        },
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Dorn läuft direkt im Holz der Auflage.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791541666129.jpg"
+        ],
+        "remaining_unknown": "Verdeckte innere Verankerung/Länge; keinen Vollmetallstab durch ganze Welle behaupten."
+      },
+      "comparison_status": "abweichend",
+      "current_runtime": {
+        "value": {
+          "metal_journals": 2,
+          "metal_bearing_candidates": 2
+        },
+        "unit": null,
+        "anchor": "geometry.mjs: CAND-JOURNAL, HYP-BEARING",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Dornkandidaten vorhanden, aber U-Lager als Metall statt unmittelbarer Holzauflage. Foto zeigt Dorn zwischen Holzflächen; Inneres der Welle bleibt unsichtbar.",
+      "proposed_action": "Holzlagerkontakt und separaten Dorn definieren; keine durchgehende Metallachse behaupten.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-16",
+      "subject": "COMP-KUMPF-NAILS",
+      "property": "long_nail_reason",
+      "intake": {
+        "id": "TH-20261009-16",
+        "subject": "COMP-KUMPF-NAILS",
+        "predicate": "long_nail_reason",
+        "value": "größerer Abstand der krümmlingabgewandten Kumpfseite",
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Vom Krümmling abgewandte Vorderseite braucht längeren Kumpfnagel.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542573592.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542586169.jpg"
+        ],
+        "relation_to_previous_baseline": "Präzisierung der Überlappungserklärung; nicht wieder Neigung als primäre Ursache."
+      },
+      "comparison_status": "teilweise-konsistent",
+      "current_runtime": {
+        "value": {
+          "long_chord_m": 0.7263529495,
+          "short_chord_m": 0.5948792239
+        },
+        "unit": null,
+        "anchor": "calibration.mjs: referenceKumpf, pinGeometry",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Aktive V3-Nägel ungleich lang, aber aus Kandidatpose und fixem exitX=-0,495 abgeleitet. Zuordnung krümmlingabgewandt nicht als beobachteter Kontakt gesichert. Fotos loser Nägel nur bedingt metrisch auswertbar.",
+      "proposed_action": "Lang/kurz nach realer Kumpf-Kranz-Seite zuordnen; Länge entlang Kurve, Sehne und Überstand trennen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-17",
+      "subject": "COMP-KUMPF-NAILS",
+      "property": "stock_head_diameter",
+      "intake": {
+        "id": "TH-20261009-17",
+        "subject": "COMP-KUMPF-NAILS",
+        "predicate": "stock_head_diameter",
+        "value": 0.04,
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Ausgangsholz 4 cm Durchmesser; Kopf bleibt stärker.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542573592.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542586169.jpg"
+        ]
+      },
+      "comparison_status": "abweichend",
+      "current_runtime": {
+        "value": 0.048,
+        "unit": "m",
+        "anchor": "calibration.mjs: CylinderGeometry(.024,.024,.025,8)",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Zylindrisch polygonaler Modellkopf Ø48 mm; Fachangabe Ausgangsholz/Kopf etwa Ø40 mm. Fotos zeigen Rinde und unregelmäßige Stirnform.",
+      "proposed_action": "40-mm-Ausgangsholz berücksichtigen; Kopfhöhe separat aus Foto PR-04 behandeln.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-18",
+      "subject": "COMP-KUMPF-NAILS",
+      "property": "carved_shaft_diameter",
+      "intake": {
+        "id": "TH-20261009-18",
+        "subject": "COMP-KUMPF-NAILS",
+        "predicate": "carved_shaft_diameter",
+        "value": 0.026,
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Schaft auf 2,6 cm geschnitzt.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542573592.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542586169.jpg"
+        ]
+      },
+      "comparison_status": "abweichend",
+      "current_runtime": {
+        "value": 0.018,
+        "unit": "m",
+        "anchor": "calibration.mjs: pinGeometry; calibration-v3.json: holeRadius",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Modellschaft Ø18 mm; Fachmaß Ø26 mm. Foto PR-05 mit 24–29 mm vereinbar. Referenzloch Ø24 mm ist kleiner als neuer Schaft.",
+      "proposed_action": "Schaft und Loch-/Spielbezug gemeinsam prüfen, nicht Ø26 in Ø24 erzwingen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-19",
+      "subject": "COMP-RADSTATT",
+      "property": "local_name",
+      "intake": {
+        "id": "TH-20261009-19",
+        "subject": "COMP-RADSTATT",
+        "predicate": "local_name",
+        "value": "Radstadt",
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Gesamte Tragkonstruktion, auf der das Rad aufliegt, heißt Radstadt.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791542108092.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542120355.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542146990.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542161221.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542172733.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542237069.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542257101.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542327774.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542342950.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543053651.jpg"
+        ],
+        "alias_policy": "Bestehende technische ID COMP-RADSTATT kompatibel erhalten."
+      },
+      "comparison_status": "semantik",
+      "current_runtime": {
+        "value": null,
+        "unit": null,
+        "anchor": "geometry.mjs: stationary topology",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Radstadt bezeichnet gesamtes Tragwerk. Runtime hat FRAME/Bearing/Trough-Familien, keine eindeutige begriffliche Gruppierung.",
+      "proposed_action": "Oberbegriff Radstadt mit Unterbaugruppen; keine neue Einzelstrebe Radstadt nennen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-20",
+      "subject": "COMP-ARMS/COMP-RADSTATT",
+      "property": "clearance_approx",
+      "intake": {
+        "id": "TH-20261009-20",
+        "subject": "COMP-ARMS/COMP-RADSTATT",
+        "predicate": "clearance_approx",
+        "value": 0.65,
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Arme ungefähr 65 cm von Radstadt entfernt.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791542108092.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542120355.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542146990.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542161221.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542172733.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542237069.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542257101.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542327774.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542342950.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543053651.jpg"
+        ],
+        "approximate": true,
+        "remaining_unknown": "Messendpunkte/Richtung nicht markiert."
+      },
+      "comparison_status": "offener-bezug",
+      "current_runtime": {
+        "value": null,
+        "unit": "m",
+        "anchor": "geometry.mjs: Arm-Layer und CTX-*",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Etwa 0,65 m Armabstand zur Radstadt ohne benannte Flächen, Armphase oder Richtung. Kein eindeutiges Ist-Maß ableitbar.",
+      "proposed_action": "Endpunkte und Stellung bestimmen, dann Abstand aus Weltgeometrie prüfen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-21",
+      "subject": "COMP-TROUGH-SUPPORT",
+      "property": "upper_crossbeam_length",
+      "intake": {
+        "id": "TH-20261009-21",
+        "subject": "COMP-TROUGH-SUPPORT",
+        "predicate": "upper_crossbeam_length",
+        "value": 1.2,
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Oberer Querbalken 1,20 m lang.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791542108092.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542120355.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542146990.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542161221.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542172733.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542237069.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542257101.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542327774.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542342950.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543053651.jpg"
+        ]
+      },
+      "comparison_status": "abweichend",
+      "current_runtime": {
+        "value": null,
+        "unit": "m",
+        "anchor": "geometry.mjs: CTX-BEARING-STAND, CTX-RAIL",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Kein eindeutig entsprechender oberer 1,20-m-Bockquerbalken. CTX-BEARING-STAND ist 0,84 m lang, aber Lagerunterlage, nicht identischer oberer Balken.",
+      "proposed_action": "Radbock als eigene Baugruppe mit oberem Querbalken 1,20 m aufbauen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-22",
+      "subject": "COMP-TROUGH-SUPPORT",
+      "property": "beam_section",
+      "intake": {
+        "id": "TH-20261009-22",
+        "subject": "COMP-TROUGH-SUPPORT",
+        "predicate": "beam_section",
+        "value": [
+          0.14,
+          0.14
+        ],
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Balken des beschriebenen Bocks generell 14 × 14 cm.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791542108092.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542120355.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542146990.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542161221.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542172733.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542237069.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542257101.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542327774.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542342950.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543053651.jpg"
+        ],
+        "remaining_unknown": "Nicht auf Arme/Welle oder sämtliches Holz verallgemeinern."
+      },
+      "comparison_status": "abweichend",
+      "current_runtime": {
+        "value": {
+          "posts_m": 0.23,
+          "rails_m": 0.24,
+          "braces_m": 0.16
+        },
+        "unit": "m",
+        "anchor": "geometry.mjs: CTX-POST/RAIL/BRACE",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Synthetischer Rahmen verwendet andere Querschnitte; lokale Trogstützen 0,14 m sind kein Nachweis des Radbocks.",
+      "proposed_action": "14×14 cm nur am beschriebenen Bock anwenden.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-23",
+      "subject": "COMP-TROUGH-SUPPORT",
+      "property": "upper_joint",
+      "intake": {
+        "id": "TH-20261009-23",
+        "subject": "COMP-TROUGH-SUPPORT",
+        "predicate": "upper_joint",
+        "value": {
+          "post": "ausgeklinkt, in Querbalkenaussparung",
+          "retention": "Keil als herausstehender Ast"
+        },
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Ausgeklinkte Stützen greifen in oberen Querbalken; verkeilt.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791542108092.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542120355.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542146990.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542161221.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542172733.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542237069.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542257101.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542327774.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542342950.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543053651.jpg"
+        ]
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": false,
+        "unit": null,
+        "anchor": "geometry.mjs: beam/CTX-*",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Rahmenbalken ohne Ausklinkung/Schlitz/Keil. Fotos 2327774/2342950 zeigen oberen Anschluss und herausstehenden Keil.",
+      "proposed_action": "Ausgeklinkte Stütze, Querbalkenaussparung und Holzkeil als Kontakte anlegen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-24",
+      "subject": "COMP-TROUGH-SUPPORT",
+      "property": "symmetry",
+      "intake": {
+        "id": "TH-20261009-24",
+        "subject": "COMP-TROUGH-SUPPORT",
+        "predicate": "symmetry",
+        "value": "komplett achsensymmetrisch",
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Konstruktion komplett achsensymmetrisch.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791542108092.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542120355.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542146990.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542161221.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542172733.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542237069.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542257101.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542327774.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542342950.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543053651.jpg"
+        ],
+        "remaining_unknown": "Bockkontext; Symmetrieachse/Geltungsbereich prüfen, nicht ganzes System spiegeln."
+      },
+      "comparison_status": "offener-geltungsbereich",
+      "current_runtime": {
+        "value": null,
+        "unit": null,
+        "anchor": "geometry.mjs: sx/sy-Schleifen",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Synthetischer Rahmen wird teils um X/Y gespiegelt. Fotos und Fachkontext betreffen Bock, nicht das gesamte asymmetrische Trog-/Kumpfsystem.",
+      "proposed_action": "Lokale Bockachse definieren; keine globale Spiegelregel.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-25",
+      "subject": "COMP-RIMS",
+      "property": "clear_inner_face_distance",
+      "intake": {
+        "id": "TH-20261009-25",
+        "subject": "COMP-RIMS",
+        "predicate": "clear_inner_face_distance",
+        "value": 1.8,
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-explicit-measure",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "1,80 m lichter Abstand zwischen den Kränzen.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [],
+        "supersedes": "ringDistance=1.15 placeholder; 1.80 ist weder Durchmesser noch Mittelebenenabstand."
+      },
+      "comparison_status": "abweichend",
+      "current_runtime": {
+        "value": 1.01,
+        "unit": "m",
+        "anchor": "geometry.mjs: x=sign*p.ringDistance/2; runtime-audit.rims",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Aus tatsächlichen Kranzgrenzen gemessen: 1,00999999 m lichte Weite. Neue Fachkorrektur 1,80 m.",
+      "proposed_action": "Innenflächenabstand als führende Größe; Mittelebenen 1,94 m ableiten.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-26",
+      "subject": "COMP-KRUEMMLINGE",
+      "property": "axial_width",
+      "intake": {
+        "id": "TH-20261009-26",
+        "subject": "COMP-KRUEMMLINGE",
+        "predicate": "axial_width",
+        "value": 0.14,
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-corrected-measure",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "14 cm axial; frühere 15 cm waren falsch.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [],
+        "source_excerpt": "Vermutlich müssen wir doch die Krümmlingsbreite dann mit 14 Zentimetern korrigieren. Die 15 waren falsch.",
+        "supersedes": "0.15 m axial; historische radiale Tiefe nicht betroffen."
+      },
+      "comparison_status": "konsistent",
+      "current_runtime": {
+        "value": 0.14,
+        "unit": "m",
+        "anchor": "geometry.mjs: ringSector(depth=p.rimWidth)",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Aktive axiale Kranzbreite bereits 0,14 m. Korrektur ersetzt frühere axiale 0,15 m, nicht historische radiale Tiefe 2,13−1,98=0,15 m.",
+      "proposed_action": "0,14 m bewahren; historische axiale Falschangabe mit Supersedes-Beziehung dokumentieren.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-27",
+      "subject": "COMP-ARMS",
+      "property": "cross_section",
+      "intake": {
+        "id": "TH-20261009-27",
+        "subject": "COMP-ARMS",
+        "predicate": "cross_section",
+        "value": [
+          0.14,
+          0.065
+        ],
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Arme 14 × 6,5 cm.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [],
+        "remaining_unknown": "Zuordnung axial/radial vor Geometrieeinbau prüfen."
+      },
+      "comparison_status": "abweichend",
+      "current_runtime": {
+        "value": {
+          "axial_main_m": 0.14,
+          "tangential_depth_m": 0.12,
+          "axial_tip_m": 0.063
+        },
+        "unit": "m",
+        "anchor": "geometry.mjs: centre,width,profilePrism",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Armcode hardcodiert w=.14 und Extrusion .12; tip=.45*w. JSON armWidth/armDepth steuern diesen Code nicht. Zuordnung der neuen 14×6,5 cm zu Achsen noch offen.",
+      "proposed_action": "Querschnittsachsen klären; hardcodierte Geometrie an echte Parameter binden.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-28",
+      "subject": "COMP-RIMS",
+      "property": "midplane_distance",
+      "intake": {
+        "id": "TH-20261009-28",
+        "subject": "COMP-RIMS",
+        "predicate": "midplane_distance",
+        "value": 1.94,
+        "unit": "m",
+        "evidence_class": "derived-from-expert-measures",
+        "status": "derived-with-assumptions",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Aus Innenabstand und zwei gleichen Kranzbreiten berechnet.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [],
+        "derived_from": [
+          "TH-20261009-25",
+          "TH-20261009-26"
+        ],
+        "formula": "1.80 + (0.14 + 0.14)/2",
+        "assumptions": "Zwei gleich breite, parallel betrachtete Kränze."
+      },
+      "comparison_status": "abweichend",
+      "current_runtime": {
+        "value": 1.15,
+        "unit": "m",
+        "anchor": "geometry.mjs: p.ringDistance",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "ringDistance ist Mittelebenenabstand. 1,80+(0,14+0,14)/2=1,94 m, unter Annahme paralleler gleich breiter Kränze.",
+      "proposed_action": "1,94 m künftig abgeleitet führen; +0,79 m Gesamtdifferenz.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-29",
+      "subject": "COMP-RIMS",
+      "property": "outer_face_width",
+      "intake": {
+        "id": "TH-20261009-29",
+        "subject": "COMP-RIMS",
+        "predicate": "outer_face_width",
+        "value": 2.08,
+        "unit": "m",
+        "evidence_class": "derived-from-expert-measures",
+        "status": "derived-with-assumptions",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Außenflächenabstand ohne Überstände.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [],
+        "derived_from": [
+          "TH-20261009-25",
+          "TH-20261009-26"
+        ],
+        "formula": "1.80 + 2*0.14",
+        "assumptions": "Zwei gleich breite, parallel betrachtete Kränze."
+      },
+      "comparison_status": "abweichend",
+      "current_runtime": {
+        "value": 1.29,
+        "unit": "m",
+        "anchor": "runtime-audit.rims; calibrateModel paddle span",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Außenflächenabstand 1,29 m statt abgeleitet 2,08 m. Kein Maß für Flügel-/Kumpfüberstände.",
+      "proposed_action": "2,08 m ableiten; zusätzliche Außenüberstände gesondert definieren.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-30",
+      "subject": "COMP-CHANNEL",
+      "property": "section_count",
+      "intake": {
+        "id": "TH-20261009-30",
+        "subject": "COMP-CHANNEL",
+        "predicate": "section_count",
+        "value": 2,
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Rinne aus zwei Teilen.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791543487137.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543497527.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543505768.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543574540.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543757351.jpg"
+        ]
+      },
+      "comparison_status": "abweichend",
+      "current_runtime": {
+        "value": 1,
+        "unit": null,
+        "anchor": "geometry.mjs: CAND-TROUGH/CAND-CHANNEL",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Es gibt einen Sammeltrog und eine durchgehende Rinne; zwei COMP-TROUGH-Meshes bedeuten nicht zwei Rinnenteile.",
+      "proposed_action": "Rinne in zwei Teile mit explizitem Stoß gliedern.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-31",
+      "subject": "COMP-A-BOCK/COMP-CHANNEL",
+      "property": "support_location",
+      "intake": {
+        "id": "TH-20261009-31",
+        "subject": "COMP-A-BOCK/COMP-CHANNEL",
+        "predicate": "support_location",
+        "value": "Stoßstelle beider Rinnenteile",
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "A-Bock trägt Rinne am Stoß.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791543487137.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543497527.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543505768.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543574540.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543757351.jpg"
+        ]
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": false,
+        "unit": null,
+        "anchor": "geometry.mjs: CTX-CHANNEL-SUPPORT",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Zwei senkrechte Kanalstützen, kein A-Bock unter Teilstoß. Fotoübersicht lokalisiert A-Bock an Rinnenverbindung.",
+      "proposed_action": "A-Bock und Stoßposition gemeinsam anlegen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-32",
+      "subject": "COMP-A-BOCK",
+      "property": "leg_section",
+      "intake": {
+        "id": "TH-20261009-32",
+        "subject": "COMP-A-BOCK",
+        "predicate": "leg_section",
+        "value": [
+          0.14,
+          0.14
+        ],
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Beide A-förmig aufgestellte Balken 14 × 14 cm.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791543487137.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543497527.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543505768.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543574540.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543757351.jpg"
+        ]
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": null,
+        "unit": "m",
+        "anchor": "geometry.mjs: CTX-CHANNEL-SUPPORT",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Senkrechte Hilfsstützen .14 m vorhanden, aber keine beiden schrägen A-Beine.",
+      "proposed_action": "A-Beine mit 14×14 cm, tatsächlicher Neigung und Fußauflagen planen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-33",
+      "subject": "COMP-A-BOCK",
+      "property": "opening_width",
+      "intake": {
+        "id": "TH-20261009-33",
+        "subject": "COMP-A-BOCK",
+        "predicate": "opening_width",
+        "value": 0.05,
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Aussparung 5 cm breit; ausdrücklich aus Erklärung, nicht abgelesen.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791543487137.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543497527.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543505768.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543574540.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543757351.jpg"
+        ]
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": null,
+        "unit": "m",
+        "anchor": "geometry.mjs: beam",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Keine Aussparung modelliert; 5 cm ist Fachangabe, nicht aus Pixeln gemessener Wert.",
+      "proposed_action": "5-cm-Öffnung definieren; Höhe und Lage offen halten.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-34",
+      "subject": "COMP-A-BOCK",
+      "property": "crossbar_section",
+      "intake": {
+        "id": "TH-20261009-34",
+        "subject": "COMP-A-BOCK",
+        "predicate": "crossbar_section",
+        "value": [
+          0.04,
+          0.14
+        ],
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-explicit-measure",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Riegel 4 × 14 cm.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791543487137.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543497527.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543505768.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543574540.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543757351.jpg"
+        ]
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": null,
+        "unit": "m",
+        "anchor": "geometry.mjs: CTX-CHANNEL-SUPPORT",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Kein A-Bockriegel; Fachquerschnitt 4×14 cm. Welches Maß im konkreten Aufstand vertikal liegt, nicht blind annehmen.",
+      "proposed_action": "Querschnitt und Achsorientierung gemeinsam festlegen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-35",
+      "subject": "COMP-A-BOCK",
+      "property": "crossbar_length",
+      "intake": {
+        "id": "TH-20261009-35",
+        "subject": "COMP-A-BOCK",
+        "predicate": "crossbar_length",
+        "value": 0.9,
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-explicit-measure",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Riegel 90 cm lang.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791543487137.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543497527.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543505768.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543574540.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543757351.jpg"
+        ]
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": null,
+        "unit": "m",
+        "anchor": "geometry.mjs: CTX-CHANNEL-SUPPORT",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Kein Riegel. 90 cm ist gesamte Riegellänge, nicht lichte Spannweite und nicht Fußabstand.",
+      "proposed_action": "Gesamtlänge .90 m mit Durchsteckung/Überständen separat führen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-36",
+      "subject": "COMP-A-BOCK/COMP-CHANNEL",
+      "property": "load_retention_path",
+      "intake": {
+        "id": "TH-20261009-36",
+        "subject": "COMP-A-BOCK/COMP-CHANNEL",
+        "predicate": "load_retention_path",
+        "value": [
+          "Riegel durch Aussparung",
+          "oben und unten verkeilt",
+          "Rinne liegt auf Riegel"
+        ],
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Durchgesteckter Riegel trägt die Rinne und wird oben und unten verkeilt.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791543487137.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543497527.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543505768.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543574540.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543757351.jpg"
+        ]
+      },
+      "comparison_status": "fehlend",
+      "current_runtime": {
+        "value": false,
+        "unit": null,
+        "anchor": "geometry.mjs: CTX-CHANNEL-SUPPORT",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Keine Durchsteckung, obere/untere Keile oder Riegelauflage. Foto3574540 zeigt Last-/Sicherungspfad.",
+      "proposed_action": "Rinne→Riegel→A-Beine→lokaler Boden als Kontaktkette erfassen.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-37",
+      "subject": "COMP-A-BOCK/COMP-CHANNEL",
+      "property": "channel_bottom_underside_above_ground",
+      "intake": {
+        "id": "TH-20261009-37",
+        "subject": "COMP-A-BOCK/COMP-CHANNEL",
+        "predicate": "channel_bottom_underside_above_ground",
+        "value": 0.8,
+        "unit": "m",
+        "evidence_class": "local-expert-statement",
+        "status": "expert-confirmed-measure-endpoint",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Unterseite Rinnenboden am A-Bock 80 cm über Boden.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791543487137.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543497527.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543505768.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543574540.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543757351.jpg"
+        ],
+        "source_excerpt": "Ja auf die Unterseite des Rinnenbodens.",
+        "remaining_unknown": "Lokales Gelände und Riegelorientierung gemeinsam prüfen."
+      },
+      "comparison_status": "nicht-vergleichbar",
+      "current_runtime": {
+        "value": null,
+        "unit": "m",
+        "anchor": "geometry.mjs: channel; calibration.mjs: troughZ",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Aktuelles Modell nutzt globale Z-Werte ohne registrierten lokalen Boden am A-Bock. Fachmaß .80 m endet an Unterseite Rinnenboden.",
+      "proposed_action": "Lokales Geländedatum definieren; keine Gleichsetzung mit troughZ=1.4.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-38",
+      "subject": "COMP-A-BOCK",
+      "property": "leg_length_source",
+      "intake": {
+        "id": "TH-20261009-38",
+        "subject": "COMP-A-BOCK",
+        "predicate": "leg_length_source",
+        "value": "Zollstockfotos",
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "photo-readout-required",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Balkenlänge geht aus Zollstockmaß hervor.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791543487137.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543497527.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543505768.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543574540.jpg",
+          "evidence/raw/thorsten-20261009/image-1791543757351.jpg"
+        ],
+        "numeric_value": null,
+        "remaining_unknown": "Null, Endpunkte, Verlauf und Unsicherheit auswerten; nicht erneut als fehlendes Nutzermaß anfragen."
+      },
+      "comparison_status": "foto-bedingt",
+      "current_runtime": {
+        "value": null,
+        "unit": null,
+        "anchor": "kein A-Bein im Runtime",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "Skala am oberen Beinende etwa147–151 cm lesbar; unterer Null-/Fußbezug im Gras ungesichert. Keine belastbare exakte Beinlänge, keine vertikale Höhe.",
+      "proposed_action": "PR-01/02 verwenden; Nullbezug bestätigen, dann Länge/Neigung ableiten.",
+      "applied": false,
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-39",
+      "subject": "COMP-TROUGH",
+      "property": "scan_context_available_by_expert",
+      "intake": {
+        "id": "TH-20261009-39",
+        "subject": "COMP-TROUGH",
+        "predicate": "scan_context_available_by_expert",
+        "value": true,
+        "unit": null,
+        "evidence_class": "local-expert-statement",
+        "status": "expert-intake-pending-property-review",
+        "scope": "current-wheel-expert-description",
+        "author": "ThorstenHalsch",
+        "statement": "Punktewolke zeigt Schöpftrog nach Nutzerangabe brauchbar.",
+        "statement_form": "semantic-transcription-of-user-explanation",
+        "sources": [
+          "evidence/raw/thorsten-20261009/image-1791541887655.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541908195.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541920559.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541961389.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541967728.jpg",
+          "evidence/raw/thorsten-20261009/image-1791541979278.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542028869.jpg",
+          "evidence/raw/thorsten-20261009/image-1791542045602.jpg"
+        ],
+        "remaining_unknown": "Mechanische Registrierung erst prüfen; hier keine neue Transformation gemessen."
+      },
+      "comparison_status": "scan-offen",
+      "current_runtime": {
+        "value": null,
+        "unit": null,
+        "anchor": "data/scan-transforms.json; scripts/scan-inspect.py",
+        "scope": "unchanged main / default V3 brute; absence is not a metric zero"
+      },
+      "finding": "PLY/GLB und neue Fotos geprüft. Horizontale Struktur im Suchband z=2.8–3.5 als Trogkandidat, aber Zuordnung und mechanische Registrierung nicht eindeutig.",
+      "proposed_action": "Korrespondenzen und unabhängige Prüfstrecke bestimmen; AXIS_NORMALIZED bewahren.",
+      "applied": false,
+      "as_built_promoted": false
+    }
+  ],
+  "historical_dimensions": {
+    "sources": [
+      "evidence/raw/IMG_6848.jpeg",
+      "evidence/raw/IMG_6849.jpeg",
+      "evidence/raw/IMG_6850.jpeg",
+      "evidence/raw/IMG_6851.jpeg",
+      "evidence/raw/IMG_6852.jpeg"
+    ],
+    "outer_diameter_annotation": 426,
+    "inner_diameter_annotation": 396,
+    "outer_radius_annotation": 213,
+    "inner_radius_annotation": 198,
+    "sector_angle_degrees": 60,
+    "unit_note": "cm-Interpretation bereits im Projekt; lineare Originalmaße ohne explizite Einheit. Kranz Ø4.26m nicht maximale Hüllkontur."
+  },
+  "historical_policy": "Historical design and conditional cm interpretation remain separate from current expert measures. Approximate and open values retain intake qualifiers."
+}

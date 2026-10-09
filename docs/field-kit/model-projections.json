@@ -1,8 +1,16 @@
 {
   "schema": "ks-technical-projections/v2",
-  "iteration": "ITER-001",
+  "geometry_dependencies": {
+    "src/workbench/geometry.mjs": "9ef3853fe1f87a8b00c9e2e4e57265d40edc3f3d20d4cde7468dbe79671f94b7",
+    "src/workbench/calibration.mjs": "1417dca167dc1e26639d1bb5195936f0b671fadc24c1266513ddaadbfc57d9a2",
+    "src/workbench/expert-corrections.mjs": "42dd3882abf115d805e3315c36b95b27442ee343feccb33ed7fd8aa2c88fd53a",
+    "data/hypothesis.parameters.json": "f1176440a9c78ba3cff6bdcef90edc270e7d0d9a1fbbb1328c75491545527e52",
+    "data/calibration-v3.json": "788f2c57d86538fa4d2e2b213c7dde4c0fd9894158d04ebc3043a089bd242af3",
+    "data/reconstruction-constraints.json": "7107eed171506485dc70ff09ad9d317aa5d1edac871e4ca7a7ffbdf9448df4ff"
+  },
+  "iteration": "ITER-003",
   "geometry": "src/workbench/geometry.mjs",
-  "geometry_sha256": "8f3446174a002a7282e2c445a3655632f08450db95fb6dd388d48b570025e385",
+  "geometry_sha256": "9ef3853fe1f87a8b00c9e2e4e57265d40edc3f3d20d4cde7468dbe79671f94b7",
   "sheets": [
     {
       "id": "KS-00",

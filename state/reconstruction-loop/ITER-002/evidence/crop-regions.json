@@ -1,0 +1,208 @@
+[
+  {
+    "crop": "nails-length.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+    "box_xyxy": [
+      420,
+      0,
+      610,
+      1250
+    ],
+    "scale": 2
+  },
+  {
+    "crop": "abock-top.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791543497527.jpg",
+    "box_xyxy": [
+      400,
+      70,
+      620,
+      410
+    ],
+    "scale": 2
+  },
+  {
+    "crop": "abock-seat.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791543505768.jpg",
+    "box_xyxy": [
+      325,
+      560,
+      470,
+      1060
+    ],
+    "scale": 2
+  },
+  {
+    "crop": "abock-foot.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791543487137.jpg",
+    "box_xyxy": [
+      535,
+      770,
+      790,
+      1070
+    ],
+    "scale": 2
+  },
+  {
+    "crop": "paddle-length.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791541247032.jpg",
+    "box_xyxy": [
+      400,
+      0,
+      635,
+      1280
+    ],
+    "scale": 2
+  },
+  {
+    "crop": "shaft-ruler.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791541641609.jpg",
+    "box_xyxy": [
+      0,
+      665,
+      690,
+      850
+    ],
+    "scale": 2
+  },
+  {
+    "crop": "nails-head.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791542573592.jpg",
+    "box_xyxy": [
+      240,
+      440,
+      680,
+      825
+    ],
+    "scale": 2
+  },
+  {
+    "crop": "nails-shaft.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791542586169.jpg",
+    "box_xyxy": [
+      340,
+      550,
+      660,
+      960
+    ],
+    "scale": 2
+  },
+  {
+    "crop": "schetter-ruler.png",
+    "source": "evidence/raw/thorsten-20261009/1000046530.jpg",
+    "box_xyxy": [
+      0,
+      365,
+      1280,
+      740
+    ],
+    "scale": 1.5
+  },
+  {
+    "crop": "nail-tip-long.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+    "box_xyxy": [
+      470,
+      0,
+      585,
+      340
+    ],
+    "rotation_deg": 0,
+    "scale": 3
+  },
+  {
+    "crop": "nail-tip-short.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+    "box_xyxy": [
+      440,
+      330,
+      530,
+      650
+    ],
+    "rotation_deg": 0,
+    "scale": 3
+  },
+  {
+    "crop": "nail-zero.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+    "box_xyxy": [
+      430,
+      960,
+      610,
+      1240
+    ],
+    "rotation_deg": 0,
+    "scale": 3
+  },
+  {
+    "crop": "abock-seat-readable.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791543497527.jpg",
+    "box_xyxy": [
+      520,
+      850,
+      660,
+      1280
+    ],
+    "rotation_deg": 0,
+    "scale": 3
+  },
+  {
+    "crop": "nails-horizontal.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+    "box_xyxy": [
+      420,
+      0,
+      600,
+      1240
+    ],
+    "rotation_deg": 90,
+    "scale": 2
+  },
+  {
+    "crop": "nail-long-scale.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+    "box_xyxy": [
+      480,
+      80,
+      560,
+      230
+    ],
+    "rotation_deg": -90,
+    "scale": 5
+  },
+  {
+    "crop": "nail-short-scale.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+    "box_xyxy": [
+      450,
+      350,
+      528,
+      470
+    ],
+    "rotation_deg": -90,
+    "scale": 5
+  },
+  {
+    "crop": "nail-zero-scale.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+    "box_xyxy": [
+      480,
+      1080,
+      540,
+      1220
+    ],
+    "rotation_deg": -90,
+    "scale": 5
+  },
+  {
+    "crop": "schetter-vertical.png",
+    "source": "evidence/raw/thorsten-20261009/1000046530.jpg",
+    "box_xyxy": [
+      650,
+      370,
+      730,
+      720
+    ],
+    "scale": 5
+  }
+]

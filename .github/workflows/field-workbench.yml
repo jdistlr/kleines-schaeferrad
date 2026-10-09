@@ -9,7 +9,11 @@ permissions:
 jobs:
   field-test:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        journey: [field, field-kit, reconstruction, integration]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -22,19 +26,19 @@ jobs:
       - run: pip install reportlab==4.4.3
       - run: sudo apt-get update && sudo apt-get install -y fonts-dejavu-core
       - run: npm ci --no-audit --no-fund
-      - run: npm run test:workbench
+      - run: node --test tests/*.test.mjs
       - run: python scripts/verify_evidence.py
       - run: npm run check && npm run build
       - name: Install isolated browser test dependency
         run: npm install --no-save --package-lock=false playwright@1.62.1
       - run: npx playwright install --with-deps chromium
-      - run: node tests/browser-field.mjs
+      - run: node tests/browser-${{ matrix.journey }}.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: field-workbench-test-evidence
+          name: field-workbench-test-evidence-${{ matrix.journey }}
           path: test-results/
       - uses: actions/upload-artifact@v4
         with:
-          name: field-workbench-review-site
+          name: field-workbench-review-site-${{ matrix.journey }}
           path: dist/

@@ -1,0 +1,260 @@
+{
+  "iteration": "ITER-003",
+  "status": "qualified candidate; not collision-free or assembly-certified",
+  "scope": "default pose only; AABB broad phase is not triangle collision or force-path validation",
+  "movingStationaryBroadPhasePairs": [
+    [
+      "V3-KUM-08-STAVE-5",
+      "CTX-WALK-0"
+    ],
+    [
+      "V3-KUM-08-STAVE-6",
+      "CTX-WALK-0"
+    ],
+    [
+      "V3-KUM-08-STAVE-7",
+      "CTX-WALK-0"
+    ],
+    [
+      "V3-KUM-08-STAVE-8",
+      "CTX-WALK-0"
+    ],
+    [
+      "V3-KUM-08-STAVE-9",
+      "CTX-WALK-0"
+    ],
+    [
+      "V3-KUM-08-HOOP-1",
+      "CTX-WALK-0"
+    ],
+    [
+      "V3-KUM-18-STAVE-5",
+      "CTX-WALK-0"
+    ],
+    [
+      "V3-KUM-18-STAVE-6",
+      "CTX-WALK-0"
+    ],
+    [
+      "V3-KUM-18-STAVE-7",
+      "CTX-WALK-0"
+    ],
+    [
+      "V3-KUM-18-STAVE-8",
+      "CTX-WALK-0"
+    ],
+    [
+      "V3-KUM-18-STAVE-9",
+      "CTX-WALK-0"
+    ],
+    [
+      "TH-JOURNAL--1",
+      "TH-WOOD-BEARING--1"
+    ],
+    [
+      "TH-JOURNAL-1",
+      "TH-WOOD-BEARING-1"
+    ]
+  ],
+  "unrelievedNailPaths": [
+    {
+      "id": "V3-KUM-01-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-01-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-02-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-02-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-03-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-03-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-04-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-04-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-05-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-05-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-06-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-06-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-07-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-07-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-08-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-08-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-09-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-09-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-10-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-10-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-11-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-11-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-12-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-12-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-13-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-13-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-14-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-14-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-15-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-15-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-16-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-16-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-17-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-17-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-18-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-18-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-19-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-19-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-20-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-20-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-21-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-21-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-22-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-22-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-23-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-23-NAIL-SHORT",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-24-NAIL-LONG",
+      "rimHits": 10
+    },
+    {
+      "id": "V3-KUM-24-NAIL-SHORT",
+      "rimHits": 10
+    }
+  ],
+  "limitations": [
+    "No full-cycle triangle collision proof",
+    "No load/stress analysis",
+    "No registered site/ground datum",
+    "Rim nail holes remain unresolved; candidate shafts may intersect uncut rim material",
+    "Lower frame junctions and trough supports remain synthetic and require review"
+  ]
+}

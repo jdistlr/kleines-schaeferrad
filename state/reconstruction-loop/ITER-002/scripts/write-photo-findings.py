@@ -1,0 +1,78 @@
+"""Manual visual findings and readout provenance; no canonical promotions."""
+import json
+from pathlib import Path
+from collections import defaultdict
+O=Path('state/reconstruction-loop/ITER-002'); P='evidence/raw/thorsten-20261009/'
+def save(n,x): (O/n).write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n')
+manifest=json.load(open('evidence/contributions/thorsten-20261009-photos.json'))
+groups={
+'arm-kruemmling':('Durchgesteckter Arm; am Sitz breitere Krümmlingskontur; Keil-/Querstiftbereiche sichtbar.','Mitte des vollständigen Segments, Querschnittsachsen und verdeckte Passflächen nicht allein aus Nahbild metrisch bestimmt.'),
+'schetternbretter':('Gebogene Stoßbretter, Köpfe und verkeilte Nagelenden in Gegenansichten; lose Neubrettvorlage separat.','Bohrungen verdeckt; keine perspektivisch zuverlässigen Lochkoordinaten. Vier Nägel / zwei je Richtung durch Fachangabe präzisiert.'),
+'fluegelbretter':('Axial überspannendes Brett; Bandbefestigung am Kranz; Schräge landseitig in Kontextaufnahmen.','90° ist Fachmaß; perspektivischer Pitch, volle Länge und eindeutiger Kollisionspartner bleiben offen.'),
+'holzbaender':('Gebogenes U-Holz über Flügelbrett, Schenkel am Krümmling durchgesteckt, herausragende und verkeilte Enden.','Eiche, Kochen, ursprünglicher Durchmesser und abgewickelte Länge nicht visuell messbar.'),
+'welle-schellen':('Kräftiger Holzkörper bis Stirnende, zwei eiserne Bänder/Schellen mit Beschlägen am gezeigten Ende.','Nicht alle vier Schellen unabhängig sichtbar; verdeckte Form, Gesamtwellenlänge und Schellenabstand nicht sicher vermessen.'),
+'dorn-lager':('Metallischer Dorn mit unregelmäßig geriefter Oberfläche zwischen Holzflächen; keine separate Metalllagerschale erkennbar.','Oberflächenriefen sind kein Beweis für ein Gewinde; Inneres, Einstecktiefe und zweites Ende nicht sichtbar.'),
+'kumpfnaegel':('Zwei unterschiedlich lange gekrümmte geschnitzte Nägel, unregelmäßige Köpfe mit Rinde; Zollstock in Detailaufnahmen.','Projektionslänge, gekrümmte Länge, Kopfmaß und Überstand müssen getrennt werden; Maßstab liegt nicht überall in gleicher Ebene.'),
+'kumpf-einbau':('Kumpf außerhalb des Kranzes, querlaufende hölzerne Befestigungen und benachbarte Bretter/Gefäße; Köpfe/Enden teils verdeckt.','Keine vollständigen inneren Nagelbahnen oder sichere globale Kumpfpose. Eine Wiederholung um 24 Slots ist nicht daraus nachgewiesen.'),
+'bock-radstadt':('Oberer Querbalken über zwei Stützen, durchgesteckte/verkeilte Anschlüsse, Holzlagerbereich am Wellendorn.','Lokaler Bock ist von Gesamttragwerk zu trennen; nicht alle Endpunkte der Längen und Symmetrieachsen zugleich maßstäblich sichtbar.'),
+'a-bock':('Zwei schräge Beine, durchgesteckter Riegel und Keile, Rinnenauflage im Bereich der Verbindung.','Gras verdeckt Fuß-/Nullbezug; Riegellänge ist nicht lichte Auflageweite; Neigung/Überstände nicht vollständig bestimmt.'),
+'trog-rinne':('Auffangbehälter mit geneigten/abgesetzten Konturen, angeschlossene Rinne und Holzunterstützung in mehreren Perspektiven.','Gemeinsames Datum, verdeckte Querschnitte und eindeutige Scan-Korrespondenzen fehlen; keine rechteckige Vollgeometrie aus Einzelansicht ableiten.')}
+specific={
+'1000046530.jpg':'Lose neue Brettvorlage auf Pflaster mit zwei Zollstöcken; noch keine Bohrungen sichtbar. PR-06/07.',
+'image-1791542499680.jpg':'Beide losen Nägel vollständig neben Maßstab; Köpfe überragen das Nullende. PR-03.',
+'image-1791542573592.jpg':'Nahansicht Kopf-Schulter mit entlanggelegtem Maßstab. PR-04.',
+'image-1791542586169.jpg':'Maßstab quer zum geschnitzten Schaft an der Kopfschulter. PR-05.',
+'image-1791543497527.jpg':'Oberes Beinende und Skalenbereich um 150 cm sichtbar. PR-01.',
+'image-1791543487137.jpg':'Ganzes schräges Bein, Maßstab und Fuß in Vegetation; Nullanlage nicht eindeutig. PR-02.',
+'image-1791543505768.jpg':'Gegenansicht Riegel-/Aussparungsbereich; Keile verdecken Sitzkante. PR-08.',
+'image-1791543574540.jpg':'Blick unter Rinnenauflage zeigt durchgesteckten Riegel und obere/untere Verkeilung.',
+'image-1791543757351.jpg':'Übersicht Rinne, A-Bock und Rad; Verbindung bleibt kontextuell zuordenbar.',
+'image-1791541278244.jpg':'Schräge am landseitigen Brettende nahe Kumpf erkennbar; Kollisionspartner noch Interpretation.',
+'image-1791541247032.jpg':'Längs angelegter Zollstock am Flügelbrett; Endpunkt-/Skalenzuordnung unzureichend für Gesamtmaß. PR-09.',
+'image-1791541641609.jpg':'Zollstock entlang Wellenende und Schellen; PR-10 dokumentiert gescheiterte präzise Breitenablesung.',
+'image-1791542108092.jpg':'Zollstock längs Radbockstütze, obere Anlage durch Hand/Querbalken verdeckt.',
+'image-1791542146990.jpg':'Querschnittsaufnahme mit quer angelegtem Zollstock; unterstützt fachliche Querschnittszuordnung, kein eigenes exaktes Maß.',
+'image-1791542161221.jpg':'Zweite Querschnittsansicht und oberer Querbalken/Keil.',
+'image-1791542172733.jpg':'Übersicht Radbock mit oberem Querbalken und getrennter unterer Lageraufnahme.',
+'image-1791542327774.jpg':'Nahbereich oberer Bockanschluss; Aussparung und vorstehendes Sicherungsholz.',
+'image-1791542342950.jpg':'Gegenansicht oberer Anschluss mit Keilbereich.',
+'image-1791543053651.jpg':'Kontext der anderen Tragwerksseite; allein keine globale Symmetrievermessung.',
+'image-1791541735045.jpg':'Maßstab über Kumpf-/Kranzbereich, Kontakte teilweise hinter Gefäß verdeckt.',
+'image-1791541761724.jpg':'Maßstab quer zwischen Kumpfseite und Kranz; Abstand richtet sich nach Schnitthöhe.',
+'image-1791541781288.jpg':'Zweite Maßstablage tiefer am Kumpf; keine einfache unveränderliche Spaltbreite.',
+'image-1791541790124.jpg':'Einbaukontext Flügel, Band, Kranz und Kumpf ohne freie innere Nagelbahn.',
+'image-1791541863916.jpg':'Übersicht mehrerer Kumpfpositionen; Überlappung und geneigte Einbaulagen sichtbar.'}
+bygroup=defaultdict(list)
+for p in manifest['images']:bygroup[p['group']].append(p)
+records=[]
+for group,ps in bygroup.items():
+ for k,p in enumerate(sorted(ps,key=lambda x:x['path'])):
+  records.append({**p,'visually_reviewed':True,'review_method':'Originalinhalt im EXIF-orientierten Kontaktblatt; relevante Maßregionen zusätzlich als Original-/Cropansicht','contact_sheet':f'evidence/{group}-{k//4+1}.jpg','tile_1based':k%4+1,'group_observation':groups[group][0],'specific_observation':specific.get(p['original_filename'],'Gruppenbefund gilt für diese zusätzliche Perspektive; keine unabhängige metrische Freigabe.'),'limitations':groups[group][1],'independent_evidence_key':p['sha256'],'metric_promotion':False})
+save('PHOTO-OBSERVATIONS.json',{'schema':'ks-photo-visual-review/v1','date':'2026-10-09','files':65,'unique_payloads':63,'duplicate_rule':'Gleiche SHA-256 nur einmal als unabhängige Aufnahme zählen. Gruppenbefunde sind Synthese, kein behaupteter vollständiger Nachweis aller Details in jedem Einzelbild.','photos':records})
+readouts=[]
+def r(id,source,prop,regions,zero,endpoints,plane,status,value,unit,uncertainty,reason,claims=[]):
+ readouts.append({'id':id,'source':P+source,'property':prop,'pixel_regions_xyxy':regions,'pixel_frame':'EXIF-orientiertes Original, Ursprung links oben; Regionen sind manuelle Such-/Endpunktbereiche, keine Subpixelmessungen','zero':zero,'endpoints':endpoints,'reference_plane':plane,'method':'Visuelle Ablesung benachbarter cm-Teilungen, mit Endpunkt-/Perspektivvorbehalt; keine globale Pixel-pro-Meter-Skalierung','status':status,'value':value,'unit':unit,'uncertainty':uncertainty,'interpretation':reason,'claim_ids':['TH-20261009-'+str(x).zfill(2) for x in claims],'canonical_promotion':False})
+r('PR-01','image-1791543497527.jpg','A-Bock obere Endkanten: Skalenkoordinate',[[400,70,620,410]],'Skalennull in diesem Detail nicht sichtbar; PR-02','Vordere obere Kante etwa147; hintere obere Kante etwa150–151 cm','Maßstab längs schrägem Bein, Kanten nicht in identischer Tiefenebene','conditional-readout',[147,151],'cm','Konservatives Leseband; keine statistische Konfidenz, keine vollständige perspektivische Fehlergrenze','Skalenkoordinate belastbar im genannten Leseband; Beinlänge bleibt null, solange Fußanlage/Nullpunkt ungesichert. Nicht vertikale Höhe.',[38])
+r('PR-02','image-1791543487137.jpg','A-Bock Beinlänge und Fußbezug',[[535,770,790,1070]],'Fuß/unteres Zollstockende teilweise im Gras; Kontakt zu tatsächlicher Stirnfläche nicht eindeutig','Fußstirnfläche bis passende obere Stirnfläche aus PR-01','Schräges Bein über lokal unebenem Gelände','unresolved',None,'m','Unbekannter Nullversatz dominiert; keine sichere metrische Länge','Die vorhandenen Fotos sind ausgewertet. Vor weiterer Längenableitung nur Nullanlage bestätigen; nicht pauschal neues Balkenmaß anfordern.',[38,37])
+r('PR-03','image-1791542499680.jpg','Nagelspitzen und projizierte Gesamtlängen',[[480,80,560,230],[450,350,528,470],[430,1080,610,1240]],'Zollstocknull bei y≈1190; beide Kopfstirnen liegen darunter','Lange Spitze nahe (545,112); kurze Spitze nahe (466,387); Kopfstirnen um y1210–1220','Nägel auf Holzauflage; Zollstock daneben, gekrümmte Nägel teilweise aus Ebene','conditional-readout',{'tip_long_ruler_cm':[92,96],'tip_short_ruler_cm':[68,74],'head_end_ruler_cm':[-3,-1],'projected_total_long_m':[0.93,0.99],'projected_total_short_m':[0.69,0.77],'curved_total_length_m':None},None,'Breite manuelle Lesebänder; zusätzliche Parallaxe/Tiefenkrümmung unquantifiziert. Intervalle gelten nur bei annähernd koplanarer Projektion.','Gesamtlänge in Bildprojektion = Spitzenkoordinate minus Kopfendkoordinate; weder Kurvenlänge noch freier Überstand. Kein harter Sollwert, keine millimetergenaue Ableitung.',[16])
+r('PR-04','image-1791542573592.jpg','Kopfmaß entlang Nagelachse',[[240,440,680,825]],'Zollstockende nahe Schulter des unteren Nagels, nicht präzise angelegt','Kopf-Schulter bis äußere Stirnfläche des unteren Kopfes','Kopfoberfläche neben Skalenebene; unregelmäßige Rinde','conditional-readout',[0.025,0.04],'m','Etwa3cm ablesbar, großzügiges Intervall wegen Anlage, Rinde und Perspektive','Kopfhöhe/-länge entlang Schaft, ausdrücklich nicht Kopfdurchmesser. Modell25mm liegt am unteren Intervallrand; aus Foto allein kein sicherer Höhenkonflikt.',[17])
+r('PR-05','image-1791542586169.jpg','Sichtbare Schaftbreite nahe Schulter',[[340,550,660,960]],'Zollstocknull etwa an einer Schaftkante','Sichtbare Seitenkanten unter schräg angelegtem Zollstock','Geschnitzte breite Schaftfläche; kein Beweis für runden Querschnitt','conditional-readout',[0.024,0.029],'m','Leseband etwa26mm, +/-2–3mm plus unquantifizierte Perspektive','Mit Fachmaß26mm vereinbar; nicht als neue exakte Durchmesservermessung behandeln.',[18])
+r('PR-06','1000046530.jpg','Schetternbrettvorlage projizierte Länge',[[0,365,1280,740]],'Rechtes Nullende des horizontalen Zollstocks etwas außerhalb Brettende','Brettschnittkanten links etwa74cm, rechts etwa0–1cm der Skala','Lose neue Brettvorlage auf Pflaster, Maßstab auf Oberfläche','conditional-readout',[0.72,0.76],'m','Konservatives Leseband über schrägen Schnittkanten; nicht Bogenlänge','Gilt für fotografierte neue Vorlage ohne Löcher; keine stillschweigende Übernahme als Länge aller eingebauten Altbretter.',[4])
+r('PR-07','1000046530.jpg','Schetternbrettvorlage mittlere sichtbare Tiefe',[[620,365,730,740]],'Senkrechter Zollstock an unterer Brettkante; Kante teils überlagert','Unterkante bis Oberkante nahe Brettmitte','Brettflächenebene','conditional-readout',[0.14,0.16],'m','Etwa15cm; Endpunktauflösung/Anlage grob1cm','Keine axiale Dicke und keine Länge; neue Vorlage getrennt vom eingebauten Bestand.',[4])
+r('PR-08','image-1791543505768.jpg','A-Bock Aussparungslage und -höhe',[[325,560,470,1060]],'Zollstockverlauf sichtbar, Nullanlage nicht gesichert','Obere/untere Schlitzkante von Riegel/Keilen verdeckt','Schräges Bein, Aussparung teilweise auf abgewandter Fläche','unresolved',None,'m','Keilränder sind keine Schlitzkanten; Lagefehler nicht begrenzbar','5cm Öffnungsbreite bleibt Fachangabe, kein Fotoablesewert. Höhe und Lage entlang Bein bleiben offen.',[33,34,36,38])
+r('PR-09','image-1791541247032.jpg','Flügelbrett Gesamtlänge',[[400,0,635,1280]],'Nullende/Anlage am schrägen Endschnitt nicht eindeutig','Beide Brettendflächen nicht zugleich eindeutig zur Skala zuzuordnen','Perspektivisch stark verkürztes Brett; Maßstab teils überstrahlt','unresolved',None,'m','Keine begrenzte Ableseunsicherheit möglich','35cm Breite ist nicht Gesamtlänge; Außenüberstände separat aufnehmen.',[8,7])
+r('PR-10','image-1791541641609.jpg','Wellenschellen Breite und axialer Abstand',[[0,665,690,850]],'Maßstab nahe Stirnende, aber genaue Anlage auf Rund-/Facettenkontur unsicher','Vier Bandkanten nicht vollständig unverdeckt auf gleicher Skalenebene','Maßstab längs gekrümmter Wellenoberfläche; Schellen über Oberfläche','unresolved',None,'m','Parallaxe und teilweise verdeckte Bandkanten','Zwei Schellen qualitativ gesichert. Keine präzisen Bandbreiten oder Abstände freigegeben.',[14])
+r('PR-11','image-1791542108092.jpg','Radbock Stützenhöhe',[[300,80,610,1230]],'Obere Maßstabanlage von Hand/Balken überlagert','Tragende Unter-/Oberflächen nicht beide mit Skalenmarke festgelegt','Vertikale Stütze und seitlich angelegter Zollstock','unresolved',None,'m','Endpunktzuordnung nicht robust','14×14cm und Querbalken1,20m bleiben eigenständige Fachangaben.',[21,22])
+r('PR-12','image-1791541761724.jpg','Kumpf-Kranz-Abstand auf Maßstabhöhe',[[350,430,960,630]],'Null am Kumpf nicht eindeutig','Kumpfwand und Kranzfläche in unterschiedlichen Tiefen','Schräg liegender Maßstab bei geneigtem Gefäß','unresolved',None,'m','Abstand ändert sich mit Schnitthöhe; keine definierte Normaldistanz','Nicht zur Berechnung einer Nagelgesamt- oder Überstandslänge benutzen.',[16])
+r('PR-13','image-1791541421696.jpg','Holzband abgewickelte Länge',[[0,0,960,1280]],'Kein Längsmaßstab','Bogen und Schenkel mit verdeckten Enden','U-Band in mehreren Ebenen','unresolved',None,'m','Verdeckte Enden und unbekannte Abwicklung','Fachwert etwa1,20m mit offenem Längenbezug erhalten.',[11])
+r('PR-14','image-1791542028869.jpg','Trog/Rinne Anschlussabstand',[[0,0,960,1280]],'Maßstab im Anschlussbereich, Anfangsbezug nicht eindeutig','Zu vergleichende Innen-/Außenflächen nicht festgelegt','Mehrere Holzflächen in unterschiedlicher Tiefe','unresolved',None,'m','Ohne definierte Endpunkte kein belastbares Maß','Bestehendes Foto reicht zur Topologie, nicht zur Registrierung in Modellkoordinaten.',[39])
+save('PHOTO-READOUTS.json',{'schema':'ks-photo-readouts/v1','all_values_review_only':True,'uncertainty_policy':'Intervalle sind konservative manuelle Lesebänder unter genannten Annahmen, keine kalibrierten 95%-Intervalle. Unquantifizierte systematische Perspektivfehler sind ausdrücklich nicht darin enthalten. Unresolved numeric value is null.','readouts':readouts})
+# Complete reproducible crop metadata; initial schetter crop was resized to 1.5.
+crops=json.load(open(O/'evidence/crop-regions.json'))
+for c in crops:
+ if c['crop']=='schetter-ruler.png':c['scale']=1.5
+for name,source,box,rot,scale in [
+('nail-tip-long','2499680',[470,0,585,340],0,3),('nail-tip-short','2499680',[440,330,530,650],0,3),('nail-zero','2499680',[430,960,610,1240],0,3),('abock-seat-readable','3497527',[520,850,660,1280],0,3),('nails-horizontal','2499680',[420,0,600,1240],90,2),('nail-long-scale','2499680',[480,80,560,230],-90,5),('nail-short-scale','2499680',[450,350,528,470],-90,5),('nail-zero-scale','2499680',[480,1080,540,1220],-90,5)]:
+ if not any(c['crop']==name+'.png' for c in crops):crops.append({'crop':name+'.png','source':P+'image-179154'+source+'.jpg','box_xyxy':box,'rotation_deg':rot,'scale':scale})
+save('evidence/crop-regions.json',crops)
+print('65 observations and 14 readouts written')

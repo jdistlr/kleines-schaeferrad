@@ -1,0 +1,12 @@
+{
+  "base_commit": "f7b9185517856b7881530ba9d0553f170787cb09",
+  "mode": "comparison-only",
+  "applied": false,
+  "runtime_files_changed": [],
+  "canonical_files_changed": [],
+  "model_corrected": false,
+  "truth_model_changed": false,
+  "deployment": false,
+  "merge": false,
+  "proposals": "CONSTRAINT-DELTA.json"
+}
