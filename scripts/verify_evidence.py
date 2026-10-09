@@ -12,10 +12,20 @@ def git_blob_sha1(data):
     return hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
 
 manifest = read('evidence/manifest.json')
-baseline_assets = manifest['assets']
-assert len(baseline_assets) == 43
-source_ids = {a['id'] for a in baseline_assets} | {s['id'] for s in manifest['context_sources']}
-assert len({a['sha256'] for a in baseline_assets}) == 43
+manifest_assets = manifest['assets']
+baseline_assets = [a for a in manifest_assets if a.get('archive', {}).get('status') == 'archived']
+additional_assets = [a for a in manifest_assets if a not in baseline_assets]
+assert len(baseline_assets) == manifest['raw_asset_count'] == 43
+assert len({a['id'] for a in manifest_assets}) == len(manifest_assets)
+source_ids = {a['id'] for a in manifest_assets} | {s['id'] for s in manifest['context_sources']}
+assert len({a['sha256'] for a in baseline_assets}) == len(baseline_assets)
+
+for a in additional_assets:
+    if a.get('sha256'):
+        data = (ROOT / a['path']).read_bytes()
+        assert hashlib.sha256(data).hexdigest() == a['sha256'], a['id']
+    elif a.get('path'):
+        assert (ROOT / a['path']).is_file(), a['id']
 
 for a in baseline_assets:
     data = (ROOT / a['archive']['path']).read_bytes()
