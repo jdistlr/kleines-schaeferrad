@@ -1,0 +1,90 @@
+{
+  "main": "f7b9185517856b7881530ba9d0553f170787cb09",
+  "run": 37943980335,
+  "jobs": [
+    {
+      "id": 113865329416,
+      "name": "build",
+      "conclusion": "success",
+      "url": "https://github.com/jdistlr/kleines-schaeferrad/actions/runs/37943980335/job/113865329416",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run pip install reportlab==4.4.3",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm install --no-audit --no-fund",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run check",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm run build",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-pages-artifact@v3",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 113865722731,
+      "name": "deploy",
+      "conclusion": "success",
+      "url": "https://github.com/jdistlr/kleines-schaeferrad/actions/runs/37943980335/job/113865722731",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Deploy GitHub Pages",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1231 @@
+{
+  "claims": [
+    {
+      "id": "TH-20261009-01",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791540525839",
+        "PHOTO-TH-20261009-image-1791540649435",
+        "PHOTO-TH-20261009-image-1791540668918"
+      ],
+      "components": [
+        "COMP-ARMS",
+        "COMP-KRUEMMLINGE"
+      ],
+      "graph_edges": [
+        "EDGE-022"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-02",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791540525839",
+        "PHOTO-TH-20261009-image-1791540649435",
+        "PHOTO-TH-20261009-image-1791540668918"
+      ],
+      "components": [
+        "COMP-KRUEMMLINGE"
+      ],
+      "graph_edges": [
+        "EDGE-022"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-03",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791540525839",
+        "PHOTO-TH-20261009-image-1791540649435",
+        "PHOTO-TH-20261009-image-1791540668918"
+      ],
+      "components": [
+        "COMP-ARMS",
+        "COMP-KRUEMMLINGE"
+      ],
+      "graph_edges": [
+        "EDGE-022"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-04",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-1000046540",
+        "PHOTO-TH-20261009-1000046539",
+        "PHOTO-TH-20261009-1000046538",
+        "PHOTO-TH-20261009-1000046537",
+        "PHOTO-TH-20261009-1000046536",
+        "PHOTO-TH-20261009-image-1791542766365",
+        "PHOTO-TH-20261009-image-1791542778932",
+        "PHOTO-TH-20261009-1000046530",
+        "PHOTO-TH-20261009-image-1791540812566",
+        "PHOTO-TH-20261009-image-1791540831514",
+        "PHOTO-TH-20261009-1000046542",
+        "PHOTO-TH-20261009-1000046541",
+        "PHOTO-TH-20261009-1000046535",
+        "PHOTO-TH-20261009-1000046534",
+        "PHOTO-TH-20261009-1000046533",
+        "PHOTO-TH-20261009-1000046532",
+        "PHOTO-TH-20261009-1000046531",
+        "PHOTO-TH-20261009-image-1791541084264"
+      ],
+      "components": [
+        "COMP-KRUEMMLINGE"
+      ],
+      "graph_edges": [
+        "EDGE-023"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-05",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-1000046540",
+        "PHOTO-TH-20261009-1000046539",
+        "PHOTO-TH-20261009-1000046538",
+        "PHOTO-TH-20261009-1000046537",
+        "PHOTO-TH-20261009-1000046536",
+        "PHOTO-TH-20261009-image-1791542766365",
+        "PHOTO-TH-20261009-image-1791542778932",
+        "PHOTO-TH-20261009-1000046530",
+        "PHOTO-TH-20261009-image-1791540812566",
+        "PHOTO-TH-20261009-image-1791540831514",
+        "PHOTO-TH-20261009-1000046542",
+        "PHOTO-TH-20261009-1000046541",
+        "PHOTO-TH-20261009-1000046535",
+        "PHOTO-TH-20261009-1000046534",
+        "PHOTO-TH-20261009-1000046533",
+        "PHOTO-TH-20261009-1000046532",
+        "PHOTO-TH-20261009-1000046531",
+        "PHOTO-TH-20261009-image-1791541084264"
+      ],
+      "components": [
+        "COMP-SCHETTERNBRETTER"
+      ],
+      "graph_edges": [
+        "EDGE-023"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-06",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791541209669",
+        "PHOTO-TH-20261009-image-1791541224562",
+        "PHOTO-TH-20261009-image-1791541247032",
+        "PHOTO-TH-20261009-image-1791541265923",
+        "PHOTO-TH-20261009-image-1791541278244"
+      ],
+      "components": [
+        "COMP-PADDLES"
+      ],
+      "graph_edges": [
+        "EDGE-021"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-07",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791541209669",
+        "PHOTO-TH-20261009-image-1791541224562",
+        "PHOTO-TH-20261009-image-1791541247032",
+        "PHOTO-TH-20261009-image-1791541265923",
+        "PHOTO-TH-20261009-image-1791541278244"
+      ],
+      "components": [
+        "COMP-PADDLES"
+      ],
+      "graph_edges": [],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-08",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791541209669",
+        "PHOTO-TH-20261009-image-1791541224562",
+        "PHOTO-TH-20261009-image-1791541247032",
+        "PHOTO-TH-20261009-image-1791541265923",
+        "PHOTO-TH-20261009-image-1791541278244"
+      ],
+      "components": [
+        "COMP-PADDLES"
+      ],
+      "graph_edges": [],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-09",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791541421696",
+        "PHOTO-TH-20261009-image-1791541435456",
+        "PHOTO-TH-20261009-image-1791541442395"
+      ],
+      "components": [
+        "COMP-WOOD-BANDS"
+      ],
+      "graph_edges": [
+        "EDGE-024"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-10",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791541421696",
+        "PHOTO-TH-20261009-image-1791541435456",
+        "PHOTO-TH-20261009-image-1791541442395"
+      ],
+      "components": [
+        "COMP-WOOD-BANDS"
+      ],
+      "graph_edges": [],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-11",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791541421696",
+        "PHOTO-TH-20261009-image-1791541435456",
+        "PHOTO-TH-20261009-image-1791541442395"
+      ],
+      "components": [
+        "COMP-WOOD-BANDS"
+      ],
+      "graph_edges": [],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-12",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791541421696",
+        "PHOTO-TH-20261009-image-1791541435456",
+        "PHOTO-TH-20261009-image-1791541442395"
+      ],
+      "components": [
+        "COMP-KRUEMMLINGE",
+        "COMP-PADDLES",
+        "COMP-WOOD-BANDS"
+      ],
+      "graph_edges": [
+        "EDGE-024",
+        "EDGE-025"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-13",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791541554648",
+        "PHOTO-TH-20261009-image-1791541561160",
+        "PHOTO-TH-20261009-image-1791541576861",
+        "PHOTO-TH-20261009-image-1791541641609"
+      ],
+      "components": [
+        "COMP-SHAFT"
+      ],
+      "graph_edges": [],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-14",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791541554648",
+        "PHOTO-TH-20261009-image-1791541561160",
+        "PHOTO-TH-20261009-image-1791541576861",
+        "PHOTO-TH-20261009-image-1791541641609"
+      ],
+      "components": [
+        "COMP-SHAFT"
+      ],
+      "graph_edges": [
+        "EDGE-026"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-15",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791541666129"
+      ],
+      "components": [
+        "COMP-SHAFT",
+        "COMP-BEARINGS"
+      ],
+      "graph_edges": [
+        "EDGE-027"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-16",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791542499680",
+        "PHOTO-TH-20261009-image-1791542573592",
+        "PHOTO-TH-20261009-image-1791542586169"
+      ],
+      "components": [
+        "COMP-KUMPF-NAILS"
+      ],
+      "graph_edges": [
+        "EDGE-031"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-17",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791542499680",
+        "PHOTO-TH-20261009-image-1791542573592",
+        "PHOTO-TH-20261009-image-1791542586169"
+      ],
+      "components": [
+        "COMP-KUMPF-NAILS"
+      ],
+      "graph_edges": [
+        "EDGE-031"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-18",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791542499680",
+        "PHOTO-TH-20261009-image-1791542573592",
+        "PHOTO-TH-20261009-image-1791542586169"
+      ],
+      "components": [
+        "COMP-KUMPF-NAILS"
+      ],
+      "graph_edges": [
+        "EDGE-031"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-19",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543053651",
+        "PHOTO-TH-20261009-image-1791542327774",
+        "PHOTO-TH-20261009-image-1791542342950",
+        "PHOTO-TH-20261009-image-1791542237069",
+        "PHOTO-TH-20261009-image-1791542257101",
+        "PHOTO-TH-20261009-image-1791542108092",
+        "PHOTO-TH-20261009-image-1791542120355",
+        "PHOTO-TH-20261009-image-1791542146990",
+        "PHOTO-TH-20261009-image-1791542161221",
+        "PHOTO-TH-20261009-image-1791542172733"
+      ],
+      "components": [
+        "COMP-RADSTATT"
+      ],
+      "graph_edges": [
+        "EDGE-030"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-20",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543053651",
+        "PHOTO-TH-20261009-image-1791542327774",
+        "PHOTO-TH-20261009-image-1791542342950",
+        "PHOTO-TH-20261009-image-1791542237069",
+        "PHOTO-TH-20261009-image-1791542257101",
+        "PHOTO-TH-20261009-image-1791542108092",
+        "PHOTO-TH-20261009-image-1791542120355",
+        "PHOTO-TH-20261009-image-1791542146990",
+        "PHOTO-TH-20261009-image-1791542161221",
+        "PHOTO-TH-20261009-image-1791542172733"
+      ],
+      "components": [
+        "COMP-ARMS",
+        "COMP-RADSTATT"
+      ],
+      "graph_edges": [],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-21",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543053651",
+        "PHOTO-TH-20261009-image-1791542327774",
+        "PHOTO-TH-20261009-image-1791542342950",
+        "PHOTO-TH-20261009-image-1791542237069",
+        "PHOTO-TH-20261009-image-1791542257101",
+        "PHOTO-TH-20261009-image-1791542108092",
+        "PHOTO-TH-20261009-image-1791542120355",
+        "PHOTO-TH-20261009-image-1791542146990",
+        "PHOTO-TH-20261009-image-1791542161221",
+        "PHOTO-TH-20261009-image-1791542172733"
+      ],
+      "components": [
+        "COMP-TROUGH-SUPPORT"
+      ],
+      "graph_edges": [
+        "EDGE-028"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-22",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543053651",
+        "PHOTO-TH-20261009-image-1791542327774",
+        "PHOTO-TH-20261009-image-1791542342950",
+        "PHOTO-TH-20261009-image-1791542237069",
+        "PHOTO-TH-20261009-image-1791542257101",
+        "PHOTO-TH-20261009-image-1791542108092",
+        "PHOTO-TH-20261009-image-1791542120355",
+        "PHOTO-TH-20261009-image-1791542146990",
+        "PHOTO-TH-20261009-image-1791542161221",
+        "PHOTO-TH-20261009-image-1791542172733"
+      ],
+      "components": [
+        "COMP-TROUGH-SUPPORT"
+      ],
+      "graph_edges": [
+        "EDGE-028"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-23",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543053651",
+        "PHOTO-TH-20261009-image-1791542327774",
+        "PHOTO-TH-20261009-image-1791542342950",
+        "PHOTO-TH-20261009-image-1791542237069",
+        "PHOTO-TH-20261009-image-1791542257101",
+        "PHOTO-TH-20261009-image-1791542108092",
+        "PHOTO-TH-20261009-image-1791542120355",
+        "PHOTO-TH-20261009-image-1791542146990",
+        "PHOTO-TH-20261009-image-1791542161221",
+        "PHOTO-TH-20261009-image-1791542172733"
+      ],
+      "components": [
+        "COMP-TROUGH-SUPPORT"
+      ],
+      "graph_edges": [
+        "EDGE-028"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-24",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543053651",
+        "PHOTO-TH-20261009-image-1791542327774",
+        "PHOTO-TH-20261009-image-1791542342950",
+        "PHOTO-TH-20261009-image-1791542237069",
+        "PHOTO-TH-20261009-image-1791542257101",
+        "PHOTO-TH-20261009-image-1791542108092",
+        "PHOTO-TH-20261009-image-1791542120355",
+        "PHOTO-TH-20261009-image-1791542146990",
+        "PHOTO-TH-20261009-image-1791542161221",
+        "PHOTO-TH-20261009-image-1791542172733"
+      ],
+      "components": [
+        "COMP-TROUGH-SUPPORT"
+      ],
+      "graph_edges": [
+        "EDGE-028"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-25",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [],
+      "components": [
+        "COMP-RIMS"
+      ],
+      "graph_edges": [],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-26",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [],
+      "components": [
+        "COMP-KRUEMMLINGE"
+      ],
+      "graph_edges": [],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-27",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [],
+      "components": [
+        "COMP-ARMS"
+      ],
+      "graph_edges": [],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-28",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [],
+      "components": [
+        "COMP-RIMS"
+      ],
+      "graph_edges": [],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-29",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [],
+      "components": [
+        "COMP-RIMS"
+      ],
+      "graph_edges": [],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-30",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543487137",
+        "PHOTO-TH-20261009-image-1791543497527",
+        "PHOTO-TH-20261009-image-1791543505768",
+        "PHOTO-TH-20261009-image-1791543574540",
+        "PHOTO-TH-20261009-image-1791543757351"
+      ],
+      "components": [
+        "COMP-CHANNEL"
+      ],
+      "graph_edges": [
+        "EDGE-029"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-31",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543487137",
+        "PHOTO-TH-20261009-image-1791543497527",
+        "PHOTO-TH-20261009-image-1791543505768",
+        "PHOTO-TH-20261009-image-1791543574540",
+        "PHOTO-TH-20261009-image-1791543757351"
+      ],
+      "components": [
+        "COMP-A-BOCK",
+        "COMP-CHANNEL"
+      ],
+      "graph_edges": [
+        "EDGE-029"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-32",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543487137",
+        "PHOTO-TH-20261009-image-1791543497527",
+        "PHOTO-TH-20261009-image-1791543505768",
+        "PHOTO-TH-20261009-image-1791543574540",
+        "PHOTO-TH-20261009-image-1791543757351"
+      ],
+      "components": [
+        "COMP-A-BOCK"
+      ],
+      "graph_edges": [
+        "EDGE-029"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-33",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543487137",
+        "PHOTO-TH-20261009-image-1791543497527",
+        "PHOTO-TH-20261009-image-1791543505768",
+        "PHOTO-TH-20261009-image-1791543574540",
+        "PHOTO-TH-20261009-image-1791543757351"
+      ],
+      "components": [
+        "COMP-A-BOCK"
+      ],
+      "graph_edges": [
+        "EDGE-029"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-34",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543487137",
+        "PHOTO-TH-20261009-image-1791543497527",
+        "PHOTO-TH-20261009-image-1791543505768",
+        "PHOTO-TH-20261009-image-1791543574540",
+        "PHOTO-TH-20261009-image-1791543757351"
+      ],
+      "components": [
+        "COMP-A-BOCK"
+      ],
+      "graph_edges": [
+        "EDGE-029"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-35",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543487137",
+        "PHOTO-TH-20261009-image-1791543497527",
+        "PHOTO-TH-20261009-image-1791543505768",
+        "PHOTO-TH-20261009-image-1791543574540",
+        "PHOTO-TH-20261009-image-1791543757351"
+      ],
+      "components": [
+        "COMP-A-BOCK"
+      ],
+      "graph_edges": [
+        "EDGE-029"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-36",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543487137",
+        "PHOTO-TH-20261009-image-1791543497527",
+        "PHOTO-TH-20261009-image-1791543505768",
+        "PHOTO-TH-20261009-image-1791543574540",
+        "PHOTO-TH-20261009-image-1791543757351"
+      ],
+      "components": [
+        "COMP-A-BOCK",
+        "COMP-CHANNEL"
+      ],
+      "graph_edges": [
+        "EDGE-029"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-37",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543487137",
+        "PHOTO-TH-20261009-image-1791543497527",
+        "PHOTO-TH-20261009-image-1791543505768",
+        "PHOTO-TH-20261009-image-1791543574540",
+        "PHOTO-TH-20261009-image-1791543757351"
+      ],
+      "components": [
+        "COMP-A-BOCK",
+        "COMP-CHANNEL"
+      ],
+      "graph_edges": [
+        "EDGE-029"
+      ],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-38",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791543487137",
+        "PHOTO-TH-20261009-image-1791543497527",
+        "PHOTO-TH-20261009-image-1791543505768",
+        "PHOTO-TH-20261009-image-1791543574540",
+        "PHOTO-TH-20261009-image-1791543757351"
+      ],
+      "components": [
+        "COMP-A-BOCK"
+      ],
+      "graph_edges": [],
+      "derived_from_resolves": true
+    },
+    {
+      "id": "TH-20261009-39",
+      "intake_value_equal": true,
+      "as_built_eligible": false,
+      "provenance_resolves": true,
+      "source_analyses": [
+        "PHOTO-TH-20261009-image-1791542028869",
+        "PHOTO-TH-20261009-image-1791542045602",
+        "PHOTO-TH-20261009-image-1791541961389",
+        "PHOTO-TH-20261009-image-1791541967728",
+        "PHOTO-TH-20261009-image-1791541979278",
+        "PHOTO-TH-20261009-image-1791541887655",
+        "PHOTO-TH-20261009-image-1791541908195",
+        "PHOTO-TH-20261009-image-1791541920559"
+      ],
+      "components": [
+        "COMP-TROUGH"
+      ],
+      "graph_edges": [],
+      "derived_from_resolves": true
+    }
+  ],
+  "graph_dangling_endpoints": [],
+  "graph_nodes_missing_in_components": [],
+  "source_photos": [
+    {
+      "id": "PHOTO-TH-20261009-image-1791543053651",
+      "path": "evidence/raw/thorsten-20261009/image-1791543053651.jpg",
+      "sha256": "dee729e5c90c558e2e921b955d170ecdaf967a982a93c1b8db5b28e5cc121af9",
+      "manifest_sha256": "dee729e5c90c558e2e921b955d170ecdaf967a982a93c1b8db5b28e5cc121af9",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791540525839",
+      "path": "evidence/raw/thorsten-20261009/image-1791540525839.jpg",
+      "sha256": "c4de9636a619bcf9ef9655a6a50e07951f137c92f6b50edf5c5288c3a75e7934",
+      "manifest_sha256": "c4de9636a619bcf9ef9655a6a50e07951f137c92f6b50edf5c5288c3a75e7934",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541666129",
+      "path": "evidence/raw/thorsten-20261009/image-1791541666129.jpg",
+      "sha256": "86b50adfc4af2137709577382b48bd4aeec48a10b4ac2ae4dd385b5d85e74408",
+      "manifest_sha256": "86b50adfc4af2137709577382b48bd4aeec48a10b4ac2ae4dd385b5d85e74408",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541735045",
+      "path": "evidence/raw/thorsten-20261009/image-1791541735045.jpg",
+      "sha256": "186af15f1e3c60f23159b8dd1360c58bafcef78aab154e1c5e61a69800b61531",
+      "manifest_sha256": "186af15f1e3c60f23159b8dd1360c58bafcef78aab154e1c5e61a69800b61531",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541761724",
+      "path": "evidence/raw/thorsten-20261009/image-1791541761724.jpg",
+      "sha256": "2b96ce5b4bf8e558378bd5cfaefe2b295d79d579daac0f742847ca6f84f5af49",
+      "manifest_sha256": "2b96ce5b4bf8e558378bd5cfaefe2b295d79d579daac0f742847ca6f84f5af49",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541781288",
+      "path": "evidence/raw/thorsten-20261009/image-1791541781288.jpg",
+      "sha256": "0b35e69d946862e58a4a5599b977d660a718dfbc44167fa8afe6c818851d3b04",
+      "manifest_sha256": "0b35e69d946862e58a4a5599b977d660a718dfbc44167fa8afe6c818851d3b04",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541790124",
+      "path": "evidence/raw/thorsten-20261009/image-1791541790124.jpg",
+      "sha256": "e66560021b07a6637dca43c3e87d91a727561e00834dfbc203f59ec33e498f1e",
+      "manifest_sha256": "e66560021b07a6637dca43c3e87d91a727561e00834dfbc203f59ec33e498f1e",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542327774",
+      "path": "evidence/raw/thorsten-20261009/image-1791542327774.jpg",
+      "sha256": "da0c80a39cd7ff77505adb8061221ba67e5463970d545181a2dc6177c21f796c",
+      "manifest_sha256": "da0c80a39cd7ff77505adb8061221ba67e5463970d545181a2dc6177c21f796c",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542342950",
+      "path": "evidence/raw/thorsten-20261009/image-1791542342950.jpg",
+      "sha256": "a625cf25913e2ea98b5bb80b818c3dd33dd3eaeeac9aba25ba6accd6ff4d5408",
+      "manifest_sha256": "a625cf25913e2ea98b5bb80b818c3dd33dd3eaeeac9aba25ba6accd6ff4d5408",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-1000046540",
+      "path": "evidence/raw/thorsten-20261009/1000046540.jpg",
+      "sha256": "a53b46cbad89e0691b0b3be8747f173f09ccdf46a1503b0bd3327ff53049db99",
+      "manifest_sha256": "a53b46cbad89e0691b0b3be8747f173f09ccdf46a1503b0bd3327ff53049db99",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-1000046539",
+      "path": "evidence/raw/thorsten-20261009/1000046539.jpg",
+      "sha256": "4a40597815d0bba9e30da3d7c5b41136abd8cc1d1eb667d2490c3768d28ad31f",
+      "manifest_sha256": "4a40597815d0bba9e30da3d7c5b41136abd8cc1d1eb667d2490c3768d28ad31f",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-1000046538",
+      "path": "evidence/raw/thorsten-20261009/1000046538.jpg",
+      "sha256": "534934111869c11bee477ff10cf97a8b2997f219c6f41cca9686ae33858cf43c",
+      "manifest_sha256": "534934111869c11bee477ff10cf97a8b2997f219c6f41cca9686ae33858cf43c",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-1000046537",
+      "path": "evidence/raw/thorsten-20261009/1000046537.jpg",
+      "sha256": "0a80a5bccacf65f042e5b11b006e6156f024b49389b34b926e3e47b9b50a16f1",
+      "manifest_sha256": "0a80a5bccacf65f042e5b11b006e6156f024b49389b34b926e3e47b9b50a16f1",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-1000046536",
+      "path": "evidence/raw/thorsten-20261009/1000046536.jpg",
+      "sha256": "d081fd7b8d53d054fd13a40e1fc09130de74802dce4adbcc865157273b521528",
+      "manifest_sha256": "d081fd7b8d53d054fd13a40e1fc09130de74802dce4adbcc865157273b521528",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542028869",
+      "path": "evidence/raw/thorsten-20261009/image-1791542028869.jpg",
+      "sha256": "0814241f60ecf8e1b13d13b71e8177daacdd50791952b41d4eee17b34357208c",
+      "manifest_sha256": "0814241f60ecf8e1b13d13b71e8177daacdd50791952b41d4eee17b34357208c",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542045602",
+      "path": "evidence/raw/thorsten-20261009/image-1791542045602.jpg",
+      "sha256": "b8c7196ebec45a92d1841e1c446f0ec9fbbf398036dd712457f6fcbc3359bcd6",
+      "manifest_sha256": "b8c7196ebec45a92d1841e1c446f0ec9fbbf398036dd712457f6fcbc3359bcd6",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542499680",
+      "path": "evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+      "sha256": "0ac25c5745d57c204803c322785c391ee164ef504fe4f0f61739f905355b927a",
+      "manifest_sha256": "0ac25c5745d57c204803c322785c391ee164ef504fe4f0f61739f905355b927a",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542573592",
+      "path": "evidence/raw/thorsten-20261009/image-1791542573592.jpg",
+      "sha256": "5444ee608bcf9b72f75f8cc52e68e8b85c94b2d8be3b15f3e85545cff0433dae",
+      "manifest_sha256": "5444ee608bcf9b72f75f8cc52e68e8b85c94b2d8be3b15f3e85545cff0433dae",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542586169",
+      "path": "evidence/raw/thorsten-20261009/image-1791542586169.jpg",
+      "sha256": "037791182f76ade13880752412d45116e1c4e74fe294c64fb177dc6d4ce2a4ab",
+      "manifest_sha256": "037791182f76ade13880752412d45116e1c4e74fe294c64fb177dc6d4ce2a4ab",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542766365",
+      "path": "evidence/raw/thorsten-20261009/image-1791542766365.jpg",
+      "sha256": "81dcf9c01f7ab91efe2c1890edb66969182513233e1cec98e62bddd3ac6c852b",
+      "manifest_sha256": "81dcf9c01f7ab91efe2c1890edb66969182513233e1cec98e62bddd3ac6c852b",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542778932",
+      "path": "evidence/raw/thorsten-20261009/image-1791542778932.jpg",
+      "sha256": "d196e748949bc8b726f7c9cc98b61bc45a50dca6f8a3ff471b57480bbe555924",
+      "manifest_sha256": "d196e748949bc8b726f7c9cc98b61bc45a50dca6f8a3ff471b57480bbe555924",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-1000046530",
+      "path": "evidence/raw/thorsten-20261009/1000046530.jpg",
+      "sha256": "83aa5193e313b3c6f361c279602f4e27592a587577c6534fd5903fd9546703a0",
+      "manifest_sha256": "83aa5193e313b3c6f361c279602f4e27592a587577c6534fd5903fd9546703a0",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791540812566",
+      "path": "evidence/raw/thorsten-20261009/image-1791540812566.jpg",
+      "sha256": "b7a6db38d432445b1f3cfd29a1d39295db7592e550f915b7ae011a8efbf8bbba",
+      "manifest_sha256": "b7a6db38d432445b1f3cfd29a1d39295db7592e550f915b7ae011a8efbf8bbba",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791540831514",
+      "path": "evidence/raw/thorsten-20261009/image-1791540831514.jpg",
+      "sha256": "e0d2d5d56e09c6a1f5975cd35c26fa181c83e692da56c0c0b97d9486a04ad31d",
+      "manifest_sha256": "e0d2d5d56e09c6a1f5975cd35c26fa181c83e692da56c0c0b97d9486a04ad31d",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-1000046542",
+      "path": "evidence/raw/thorsten-20261009/1000046542.jpg",
+      "sha256": "4f27c1dea527935ac3fcfe638dd51dda88dbd4391e7471476ece794721e548bc",
+      "manifest_sha256": "4f27c1dea527935ac3fcfe638dd51dda88dbd4391e7471476ece794721e548bc",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-1000046541",
+      "path": "evidence/raw/thorsten-20261009/1000046541.jpg",
+      "sha256": "2f5feae4e75886ca70ce85d916cbfb86d045d10a3ab4362483fe7783f8d8aa4d",
+      "manifest_sha256": "2f5feae4e75886ca70ce85d916cbfb86d045d10a3ab4362483fe7783f8d8aa4d",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541554648",
+      "path": "evidence/raw/thorsten-20261009/image-1791541554648.jpg",
+      "sha256": "14f650e9b1807ea51edd5bf03d26c57d0480f1740cb6e5f7a618c7701395b832",
+      "manifest_sha256": "14f650e9b1807ea51edd5bf03d26c57d0480f1740cb6e5f7a618c7701395b832",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541561160",
+      "path": "evidence/raw/thorsten-20261009/image-1791541561160.jpg",
+      "sha256": "5cce006b53cb33dad54f354d0d9295261f365a3f36f089914f51252165ce12cb",
+      "manifest_sha256": "5cce006b53cb33dad54f354d0d9295261f365a3f36f089914f51252165ce12cb",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541576861",
+      "path": "evidence/raw/thorsten-20261009/image-1791541576861.jpg",
+      "sha256": "7242c19b0bf6e05cd2769980d546ba83bdedc5e3648de5adc691e60d59ad1808",
+      "manifest_sha256": "7242c19b0bf6e05cd2769980d546ba83bdedc5e3648de5adc691e60d59ad1808",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541863916",
+      "path": "evidence/raw/thorsten-20261009/image-1791541863916.jpg",
+      "sha256": "6352771c6c97c23ca9c90aaed57a0446e18fec3002fe4ec8a18b079501e7d3ca",
+      "manifest_sha256": "6352771c6c97c23ca9c90aaed57a0446e18fec3002fe4ec8a18b079501e7d3ca",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791540649435",
+      "path": "evidence/raw/thorsten-20261009/image-1791540649435.jpg",
+      "sha256": "6eb151a5011be1f92073cb4fb5ef1b12ee6570b8df41deb5d0f85bd38119279a",
+      "manifest_sha256": "6eb151a5011be1f92073cb4fb5ef1b12ee6570b8df41deb5d0f85bd38119279a",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791540668918",
+      "path": "evidence/raw/thorsten-20261009/image-1791540668918.jpg",
+      "sha256": "b1181c97f50a4b558803e52d5a75f9d67bbec683c52109ab9bc18c26245eda30",
+      "manifest_sha256": "b1181c97f50a4b558803e52d5a75f9d67bbec683c52109ab9bc18c26245eda30",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791543487137",
+      "path": "evidence/raw/thorsten-20261009/image-1791543487137.jpg",
+      "sha256": "4349aec17dbb5a0ad1dba27131b41568e799138974d984665fa87e27273d66eb",
+      "manifest_sha256": "4349aec17dbb5a0ad1dba27131b41568e799138974d984665fa87e27273d66eb",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791543497527",
+      "path": "evidence/raw/thorsten-20261009/image-1791543497527.jpg",
+      "sha256": "92224580f6685d154b062c1b9901df70ec27b81f20cfff5fc8b8f373ee0046da",
+      "manifest_sha256": "92224580f6685d154b062c1b9901df70ec27b81f20cfff5fc8b8f373ee0046da",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791543505768",
+      "path": "evidence/raw/thorsten-20261009/image-1791543505768.jpg",
+      "sha256": "b90476f286447b9e13da7fa34d59d5b0933710314d774b2f7c2eb268e63ce176",
+      "manifest_sha256": "b90476f286447b9e13da7fa34d59d5b0933710314d774b2f7c2eb268e63ce176",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791543574540",
+      "path": "evidence/raw/thorsten-20261009/image-1791543574540.jpg",
+      "sha256": "924b2b3f50c1c2cba2befafc618aec9a11da44643da69099b0a80e763cffe823",
+      "manifest_sha256": "924b2b3f50c1c2cba2befafc618aec9a11da44643da69099b0a80e763cffe823",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-1000046535",
+      "path": "evidence/raw/thorsten-20261009/1000046535.jpg",
+      "sha256": "812017b2d831a1d877853cd3fce5cf5f9474c3bbef4aaa3a8edeee0befe89d74",
+      "manifest_sha256": "812017b2d831a1d877853cd3fce5cf5f9474c3bbef4aaa3a8edeee0befe89d74",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-1000046534",
+      "path": "evidence/raw/thorsten-20261009/1000046534.jpg",
+      "sha256": "ddeb6a95cb734dcd3ceca7fd1c3b358771e9337aac532da434a0acc0eb90522d",
+      "manifest_sha256": "ddeb6a95cb734dcd3ceca7fd1c3b358771e9337aac532da434a0acc0eb90522d",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-1000046533",
+      "path": "evidence/raw/thorsten-20261009/1000046533.jpg",
+      "sha256": "852d7a4760c916b797a050f89e324e9a7218ca5d9fb7f9b6fb5c2d82af4a831c",
+      "manifest_sha256": "852d7a4760c916b797a050f89e324e9a7218ca5d9fb7f9b6fb5c2d82af4a831c",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-1000046532",
+      "path": "evidence/raw/thorsten-20261009/1000046532.jpg",
+      "sha256": "e0d2d5d56e09c6a1f5975cd35c26fa181c83e692da56c0c0b97d9486a04ad31d",
+      "manifest_sha256": "e0d2d5d56e09c6a1f5975cd35c26fa181c83e692da56c0c0b97d9486a04ad31d",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-1000046531",
+      "path": "evidence/raw/thorsten-20261009/1000046531.jpg",
+      "sha256": "b7a6db38d432445b1f3cfd29a1d39295db7592e550f915b7ae011a8efbf8bbba",
+      "manifest_sha256": "b7a6db38d432445b1f3cfd29a1d39295db7592e550f915b7ae011a8efbf8bbba",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542237069",
+      "path": "evidence/raw/thorsten-20261009/image-1791542237069.jpg",
+      "sha256": "c96325b80bf23e89b9abd7ff8e30663cb3f3b57ced0da114a48a0f505522def2",
+      "manifest_sha256": "c96325b80bf23e89b9abd7ff8e30663cb3f3b57ced0da114a48a0f505522def2",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542257101",
+      "path": "evidence/raw/thorsten-20261009/image-1791542257101.jpg",
+      "sha256": "0676c259faec0a0290a5a4392a998d2180a0f38f4fb3d16afda81847521dc6a2",
+      "manifest_sha256": "0676c259faec0a0290a5a4392a998d2180a0f38f4fb3d16afda81847521dc6a2",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541961389",
+      "path": "evidence/raw/thorsten-20261009/image-1791541961389.jpg",
+      "sha256": "388f8a1636162e5f535019133fe81cb385ffb750e765208ad5f672b7977fe159",
+      "manifest_sha256": "388f8a1636162e5f535019133fe81cb385ffb750e765208ad5f672b7977fe159",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541967728",
+      "path": "evidence/raw/thorsten-20261009/image-1791541967728.jpg",
+      "sha256": "6c2c6620293f19e7de0dc79722c6498b16afbd0de34ce4fbd3da2340ef093e77",
+      "manifest_sha256": "6c2c6620293f19e7de0dc79722c6498b16afbd0de34ce4fbd3da2340ef093e77",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541979278",
+      "path": "evidence/raw/thorsten-20261009/image-1791541979278.jpg",
+      "sha256": "d7607cec1a76614c69925531d38d483aa0a4c2e4a40a288a1b2800089760b6d7",
+      "manifest_sha256": "d7607cec1a76614c69925531d38d483aa0a4c2e4a40a288a1b2800089760b6d7",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791543757351",
+      "path": "evidence/raw/thorsten-20261009/image-1791543757351.jpg",
+      "sha256": "8ee188a8539df9b489422bb920e6fa3785a0905af3e4556d4368befc5012c2e4",
+      "manifest_sha256": "8ee188a8539df9b489422bb920e6fa3785a0905af3e4556d4368befc5012c2e4",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541887655",
+      "path": "evidence/raw/thorsten-20261009/image-1791541887655.jpg",
+      "sha256": "69732cdc8ee7717916381dbb8c34678b624c498ec5e3b7569fe1ab08ef2ffa39",
+      "manifest_sha256": "69732cdc8ee7717916381dbb8c34678b624c498ec5e3b7569fe1ab08ef2ffa39",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541908195",
+      "path": "evidence/raw/thorsten-20261009/image-1791541908195.jpg",
+      "sha256": "92ea65a445bb8377329f2b59d5b5f87d1ef2aa6187dedec8a2c9a1027b7d074c",
+      "manifest_sha256": "92ea65a445bb8377329f2b59d5b5f87d1ef2aa6187dedec8a2c9a1027b7d074c",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541920559",
+      "path": "evidence/raw/thorsten-20261009/image-1791541920559.jpg",
+      "sha256": "ea9a40215adc55058d4618a36604e847b333435971d22aa15d4394be4804af1e",
+      "manifest_sha256": "ea9a40215adc55058d4618a36604e847b333435971d22aa15d4394be4804af1e",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542108092",
+      "path": "evidence/raw/thorsten-20261009/image-1791542108092.jpg",
+      "sha256": "acb1483330d86f92758db13cdb35dced4a7b46d1d0bf25255247f716fe836990",
+      "manifest_sha256": "acb1483330d86f92758db13cdb35dced4a7b46d1d0bf25255247f716fe836990",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542120355",
+      "path": "evidence/raw/thorsten-20261009/image-1791542120355.jpg",
+      "sha256": "e6883de4b3dc7b31f6cc71f84eb3ac70ba39559920f83d77f5b55911cc1126e6",
+      "manifest_sha256": "e6883de4b3dc7b31f6cc71f84eb3ac70ba39559920f83d77f5b55911cc1126e6",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542146990",
+      "path": "evidence/raw/thorsten-20261009/image-1791542146990.jpg",
+      "sha256": "9f5e7841d82f013c6af11312047f2da01834ca2d477f1293d4b7945fc677ad2b",
+      "manifest_sha256": "9f5e7841d82f013c6af11312047f2da01834ca2d477f1293d4b7945fc677ad2b",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542161221",
+      "path": "evidence/raw/thorsten-20261009/image-1791542161221.jpg",
+      "sha256": "b9db5743141dc7ba48ab2bc3beda966a21bf4127c7c368562138d9361894829e",
+      "manifest_sha256": "b9db5743141dc7ba48ab2bc3beda966a21bf4127c7c368562138d9361894829e",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791542172733",
+      "path": "evidence/raw/thorsten-20261009/image-1791542172733.jpg",
+      "sha256": "253f53a6203f5d26d01c2b4046ff16f264b23b6186884324a282c4fd85afc5c9",
+      "manifest_sha256": "253f53a6203f5d26d01c2b4046ff16f264b23b6186884324a282c4fd85afc5c9",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541209669",
+      "path": "evidence/raw/thorsten-20261009/image-1791541209669.jpg",
+      "sha256": "a2cdfa1e9531288d4a37e98d804369a6d0d1f38baa9f2b54afb88690d332d4b9",
+      "manifest_sha256": "a2cdfa1e9531288d4a37e98d804369a6d0d1f38baa9f2b54afb88690d332d4b9",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541224562",
+      "path": "evidence/raw/thorsten-20261009/image-1791541224562.jpg",
+      "sha256": "f0bbc33cbdb05467556a49a982a88af1f1f6b2ccf1899cb00ed90e2308f393cb",
+      "manifest_sha256": "f0bbc33cbdb05467556a49a982a88af1f1f6b2ccf1899cb00ed90e2308f393cb",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541247032",
+      "path": "evidence/raw/thorsten-20261009/image-1791541247032.jpg",
+      "sha256": "7e58415a72780b6a32268152727f2be3e4c23fdb8c2e4b6c5eb40d0226ab3f00",
+      "manifest_sha256": "7e58415a72780b6a32268152727f2be3e4c23fdb8c2e4b6c5eb40d0226ab3f00",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541265923",
+      "path": "evidence/raw/thorsten-20261009/image-1791541265923.jpg",
+      "sha256": "c268e429c95cfa09bb175da9d37cb7bcf1062c4e97d8368852989db27f833325",
+      "manifest_sha256": "c268e429c95cfa09bb175da9d37cb7bcf1062c4e97d8368852989db27f833325",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541278244",
+      "path": "evidence/raw/thorsten-20261009/image-1791541278244.jpg",
+      "sha256": "508418eb1e64357dad8c2efe560912c7afac36b49403a2d2262f0e1e37fcc0eb",
+      "manifest_sha256": "508418eb1e64357dad8c2efe560912c7afac36b49403a2d2262f0e1e37fcc0eb",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541421696",
+      "path": "evidence/raw/thorsten-20261009/image-1791541421696.jpg",
+      "sha256": "96c1c1137f1bc73f5b3fde8ca9b85208c4af4746b175323b9c358c3b7e46df80",
+      "manifest_sha256": "96c1c1137f1bc73f5b3fde8ca9b85208c4af4746b175323b9c358c3b7e46df80",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541435456",
+      "path": "evidence/raw/thorsten-20261009/image-1791541435456.jpg",
+      "sha256": "619d4c63be07f3d7f1c92e62a5a03345d92fb174511a400c34ecea190ab1a49a",
+      "manifest_sha256": "619d4c63be07f3d7f1c92e62a5a03345d92fb174511a400c34ecea190ab1a49a",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541442395",
+      "path": "evidence/raw/thorsten-20261009/image-1791541442395.jpg",
+      "sha256": "3fb530f585a99d056b4c590adc81379bbf91badb2dbf163b42730c30ffef14d1",
+      "manifest_sha256": "3fb530f585a99d056b4c590adc81379bbf91badb2dbf163b42730c30ffef14d1",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541641609",
+      "path": "evidence/raw/thorsten-20261009/image-1791541641609.jpg",
+      "sha256": "d4cf564f8da16be38e547f7216a01d430e414cc7ba33fda6e9e6f39c14f38069",
+      "manifest_sha256": "d4cf564f8da16be38e547f7216a01d430e414cc7ba33fda6e9e6f39c14f38069",
+      "match": true
+    },
+    {
+      "id": "PHOTO-TH-20261009-image-1791541084264",
+      "path": "evidence/raw/thorsten-20261009/image-1791541084264.jpg",
+      "sha256": "d9ad3be087381446693600ca32fe2387ba0240fa4f7c8e50e83a9a5925bd3795",
+      "manifest_sha256": "d9ad3be087381446693600ca32fe2387ba0240fa4f7c8e50e83a9a5925bd3795",
+      "match": true
+    }
+  ],
+  "new_measured_current_values": []
+}
