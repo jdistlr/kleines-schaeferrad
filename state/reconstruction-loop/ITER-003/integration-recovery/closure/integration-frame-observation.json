@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "idleRendering": "settled",
+      "concurrentContext": "ready",
+      "animation": "runs and pauses",
+      "orbit": "redraws"
+    },
+    {
+      "mode": "truth",
+      "stationary": 0,
+      "nails": 0,
+      "meshCount": 296
+    },
+    {
+      "mode": "brute",
+      "stationary": 56,
+      "nails": 48,
+      "meshCount": 945
+    },
+    {
+      "allSceneModes": [
+        "gesamt",
+        "radkoerper",
+        "tragwerk",
+        "betrieb",
+        "welle",
+        "kranz",
+        "kumpf",
+        "lager",
+        "trog",
+        "exploded",
+        "schnitt",
+        "evidenz",
+        "scan"
+      ],
+      "allComponentInspectors": 34
+    },
+    {
+      "webglUnavailable": "capture still saved"
+    },
+    {
+      "storageDenied": "viewer and JSON export available"
+    }
+  ],
+  "scope": "Chromium simulation; no physical device or engineering release"
+}

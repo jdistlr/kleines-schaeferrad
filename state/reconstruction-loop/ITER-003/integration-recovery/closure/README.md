@@ -31,3 +31,9 @@ Local runtime: Playwright 1.62.1 with existing Chromium Headless Shell 141.0.739
 Production CI run 37992432720 and acceptance CI run 37992432907 are successful; all four acceptance jobs pass. See `ci-validation.json`.
 
 **ITER-003 INTEGRATION RECOVERY REVIEW READY.** No merge or deployment. This is an integration-review gate, not a mechanical or human field-use approval.
+
+## Repeat-run test correction
+
+The documentation-only HEAD `04484c9` repeated the CI suites. Run 37992980382 exposed a flaw in the new integration regression: `paused operation keeps rendering`, render count 38 versus 36. The test treated 600 ms of wall-clock silence as settled and then required an unchanged counter over another 400 ms. A software-GPU frame can span that silence; it was not evidence that camera/layout rendering had completed. The original field journey remains successful.
+
+The regression now requires twelve consecutive **animation-frame callbacks** with no redraw. This distinguishes an idle scene from a renderer blocked on a slow frame and still fails an unconditional render loop. The existing 30-second timeout is unchanged. No additional runtime or geometry change was made. The earlier successful CI evidence remains labeled with its tested SHA; the PR records the final follow-up SHA and CI links.

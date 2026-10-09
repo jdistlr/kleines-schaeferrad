@@ -13,7 +13,7 @@ This gate means ready for integration review, not mechanical release, merge perm
 - Current local validation: Astro check, production build, all 37 Node tests, source verification and all four browser journeys pass. Offline capture, media integrity and fresh-context import pass.
 - Preservation check: canonical inputs, geometry source, both model archives and all view artifacts unchanged against inherited HEAD. No reconstruction rerun.
 
-CI on repair commit: [production build 37992432720](https://github.com/jdistlr/kleines-schaeferrad/actions/runs/37992432720) and [four browser journeys 37992432907](https://github.com/jdistlr/kleines-schaeferrad/actions/runs/37992432907). Final outcomes are recorded in `integration-recovery/closure/ci-validation.json`.
+CI on repair commit: [production build 37992432720](https://github.com/jdistlr/kleines-schaeferrad/actions/runs/37992432720) and [four browser journeys 37992432907](https://github.com/jdistlr/kleines-schaeferrad/actions/runs/37992432907). These repair-run outcomes are recorded in `integration-recovery/closure/ci-validation.json`. The follow-up corrects a wall-clock assumption in the new idle regression after repeat run 37992980382; see the closure report. The PR contains the final HEAD and CI results.
 
 Evidence, screenshots, runtime versions, exact failure boundary and limitations: [closure report](integration-recovery/closure/README.md). Earlier continuation evidence and repairs remain intact.
 

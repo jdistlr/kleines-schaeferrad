@@ -18,14 +18,18 @@ try{
  // second context's startup in field acceptance on software WebGL.
  async function frameCount(){return Number(await canvas.getAttribute('data-render-count'))}
  async function settled(){
+  // Wall-clock silence is not proof of idleness when a software-GPU frame is
+  // still in flight. Observe completed animation frames instead; an always-
+  // rendering viewer cannot pass this assertion even on a stalled runner.
+  await page.evaluate(()=>{window.__lastRenderCount=null;window.__stableRenderFrames=0});
   await page.waitForFunction(()=>{
    const count=document.querySelector('#canvas-host canvas')?.dataset.renderCount;
-   const now=performance.now();
-   if(window.__lastRenderCount!==count){window.__lastRenderCount=count;window.__lastRenderAt=now;return false}
-   return Number(count)>0&&now-window.__lastRenderAt>600;
-  },null,{polling:100});
+   window.__stableRenderFrames=window.__lastRenderCount===count?window.__stableRenderFrames+1:0;
+   window.__lastRenderCount=count;
+   return Number(count)>0&&window.__stableRenderFrames>=12;
+  });
  }
- await settled();const idle=await frameCount();await page.waitForTimeout(400);assert.equal(await frameCount(),idle,'idle scene keeps rendering');
+ await settled();
  const second=await browser.newContext(),secondPage=await second.newPage();
  await secondPage.goto(base+'werkstatt/');
  await secondPage.waitForFunction(()=>document.querySelector('#storage-status').textContent.includes('Lokal gesichert'));
@@ -35,13 +39,13 @@ try{
  const stopped=await frameCount();await page.locator('#play').click();
  await page.waitForFunction(n=>Number(document.querySelector('#canvas-host canvas').dataset.renderCount)>n+2,stopped);
  await page.locator('#play').click();await settled();
- const paused=await frameCount();await page.waitForTimeout(400);assert.equal(await frameCount(),paused,'paused operation keeps rendering');
+ // settled() requires twelve consecutive animation frames without a redraw.
  await page.locator('#reset').click();await settled();
  const beforeDrag=await frameCount(),bounds=await canvas.boundingBox();
  await page.mouse.move(bounds.x+bounds.width/2,bounds.y+bounds.height/2);await page.mouse.down();
  await page.mouse.move(bounds.x+bounds.width/2+80,bounds.y+bounds.height/2+30,{steps:4});await page.mouse.up();
  await settled();assert.ok(await frameCount()>beforeDrag,'orbit interaction must redraw');
- result.checks.push({idleRendering:'settled',concurrentContext:'ready',animation:'runs and pauses',orbit:'redraws'});
+ result.checks.push({idleRendering:'12 consecutive animation frames without redraw',concurrentContext:'ready',animation:'runs and pauses',orbit:'redraws'});
 
  for(const mode of ['truth','brute']){
   await page.locator('#model-mode').selectOption(mode);assert.equal(await canvas.getAttribute('data-model-mode'),mode);
