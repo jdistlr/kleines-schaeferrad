@@ -1,0 +1,26 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> kleines-schaeferrad-research-page@0.1.0 test:reconstruction
+> node --test tests/mechanics.test.mjs tests/reconstruction-geometry.test.mjs && node scripts/audit-candidates.mjs
+
+✔ no water can be lifted when the wheel never enters water (2.072807ms)
+✔ phase follows positive-X rigid rotation and holding/discharge mouth pose (0.393182ms)
+✔ registration validates known similarity, residuals, axis position and independent metric control (1.17084ms)
+✔ registration rejects invalid, infinite and degenerate datum/axis/control inputs (0.264718ms)
+✔ water mouth faces the outboard trough at discharge and retains water while lifting (0.209285ms)
+✔ all six paired arms meet their own rim plane at both ends (368.810151ms)
+✔ major machine groups and unique identities are preserved in all joinery variants (878.794275ms)
+✔ all newly attached originals resolve byte-for-byte in the repository archive (0.422135ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1393.047984
+[
+  { candidate: 'staggered', overlap: 0, rank: 1 },
+  { candidate: 'independent', overlap: 0, rank: 2 },
+  { candidate: 'crossing', overlap: 0, rank: 3 }
+]

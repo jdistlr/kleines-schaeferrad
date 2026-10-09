@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-09T21:04:26.304Z",
+  "type": "automated-simulated-field-test",
+  "physical_users": 0,
+  "real_iphone_test": false,
+  "checks": [
+    {
+      "profile": "desktop",
+      "task": "find Kumpf",
+      "seconds": 0.353,
+      "help": "automated selectors; not human timing",
+      "passed": true
+    }
+  ],
+  "errors": [
+    "page.waitForFunction: Timeout 30000ms exceeded.\n    at /home/runner/work/kleines-schaeferrad/kleines-schaeferrad/tests/browser-field.mjs:28:188",
+    {
+      "url": "http://127.0.0.1:4321/kleines-schaeferrad/werkstatt/",
+      "storage": "Lokal gesichert · 0 Einträge · noch nicht gemeinsam geprüfte Einträge",
+      "render": "Ziehen: drehen · zwei Finger: verschieben / vergrößern",
+      "records": "0",
+      "canvases": 2
+    }
+  ],
+  "status": "failed"
+}

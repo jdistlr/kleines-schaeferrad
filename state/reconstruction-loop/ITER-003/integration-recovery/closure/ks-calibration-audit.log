@@ -1,0 +1,316 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> kleines-schaeferrad-research-page@0.1.0 test:calibration
+> node --test tests/calibration.test.mjs && node scripts/audit-calibration.mjs && node scripts/audit-calibration-contacts.mjs && node scripts/audit-calibration-stationary.mjs
+
+✔ four holes are open geometric passages and the retained base fits the groove (25.563905ms)
+✔ truth exports exclude synthetic site, water, exact nail paths and all-vessel inventory (285.10607ms)
+✔ cycle uses calibrated mouth pose, conserves free-surface capacity and never fills above a dry river (121.216271ms)
+✔ corrected board plane has tangent normal and remains perpendicular to wheel plane (439.480767ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1028.790877
+{
+  "envelope": {
+    "penetratingEnvelopeSamples": 0,
+    "minEnvelopeGap": 0.04657,
+    "sampling": "61 longitudinal x 48 circumferential, both directions; conservative filled-cone envelope, not exact contact proof"
+  },
+  "best": [
+    {
+      "pitchDeg": 125,
+      "yawDeg": 60,
+      "penetratingEnvelopeSamples": 0,
+      "minEnvelopeGap": 0.04657,
+      "sampling": "61 longitudinal x 48 circumferential, both directions; conservative filled-cone envelope, not exact contact proof"
+    },
+    {
+      "pitchDeg": 125,
+      "yawDeg": 45,
+      "penetratingEnvelopeSamples": 0,
+      "minEnvelopeGap": 0.04328,
+      "sampling": "61 longitudinal x 48 circumferential, both directions; conservative filled-cone envelope, not exact contact proof"
+    },
+    {
+      "pitchDeg": 125,
+      "yawDeg": 75,
+      "penetratingEnvelopeSamples": 0,
+      "minEnvelopeGap": 0.04172,
+      "sampling": "61 longitudinal x 48 circumferential, both directions; conservative filled-cone envelope, not exact contact proof"
+    },
+    {
+      "pitchDeg": 125,
+      "yawDeg": 32,
+      "penetratingEnvelopeSamples": 0,
+      "minEnvelopeGap": 0.04049,
+      "sampling": "61 longitudinal x 48 circumferential, both directions; conservative filled-cone envelope, not exact contact proof"
+    },
+    {
+      "pitchDeg": 125,
+      "yawDeg": 20,
+      "penetratingEnvelopeSamples": 0,
+      "minEnvelopeGap": 0.03888,
+      "sampling": "61 longitudinal x 48 circumferential, both directions; conservative filled-cone envelope, not exact contact proof"
+    },
+    {
+      "pitchDeg": 120,
+      "yawDeg": 60,
+      "penetratingEnvelopeSamples": 0,
+      "minEnvelopeGap": 0.00608,
+      "sampling": "61 longitudinal x 48 circumferential, both directions; conservative filled-cone envelope, not exact contact proof"
+    },
+    {
+      "pitchDeg": 120,
+      "yawDeg": 45,
+      "penetratingEnvelopeSamples": 0,
+      "minEnvelopeGap": 0.00353,
+      "sampling": "61 longitudinal x 48 circumferential, both directions; conservative filled-cone envelope, not exact contact proof"
+    },
+    {
+      "pitchDeg": 120,
+      "yawDeg": 75,
+      "penetratingEnvelopeSamples": 0,
+      "minEnvelopeGap": 0.00212,
+      "sampling": "61 longitudinal x 48 circumferential, both directions; conservative filled-cone envelope, not exact contact proof"
+    }
+  ],
+  "paths": [
+    {
+      "id": "V3-KUM-01-NAIL-LONG",
+      "length": 0.7248749596348504,
+      "holeMapping": [
+        "HA1",
+        "HB1"
+      ],
+      "rimHits": [
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.5405227974135233
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.5825781337238405
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.5825781337238405
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.594100143583675
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.5976175509518077
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.6482535914271964
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.6482535914271965
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.6597756034331725
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.6597756034331727
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.7018309397434896
+        }
+      ],
+      "start": [
+        -1.5091219607088955,
+        -0.02556456397621583,
+        2.086049749796405
+      ],
+      "end": [
+        -0.8799999999999999,
+        -0.36540715192240014,
+        1.9670695788540977
+      ]
+    },
+    {
+      "id": "V3-KUM-01-NAIL-SHORT",
+      "length": 0.5934012340297962,
+      "holeMapping": [
+        "HA2",
+        "HB2"
+      ],
+      "rimHits": [
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.40904907180846917
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.4511044081187864
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.4895227646698954
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.5167798658221423
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.5167798658221423
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.5283018778281184
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.5283018778281185
+        },
+        {
+          "id": "HIST-KRU-LAND-01",
+          "distance": 0.5703572141384358
+        }
+      ],
+      "start": [
+        -1.395015373172721,
+        0.19554134130785633,
+        2.1634597606076995
+      ],
+      "end": [
+        -0.8799999999999999,
+        -0.08266251769250337,
+        2.0660595409921583
+      ]
+    }
+  ],
+  "discharge": [
+    [
+      196,
+      false
+    ],
+    [
+      306,
+      false
+    ],
+    [
+      308,
+      false
+    ],
+    [
+      310,
+      false
+    ],
+    [
+      312,
+      true
+    ],
+    [
+      314,
+      true
+    ],
+    [
+      316,
+      true
+    ],
+    [
+      318,
+      true
+    ],
+    [
+      320,
+      true
+    ],
+    [
+      322,
+      true
+    ],
+    [
+      324,
+      true
+    ],
+    [
+      326,
+      true
+    ],
+    [
+      328,
+      true
+    ],
+    [
+      330,
+      true
+    ],
+    [
+      332,
+      true
+    ],
+    [
+      334,
+      true
+    ],
+    [
+      336,
+      true
+    ],
+    [
+      338,
+      true
+    ],
+    [
+      340,
+      true
+    ],
+    [
+      342,
+      true
+    ],
+    [
+      344,
+      true
+    ]
+  ]
+}
+{
+  schema: 'ks-contact-sampling/v1',
+  stats: { vesselNeighbor: 0, vesselPaddle: 0, vesselRim: 0, samples: 9152 },
+  sweep: [
+    {
+      id: 'V3-KUM-01-NAIL-LONG',
+      collisionSamples: 0,
+      method: '41 withdrawal steps of 20mm; 41 longitudinal samples; center and four 9mm offsets; own drilled vessel and intended rim penetration excluded'
+    },
+    {
+      id: 'V3-KUM-01-NAIL-SHORT',
+      collisionSamples: 0,
+      method: '41 withdrawal steps of 20mm; 41 longitudinal samples; center and four 9mm offsets; own drilled vessel and intended rim penetration excluded'
+    }
+  ],
+  projectedCircumferentialOverlapRadians: 0.04711615173986827,
+  limits: [
+    'Deterministic surface / swept-envelope sampling, not continuous collision certification',
+    'No actual holes are asserted in Krümmlinge; intended nail penetration remains joinery candidate',
+    'Stationary contact sweep is evaluated separately',
+    'Uniform candidate only; per-instance variants need their own check'
+  ]
+}
+{
+  schema: 'ks-stationary-sweep/v1',
+  samples: 60192,
+  stepDegrees: 5,
+  hits: {
+    'COMP-KUEMPFE / CTX-WALK-0': 21,
+    'COMP-KUMPF-HOOPS / CTX-WALK-0': 5
+  },
+  method: 'every sixth vertex of one representative moving cluster, 72 rotation positions, triangle-ray parity inside stationary meshes after AABB broad phase',
+  limit: 'Sampled validation, not continuous collision certification'
+}

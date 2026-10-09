@@ -1,0 +1,64 @@
+{
+  "source_commit": null,
+  "gate": "automated checks only; independent visual review required",
+  "scope": "automated emulation, no human or physical Safari evidence",
+  "started_at": "2026-10-09T21:17:04.659Z",
+  "profiles": [
+    {
+      "name": "desktop",
+      "status": "passed",
+      "capture_resume": true,
+      "views": true,
+      "overflow": false,
+      "min_target_px": 44,
+      "text_zoom": false
+    },
+    {
+      "name": "320px",
+      "status": "passed",
+      "capture_resume": true,
+      "views": true,
+      "overflow": false,
+      "min_target_px": 44,
+      "text_zoom": false
+    },
+    {
+      "name": "iphone13-emulation",
+      "status": "passed",
+      "capture_resume": true,
+      "views": true,
+      "overflow": false,
+      "min_target_px": 44,
+      "text_zoom": false
+    },
+    {
+      "name": "text200",
+      "status": "passed",
+      "capture_resume": true,
+      "views": true,
+      "overflow": false,
+      "min_target_px": 44,
+      "text_zoom": true
+    }
+  ],
+  "checks": [
+    {
+      "test": "three nail mappings and three joinery variants selectable",
+      "status": "passed"
+    },
+    {
+      "test": "scan workspace entry, separate PLY and GLB, return to model",
+      "status": "passed"
+    },
+    {
+      "test": "offline reload + 25 additional photos + resume + instance/event + offline export + offline fresh-context import",
+      "status": "passed",
+      "photo_count": 28,
+      "photo_bytes": 20460272,
+      "sha256_verified": true,
+      "fixture": "Repeated original JPEG with SIMULATION filenames; not a physical field session"
+    }
+  ],
+  "status": "passed",
+  "finished_at": "2026-10-09T21:18:22.998Z"
+}

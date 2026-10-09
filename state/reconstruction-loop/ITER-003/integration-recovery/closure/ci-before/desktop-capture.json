@@ -1,0 +1,119 @@
+{
+  "schema": "ks-field-capture/v1",
+  "records": [
+    {
+      "id": "OBS-ff3acba8-cb85-4e62-ae7a-701a8590ed57",
+      "schema": "ks-field-capture/v1",
+      "question_id": "GAP-04",
+      "event_id": "EVT-SIM-001",
+      "component_ids": [
+        "COMP-KUEMPFE"
+      ],
+      "slot_id": null,
+      "physical_id": null,
+      "relation_ids": [],
+      "partner_ids": [],
+      "kind": "measurement",
+      "feature": "SIMULATION – Daubendicke, kein reales Feldmaß",
+      "value": 24,
+      "unit": "mm",
+      "endpoints": {
+        "a": "TEST Innenfläche",
+        "b": "TEST Außenfläche"
+      },
+      "tool": "SIMULATION Schieblehre",
+      "uncertainty": 1,
+      "side": "UNKNOWN",
+      "state": "installed",
+      "person": "AUTOMATISIERTER TEST",
+      "timestamp": "2026-10-09T21:05:04.463Z",
+      "media": [
+        {
+          "id": "MEDIA-8fa40ae7-4f08-410e-b170-8d368f0cb31f",
+          "name": "simulation.png",
+          "type": "image/png",
+          "bytes": 68,
+          "sha256": "6b1048f8a6d40bac0b2954c18fefa40c4ea7a96120fc2e54b7317c0e43c2bbec",
+          "role": "context",
+          "data_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII="
+        }
+      ],
+      "quote": null,
+      "interpretation": null,
+      "confidence": "unknown",
+      "unknown": false,
+      "variant": null,
+      "orientation": null,
+      "storage_location": null,
+      "claim_ids": [
+        "CLAIM-0040"
+      ],
+      "conflict_ids": [
+        "CONFLICT-01",
+        "CONFLICT-02",
+        "CONFLICT-06",
+        "CONFLICT-07",
+        "CONFLICT-08"
+      ],
+      "effect": "supports",
+      "review_status": "unreviewed-local",
+      "craft": null
+    }
+  ],
+  "selection": "COMP-KUEMPFE",
+  "slot": null,
+  "draft": {
+    "values": {
+      "kind": "measurement",
+      "question_id": "GAP-04",
+      "feature": "",
+      "value": "",
+      "unit": "mm",
+      "endpoint_a": "",
+      "endpoint_b": "",
+      "tool": "",
+      "uncertainty": "",
+      "physical_id": "",
+      "variant": "unknown",
+      "quote": "",
+      "interpretation": "",
+      "risk_topic": "RISK-MOISTURE",
+      "trigger": "",
+      "mechanism": "",
+      "expected_behaviour": "",
+      "failure_consequence": "",
+      "warning_sign": "",
+      "mitigation": "",
+      "alternate_account": "",
+      "person": "",
+      "event_id": "",
+      "side": "UNKNOWN",
+      "state": "installed",
+      "partners": "",
+      "relation_id": "",
+      "orientation": "",
+      "storage_location": "",
+      "confidence": "unknown",
+      "media_role": "context",
+      "media_reference": "",
+      "claim_id": "",
+      "effect": "context",
+      "unknown": false
+    },
+    "media": [],
+    "step": 1,
+    "component_id": "COMP-KUEMPFE",
+    "slot": null
+  },
+  "viewer": {
+    "view": "gesamt",
+    "variant": "B",
+    "exploded": false,
+    "cut": false,
+    "armShape": "dogleg",
+    "armLayers": "staggered",
+    "mode": "gesamt"
+  },
+  "exported_at": "2026-10-09T21:05:05.363Z",
+  "baseline": "dd0cd480a4f509a1137ca19a7f9075a8aba0c30a"
+}

@@ -1,0 +1,43 @@
+{
+  "KS-Kurzplan-A4.pdf": {
+    "pages": 2,
+    "sizes_mm": [
+      [
+        297,
+        210
+      ]
+    ]
+  },
+  "KS-Field-Pack-A3.pdf": {
+    "pages": 11,
+    "sizes_mm": [
+      [
+        420,
+        297
+      ]
+    ]
+  },
+  "KS-Werkstatt-Aufnahmeplan-A3.pdf": {
+    "pages": 11,
+    "sizes_mm": [
+      [
+        420,
+        297
+      ]
+    ]
+  },
+  "KS-Einsatzleitung-A4.pdf": {
+    "pages": 2,
+    "sizes_mm": [
+      [
+        297,
+        210
+      ]
+    ]
+  },
+  "KS-50": {
+    "bytes": 305248,
+    "paths": 12,
+    "ITER-003": true
+  }
+}

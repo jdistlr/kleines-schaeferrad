@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-09T21:12:34.319Z",
+  "type": "automated-simulated-field-test",
+  "physical_users": 0,
+  "real_iphone_test": false,
+  "checks": [
+    {
+      "profile": "desktop",
+      "task": "find Kumpf",
+      "seconds": 0.971,
+      "help": "automated selectors; not human timing",
+      "passed": true
+    },
+    {
+      "profile": "desktop",
+      "task": "standard views, A/B, explode, cut, reset, measurement + photo, interrupted draft resume, capture review/update, lossless export/import, scan workspace, 44px targets, no page overflow",
+      "passed": true
+    },
+    {
+      "profile": "320px",
+      "task": "find Kumpf",
+      "seconds": 0.115,
+      "help": "automated selectors; not human timing",
+      "passed": true
+    },
+    {
+      "profile": "320px",
+      "task": "standard views, A/B, explode, cut, reset, measurement + photo, interrupted draft resume, capture review/update, lossless export/import, scan workspace, 44px targets, no page overflow",
+      "passed": true
+    },
+    {
+      "profile": "iphone-17-pro-emulation",
+      "task": "find Kumpf",
+      "seconds": 0.147,
+      "help": "automated selectors; not human timing",
+      "passed": true
+    },
+    {
+      "profile": "iphone-17-pro-emulation",
+      "task": "standard views, A/B, explode, cut, reset, measurement + photo, interrupted draft resume, capture review/update, lossless export/import, scan workspace, 44px targets, no page overflow",
+      "passed": true
+    },
+    {
+      "profile": "text-200pct",
+      "task": "find Kumpf",
+      "seconds": 0.694,
+      "help": "automated selectors; not human timing",
+      "passed": true
+    },
+    {
+      "profile": "text-200pct",
+      "task": "standard views, A/B, explode, cut, reset, measurement + photo, interrupted draft resume, capture review/update, lossless export/import, scan workspace, 44px targets, no page overflow",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}
