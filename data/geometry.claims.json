@@ -8,7 +8,8 @@
     "expert-narrative",
     "inferred",
     "conflicting",
-    "unknown"
+    "unknown",
+    "derived"
   ],
   "claims": [
     {
