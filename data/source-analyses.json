@@ -2272,6 +2272,24 @@
         "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
       ],
       "current_geometry_authority": false
+    },
+    {
+      "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+      "document_group": "TH-20261009-expert-construction",
+      "title": "39 Aussagen des lokalen Fachkenners; TH-25 bis TH-29 Kranzmaßkette",
+      "review": "ITER-002 expert statement intake; provenance backlink only, no new measurement",
+      "status": "expert-narrative-not-independent-field-measurement",
+      "claim_ids": [
+        "TH-20261009-25",
+        "TH-20261009-26",
+        "TH-20261009-27",
+        "TH-20261009-28",
+        "TH-20261009-29"
+      ],
+      "unresolved": [
+        "Exakte aktuelle Ist-Maße und Messendpunkte unabhängig vor Ort prüfen."
+      ],
+      "current_geometry_authority": false
     }
   ]
 }
