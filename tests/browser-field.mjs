@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 const output=process.env.TEST_OUTPUT||'test-results';fs.mkdirSync(output,{recursive:true});
 const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.woff2':'font/woff2','.glb':'model/gltf-binary','.json':'application/json'};
 const server=http.createServer((req,res)=>{let p=decodeURIComponent(new URL(req.url,'http://localhost').pathname).replace(/^\/kleines-schaeferrad\//,'');if(p.endsWith('/'))p+='index.html';const file=path.resolve('dist',p);if(!file.startsWith(path.resolve('dist')+path.sep)||!fs.existsSync(file)||!fs.statSync(file).isFile()){res.writeHead(404);return res.end('not found')}res.setHeader('Content-Type',mime[path.extname(file)]||'application/octet-stream');fs.createReadStream(file).pipe(res)});
-await new Promise(r=>server.listen(4321,'127.0.0.1',r));const browser=await chromium.launch({headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+await new Promise(r=>server.listen(4321,'127.0.0.1',r));const browser=await chromium.launch({headless:true,executablePath:process.env.KS_CHROMIUM_PATH||undefined,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const results={date:new Date().toISOString(),type:'automated-simulated-field-test',physical_users:0,real_iphone_test:false,checks:[],errors:[]};
 const url='http://127.0.0.1:4321/kleines-schaeferrad/werkstatt/';
 try{

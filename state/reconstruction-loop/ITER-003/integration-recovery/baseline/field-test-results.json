@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-09T20:41:25.009Z",
+  "type": "automated-simulated-field-test",
+  "physical_users": 0,
+  "real_iphone_test": false,
+  "checks": [],
+  "errors": [
+    {
+      "profile": "desktop",
+      "diagnostic": {
+        "storage": "Lokales Arbeitsprotokoll wird geladen …",
+        "render": "3D wird geladen …",
+        "canvas": false,
+        "readyState": "complete",
+        "scriptCount": 1
+      },
+      "errors": [
+        "Cannot read properties of undefined (reading 'match')"
+      ]
+    },
+    "page.waitForFunction: Timeout 60000ms exceeded.\n    at /workspace/scratch/b6f983c5e39e/kleines-schaeferrad/tmp/repro/browser-field.mjs:14:392"
+  ],
+  "status": "failed"
+}
