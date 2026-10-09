@@ -1,0 +1,836 @@
+{
+  "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+  "source": "actual runtime triangles with depth buffer",
+  "views": [
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/01-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "01",
+        "title": "Gesamtanlage \u00b7 Landseite",
+        "eye": [
+          -9,
+          -2,
+          2
+        ],
+        "target": [
+          -0.7,
+          0,
+          0
+        ],
+        "height": 6.8,
+        "filter": "all"
+      },
+      "sha256": "5b36f604f96f6fddb79de936c858e9eae975ea7fcd7f3cbd27e94dfc66ccd98f"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/01-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "01",
+        "title": "Gesamtanlage \u00b7 Landseite",
+        "eye": [
+          -9,
+          -2,
+          2
+        ],
+        "target": [
+          -0.7,
+          0,
+          0
+        ],
+        "height": 6.8,
+        "filter": "all"
+      },
+      "sha256": "3d71bf2ec1724a770e6ff124c60e86924e58ac1668f25ba1847364f936d8b6f8"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/02-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "02",
+        "title": "Gesamtanlage \u00b7 Wasserseite",
+        "eye": [
+          9,
+          2,
+          2
+        ],
+        "target": [
+          -0.7,
+          0,
+          0
+        ],
+        "height": 6.8,
+        "filter": "all"
+      },
+      "sha256": "343853d8f95c365543f6372555a6dfffd6692b7538f1eb74fd96a615a1a9e7cb"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/02-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "02",
+        "title": "Gesamtanlage \u00b7 Wasserseite",
+        "eye": [
+          9,
+          2,
+          2
+        ],
+        "target": [
+          -0.7,
+          0,
+          0
+        ],
+        "height": 6.8,
+        "filter": "all"
+      },
+      "sha256": "e37c272646b96ca09b09765f55d2b33a5f8079d524768c5e21a0385dbc4800e0"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/03-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "03",
+        "title": "Schr\u00e4g Land",
+        "eye": [
+          -7,
+          -8,
+          5
+        ],
+        "target": [
+          -0.7,
+          0,
+          0
+        ],
+        "height": 7.4,
+        "filter": "all"
+      },
+      "sha256": "97f29a13ab4b5fb2448de850292703c89d0efb65a452427715efda13684217d1"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/03-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "03",
+        "title": "Schr\u00e4g Land",
+        "eye": [
+          -7,
+          -8,
+          5
+        ],
+        "target": [
+          -0.7,
+          0,
+          0
+        ],
+        "height": 7.4,
+        "filter": "all"
+      },
+      "sha256": "751fc151513a8cc91a6c2dcdf503fa60d01c118083cf9a25c49c613b063faa02"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/04-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "04",
+        "title": "Schr\u00e4g Wasser",
+        "eye": [
+          7,
+          -8,
+          5
+        ],
+        "target": [
+          -0.7,
+          0,
+          0
+        ],
+        "height": 7.4,
+        "filter": "all"
+      },
+      "sha256": "26444578656ed573a5acf126a357a7ba08b2090849bc14cf0d85f2edaa440951"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/04-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "04",
+        "title": "Schr\u00e4g Wasser",
+        "eye": [
+          7,
+          -8,
+          5
+        ],
+        "target": [
+          -0.7,
+          0,
+          0
+        ],
+        "height": 7.4,
+        "filter": "all"
+      },
+      "sha256": "630e1c96a484b97a86270cee154493c594ba4091387fd0ebca5cf921105975c5"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/05-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "05",
+        "title": "Axial entlang Welle A",
+        "eye": [
+          -10,
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "height": 5.6,
+        "filter": "moving"
+      },
+      "sha256": "337b1544b757e7e7996fa6441a49ed5a2a9cd38dfc8cc9cb7574d16a8ac57dc7"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/05-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "05",
+        "title": "Axial entlang Welle A",
+        "eye": [
+          -10,
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "height": 5.6,
+        "filter": "moving"
+      },
+      "sha256": "7befc87f7a68c5b8598770585f14af73d88656c64484c0fd4121c22c184b8e7f"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/06-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "06",
+        "title": "Axial entlang Welle B",
+        "eye": [
+          10,
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "height": 5.6,
+        "filter": "moving"
+      },
+      "sha256": "97a6522b08c52f41fdb82814f117395bb8980f55a9168ddec363b0e9e4ac51f4"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/06-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "06",
+        "title": "Axial entlang Welle B",
+        "eye": [
+          10,
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "height": 5.6,
+        "filter": "moving"
+      },
+      "sha256": "b4aa65d1c471eb25f0b2571056466055faa58ea1dfbe0bfbb7e3e45a9cdca984"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/07-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "07",
+        "title": "Welle / Arme \u00b7 Schnitt Y=0",
+        "eye": [
+          3,
+          -8,
+          3
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "height": 5.3,
+        "filter": "shaft-arms",
+        "clip": [
+          0,
+          -1,
+          0,
+          0
+        ]
+      },
+      "sha256": "7e77f7ccf58b18ed65a72894a3ba01ffa1f399bbf2a243099143c32628d6f0bc"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/07-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "07",
+        "title": "Welle / Arme \u00b7 Schnitt Y=0",
+        "eye": [
+          3,
+          -8,
+          3
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "height": 5.3,
+        "filter": "shaft-arms",
+        "clip": [
+          0,
+          -1,
+          0,
+          0
+        ]
+      },
+      "sha256": "58662e44b647fa4fd6be52b70bdac300b656bc323ec4563051c0cb65d4c2b722"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/08-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "08",
+        "title": "Lager Landseite",
+        "eye": [
+          -4,
+          -4,
+          2
+        ],
+        "target": [
+          -1.74,
+          0,
+          -0.12
+        ],
+        "height": 1.15,
+        "filter": "bearing-land"
+      },
+      "sha256": "f31f0657a49c0abf0a73610e36c3014f3525d8b5eb53bc812666bed4c2d58606"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/08-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "08",
+        "title": "Lager Landseite",
+        "eye": [
+          -4,
+          -4,
+          2
+        ],
+        "target": [
+          -1.74,
+          0,
+          -0.12
+        ],
+        "height": 1.15,
+        "filter": "bearing-land"
+      },
+      "sha256": "f2e06a02dae9ee0d5eda87fcfa99e1ed83a835855132125eaf7e78ae3fc2c140"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/09-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "09",
+        "title": "Lager Wasserseite",
+        "eye": [
+          4,
+          -4,
+          2
+        ],
+        "target": [
+          1.74,
+          0,
+          -0.12
+        ],
+        "height": 1.15,
+        "filter": "bearing-water"
+      },
+      "sha256": "141db0915c5cb3d2308abe1a891b34ff28ad0f1ffac905c995e15e152cbdc268"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/09-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "09",
+        "title": "Lager Wasserseite",
+        "eye": [
+          4,
+          -4,
+          2
+        ],
+        "target": [
+          1.74,
+          0,
+          -0.12
+        ],
+        "height": 1.15,
+        "filter": "bearing-water"
+      },
+      "sha256": "2727e971ddfb7d2b9b32df9c9c7bed17040cff1917372682c8fc73fc1152a4f7"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/10-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "10",
+        "title": "Kr\u00fcmmlingsto\u00df",
+        "eye": [
+          -4,
+          -3,
+          4
+        ],
+        "target": [
+          -0.575,
+          0,
+          2.07
+        ],
+        "height": 0.95,
+        "filter": "rim-detail"
+      },
+      "sha256": "347662b24d5f904e379dff77e22e15a53da2db16d6ce81146520f989639beabd"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/10-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "10",
+        "title": "Kr\u00fcmmlingsto\u00df",
+        "eye": [
+          -4,
+          -3,
+          4
+        ],
+        "target": [
+          -0.575,
+          0,
+          2.07
+        ],
+        "height": 0.95,
+        "filter": "rim-detail"
+      },
+      "sha256": "61d60b330d8bf4bdbb43b9690140699ae69efc3d841f3910ef008fe3752f2bd8"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/11-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "11",
+        "title": "Kumpf + Schaufel + Kumpfn\u00e4gel",
+        "eye": [
+          -4,
+          -4,
+          4
+        ],
+        "target": [
+          -0.55,
+          -0.25,
+          2.08
+        ],
+        "height": 1.65,
+        "filter": "local"
+      },
+      "sha256": "a241e34b34927dfa866db478ce966913ddb048f6c5434d4f99497c542f525c7d"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/11-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "11",
+        "title": "Kumpf + Schaufel + Kumpfn\u00e4gel",
+        "eye": [
+          -4,
+          -4,
+          4
+        ],
+        "target": [
+          -0.55,
+          -0.25,
+          2.08
+        ],
+        "height": 1.65,
+        "filter": "local"
+      },
+      "sha256": "044a38951ffebfafc47e13e80832640b9dee7c8d577271bb46a0f9adbd6c1e4d"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/12-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "12",
+        "title": "Drei K\u00fcmpfe \u00b7 \u00dcberlappung",
+        "eye": [
+          -5,
+          -4,
+          3
+        ],
+        "target": [
+          -0.72,
+          -0.5,
+          1.99
+        ],
+        "height": 1.9,
+        "filter": "cluster"
+      },
+      "sha256": "32059eebbbd42dc65a2681ce21c352206c9f9ab5f4fd839eb3f93b215168eaed"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/12-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "12",
+        "title": "Drei K\u00fcmpfe \u00b7 \u00dcberlappung",
+        "eye": [
+          -5,
+          -4,
+          3
+        ],
+        "target": [
+          -0.72,
+          -0.5,
+          1.99
+        ],
+        "height": 1.9,
+        "filter": "cluster"
+      },
+      "sha256": "29b25b8245b3423b725cffed326903b9c585bbe5ef45b794d5bfd41bcaeb93a4"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/13-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "13",
+        "title": "Radstatt \u00b7 Unterbau",
+        "eye": [
+          -7,
+          -7,
+          3
+        ],
+        "target": [
+          0,
+          0,
+          -1.1
+        ],
+        "height": 5.3,
+        "filter": "frame"
+      },
+      "sha256": "0f2b92716cb4547ea90b9306a930cdb52439b42203a9fc1789b687cf886ce05a"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/13-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "13",
+        "title": "Radstatt \u00b7 Unterbau",
+        "eye": [
+          -7,
+          -7,
+          3
+        ],
+        "target": [
+          0,
+          0,
+          -1.1
+        ],
+        "height": 5.3,
+        "filter": "frame"
+      },
+      "sha256": "7b9db326c53cd3fe1d181c54ec0569aa2bbf075f2fabf386e5d7398fc8d4e4b8"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/14-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "14",
+        "title": "Trog / Rinne / \u00dcbergabepunkt",
+        "eye": [
+          -5,
+          -6,
+          4
+        ],
+        "target": [
+          -1.7,
+          0.45,
+          1.62
+        ],
+        "height": 3.4,
+        "filter": "trough"
+      },
+      "sha256": "e4ad8d4d213e56c9f59381c2d1701ea1d28cc6fcfd24989f8eaef6355deadba4"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/14-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "14",
+        "title": "Trog / Rinne / \u00dcbergabepunkt",
+        "eye": [
+          -5,
+          -6,
+          4
+        ],
+        "target": [
+          -1.7,
+          0.45,
+          1.62
+        ],
+        "height": 3.4,
+        "filter": "trough"
+      },
+      "sha256": "5b48c23abe9b232a6b935f60ca863c55058b20f70186635e1f5adfc9d0498618"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/15-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "15",
+        "title": "Exploded View",
+        "eye": [
+          -7,
+          -8,
+          5
+        ],
+        "target": [
+          -0.7,
+          0,
+          0
+        ],
+        "height": 8.1,
+        "filter": "all",
+        "exploded": true
+      },
+      "sha256": "1bebbc0f8aea5900b46fad93b53b7c6e69376f40335e19f1be1c3a054d2352b4"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/15-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "15",
+        "title": "Exploded View",
+        "eye": [
+          -7,
+          -8,
+          5
+        ],
+        "target": [
+          -0.7,
+          0,
+          0
+        ],
+        "height": 8.1,
+        "filter": "all",
+        "exploded": true
+      },
+      "sha256": "129850d1d075e1ec23ed6d881e400bc4893d9c3dfde64816b11fd668213f5134"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/16-truth.jpg",
+      "mode": "truth",
+      "camera": {
+        "id": "16",
+        "title": "Betrieb mit Wasser",
+        "eye": [
+          -7,
+          -8,
+          4
+        ],
+        "target": [
+          -0.7,
+          0,
+          -0.2
+        ],
+        "height": 7.3,
+        "filter": "all",
+        "operation": true,
+        "angle": 0.2
+      },
+      "sha256": "ee30110dea3cac2d2e67404d93e7014d9766717c6308cd6a6332f33cd12942ac"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/16-brute.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "16",
+        "title": "Betrieb mit Wasser",
+        "eye": [
+          -7,
+          -8,
+          4
+        ],
+        "target": [
+          -0.7,
+          0,
+          -0.2
+        ],
+        "height": 7.3,
+        "filter": "all",
+        "operation": true,
+        "angle": 0.2
+      },
+      "sha256": "00dd6cc1ec64e1573390ea76a0cfaccfbe3b5c1feb62325b89a71e361629262a"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/D1-detail.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "D1",
+        "eye": [
+          -4,
+          -3,
+          4
+        ],
+        "target": [
+          -0.97,
+          1.0275,
+          1.779
+        ],
+        "height": 1.2,
+        "filter": "rim-detail"
+      },
+      "sha256": "4f492f32977f609d9996632f844b18519d8ae4d888fb8c65a826323ff5b1041a"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/D2-detail.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "D2",
+        "eye": [
+          -4,
+          -3,
+          4
+        ],
+        "target": [
+          -0.97,
+          0,
+          2.13
+        ],
+        "height": 0.7,
+        "filter": "rim-detail"
+      },
+      "sha256": "a4d78ac209d84de64f7ee0ee10c93b852ddbca860f2262afb5bcddf41c21320e"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/D3-detail.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "D3",
+        "eye": [
+          -4,
+          -4,
+          4
+        ],
+        "target": [
+          -0.65,
+          -0.27,
+          2.3
+        ],
+        "height": 1.8,
+        "filter": "local"
+      },
+      "sha256": "82ad04083bc8c0f891b0eddb5327d31c389077cbc1c11ac4215d09172b77ae5d"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/D4-detail.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "D4",
+        "eye": [
+          -4,
+          -4,
+          2
+        ],
+        "target": [
+          -1.85,
+          0,
+          0
+        ],
+        "height": 1.2,
+        "filter": "bearing-land"
+      },
+      "sha256": "1334c089b4d8594ff0eaf291ae18c0dd704886979eb51f1125f96c0f5521fb3a"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/D5-detail.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "D5",
+        "eye": [
+          -4,
+          -4,
+          4
+        ],
+        "target": [
+          -1.2,
+          -0.25,
+          2.08
+        ],
+        "height": 1.6,
+        "filter": "local"
+      },
+      "sha256": "684d0963dd9d459803814b34efa736cfd7c96b1363d334975aae0a852c8f7f36"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/D6-detail.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "D6",
+        "eye": [
+          -4,
+          -4,
+          2
+        ],
+        "target": [
+          -1.94,
+          0,
+          0.08
+        ],
+        "height": 1.65,
+        "filter": "frame"
+      },
+      "sha256": "fb5b364c67ed5b6848e90e22a365cb1d1668bf2f660669dee3ae717e36d6e34f"
+    },
+    {
+      "path": "state/reconstruction-loop/ITER-003/views/D7-detail.jpg",
+      "mode": "brute",
+      "camera": {
+        "id": "D7",
+        "eye": [
+          -5,
+          -6,
+          3
+        ],
+        "target": [
+          -2.92,
+          1.25,
+          1.0
+        ],
+        "height": 2.7,
+        "filter": "trough"
+      },
+      "sha256": "f57a5aae87fe5f9a7186673a20b967a1ba828f63cf5f5ce9bc5f59a4c4f7dad5"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "iteration": "ITER-003",
+  "base": "6017ba310d4a91158fe5f3d6edc8eb1bf3f5b6b5",
+  "models": [
+    {
+      "mode": "truth",
+      "meshes": 296,
+      "glbBytes": 11267788,
+      "path": "models/truth.glb.gz",
+      "asBuilt": false
+    },
+    {
+      "mode": "brute",
+      "meshes": 945,
+      "glbBytes": 15733264,
+      "path": "models/brute.glb.gz",
+      "asBuilt": false
+    }
+  ],
+  "inputs": {
+    "src/workbench/geometry.mjs": "9ef3853fe1f87a8b00c9e2e4e57265d40edc3f3d20d4cde7468dbe79671f94b7",
+    "src/workbench/calibration.mjs": "1417dca167dc1e26639d1bb5195936f0b671fadc24c1266513ddaadbfc57d9a2",
+    "src/workbench/expert-corrections.mjs": "42dd3882abf115d805e3315c36b95b27442ee343feccb33ed7fd8aa2c88fd53a",
+    "data/reconstruction-constraints.json": "7107eed171506485dc70ff09ad9d317aa5d1edac871e4ca7a7ffbdf9448df4ff",
+    "data/calibration-v3.json": "788f2c57d86538fa4d2e2b213c7dde4c0fd9894158d04ebc3043a089bd242af3",
+    "data/hypothesis.parameters.json": "f1176440a9c78ba3cff6bdcef90edc270e7d0d9a1fbbb1328c75491545527e52"
+  }
+}

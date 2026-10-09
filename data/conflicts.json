@@ -152,8 +152,10 @@
         "true revision only if same dimension"
       ],
       "resolution_capture": "GAP-03",
-      "status": "semantic-dimension-ambiguity-not-proven-contradiction",
-      "selected_as_built_value": null
+      "status": "semantic-dimensions-resolved",
+      "selected_as_built_value": null,
+      "review_note": "TH-26 confirms axial14cm; radial15cm remains historical.",
+      "review_ref": "state/reconstruction-loop/ITER-002/EVIDENCE-COMPARISON.md"
     },
     {
       "id": "CONFLICT-05",
@@ -238,8 +240,10 @@
         "repair history may still affect other fasteners"
       ],
       "resolution_capture": "GAP-02/GAP-04",
-      "status": "partially-resolved-kumpfnagel-function-confirmed",
-      "selected_as_built_value": null
+      "status": "functions-resolved-metric-paths-open",
+      "selected_as_built_value": null,
+      "review_note": "TH-01..18 separate seat wedges, Schettern nails, U bands and Kumpf nails; dimensions/paths remain qualified.",
+      "review_ref": "state/reconstruction-loop/ITER-002/EVIDENCE-COMPARISON.md"
     },
     {
       "id": "CONFLICT-07",
@@ -472,8 +476,10 @@
         "model placement/connection rather than abstract plane angle is wrong"
       ],
       "resolution_capture": "GAP-09",
-      "status": "expert-correction-priority-scan-definition-pending",
-      "selected_as_built_value": null
+      "status": "rim-plane-reference-resolved-pitch-open",
+      "selected_as_built_value": null,
+      "review_note": "TH-06 names rim plane; radial pitch and bevel contacts remain open.",
+      "review_ref": "state/reconstruction-loop/ITER-002/EVIDENCE-COMPARISON.md"
     }
   ]
 }

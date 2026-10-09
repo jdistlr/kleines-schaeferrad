@@ -14,7 +14,9 @@
         "CONFLICT-08",
         "CONFLICT-09",
         "CONFLICT-10"
-      ]
+      ],
+      "review_ref": "state/reconstruction-loop/ITER-002/OPEN-QUESTIONS.md",
+      "resolved_subset": "1.80m inner-face spacing / .14m axial width expert-reported; datums and current control distances still required."
     },
     {
       "id": "GAP-02",
@@ -26,7 +28,8 @@
       "conflict_ids": [
         "CONFLICT-05",
         "CONFLICT-06"
-      ]
+      ],
+      "review_ref": "state/reconstruction-loop/ITER-002/OPEN-QUESTIONS.md"
     },
     {
       "id": "GAP-03",
@@ -37,7 +40,9 @@
       "acceptance_evidence": "Stoßkarte, Kontaktflächenpaar, Lochbild/Profilmessung",
       "conflict_ids": [
         "CONFLICT-04"
-      ]
+      ],
+      "review_ref": "state/reconstruction-loop/ITER-002/OPEN-QUESTIONS.md",
+      "resolved_subset": "Both-side Schettern and four alternating pins confirmed; capture individual holes/seats, not generic joint principle."
     },
     {
       "id": "GAP-04",
@@ -50,7 +55,9 @@
         "CONFLICT-01",
         "CONFLICT-02",
         "CONFLICT-06"
-      ]
+      ],
+      "review_ref": "state/reconstruction-loop/ITER-002/OPEN-QUESTIONS.md",
+      "resolved_subset": "Long nail on far side; shaft26mm/head stock40mm. Exact paths, length and hole clearance remain open."
     },
     {
       "id": "GAP-05",
@@ -62,7 +69,8 @@
       "conflict_ids": [
         "CONFLICT-07",
         "CONFLICT-08"
-      ]
+      ],
+      "review_ref": "state/reconstruction-loop/ITER-002/OPEN-QUESTIONS.md"
     },
     {
       "id": "GAP-06",
@@ -71,7 +79,8 @@
       "irreversible_loss": "Wellenanhebung entfernt reale Kontakt-/Achsbezüge.",
       "capture": "Beide Lager im eingebauten Zustand aus zugänglichen Richtungen mit Datum fotografieren, Mittelpunkte und Zapfenlage bestimmen; Abstand, Höhe und axiale Anschläge dokumentieren. Unmittelbar beim Anheben Lagerflächen, Zapfenform, Beilagen und Sitzrichtung erfassen.",
       "acceptance_evidence": "Lager-/Zapfenregister und Datummaße",
-      "conflict_ids": []
+      "conflict_ids": [],
+      "review_ref": "state/reconstruction-loop/ITER-002/OPEN-QUESTIONS.md"
     },
     {
       "id": "GAP-07",
@@ -82,7 +91,8 @@
       "acceptance_evidence": "datierte Lagefotos, funktionale Pfeile und Messskizze",
       "conflict_ids": [
         "CONFLICT-12"
-      ]
+      ],
+      "review_ref": "state/reconstruction-loop/ITER-002/OPEN-QUESTIONS.md"
     },
     {
       "id": "GAP-08",
@@ -91,18 +101,20 @@
       "irreversible_loss": "Lose Keile, Paarungen und lokale Namen verlieren ihren Kontext.",
       "capture": "Eine Person führt das Ereignislog: laufende Ereignisnummer, Zeit, Teil-ID, Partner-IDs, vorher/nachher Bildnamen, entfernte Befestiger, ursprüngliche Orientierung und Lagerplatz. Historische Nummern bewahren; neues Schema KS-ARM/KRU/KUM/PAD/KEI-NNN zusätzlich verwenden. Reale Ausbaufolge dokumentieren, nicht automatisch umgekehrt als zwingende Montagefolge behaupten.",
       "acceptance_evidence": "vollständiges Ereignislog ohne unzugeordnete Kleinteile",
-      "conflict_ids": []
+      "conflict_ids": [],
+      "review_ref": "state/reconstruction-loop/ITER-002/OPEN-QUESTIONS.md"
     },
     {
       "id": "GAP-09",
       "priority": "P0-before",
-      "subject": "Schaufelstellung 90° — geometrischen Bezug fachlich und im Scan definieren",
+      "subject": "Flügelbrett-Pitch und Kontaktgeometrie",
       "irreversible_loss": "Nach Ausbau geht der reale lokale Bezug Schaufel ↔ Kranz ↔ Kumpf verloren; eine abstrakte 90°-Aussage kann danach unterschiedlich interpretiert werden.",
-      "capture": "An mindestens drei eingebauten Schaufeln je ein Bild/Scan aufnehmen, das Schaufelfläche, lokalen Kranz, Wellenachse und benachbarten Kumpf gemeinsam zeigt. Thorstens Fachkorrektur '90° zum Rad' als Zielvorgabe behandeln. Im registrierten Scan Brettfläche und Rad-/Kranzebene bzw. lokale Radial-/Tangentialrichtungen explizit bestimmen; Ebenenwinkel plus radiale/tangentiale Anstellung getrennt protokollieren. Keine pauschale 90°-Drehung ohne Bezugsdefinition.",
+      "capture": "90° zur Kranzebene ist durch TH-06 geklärt. Radial-/Tangentialpitch, Anschrägung/Kollisionspartner, Gesamtspanne und U-Band-Sitze dokumentieren.",
       "acceptance_evidence": "drei eindeutig zugeordnete Schaufeln mit definiertem Bezugssystem, Foto/Scan-Overlay und Winkel-/Orientierungsprotokoll",
       "conflict_ids": [
         "CONFLICT-13"
-      ]
+      ],
+      "review_ref": "state/reconstruction-loop/ITER-002/OPEN-QUESTIONS.md"
     }
   ]
 }

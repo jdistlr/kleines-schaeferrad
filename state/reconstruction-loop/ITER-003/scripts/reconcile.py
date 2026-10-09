@@ -1,0 +1,59 @@
+import json
+from pathlib import Path
+O=Path('state/reconstruction-loop/ITER-003')
+def read(p):return json.loads(Path(p).read_text())
+def write(p,d):Path(p).write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
+intake=read('evidence/contributions/thorsten-20261009.json'); photos=read('evidence/contributions/thorsten-20261009-photos.json')['images']; delta=read('state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json')
+claims=read('data/geometry.claims.json'); components=read('data/components.json'); graph=read('data/assembly.graph.json'); sources=read('data/source-analyses.json'); manifest=read('evidence/manifest.json')
+photo_ids={p['path']:p['id'] for p in photos}
+for p in photos:
+ if p['id'] not in {a['id'] for a in manifest['assets']}:manifest['assets'].append({'id':p['id'],'path':p['path'],'sha256':p['sha256'],'kind':'photo','evidence_class':'observed-current','scope':'current-visible-surfaces','group':p['group'],'current_geometry_authority':False})
+ if p['id'] not in {s['source_id'] for s in sources['sources']}:sources['sources'].append({'source_id':p['id'],'document_group':'TH-20261009-'+p['group'],'title':p['original_filename'],'review':'visually reviewed in ITER-002; original hash verified','claim_ids':[c['id'] for c in intake['claims'] if p['path'] in c['sources']],'unresolved':['Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json'],'current_geometry_authority':False})
+source_id='NARRATIVE-TH-CONSTRUCTION-20261009'
+if source_id not in {a['id'] for a in manifest['assets']}:manifest['assets'].append({'id':source_id,'path':'evidence/contributions/thorsten-20261009.json','kind':'expert-contribution','evidence_class':'expert-narrative','scope':'property-reviewed-local-expert-statements'})
+new_components={'COMP-SCHETTERNBRETTER':'Schetternbretter an Krümmlingstößen','COMP-WOOD-BANDS':'U-Holzbänder der Flügelbretter','COMP-TROUGH-SUPPORT':'Bock am Rad','COMP-A-BOCK':'A-Bock am Rinnenstoß','COMP-CHANNEL':'Zweiteilige Ableitrinne','COMP-SHAFT-CLAMPS':'Eisenschellen der Welle','COMP-RADSTADT':'Radstadt / gesamtes Tragwerk'}
+for id,label in new_components.items():
+ if id not in {c['id'] for c in components['components']}:components['components'].append({'id':id,'label':label,'kind':'assembly-family','multiplicity':{'description':'expert topology; physical inventory open','current_verified_count':None},'provenance':[source_id],'claim_ids':[],'confidence':'high-topology-only','note':'New canonical family mapped from reviewed intake; no measured physical-instance promotion.'})
+ if id not in {n['id'] for n in graph['nodes']}:graph['nodes'].append({'id':id,'label':label,'kind':'assembly-family','scope':'ontology-family-or-region'})
+for c in intake['claims']:
+ if c['id'] in {x['id'] for x in claims['claims']}:continue
+ metric=c.get('unit') in ['m','degree']; derived=c['evidence_class']=='derived-from-expert-measures'
+ claims['claims'].append({'id':c['id'],'subject':c['subject'],'predicate':c['predicate'],'value':c['value'],'unit':c['unit'],'evidence_class':'derived' if derived else 'expert-narrative','confidence':'qualified' if c.get('approximate') or c.get('remaining_unknown') else 'high','confidence_basis':'ITER-002 property review; explicit local expert statement; no new field measurement','scope':c['scope'],'provenance':[{'source_id':source_id,'region':c['id']}]+[{'source_id':photo_ids[p],'region':'visible assembly; limitations in ITER-002'} for p in c['sources']],'as_built_eligible':False,'metric_status':'expert-reported-not-independent-field-measurement' if metric else 'non-metric-expert-constraint','approximate':c.get('approximate',False),'derived_from':c.get('derived_from',[]),'formula':c.get('formula'),'supersedes':c.get('supersedes'),'remaining_unknown':c.get('remaining_unknown'),'intake_status':c['status'],'review':'state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json'})
+ for id in c['subject'].split('/'):
+  comp=next((x for x in components['components'] if x['id']==id),None)
+  if comp and c['id'] not in comp['claim_ids']:comp['claim_ids'].append(c['id'])
+rels=[('COMP-ARMS','COMP-KRUEMMLINGE','passes_through_reinforced_midpoint',[1,2,3]),('COMP-SCHETTERNBRETTER','COMP-KRUEMMLINGE','connects_joint_on_both_sides',[4,5]),('COMP-WOOD-BANDS','COMP-PADDLES','passes_over',[9,12]),('COMP-WOOD-BANDS','COMP-KRUEMMLINGE','passes_through_and_wedges_behind',[12]),('COMP-SHAFT-CLAMPS','COMP-SHAFT','two_clamps_per_end',[14]),('COMP-SHAFT','COMP-BEARINGS','central_iron_journal_directly_in_wood',[15]),('COMP-TROUGH-SUPPORT','COMP-BEARINGS','supports_wood_bearing',[21,22,23,24]),('COMP-A-BOCK','COMP-CHANNEL','supports_two_section_joint_via_wedged_crossbar',[30,31,32,33,34,35,36,37]),('COMP-RADSTADT','COMP-TROUGH-SUPPORT','contains',[19]),('COMP-KUMPF-NAILS','COMP-KRUEMMLINGE','long_nail_on_far_side',[16,17,18])]
+for i,(a,b,t,ns) in enumerate(rels,22):
+ id=f'EDGE-{i:03}'
+ if id not in {r['id'] for r in graph['relations']}:graph['relations'].append({'id':id,'from':a,'to':b,'type':t,'scope':'local-expert-reviewed-topology','provenance':[source_id],'evidence_class':'expert-narrative','confidence':'high-topology-metrics-qualified','claim_ids':[f'TH-20261009-{n:02}' for n in ns],'detail':'Geometric realization may contain explicit metric candidates; see reconstruction-constraints.json.'})
+for r in graph['relations']:
+ if r['id']=='EDGE-021':r['detail']='90 degrees to rim plane confirmed by TH-20261009-06; radial/tangential pitch remains unresolved.';r['claim_ids']=list(dict.fromkeys(r['claim_ids']+['TH-20261009-06']))
+for p,d in [('data/geometry.claims.json',claims),('data/components.json',components),('data/assembly.graph.json',graph),('data/source-analyses.json',sources),('evidence/manifest.json',manifest)]:write(p,d)
+constraints={'schema':'ks-reconstruction-constraints/v1','iteration':'ITER-003','source':'NARRATIVE-TH-CONSTRUCTION-20261009','asBuilt':False,'review':'state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json','rings':{'clearInner':1.8,'axialWidth':.14,'midplane':1.94,'outerWidth':2.08,'segmentPhaseDeg':-30,'seatTangentialClearance':.002,'seatAxialWidth':.067,'seatReinforcementDepth':.045,'seatReinforcementHalfAngle':.095},'arms':{'section':[.14,.065],'axisAssignment':'candidate: axial .14 / tangential .065; expert specifies size but not orientation','tipAxialWidth':.063},'schettern':{'length':.74,'radialDepth':.15,'thickness':.025,'pinDiameter':.026,'pinTangentialOffsets':[-.24,-.10,.10,.24],'pinRadialOffsets':[-.035,.035,-.035,.035],'metricStatus':'display candidate; length/depth only conditional new-board photo intervals; thickness/hole layout unknown'},'bands':{'rawBranchDiameterRange':[.04,.05],'reportedLengthApprox':1.2,'width':.045,'thickness':.015,'legSpacing':.12,'bendRadius':.025,'metricStatus':'U topology expert confirmed; finished section, bending geometry and hole positions candidates'},'shaft':{'constantWoodSection':True,'clampsPerEnd':2,'clampWidths':[.065,.045],'clampInset':[.08,.36],'clampThickness':.008,'journalDiameter':.10,'journalExtension':.18,'metricStatus':'section contour, clamp metrics and journal dimensions remain candidates'},'nails':{'shaftDiameter':.026,'headDiameter':.04,'headLength':.03,'holeDiametralClearance':.002,'rimPenetration':.02,'metricStatus':'diameters expert-reported; head length candidate within conditional photo interval; hole clearance and path unknown'},'paddles':{'widthApprox':.35,'outerFaceOverhang':.07,'landBevelLength':.12,'landBevelDepth':.06,'metricStatus':'width approximate expert; span overhang, bevel and radial pitch candidates'},'radBock':{'topLength':1.2,'beamSection':.14,'postSpacing':.88,'topZ':.56,'baseZ':-.55,'metricStatus':'topLength/section expert; spacing/height/placement candidate; local symmetry only'},'aBock':{'legSection':.14,'openingWidth':.05,'crossbarSection':[.04,.14],'crossbarLength':.9,'channelUndersideAboveGround':.8,'displayLegLength':1.5,'displaySeatAxisSpacing':.60,'displayLegAngleDeg':12,'openingHeight':.18,'metricStatus':'expert section/length/80cm; leg length, angle, slot height, ground and footprint unresolved display candidates'},'truthPolicy':'Expert topology and stated dimensions may guide annotated display; no current field metric promotion. Unknown site placement and exact nail paths omitted from Truth.'}
+write('data/reconstruction-constraints.json',constraints)
+p=read('data/hypothesis.parameters.json')
+for key,value,ns,note in [('ringDistance',1.94,[25,26,28],'Midplane = 1.80 clear + .14 axial width, not 1.80 itself.'),('rimWidth',.14,[26],'Axial only; historical radial .15 remains separate.'),('armWidth',.14,[27],'Candidate axial assignment; direction unresolved.'),('armDepth',.065,[27],'Candidate tangential assignment; direction unresolved.')]:
+ item=p['parameters'][key];item.update(value=value,provenance=[f'TH-20261009-{n:02}' for n in ns],status='expert-constrained-display-not-field-measured',note=note)
+write('data/hypothesis.parameters.json',p)
+c=read('data/calibration-v3.json');c['iteration']='ITER-003';c['sourceHead']='6017ba310d4a91158fe5f3d6edc8eb1bf3f5b6b5'
+# Preserve the synthetic relative standoff when rims shift outward by .395m.
+c['production'].update(centerX=-1.335,troughX=-1.845,paddleHeight=.35,paddleRadius=2.305,paddleAxialOverhang=.07)
+c['reference']['holeRadius']=.014;c['reference']['holeRadiusNote']='Synthetic 1mm radial clearance around expert-reported Ø26mm shaft; replaces unsupported Ø24mm candidate, not measured hole.'
+c['truth']['expertTopology'].update(armSeat='reinforced-segment-midpoint-with-two-wedges-and-rear-pin',rimJoint='two-schettern-four-alternating-pins',paddleRetention='U-wood-band-over-paddle-through-rim-wedged-behind',shaft='constant-wood-section-four-clamps-journal-in-wood')
+c['truth']['expertReportedDimensions']={'ringClearInner':1.8,'rimAxialWidth':.14,'armSection':[.14,.065],'nailShaftDiameter':.026,'nailHeadDiameter':.04,'status':'expert statements; not independent field measurements'}
+write('data/calibration-v3.json',c)
+conf=read('data/conflicts.json')
+updates={'CONFLICT-04':('semantic-dimensions-resolved','TH-26 confirms axial14cm; radial15cm remains historical.'),'CONFLICT-06':('functions-resolved-metric-paths-open','TH-01..18 separate seat wedges, Schettern nails, U bands and Kumpf nails; dimensions/paths remain qualified.'),'CONFLICT-13':('rim-plane-reference-resolved-pitch-open','TH-06 names rim plane; radial pitch and bevel contacts remain open.')}
+for v in conf['conflicts']:
+ if v['id'] in updates:v['status'],v['review_note']=updates[v['id']];v['review_ref']='state/reconstruction-loop/ITER-002/EVIDENCE-COMPARISON.md'
+write('data/conflicts.json',conf)
+gaps=read('data/knowledge-gaps.json')
+for g in gaps['gaps']:
+ g['review_ref']='state/reconstruction-loop/ITER-002/OPEN-QUESTIONS.md'
+ if g['id']=='GAP-01':g['resolved_subset']='1.80m inner-face spacing / .14m axial width expert-reported; datums and current control distances still required.'
+ if g['id']=='GAP-03':g['resolved_subset']='Both-side Schettern and four alternating pins confirmed; capture individual holes/seats, not generic joint principle.'
+ if g['id']=='GAP-04':g['resolved_subset']='Long nail on far side; shaft26mm/head stock40mm. Exact paths, length and hole clearance remain open.'
+ if g['id']=='GAP-09':g['subject']='Flügelbrett-Pitch und Kontaktgeometrie';g['capture']='90° zur Kranzebene ist durch TH-06 geklärt. Radial-/Tangentialpitch, Anschrägung/Kollisionspartner, Gesamtspanne und U-Band-Sitze dokumentieren.'
+write('data/knowledge-gaps.json',gaps)
+write(str(O/'CONSTRAINT-DELTA.json'),{'source_review':delta,'canonical_claim_ids':[c['id'] for c in intake['claims']],'policy':'No historical claim deleted; explicit correction lineage retained; metrics expert-reported, not measured.'})
+print('Reconciled39 claims,65 photo sources,10 relations,7 component families')

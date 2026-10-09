@@ -1,3 +1,4 @@
+import {C,paddleGeometry} from './expert-corrections.mjs';
 import * as T from 'three';
 import cfg from '../../data/calibration-v3.json' with {type:'json'};
 export {cfg};
@@ -34,25 +35,24 @@ function bandGeometry(z,r){
  const g=new T.LatheGeometry(profile,48);g.rotateX(Math.PI/2);g.translate(0,0,z);return g;
 }
 function pinGeometry(a,b){
- const va=new T.Vector3(...a),vb=new T.Vector3(...b),delta=vb.clone().sub(va),mid=va.clone().lerp(vb,.72).add(new T.Vector3(0,.003,0));
- const curve=new T.CatmullRomCurve3([va,va.clone().lerp(vb,.3),mid,vb]);
- return new T.TubeGeometry(curve,18,.009,8,false);
+ // Straight passage candidate: no synthetic bend through the four reference holes.
+ return new T.TubeGeometry(new T.LineCurve3(new T.Vector3(...a),new T.Vector3(...b)),18,C.nails.shaftDiameter/2,12,false);
 }
-export function referenceKumpf({mode='brute',slot=0,pose=null,explode=0,reference=cfg.reference,nails=true,mapping='A'}={}){
+export function referenceKumpf({mode='brute',slot=0,pose=null,explode=0,reference=cfg.reference,nails=true,mapping='A',mountOptions={},ringMidplane=C.rings.midplane,rimWidth=C.rings.axialWidth}={}){
  const group=new T.Group(),r=reference,id=String(slot+1).padStart(2,'0');
- function add(name,family,g,color,extra={}){const mesh=new T.Mesh(g,new T.MeshStandardMaterial({color:mode==='truth'?colors.expert:color,roughness:.88,metalness:family==='COMP-KUMPF-HOOPS'?.45:0,side:T.DoubleSide}));mesh.name=name;mesh.userData={id:name,family,slot,part:family,stationary:false,baseColor:mode==='truth'?colors.expert:(color?.isColor?color.getHex():color),iteration:'ITER-001',sources:referenceSources,status:mode==='truth'?'expert-topology-reference-display':'reconstructed-candidate',metricStatus:r.metricStatus,installedMetric:null,poseStatus:'candidate-layout-not-observed-pose',physicalInstanceId:null,...extra};group.add(mesh);return mesh}
+ function add(name,family,g,color,extra={}){const mesh=new T.Mesh(g,new T.MeshStandardMaterial({color:mode==='truth'?colors.expert:color,roughness:.88,metalness:family==='COMP-KUMPF-HOOPS'?.45:0,side:T.DoubleSide}));mesh.name=name;mesh.userData={id:name,family,slot,part:family,stationary:false,baseColor:mode==='truth'?colors.expert:(color?.isColor?color.getHex():color),iteration:'ITER-003',sources:referenceSources,status:mode==='truth'?'expert-topology-reference-display':'reconstructed-candidate',metricStatus:r.metricStatus,installedMetric:null,poseStatus:'candidate-layout-not-observed-pose',physicalInstanceId:null,...extra};group.add(mesh);return mesh}
  for(let j=0;j<12;j++){const m=add(j===0?`EXPECTED-KUM-${id}`:`V3-KUM-${id}-STAVE-${j+1}`,'COMP-KUEMPFE',staveGeometry(j,r),new T.Color(colors.wood).multiplyScalar(.91+(j%5)*.035),{staveIndex:j,drilled:r.drilledStaves.includes(j),holes:r.drilledStaves.includes(j)?r.holeOffsets.map((d,k)=>({id:`H${j===0?'A':'B'}${k+1}`,offsetFromMouth:d,metricStatus:'photo-estimate'})):[],groove:true});m.position.set(Math.cos(j*Math.PI/6)*explode*.1,Math.sin(j*Math.PI/6)*explode*.1,0)}
  const bg=new T.CylinderGeometry(radiusAt(-r.height/2+r.baseOffset,r)-r.thickness+r.grooveDepth-.0005,radiusAt(-r.height/2+r.baseOffset,r)-r.thickness+r.grooveDepth-.0005,r.grooveWidth-.001,12);bg.rotateX(Math.PI/2);bg.rotateZ(Math.PI/12);bg.translate(0,0,-r.height/2+r.baseOffset-explode*.12);add(`V3-KUM-${id}-BASE`,'COMP-KUMPF-BASE',bg,colors.wood,{retention:'base-edge-in-real-stave-groove',grooveClearance:.001});
  for(const [j,d]of r.hoopOffsets.entries()){const z=r.height/2-d;const m=add(`V3-KUM-${id}-HOOP-${j+1}`,'COMP-KUMPF-HOOPS',bandGeometry(z,r),colors.metal,{offsetFromMouth:d});m.scale.setScalar(1+explode*.13)}
  if(nails&&mode!=='truth')for(const [j,d]of r.holeOffsets.entries()){
-  const z=r.height/2-d,rr=radiusAt(z,r),reverse=mapping==='B',cross=mapping==='C',start=[-rr-.028,0,z];
+  const z=r.height/2-d,rr=radiusAt(z,r),reverse=mapping==='B',cross=mapping==='C',start=[-rr-C.nails.headLength/2,0,z];
   // Common inner rim exit plane makes the tilted overlapping mount require unequal lengths.
-  const mount=vesselPose(0),across=new T.Vector3(1,0,0).applyQuaternion(mount.quaternion),along=new T.Vector3(0,0,1).applyQuaternion(mount.quaternion),exitX=-.495;
+  const mount=pose||vesselPose(0,mountOptions),across=new T.Vector3(1,0,0).applyQuaternion(mount.quaternion),along=new T.Vector3(0,0,1).applyQuaternion(mount.quaternion),exitX=-ringMidplane/2+rimWidth/2+C.nails.rimPenetration;
   const end=[(exitX-mount.position.x-along.x*z)/across.x,0,cross?r.height/2-r.holeOffsets[1-j]:z];
   if(reverse){start[0]*=-1;end[0]*=-1}
-  const g=pinGeometry(start,end),m=add(`V3-KUM-${id}-NAIL-${j===0?'LONG':'SHORT'}`,'COMP-KUMPF-NAILS',g,colors.synthetic,{fastenerCandidate:true,pair:id,candidate:mapping,nailPath:{start,end,holes:[`HA${j+1}`,`HB${cross?2-j:j+1}`]},role:'kumpf-to-kruemmling',lengthReason:'overlap-clearance-hypothesis',sources:['NARRATIVE-TH-KUMPF-20261008-02','NARRATIVE-TH-KUMPF-20261008-03','PHOTO-1000046423','V2-IMG_6822','V2-IMG_6832']});
+  const g=pinGeometry(start,end),m=add(`V3-KUM-${id}-NAIL-${j===0?'LONG':'SHORT'}`,'COMP-KUMPF-NAILS',g,colors.synthetic,{fastenerCandidate:true,pair:id,candidate:mapping,shaftDiameter:C.nails.shaftDiameter,nailPath:{start,end,exitPlaneX:exitX,holes:[`HA${j+1}`,`HB${cross?2-j:j+1}`]},role:'kumpf-to-kruemmling',lengthReason:'far-side-to-current-rim-plane-candidate',metricStatus:'diameter-expert; path-and-total-length-unverified',sources:['TH-20261009-16','TH-20261009-18','NARRATIVE-TH-KUMPF-20261008-02','NARRATIVE-TH-KUMPF-20261008-03','PHOTO-1000046423','V2-IMG_6822','V2-IMG_6832']});
   m.position.x=-explode*.23;
-  const head=new T.CylinderGeometry(.024,.024,.025,8);head.rotateZ(Math.PI/2);head.translate(...start);const h=add(`${m.name}-HEAD`,'COMP-KUMPF-NAILS',head,colors.synthetic,{fastenerCandidate:true,pair:id,nailHead:true,candidate:mapping});h.position.x=-explode*.23;
+  const head=new T.CylinderGeometry(C.nails.headDiameter/2,C.nails.headDiameter/2,C.nails.headLength,8);head.rotateZ(Math.PI/2);head.translate(...start);const h=add(`${m.name}-HEAD`,'COMP-KUMPF-NAILS',head,colors.synthetic,{fastenerCandidate:true,pair:id,nailHead:true,candidate:mapping,headDiameter:C.nails.headDiameter,headLength:C.nails.headLength,sources:['TH-20261009-17'],metricStatus:'head-diameter-expert; head-length-photo-interval-candidate'});h.position.x=-explode*.23;
  }
  if(pose){group.position.copy(pose.position);group.quaternion.copy(pose.quaternion)}
  group.updateMatrixWorld(true);return group;
@@ -75,14 +75,14 @@ export function calibrateModel(group,p,options={},explode=0){
  const slots=options.slots||Array.from({length:truth?3:p.vesselCount},(_,i)=>i);
  for(const i of slots){
   const a=i*2*Math.PI/p.vesselCount,r={...cfg.reference,thickness:options.referenceThickness||cfg.reference.thickness,...c.variants?.[i]},pose=vesselPose(a,c);if(explode)pose.position.x-=explode*.5;
-  const v=referenceKumpf({mode,slot:i,pose,reference:r,mapping:c.nailMapping,explode:options.componentExplode||0});
+  const v=referenceKumpf({mode,slot:i,pose,reference:r,mapping:c.nailMapping,mountOptions:c,ringMidplane:p.ringDistance,rimWidth:p.rimWidth,explode:options.componentExplode||0});
   for(const m of [...v.children]){m.applyMatrix4(v.matrixWorld);group.add(m)}
  }
  // Paddle plane = shaft X + local radial R; normal = tangent T. V2 had X+T, normal R.
- for(const i of slots){const phase=(i+c.paddlePhaseSlots)*Math.PI*2/p.paddleCount,a=phase+rad(c.paddlePitchDeg),g=new T.BoxGeometry(p.ringDistance+2*c.paddleAxialOverhang,c.paddleThickness,c.paddleHeight);g.rotateX(a);g.translate(0,-Math.sin(phase)*c.paddleRadius,Math.cos(phase)*c.paddleRadius);
-  const m=new T.Mesh(g,new T.MeshStandardMaterial({color:truth?colors.expert:colors.wood,roughness:.9,wireframe:truth}));m.name=`EXPECTED-PAD-${String(i+1).padStart(2,'0')}`;m.userData={id:m.name,family:'COMP-PADDLES',stationary:false,slot:i,phase,partnerSlot:i,status:truth?'expert-plane-constraint-display-pitch-unresolved':'ranked-radial-paddle-candidate',metricStatus:'unmeasured',pitchStatus:'candidate-not-truth',baseColor:truth?colors.expert:colors.wood,sources:['NARRATIVE-TH-PADDLE-20261008-01','V2-IMG_6809','PHOTO-6861']};group.add(m)
+ for(const i of slots){const phase=(i+c.paddlePhaseSlots)*Math.PI*2/p.paddleCount,a=phase+rad(c.paddlePitchDeg),g=paddleGeometry(p.ringDistance+p.rimWidth+2*c.paddleAxialOverhang,c.paddleHeight,c.paddleThickness);g.rotateX(a);g.translate(0,-Math.sin(phase)*c.paddleRadius,Math.cos(phase)*c.paddleRadius);
+  const m=new T.Mesh(g,new T.MeshStandardMaterial({color:truth?colors.expert:colors.wood,roughness:.9,wireframe:truth}));m.name=`EXPECTED-PAD-${String(i+1).padStart(2,'0')}`;m.userData={id:m.name,family:'COMP-PADDLES',stationary:false,slot:i,phase,partnerSlot:i,status:truth?'expert-plane-constraint-display-pitch-unresolved':'ranked-radial-paddle-candidate',metricStatus:'width-approx-expert; overhang-bevel-pitch-candidate',outerFaceOverhang:c.paddleAxialOverhang,span:p.ringDistance+p.rimWidth+2*c.paddleAxialOverhang,pitchStatus:'candidate-not-truth',baseColor:truth?colors.expert:colors.wood,sources:['NARRATIVE-TH-PADDLE-20261008-01','TH-20261009-06','TH-20261009-07','TH-20261009-08','V2-IMG_6809','PHOTO-6861']};group.add(m)
  }
- group.userData={model:mode,iteration:'ITER-001',asBuilt:false,truthConstraints:truth?cfg.truth:undefined,candidate:truth?null:c,renderPolicy:cfg.truth.renderPolicy};
+ group.userData={model:mode,iteration:'ITER-003',asBuilt:false,truthConstraints:truth?cfg.truth:undefined,candidate:truth?null:c,renderPolicy:cfg.truth.renderPolicy};
  group.updateMatrixWorld(true);return group;
 }
 /** Stateless periodic cycle derived from actual pose and open-vessel free-surface capacity. No CFD. */

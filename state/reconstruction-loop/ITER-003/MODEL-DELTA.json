@@ -1,0 +1,281 @@
+{
+  "iteration": "ITER-003",
+  "parent": "6017ba310d4a91158fe5f3d6edc8eb1bf3f5b6b5",
+  "canonical_updated": true,
+  "geometry_updated": true,
+  "claims": [
+    {
+      "claim_id": "TH-20261009-01",
+      "source_statement": "Arm mittig im Krümmling, durchgesteckt; nicht am Segmentstoß.",
+      "implementation": "Segmentphase korrigiert: Arm durch Segmentmitte; radialer Sitz als tatsächliche Öffnung.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-02",
+      "source_statement": "Krümmling am Armsitz örtlich verstärkt.",
+      "implementation": "Lokale Verstärkung modelliert; Tiefe und Kontur Kandidaten.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-03",
+      "source_statement": "Zwei Keile und rückseitig eingesteckter zusätzlicher Sicherungsstift.",
+      "implementation": "Zwei obere Keile, hinterer Stift und Armloch modelliert; Detailmaße Kandidaten.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-04",
+      "source_statement": "Keine direkte Segmentendverbindung; beidseitige Schetternbretter verbinden die Krümmlinge.",
+      "implementation": "Beidseitige Schettern an jedem Stoß ergänzt.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-05",
+      "source_statement": "Holznägel durch Löcher; zwei von jeder Seite, auf Gegenseite verkeilt.",
+      "implementation": "Vier Nägel je Stoß, zwei pro Richtung; reale Durchgangslöcher. Lochbild und Durchmesser Kandidaten.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-06",
+      "source_statement": "Flügelbrett im 90-Grad-Winkel zum Krümmling.",
+      "implementation": "Kranzebene als Bezugsfläche kanonisiert; radialer Pitch bleibt offen.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-07",
+      "source_statement": "Landseite angeschrägt zur Kollisionsvermeidung mit als Schöpftröge bezeichneten Teilen.",
+      "implementation": "Landseitige Abschrägung als Kandidat; Gegenstück und Kontakt nicht bestätigt.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-08",
+      "source_statement": "Flügelbrett etwa 35 cm breit.",
+      "implementation": "Brettbreite auf ungefähr .35 m korrigiert.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-09",
+      "source_statement": "Eichenast gespalten, mehrere Stunden gekocht, zum U gebogen.",
+      "implementation": "U-Holzband über Brett und durch Kranz ergänzt; Herstellungsverfahren kanonisiert.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-10",
+      "source_statement": "Ast vor Spaltung 4–5 cm stark.",
+      "implementation": "Rohastdurchmesser .04–.05 m dokumentiert, nicht mit fertigem Bandquerschnitt gleichgesetzt.",
+      "status": "open-metric-or-registration",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-11",
+      "source_statement": "Band ungefähr 1,20 m lang.",
+      "implementation": "Ungefähre Länge 1.2 m mit offener Bezugsdefinition dokumentiert; kein Zwang auf abgewickelte Modelllänge.",
+      "status": "open-metric-or-registration",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-12",
+      "source_statement": "Band befestigt Flügelbrett am Krümmling.",
+      "implementation": "Bandanschluss an Flügelbrett/Kranz statt Schettern korrigiert; rückseitige Keile ergänzt.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-13",
+      "source_statement": "Über komplette Holzwellenlänge gleichmäßiger Durchmesser.",
+      "implementation": "Holzwelle ohne verjüngte Enden modelliert.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-14",
+      "source_statement": "Je zwei massive Eisenschellen an beiden Wellenenden.",
+      "implementation": "Je zwei separate Schellen an beiden Enden ergänzt.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-15",
+      "source_statement": "Dorn läuft direkt im Holz der Auflage.",
+      "implementation": "Dorne und Holzlager ergänzt; Innenverlauf bleibt unbekannt, Metrik Kandidat.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-16",
+      "source_statement": "Vom Krümmling abgewandte Vorderseite braucht längeren Kumpfnagel.",
+      "implementation": "Standardpose: langer Nagel auf kranzferner Seite; Pfade folgen tatsächlich verwendeter Pose.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-17",
+      "source_statement": "Ausgangsholz 4 cm Durchmesser; Kopf bleibt stärker.",
+      "implementation": "Kopf-/Stockdurchmesser .04 m; Kopflänge bleibt Kandidat.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-18",
+      "source_statement": "Schaft auf 2,6 cm geschnitzt.",
+      "implementation": "Schaftdurchmesser .026 m; Kumpfloch auf .028 m Kandidaten-Spiel angepasst.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-19",
+      "source_statement": "Gesamte Tragkonstruktion, auf der das Rad aufliegt, heißt Radstadt.",
+      "implementation": "Radstadt als Gesamtrahmen kanonisiert; lokaler Radbock separat.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-20",
+      "source_statement": "Arme ungefähr 65 cm von Radstadt entfernt.",
+      "implementation": "Ca. .65 m nicht erzwungen: Messendpunkte fehlen.",
+      "status": "open-metric-or-registration",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-21",
+      "source_statement": "Oberer Querbalken 1,20 m lang.",
+      "implementation": "Oberer Radbockquerbalken 1.20 m.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-22",
+      "source_statement": "Balken des beschriebenen Bocks generell 14 × 14 cm.",
+      "implementation": "Radbockholz .14 × .14 m.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-23",
+      "source_statement": "Ausgeklinkte Stützen greifen in oberen Querbalken; verkeilt.",
+      "implementation": "Abgesetzter Pfosten, reales Querbalkenloch und Keil ergänzt; Details Kandidat.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-24",
+      "source_statement": "Konstruktion komplett achsensymmetrisch.",
+      "implementation": "Symmetrie nur lokal im Radbock; keine globale Ist-Symmetrie behauptet.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-25",
+      "source_statement": "1,80 m lichter Abstand zwischen den Kränzen.",
+      "implementation": "Tatsächliche lichte Kranzweite 1.80 m.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-26",
+      "source_statement": "14 cm axial; frühere 15 cm waren falsch.",
+      "implementation": "Axiale Kranzbreite .14 m; historisches Radialmaß separat erhalten.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-27",
+      "source_statement": "Arme 14 × 6,5 cm.",
+      "implementation": "Armquerschnitt .14 × .065 m umgesetzt; Achszuordnung Kandidat.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-28",
+      "source_statement": "Aus Innenabstand und zwei gleichen Kranzbreiten berechnet.",
+      "implementation": "Kranzmittelebenen 1.94 m abgeleitet und verwendet.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-29",
+      "source_statement": "Außenflächenabstand ohne Überstände.",
+      "implementation": "Außenweite 2.08 m an Meshgrenzen geprüft.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-30",
+      "source_statement": "Rinne aus zwei Teilen.",
+      "implementation": "Zwei separate Rinnenabschnitte ergänzt.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-31",
+      "source_statement": "A-Bock trägt Rinne am Stoß.",
+      "implementation": "Rinnenstoß auf A-Bockquerriegel gelegt; Weltlage Kandidat.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-32",
+      "source_statement": "Beide A-förmig aufgestellte Balken 14 × 14 cm.",
+      "implementation": "A-Bockbeine .14 × .14 m.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-33",
+      "source_statement": "Aussparung 5 cm breit; ausdrücklich aus Erklärung, nicht abgelesen.",
+      "implementation": "Reale A-Bockschlitze .05 m breit; Höhe Kandidat.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-34",
+      "source_statement": "Riegel 4 × 14 cm.",
+      "implementation": "Querriegel .04 × .14 m; Orientierung Kandidat.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-35",
+      "source_statement": "Riegel 90 cm lang.",
+      "implementation": "Querriegellänge .90 m; nicht als Beinabstand interpretiert.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-36",
+      "source_statement": "Durchgesteckter Riegel trägt die Rinne und wird oben und unten verkeilt.",
+      "implementation": "Durchgesteckter Riegel, obere/untere Keile, Rinnenauflage ergänzt.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-37",
+      "source_statement": "Unterseite Rinnenboden am A-Bock 80 cm über Boden.",
+      "implementation": "Rinnenunterkante .80 m über lokalem Kandidatenboden.",
+      "status": "implemented-with-qualified-unknowns",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-38",
+      "source_statement": "Balkenlänge geht aus Zollstockmaß hervor.",
+      "implementation": "Beinlänge/Standfläche bleiben unbestätigt; Anzeige 1.50 m und 12° ausdrücklich Kandidaten.",
+      "status": "open-metric-or-registration",
+      "as_built_promoted": false
+    },
+    {
+      "claim_id": "TH-20261009-39",
+      "source_statement": "Punktewolke zeigt Schöpftrog nach Nutzerangabe brauchbar.",
+      "implementation": "Scan als Kontext erhalten, ohne mechanische Registrierung keine metrische Anpassung.",
+      "status": "open-metric-or-registration",
+      "as_built_promoted": false
+    }
+  ]
+}

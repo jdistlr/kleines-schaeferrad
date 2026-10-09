@@ -1,0 +1,112 @@
+{
+  "schema": "ks-reconstruction-constraints/v1",
+  "iteration": "ITER-003",
+  "source": "NARRATIVE-TH-CONSTRUCTION-20261009",
+  "asBuilt": false,
+  "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json",
+  "rings": {
+    "clearInner": 1.8,
+    "axialWidth": 0.14,
+    "midplane": 1.94,
+    "outerWidth": 2.08,
+    "segmentPhaseDeg": -30,
+    "seatTangentialClearance": 0.002,
+    "seatAxialWidth": 0.067,
+    "seatReinforcementDepth": 0.045,
+    "seatReinforcementHalfAngle": 0.095
+  },
+  "arms": {
+    "section": [
+      0.14,
+      0.065
+    ],
+    "axisAssignment": "candidate: axial .14 / tangential .065; expert specifies size but not orientation",
+    "tipAxialWidth": 0.063
+  },
+  "schettern": {
+    "length": 0.74,
+    "radialDepth": 0.15,
+    "thickness": 0.025,
+    "pinDiameter": 0.026,
+    "pinTangentialOffsets": [
+      -0.24,
+      -0.1,
+      0.1,
+      0.24
+    ],
+    "pinRadialOffsets": [
+      -0.035,
+      0.035,
+      -0.035,
+      0.035
+    ],
+    "metricStatus": "display candidate; length/depth only conditional new-board photo intervals; thickness/hole layout unknown"
+  },
+  "bands": {
+    "rawBranchDiameterRange": [
+      0.04,
+      0.05
+    ],
+    "reportedLengthApprox": 1.2,
+    "width": 0.045,
+    "thickness": 0.015,
+    "legSpacing": 0.12,
+    "bendRadius": 0.025,
+    "metricStatus": "U topology expert confirmed; finished section, bending geometry and hole positions candidates"
+  },
+  "shaft": {
+    "constantWoodSection": true,
+    "clampsPerEnd": 2,
+    "clampWidths": [
+      0.065,
+      0.045
+    ],
+    "clampInset": [
+      0.08,
+      0.36
+    ],
+    "clampThickness": 0.008,
+    "journalDiameter": 0.1,
+    "journalExtension": 0.18,
+    "metricStatus": "section contour, clamp metrics and journal dimensions remain candidates"
+  },
+  "nails": {
+    "shaftDiameter": 0.026,
+    "headDiameter": 0.04,
+    "headLength": 0.03,
+    "holeDiametralClearance": 0.002,
+    "rimPenetration": 0.02,
+    "metricStatus": "diameters expert-reported; head length candidate within conditional photo interval; hole clearance and path unknown"
+  },
+  "paddles": {
+    "widthApprox": 0.35,
+    "outerFaceOverhang": 0.07,
+    "landBevelLength": 0.12,
+    "landBevelDepth": 0.06,
+    "metricStatus": "width approximate expert; span overhang, bevel and radial pitch candidates"
+  },
+  "radBock": {
+    "topLength": 1.2,
+    "beamSection": 0.14,
+    "postSpacing": 0.88,
+    "topZ": 0.56,
+    "baseZ": -0.55,
+    "metricStatus": "topLength/section expert; spacing/height/placement candidate; local symmetry only"
+  },
+  "aBock": {
+    "legSection": 0.14,
+    "openingWidth": 0.05,
+    "crossbarSection": [
+      0.04,
+      0.14
+    ],
+    "crossbarLength": 0.9,
+    "channelUndersideAboveGround": 0.8,
+    "displayLegLength": 1.5,
+    "displaySeatAxisSpacing": 0.6,
+    "displayLegAngleDeg": 12,
+    "openingHeight": 0.18,
+    "metricStatus": "expert section/length/80cm; leg length, angle, slot height, ground and footprint unresolved display candidates"
+  },
+  "truthPolicy": "Expert topology and stated dimensions may guide annotated display; no current field metric promotion. Unknown site placement and exact nail paths omitted from Truth."
+}

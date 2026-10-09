@@ -1,0 +1,31 @@
+18:24:27 [types] Generated 218ms
+18:24:27 [build] output: "static"
+18:24:27 [build] mode: "static"
+18:24:27 [build] directory: /workspace/scratch/9fb9bcb963eb/repo/dist/
+18:24:27 [build] Collecting build info...
+18:24:27 [build] ✓ Completed in 286ms.
+18:24:27 [build] Building static entrypoints...
+18:24:28 [vite] ✓ built in 538ms
+18:24:28 [WARN] [vite] [plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+18:24:28 [vite] ✓ built in 579ms
+18:24:28 [build] Rearranging server assets...
+
+ generating static routes 
+18:24:28   ├─ /feld/index.html (+33ms) 
+18:24:28   ├─ /werkstatt/index.html (+6ms) 
+18:24:28   ├─ /index.html (+20ms) 
+18:24:28 ✓ Completed in 91ms.
+
+ generating optimized images 
+18:24:29   ▶ /_astro/IMG_6858.BpdSKe7f_ZSXckl.webp (before: 713kB, after: 99kB) (+297ms) (1/3)
+18:24:29   ▶ /_astro/IMG_6858.BpdSKe7f_PPje9.webp (before: 713kB, after: 200kB) (+329ms) (2/3)
+18:24:29   ▶ /_astro/IMG_6858.BpdSKe7f_6R4o5.webp (before: 713kB, after: 277kB) (+384ms) (3/3)
+18:24:29 ✓ Completed in 1.01s.
+
+18:24:29 [build] ✓ Completed in 2.29s.
+18:24:29 [build] 3 page(s) built in 2.58s
+18:24:29 [build] Complete!

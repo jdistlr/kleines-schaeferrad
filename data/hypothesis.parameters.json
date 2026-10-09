@@ -30,21 +30,22 @@
       "current_value": null,
       "range": null,
       "provenance": [
-        "CLAIM-0239",
-        "CONFLICT-04"
+        "TH-20261009-26"
       ],
-      "status": "hypothesis-only",
-      "note": "14 cm historic width interpreted axial; unresolved dimension semantics"
+      "status": "expert-constrained-display-not-field-measured",
+      "note": "Axial only; historical radial .15 remains separate."
     },
     "ringDistance": {
-      "value": 1.15,
+      "value": 1.94,
       "current_value": null,
       "range": null,
       "provenance": [
-        "GAP-01"
+        "TH-20261009-25",
+        "TH-20261009-26",
+        "TH-20261009-28"
       ],
-      "status": "hypothesis-only",
-      "note": "arbitrary display separation; actual value and plausible range unknown"
+      "status": "expert-constrained-display-not-field-measured",
+      "note": "Midplane = 1.80 clear + .14 axial width, not 1.80 itself."
     },
     "shaftLength": {
       "value": 3.7,
@@ -73,20 +74,20 @@
       "current_value": null,
       "range": null,
       "provenance": [
-        "GAP-02"
+        "TH-20261009-27"
       ],
-      "status": "hypothesis-only",
-      "note": "Historical profile convention 0.14 m; no current measurement."
+      "status": "expert-constrained-display-not-field-measured",
+      "note": "Candidate axial assignment; direction unresolved."
     },
     "armDepth": {
-      "value": 0.12,
+      "value": 0.065,
       "current_value": null,
       "range": null,
       "provenance": [
-        "GAP-02"
+        "TH-20261009-27"
       ],
-      "status": "hypothesis-only",
-      "note": "Candidate 0.12 m; axial central spacing 0.17 m with common rim endpoints."
+      "status": "expert-constrained-display-not-field-measured",
+      "note": "Candidate tangential assignment; direction unresolved."
     },
     "vesselRadius": {
       "value": 0.16,

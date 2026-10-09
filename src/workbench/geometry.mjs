@@ -1,4 +1,5 @@
-import {calibrateModel} from './calibration.mjs';
+import {applyExpertCorrections} from './expert-corrections.mjs';
+import {calibrateModel,cfg} from './calibration.mjs';
 import * as T from 'three';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import config from '../../data/hypothesis.parameters.json' with {type:'json'};
@@ -8,7 +9,7 @@ export const views={gesamt:[7,-9,6],land:[-9,0,0],wasser:[9,0,0],welle:[2,-7,3],
 export const palette={wood:0xb79a70,arm:0xc6ae84,rim:0x9e8058,stave:0xc5a577,metal:0x575b5c,frame:0x9b8c73,water:0x739cac,unknown:0xbe914e};
 // Mechanical frame: shaft X, transverse Y, gravity Z. Origin shaft / rim midplane.
 // All dimensions are reconstruction coordinates. No member constitutes measured as-built geometry.
-export function profilePrism(points,depth){const s=new T.Shape();points.forEach(([x,y],i)=>i?s.lineTo(x,y):s.moveTo(x,y));s.closePath();const g=new T.ExtrudeGeometry(s,{depth,bevelEnabled:false,steps:1});g.translate(0,0,-depth/2);return g;}
+export function profilePrism(points,depth,holes=[]){const s=new T.Shape();points.forEach(([x,y],i)=>i?s.lineTo(x,y):s.moveTo(x,y));s.closePath();for(const [x,y,r]of holes){const h=new T.Path();h.absarc(x,y,r,0,Math.PI*2,true);s.holes.push(h)}const g=new T.ExtrudeGeometry(s,{depth,bevelEnabled:false,steps:1});g.translate(0,0,-depth/2);return g;}
 function beam(a,b,w,d=w){const av=new T.Vector3(...a),bv=new T.Vector3(...b),v=bv.clone().sub(av),l=v.length(),c=Math.min(w,d)*.08;const g=profilePrism([[-w/2+c,-d/2],[w/2-c,-d/2],[w/2,-d/2+c],[w/2,d/2-c],[w/2-c,d/2],[-w/2+c,d/2],[-w/2,d/2-c],[-w/2,-d/2+c]],l);g.applyQuaternion(new T.Quaternion().setFromUnitVectors(new T.Vector3(0,0,1),v.normalize()));g.translate(...av.add(bv).multiplyScalar(.5).toArray());return g;}
 export function curvedPin(length,hand=1){const verts=[],indices=[],rings=14,sides=10;for(let i=0;i<=rings;i++){const t=i/rings,xx=hand*(.025*Math.sin(t*Math.PI*.85)+.018*t*t),rr=t<.1?.002+t*.12:t>.83?.015+.018*Math.sin((t-.83)/.17*Math.PI):.014;for(let j=0;j<sides;j++){const a=j*Math.PI*2/sides;verts.push(xx+rr*Math.cos(a),rr*Math.sin(a),t*length)}}for(let i=0;i<rings;i++)for(let j=0;j<sides;j++){const a=i*sides+j,b=i*sides+(j+1)%sides;indices.push(a,b,b+sides,a,b+sides,a+sides)}for(let j=1;j<sides-1;j++){indices.push(0,j+1,j,rings*sides,rings*sides+j,rings*sides+j+1)}const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(verts,3));g.setIndex(indices);g.computeVertexNormals();return g;}
 function latheX(points,n=16){const g=new T.LatheGeometry(points.map(x=>new T.Vector2(...x)),n);g.rotateZ(-Math.PI/2);return g;}
@@ -25,10 +26,10 @@ export function makeModel(variant='A',explode=0,options={}){
   for(let i=0;i<3;i++){
    const layer=joinery==='crossing'?0:layers==='coplanar'?0:(i-1)*.17*(layers==='reverse'?-1:1),off=shape==='straight'?0:sign*.22-layer;
    // Single continuous polygon, including central joining region; profile offset is candidate, not a measured bend.
-   const centre=[[-2.275,off],[-1.975,off],[-.25,0],[.25,0],[1.975,off],[2.275,off]],w=.14;
+   const centre=[[-2.275,off],[-1.975,off],[-.25,0],[.25,0],[1.975,off],[2.275,off]],w=p.armWidth;
    const width=z=>Math.abs(z)>1.976?w*.45:w;
    const outline=c=>[...c.map(([z,y])=>[y-width(z)/2,z]),...c.slice().reverse().map(([z,y])=>[y+width(z)/2,z])];
-   const g=joinery==='independent'?mergeGeometries([profilePrism(outline([...centre.slice(0,2),[-.16,0]]),.12),profilePrism(outline([[.16,0],...centre.slice(4)]),.12)]):profilePrism(outline(centre),.12);g.applyMatrix4(new T.Matrix4().set(1,0,0,0,0,0,-1,0,0,1,0,0,0,0,0,1));
+   const g=joinery==='independent'?mergeGeometries([profilePrism(outline([...centre.slice(0,2),[-.16,0]]),p.armDepth,[[off,-p.outerRadius-.095,.011]]),profilePrism(outline([[.16,0],...centre.slice(4)]),p.armDepth,[[off,p.outerRadius+.095,.011]])]):profilePrism(outline(centre),p.armDepth,[[off,-p.outerRadius-.095,.011],[off,p.outerRadius+.095,.011]]);g.applyMatrix4(new T.Matrix4().set(1,0,0,0,0,0,-1,0,0,1,0,0,0,0,0,1));
    add(`HIST-ARM-${side}-${i+1}-${i+4}`,'COMP-ARMS',g,[x+layer-sign*.22,0,0],[i*Math.PI/3,0,0],false,palette.arm,{armShape:shape,armLayers:layers,hiddenCenterOmitted:joinery==='independent',candidateJoinery:joinery,sources:['PHOTO-6820','PHOTO-6855','V2-IMG_6798','V2-IMG_6799','V2-IMG_6800','V2-IMG_6808'],sourceClass:'HISTORISCHE ZEICHNUNG / TECHNISCH REKONSTRUIERT'});
    for(const s of[-1,1])add(`CAND-WEDGE-${side}-${i}-${s}`,'COMP-FASTENERS',profilePrism([[-.045,-.12],[.045,-.12],[.035,.12],[-.035,.12]],.05),[x+layer-sign*.22,s*.21*Math.sin(i*Math.PI/3),s*.21*Math.cos(i*Math.PI/3)],[i*Math.PI/3,0,Math.PI/2],false,palette.unknown,{hiddenCandidate:true});
   }
@@ -71,7 +72,7 @@ export function makeModel(variant='A',explode=0,options={}){
  channel('CAND-CHANNEL',[-1.18,1.25,1.73],[-3.8,1.25,1.57],.32,.14);
  for(const y of[-1,1]){add(`CTX-TROUGH-POST-${y}`,'COMP-FRAME-SIDE',beam([-1.24,y,-.4],[-1.24,y,1.8],.14),[0,0,0],[0,0,0],true,palette.frame);add(`CTX-TROUGH-BRACE-${y}`,'COMP-FRAME-SIDE',beam([-1.58,y,-.2],[-1.24,y,1.3],.1),[0,0,0],[0,0,0],true,palette.frame)}
  for(const x of[-2.1,-3.6]){const top=1.73-(Math.abs(x)-1.18)*.16/2.62;add(`CTX-CHANNEL-SUPPORT-${x}`,'COMP-FRAME-SIDE',beam([x,1.25,-2.05],[x,1.25,top],.14),[0,0,0],[0,0,0],true,palette.frame)}
- if(options.calibration!==false)calibrateModel(group,p,{...options,referenceThickness:config.variants[variant].staveThickness},explode);
+ if(options.calibration!==false){calibrateModel(group,p,{...options,referenceThickness:config.variants[variant].staveThickness},explode);applyExpertCorrections(group,p,{...cfg.production,...options},{truth:options.modelMode==='truth',explode});}
  group.updateMatrixWorld(true);return group;
 }
 export function matchesFamily(mesh,selected){const f=mesh.userData.family;if(selected==='ALL')return true;if(['COMP-RIMS','COMP-RIM-LAND','COMP-RIM-WATER'].includes(selected))return f==='COMP-KRUEMMLINGE'&&(!selected.endsWith('LAND')||mesh.userData.id.includes('LAND'))&&(!selected.endsWith('WATER')||mesh.userData.id.includes('WATER'));if(selected==='COMP-KUEMPFE')return ['COMP-KUEMPFE','COMP-KUMPF-BASE','COMP-KUMPF-HOOPS','COMP-KUMPF-NAILS'].includes(f)||mesh.userData.fastenerCandidate;if(selected.startsWith('COMP-HUB-'))return f==='COMP-SHAFT'||f==='COMP-ARMS';return f===selected;}

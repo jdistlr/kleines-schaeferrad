@@ -1294,6 +1294,984 @@
         "Dedizierten Schaufelscan identifizieren/prüfen."
       ],
       "current_geometry_authority": "high correction priority; exact geometric interpretation pending scan/photo definition"
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791543053651",
+      "document_group": "TH-20261009-bock-radstadt",
+      "title": "image-1791543053651.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-19",
+        "TH-20261009-20",
+        "TH-20261009-21",
+        "TH-20261009-22",
+        "TH-20261009-23",
+        "TH-20261009-24"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791540525839",
+      "document_group": "TH-20261009-arm-kruemmling",
+      "title": "image-1791540525839.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-01",
+        "TH-20261009-02",
+        "TH-20261009-03"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541666129",
+      "document_group": "TH-20261009-dorn-lager",
+      "title": "image-1791541666129.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-15"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541735045",
+      "document_group": "TH-20261009-kumpf-einbau",
+      "title": "image-1791541735045.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541761724",
+      "document_group": "TH-20261009-kumpf-einbau",
+      "title": "image-1791541761724.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541781288",
+      "document_group": "TH-20261009-kumpf-einbau",
+      "title": "image-1791541781288.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541790124",
+      "document_group": "TH-20261009-kumpf-einbau",
+      "title": "image-1791541790124.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542327774",
+      "document_group": "TH-20261009-bock-radstadt",
+      "title": "image-1791542327774.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-19",
+        "TH-20261009-20",
+        "TH-20261009-21",
+        "TH-20261009-22",
+        "TH-20261009-23",
+        "TH-20261009-24"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542342950",
+      "document_group": "TH-20261009-bock-radstadt",
+      "title": "image-1791542342950.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-19",
+        "TH-20261009-20",
+        "TH-20261009-21",
+        "TH-20261009-22",
+        "TH-20261009-23",
+        "TH-20261009-24"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-1000046540",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "1000046540.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-1000046539",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "1000046539.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-1000046538",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "1000046538.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-1000046537",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "1000046537.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-1000046536",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "1000046536.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542028869",
+      "document_group": "TH-20261009-trog-rinne",
+      "title": "image-1791542028869.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-39"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542045602",
+      "document_group": "TH-20261009-trog-rinne",
+      "title": "image-1791542045602.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-39"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542499680",
+      "document_group": "TH-20261009-kumpfnaegel",
+      "title": "image-1791542499680.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-16",
+        "TH-20261009-17",
+        "TH-20261009-18"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542573592",
+      "document_group": "TH-20261009-kumpfnaegel",
+      "title": "image-1791542573592.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-16",
+        "TH-20261009-17",
+        "TH-20261009-18"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542586169",
+      "document_group": "TH-20261009-kumpfnaegel",
+      "title": "image-1791542586169.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-16",
+        "TH-20261009-17",
+        "TH-20261009-18"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542766365",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "image-1791542766365.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542778932",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "image-1791542778932.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-1000046530",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "1000046530.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791540812566",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "image-1791540812566.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791540831514",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "image-1791540831514.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-1000046542",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "1000046542.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-1000046541",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "1000046541.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541554648",
+      "document_group": "TH-20261009-welle-schellen",
+      "title": "image-1791541554648.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-13",
+        "TH-20261009-14"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541561160",
+      "document_group": "TH-20261009-welle-schellen",
+      "title": "image-1791541561160.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-13",
+        "TH-20261009-14"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541576861",
+      "document_group": "TH-20261009-welle-schellen",
+      "title": "image-1791541576861.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-13",
+        "TH-20261009-14"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541863916",
+      "document_group": "TH-20261009-kumpf-einbau",
+      "title": "image-1791541863916.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791540649435",
+      "document_group": "TH-20261009-arm-kruemmling",
+      "title": "image-1791540649435.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-01",
+        "TH-20261009-02",
+        "TH-20261009-03"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791540668918",
+      "document_group": "TH-20261009-arm-kruemmling",
+      "title": "image-1791540668918.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-01",
+        "TH-20261009-02",
+        "TH-20261009-03"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791543487137",
+      "document_group": "TH-20261009-a-bock",
+      "title": "image-1791543487137.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-30",
+        "TH-20261009-31",
+        "TH-20261009-32",
+        "TH-20261009-33",
+        "TH-20261009-34",
+        "TH-20261009-35",
+        "TH-20261009-36",
+        "TH-20261009-37",
+        "TH-20261009-38"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791543497527",
+      "document_group": "TH-20261009-a-bock",
+      "title": "image-1791543497527.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-30",
+        "TH-20261009-31",
+        "TH-20261009-32",
+        "TH-20261009-33",
+        "TH-20261009-34",
+        "TH-20261009-35",
+        "TH-20261009-36",
+        "TH-20261009-37",
+        "TH-20261009-38"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791543505768",
+      "document_group": "TH-20261009-a-bock",
+      "title": "image-1791543505768.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-30",
+        "TH-20261009-31",
+        "TH-20261009-32",
+        "TH-20261009-33",
+        "TH-20261009-34",
+        "TH-20261009-35",
+        "TH-20261009-36",
+        "TH-20261009-37",
+        "TH-20261009-38"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791543574540",
+      "document_group": "TH-20261009-a-bock",
+      "title": "image-1791543574540.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-30",
+        "TH-20261009-31",
+        "TH-20261009-32",
+        "TH-20261009-33",
+        "TH-20261009-34",
+        "TH-20261009-35",
+        "TH-20261009-36",
+        "TH-20261009-37",
+        "TH-20261009-38"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-1000046535",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "1000046535.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-1000046534",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "1000046534.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-1000046533",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "1000046533.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-1000046532",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "1000046532.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-1000046531",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "1000046531.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542237069",
+      "document_group": "TH-20261009-bock-radstadt",
+      "title": "image-1791542237069.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-19",
+        "TH-20261009-20",
+        "TH-20261009-21",
+        "TH-20261009-22",
+        "TH-20261009-23",
+        "TH-20261009-24"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542257101",
+      "document_group": "TH-20261009-bock-radstadt",
+      "title": "image-1791542257101.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-19",
+        "TH-20261009-20",
+        "TH-20261009-21",
+        "TH-20261009-22",
+        "TH-20261009-23",
+        "TH-20261009-24"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541961389",
+      "document_group": "TH-20261009-trog-rinne",
+      "title": "image-1791541961389.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-39"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541967728",
+      "document_group": "TH-20261009-trog-rinne",
+      "title": "image-1791541967728.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-39"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541979278",
+      "document_group": "TH-20261009-trog-rinne",
+      "title": "image-1791541979278.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-39"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791543757351",
+      "document_group": "TH-20261009-a-bock",
+      "title": "image-1791543757351.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-30",
+        "TH-20261009-31",
+        "TH-20261009-32",
+        "TH-20261009-33",
+        "TH-20261009-34",
+        "TH-20261009-35",
+        "TH-20261009-36",
+        "TH-20261009-37",
+        "TH-20261009-38"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541887655",
+      "document_group": "TH-20261009-trog-rinne",
+      "title": "image-1791541887655.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-39"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541908195",
+      "document_group": "TH-20261009-trog-rinne",
+      "title": "image-1791541908195.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-39"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541920559",
+      "document_group": "TH-20261009-trog-rinne",
+      "title": "image-1791541920559.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-39"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542108092",
+      "document_group": "TH-20261009-bock-radstadt",
+      "title": "image-1791542108092.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-19",
+        "TH-20261009-20",
+        "TH-20261009-21",
+        "TH-20261009-22",
+        "TH-20261009-23",
+        "TH-20261009-24"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542120355",
+      "document_group": "TH-20261009-bock-radstadt",
+      "title": "image-1791542120355.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-19",
+        "TH-20261009-20",
+        "TH-20261009-21",
+        "TH-20261009-22",
+        "TH-20261009-23",
+        "TH-20261009-24"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542146990",
+      "document_group": "TH-20261009-bock-radstadt",
+      "title": "image-1791542146990.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-19",
+        "TH-20261009-20",
+        "TH-20261009-21",
+        "TH-20261009-22",
+        "TH-20261009-23",
+        "TH-20261009-24"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542161221",
+      "document_group": "TH-20261009-bock-radstadt",
+      "title": "image-1791542161221.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-19",
+        "TH-20261009-20",
+        "TH-20261009-21",
+        "TH-20261009-22",
+        "TH-20261009-23",
+        "TH-20261009-24"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791542172733",
+      "document_group": "TH-20261009-bock-radstadt",
+      "title": "image-1791542172733.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-19",
+        "TH-20261009-20",
+        "TH-20261009-21",
+        "TH-20261009-22",
+        "TH-20261009-23",
+        "TH-20261009-24"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541209669",
+      "document_group": "TH-20261009-fluegelbretter",
+      "title": "image-1791541209669.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-06",
+        "TH-20261009-07",
+        "TH-20261009-08"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541224562",
+      "document_group": "TH-20261009-fluegelbretter",
+      "title": "image-1791541224562.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-06",
+        "TH-20261009-07",
+        "TH-20261009-08"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541247032",
+      "document_group": "TH-20261009-fluegelbretter",
+      "title": "image-1791541247032.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-06",
+        "TH-20261009-07",
+        "TH-20261009-08"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541265923",
+      "document_group": "TH-20261009-fluegelbretter",
+      "title": "image-1791541265923.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-06",
+        "TH-20261009-07",
+        "TH-20261009-08"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541278244",
+      "document_group": "TH-20261009-fluegelbretter",
+      "title": "image-1791541278244.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-06",
+        "TH-20261009-07",
+        "TH-20261009-08"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541421696",
+      "document_group": "TH-20261009-holzbaender",
+      "title": "image-1791541421696.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-09",
+        "TH-20261009-10",
+        "TH-20261009-11",
+        "TH-20261009-12"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541435456",
+      "document_group": "TH-20261009-holzbaender",
+      "title": "image-1791541435456.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-09",
+        "TH-20261009-10",
+        "TH-20261009-11",
+        "TH-20261009-12"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541442395",
+      "document_group": "TH-20261009-holzbaender",
+      "title": "image-1791541442395.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-09",
+        "TH-20261009-10",
+        "TH-20261009-11",
+        "TH-20261009-12"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541641609",
+      "document_group": "TH-20261009-welle-schellen",
+      "title": "image-1791541641609.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-13",
+        "TH-20261009-14"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
+    },
+    {
+      "source_id": "PHOTO-TH-20261009-image-1791541084264",
+      "document_group": "TH-20261009-schetternbretter",
+      "title": "image-1791541084264.jpg",
+      "review": "visually reviewed in ITER-002; original hash verified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "unresolved": [
+        "Photo metric intervals and limitations in ITER-002/PHOTO-READOUTS.json"
+      ],
+      "current_geometry_authority": false
     }
   ]
 }

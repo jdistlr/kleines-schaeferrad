@@ -8008,6 +8008,1884 @@
       ],
       "as_built_eligible": false,
       "note": "Exakter geometrischer Bezug von 'zum Rad' ist noch gegen Foto/Scan zu definieren; keine blinde 90°-Rotation."
+    },
+    {
+      "id": "TH-20261009-01",
+      "subject": "COMP-ARMS/COMP-KRUEMMLINGE",
+      "predicate": "arm_passes_through_segment_midpoint",
+      "value": true,
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-01"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791540525839",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791540649435",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791540668918",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-02",
+      "subject": "COMP-KRUEMMLINGE",
+      "predicate": "reinforced_at_arm_seat",
+      "value": true,
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-02"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791540525839",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791540649435",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791540668918",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-03",
+      "subject": "COMP-ARMS/COMP-KRUEMMLINGE",
+      "predicate": "arm_seat_retention",
+      "value": {
+        "wedges": 2,
+        "location": "oben links und rechts",
+        "additional_pin": "von hinten durch Arm"
+      },
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-03"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791540525839",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791540649435",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791540668918",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-04",
+      "subject": "COMP-KRUEMMLINGE",
+      "predicate": "joint_connector",
+      "value": "Schetternbrett auf jeder Seite",
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-04"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046530",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791540812566",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791540831514",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046531",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046532",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046533",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046534",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046535",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046536",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046537",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046538",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046539",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046540",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046541",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046542",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541084264",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542766365",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542778932",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-05",
+      "subject": "COMP-SCHETTERNBRETTER",
+      "predicate": "nails_and_retention",
+      "value": {
+        "count": 4,
+        "from_each_side": 2,
+        "retention": "Gegenseite verkeilt"
+      },
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-05"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046530",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791540812566",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791540831514",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046531",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046532",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046533",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046534",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046535",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046536",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046537",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046538",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046539",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046540",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046541",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-1000046542",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541084264",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542766365",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542778932",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-06",
+      "subject": "COMP-PADDLES",
+      "predicate": "board_plane_to_rim",
+      "value": 90,
+      "unit": "degree",
+      "evidence_class": "expert-narrative",
+      "confidence": "qualified",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-06"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541209669",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541224562",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541247032",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541265923",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541278244",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": "Radial-/Tangentialpitch separat gegen Fotos prüfen.",
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-07",
+      "subject": "COMP-PADDLES",
+      "predicate": "land_side_bevel",
+      "value": true,
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "qualified",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-07"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541209669",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541224562",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541247032",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541265923",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541278244",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": "Kollisionspartner nicht stillschweigend als Kumpf oder feststehenden Trog deuten.",
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-08",
+      "subject": "COMP-PADDLES",
+      "predicate": "width_approx",
+      "value": 0.35,
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "qualified",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-08"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541209669",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541224562",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541247032",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541265923",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541278244",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": true,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-09",
+      "subject": "COMP-WOOD-BANDS",
+      "predicate": "craft",
+      "value": {
+        "wood": "Eiche",
+        "stock": "Ast",
+        "split": "mittig",
+        "boiled": "mehrere Stunden",
+        "shape": "U"
+      },
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-09"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541421696",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541435456",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541442395",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-10",
+      "subject": "COMP-WOOD-BANDS",
+      "predicate": "branch_diameter_range",
+      "value": [
+        0.04,
+        0.05
+      ],
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "qualified",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-10"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541421696",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541435456",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541442395",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": true,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-11",
+      "subject": "COMP-WOOD-BANDS",
+      "predicate": "length_approx",
+      "value": 1.2,
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "qualified",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-11"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541421696",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541435456",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541442395",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": true,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": "Abgewickelte Astlänge oder gebogenes Maß noch nicht ausdrücklich bezeichnet.",
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-12",
+      "subject": "COMP-WOOD-BANDS/COMP-PADDLES/COMP-KRUEMMLINGE",
+      "predicate": "retention_path",
+      "value": [
+        "über Flügelbrett",
+        "durch Krümmling",
+        "hinten verkeilt"
+      ],
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-12"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541421696",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541435456",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541442395",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": "Frühere Schetternbrett-Zuordnung in U-Band-Erklärung",
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-13",
+      "subject": "COMP-SHAFT",
+      "predicate": "constant_wooden_shaft_diameter",
+      "value": true,
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "qualified",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-13"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541554648",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541561160",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541576861",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541641609",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": "Querschnittskontur/-maß; nicht automatisch perfekte Kreisform.",
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-14",
+      "subject": "COMP-SHAFT",
+      "predicate": "end_iron_clamps",
+      "value": {
+        "per_end": 2,
+        "total": 4
+      },
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-14"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541554648",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541561160",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541576861",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541641609",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-15",
+      "subject": "COMP-SHAFT/COMP-BEARINGS",
+      "predicate": "dorn_and_contact",
+      "value": {
+        "dorn": "mittig eingearbeitet, beidseitig herausragend",
+        "contact": "direkt auf Lagerholz"
+      },
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "qualified",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-15"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541666129",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": "Verdeckte innere Verankerung/Länge; keinen Vollmetallstab durch ganze Welle behaupten.",
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-16",
+      "subject": "COMP-KUMPF-NAILS",
+      "predicate": "long_nail_reason",
+      "value": "größerer Abstand der krümmlingabgewandten Kumpfseite",
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-16"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542499680",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542573592",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542586169",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-17",
+      "subject": "COMP-KUMPF-NAILS",
+      "predicate": "stock_head_diameter",
+      "value": 0.04,
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-17"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542499680",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542573592",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542586169",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-18",
+      "subject": "COMP-KUMPF-NAILS",
+      "predicate": "carved_shaft_diameter",
+      "value": 0.026,
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-18"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542499680",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542573592",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542586169",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-19",
+      "subject": "COMP-RADSTATT",
+      "predicate": "local_name",
+      "value": "Radstadt",
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-19"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542108092",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542120355",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542146990",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542161221",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542172733",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542237069",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542257101",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542327774",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542342950",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543053651",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-20",
+      "subject": "COMP-ARMS/COMP-RADSTATT",
+      "predicate": "clearance_approx",
+      "value": 0.65,
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "qualified",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-20"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542108092",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542120355",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542146990",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542161221",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542172733",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542237069",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542257101",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542327774",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542342950",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543053651",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": true,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": "Messendpunkte/Richtung nicht markiert.",
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-21",
+      "subject": "COMP-TROUGH-SUPPORT",
+      "predicate": "upper_crossbeam_length",
+      "value": 1.2,
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-21"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542108092",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542120355",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542146990",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542161221",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542172733",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542237069",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542257101",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542327774",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542342950",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543053651",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-22",
+      "subject": "COMP-TROUGH-SUPPORT",
+      "predicate": "beam_section",
+      "value": [
+        0.14,
+        0.14
+      ],
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "qualified",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-22"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542108092",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542120355",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542146990",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542161221",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542172733",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542237069",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542257101",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542327774",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542342950",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543053651",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": "Nicht auf Arme/Welle oder sämtliches Holz verallgemeinern.",
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-23",
+      "subject": "COMP-TROUGH-SUPPORT",
+      "predicate": "upper_joint",
+      "value": {
+        "post": "ausgeklinkt, in Querbalkenaussparung",
+        "retention": "Keil als herausstehender Ast"
+      },
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-23"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542108092",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542120355",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542146990",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542161221",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542172733",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542237069",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542257101",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542327774",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542342950",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543053651",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-24",
+      "subject": "COMP-TROUGH-SUPPORT",
+      "predicate": "symmetry",
+      "value": "komplett achsensymmetrisch",
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "qualified",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-24"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542108092",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542120355",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542146990",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542161221",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542172733",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542237069",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542257101",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542327774",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542342950",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543053651",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": "Bockkontext; Symmetrieachse/Geltungsbereich prüfen, nicht ganzes System spiegeln.",
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-25",
+      "subject": "COMP-RIMS",
+      "predicate": "clear_inner_face_distance",
+      "value": 1.8,
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-25"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": "ringDistance=1.15 placeholder; 1.80 ist weder Durchmesser noch Mittelebenenabstand.",
+      "remaining_unknown": null,
+      "intake_status": "expert-explicit-measure",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-26",
+      "subject": "COMP-KRUEMMLINGE",
+      "predicate": "axial_width",
+      "value": 0.14,
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-26"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": "0.15 m axial; historische radiale Tiefe nicht betroffen.",
+      "remaining_unknown": null,
+      "intake_status": "expert-corrected-measure",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-27",
+      "subject": "COMP-ARMS",
+      "predicate": "cross_section",
+      "value": [
+        0.14,
+        0.065
+      ],
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "qualified",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-27"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": "Zuordnung axial/radial vor Geometrieeinbau prüfen.",
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-28",
+      "subject": "COMP-RIMS",
+      "predicate": "midplane_distance",
+      "value": 1.94,
+      "unit": "m",
+      "evidence_class": "derived",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-28"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [
+        "TH-20261009-25",
+        "TH-20261009-26"
+      ],
+      "formula": "1.80 + (0.14 + 0.14)/2",
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "derived-with-assumptions",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-29",
+      "subject": "COMP-RIMS",
+      "predicate": "outer_face_width",
+      "value": 2.08,
+      "unit": "m",
+      "evidence_class": "derived",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-29"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [
+        "TH-20261009-25",
+        "TH-20261009-26"
+      ],
+      "formula": "1.80 + 2*0.14",
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "derived-with-assumptions",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-30",
+      "subject": "COMP-CHANNEL",
+      "predicate": "section_count",
+      "value": 2,
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-30"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543487137",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543497527",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543505768",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543574540",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543757351",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-31",
+      "subject": "COMP-A-BOCK/COMP-CHANNEL",
+      "predicate": "support_location",
+      "value": "Stoßstelle beider Rinnenteile",
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-31"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543487137",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543497527",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543505768",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543574540",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543757351",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-32",
+      "subject": "COMP-A-BOCK",
+      "predicate": "leg_section",
+      "value": [
+        0.14,
+        0.14
+      ],
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-32"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543487137",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543497527",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543505768",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543574540",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543757351",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-33",
+      "subject": "COMP-A-BOCK",
+      "predicate": "opening_width",
+      "value": 0.05,
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-33"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543487137",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543497527",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543505768",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543574540",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543757351",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-34",
+      "subject": "COMP-A-BOCK",
+      "predicate": "crossbar_section",
+      "value": [
+        0.04,
+        0.14
+      ],
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-34"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543487137",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543497527",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543505768",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543574540",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543757351",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-explicit-measure",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-35",
+      "subject": "COMP-A-BOCK",
+      "predicate": "crossbar_length",
+      "value": 0.9,
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-35"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543487137",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543497527",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543505768",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543574540",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543757351",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-explicit-measure",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-36",
+      "subject": "COMP-A-BOCK/COMP-CHANNEL",
+      "predicate": "load_retention_path",
+      "value": [
+        "Riegel durch Aussparung",
+        "oben und unten verkeilt",
+        "Rinne liegt auf Riegel"
+      ],
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "high",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-36"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543487137",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543497527",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543505768",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543574540",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543757351",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": null,
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-37",
+      "subject": "COMP-A-BOCK/COMP-CHANNEL",
+      "predicate": "channel_bottom_underside_above_ground",
+      "value": 0.8,
+      "unit": "m",
+      "evidence_class": "expert-narrative",
+      "confidence": "qualified",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-37"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543487137",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543497527",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543505768",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543574540",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543757351",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "expert-reported-not-independent-field-measurement",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": "Lokales Gelände und Riegelorientierung gemeinsam prüfen.",
+      "intake_status": "expert-confirmed-measure-endpoint",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-38",
+      "subject": "COMP-A-BOCK",
+      "predicate": "leg_length_source",
+      "value": "Zollstockfotos",
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "qualified",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-38"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543487137",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543497527",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543505768",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543574540",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791543757351",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": "Null, Endpunkte, Verlauf und Unsicherheit auswerten; nicht erneut als fehlendes Nutzermaß anfragen.",
+      "intake_status": "photo-readout-required",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
+    },
+    {
+      "id": "TH-20261009-39",
+      "subject": "COMP-TROUGH",
+      "predicate": "scan_context_available_by_expert",
+      "value": true,
+      "unit": null,
+      "evidence_class": "expert-narrative",
+      "confidence": "qualified",
+      "confidence_basis": "ITER-002 property review; explicit local expert statement; no new field measurement",
+      "scope": "current-wheel-expert-description",
+      "provenance": [
+        {
+          "source_id": "NARRATIVE-TH-CONSTRUCTION-20261009",
+          "region": "TH-20261009-39"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541887655",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541908195",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541920559",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541961389",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541967728",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791541979278",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542028869",
+          "region": "visible assembly; limitations in ITER-002"
+        },
+        {
+          "source_id": "PHOTO-TH-20261009-image-1791542045602",
+          "region": "visible assembly; limitations in ITER-002"
+        }
+      ],
+      "as_built_eligible": false,
+      "metric_status": "non-metric-expert-constraint",
+      "approximate": false,
+      "derived_from": [],
+      "formula": null,
+      "supersedes": null,
+      "remaining_unknown": "Mechanische Registrierung erst prüfen; hier keine neue Transformation gemessen.",
+      "intake_status": "expert-intake-pending-property-review",
+      "review": "state/reconstruction-loop/ITER-002/CONSTRAINT-DELTA.json"
     }
   ]
 }

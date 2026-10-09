@@ -1,8 +1,8 @@
 {
   "schema": "ks-calibration/v3",
-  "iteration": "ITER-001",
+  "iteration": "ITER-003",
   "baseline": "558626019c6f85c6061467727f54122a793b15bd",
-  "sourceHead": "22c29d1b737e507da947182f690c470e771d6e81",
+  "sourceHead": "6017ba310d4a91158fe5f3d6edc8eb1bf3f5b6b5",
   "reference": {
     "height": 0.6,
     "baseRadius": 0.15,
@@ -20,7 +20,7 @@
       0.19,
       0.45
     ],
-    "holeRadius": 0.012,
+    "holeRadius": 0.014,
     "staves": 12,
     "drilledStaves": [
       0,
@@ -78,22 +78,23 @@
       "holeRadius",
       "opposedDrilledStaveIndices"
     ],
-    "scope": "one expert-designated reference vessel; no all-vessel metric promotion"
+    "scope": "one expert-designated reference vessel; no all-vessel metric promotion",
+    "holeRadiusNote": "Synthetic 1mm radial clearance around expert-reported Ø26mm shaft; replaces unsupported Ø24mm candidate, not measured hole."
   },
   "production": {
     "radius": 2.095,
-    "centerX": -0.94,
+    "centerX": -1.335,
     "pitchDeg": 125,
     "yawDeg": 60,
     "overlapDirection": 1,
     "nailMapping": "A",
     "paddlePitchDeg": 0,
-    "paddleHeight": 0.43,
+    "paddleHeight": 0.35,
     "paddleThickness": 0.055,
-    "paddleRadius": 2.23,
+    "paddleRadius": 2.305,
     "paddlePhaseSlots": 0.45,
     "waterLevel": -1.95,
-    "troughX": -1.45,
+    "troughX": -1.845,
     "troughHalfWidth": 0.16,
     "troughZ": 1.4,
     "troughY": [
@@ -128,7 +129,22 @@
       "nailFunction": "fastens-kumpf-to-kruemmling",
       "lengthReason": "neighbor-overlap",
       "neighborOverlap": true,
-      "scope": "expert-reference-only"
+      "scope": "expert-reference-only",
+      "armSeat": "reinforced-segment-midpoint-with-two-wedges-and-rear-pin",
+      "rimJoint": "two-schettern-four-alternating-pins",
+      "paddleRetention": "U-wood-band-over-paddle-through-rim-wedged-behind",
+      "shaft": "constant-wood-section-four-clamps-journal-in-wood"
+    },
+    "expertReportedDimensions": {
+      "ringClearInner": 1.8,
+      "rimAxialWidth": 0.14,
+      "armSection": [
+        0.14,
+        0.065
+      ],
+      "nailShaftDiameter": 0.026,
+      "nailHeadDiameter": 0.04,
+      "status": "expert statements; not independent field measurements"
     }
   }
 }

@@ -1,0 +1,43 @@
+✔ four holes are open geometric passages and the retained base fits the groove (115.271754ms)
+✔ truth exports exclude synthetic site, water, exact nail paths and all-vessel inventory (1182.94323ms)
+✔ cycle uses calibrated mouth pose, conserves free-surface capacity and never fills above a dry river (115.869617ms)
+✔ corrected board plane has tangent normal and remains perpendicular to wheel plane (1101.744144ms)
+✔ expert claims retain provenance and historical records, no as-built metric promotion (19.925633ms)
+✔ actual rim faces obey 1.80 clear, .14 axial and 2.08 outside, not just parameter labels (16.237815ms)
+✔ arms occupy actual radial seat voids in segment midpoints (71.721175ms)
+✔ each rim joint has two boards and four alternating real through-passages (130.937948ms)
+✔ paddle span includes rim width AND outside-face overhang; width .35 remains approximate (0.610676ms)
+✔ nail endpoints follow actual pose/options and rim plane in every rotated slot (1792.314204ms)
+✔ wood shaft remains full section at ends and four separate iron clamps exist (1.165592ms)
+✔ two channel sections share splice and 80cm local underside datum; footprint not measured (1.031316ms)
+✔ truth includes expert visible connection topology but excludes unregistered stationary pose and exact nail paths (221.014157ms)
+✔ canonical tasks have complete field contract and valid baseline refs (2.400214ms)
+✔ axis normalization maps Y-up to Z-up, is invertible and does not reflect or register (2.527762ms)
+✔ arm candidates expose different centre topology and preserve historical same-side tips (2511.886076ms)
+✔ task completion cannot hide missing views or missing measurement; unknown remains reasoned (0.70428ms)
+✔ physical instances require observation; merges reject divergent evidence (0.823766ms)
+✔ compact PDF keeps canonical task parity through shared visual sheets (2.070225ms)
+✔ no water can be lifted when the wheel never enters water (2.545076ms)
+✔ phase follows positive-X rigid rotation and holding/discharge mouth pose (0.577517ms)
+✔ registration validates known similarity, residuals, axis position and independent metric control (1.442205ms)
+✔ registration rejects invalid, infinite and degenerate datum/axis/control inputs (0.636253ms)
+✔ water mouth faces the outboard trough at discharge and retains water while lifting (0.329871ms)
+✔ all six paired arms meet their own rim plane at both ends (1041.404187ms)
+✔ major machine groups and unique identities are preserved in all joinery variants (2025.620303ms)
+✔ all newly attached originals resolve byte-for-byte in the repository archive (0.727356ms)
+✔ six continuous arms across two planes preserve opposite endpoint labels (5.248475ms)
+✔ separate segmented rims and expected vessel/paddle slots stay independent from stationary context (2.160715ms)
+✔ A/B wall geometries differ without changing source variants or outside dimensions (596.006563ms)
+✔ explosion does not move stationary context; all current dimensions remain null (515.125957ms)
+✔ measurement requires endpoints and uncertainty, unknown observation does not fabricate a zero (0.994256ms)
+✔ lossless import preserves media and deduplicates; same-ID divergence rejects whole import (0.833633ms)
+✔ every mesh maps to an existing ontology family; parameter sources resolve (5.918685ms)
+✔ all 66 historical and expected slots reuse assembly.graph IDs (1.554778ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3869.073458

@@ -30,7 +30,10 @@
         "CLAIM-0293",
         "CLAIM-0300",
         "CLAIM-0325",
-        "CLAIM-0336"
+        "CLAIM-0336",
+        "TH-20261009-13",
+        "TH-20261009-14",
+        "TH-20261009-15"
       ],
       "confidence": "high",
       "note": null
@@ -99,7 +102,11 @@
         "CLAIM-0290",
         "CLAIM-0297",
         "CLAIM-0326",
-        "CLAIM-0337"
+        "CLAIM-0337",
+        "TH-20261009-01",
+        "TH-20261009-03",
+        "TH-20261009-20",
+        "TH-20261009-27"
       ],
       "confidence": "medium",
       "note": null
@@ -183,7 +190,10 @@
         "CLAIM-0301",
         "CLAIM-0327",
         "CLAIM-0328",
-        "CLAIM-0338"
+        "CLAIM-0338",
+        "TH-20261009-25",
+        "TH-20261009-28",
+        "TH-20261009-29"
       ],
       "confidence": "high",
       "note": null
@@ -199,7 +209,14 @@
       "provenance": [
         "PHOTO-6831"
       ],
-      "claim_ids": [],
+      "claim_ids": [
+        "TH-20261009-01",
+        "TH-20261009-02",
+        "TH-20261009-03",
+        "TH-20261009-04",
+        "TH-20261009-12",
+        "TH-20261009-26"
+      ],
       "confidence": "medium",
       "note": null
     },
@@ -343,7 +360,11 @@
         "CLAIM-0298",
         "CLAIM-0331",
         "CLAIM-0340",
-        "CLAIM-0369"
+        "CLAIM-0369",
+        "TH-20261009-06",
+        "TH-20261009-07",
+        "TH-20261009-08",
+        "TH-20261009-12"
       ],
       "confidence": "high",
       "note": "ThorstenHalsch korrigiert die Schaufelstellung fachlich auf 90° zum Rad. Exakter geometrischer Bezugsbegriff und Scanabgleich sind noch zu klären; keine pauschale Drehung ohne Referenzdefinition."
@@ -409,7 +430,10 @@
         "CLAIM-0364",
         "CLAIM-0365",
         "CLAIM-0366",
-        "CLAIM-0368"
+        "CLAIM-0368",
+        "TH-20261009-16",
+        "TH-20261009-17",
+        "TH-20261009-18"
       ],
       "confidence": "high",
       "note": "Fachlich bestätigte Funktion: Befestigung des Kumpfs am Krümmling durch gelochte Dauben. Unterschiedliche Länge wird durch Überlappung benachbarter Kümpfe erklärt. Exakter Nagelweg, Längen und Sitze bleiben metrisch offen."
@@ -428,7 +452,8 @@
       "claim_ids": [
         "CLAIM-0279",
         "CLAIM-0287",
-        "CLAIM-0341"
+        "CLAIM-0341",
+        "TH-20261009-15"
       ],
       "confidence": "medium",
       "note": null
@@ -451,7 +476,9 @@
         "CLAIM-0286",
         "CLAIM-0295",
         "CLAIM-0302",
-        "CLAIM-0333"
+        "CLAIM-0333",
+        "TH-20261009-19",
+        "TH-20261009-20"
       ],
       "confidence": "high",
       "note": null
@@ -482,7 +509,8 @@
         "CLAIM-0141",
         "CLAIM-0276",
         "CLAIM-0284",
-        "CLAIM-0332"
+        "CLAIM-0332",
+        "TH-20261009-39"
       ],
       "confidence": "high",
       "note": null
@@ -666,6 +694,137 @@
       "claim_ids": [],
       "confidence": "low",
       "note": "Ghosted Kontext; Funktion und Verbindungspartner vor Ort klären."
+    },
+    {
+      "id": "COMP-SCHETTERNBRETTER",
+      "label": "Schetternbretter an Krümmlingstößen",
+      "kind": "assembly-family",
+      "multiplicity": {
+        "description": "expert topology; physical inventory open",
+        "current_verified_count": null
+      },
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "claim_ids": [
+        "TH-20261009-05"
+      ],
+      "confidence": "high-topology-only",
+      "note": "New canonical family mapped from reviewed intake; no measured physical-instance promotion."
+    },
+    {
+      "id": "COMP-WOOD-BANDS",
+      "label": "U-Holzbänder der Flügelbretter",
+      "kind": "assembly-family",
+      "multiplicity": {
+        "description": "expert topology; physical inventory open",
+        "current_verified_count": null
+      },
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "claim_ids": [
+        "TH-20261009-09",
+        "TH-20261009-10",
+        "TH-20261009-11",
+        "TH-20261009-12"
+      ],
+      "confidence": "high-topology-only",
+      "note": "New canonical family mapped from reviewed intake; no measured physical-instance promotion."
+    },
+    {
+      "id": "COMP-TROUGH-SUPPORT",
+      "label": "Bock am Rad",
+      "kind": "assembly-family",
+      "multiplicity": {
+        "description": "expert topology; physical inventory open",
+        "current_verified_count": null
+      },
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "claim_ids": [
+        "TH-20261009-21",
+        "TH-20261009-22",
+        "TH-20261009-23",
+        "TH-20261009-24"
+      ],
+      "confidence": "high-topology-only",
+      "note": "New canonical family mapped from reviewed intake; no measured physical-instance promotion."
+    },
+    {
+      "id": "COMP-A-BOCK",
+      "label": "A-Bock am Rinnenstoß",
+      "kind": "assembly-family",
+      "multiplicity": {
+        "description": "expert topology; physical inventory open",
+        "current_verified_count": null
+      },
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "claim_ids": [
+        "TH-20261009-31",
+        "TH-20261009-32",
+        "TH-20261009-33",
+        "TH-20261009-34",
+        "TH-20261009-35",
+        "TH-20261009-36",
+        "TH-20261009-37",
+        "TH-20261009-38"
+      ],
+      "confidence": "high-topology-only",
+      "note": "New canonical family mapped from reviewed intake; no measured physical-instance promotion."
+    },
+    {
+      "id": "COMP-CHANNEL",
+      "label": "Zweiteilige Ableitrinne",
+      "kind": "assembly-family",
+      "multiplicity": {
+        "description": "expert topology; physical inventory open",
+        "current_verified_count": null
+      },
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "claim_ids": [
+        "TH-20261009-30",
+        "TH-20261009-31",
+        "TH-20261009-36",
+        "TH-20261009-37"
+      ],
+      "confidence": "high-topology-only",
+      "note": "New canonical family mapped from reviewed intake; no measured physical-instance promotion."
+    },
+    {
+      "id": "COMP-SHAFT-CLAMPS",
+      "label": "Eisenschellen der Welle",
+      "kind": "assembly-family",
+      "multiplicity": {
+        "description": "expert topology; physical inventory open",
+        "current_verified_count": null
+      },
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "claim_ids": [],
+      "confidence": "high-topology-only",
+      "note": "New canonical family mapped from reviewed intake; no measured physical-instance promotion."
+    },
+    {
+      "id": "COMP-RADSTADT",
+      "label": "Radstadt / gesamtes Tragwerk",
+      "kind": "assembly-family",
+      "multiplicity": {
+        "description": "expert topology; physical inventory open",
+        "current_verified_count": null
+      },
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "claim_ids": [],
+      "confidence": "high-topology-only",
+      "note": "New canonical family mapped from reviewed intake; no measured physical-instance promotion."
     }
   ],
   "local_term_map": {

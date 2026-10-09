@@ -1,0 +1,90 @@
+{
+  "scale": "0–5 navigation only; not statistical confidence",
+  "basis": "ITER-003 assessment with reasons; no numerical claim of measured progress",
+  "scores": {
+    "Truth Confidence": {
+      "shaft": [
+        2,
+        "Konstante Form/4 Schellen fachlich, Innenraum offen"
+      ],
+      "arms": [
+        2,
+        "Sitzlage/Querschnitt fachlich, Zuordnung und Innenbau offen"
+      ],
+      "rims": [
+        3,
+        "Explizite korrigierte Maßkette und Verbindungsart, kein Feldaufmaß"
+      ],
+      "Kümpfe": [
+        2,
+        "Historische/Fotoform, Einbaupose ungemessen"
+      ],
+      "Kumpfnägel": [
+        2,
+        "Durchmesser/Funktion geklärt, Pfade offen"
+      ],
+      "paddles": [
+        2,
+        "Bezugsfläche/Breite geklärt, Pitch/Kontakt offen"
+      ],
+      "bearings": [
+        2,
+        "Holzkontakt fachlich, Metrik offen"
+      ],
+      "Radstatt": [
+        1,
+        "Lokaler Radbock geklärt, Standort unregistriert"
+      ],
+      "trough/channel": [
+        2,
+        "Zweiteilung/A-Bock fachlich, Verlauf offen"
+      ],
+      "scan registration": [
+        0,
+        "Keine mechanische Registrierung"
+      ],
+      "waterline/operation": [
+        0,
+        "Keine gemessene Wasserlinie/Funktionsvalidierung"
+      ]
+    },
+    "Synthetic Completeness": {
+      "whole-system geometry": [
+        3,
+        "Neue Familien, aber Anschlussdefizite"
+      ],
+      "hidden joinery": [
+        2,
+        "Drei Alternativen, kein Befund"
+      ],
+      "site context": [
+        2,
+        "Bisheriger Rahmen und Kandidatenstützen"
+      ],
+      "water function": [
+        1,
+        "Vorhandene Heuristik, keine neue Validierung"
+      ],
+      "material realism": [
+        2,
+        "Einfache Holz/Metallanzeige"
+      ],
+      "lighting": [
+        2,
+        "Reproduzierbarer Tiefenpufferrender"
+      ],
+      "animation": [
+        2,
+        "Runtime-Kinematik erhalten, kein Vollzyklusnachweis"
+      ],
+      "exploded/section views": [
+        3,
+        "Kanonische Ansichten aktualisiert"
+      ],
+      "technical drawing coverage": [
+        3,
+        "32 kanonische + 7 Detailansichten"
+      ]
+    }
+  }
+}

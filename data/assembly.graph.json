@@ -139,6 +139,48 @@
       "kind": "unassigned-industrial-reference",
       "label": "Kontaktstreifen-Vorlage",
       "scope": "ontology-family-or-region"
+    },
+    {
+      "id": "COMP-SCHETTERNBRETTER",
+      "label": "Schetternbretter an Krümmlingstößen",
+      "kind": "assembly-family",
+      "scope": "ontology-family-or-region"
+    },
+    {
+      "id": "COMP-WOOD-BANDS",
+      "label": "U-Holzbänder der Flügelbretter",
+      "kind": "assembly-family",
+      "scope": "ontology-family-or-region"
+    },
+    {
+      "id": "COMP-TROUGH-SUPPORT",
+      "label": "Bock am Rad",
+      "kind": "assembly-family",
+      "scope": "ontology-family-or-region"
+    },
+    {
+      "id": "COMP-A-BOCK",
+      "label": "A-Bock am Rinnenstoß",
+      "kind": "assembly-family",
+      "scope": "ontology-family-or-region"
+    },
+    {
+      "id": "COMP-CHANNEL",
+      "label": "Zweiteilige Ableitrinne",
+      "kind": "assembly-family",
+      "scope": "ontology-family-or-region"
+    },
+    {
+      "id": "COMP-SHAFT-CLAMPS",
+      "label": "Eisenschellen der Welle",
+      "kind": "assembly-family",
+      "scope": "ontology-family-or-region"
+    },
+    {
+      "id": "COMP-RADSTADT",
+      "label": "Radstadt / gesamtes Tragwerk",
+      "kind": "assembly-family",
+      "scope": "ontology-family-or-region"
     }
   ],
   "relations": [
@@ -526,9 +568,186 @@
       "evidence_class": "expert-narrative",
       "confidence": "high",
       "claim_ids": [
-        "CLAIM-0369"
+        "CLAIM-0369",
+        "TH-20261009-06"
       ],
-      "detail": "Expert states 90° to the wheel. Exact geometric reference (wheel plane vs radial/tangential relation) requires explicit scan/photo definition before changing current geometry."
+      "detail": "90 degrees to rim plane confirmed by TH-20261009-06; radial/tangential pitch remains unresolved."
+    },
+    {
+      "id": "EDGE-022",
+      "from": "COMP-ARMS",
+      "to": "COMP-KRUEMMLINGE",
+      "type": "passes_through_reinforced_midpoint",
+      "scope": "local-expert-reviewed-topology",
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "evidence_class": "expert-narrative",
+      "confidence": "high-topology-metrics-qualified",
+      "claim_ids": [
+        "TH-20261009-01",
+        "TH-20261009-02",
+        "TH-20261009-03"
+      ],
+      "detail": "Geometric realization may contain explicit metric candidates; see reconstruction-constraints.json."
+    },
+    {
+      "id": "EDGE-023",
+      "from": "COMP-SCHETTERNBRETTER",
+      "to": "COMP-KRUEMMLINGE",
+      "type": "connects_joint_on_both_sides",
+      "scope": "local-expert-reviewed-topology",
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "evidence_class": "expert-narrative",
+      "confidence": "high-topology-metrics-qualified",
+      "claim_ids": [
+        "TH-20261009-04",
+        "TH-20261009-05"
+      ],
+      "detail": "Geometric realization may contain explicit metric candidates; see reconstruction-constraints.json."
+    },
+    {
+      "id": "EDGE-024",
+      "from": "COMP-WOOD-BANDS",
+      "to": "COMP-PADDLES",
+      "type": "passes_over",
+      "scope": "local-expert-reviewed-topology",
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "evidence_class": "expert-narrative",
+      "confidence": "high-topology-metrics-qualified",
+      "claim_ids": [
+        "TH-20261009-09",
+        "TH-20261009-12"
+      ],
+      "detail": "Geometric realization may contain explicit metric candidates; see reconstruction-constraints.json."
+    },
+    {
+      "id": "EDGE-025",
+      "from": "COMP-WOOD-BANDS",
+      "to": "COMP-KRUEMMLINGE",
+      "type": "passes_through_and_wedges_behind",
+      "scope": "local-expert-reviewed-topology",
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "evidence_class": "expert-narrative",
+      "confidence": "high-topology-metrics-qualified",
+      "claim_ids": [
+        "TH-20261009-12"
+      ],
+      "detail": "Geometric realization may contain explicit metric candidates; see reconstruction-constraints.json."
+    },
+    {
+      "id": "EDGE-026",
+      "from": "COMP-SHAFT-CLAMPS",
+      "to": "COMP-SHAFT",
+      "type": "two_clamps_per_end",
+      "scope": "local-expert-reviewed-topology",
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "evidence_class": "expert-narrative",
+      "confidence": "high-topology-metrics-qualified",
+      "claim_ids": [
+        "TH-20261009-14"
+      ],
+      "detail": "Geometric realization may contain explicit metric candidates; see reconstruction-constraints.json."
+    },
+    {
+      "id": "EDGE-027",
+      "from": "COMP-SHAFT",
+      "to": "COMP-BEARINGS",
+      "type": "central_iron_journal_directly_in_wood",
+      "scope": "local-expert-reviewed-topology",
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "evidence_class": "expert-narrative",
+      "confidence": "high-topology-metrics-qualified",
+      "claim_ids": [
+        "TH-20261009-15"
+      ],
+      "detail": "Geometric realization may contain explicit metric candidates; see reconstruction-constraints.json."
+    },
+    {
+      "id": "EDGE-028",
+      "from": "COMP-TROUGH-SUPPORT",
+      "to": "COMP-BEARINGS",
+      "type": "supports_wood_bearing",
+      "scope": "local-expert-reviewed-topology",
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "evidence_class": "expert-narrative",
+      "confidence": "high-topology-metrics-qualified",
+      "claim_ids": [
+        "TH-20261009-21",
+        "TH-20261009-22",
+        "TH-20261009-23",
+        "TH-20261009-24"
+      ],
+      "detail": "Geometric realization may contain explicit metric candidates; see reconstruction-constraints.json."
+    },
+    {
+      "id": "EDGE-029",
+      "from": "COMP-A-BOCK",
+      "to": "COMP-CHANNEL",
+      "type": "supports_two_section_joint_via_wedged_crossbar",
+      "scope": "local-expert-reviewed-topology",
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "evidence_class": "expert-narrative",
+      "confidence": "high-topology-metrics-qualified",
+      "claim_ids": [
+        "TH-20261009-30",
+        "TH-20261009-31",
+        "TH-20261009-32",
+        "TH-20261009-33",
+        "TH-20261009-34",
+        "TH-20261009-35",
+        "TH-20261009-36",
+        "TH-20261009-37"
+      ],
+      "detail": "Geometric realization may contain explicit metric candidates; see reconstruction-constraints.json."
+    },
+    {
+      "id": "EDGE-030",
+      "from": "COMP-RADSTADT",
+      "to": "COMP-TROUGH-SUPPORT",
+      "type": "contains",
+      "scope": "local-expert-reviewed-topology",
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "evidence_class": "expert-narrative",
+      "confidence": "high-topology-metrics-qualified",
+      "claim_ids": [
+        "TH-20261009-19"
+      ],
+      "detail": "Geometric realization may contain explicit metric candidates; see reconstruction-constraints.json."
+    },
+    {
+      "id": "EDGE-031",
+      "from": "COMP-KUMPF-NAILS",
+      "to": "COMP-KRUEMMLINGE",
+      "type": "long_nail_on_far_side",
+      "scope": "local-expert-reviewed-topology",
+      "provenance": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "evidence_class": "expert-narrative",
+      "confidence": "high-topology-metrics-qualified",
+      "claim_ids": [
+        "TH-20261009-16",
+        "TH-20261009-17",
+        "TH-20261009-18"
+      ],
+      "detail": "Geometric realization may contain explicit metric candidates; see reconstruction-constraints.json."
     }
   ],
   "instances": [

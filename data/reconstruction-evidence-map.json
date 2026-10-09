@@ -4,7 +4,8 @@
     "Alle Modellkoordinaten sind ungemessene Rekonstruktionskoordinaten.",
     "Historische Maße und aktuelle Maße bleiben getrennt.",
     "IMG_6875/6876 nur sekundäre Kontextbeschreibung; Originale fehlen.",
-    "Lokale Fachauskunft eines direkt beteiligten Wasserrad-Mitinitiators hat Vorrang vor externen Analogien und unbelegten Modellannahmen für Funktion/Terminologie; metrische Geometrie bleibt messpflichtig."
+    "Lokale Fachauskunft eines direkt beteiligten Wasserrad-Mitinitiators hat Vorrang vor externen Analogien und unbelegten Modellannahmen für Funktion/Terminologie; metrische Geometrie bleibt messpflichtig.",
+    "ITER-003 integriert 39 Fachangaben; Expertenmaße bleiben als solche qualifiziert und sind kein aktuelles Feldaufmaß."
   ],
   "components": [
     {
@@ -17,14 +18,17 @@
         "PHOTO-6816",
         "PHOTO-6855",
         "V2-IMG_6800",
-        "V2-IMG_6808"
+        "V2-IMG_6808",
+        "TH-20261009-13",
+        "TH-20261009-14",
+        "TH-20261009-15"
       ],
       "scan_constraints": "PLY/GLB unregistriert; nur Sichtbarkeits- und Formvergleich, kein metrischer Zwang.",
       "field_narrative": "Werkstatterklärung separat als wörtlichen Befund aufnehmen; keine geometrische Bestätigung daraus ableiten.",
       "unresolved_conflicts": [
         "CONFLICT-03"
       ],
-      "candidate_geometry": "Facettiert, verjüngte Enden und getrennte Zapfenkandidaten.",
+      "candidate_geometry": "Konstanter Holzquerschnitt; vier separate Schellen; zentrale Dorne direkt im Holzlager. Innenverlauf unbekannt.",
       "confidence": {
         "existence": "documented-or-observed",
         "candidate_metric": "low",
@@ -34,9 +38,11 @@
         "measured_dimensions": null
       },
       "historical_reference": "370 / 37; gesonderte Rohholzangaben widersprechen direkter Gleichsetzung.",
-      "reconstructed_best_candidate": "Facettiert, verjüngte Enden und getrennte Zapfenkandidaten.",
+      "reconstructed_best_candidate": "ITER-003: Konstanter Holzquerschnitt; vier separate Schellen; zentrale Dorne direkt im Holzlager. Innenverlauf unbekannt.",
       "alternative_candidate": "Siehe Variantenraum und zugehörige Konflikte; keine automatische Auswahl als Ist.",
-      "unknown": "Zapfenmaß, Innenöffnungen und tatsächliche Kontaktflächen."
+      "unknown": "Zapfenmaß, Innenöffnungen und tatsächliche Kontaktflächen.",
+      "calibration_iteration": "ITER-003",
+      "calibration_report": "state/reconstruction-loop/ITER-003/ITERATION-REPORT.md"
     },
     {
       "component": "COMP-ARMS",
@@ -49,14 +55,18 @@
         "V2-IMG_6799",
         "V2-IMG_6800",
         "V2-IMG_6808",
-        "PHOTO-6831"
+        "PHOTO-6831",
+        "TH-20261009-01",
+        "TH-20261009-02",
+        "TH-20261009-03",
+        "TH-20261009-27"
       ],
       "scan_constraints": "PLY/GLB unregistriert; nur Sichtbarkeits- und Formvergleich, kein metrischer Zwang.",
       "field_narrative": "Werkstatterklärung separat als wörtlichen Befund aufnehmen; keine geometrische Bestätigung daraus ableiten.",
       "unresolved_conflicts": [
         "CONFLICT-05"
       ],
-      "candidate_geometry": "Drei durchgehende gekröpfte Profile je Kranz; gerade und axial umgekehrt als Alternativen.",
+      "candidate_geometry": "Enden in verstärkten Segmentmitten; zwei obere Keile und hinterer Stift. Querschnitt .14/.065, Achszuordnung Kandidat.",
       "confidence": {
         "existence": "documented-or-observed",
         "candidate_metric": "low",
@@ -66,9 +76,11 @@
         "measured_dimensions": null
       },
       "historical_reference": "6798/6799: symmetrisch gekröpft; Notationen 455/395/50/30/14.",
-      "reconstructed_best_candidate": "Drei durchgehende gekröpfte Profile je Kranz; gerade und axial umgekehrt als Alternativen.",
+      "reconstructed_best_candidate": "ITER-003: Enden in verstärkten Segmentmitten; zwei obere Keile und hinterer Stift. Querschnitt .14/.065, Achszuordnung Kandidat.",
       "alternative_candidate": "Siehe Variantenraum und zugehörige Konflikte; keine automatische Auswahl als Ist.",
-      "unknown": "Endpaarung, Kröpfung, Welleninnenraum, Einstecktiefe und Keilsitz."
+      "unknown": "Endpaarung, Kröpfung, Welleninnenraum, Einstecktiefe und Keilsitz.",
+      "calibration_iteration": "ITER-003",
+      "calibration_report": "state/reconstruction-loop/ITER-003/ITERATION-REPORT.md"
     },
     {
       "component": "COMP-KRUEMMLINGE",
@@ -80,14 +92,20 @@
         "V2-IMG_6790",
         "PHOTO-6849",
         "PHOTO-6851",
-        "V2-IMG_6804"
+        "V2-IMG_6804",
+        "TH-20261009-04",
+        "TH-20261009-05",
+        "TH-20261009-25",
+        "TH-20261009-26",
+        "TH-20261009-28",
+        "TH-20261009-29"
       ],
       "scan_constraints": "PLY/GLB unregistriert; nur Sichtbarkeits- und Formvergleich, kein metrischer Zwang.",
       "field_narrative": "Werkstatterklärung separat als wörtlichen Befund aufnehmen; keine geometrische Bestätigung daraus ableiten.",
       "unresolved_conflicts": [
         "CONFLICT-04"
       ],
-      "candidate_geometry": "Zwei Ebenen aus sechs gekrümmten Segmenten; Stoß mit Bohrungs-/Stiftalternative.",
+      "candidate_geometry": "Lichte Weite 1.80, axiale Breite .14, Mittelebenen 1.94, außen 2.08 m; beidseitige Schettern, vier gegenläufige Nägel.",
       "confidence": {
         "existence": "documented-or-observed",
         "candidate_metric": "low",
@@ -97,9 +115,11 @@
         "measured_dimensions": null
       },
       "historical_reference": "Radien 198/213; Breite 14 cm; Notationsrichtung getrennt halten.",
-      "reconstructed_best_candidate": "Zwei Ebenen aus sechs gekrümmten Segmenten; Stoß mit Bohrungs-/Stiftalternative.",
+      "reconstructed_best_candidate": "ITER-003: Lichte Weite 1.80, axiale Breite .14, Mittelebenen 1.94, außen 2.08 m; beidseitige Schettern, vier gegenläufige Nägel.",
       "alternative_candidate": "Siehe Variantenraum und zugehörige Konflikte; keine automatische Auswahl als Ist.",
-      "unknown": "Reale Stoßüberlappung, Lochbild, radiale Tiefe, axiale Breite."
+      "unknown": "Reale Stoßüberlappung, Lochbild, radiale Tiefe, axiale Breite.",
+      "calibration_iteration": "ITER-003",
+      "calibration_report": "state/reconstruction-loop/ITER-003/ITERATION-REPORT.md"
     },
     {
       "component": "COMP-KUEMPFE",
@@ -222,7 +242,14 @@
         "V2-IMG_6811",
         "V2-IMG_6809",
         "PHOTO-6861",
-        "NARRATIVE-TH-PADDLE-20261008-01"
+        "NARRATIVE-TH-PADDLE-20261008-01",
+        "TH-20261009-06",
+        "TH-20261009-07",
+        "TH-20261009-08",
+        "TH-20261009-09",
+        "TH-20261009-10",
+        "TH-20261009-11",
+        "TH-20261009-12"
       ],
       "scan_constraints": "PLY/GLB unregistriert; nur Sichtbarkeits- und Formvergleich, kein metrischer Zwang.",
       "field_narrative": "ThorstenHalsch korrigiert die Schaufelstellung fachlich: Schaufelbretter stehen im 90°-Winkel zum Rad. Der geometrische Bezug ('Rad' = Radebene vs lokale Radial-/Tangentialrichtung) muss explizit definiert und im Scan geprüft werden.",
@@ -230,7 +257,7 @@
         "CONFLICT-07",
         "CONFLICT-13"
       ],
-      "candidate_geometry": "Schaufelgeometrie muss die 90°-Fachkorrektur sichtbar erfüllen; bis zur Bezugsdefinition mehrere radial/tangentiale Orientierungsvarianten gegen Foto/Scan vergleichen.",
+      "candidate_geometry": "Brettebene 90 Grad zur Kranzebene; Breite ungefähr .35 m; landseitige Abschrägung. Radiale Anstellung bleibt Kandidat; U-Holzbänder durch Kranz.",
       "confidence": {
         "existence": "documented-or-observed",
         "candidate_metric": "low",
@@ -242,12 +269,12 @@
         "measured_dimensions": null
       },
       "historical_reference": "Schaufeln/Schetter und Bänder begrifflich noch abzugleichen.",
-      "reconstructed_best_candidate": "ITER-001: X + local radial plane, tangent normal. Both V2 and V3 perpendicular to wheel plane; change is radial/tangential pitch plus phase and axial overhang.",
+      "reconstructed_best_candidate": "ITER-003: Brettebene 90 Grad zur Kranzebene; Breite ungefähr .35 m; landseitige Abschrägung. Radiale Anstellung bleibt Kandidat; U-Holzbänder durch Kranz.",
       "alternative_candidate": "Varianten unterscheiden Ebenenwinkel von radial/tangentialer Anstellung; keine ungeprüfte pauschale 90°-Drehung.",
-      "unknown": "Exakter Referenzbezug, reale lokale Anstellung, Anschluss und Phase; dedizierter Schaufelscan noch nicht identifiziert.",
-      "calibration_iteration": "ITER-001",
+      "unknown": "Radiale Anstellung, genaue Phase, Anschlüsse und Gegenstück der Abschrägung; Bezugsfläche Kranz ist fachlich geklärt.",
+      "calibration_iteration": "ITER-003",
       "calibration_parameters": "data/calibration-v3.json",
-      "calibration_report": "state/reconstruction-loop/ITER-001/ITERATION-REPORT.md"
+      "calibration_report": "state/reconstruction-loop/ITER-003/ITERATION-REPORT.md"
     },
     {
       "component": "COMP-BEARINGS",
@@ -259,14 +286,15 @@
         "V2-IMG_6804",
         "V2-IMG_6808",
         "V2-IMG_6792",
-        "V2-IMG_6795"
+        "V2-IMG_6795",
+        "TH-20261009-15"
       ],
       "scan_constraints": "PLY/GLB unregistriert; nur Sichtbarkeits- und Formvergleich, kein metrischer Zwang.",
       "field_narrative": "Werkstatterklärung separat als wörtlichen Befund aufnehmen; keine geometrische Bestätigung daraus ableiten.",
       "unresolved_conflicts": [
         "CONFLICT-03"
       ],
-      "candidate_geometry": "Offener Sitz und Zapfen; Material/Spiel sind unbestätigte Alternativen.",
+      "candidate_geometry": "Dorn läuft direkt in Holz; Durchmesser, Spiel, Einbauhöhe und Sitzprofil bleiben Kandidaten.",
       "confidence": {
         "existence": "documented-or-observed",
         "candidate_metric": "low",
@@ -276,9 +304,11 @@
         "measured_dimensions": null
       },
       "historical_reference": "Radstattpläne enthalten Lager- und Pfostenbezüge.",
-      "reconstructed_best_candidate": "Offener Sitz und Zapfen; Material/Spiel sind unbestätigte Alternativen.",
+      "reconstructed_best_candidate": "ITER-003: Dorn läuft direkt in Holz; Durchmesser, Spiel, Einbauhöhe und Sitzprofil bleiben Kandidaten.",
       "alternative_candidate": "Siehe Variantenraum und zugehörige Konflikte; keine automatische Auswahl als Ist.",
-      "unknown": "Kontakt vor Entlastung, Zapfenprofil und beide Kontaktflächen."
+      "unknown": "Kontakt vor Entlastung, Zapfenprofil und beide Kontaktflächen.",
+      "calibration_iteration": "ITER-003",
+      "calibration_report": "state/reconstruction-loop/ITER-003/ITERATION-REPORT.md"
     },
     {
       "component": "COMP-RADSTATT",
@@ -353,14 +383,23 @@
       "historical_geometry": "Regionale Beschreibungen belegen aufgeständerte Ableitung, nicht die aktuelle exakte Form.",
       "current_photo_constraints": "Sichtbare Form/Topologie gemäß Quellen; verdeckte Flächen nicht ergänzt als Befund.",
       "sources": [
-        "V2-IMG_6812"
+        "V2-IMG_6812",
+        "TH-20261009-30",
+        "TH-20261009-31",
+        "TH-20261009-32",
+        "TH-20261009-33",
+        "TH-20261009-34",
+        "TH-20261009-35",
+        "TH-20261009-36",
+        "TH-20261009-37",
+        "TH-20261009-38"
       ],
       "scan_constraints": "PLY/GLB unregistriert; nur Sichtbarkeits- und Formvergleich, kein metrischer Zwang.",
       "field_narrative": "Werkstatterklärung separat als wörtlichen Befund aufnehmen; keine geometrische Bestätigung daraus ableiten.",
       "unresolved_conflicts": [
         "CONFLICT-12"
       ],
-      "candidate_geometry": "Offener Querschnitt mit Gefälle und eigenen Stützen zum angenommenen Ufer.",
+      "candidate_geometry": "Zwei Rinnenabschnitte, Stoß auf A-Bock. Querriegel .90 m; Unterkante .80 m über lokalem Boden. Standort unregistriert.",
       "confidence": {
         "existence": "documented-or-observed",
         "candidate_metric": "low",
@@ -370,9 +409,11 @@
         "measured_dimensions": null
       },
       "historical_reference": "Regionale Beschreibungen belegen aufgeständerte Ableitung, nicht die aktuelle exakte Form.",
-      "reconstructed_best_candidate": "Offener Querschnitt mit Gefälle und eigenen Stützen zum angenommenen Ufer.",
+      "reconstructed_best_candidate": "ITER-003: Zwei Rinnenabschnitte, Stoß auf A-Bock. Querriegel .90 m; Unterkante .80 m über lokalem Boden. Standort unregistriert.",
       "alternative_candidate": "Siehe Variantenraum und zugehörige Konflikte; keine automatische Auswahl als Ist.",
-      "unknown": "Realer Verlauf, Auslauf, Gefälle, Auflager und Troganschluss."
+      "unknown": "Realer Verlauf, Auslauf, Gefälle, Auflager und Troganschluss.",
+      "calibration_iteration": "ITER-003",
+      "calibration_report": "state/reconstruction-loop/ITER-003/ITERATION-REPORT.md"
     }
   ]
 }
