@@ -1,3 +1,5 @@
+> **Neuer Eingabestand 09.10.2026:** [Konstruktionsbeitrag](../docs/FACHBEITRAG-KONSTRUKTION-20261009.md) und [Astra-Abgleich](ASTRA-ABGLEICH-20261009.md) ergänzen diese Aufnahmefolge. Mehrere Fachfragen sind bereits beantwortet; bestehende Aufgabenstatus sind noch nicht automatisch reconciliiert. Neue Vor-Ort-Fragen nur nach Abgleich mit dem Intake stellen.
+
 # Field Operations Handoff — 09/10 October 2026
 
 Status: operational instructions for evidence capture only. No demolition, mechanical safety, or geometry acceptance.

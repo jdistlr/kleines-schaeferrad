@@ -1,3 +1,5 @@
+> **Aktualisierung nach Fachauskunft 09.10.2026:** Siehe [neuer Konstruktionsbeitrag](FACHBEITRAG-KONSTRUKTION-20261009.md). Flügelbrettbefestigung durch U-Holzbänder, Schetternbrettbefestigung mit vier wechselweise eingesteckten/verkeilten Holznägeln, direkter Dornkontakt im Lagerholz und Rinnenstoß auf A-Bock sind beschrieben. Diese Prinzipien nicht erneut als unbekannt abfragen. Offen bleiben genaue Maße, Lochbilder, verdeckte Kontakte und Einbaubezüge. Bilder der Radstadt ohne Rad und Einzelteilvermessungen sind angekündigt. Zollstockbilder zuerst auswerten.
+
 # Foto- und Aufnahme-To-do — Kleines Schäferrad
 
 > **Für den tatsächlichen Abbau am Samstag gilt als primäre Vor-Ort-Liste:**  

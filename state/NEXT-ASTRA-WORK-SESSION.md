@@ -1,3 +1,5 @@
+> **Aktueller Auftrag — 09.10.2026:** Zuerst [ASTRA-ABGLEICH-20261009.md](ASTRA-ABGLEICH-20261009.md) und den [neuen Fachbeitrag](../docs/FACHBEITRAG-KONSTRUKTION-20261009.md) lesen. Neue explizite Maße und Befestigungsbeschreibungen korrigieren die unten erhaltene historische ITER-001-Spezifikation. Die folgende abgeschlossene Iteration nicht erneut als aktuellen Auftrag starten.
+
 # NEXT ASTRA WORK SESSION — Baseline V3 Model Calibration + Perfection Loop
 
 Branch: `work/model-calibration-loop-v3-20261008`

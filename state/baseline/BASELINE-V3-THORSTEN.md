@@ -1,3 +1,5 @@
+> **Neue Fachinformationen 09.10.2026:** Der [Konstruktionsbeitrag](../../docs/FACHBEITRAG-KONSTRUKTION-20261009.md) ergänzt diese V3-Baseline. Neueste explizite Nutzerkorrekturen haben Vorrang; siehe [Astra-Abgleich](../ASTRA-ABGLEICH-20261009.md). Supplemental Intake ist noch nicht in alle kanonischen Daten oder das 3D-Modell übernommen.
+
 # BASELINE V3 — Local Expert Refresh
 
 Datum: 2026-10-08  

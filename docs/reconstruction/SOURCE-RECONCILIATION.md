@@ -1,3 +1,5 @@
+> **Zusätzliche Fachquelle 09.10.2026:** [Konstruktionsbeitrag](../FACHBEITRAG-KONSTRUKTION-20261009.md), [strukturierte Claims](../../evidence/contributions/thorsten-20261009.json) und [Fotomanifest](../../evidence/contributions/thorsten-20261009-photos.json). Die neueren Korrekturen zu Kranzinnenabstand, Armquerschnitt, Schetternbrettern, U-Bändern, Welle/Lager und A-Bock müssen im nächsten [Astra-Abgleich](../../state/ASTRA-ABGLEICH-20261009.md) property-genau integriert werden. Diese Notiz allein aktualisiert weder Evidenzgraph noch Modell.
+
 # Quellenabgleich vor der Rekonstruktion V2
 
 Ausgangspunkt `45cb32a9c781b506bab1d4ff987e2810da34f378`. Die bisherige primitive Präsentationsgeometrie ist keine Evidenz und wird nicht zur Formbestimmung benutzt.
