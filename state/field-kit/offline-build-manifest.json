@@ -1,6 +1,6 @@
 {
   "schema": "ks-offline-preload/v1",
-  "cache_name": "ks-field-8e5b573ef84e5d9e",
+  "cache_name": "ks-field-fe6d13deb2741c71",
   "urls": [
     "/kleines-schaeferrad/_astro/IMG_6858.BpdSKe7f_6R4o5.webp",
     "/kleines-schaeferrad/_astro/IMG_6858.BpdSKe7f_PPje9.webp",
@@ -16,7 +16,7 @@
     "/kleines-schaeferrad/_astro/manrope-vietnamese-wght-normal.usUDDRr7.woff2",
     "/kleines-schaeferrad/_astro/paths.xHReAN7e.css",
     "/kleines-schaeferrad/_astro/werkstatt.Bg6CG69p.css",
-    "/kleines-schaeferrad/_astro/werkstatt.astro_astro_type_script_index_0_lang.DwxR8xBI.js",
+    "/kleines-schaeferrad/_astro/werkstatt.astro_astro_type_script_index_0_lang.Cy4AYqug.js",
     "/kleines-schaeferrad/drawings/KS-00.svg",
     "/kleines-schaeferrad/drawings/KS-10.svg",
     "/kleines-schaeferrad/drawings/KS-11.svg",
@@ -196,7 +196,7 @@
     "/kleines-schaeferrad/feld/",
     "/kleines-schaeferrad/werkstatt/"
   ],
-  "bytes": 130999291,
+  "bytes": 130999335,
   "scope": "/kleines-schaeferrad/",
   "policy": "Atomic complete install; old cache kept on failure; local captures in IndexedDB, never in SW cache."
 }

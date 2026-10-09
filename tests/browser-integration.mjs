@@ -12,6 +12,7 @@ const result={status:'running',checks:[],scope:'Chromium simulation; no physical
 try{
  const ctx=await browser.newContext(),page=await ctx.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base+'werkstatt/');await page.waitForFunction(()=>document.querySelector('#storage-status').textContent.includes('Lokal gesichert'));
+ await page.waitForFunction(()=>document.querySelector('#render-status').textContent.includes('Ziehen:'));
  const canvas=page.locator('#canvas-host canvas');
  for(const mode of ['truth','brute']){
   await page.locator('#model-mode').selectOption(mode);assert.equal(await canvas.getAttribute('data-model-mode'),mode);
@@ -28,7 +29,7 @@ try{
  assert.deepEqual(errors,[]);result.checks.push({allSceneModes:modes,allComponentInspectors:ids.length});await ctx.close();
  // A failed WebGL context must not prevent editing and persistent capture.
  const noGL=await browser.newContext();await noGL.addInitScript(()=>{const original=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(type,...args){return /webgl/i.test(type)?null:original.call(this,type,...args)}});
- const fallback=await noGL.newPage();await fallback.goto(base+'werkstatt/');await fallback.waitForFunction(()=>document.querySelector('#storage-status').textContent.includes('Lokal gesichert'));assert.match(await fallback.locator('#render-status').innerText(),/3D nicht verfügbar/);assert.ok(await fallback.locator('[data-part]').count());await fallback.screenshot({path:`${out}/webgl-fallback.png`});await noGL.close();result.checks.push({webglUnavailable:'capture still saved'});
+ const fallback=await noGL.newPage();await fallback.goto(base+'werkstatt/');await fallback.waitForFunction(()=>document.querySelector('#storage-status').textContent.includes('Lokal gesichert'));await fallback.waitForFunction(()=>document.querySelector('#render-status').textContent.includes('3D nicht verfügbar'));assert.match(await fallback.locator('#render-status').innerText(),/3D nicht verfügbar/);assert.ok(await fallback.locator('[data-part]').count());await fallback.screenshot({path:`${out}/webgl-fallback.png`});await noGL.close();result.checks.push({webglUnavailable:'capture still saved'});
  const noDB=await browser.newContext();await noDB.addInitScript(()=>{IDBFactory.prototype.open=function(){throw new DOMException('Simulated storage denial','SecurityError')}});
  const denied=await noDB.newPage();await denied.goto(base+'werkstatt/');await denied.waitForFunction(()=>document.querySelector('#storage-status').textContent.includes('Speicher nicht verfügbar'));await denied.waitForFunction(()=>document.querySelector('#render-status').textContent.includes('Ziehen:'));const d=denied.waitForEvent('download');await denied.locator('#export').click();await (await d).saveAs(`${out}/storage-denied-export.json`);assert.equal(JSON.parse(fs.readFileSync(`${out}/storage-denied-export.json`)).schema,'ks-field-capture/v1');await noDB.close();result.checks.push({storageDenied:'viewer and JSON export available'});
  result.status='passed';
