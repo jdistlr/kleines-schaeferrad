@@ -342,7 +342,7 @@
     },
     {
       "id": "COMP-PADDLES",
-      "label": "Schaufeln / Schetter",
+      "label": "Flügelbretter / Schaufeln",
       "kind": "physical-part-family",
       "multiplicity": {
         "description": "24 external expected; current uncounted",
@@ -367,7 +367,7 @@
         "TH-20261009-12"
       ],
       "confidence": "high",
-      "note": "ThorstenHalsch korrigiert die Schaufelstellung fachlich auf 90° zum Rad. Exakter geometrischer Bezugsbegriff und Scanabgleich sind noch zu klären; keine pauschale Drehung ohne Referenzdefinition."
+      "note": "Thorsten: Brettfläche 90° zur Kranzebene. Der radiale Anstellwinkel, die Einbaulage und Scanregistrierung bleiben ungeklärt; keine bestätigte Ist-Metrik."
     },
     {
       "id": "COMP-FASTENERS",
@@ -813,8 +813,8 @@
     },
     {
       "id": "COMP-RADSTADT",
-      "label": "Radstadt / gesamtes Tragwerk",
-      "kind": "assembly-family",
+      "label": "Radstadt (lokale Schreibvariante: Radstatt)",
+      "kind": "terminology-alias",
       "multiplicity": {
         "description": "expert topology; physical inventory open",
         "current_verified_count": null
@@ -824,7 +824,7 @@
       ],
       "claim_ids": [],
       "confidence": "high-topology-only",
-      "note": "New canonical family mapped from reviewed intake; no measured physical-instance promotion."
+      "note": "Terminologie-Alias zu COMP-RADSTATT; kein zweites physisches Tragwerk, keine neue Instanz und keine zusätzlichen Ist-Maße."
     }
   ],
   "local_term_map": {
@@ -833,9 +833,11 @@
     "Krümmling": "curved rim segment",
     "Arm": "through member; two radial ends",
     "Bänder": "wooden binding per generic table; not automatically metal hoop",
-    "Schetter": "paddle terminology candidate",
+    "Schetter": "Schetternbretter an Krümmlingstößen; nicht synonym mit Flügelbrettern",
     "Anwelle": "support/bearing timber from generic table; current mapping unverified",
     "Zwicker/Nasenzwicker/Froschkeil": "local fastener terms; physical function requires calibration",
-    "Kumpfnagel": "wooden Kumpf fastening pin; local expert term; one long + one short at reference attachment"
+    "Kumpfnagel": "wooden Kumpf fastening pin; local expert term; one long + one short at reference attachment",
+    "Radstadt": "Gesamtrahmen; COMP-RADSTATT ist die bestehende kanonische Komponentenidentität",
+    "Radstatt": "Schreib-/Terminologievariante von Radstadt; kein zweites Tragwerk"
   }
 }
