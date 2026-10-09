@@ -1,0 +1,24 @@
+# Vorgeschlagene Umsetzungsreihenfolge
+
+**Nicht ausgeführt.** Ein nachfolgender Auftrag muss den Review übernehmen, bevor kanonische Daten oder das Modell geändert werden. Der vorliegende Auftrag endet bei `ASTRA COMPARISON REVIEW READY`.
+
+| Reihenfolge | Arbeit / betroffene Daten und Funktionen | Abhängigkeit / Abnahmekriterium |
+|---|---|---|
+| 1 | Evidenz property-genau reconciliieren: `geometry.claims.json`, Quellen, `components.json`, `assembly.graph.json`, `conflicts.json`, `knowledge-gaps.json`; Intake-IDs und historische Werte bewahren. | Neue Fachkorrekturen ersetzen ausdrücklich bezeichnete frühere Aussagen, nicht beliebige historische Varianten. Keine pauschale As-built-Promotion. |
+| 2 | Baugruppen/Koordinaten klären: Radstadt als Oberbegriff, Radbock/A-Bock getrennt, Welle X/Kranzebenen YZ/lokaler Boden; Q01/Q02/Q07/Q09. | Eindeutige Flächen-, Achsen- und Endpunktbezüge; Quelle jeder Property. |
+| 3 | Kranzabstandssemantik in `hypothesis.parameters.json`, `geometry.mjs:makeModel`, `calibration.mjs` einführen: Innenweite1,80; Breite.14; Mittelebenen1,94; Außenweite2,08. | Tatsächliche Meshgrenzen gegen alle vier Größen prüfen; keine Verwendung1,80 als ringDistance. |
+| 4 | Arm-/Kranzphase und Sitz: `ringSector`, Armprofil, Keile/Stift. Hardcodierte.14/.12 durch geprüfte Querschnittsparameter ersetzen. | Armenden in Segmentmitte, nicht am Stoß; relative30° für bisherigen6-Sektor-Kandidaten. Verstärkung, Durchsteckung, zwei Keile, hinterer Stift. Verdeckte Form weiterhin Kandidat. |
+| 5 | Stoßbretter und vier Nägel: eigene Komponenten, beidseitige Bretter, je zwei Einsteckrichtungen und Keile. | Sichtbare Topologie sofort darstellbar, aber Lochbild bis Ausbau als offen. Keine synthetischen Endstifte als tatsächliche Verbindung weiterführen. |
+| 6 | Welle/Dorn/Schellen/Holzlager: `HYP-SHAFT`, `CAND-JOURNAL`, `HYP-BEARING`; Geometrie und Material. | Holz ohne unbelegte Endverjüngung, zwei Schellen je Ende, direkter Holzlagerkontakt. Unbekanntes Inneres nicht schließen. |
+| 7 | Kumpfpose und Nagelpfade: `vesselPose`, `referenceKumpf`, `pinGeometry`, Referenzlochdaten. Entfernen der impliziten Defaultpose/fixen Austrittsebene aus Kontaktberechnung. | Pfad von realem Start durch zugeordnete Löcher zur Kranzfläche; Langnagel auf abgewandter Seite. Ø26-Schaft/Lochspiel konsistent, Kopf etwaØ40, Kurvenlänge und Überstand separat. Nicht alle24Slots als vermessen ausgeben. |
+| 8 | Flügelbrettkontur und Holzbänder: `calibrateModel`/Paddles. Breite etwa.35; Pitch, Schräge, Gesamtspanne und Außenüberstand separat. | Ebenen90° bewahren; Enden anhand Außenflächen plus tatsächlichem Überstand. U über Brett, durch Kranz, hinten verkeilt; Rohastdurchmesser nicht fertiger Vollrundquerschnitt. |
+| 9 | Radbock und A-Bock sowie zweiteilige Rinne: `beam`, `channel`, `CTX-*`, Trogkalibrierung. | Eigene Baugruppen, Anschlüsse/Ausklinkungen/Keile und Lastpfade. Radbockoberbalken1,20; A-Riegel.90gesamtlänge. Lokales80-cm-Datum; Fußabstand erst bei gesicherter Geometrie. |
+| 10 | Scanregistrierung und unabhängige Prüfung, sofern Korrespondenzen verfügbar. `scan-transforms.json` erst nach Nachweisen ändern. | Mindestens drei nichtkollineare eindeutig zugeordnete Merkmale, Wellenrichtung und Seitenbestätigung; unabhängige Kontrollstrecke, Residuen/Unsicherheit. Historischer Kranzdurchmesser allein ist keine Feldskalierung. |
+| 11 | Abhängige Kontakte und Bewegungsraum aus tatsächlichen Meshes erneut prüfen; `calibratedCycle`/Trogposition erst nach Geometrie. | 360°-Sweep für Flügel/Kumpf gegen stationäres Tragwerk/Trog; gewollte Durchsteckung von falscher Kollision unterscheiden. Nagelspiel, Lager, Rinnenstoß, Fußauflage separat. Wassertrajektorie bleibt synthetische Funktionshypothese. |
+| 12 | Technische Vergleichsansichten und angemessene Tests erneuern; Review. | Wahrheitssicht verbirgt weiterhin unbelegte Innengeometrie und kennzeichnet Kandidaten. Kein Deployment oder Merge ohne gesonderten Auftrag. |
+
+## A-Bock: warum noch kein belastbarer Fußabstand berechnet wird
+
+Die Skala147–151cm am oberen Ende ist kein verifiziertes Beinlängenmaß. Außerdem fehlen Riegelausrichtung, Sitzhöhe entlang des Beins, Durchstecküberstände, Anschlusspunkte und Geländehöhen. Die volle Riegellänge0,90m darf nicht als Abstand der Beinachsen eingesetzt werden.
+
+Nur für ein idealisiertes symmetrisches Modell auf ebenem Boden gilt beispielsweise: mit Beinwinkel α gegen Vertikale, Achsabstand d auf Riegelhöhe h und nach unten auseinanderlaufenden Beinen ist der Fußachsenabstand `F = d + 2*h*tan(α)`. Das ist keine hier gemessene Form. h ist nicht automatisch0,80m: Unterseite Rinnenboden, Riegeloberfläche/-achse und Sitzpunkt sind unterschiedliche Höhen. Auch `α = arccos(h/L)` wäre falsch, wenn L die volle Beinlänge bis über den Riegel hinaus ist. Alle Größen bleiben bis zu Q08–Q10 unbesetzt; keine scheinexakte Standweite wird vorgeschlagen.

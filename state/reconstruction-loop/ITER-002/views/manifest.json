@@ -1,0 +1,207 @@
+[
+  {
+    "path": "state/reconstruction-loop/ITER-002/views/01-kranz-arme.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791540525839.jpg",
+    "model": "brute",
+    "mesh_names": [
+      "HIST-ARM-LAND-1-4",
+      "HIST-ARM-LAND-2-5",
+      "HIST-ARM-LAND-3-6",
+      "HIST-KRU-LAND-01",
+      "HIST-KRU-LAND-02",
+      "HIST-KRU-LAND-03",
+      "HIST-KRU-LAND-04",
+      "HIST-KRU-LAND-05",
+      "HIST-KRU-LAND-06",
+      "HIST-ARM-WATER-1-4",
+      "HIST-ARM-WATER-2-5",
+      "HIST-ARM-WATER-3-6",
+      "HIST-KRU-WATER-01",
+      "HIST-KRU-WATER-02",
+      "HIST-KRU-WATER-03",
+      "HIST-KRU-WATER-04",
+      "HIST-KRU-WATER-05",
+      "HIST-KRU-WATER-06"
+    ],
+    "eye_direction": [
+      -1,
+      -0.1,
+      0.12
+    ],
+    "projection": "orthographic-auto-fit",
+    "renderer": "actual runtime triangles; depth-sorted PIL projection",
+    "photo_alignment": "none",
+    "notes": [
+      "Ist: Armenden liegen an Sektorgrenzen; lokale Verstärkung fehlt.",
+      "Fachbeitrag: Arm in Segmentmitte; zwei Keile und rückseitiger Stift.",
+      "Nächster Schritt: Phase um 30° relativ zu Armen prüfen, Anschluss separat aufbauen."
+    ]
+  },
+  {
+    "path": "state/reconstruction-loop/ITER-002/views/02-schettern.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791542766365.jpg",
+    "model": "brute",
+    "mesh_names": [
+      "HIST-KRU-LAND-01",
+      "CAND-RIM-PIN-LAND-0--0.03",
+      "CAND-RIM-PIN-LAND-0-0.03"
+    ],
+    "eye_direction": [
+      -3,
+      -1,
+      1
+    ],
+    "projection": "orthographic-auto-fit",
+    "renderer": "actual runtime triangles; depth-sorted PIL projection",
+    "photo_alignment": "none",
+    "notes": [
+      "Ist: nackter Sektor mit synthetischen Bohrungen / Stiften; keine Stoßbretter.",
+      "Foto: Brett auf beiden Seiten, Köpfe und verkeilte Enden in Gegenansichten.",
+      "Vier Nägel, zwei je Richtung: Fachangabe; Lochbilder nach Ausbau dokumentieren."
+    ]
+  },
+  {
+    "path": "state/reconstruction-loop/ITER-002/views/03-fluegelband.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791541421696.jpg",
+    "model": "brute",
+    "mesh_names": [
+      "EXPECTED-PAD-01"
+    ],
+    "eye_direction": [
+      -2,
+      -3,
+      2
+    ],
+    "projection": "orthographic-auto-fit",
+    "renderer": "actual runtime triangles; depth-sorted PIL projection",
+    "photo_alignment": "none",
+    "notes": [
+      "Ist: unverjüngter Quader, 1,29 × 0,055 × 0,43 m in Modellkoordinaten.",
+      "Foto: U-Band über Brett; Anschrägung in 1278244 sichtbar.",
+      "Breite etwa 0,35 m; Gesamtlänge / Pitch / Überstand separat klären."
+    ]
+  },
+  {
+    "path": "state/reconstruction-loop/ITER-002/views/04-welle-lager.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791541561160.jpg",
+    "model": "brute",
+    "mesh_names": [
+      "HYP-SHAFT",
+      "CAND-JOURNAL--1",
+      "CAND-JOURNAL-1",
+      "CTX-BEARING-STAND--1",
+      "HYP-BEARING--1",
+      "CTX-BEARING-STAND-1",
+      "HYP-BEARING-1"
+    ],
+    "eye_direction": [
+      -3,
+      -6,
+      2
+    ],
+    "projection": "orthographic-auto-fit",
+    "renderer": "actual runtime triangles; depth-sorted PIL projection",
+    "photo_alignment": "none",
+    "notes": [
+      "Ist: verjüngte Holzwelle, Metalllager-Kandidat; vier Schellen fehlen.",
+      "Foto: Holz bleibt bis zum beschlagenen Ende stark; Dorn zwischen Lagerhölzern.",
+      "Dorn-/Kontaktmaße offen; keine durchgehende innere Metallwelle behaupten."
+    ]
+  },
+  {
+    "path": "state/reconstruction-loop/ITER-002/views/05-kumpfnaegel.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+    "model": "nail-reference",
+    "mesh_names": [
+      "V3-KUM-01-NAIL-LONG",
+      "V3-KUM-01-NAIL-LONG-HEAD",
+      "V3-KUM-01-NAIL-SHORT",
+      "V3-KUM-01-NAIL-SHORT-HEAD"
+    ],
+    "eye_direction": [
+      -1,
+      -3,
+      1
+    ],
+    "projection": "orthographic-auto-fit",
+    "renderer": "actual runtime triangles; depth-sorted PIL projection",
+    "photo_alignment": "none",
+    "notes": [
+      "Ist: Ø18-mm-Schäfte / Ø48-mm-Köpfe; 726 / 595 mm Endpunktsehnen.",
+      "Fachangabe: Ø26-mm-Schaft / Ø40-mm-Kopf; Foto zeigt stärkere Krümmung.",
+      "Foto-Projektion und Bogenlänge nicht gleichsetzen; Nagelpfade neu ableiten."
+    ]
+  },
+  {
+    "path": "state/reconstruction-loop/ITER-002/views/06-bock-rad.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791542172733.jpg",
+    "model": "brute",
+    "mesh_names": [
+      "CTX-POST--1--1.85",
+      "CTX-POST--1-1.85",
+      "CTX-RAIL--1--2.48",
+      "CTX-RAIL--1--0.34",
+      "CTX-BRACE--1--1",
+      "CTX-BRACE--1-1",
+      "CTX-BEARING-STAND--1",
+      "HYP-BEARING--1",
+      "CTX-POST-1--1.85",
+      "CTX-POST-1-1.85",
+      "CTX-RAIL-1--2.48",
+      "CTX-RAIL-1--0.34",
+      "CTX-BRACE-1--1",
+      "CTX-BRACE-1-1",
+      "CTX-BEARING-STAND-1",
+      "HYP-BEARING-1",
+      "CTX-CROSS--2.25",
+      "CTX-CROSS-2.25",
+      "CTX-WALK-0",
+      "CTX-WALK-1",
+      "CTX-WALK-2",
+      "CTX-WALK-3",
+      "CTX-TROUGH-POST--1",
+      "CTX-TROUGH-BRACE--1",
+      "CTX-TROUGH-POST-1",
+      "CTX-TROUGH-BRACE-1",
+      "CTX-CHANNEL-SUPPORT--2.1",
+      "CTX-CHANNEL-SUPPORT--3.6"
+    ],
+    "eye_direction": [
+      -4,
+      -5,
+      3
+    ],
+    "projection": "orthographic-auto-fit",
+    "renderer": "actual runtime triangles; depth-sorted PIL projection",
+    "photo_alignment": "none",
+    "notes": [
+      "Ist: synthetisches Rahmensystem mit 0,23-/0,24-m-Hölzern.",
+      "Foto: Querbalken über Stützen, ausgeklinkte / verkeilte Anschlüsse.",
+      "Fachmaße: Querbalken 1,20 m, Querschnitt 14 × 14 cm; lokale Symmetrie prüfen."
+    ]
+  },
+  {
+    "path": "state/reconstruction-loop/ITER-002/views/07-abock-rinne.png",
+    "source": "evidence/raw/thorsten-20261009/image-1791543487137.jpg",
+    "model": "brute",
+    "mesh_names": [
+      "CAND-TROUGH",
+      "CAND-CHANNEL",
+      "CTX-CHANNEL-SUPPORT--2.1",
+      "CTX-CHANNEL-SUPPORT--3.6"
+    ],
+    "eye_direction": [
+      -5,
+      -6,
+      3
+    ],
+    "projection": "orthographic-auto-fit",
+    "renderer": "actual runtime triangles; depth-sorted PIL projection",
+    "photo_alignment": "none",
+    "notes": [
+      "Ist: eine Ableitung plus zwei senkrechte Stützen; kein A-Bock.",
+      "Foto: geneigte Beine, Riegel mit Keilen, Stoßlasche an Rinne.",
+      "Fachmaß 80 cm betrifft Unterseite Rinnenboden über lokalem Boden."
+    ]
+  }
+]

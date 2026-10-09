@@ -1,0 +1,92 @@
+{
+  "ply": {
+    "path": "evidence/raw/Scaniverse 2026-10-07 173556.ply",
+    "sha256": "2eb305cd6fcbf41d5c52d1a959374f66fa4105e3eca08716f4971a42f4cc8c3b",
+    "points": 75619,
+    "bounds": [
+      [
+        -2.6911802291870117,
+        -3.4898712635040283,
+        -0.12695865333080292
+      ],
+      [
+        3.3385074138641357,
+        3.544503688812256,
+        4.376166343688965
+      ]
+    ]
+  },
+  "glb": {
+    "path": "evidence/raw/Scaniverse 2026-10-07 173556.glb",
+    "sha256": "d28c22f282d03aa153f09c6fb1a14032cad8cb6dc20ebd32a3dc3a40ff89da28",
+    "accessors": [
+      {
+        "bufferView": 1,
+        "byteOffset": 0,
+        "max": [
+          2.807084560394287,
+          4.472756385803223,
+          3.3810007572174072
+        ],
+        "min": [
+          -2.608441114425659,
+          -0.12906122207641602,
+          -3.4280059337615967
+        ],
+        "componentType": 5126,
+        "count": 56117,
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 2,
+        "byteOffset": 0,
+        "max": [
+          0.9979400634765625,
+          0.996272087097168
+        ],
+        "min": [
+          0.00207010330632329,
+          0.002068459987640381
+        ],
+        "componentType": 5126,
+        "count": 56117,
+        "type": "VEC2"
+      },
+      {
+        "bufferView": 3,
+        "byteOffset": 0,
+        "max": [
+          56116
+        ],
+        "min": [
+          0
+        ],
+        "componentType": 5125,
+        "count": 234129,
+        "type": "SCALAR"
+      }
+    ],
+    "nodes": [
+      {
+        "name": "root",
+        "children": [
+          1
+        ]
+      },
+      {
+        "name": "mesh",
+        "mesh": 0
+      }
+    ]
+  },
+  "search": {
+    "native_z_interval": [
+      2.8,
+      3.5
+    ],
+    "points": 13246,
+    "status": "candidate-region-not-registered"
+  },
+  "mechanical_transform": null,
+  "field_scale": null
+}
