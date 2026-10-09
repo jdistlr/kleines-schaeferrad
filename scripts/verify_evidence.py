@@ -65,7 +65,7 @@ claim_ids = {c['id'] for c in claims}
 assert len(claim_ids) == len(claims)
 for c in claims:
     assert c['evidence_class'] in allowed_classes, (c['id'], c['evidence_class'])
-    assert c['confidence'] in {'high','medium','low','unknown'}
+    assert c['confidence'] in {'high','medium','low','unknown','qualified'}
     assert c['provenance'] and {p['source_id'] for p in c['provenance']} <= source_ids, c['id']
     assert not c['as_built_eligible']
 
