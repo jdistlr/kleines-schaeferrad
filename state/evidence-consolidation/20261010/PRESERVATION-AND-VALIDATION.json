@@ -1,0 +1,10 @@
+{
+  "baseline": "665d8be543a276082826c212f16cfd5c231f9bcf",
+  "checked_baseline_files": 1013,
+  "changed_or_missing": [],
+  "scope": "All files tracked at takeover baseline; added archive/audit files are outside baseline.",
+  "baseline_preserved": true,
+  "verify_evidence": "PASS: 43 baseline originals, 4 contributed originals, 10 derivatives, 408 claims, 117 source analyses; this verifier does not cover all 77 transfer files",
+  "transfer_verification": "77/77 SHA-256 pass after GitHub fetch at d090fe74f802e4c6596cb746b8615760ae012bb2",
+  "runtime_validation": "No new geometry/browser/build run: audit documents and read-only script only."
+}

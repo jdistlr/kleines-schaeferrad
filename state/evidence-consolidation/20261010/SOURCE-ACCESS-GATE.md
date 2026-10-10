@@ -17,4 +17,4 @@ Die 30 zusätzlich eingeblendeten Einzelbildpfade fehlten in dieser Laufzeit; ih
 
 Die Quellensicherung erlaubt nun die lesende Konsolidierung gemäß Auftragsdatei. Sie ist keine fachliche Originalauswertung, Maßfreigabe oder Bestätigung aller außerhalb dieses Archivs erwähnten Quellen. Deren Verfügbarkeit wird separat in der Quellenbilanz ausgewiesen. Kanonische Daten, bestehende Originale, Modelle und Fachkorrekturen bleiben unverändert. Kein Merge oder Deployment.
 
-Der frühere Bericht bleibt in der Git-Historie und in ORIGINAL-TRANSFER-BLOCKER.md nachvollziehbar. Er beschreibt den damaligen Kenntnisstand, nicht den aktuellen Status.
+Der frühere Bericht bleibt in der Git-Historie und in SOURCE-TRANSFER-BLOCKER.md nachvollziehbar. Er beschreibt den damaligen Kenntnisstand, nicht den aktuellen Status.
