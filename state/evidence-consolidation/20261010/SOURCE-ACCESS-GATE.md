@@ -1,3 +1,5 @@
+> **Nachtrag 10.10.2026: Dateizugriff auf IMG_6875/6876 jetzt vorhanden; zusätzlich IMG_6877. Objektzuordnung laut Nutzer ausdrücklich unbestätigt. Aktueller Status: CONDITIONAL REVIEW READY — OBJECT IDENTITY UNCONFIRMED. Siehe [CONTEXT-IDENTITY-ADDENDUM.md](CONTEXT-IDENTITY-ADDENDUM.md). Nachfolgende Zugriffsblockade ist historischer Stand.**
+
 # Quellenzugriff: Originaltransfer erfolgreich gesichert
 
 Stand 2026-10-10. **ORIGINAL SOURCE TRANSFER VERIFIED — 77/77**
