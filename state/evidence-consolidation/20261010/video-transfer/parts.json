@@ -1,0 +1,25 @@
+{
+  "target": "evidence/raw/originaltransfer-20261010/IMG_6857.mp4",
+  "bytes": 13408295,
+  "sha256": "bfcf16efd88f912f63bb7e66a9bed6fb6e6148da751659f6ef390598a85344ab",
+  "parts": [
+    {
+      "path": "state/evidence-consolidation/20261010/video-transfer/IMG_6857.mp4.part00",
+      "bytes": 6291456,
+      "sha256": "55d9e4152775b00762aaee0121a5bfa7ec789b78e29f6f72135d4092ce488470",
+      "sha": "95b72e302409ce236eaabe8b9d6e02d5d4225a63"
+    },
+    {
+      "path": "state/evidence-consolidation/20261010/video-transfer/IMG_6857.mp4.part01",
+      "bytes": 6291456,
+      "sha256": "5b707c3511c2e2d9c1ba4b2f741c17dc393fe1dd94a2fab88800925a5ac0b648",
+      "sha": "46a4451b8b4fe09d6136d512e230e5c357f07dd9"
+    },
+    {
+      "path": "state/evidence-consolidation/20261010/video-transfer/IMG_6857.mp4.part02",
+      "bytes": 825383,
+      "sha256": "85303119f18069be4e3dfbee23b239ba44a2a1708551ed8769af74d0930e34d6",
+      "sha": "808571ae0f99d15871c85d69c931fd4eee596a3e"
+    }
+  ]
+}
