@@ -1,0 +1,630 @@
+{
+  "baseline": "727a0248c0234641453a08e4ae3984e27c9f970b",
+  "head_at_run": "727a0248c0234641453a08e4ae3984e27c9f970b",
+  "run_scope": "Working tree compared to immutable baseline; head_at_run is pre-commit HEAD",
+  "input_sha256": {
+    "data/components.json": "f473d1a1917ff9f4ddcae5e432580e02621b57a53d4bfdb90eb1199a002592d2",
+    "data/field-tasks.json": "5fc952ac5b70a7434a9b3a9c9baccc016752b04ebd2ecad21c047484e2dca242",
+    "data/reconstruction-evidence-map.json": "032bc9666f8b582d8c5672b4ad7e7b9b0a85d6a0f5b29559960c5a81e91dc24b",
+    "docs/field-kit/field-pack-manifest.json": "5182c30f937bf2e99fdbfcfd59fbdbb467a5950cbd411bbb60a0a7e34843154d",
+    "data/geometry.claims.json": "d3e98fa82abdbd301ab54e4904c1f4e075ad56dff30350e0b40f7980b40d4b5c",
+    "state/evidence-consolidation/20261010/semantic-reference-v1/reference-cases.json": "e2ab0f2669dd6329a28d3545ce43b0dd092d51d953789976e60a89c94d5eb47e",
+    "state/evidence-consolidation/20261010/semantic-reference-v1/source-sighting.json": "0cccc698bba4c1d8f2ba584b48453837a42da1ffe7e269a2d64f4a773a0c000e",
+    "state/evidence-consolidation/20261010/semantic-reference-v1/field-pack-equivalence.json": "96632561e8bb8050b3a63d813404abbae8dbc40857ce8ef895d8a580f3ca4b1c"
+  },
+  "purpose": "Contract and preservation checks only; no physical, audio or geometric approval",
+  "passed": true,
+  "check_count": 62,
+  "checks": [
+    {
+      "check": "exact-authorized-delta:data/components.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact-authorized-delta:data/field-tasks.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact-authorized-delta:data/reconstruction-evidence-map.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact-authorized-delta:docs/field-kit/field-pack-manifest.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all-39-expert-corrections-unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all-408-claims-byte-preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nine-gaps-21-tasks-no-new-instances",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "GAP-09-linked-to-existing-TASK-PAD",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no-broken-source-reference-in-claim-component-model",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no-claim-support-cycle",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no-missing-provenance-or-duplicate-ids",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all-registered-assets-intact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "three-reference-cases",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Welle/Arm:claims-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Welle/Arm:components-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Welle/Arm:sources-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Welle/Arm:gaps-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Welle/Arm:tasks-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Welle/Arm:conflicts-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Welle/Arm:model-files-exist",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Welle/Arm:qualifiers-preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Welle/Arm:gaps-investigated-by-existing-tasks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Welle/Arm:no-context-target-promotion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Kumpf:claims-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Kumpf:components-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Kumpf:sources-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Kumpf:gaps-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Kumpf:tasks-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Kumpf:conflicts-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Kumpf:model-files-exist",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Kumpf:qualifiers-preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Kumpf:gaps-investigated-by-existing-tasks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Kumpf:no-context-target-promotion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Kranz:claims-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Kranz:components-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Kranz:sources-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Kranz:gaps-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Kranz:tasks-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Kranz:conflicts-resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "Kranz:model-files-exist",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Kranz:qualifiers-preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Kranz:gaps-investigated-by-existing-tasks",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Kranz:no-context-target-promotion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "shaft-370-is-not-current-metres",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "shaft-photos-share-document-not-independent-measurements",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "contactstrips-not-current-wheel-geometry",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "axial-radial-conflict-already-resolved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "derived-distances-not-independent-field-measures",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "derivation-arithmetic-only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "digital-measurement-not-field-measurement",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "76-photo-review-records-no-omission",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all-review-media-hashes-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "77-original-transfer-files-intact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "three-context-images-identity-unconfirmed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "30-attachments-byte-matched-to-repository",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all-sighting-anchors-resolve",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "video-recorded-overview-coverage-638",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "audio-limit-explicit-not-complete-source-review",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "field-pack-reference-change-preserves-rendered-outputs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "field-pack-equivalence-inputs-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all-baseline-files-preserved-except-exact-deltas-and-prepended-notices",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "new-files-confined-to-review-package",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "preservation": {
+    "baseline_files": 1115,
+    "byte_identical": 1102,
+    "exact_data_delta_files": [
+      "data/components.json",
+      "data/field-tasks.json",
+      "data/reconstruction-evidence-map.json",
+      "docs/field-kit/field-pack-manifest.json"
+    ],
+    "additive_notice_files": [
+      "docs/CONTEXT-EVIDENCE-6875-6876.md",
+      "state/evidence-consolidation/20261010/CONTEXT-IDENTITY-ADDENDUM.md",
+      "state/evidence-consolidation/20261010/EVIDENCE-CHAINS.md",
+      "state/evidence-consolidation/20261010/GRAPH-CONTRACT-AND-INTEGRITY.md",
+      "state/evidence-consolidation/20261010/REVIEW-SUMMARY.md",
+      "state/evidence-consolidation/20261010/SOURCE-ACCESS-GATE.md",
+      "state/evidence-consolidation/20261010/SOURCE-INVENTORY.md",
+      "state/evidence-consolidation/20261010/STABILIZATION-PLAN.md",
+      "state/evidence-consolidation/20261010/THORSTEN-DECISION-BILL.md"
+    ],
+    "unexpected": []
+  },
+  "audit_summary": {
+    "counts": {
+      "claims": 408,
+      "components": 34,
+      "source_analyses": 117,
+      "source_ids_in_union": 159,
+      "gaps": 9,
+      "tasks": 21,
+      "conflicts": 13,
+      "assembly_nodes": 30,
+      "assembly_relations": 31,
+      "historical_slots": 66,
+      "physical_instances": 0,
+      "raw_files": 213,
+      "raw_unique_hashes": 150
+    },
+    "reference_candidates": [
+      {
+        "from": "TASK-ARM-BEFORE",
+        "to": "H-ARM-01",
+        "type": "references-context",
+        "file": "data/field-tasks.json",
+        "pointer": "/tasks/3/source_refs/1",
+        "derivation": "explicit-contract-reference"
+      },
+      {
+        "from": "TASK-ARM-BEFORE",
+        "to": "H-ARM-02",
+        "type": "references-context",
+        "file": "data/field-tasks.json",
+        "pointer": "/tasks/3/source_refs/2",
+        "derivation": "explicit-contract-reference"
+      },
+      {
+        "from": "TASK-ARM-BEFORE",
+        "to": "H-ARM-04",
+        "type": "references-context",
+        "file": "data/field-tasks.json",
+        "pointer": "/tasks/3/source_refs/3",
+        "derivation": "explicit-contract-reference"
+      },
+      {
+        "from": "TASK-ARM-RELEASE",
+        "to": "H-ARM-03",
+        "type": "references-context",
+        "file": "data/field-tasks.json",
+        "pointer": "/tasks/4/source_refs/2",
+        "derivation": "explicit-contract-reference"
+      },
+      {
+        "from": "TASK-MORTISE",
+        "to": "H-ARM-02",
+        "type": "references-context",
+        "file": "data/field-tasks.json",
+        "pointer": "/tasks/5/source_refs/1",
+        "derivation": "explicit-contract-reference"
+      },
+      {
+        "from": "TASK-MORTISE",
+        "to": "H-ARM-03",
+        "type": "references-context",
+        "file": "data/field-tasks.json",
+        "pointer": "/tasks/5/source_refs/2",
+        "derivation": "explicit-contract-reference"
+      },
+      {
+        "from": "TASK-ARM-PROFILE",
+        "to": "H-ARM-01",
+        "type": "references-context",
+        "file": "data/field-tasks.json",
+        "pointer": "/tasks/6/source_refs/1",
+        "derivation": "explicit-contract-reference"
+      },
+      {
+        "from": "TASK-ARM-PROFILE",
+        "to": "H-ARM-04",
+        "type": "references-context",
+        "file": "data/field-tasks.json",
+        "pointer": "/tasks/6/source_refs/2",
+        "derivation": "explicit-contract-reference"
+      },
+      {
+        "from": "CONFLICT-03",
+        "to": "REF-Welle",
+        "type": "about-component",
+        "file": "data/conflicts.json",
+        "pointer": "/conflicts/2/subjects/1",
+        "derivation": "explicit-contract-reference"
+      },
+      {
+        "from": "CONFLICT-10",
+        "to": "CAPTURE-01",
+        "type": "about-component",
+        "file": "data/conflicts.json",
+        "pointer": "/conflicts/9/subjects/0",
+        "derivation": "explicit-contract-reference"
+      }
+    ],
+    "duplicate_ids": {
+      "claims": [],
+      "components": [],
+      "sources": [],
+      "tasks": []
+    },
+    "source_url_collisions": [
+      {
+        "id": "EXT-VZO",
+        "urls": [
+          "https://www.verein-zufriedenheit.com/info.html",
+          "https://www.verein-zufriedenheit.com/wasserrad.html"
+        ],
+        "registries": [
+          "evidence/manifest.json",
+          "data/external-construction-research-v2.json"
+        ]
+      }
+    ],
+    "semantic_duplicate_candidates": [
+      [
+        "CLAIM-0012",
+        "CLAIM-0154"
+      ],
+      [
+        "CLAIM-0014",
+        "CLAIM-0157"
+      ],
+      [
+        "CLAIM-0017",
+        "CLAIM-0158"
+      ],
+      [
+        "CLAIM-0201",
+        "CLAIM-0213"
+      ],
+      [
+        "CLAIM-0263",
+        "CLAIM-0268"
+      ],
+      [
+        "CLAIM-0264",
+        "CLAIM-0269"
+      ],
+      [
+        "CLAIM-0265",
+        "CLAIM-0270"
+      ],
+      [
+        "CLAIM-0266",
+        "CLAIM-0271"
+      ],
+      [
+        "CLAIM-0267",
+        "CLAIM-0272"
+      ],
+      [
+        "CLAIM-0273",
+        "CLAIM-0281"
+      ],
+      [
+        "CLAIM-0274",
+        "CLAIM-0282"
+      ],
+      [
+        "CLAIM-0275",
+        "CLAIM-0283"
+      ],
+      [
+        "CLAIM-0276",
+        "CLAIM-0284"
+      ],
+      [
+        "CLAIM-0277",
+        "CLAIM-0285"
+      ],
+      [
+        "CLAIM-0278",
+        "CLAIM-0286"
+      ],
+      [
+        "CLAIM-0279",
+        "CLAIM-0287"
+      ],
+      [
+        "CLAIM-0280",
+        "CLAIM-0288"
+      ],
+      [
+        "CLAIM-0289",
+        "CLAIM-0296"
+      ],
+      [
+        "CLAIM-0290",
+        "CLAIM-0297"
+      ],
+      [
+        "CLAIM-0291",
+        "CLAIM-0298"
+      ],
+      [
+        "CLAIM-0292",
+        "CLAIM-0299"
+      ],
+      [
+        "CLAIM-0293",
+        "CLAIM-0300"
+      ],
+      [
+        "CLAIM-0294",
+        "CLAIM-0301"
+      ],
+      [
+        "CLAIM-0295",
+        "CLAIM-0302"
+      ]
+    ],
+    "claim_support_cycles": [],
+    "gap_tasks": {
+      "GAP-01": [
+        "TASK-ORIENT",
+        "TASK-DATUM",
+        "TASK-POSE",
+        "TASK-SCAN"
+      ],
+      "GAP-02": [
+        "TASK-ARM-BEFORE",
+        "TASK-ARM-RELEASE",
+        "TASK-MORTISE",
+        "TASK-ARM-PROFILE",
+        "TASK-KEI"
+      ],
+      "GAP-03": [
+        "TASK-KRU-BEFORE",
+        "TASK-KRU-OPEN"
+      ],
+      "GAP-04": [
+        "TASK-KUM-BEFORE",
+        "TASK-KUM-VARIANT",
+        "TASK-HOOPS"
+      ],
+      "GAP-05": [
+        "TASK-COUNT",
+        "TASK-PAD"
+      ],
+      "GAP-06": [
+        "TASK-BEARING"
+      ],
+      "GAP-07": [
+        "TASK-ORIENT",
+        "TASK-WATER"
+      ],
+      "GAP-08": [
+        "TASK-ARM-RELEASE",
+        "TASK-PAD",
+        "TASK-KEI",
+        "TASK-CRAFT",
+        "TASK-REGISTER",
+        "TASK-FINAL"
+      ],
+      "GAP-09": [
+        "TASK-PAD"
+      ]
+    },
+    "conflict_statuses": {
+      "CONFLICT-01": "unresolved",
+      "CONFLICT-02": "variant-family-confirmed-numeric-mapping-unresolved",
+      "CONFLICT-03": "unresolved",
+      "CONFLICT-04": "semantic-dimensions-resolved",
+      "CONFLICT-05": "unresolved",
+      "CONFLICT-06": "functions-resolved-metric-paths-open",
+      "CONFLICT-07": "unverified-multiplicity",
+      "CONFLICT-08": "capture-deficit-not-proof-of-absent-part",
+      "CONFLICT-09": "not-comparable-without-registration-and-field-scale",
+      "CONFLICT-10": "axis-candidate-supported-remaining-surface-differences",
+      "CONFLICT-11": "catalogue-correction-complete-physical-assignment-open",
+      "CONFLICT-12": "unresolved",
+      "CONFLICT-13": "rim-plane-reference-resolved-pitch-open"
+    }
+  }
+}

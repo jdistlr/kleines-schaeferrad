@@ -1,0 +1,446 @@
+{
+  "purpose": "Review/test fixtures referencing existing contracts only; not a canonical graph or new evidence class.",
+  "cases": [
+    {
+      "name": "Welle/Arm",
+      "components": [
+        "COMP-SHAFT",
+        "COMP-ARMS",
+        "COMP-BEARINGS"
+      ],
+      "claims": [
+        "CLAIM-0001",
+        "CLAIM-0002",
+        "CLAIM-0007",
+        "CLAIM-0008",
+        "CLAIM-0253",
+        "CLAIM-0336",
+        "CLAIM-0346",
+        "TH-20261009-13",
+        "TH-20261009-14",
+        "TH-20261009-15"
+      ],
+      "sources": [
+        "PHOTO-6816",
+        "PHOTO-6817",
+        "PHOTO-6827",
+        "PHOTO-6853",
+        "PHOTO-6855",
+        "V2-IMG_6808-upload2",
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "gaps": [
+        "GAP-02",
+        "GAP-06"
+      ],
+      "tasks": [
+        "TASK-ARM-BEFORE",
+        "TASK-ARM-RELEASE",
+        "TASK-MORTISE",
+        "TASK-ARM-PROFILE",
+        "TASK-KEI",
+        "TASK-BEARING"
+      ],
+      "conflicts": [
+        "CONFLICT-03"
+      ],
+      "model_files": [
+        "data/reconstruction-constraints.json",
+        "src/workbench/expert-corrections.mjs"
+      ],
+      "forbidden_conclusion": "Keine aktuelle Wellenlänge und keine verdeckte Endpaarung freigegeben.",
+      "expected_claim_qualifiers": {
+        "CLAIM-0001": {
+          "evidence_class": "historical-drawing",
+          "scope": "documented-design",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "CLAIM-0002": {
+          "evidence_class": "historical-drawing",
+          "scope": "documented-design",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "CLAIM-0007": {
+          "evidence_class": "historical-drawing",
+          "scope": "documented-design",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "CLAIM-0008": {
+          "evidence_class": "historical-drawing",
+          "scope": "documented-design",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "CLAIM-0253": {
+          "evidence_class": "observed-current",
+          "scope": "photographed-current-state",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "CLAIM-0336": {
+          "evidence_class": "unknown",
+          "scope": "as-built-unknown",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "CLAIM-0346": {
+          "evidence_class": "conflicting",
+          "scope": "conflict-existence-only",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "TH-20261009-13": {
+          "evidence_class": "expert-narrative",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": []
+        },
+        "TH-20261009-14": {
+          "evidence_class": "expert-narrative",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": []
+        },
+        "TH-20261009-15": {
+          "evidence_class": "expert-narrative",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": []
+        }
+      },
+      "target_confirmation_from_context_allowed": false
+    },
+    {
+      "name": "Kumpf",
+      "components": [
+        "COMP-KUEMPFE",
+        "COMP-KUMPF-STAVES",
+        "COMP-KUMPF-BASE",
+        "COMP-KUMPF-HOOPS",
+        "COMP-KUMPF-NAILS"
+      ],
+      "claims": [
+        "CLAIM-0040",
+        "CLAIM-0041",
+        "CLAIM-0042",
+        "CLAIM-0043",
+        "CLAIM-0044",
+        "CLAIM-0045",
+        "CLAIM-0046",
+        "CLAIM-0047",
+        "CLAIM-0344",
+        "CLAIM-0356",
+        "CLAIM-0357",
+        "CLAIM-0358",
+        "CLAIM-0359",
+        "CLAIM-0360",
+        "CLAIM-0361",
+        "TH-20261009-16",
+        "TH-20261009-17",
+        "TH-20261009-18"
+      ],
+      "sources": [
+        "PHOTO-6821",
+        "PHOTO-6823",
+        "PHOTO-6846",
+        "PHOTO-6847",
+        "PHOTO-1000046420",
+        "PHOTO-1000046421",
+        "PHOTO-1000046422",
+        "PHOTO-1000046423",
+        "V2-IMG_6822",
+        "V2-IMG_6832",
+        "NARRATIVE-TH-KUMPF-20261008-01",
+        "NARRATIVE-TH-KUMPF-20261008-02",
+        "NARRATIVE-TH-KUMPF-20261008-03"
+      ],
+      "gaps": [
+        "GAP-04"
+      ],
+      "tasks": [
+        "TASK-KUM-BEFORE",
+        "TASK-KUM-VARIANT",
+        "TASK-HOOPS",
+        "TASK-KEI"
+      ],
+      "conflicts": [
+        "CONFLICT-01",
+        "CONFLICT-02"
+      ],
+      "model_files": [
+        "data/hypothesis.parameters.json",
+        "data/calibration-v3.json",
+        "data/reconstruction-constraints.json",
+        "src/workbench/calibration.mjs"
+      ],
+      "forbidden_conclusion": "Keine Gleichheit aller eingebauten Kümpfe, keine bestätigten verborgenen Nagelwege.",
+      "expected_claim_qualifiers": {
+        "CLAIM-0040": {
+          "evidence_class": "historical-drawing",
+          "scope": "documented-design",
+          "as_built_eligible": false,
+          "unit": "mm",
+          "derived_from": null
+        },
+        "CLAIM-0041": {
+          "evidence_class": "historical-drawing",
+          "scope": "documented-design",
+          "as_built_eligible": false,
+          "unit": "mm",
+          "derived_from": null
+        },
+        "CLAIM-0042": {
+          "evidence_class": "historical-drawing",
+          "scope": "documented-design",
+          "as_built_eligible": false,
+          "unit": "mm",
+          "derived_from": null
+        },
+        "CLAIM-0043": {
+          "evidence_class": "historical-drawing",
+          "scope": "documented-design",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "CLAIM-0044": {
+          "evidence_class": "historical-drawing",
+          "scope": "documented-design",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "CLAIM-0045": {
+          "evidence_class": "historical-drawing",
+          "scope": "documented-design",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "CLAIM-0046": {
+          "evidence_class": "historical-drawing",
+          "scope": "documented-design",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "CLAIM-0047": {
+          "evidence_class": "historical-drawing",
+          "scope": "documented-design",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "CLAIM-0344": {
+          "evidence_class": "conflicting",
+          "scope": "conflict-existence-only",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "CLAIM-0356": {
+          "evidence_class": "expert-narrative",
+          "scope": "photographed-reference-kumpf",
+          "as_built_eligible": false,
+          "unit": "count",
+          "derived_from": null
+        },
+        "CLAIM-0357": {
+          "evidence_class": "expert-narrative",
+          "scope": "photographed-reference-kumpf",
+          "as_built_eligible": false,
+          "unit": "count",
+          "derived_from": null
+        },
+        "CLAIM-0358": {
+          "evidence_class": "expert-narrative",
+          "scope": "photographed-reference-kumpf",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "CLAIM-0359": {
+          "evidence_class": "expert-narrative",
+          "scope": "photographed-reference-kumpf",
+          "as_built_eligible": false,
+          "unit": "count",
+          "derived_from": null
+        },
+        "CLAIM-0360": {
+          "evidence_class": "expert-narrative",
+          "scope": "historical-manufacturing-family",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "CLAIM-0361": {
+          "evidence_class": "expert-narrative",
+          "scope": "photographed-reference-kumpf",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "TH-20261009-16": {
+          "evidence_class": "expert-narrative",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": []
+        },
+        "TH-20261009-17": {
+          "evidence_class": "expert-narrative",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": "m",
+          "derived_from": []
+        },
+        "TH-20261009-18": {
+          "evidence_class": "expert-narrative",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": "m",
+          "derived_from": []
+        }
+      },
+      "target_confirmation_from_context_allowed": false
+    },
+    {
+      "name": "Kranz",
+      "components": [
+        "COMP-RIMS",
+        "COMP-KRUEMMLINGE",
+        "COMP-SCHETTERNBRETTER"
+      ],
+      "claims": [
+        "CLAIM-0347",
+        "TH-20261009-01",
+        "TH-20261009-02",
+        "TH-20261009-03",
+        "TH-20261009-04",
+        "TH-20261009-05",
+        "TH-20261009-25",
+        "TH-20261009-26",
+        "TH-20261009-28",
+        "TH-20261009-29"
+      ],
+      "sources": [
+        "PHOTO-6849",
+        "PHOTO-6851",
+        "V2-IMG_6790",
+        "PHOTO-TH-20261009-image-1791540525839",
+        "PHOTO-TH-20261009-image-1791540812566",
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "gaps": [
+        "GAP-01",
+        "GAP-03"
+      ],
+      "tasks": [
+        "TASK-POSE",
+        "TASK-KRU-BEFORE",
+        "TASK-KRU-OPEN"
+      ],
+      "conflicts": [
+        "CONFLICT-04"
+      ],
+      "model_files": [
+        "data/reconstruction-constraints.json",
+        "src/control/property-readiness.mjs",
+        "src/workbench/expert-corrections.mjs"
+      ],
+      "forbidden_conclusion": "Keine unabhängige Feldmessung aus 1,94/2,08; kein aktueller Kranzstoß freigegeben.",
+      "expected_claim_qualifiers": {
+        "CLAIM-0347": {
+          "evidence_class": "conflicting",
+          "scope": "conflict-existence-only",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": null
+        },
+        "TH-20261009-01": {
+          "evidence_class": "expert-narrative",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": []
+        },
+        "TH-20261009-02": {
+          "evidence_class": "expert-narrative",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": []
+        },
+        "TH-20261009-03": {
+          "evidence_class": "expert-narrative",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": []
+        },
+        "TH-20261009-04": {
+          "evidence_class": "expert-narrative",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": []
+        },
+        "TH-20261009-05": {
+          "evidence_class": "expert-narrative",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": null,
+          "derived_from": []
+        },
+        "TH-20261009-25": {
+          "evidence_class": "expert-narrative",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": "m",
+          "derived_from": []
+        },
+        "TH-20261009-26": {
+          "evidence_class": "expert-narrative",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": "m",
+          "derived_from": []
+        },
+        "TH-20261009-28": {
+          "evidence_class": "derived",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": "m",
+          "derived_from": [
+            "TH-20261009-25",
+            "TH-20261009-26"
+          ]
+        },
+        "TH-20261009-29": {
+          "evidence_class": "derived",
+          "scope": "current-wheel-expert-description",
+          "as_built_eligible": false,
+          "unit": "m",
+          "derived_from": [
+            "TH-20261009-25",
+            "TH-20261009-26"
+          ]
+        }
+      },
+      "target_confirmation_from_context_allowed": false
+    }
+  ]
+}

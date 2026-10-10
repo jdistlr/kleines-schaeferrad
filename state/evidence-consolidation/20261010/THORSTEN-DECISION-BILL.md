@@ -1,3 +1,5 @@
+> **Aktuelle Fortsetzung:** [Semantische Referenzbasis v1](semantic-reference-v1/SEMANTIC-REFERENCE-V1.md) dokumentiert Einzelbildsichtung, technische Referenzkorrekturen und verbleibende Grenzen. Der nachfolgende Bericht bleibt unverändert als früherer Prüfstand erhalten. Kontextbilder sind verfügbar, ihre Objektidentität ist weiterhin unbestätigt.
+
 # Fachfragen und bestehende Untersuchungsaufträge
 
 Stand 2026-10-10. Vorlage zur Review, nicht versendet, keine Antwort oder Freigabe. Bestehende IDs aus dem asynchronen Register werden wiederverwendet. Quellen und Bildregionen stehen in EVIDENCE-CHAINS.md; vollständige Originalzuordnung in SOURCE-INVENTORY.md.

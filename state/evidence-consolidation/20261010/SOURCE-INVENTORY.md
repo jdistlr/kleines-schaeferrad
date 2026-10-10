@@ -1,3 +1,5 @@
+> **Aktuelle Fortsetzung:** [Semantische Referenzbasis v1](semantic-reference-v1/SEMANTIC-REFERENCE-V1.md) dokumentiert Einzelbildsichtung, technische Referenzkorrekturen und verbleibende Grenzen. Der nachfolgende Bericht bleibt unverändert als früherer Prüfstand erhalten. Kontextbilder sind verfügbar, ihre Objektidentität ist weiterhin unbestätigt.
+
 # Quellenbilanz und Unabhängigkeit
 
 Stand 2026-10-10. Grundlage: unveränderte Repositoryverträge und unabhängig von GitHub zurückgelesene Originalbytes. Quellenprüfung und inhaltliche Geltung sind getrennt.

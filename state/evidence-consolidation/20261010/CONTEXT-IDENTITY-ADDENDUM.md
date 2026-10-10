@@ -1,3 +1,5 @@
+> **Aktuelle Fortsetzung:** [Semantische Referenzbasis v1](semantic-reference-v1/SEMANTIC-REFERENCE-V1.md) dokumentiert Einzelbildsichtung, technische Referenzkorrekturen und verbleibende Grenzen. Der nachfolgende Bericht bleibt unverändert als früherer Prüfstand erhalten. Kontextbilder sind verfügbar, ihre Objektidentität ist weiterhin unbestätigt.
+
 # Nachtrag: Kontextbilder verfügbar, Objektidentität ungeklärt
 
 Stand 2026-10-10. Dieser Nachtrag ersetzt die frühere Aussage, IMG_6875/6876 seien nicht zugänglich. Die jetzt übergebenen Dateien IMG_6875(1).jpeg, IMG_6876(1).jpeg und zusätzlich IMG_6877(1).jpeg sind lesbar und werden unverändert unter evidence/raw/context-unidentified-20261010/ archiviert. Ohne frühere Hashes ist Byteidentität mit den damaligen Screenshots nicht nachweisbar.

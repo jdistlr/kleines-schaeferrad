@@ -1,0 +1,37 @@
+{
+  "baseline": "727a0248c0234641453a08e4ae3984e27c9f970b",
+  "purpose": "Existing renderer output equivalence for reference-only TASK-PAD change; no geometry export or new visual review",
+  "passed": true,
+  "byte_identical_output_count": 24,
+  "outputs": {
+    "output/pdf/KS-Kurzplan-A4.pdf": "cea600e20abd453f6209c2c7f3fafccc10bc7276e0a2d5500ad62e9aa5236d79",
+    "output/pdf/KS-Field-Pack-A3.pdf": "087212021f04bf9333f4d655c6b72ea3f7567123eea26af96c7de2e807e62490",
+    "output/pdf/KS-Einsatzleitung-A4.pdf": "cea600e20abd453f6209c2c7f3fafccc10bc7276e0a2d5500ad62e9aa5236d79",
+    "output/pdf/KS-Werkstatt-Aufnahmeplan-A3.pdf": "087212021f04bf9333f4d655c6b72ea3f7567123eea26af96c7de2e807e62490",
+    "public/field-pack/KS-Kurzplan-A4.pdf": "cea600e20abd453f6209c2c7f3fafccc10bc7276e0a2d5500ad62e9aa5236d79",
+    "public/field-pack/KS-Field-Pack-A3.pdf": "087212021f04bf9333f4d655c6b72ea3f7567123eea26af96c7de2e807e62490",
+    "public/field-pack/KS-Einsatzleitung-A4.pdf": "cea600e20abd453f6209c2c7f3fafccc10bc7276e0a2d5500ad62e9aa5236d79",
+    "public/field-pack/KS-Werkstatt-Aufnahmeplan-A3.pdf": "087212021f04bf9333f4d655c6b72ea3f7567123eea26af96c7de2e807e62490",
+    "public/field-visuals/GUIDE-CONTEXT.jpg": "f22c1e7401ac9e0f172518dd44cea792a8ac054de4f55343e6eb33807be91468",
+    "public/field-visuals/GUIDE-RIM.jpg": "f22c1e7401ac9e0f172518dd44cea792a8ac054de4f55343e6eb33807be91468",
+    "public/field-visuals/GUIDE-KUMPF.jpg": "1658f0e36ddb81fd7624798715382ecb9d298e56624fa7238b7d0db4934f11bb",
+    "public/field-visuals/GUIDE-CONTEXT.svg": "b6fa2bd7769bd42e0bb2549e1c2848f422686ba3280518759dae82640667dd58",
+    "public/field-visuals/GUIDE-SYSTEM.svg": "aae467cbdbc444dda59cb26af596e676c3689420bec5ffbd40dcefc41cea0d8e",
+    "public/field-visuals/GUIDE-ARM-BEFORE.jpg": "fe7c1d8f4759134274ee4dc2d2e418861464aa0ed8ff607a7ad4a2f8091a7562",
+    "public/field-visuals/GUIDE-PADDLE.jpg": "cda2cd072bdbe084a3e9acf7e832fee33b7316949032009762a5a87beac4000f",
+    "public/field-visuals/GUIDE-SYSTEM.jpg": "7fbe572c119d662ea603590ab5646a8a36ff031cddc69cdeb80376ac8059acf5",
+    "public/field-visuals/GUIDE-ARM-BEFORE.svg": "e859e8bf53e2d0118043677cd9801d520a44a7cc90f12adc365edd08ce4874d2",
+    "public/field-visuals/GUIDE-KUMPF.svg": "8d9343b30c7e0251b3a86e4df2cc29057e1703f813133367f056bb53e6fcdd26",
+    "public/field-visuals/GUIDE-RIM.svg": "b99456a8975e7a9fea0d9bc6384f25ec4f7804f05e5e9ee7c4804bf3b2b8b3d5",
+    "public/field-visuals/GUIDE-PADDLE.svg": "1af025b07bc937c629b589dd9748f9658b131afe1aa20adbfd7aefd158f7554b",
+    "public/field-visuals/GUIDE-WATER-SCAN.jpg": "7fbe572c119d662ea603590ab5646a8a36ff031cddc69cdeb80376ac8059acf5",
+    "public/field-visuals/GUIDE-WATER-SCAN.svg": "8a2ffc49aefbe0f68f0c6d3d6992925501fded8cbcf6ad9a6860e635da399d7f",
+    "public/field-visuals/GUIDE-ARM-AFTER.svg": "25891e5176ef93fd9e23f0b205da6d56f0840a102b4525d11b75cdaa9a778e68",
+    "data/visual-guides.json": "8852b38aaee569a5e147bb6a447a266c1ad5d37885d1fe2c12fcf64f17c7ef1f"
+  },
+  "manifest_changed_keys": [
+    "task_source_sha256"
+  ],
+  "old_task_source_sha256": "5240fac418bfc81c049bed6fdb8ae425daf31a02b91c955441070b7f8f446baa",
+  "new_task_source_sha256": "5fc952ac5b70a7434a9b3a9c9baccc016752b04ebd2ecad21c047484e2dca242"
+}

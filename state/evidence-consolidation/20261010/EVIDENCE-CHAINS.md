@@ -1,3 +1,5 @@
+> **Aktuelle Fortsetzung:** [Semantische Referenzbasis v1](semantic-reference-v1/SEMANTIC-REFERENCE-V1.md) dokumentiert Einzelbildsichtung, technische Referenzkorrekturen und verbleibende Grenzen. Der nachfolgende Bericht bleibt unverändert als früherer Prüfstand erhalten. Kontextbilder sind verfügbar, ihre Objektidentität ist weiterhin unbestätigt.
+
 # Drei exemplarische Beweisketten
 
 Stand 2026-10-10. Alle genannten archivierten Dateien sind vorhanden und bytegeprüft. Einzelbild-Sichtprüfung dieser Session: PHOTO-6816, PHOTO-6827, PHOTO-6823, PHOTO-6851, PHOTO-6853, PHOTO-1000046420..6423, PHOTO-TH-20261009-image-1791540525839 und PHOTO-TH-20261009-image-1791540812566. Zusätzlich Sichtung der fünf Kontaktübersichten aller 76 Transferfotos und drei Videozeitpunkte. Bildvergleich dient Beobachtung und Geltungsabgrenzung, nicht neuer Maßfreigabe.

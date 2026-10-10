@@ -1,3 +1,5 @@
+> **Aktuelle Fortsetzung:** [Semantische Referenzbasis v1](semantic-reference-v1/SEMANTIC-REFERENCE-V1.md) dokumentiert Einzelbildsichtung, technische Referenzkorrekturen und verbleibende Grenzen. Der nachfolgende Bericht bleibt unverändert als früherer Prüfstand erhalten. Kontextbilder sind verfügbar, ihre Objektidentität ist weiterhin unbestätigt.
+
 # Kleiner Stabilisierungsplan zur Entscheidung
 
 Stand 2026-10-10. Vorschlag; keine Umsetzung, keine kanonische Korrektur, keine Rekonstruktionsiteration. Die Reihenfolge folgt Abhängigkeiten und drohendem Informationsverlust, nicht einer neuen Wahrheitsskala.

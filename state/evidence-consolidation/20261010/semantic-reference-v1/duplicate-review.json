@@ -1,0 +1,1008 @@
+[
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0012",
+        "subject": "COMP-ARMS",
+        "predicate": "land_number_style",
+        "value": "gerade",
+        "unit": null,
+        "evidence_class": "historical-drawing",
+        "scope": "documented-design",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6818",
+            "region": "linke Randnotiz"
+          },
+          {
+            "source_id": "PHOTO-6819",
+            "region": "linke Randnotiz"
+          }
+        ],
+        "document_groups": [
+          "DOC-ORDER-OLD"
+        ]
+      },
+      {
+        "id": "CLAIM-0154",
+        "subject": "COMP-ARMS",
+        "predicate": "land_number_style",
+        "value": "gerade",
+        "unit": null,
+        "evidence_class": "historical-drawing",
+        "scope": "documented-design",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6831",
+            "region": "oben links"
+          }
+        ],
+        "document_groups": [
+          "DOC-ORDER-NEW"
+        ]
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0014",
+        "subject": "COMP-ARMS",
+        "predicate": "middle_arm_end_labels",
+        "value": [
+          1,
+          4
+        ],
+        "unit": null,
+        "evidence_class": "historical-drawing",
+        "scope": "documented-design",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6818",
+            "region": "Randnotiz"
+          },
+          {
+            "source_id": "PHOTO-6819",
+            "region": "Randnotiz"
+          }
+        ],
+        "document_groups": [
+          "DOC-ORDER-OLD"
+        ]
+      },
+      {
+        "id": "CLAIM-0157",
+        "subject": "COMP-ARMS",
+        "predicate": "middle_arm_end_labels",
+        "value": [
+          1,
+          4
+        ],
+        "unit": null,
+        "evidence_class": "historical-drawing",
+        "scope": "documented-design",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6831",
+            "region": "beide rechte Textblöcke"
+          }
+        ],
+        "document_groups": [
+          "DOC-ORDER-NEW"
+        ]
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0017",
+        "subject": "COMP-ARMS",
+        "predicate": "drawn_pairs",
+        "value": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "unit": null,
+        "evidence_class": "historical-drawing",
+        "scope": "documented-design",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6818",
+            "region": "beide Kreisdiagramme"
+          },
+          {
+            "source_id": "PHOTO-6819",
+            "region": "beide Kreisdiagramme"
+          }
+        ],
+        "document_groups": [
+          "DOC-ORDER-OLD"
+        ]
+      },
+      {
+        "id": "CLAIM-0158",
+        "subject": "COMP-ARMS",
+        "predicate": "drawn_pairs",
+        "value": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "unit": null,
+        "evidence_class": "historical-drawing",
+        "scope": "documented-design",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6831",
+            "region": "beide Diagramme"
+          }
+        ],
+        "document_groups": [
+          "DOC-ORDER-NEW"
+        ]
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0201",
+        "subject": "REF-POLYGON",
+        "predicate": "side_values",
+        "value": [
+          26,
+          38
+        ],
+        "unit": null,
+        "evidence_class": "historical-drawing",
+        "scope": "documented-design",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6838",
+            "region": "oben rechts / gedrehte Aufnahme"
+          },
+          {
+            "source_id": "PHOTO-6840",
+            "region": "oben rechts / gedrehte Aufnahme"
+          }
+        ],
+        "document_groups": [
+          "DOC-LAYOUT-OLD"
+        ]
+      },
+      {
+        "id": "CLAIM-0213",
+        "subject": "REF-POLYGON",
+        "predicate": "side_values",
+        "value": [
+          26,
+          38
+        ],
+        "unit": null,
+        "evidence_class": "historical-drawing",
+        "scope": "documented-design",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6841",
+            "region": "oben"
+          }
+        ],
+        "document_groups": [
+          "DOC-POLYGON"
+        ]
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0263",
+        "subject": "COMP-SHAFT",
+        "predicate": "visible_arm_zone",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6855",
+            "region": "Bildmitte"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0268",
+        "subject": "COMP-SHAFT",
+        "predicate": "visible_arm_zone",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6856",
+            "region": "Bildmitte"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0264",
+        "subject": "COMP-FASTENERS",
+        "predicate": "visible_projecting_wooden_wedges",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6855",
+            "region": "um vertikalen Arm"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0269",
+        "subject": "COMP-FASTENERS",
+        "predicate": "visible_projecting_wooden_wedges",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6856",
+            "region": "um vertikalen Arm"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0265",
+        "subject": "COMP-ARMS",
+        "predicate": "visible_shoulder_blocks",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6855",
+            "region": "an schrägen Armen"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0270",
+        "subject": "COMP-ARMS",
+        "predicate": "visible_shoulder_blocks",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6856",
+            "region": "an schrägen Armen"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0266",
+        "subject": "COMP-RADSTATT",
+        "predicate": "visible_posts_and_crossbeam",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6855",
+            "region": "Hintergrund"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0271",
+        "subject": "COMP-RADSTATT",
+        "predicate": "visible_posts_and_crossbeam",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6856",
+            "region": "Hintergrund"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0267",
+        "subject": "COMP-SHAFT",
+        "predicate": "surface",
+        "value": "strong weathering and attached fibres/deposits",
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6855",
+            "region": "Vordergrund"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0272",
+        "subject": "COMP-SHAFT",
+        "predicate": "surface",
+        "value": "strong weathering and attached fibres/deposits",
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6856",
+            "region": "Vordergrund"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0273",
+        "subject": "COMP-RIMS",
+        "predicate": "distinct_ring_planes_visible",
+        "value": 2,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6858",
+            "region": "Rad hinter Trog"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0281",
+        "subject": "COMP-RIMS",
+        "predicate": "distinct_ring_planes_visible",
+        "value": 2,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6859",
+            "region": "Rad hinter Trog"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0274",
+        "subject": "COMP-KUEMPFE",
+        "predicate": "mounted_on_near_ring",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6858",
+            "region": "oberer und rechter Kranz"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0282",
+        "subject": "COMP-KUEMPFE",
+        "predicate": "mounted_on_near_ring",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6859",
+            "region": "oberer und rechter Kranz"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0275",
+        "subject": "COMP-PADDLES",
+        "predicate": "project_beyond_rim",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6858",
+            "region": "oberer/rechter Umfang"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0283",
+        "subject": "COMP-PADDLES",
+        "predicate": "project_beyond_rim",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6859",
+            "region": "oberer/rechter Umfang"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0276",
+        "subject": "COMP-TROUGH",
+        "predicate": "open_wooden_trough_visible",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6858",
+            "region": "quer vor oberem Radbereich"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0284",
+        "subject": "COMP-TROUGH",
+        "predicate": "open_wooden_trough_visible",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6859",
+            "region": "quer vor oberem Radbereich"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0277",
+        "subject": "COMP-RINNE",
+        "predicate": "outlet_channel_extends_left",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6858",
+            "region": "links vom Trog"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0285",
+        "subject": "COMP-RINNE",
+        "predicate": "outlet_channel_extends_left",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6859",
+            "region": "links vom Trog"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0278",
+        "subject": "COMP-RADSTATT",
+        "predicate": "braced_timber_support",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6858",
+            "region": "Vordergrund"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0286",
+        "subject": "COMP-RADSTATT",
+        "predicate": "braced_timber_support",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6859",
+            "region": "Vordergrund"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0279",
+        "subject": "COMP-BEARINGS",
+        "predicate": "near_shaft_end_occluded",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6858",
+            "region": "hinter vorderer Lager-/Tragzone"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0287",
+        "subject": "COMP-BEARINGS",
+        "predicate": "near_shaft_end_occluded",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6859",
+            "region": "hinter vorderer Lager-/Tragzone"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0280",
+        "subject": "COMP-RIMS",
+        "predicate": "lower_part_submerged_or_occluded",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6858",
+            "region": "unterer Bildbereich"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0288",
+        "subject": "COMP-RIMS",
+        "predicate": "lower_part_submerged_or_occluded",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6859",
+            "region": "unterer Bildbereich"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0289",
+        "subject": "COMP-RIMS",
+        "predicate": "segmented_timber_rim",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6860",
+            "region": "oberer ferner Ring"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0296",
+        "subject": "COMP-RIMS",
+        "predicate": "segmented_timber_rim",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6861",
+            "region": "oberer ferner Ring"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0290",
+        "subject": "COMP-ARMS",
+        "predicate": "connect_shaft_zone_to_ring",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6860",
+            "region": "Bildmitte"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0297",
+        "subject": "COMP-ARMS",
+        "predicate": "connect_shaft_zone_to_ring",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6861",
+            "region": "Bildmitte"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0291",
+        "subject": "COMP-PADDLES",
+        "predicate": "span_between_ring_regions",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6860",
+            "region": "oben und unten"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0298",
+        "subject": "COMP-PADDLES",
+        "predicate": "span_between_ring_regions",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6861",
+            "region": "oben und unten"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0292",
+        "subject": "COMP-FASTENERS",
+        "predicate": "projecting_rim_pins",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6860",
+            "region": "am fernen Kranz"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0299",
+        "subject": "COMP-FASTENERS",
+        "predicate": "projecting_rim_pins",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6861",
+            "region": "am fernen Kranz"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0293",
+        "subject": "COMP-SHAFT",
+        "predicate": "two_separate_arm_zones_visible",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6860",
+            "region": "an Welle"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0300",
+        "subject": "COMP-SHAFT",
+        "predicate": "two_separate_arm_zones_visible",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6861",
+            "region": "an Welle"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0294",
+        "subject": "COMP-RIMS",
+        "predicate": "rim_joint_overlap_blocks_visible",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6860",
+            "region": "oben/rechts"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0301",
+        "subject": "COMP-RIMS",
+        "predicate": "rim_joint_overlap_blocks_visible",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6861",
+            "region": "oben/rechts"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  },
+  {
+    "claims": [
+      {
+        "id": "CLAIM-0295",
+        "subject": "COMP-RADSTATT",
+        "predicate": "occludes_wheel",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6860",
+            "region": "oben und seitlich"
+          }
+        ],
+        "document_groups": []
+      },
+      {
+        "id": "CLAIM-0302",
+        "subject": "COMP-RADSTATT",
+        "predicate": "occludes_wheel",
+        "value": true,
+        "unit": null,
+        "evidence_class": "observed-current",
+        "scope": "photographed-current-state",
+        "as_built_eligible": false,
+        "provenance": [
+          {
+            "source_id": "PHOTO-6861",
+            "region": "oben und seitlich"
+          }
+        ],
+        "document_groups": []
+      }
+    ],
+    "decision": "retain; tuple equality is a candidate only, no source-independence or identity inference"
+  }
+]

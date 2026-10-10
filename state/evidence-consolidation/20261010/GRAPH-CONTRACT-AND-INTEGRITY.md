@@ -1,3 +1,5 @@
+> **Aktuelle Fortsetzung:** [Semantische Referenzbasis v1](semantic-reference-v1/SEMANTIC-REFERENCE-V1.md) dokumentiert Einzelbildsichtung, technische Referenzkorrekturen und verbleibende Grenzen. Der nachfolgende Bericht bleibt unverändert als früherer Prüfstand erhalten. Kontextbilder sind verfügbar, ihre Objektidentität ist weiterhin unbestätigt.
+
 # Bestehender Graph und Referenzintegrität
 
 Stand: 2026-10-10. Lesender Snapshot der Fachverträge auf `9c1bf563465b89e4aeded9935775efe0b17c3e26`. Spätere Berichtcommits verändern diese Fachverträge nicht. Reproduktion: `python state/evidence-consolidation/20261010/audit-evidence.py`. Vollständige Ergebnisse samt JSON-Pointern: `audit-results.json`. Kein neues Laufzeitmodell.
