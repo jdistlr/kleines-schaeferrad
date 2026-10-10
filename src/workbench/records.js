@@ -1,4 +1,6 @@
 export const SCHEMA='ks-field-capture/v1';
+const storagePrefix=import.meta.env?.PUBLIC_STORAGE_NAMESPACE;
+const workbenchDatabase=storagePrefix?storagePrefix+'-field-workbench':'ks-field-workbench';
 export const kinds=['measurement','observation','identification','expert-narrative','risk'];
 export function validateRecord(r){
  if(!r||typeof r!=='object'||!/^OBS-/.test(r.id)||!kinds.includes(r.kind))throw Error('Ungültiger Observation Record.');
@@ -17,6 +19,6 @@ export function mergeImport(existing,payload){
  for(const r of payload.records){validateRecord(r);if(map.has(r.id)&&JSON.stringify(map.get(r.id))!==JSON.stringify(r))throw Error(`ID-Konflikt ${r.id}: nichts importiert; Original und Import separat sichern.`);map.set(r.id,r)}
  return [...map.values()];
 }
-export function openStore(){return new Promise((resolve,reject)=>{const req=indexedDB.open('ks-field-workbench',1);req.onupgradeneeded=()=>req.result.createObjectStore('state');req.onerror=()=>reject(req.error);req.onsuccess=()=>resolve(req.result)})}
+export function openStore(){return new Promise((resolve,reject)=>{const req=indexedDB.open(workbenchDatabase,1);req.onupgradeneeded=()=>req.result.createObjectStore('state');req.onerror=()=>reject(req.error);req.onsuccess=()=>resolve(req.result)})}
 export function readStore(db){return new Promise((resolve,reject)=>{const req=db.transaction('state').objectStore('state').get('session');req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)})}
 export function writeStore(db,value){return new Promise((resolve,reject)=>{const tx=db.transaction('state','readwrite');tx.objectStore('state').put(value,'session');tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error||Error('Speicherung abgebrochen'))})}

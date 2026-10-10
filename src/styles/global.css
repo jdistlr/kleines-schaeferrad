@@ -106,3 +106,9 @@ h3{font-size:1rem}
   .footer-compact{align-items:flex-start;flex-direction:column}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* R4: intrinsic columns can reflow with enlarged text rather than overlap. */
+.home-hero{grid-template-columns:repeat(auto-fit,minmax(min(100%,28em),1fr))}
+.home-hero-copy,.home-hero-visual{min-width:0;max-width:100%;overflow-wrap:anywhere}
+.home-hero h1{overflow-wrap:anywhere}.site-nav,.header-inner{flex-wrap:wrap}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

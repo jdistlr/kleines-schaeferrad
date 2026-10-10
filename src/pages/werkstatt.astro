@@ -1,5 +1,7 @@
 ---
 import '@fontsource-variable/manrope';
+import WorkspaceBridge from '../components/WorkspaceBridge.astro';
+import '../styles/workspace-bridge.css';
 import '../styles/workbench.css';
 import {href} from '../lib/paths';
 ---
@@ -13,6 +15,7 @@ import {href} from '../lib/paths';
   <link rel="icon" href={href('favicon.svg')}/>
 </head>
 <body>
+<WorkspaceBridge area="construction"/>
 <a class="skip" href="#model-heading">Direkt zum Arbeitsmodell</a>
 <header class="wb-header">
   <a href={href('')}>Kleines Schäferrad</a>
@@ -25,6 +28,7 @@ import {href} from '../lib/paths';
 
 <main id="workbench" data-base={href('')}>
   <div class="wb-statebar"><p id="storage-status" role="status">Lokales Arbeitsprotokoll wird geladen …</p><p>X: Welle · Z: oben · Seitenzuordnung vor Ort bestätigen</p></div>
+  <section class="work-question" aria-labelledby="work-question-title"><small>ARBEITSFRAGE · AUSGEWÄHLTES BAUTEIL</small><h1 id="work-question-title">Was ist am heutigen Rad noch offen?</h1><p id="work-question-context">Bauteil auswählen und die zugehörigen Quellen prüfen.</p><a href="#parts">Bauteil auswählen</a><a href="#selection">Eigenschaft prüfen</a><a id="work-field-link" href={href('feld/')}>Befund vor Ort aufnehmen</a><p id="work-context-notice" role="status"></p></section>
   <section class="model-shell" aria-labelledby="model-heading">
     <div class="model-title">
       <div><span class="eyebrow">Arbeitsmodell</span><h2 id="model-heading">Das Rad und sein Tragwerk</h2></div>
@@ -32,7 +36,7 @@ import {href} from '../lib/paths';
     </div>
 
     <div class="viewer-toolbar">
-      <label>Modell<select id="model-mode"><option value="brute">Rekonstruktionsvorschlag · ITER-003</option><option value="truth">Truth · Quellengeometrie, Maße offen</option></select></label><label>Überlappung<select id="overlap-direction"><option value="1">A · führende Richtung</option><option value="-1">B · Gegenrichtung prüfen</option></select></label><label>Ausfluss (Kandidat)<select id="jet-speed"><option value="1.8">1,8 m/s · führend</option><option value="1">1,0 m/s · Vergleich</option><option value="0">0 m/s · nur Raddrehung</option></select></label><label>Schaufelfläche<select id="paddle-pitch"><option value="0">X + radial · Kandidat</option><option value="15">15° Anstellung · Alternative</option><option value="90">X + tangential · V2-Vergleich</option></select></label><label for="scene-mode">Ansicht<select id="scene-mode"><optgroup label="Das System"><option value="gesamt">Gesamtanlage</option><option value="radkoerper">Radkörper</option><option value="tragwerk">Tragwerk</option><option value="betrieb">Betrieb</option></optgroup><optgroup label="Bauteile"><option value="welle">Welle / Arme</option><option value="kranz">Kranz</option><option value="kumpf">Kumpf / Schaufel</option><option value="lager">Lager</option><option value="trog">Trog / Rinne</option></optgroup><optgroup label="Genauer ansehen"><option value="exploded">Auseinandergezogen</option><option value="schnitt">Schnitt</option><option value="evidenz">Quellenstatus</option><option value="scan">Scan-Abgleich</option></optgroup></select></label>
+      <label>Modell<select id="model-mode"><option value="brute">Rekonstruktionskandidat · ITER-003</option><option value="truth">Quellenbasierte Teilgeometrie · Maße offen</option></select></label><label for="scene-mode">Ansicht<select id="scene-mode"><optgroup label="Das System"><option value="gesamt">Gesamtanlage</option><option value="radkoerper">Radkörper</option><option value="tragwerk">Tragwerk</option><option value="betrieb">Betrieb</option></optgroup><optgroup label="Bauteile"><option value="welle">Welle / Arme</option><option value="kranz">Kranz</option><option value="kumpf">Kumpf / Schaufel</option><option value="lager">Lager</option><option value="trog">Trog / Rinne</option></optgroup><optgroup label="Genauer ansehen"><option value="exploded">Auseinandergezogen</option><option value="schnitt">Schnitt</option><option value="evidenz">Quellenstatus</option><option value="scan">Scan-Abgleich</option></optgroup></select></label>
       <button data-view="gesamt" aria-pressed="true">Gesamtanlage</button><button data-view="betrieb">Wasserweg zeigen</button>
       <label class="inline-check"><input id="isolate" type="checkbox"/> Nur Auswahlbereich</label>
     </div>
@@ -64,6 +68,7 @@ import {href} from '../lib/paths';
     <details class="technical-settings">
       <summary>Darstellung und Konstruktionsvarianten</summary>
       <div class="technical-grid">
+<div><h3>Synthetische Betriebsvarianten</h3><label>Überlappung<select id="overlap-direction"><option value="1">A · Modellannahme</option><option value="-1">B · Gegenrichtung prüfen</option></select></label><label>Ausfluss (Kandidat)<select id="jet-speed"><option value="1.8">1,8 m/s · Modellannahme</option><option value="1">1,0 m/s · Vergleich</option><option value="0">0 m/s · nur Raddrehung</option></select></label><label>Schaufelfläche<select id="paddle-pitch"><option value="0">X + radial · Kandidat</option><option value="15">15° Anstellung · Alternative</option><option value="90">X + tangential · V2-Vergleich</option></select></label></div>
         <div>
           <h3>Welle / Arme</h3>
           <label>Armverlauf

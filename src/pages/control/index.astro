@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/ControlLayout.astro';
+import Icon from '../../components/ControlIcon.astro';
+import {Image} from 'astro:assets';
+import hero from '../../../evidence/raw/IMG_6858.jpeg';
+import {href} from '../../lib/paths';
+import {model,expertClaims,narrative,sourceUrl} from '../../control/model.js';
+if(!narrative)throw new Error("Missing required source contract");
+---
+<Layout title="Das System verstehen.">
+<p class="cp-intro">Ein Arbeitsraum für Wasser, Konstruktion und das Wissen am Rad. Von der offenen Frage zur Quelle — und zurück an die Messstelle.</p>
+<div class="cp-banner"><p><strong>Vor Stillsetzen: Wasserübergabe sichern.</strong><br/>Betrieb, Wasserlinie und Übergabe gehen als Zusammenhang verloren.</p><a href={href('control/water/')}>Wasserweg prüfen →</a></div>
+<div class="cp-split">
+<section class="cp-panel" aria-labelledby="system-title"><div class="cp-panel-head"><div><h2 id="system-title">Kleines Schäferrad · Regnitz</h2><p>Originalansicht des eingebauten Rades</p></div><span class="cp-label">Beobachtung</span></div>
+<figure class="cp-figure"><Image src={hero} alt="Hölzernes Schäferrad mit Tragwerk im Fluss" widths={[640,960,1280]} sizes="(max-width: 1100px) 100vw, 55vw" loading="eager"/><figcaption>IMG_6858 · Einbauzusammenhang. Das Foto bestätigt keine Ist-Maße.</figcaption></figure>
+<div class="cp-linkrow"><a class="cp-primary" data-context-link="construction" href={href('werkstatt/')}>Im 3D-Modell prüfen <Icon name="construction"/></a><a class="cp-secondary" href={href('control/evidence/')}>Quellen nachvollziehen <Icon name="arrow"/></a></div></section>
+<aside class="cp-panel" aria-labelledby="revision-title"><div class="cp-panel-head"><h2 id="revision-title">Revision & Gültigkeit</h2><span class="cp-label open">Maße offen</span></div><div class="cp-panel-body"><dl class="cp-facts"><div><dt>Aktuelles Arbeitsmodell</dt><dd>{model.revision}<small>Quellenbasierte Teilgeometrie und Rekonstruktionskandidat getrennt betrachten.</small></dd></div><div><dt>Torstens Fachkorrekturen</dt><dd>{expertClaims.length} Aussagen<small>Ein gemeinsamer Erzählquellenstamm mit {narrative.claim_ids.length} verknüpften Aussagen; keine {expertClaims.length} unabhängigen Messungen.</small></dd></div><div><dt>Fachlich präzisierter Bezug</dt><dd>Rinnenunterkante am A-Bock<small>TH-37 · Torstens Angabe: 0,80 m ab Boden. Keine unabhängige Nachmessung.</small></dd></div><div><dt>Technische Grenzen</dt><dd>F02 / F03 · Engineering NO-GO<small>Nagelpfade und stationäre Auflager bleiben ungeklärt.</small></dd></div></dl><a class="cp-secondary" style="margin-top:20px" href={sourceUrl('state/TORSTEN-FACHREVIEW-20261010.md')}>Fachreview lesen ↗</a></div></aside>
+</div>
+<section class="cp-section"><div class="cp-section-title"><h2>Nächste Arbeitsfragen</h2><span class="cp-note">Frage → prüfen → aufnehmen</span></div>
+<article class="cp-question"><span>01</span><div><h3>Wo übergibt der Kumpf sein Wasser?</h3><p>Wasserlinie, Mündung, Trog und Rinne im selben Bezug erfassen. Beobachtung und Funktionsmodell vergleichen.</p></div><a href={href('control/water/?part=COMP-TROUGH&property=GAP-07')}>Wasserweg öffnen →</a></article>
+<article class="cp-question"><span>02</span><div><h3>Welche Maße gelten am heutigen Rad?</h3><p>Fachauskunft, historische Zeichnung und aktuelle Messung eigenschaftsbezogen auseinanderhalten.</p></div><a href={href('control/evidence/?part=COMP-RIMS&property=GAP-03')}>Kranzquellen prüfen →</a></article>
+<article class="cp-question"><span>03</span><div><h3>Was muss vor dem Lösen erhalten bleiben?</h3><p>{model.tasks.length} bestehende Aufgaben führen durch Einbaulage, Partner, Messendpunkte und Originalfotos.</p></div><a data-context-link="field" href={href('feld/')}>Feldarbeit fortsetzen →</a></article></section>
+</Layout>

@@ -1,0 +1,79 @@
+name: Pages preview preservation and isolation
+on:
+  pull_request:
+    paths:
+      - 'scripts/**'
+      - 'src/**'
+      - 'tests/**'
+      - '.github/workflows/pages-preview-validation.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - name: Find preserved production artifact
+        id: baseline
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const artifacts = await github.paginate(github.rest.actions.listArtifactsForRepo, {...context.repo, name: 'pages-production-baseline-606908b', per_page: 100});
+            const archive = artifacts.find(a => !a.expired);
+            core.setOutput('artifact', archive ? archive.id : 11662297630);
+            core.setOutput('run', archive ? archive.workflow_run.id : 38033011709);
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          artifact-ids: ${{ steps.baseline.outputs.artifact }}
+          run-id: ${{ steps.baseline.outputs.run }}
+          merge-multiple: true
+          path: baseline-archive
+      - name: Verify immutable production archive
+        run: |
+          ls -l baseline-archive/artifact.tar
+          sha256sum baseline-archive/artifact.tar
+          echo '66f0e355e2fb024d6114e0161fe1811e9844bacd64c5ff62308a1ff9adf37e68  baseline-archive/artifact.tar' | sha256sum -c -
+          mkdir baseline-dist
+          tar --no-same-owner -xf baseline-archive/artifact.tar -C baseline-dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pages-production-baseline-606908b
+          path: baseline-archive/artifact.tar
+          retention-days: 90
+          compression-level: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install reportlab==4.4.3
+      - run: sudo apt-get update && sudo apt-get install -y fonts-dejavu-core
+      - run: npm ci --no-audit --no-fund
+      - run: npm install --no-save --package-lock=false playwright@1.62.1
+      - run: npx playwright install --with-deps chromium
+      - run: npm run check
+      - run: node --test tests/*.test.mjs
+      - run: node scripts/verify-control-preservation.mjs
+      - run: python scripts/verify_evidence.py
+      - run: npm run build
+        env:
+          BASE_PATH: /kleines-schaeferrad/review/pr-18
+          PUBLIC_STORAGE_NAMESPACE: ks-preview-pr18
+      - run: node scripts/compose-pages-preview.mjs baseline-dist dist combined-dist
+      - run: node tests/browser-pages-preview.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pages-preview-validation
+          path: test-results/
+          retention-days: 90

@@ -1,0 +1,13 @@
+{
+  "archive_sha256": "232b2884ad8ae9d8bcaefec4965d43bed0f2dbfef0fbcf8046cbbdbd3996ebc2",
+  "verified_files": {
+    "pages-preview-live/results.json": "50db47623251bfc7b5ac3a0e34f8dc9cc697800fdcfa9024fd4554cb131a7060",
+    "pages-preview-live/acceptance/results.json": "0749e49b7860ac698cee2858dd8fb044c8ad1ff846839a8f2da362401a2fa29b",
+    "pages-preview/production-live-before.json": "cb9a6d6007c444ded551d0e3f33123fbcd219eddc82af635628043386f31e396",
+    "pages-preview/production-sha256.json": "1a75a89f349340c139e3cfa9568675c9de77300d0ba98dd97d7f1ad027ed3bd7",
+    "pages-preview/composition.json": "057e7cf0007f03ce8ca681570adb25c8982a9ddb1a70521a6d873c187b4b9672",
+    "pages-preview-live/acceptance/phone390-control-water-.png": "9a5c95254ef7e04c15aa599dd6e37af8f91cbca9f86d2f162d8237cbae83004d",
+    "pages-preview-live/acceptance/phone390-werkstatt-.png": "eeaba73c2de70fee7091eedc79c12b5222bce144b74da50ab7a3a37357095c42",
+    "pages-preview-live/acceptance/phone390-feld-.png": "c24c9dae73b9ba9e676422c52ebcf23f9f5a150a094bbc96f4564a9b5b1fff92"
+  }
+}

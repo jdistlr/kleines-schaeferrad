@@ -1,0 +1,43 @@
+{
+  "baseline": "606908bfe8cf1ab0560b337f37d92dd90d320dee",
+  "head": "c1efd63b66ccb8d9c620f92d2cbbbcd3cbdd5656",
+  "protectedPaths": [
+    "data",
+    "evidence",
+    "output",
+    "src/workbench/geometry.mjs",
+    "src/workbench/calibration.mjs",
+    "src/workbench/expert-corrections.mjs"
+  ],
+  "changed": "",
+  "expertStatements": 39,
+  "taskOrder": [
+    "TASK-ORIENT",
+    "TASK-DATUM",
+    "TASK-POSE",
+    "TASK-ARM-BEFORE",
+    "TASK-ARM-RELEASE",
+    "TASK-MORTISE",
+    "TASK-ARM-PROFILE",
+    "TASK-KRU-BEFORE",
+    "TASK-KRU-OPEN",
+    "TASK-COUNT",
+    "TASK-KUM-BEFORE",
+    "TASK-KUM-VARIANT",
+    "TASK-HOOPS",
+    "TASK-PAD",
+    "TASK-KEI",
+    "TASK-BEARING",
+    "TASK-WATER",
+    "TASK-SCAN",
+    "TASK-CRAFT",
+    "TASK-REGISTER",
+    "TASK-FINAL"
+  ],
+  "annotatedOriginal": {
+    "path": "evidence/raw/torsten-20261010/5f0dbdce-2f7a-40c3-9b75-c66153bb40fd.jpeg",
+    "sha256": "048708cdf56fd72025b12c1bc1e0bd4bc8c201dc74654c4fb2c55ed45fe23eb5"
+  },
+  "status": "passed",
+  "meaning": "Byte-preservation, not independent metric or engineering acceptance"
+}

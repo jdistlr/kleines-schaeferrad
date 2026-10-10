@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const [production,preview,target]=process.argv.slice(2).map(p=>path.resolve(p));
+assert.ok(production&&preview&&target);
+assert.ok(!fs.existsSync(target),'Target must be new; never overwrite a deployment tree');
+const digest=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+function files(root,rel=''){return fs.readdirSync(path.join(root,rel),{withFileTypes:true}).flatMap(e=>{const p=path.join(rel,e.name);assert.ok(!e.isSymbolicLink());return e.isDirectory()?files(root,p):[p]})}
+assert.ok(!fs.existsSync(path.join(production,'review')),'Reserved review path already exists');
+const hashes=Object.fromEntries(files(production).sort().map(p=>[p,digest(path.join(production,p))]));
+fs.cpSync(production,target,{recursive:true});
+fs.mkdirSync(path.join(target,'review'),{recursive:true});
+fs.cpSync(preview,path.join(target,'review/pr-18'),{recursive:true});
+for(const [p,hash] of Object.entries(hashes))assert.equal(digest(path.join(target,p)),hash,p);
+const manifest=JSON.parse(fs.readFileSync(path.join(preview,'offline-manifest.json')));
+assert.equal(manifest.scope,'/kleines-schaeferrad/review/pr-18/');
+assert.ok(manifest.cache_name.startsWith('ks-preview-pr18-cache-'));
+assert.ok(manifest.urls.every(u=>u.startsWith(manifest.scope)));
+fs.mkdirSync('test-results/pages-preview',{recursive:true});
+fs.writeFileSync('test-results/pages-preview/production-sha256.json',JSON.stringify(hashes,null,2));
+fs.writeFileSync('test-results/pages-preview/composition.json',JSON.stringify({status:'passed',productionFiles:Object.keys(hashes).length,previewFiles:files(preview).length,productionUnchanged:true,previewScope:manifest.scope,previewCache:manifest.cache_name},null,2));
+console.log('Production preserved byte-for-byte:',Object.keys(hashes).length,'files');
