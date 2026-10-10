@@ -38,3 +38,13 @@ This is a small additive contract over existing files, not a new ontology, migra
 5. Independent review of alias and TH-37 semantics.
 
 Fresh byte and reciprocal-link verification is recorded in [STATE-SOURCE-REVIEW-EVIDENCE.md](STATE-SOURCE-REVIEW-EVIDENCE.md). Torsten’s attributed semantic clarifications are preserved in [TORSTEN-FACHREVIEW-20261010.md](TORSTEN-FACHREVIEW-20261010.md); they are not independent metric verification. The final-commit CI result and review gate decision are recorded in PR #17 after this commit. `SOURCE TRANSFER BLOCKED` remains a separate unresolved source-transfer blocker.
+
+## EO-06: gemeinsamer Quellenstamm für Kommunikationskanäle
+
+WhatsApp, E-Mail, Projektchat, Gesprächsnotizen, Sprachnachrichten, Fotos und Dokumente können Quellen desselben Projekts sein. Übermittelte Fachkommunikation wird bei Eingang unter `evidence/contributions/` versioniert und mit ihrer fachlichen Auswertung verknüpft. Der Kanal allein entscheidet nicht über die fachliche Belastbarkeit.
+
+Pro Eingang festhalten: stabile Quellenkennung, Sprecher, Übermittler, bekannter Kanal, bekannte Zeit bzw. ausdrücklich unbekannte Zeit, empfangener Wortlaut oder gekennzeichnete Zusammenfassung, betroffene Claims/Komponenten und zugehörige Anhänge. Direkter Empfang, weitergereichte Aussage, Transkript und Interpretation bleiben unterscheidbar. Keine unbekannten Nachrichtenzeiten oder Originalformulierungen ergänzen.
+
+Textaufnahme, Dateisicherung und fachlicher Prüfstatus werden getrennt geführt. Ein fehlender Anhang verhindert nicht die Aufnahme des vorliegenden Textes. Empfangene Bild-/Audio-/Exportdateien unverändert mit Hash archivieren; bei fehlenden Bytes den Transferstatus offen ausweisen. Weiterleitungen desselben Inhalts sind keine zusätzlichen unabhängigen Zeugen. Später nachgelieferte Originale ergänzen denselben Quelleneintrag.
+
+Erster expliziter Kommunikationseintrag: [COMM-TORSTEN-20261010](../evidence/contributions/torsten-20261010-kommunikation.md), mit Rückverweis aus Torstens Fachreview. Diese Regel führt keinen automatischen WhatsApp-Import ein und ändert keine bestehenden Freigabebedingungen.

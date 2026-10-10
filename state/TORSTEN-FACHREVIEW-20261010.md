@@ -27,3 +27,7 @@ Vom Nutzer übermittelte wörtliche Antworten Torstens:
 - Aussage/Übermittlung und Interpretation bleiben getrennt.
 - Keine Änderung an TH-37 Wert, Material, Passung, Modell oder F02/F03.
 - Fachlicher Inhalt kann als Torstens Stellungnahme dokumentiert werden. Ein förmlicher Freigabeakt für technische Zeichnungen, Konstruktion oder Feldarbeit ist damit **nicht** verbunden.
+
+## Kommunikation im Quellenstamm
+
+Der zugehörige Eingang ist als [COMM-TORSTEN-20261010](../evidence/contributions/torsten-20261010-kommunikation.md) versioniert: Sprecher, Übermittler, Kanalhinweis, empfangene Formulierungen und Anhangsstatus. Die vorliegende Textauskunft bleibt unabhängig vom offenen Bildtransfer als zugeschriebene Fachquelle erfasst.
