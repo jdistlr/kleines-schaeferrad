@@ -20,18 +20,6 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-          cache: npm
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - run: pip install reportlab==4.4.3
-      - run: sudo apt-get update && sudo apt-get install -y fonts-dejavu-core
-      - run: npm ci --no-audit --no-fund
-      - run: npm install --no-save --package-lock=false playwright@1.62.1
-      - run: npx playwright install --with-deps chromium
       - name: Find preserved production artifact
         id: baseline
         uses: actions/github-script@v7
@@ -50,6 +38,8 @@ jobs:
           path: baseline-archive
       - name: Verify immutable production archive
         run: |
+          ls -l baseline-archive/artifact.tar
+          sha256sum baseline-archive/artifact.tar
           echo '9a31ad078b177153348e4d5ce0915f83c1d60d97f17abba00fec816bd58e4f5f  baseline-archive/artifact.tar' | sha256sum -c -
           mkdir baseline-dist
           tar --no-same-owner -xf baseline-archive/artifact.tar -C baseline-dist
@@ -59,6 +49,18 @@ jobs:
           path: baseline-archive/artifact.tar
           retention-days: 90
           compression-level: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install reportlab==4.4.3
+      - run: sudo apt-get update && sudo apt-get install -y fonts-dejavu-core
+      - run: npm ci --no-audit --no-fund
+      - run: npm install --no-save --package-lock=false playwright@1.62.1
+      - run: npx playwright install --with-deps chromium
       - run: npm run check
       - run: node --test tests/*.test.mjs
       - run: node scripts/verify-control-preservation.mjs
