@@ -1,45 +1,20 @@
-# Quellenzugriff: Originalarchiv lesbar, Remote-Sicherung blockiert
+# Quellenzugriff: Originaltransfer erfolgreich gesichert
 
-Stand: 2026-10-10. **EVIDENCE SOURCE ACCESS BLOCKED — REVIEW READY**
+Stand 2026-10-10. **ORIGINAL SOURCE TRANSFER VERIFIED — 77/77**
 
-## Verifizierter Eingang
+Der frühere Blockadestatus ist aufgehoben. Der verbundene GitHub-Konnektor unterstützt Binärblobs über Base64; die zuvor dokumentierte Schlussfolgerung, es gebe keinen nutzbaren Binärtransfer, war falsch. Base64 ist hier ausschließlich Transportkodierung: im Repository liegen unveränderte Originalbytes, keine Text-Ersatzdateien.
 
-- ZIP: `SCHAEFERRAD-ORIGINALTRANSFER-76-FOTOS-1-VIDEO(1).zip`, 64.916.510 Bytes.
-- ZIP-SHA-256: `0402a328404f7121b0679aaae0648f556197060a1a288a7d56d46efe10ac6ad9`.
-- ZIP-CRC vollständig fehlerfrei; 78 Einträge: 76 JPEG, 1 MP4, 1 JSON-Inventar.
-- Alle 76 JPEGs vollständig mit Pillow dekodiert; Video vollständig mit `ffmpeg -v error -i IMG_6857.mp4 -f null -` dekodiert, Exit 0, keine Fehlerausgabe.
-- SHA-256 und Bytegrößen aller 77 Originaldateien stimmen mit `manifest/quelleninventur.json` überein. Maschinenlesbarer Nachweis: `original-transfer-checksums.json`.
-- 74 unterschiedliche Foto-Bytefolgen: die Paare IMG_6829(1)/(2) und IMG_6838(1)/(2) sind bereits im Eingangsmanifest als byteidentisch ausgewiesen. Alle 76 Dateien bleiben erhalten. Keine Aussage über die Zahl unabhängiger Originalblätter.
-- Fehlende separat angehängte JPEG-Pfade verhindern diese Archivprüfung nicht. Die separaten Anhänge wurden nicht als zusätzlich verifiziert ausgegeben.
+- Originalarchiv vollständig gelesen: 76 JPEG, 1 MP4, 1 Inventar; CRC, JPEG-Decoding, Video-Decoding und alle 77 Sollprüfsummen erfolgreich.
+- Fotos und Inventar wurden als unveränderte Git-Blobs aufgenommen. Bestehende byteidentische Git-Objekte wurden wiederverwendet; jeder Originaldateiname bleibt erhalten.
+- Der Videoaufruf mit 17.877.728 Base64-Zeichen überschritt das vom Konnektor tatsächlich gemeldete **16-MiB-Anfragelimit**. Transport deshalb in drei Binärteilen (6.291.456 / 6.291.456 / 825.383 Bytes), jeweils mit SHA-256; geordnete Zusammenfügung ohne Transkodierung.
+- Transfercommit: `8b13d16643a1fb63b4d6e77734733084345fc0dc`.
+- GitHub-Lauf: https://github.com/jdistlr/kleines-schaeferrad/actions/runs/38061334600 — erfolgreich; rekonstruiertes Video und Prüfnachweis in `9c1bf563465b89e4aeded9935775efe0b17c3e26`.
+- Danach unabhängiger neuer HTTPS-Checkout direkt von GitHub ohne lokale Objektalternativen. Nach Fast-forward auf `9c1bf56` wurden alle 77 Dateien per SHA-256 und Größe geprüft; zusätzlich direkter Bytevergleich gegen die ZIP-Einträge. Auch das Inventar ist byteidentisch.
+- Vollständiger Rücklesenachweis: `remote-original-verification.json`; Sollwerte: `original-transfer-checksums.json`; Zusammensetzung: `video-reassembly-receipt.json` und `video-transfer/parts.json`.
+- Fotos: 76 Eingänge, 74 unterschiedliche Bytefolgen. Dies sagt nichts über die Zahl unabhängiger Originalblätter. Kein Hochstufen fachlicher Aussagen durch Dubletten.
 
-## Repository und Erhaltung
+Die 30 zusätzlich eingeblendeten Einzelbildpfade fehlten in dieser Laufzeit; ihre Fehlermeldungen sind vom intakten ZIP getrennt. Alle hier als gesichert bezeichneten Originale stammen aus dem ZIP und wurden gegen dieses geprüft.
 
-PR #20 geprüft: offen, Draft, Head `665d8be543a276082826c212f16cfd5c231f9bcf`, Branch `work/evidence-graph-consolidation-20261010`, Basis `design/lab-ordnung-entwurf-20261010`. PR #19 geprüft: offen, Draft, Head `704c114a2ba0cd43db8e121df83b1981c7e9cace`. Git-ls-remote bestätigt den PR-20-Head vor und nach dem fehlgeschlagenen Upload.
+Die Quellensicherung erlaubt nun die lesende Konsolidierung gemäß Auftragsdatei. Sie ist keine fachliche Originalauswertung, Maßfreigabe oder Bestätigung aller außerhalb dieses Archivs erwähnten Quellen. Deren Verfügbarkeit wird separat in der Quellenbilanz ausgewiesen. Kanonische Daten, bestehende Originale, Modelle und Fachkorrekturen bleiben unverändert. Kein Merge oder Deployment.
 
-Auftragsdatei und Evidence-README sowie Attribute und Deployment-Auslöser gelesen. Im Checkout und seinen Workspace-Vorfahren keine AGENTS.md gefunden. Separater Checkout schützt einen vorhandenen älteren Checkout mit uncommitteten Änderungen. Keine dieser Änderungen angefasst; die bisherige Branch-Historie bleibt erhalten. Der historische Transferblockadebericht wird nicht überschrieben.
-
-## Tatsächliche Transfergrenze
-
-Alle 77 Originale und das unveränderte Inventar wurden lokal unter `evidence/raw/originaltransfer-20261010/` abgelegt. Lokaler Sicherungscommit: `46184fe6d1aa2a5d3759affb62687b6222629d6f` (nicht auf GitHub).
-
-Der autorisierte Git-Push auf genau diesen Branch scheitert mit:
-
-```
-fatal: could not read Username for 'https://github.com': No such device or address
-```
-
-Öffentliches Git-Lesen funktioniert; authentifiziertes Git-Schreiben ist in dieser Laufzeit nicht eingerichtet. Der GitHub-Connector kann Textberichte schreiben, bietet aber keinen direkten Upload lokaler Binärdateien. Sein Blob-Aufruf erwartet einen Inhaltsstring. Die Auftragsdatei verbietet ausdrücklich die Text-API als Ersatz für den Originaltransfer; deshalb keine Base64-Textumgehung. Dies ist keine fehlende Nutzerfreigabe und keine automatische Approval-Ablehnung.
-
-**Die Originale sind weiterhin NICHT als auf GitHub gesichert bestätigt.** Dieser Bericht und die Prüfsummen sind keine Ersatzsicherung der Bild-/Videobytes. Ein SHA-256-Abgleich rückgelesener GitHub-Originale ist noch nicht möglich. Q0–Q3 und Stabilisierungsplan wurden deshalb nicht begonnen.
-
-## Konkrete Fortsetzung
-
-Benötigt wird eine Laufzeit mit authentifiziertem Git-Schreibzugriff auf `jdistlr/kleines-schaeferrad` und Zugriff auf das bereits bereitgestellte Archiv. Keine erneute Fotoaufnahme oder fachliche Entscheidung erforderlich. Archiv ist im aktuellen Anhang vorhanden; lokaler Commit ist nur ein temporärer Wiederaufnahmepunkt.
-
-1. Aktuellen Remote-HEAD und etwaige neue Arbeit übernehmen, keinen Force-Push verwenden.
-2. Originale aus dem unveränderten Archiv unter dem oben genannten separaten Pfad aufnehmen, vorhandene Originale nicht überschreiben. Mitgeliefertes Inventar unverändert mitführen.
-3. Größen und SHA-256 gegen `original-transfer-checksums.json` prüfen; alle 77 Originale committen und auf den bestehenden Branch pushen.
-4. Einen unabhängigen frischen Checkout von GitHub anlegen (nicht vom lokalen Repository, keine lokalen alternates). Dort das beiliegende `verify-original-transfer.py` ausführen. Commit-ID und vollständiges Ergebnis als Remote-Prüfartefakt sichern.
-5. Erst nach 77/77 Remote-Übereinstimmungen Konsolidierung laut `state/NEXT-EVIDENCE-GRAPH-CONSOLIDATION-SESSION.md` fortsetzen.
-
-Keine kanonischen Datenänderungen, keine Geometrieiteration, kein Merge, kein Deployment und keine Fachfreigabe. Die Sicherung von Originalbytes allein wäre noch keine fachliche Originalauswertung.
+Der frühere Bericht bleibt in der Git-Historie und in ORIGINAL-TRANSFER-BLOCKER.md nachvollziehbar. Er beschreibt den damaligen Kenntnisstand, nicht den aktuellen Status.
