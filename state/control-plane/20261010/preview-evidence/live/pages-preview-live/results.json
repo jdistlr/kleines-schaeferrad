@@ -1,0 +1,19 @@
+{
+  "preview": "https://jdistlr.github.io/kleines-schaeferrad/review/pr-18/",
+  "production": "https://jdistlr.github.io/kleines-schaeferrad/",
+  "physicalIPhone": false,
+  "checks": [
+    {
+      "productionFirstPreviewSecond": true,
+      "productionSessionUnchanged": true,
+      "separateSessionIDs": true,
+      "previewWorkerScope": "https://jdistlr.github.io/kleines-schaeferrad/review/pr-18/sw.js",
+      "parentWorkerReinstallPreservesPreviewCache": true,
+      "previewOfflineReload": true
+    },
+    {
+      "productionFilesVerified": 195
+    }
+  ],
+  "status": "passed"
+}

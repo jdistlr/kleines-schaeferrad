@@ -1,0 +1,392 @@
+{
+  "head": "c1efd63b66ccb8d9c620f92d2cbbbcd3cbdd5656",
+  "browser": "151.0.7922.34",
+  "scope": "Chromium; no physical device, Safari or engineering release",
+  "checks": [
+    {
+      "profile": "desktop",
+      "reflow": true,
+      "waterVisible": true,
+      "errors": []
+    },
+    {
+      "profile": "tablet",
+      "reflow": true,
+      "waterVisible": true,
+      "errors": []
+    },
+    {
+      "profile": "phone390",
+      "reflow": true,
+      "waterVisible": true,
+      "errors": []
+    },
+    {
+      "profile": "phone320",
+      "reflow": true,
+      "waterVisible": true,
+      "errors": []
+    },
+    {
+      "profile": "text200",
+      "reflow": true,
+      "waterVisible": true,
+      "errors": []
+    },
+    {
+      "v1ExportImport": "original bytes preserved; fresh context restored",
+      "tamperedHash": "rejected",
+      "conflictingResponse": "rejected"
+    },
+    {
+      "navigation": "water → viewer → field → model → field → control → field",
+      "context": "component/property retained",
+      "stepResume": "photo step survives reload and round trip",
+      "simulation": "same calibratedCycle; water/rpm transferred; stopped by default",
+      "keyboard": "skip link and range",
+      "reducedMotion": true,
+      "offline": "field and control route round trip"
+    },
+    {
+      "draftProtection": true
+    }
+  ],
+  "performance": [
+    {
+      "name": "desktop",
+      "route": "control/",
+      "domReady": 34.600000000034925,
+      "resourceBytes": 248910,
+      "scripts": [
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "name": "desktop",
+      "route": "control/water/",
+      "domReady": 38.70000000001164,
+      "resourceBytes": 46795,
+      "scripts": [
+        {
+          "url": "water.astro_astro_type_script_index_0_lang.DwbyxQtd.js",
+          "bytes": 3429
+        },
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "name": "desktop",
+      "route": "control/evidence/",
+      "domReady": 60.899999999965075,
+      "resourceBytes": 603270,
+      "scripts": [
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "name": "tablet",
+      "route": "control/",
+      "domReady": 73,
+      "resourceBytes": 248910,
+      "scripts": [
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "name": "tablet",
+      "route": "control/water/",
+      "domReady": 31.599999999976717,
+      "resourceBytes": 46795,
+      "scripts": [
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "water.astro_astro_type_script_index_0_lang.DwbyxQtd.js",
+          "bytes": 3429
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "name": "tablet",
+      "route": "control/evidence/",
+      "domReady": 164.89999999996508,
+      "resourceBytes": 612714,
+      "scripts": [
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "name": "phone390",
+      "route": "control/",
+      "domReady": 59.600000000034925,
+      "resourceBytes": 145552,
+      "scripts": [
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "name": "phone390",
+      "route": "control/water/",
+      "domReady": 27.70000000001164,
+      "resourceBytes": 46795,
+      "scripts": [
+        {
+          "url": "water.astro_astro_type_script_index_0_lang.DwbyxQtd.js",
+          "bytes": 3429
+        },
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "name": "phone390",
+      "route": "control/evidence/",
+      "domReady": 49.70000000001164,
+      "resourceBytes": 603270,
+      "scripts": [
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "name": "phone320",
+      "route": "control/",
+      "domReady": 59.20000000001164,
+      "resourceBytes": 145552,
+      "scripts": [
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "name": "phone320",
+      "route": "control/water/",
+      "domReady": 27.400000000023283,
+      "resourceBytes": 46795,
+      "scripts": [
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "water.astro_astro_type_script_index_0_lang.DwbyxQtd.js",
+          "bytes": 3429
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "name": "phone320",
+      "route": "control/evidence/",
+      "domReady": 51.40000000002328,
+      "resourceBytes": 603270,
+      "scripts": [
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "name": "text200",
+      "route": "control/",
+      "domReady": 56.09999999997672,
+      "resourceBytes": 248910,
+      "scripts": [
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "name": "text200",
+      "route": "control/water/",
+      "domReady": 58.29999999998836,
+      "resourceBytes": 46795,
+      "scripts": [
+        {
+          "url": "water.astro_astro_type_script_index_0_lang.DwbyxQtd.js",
+          "bytes": 3429
+        },
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        }
+      ],
+      "canvas": 0
+    },
+    {
+      "name": "text200",
+      "route": "control/evidence/",
+      "domReady": 67.79999999998836,
+      "resourceBytes": 603270,
+      "scripts": [
+        {
+          "url": "ControlLayout.astro_astro_type_script_index_0_lang.Jfdti5jZ.js",
+          "bytes": 33
+        },
+        {
+          "url": "navigation.fhfLqXUc.js",
+          "bytes": 1790
+        },
+        {
+          "url": "context.Dui5AtSk.js",
+          "bytes": 567
+        }
+      ],
+      "canvas": 0
+    }
+  ],
+  "status": "passed"
+}

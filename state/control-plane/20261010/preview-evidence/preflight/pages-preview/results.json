@@ -1,0 +1,19 @@
+{
+  "preview": "http://127.0.0.1:4331/kleines-schaeferrad/review/pr-18/",
+  "production": "http://127.0.0.1:4331/kleines-schaeferrad/",
+  "physicalIPhone": false,
+  "checks": [
+    {
+      "productionFirstPreviewSecond": true,
+      "productionSessionUnchanged": true,
+      "separateSessionIDs": true,
+      "previewWorkerScope": "http://127.0.0.1:4331/kleines-schaeferrad/review/pr-18/sw.js",
+      "parentWorkerReinstallPreservesPreviewCache": true,
+      "previewOfflineReload": true
+    },
+    {
+      "productionFilesVerified": 195
+    }
+  ],
+  "status": "passed"
+}
