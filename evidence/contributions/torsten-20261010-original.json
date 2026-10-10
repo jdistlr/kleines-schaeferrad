@@ -1,0 +1,31 @@
+{
+  "schema": "ks-expert-photo-intake/v1",
+  "date": "2026-10-10",
+  "author": "Torsten",
+  "communication": "evidence/contributions/torsten-20261010-kommunikation.md",
+  "transfer_status": "SOURCE TRANSFER VERIFIED",
+  "original_bytes_preserved": true,
+  "images": [
+    {
+      "id": "PHOTO-TORSTEN-20261010-TH37-ANNOTATED",
+      "path": "evidence/raw/torsten-20261010/5f0dbdce-2f7a-40c3-9b75-c66153bb40fd.jpeg",
+      "original_filename": "5f0dbdce-2f7a-40c3-9b75-c66153bb40fd.jpeg",
+      "received_filename": "5f0dbdce-2f7a-40c3-9b75-c66153bb40fd(1).jpeg",
+      "bytes": 559904,
+      "sha256": "048708cdf56fd72025b12c1bc1e0bd4bc8c201dc74654c4fb2c55ed45fe23eb5",
+      "git_blob_sha": "462e0cedb9ea09f09a76a8fa2f36721084beb799",
+      "claim_ids": [
+        "TH-20261009-37"
+      ],
+      "provenance_chain": [
+        "Torsten",
+        "WhatsApp",
+        "Johannes",
+        "Projektchat",
+        "Git-Evidenzarchiv"
+      ],
+      "metric_status": "Torstens annotierte Fachauskunft; keine unabhängige Nachmessung",
+      "as_built_eligible": false
+    }
+  ]
+}

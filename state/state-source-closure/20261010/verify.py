@@ -13,6 +13,13 @@ def git_bytes(ref, p):
     return subprocess.check_output(['git', 'show', f'{ref}:{p}'])
 def sha(b):
     return hashlib.sha256(b).hexdigest()
+# Later annotated original: independent byte check; historical output stays reproducible.
+new_photo = read('evidence/contributions/torsten-20261010-original.json')['images'][0]
+new_bytes = Path(new_photo['path']).read_bytes()
+assert len(new_bytes) == new_photo['bytes'] == 559904
+assert sha(new_bytes) == new_photo['sha256'] == '048708cdf56fd72025b12c1bc1e0bd4bc8c201dc74654c4fb2c55ed45fe23eb5'
+assert hashlib.sha1(b'blob ' + str(len(new_bytes)).encode() + b'\0' + new_bytes).hexdigest() == new_photo['git_blob_sha']
+assert new_photo['claim_ids'] == ['TH-20261009-37'] and not new_photo['as_built_eligible']
 photos = read('evidence/contributions/thorsten-20261009-photos.json')['images']
 assert len(photos) == 65
 rows = []

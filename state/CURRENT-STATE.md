@@ -36,5 +36,5 @@
 
 ## Final evidence closure
 - [Reproducible verification and source-transfer disposition](STATE-SOURCE-REVIEW-EVIDENCE.md).
-- Torsten’s annotated original: **SOURCE TRANSFER BLOCKED**, expected SHA-256 `048708cdf56fd72025b12c1bc1e0bd4bc8c201dc74654c4fb2c55ed45fe23eb5`. No substitute produced.
-- Review-ready does not resolve the missing original or authorize merge / UX start. Exact final-HEAD CI and gate decision live in PR #17, avoiding a self-invalidating CI documentation commit.
+- Torsten’s annotated original: **SOURCE TRANSFER VERIFIED**; [archived bytes and manifest](../evidence/contributions/torsten-20261010-original.json), SHA-256 `048708cdf56fd72025b12c1bc1e0bd4bc8c201dc74654c4fb2c55ed45fe23eb5` matches exactly.
+- Original-transfer blocker resolved. Review-ready does not itself authorize merge / UX implementation. Exact final-HEAD CI and gate decision live in PR #17, avoiding a self-invalidating CI documentation commit.
