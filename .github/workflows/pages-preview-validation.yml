@@ -40,10 +40,12 @@ jobs:
             const artifacts = await github.paginate(github.rest.actions.listArtifactsForRepo, {...context.repo, name: 'pages-production-baseline-606908b', per_page: 100});
             const archive = artifacts.find(a => !a.expired);
             core.setOutput('artifact', archive ? archive.id : 11662297630);
+            core.setOutput('run', archive ? archive.workflow_run.id : 38033011709);
       - uses: actions/download-artifact@v4
         with:
           github-token: ${{ github.token }}
           artifact-ids: ${{ steps.baseline.outputs.artifact }}
+          run-id: ${{ steps.baseline.outputs.run }}
           merge-multiple: true
           path: baseline-archive
       - name: Verify immutable production archive
