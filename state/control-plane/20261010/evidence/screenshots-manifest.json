@@ -1,0 +1,191 @@
+{
+  "baseline": "606908bfe8cf1ab0560b337f37d92dd90d320dee",
+  "testedHead": "51221b9d0e6ad8aed1fb714f7888f1a38bf0e3c5",
+  "run": 38035076111,
+  "screenshots": [
+    {
+      "path": "evidence/after/desktop-control-evidence-.png",
+      "sha256": "6556dc17cbdef95afdf3c407ce97ebd80453434867861e5c86733f3213943738"
+    },
+    {
+      "path": "evidence/after/text200-story.png",
+      "sha256": "1ddac839b133ba10c6521553c35449608056d9a7f7bff46ca7783fcb1bde658c"
+    },
+    {
+      "path": "evidence/after/text200-control-evidence-.png",
+      "sha256": "0798ed664a2b10f820adfd63136c0cec5fa49257989a661f8a9b6c9e20dd6f7e"
+    },
+    {
+      "path": "evidence/after/phone390-werkstatt-.png",
+      "sha256": "a6adae5b1e1580ac117e5e3fd5dbdeaebf91d28544d56c942eea6b3abcba9384"
+    },
+    {
+      "path": "evidence/after/tablet-werkstatt-.png",
+      "sha256": "a118265e76ab140ea3a37004defae6062017921059ec65b21a25ddd61f12f1cf"
+    },
+    {
+      "path": "evidence/after/text200-control-water-.png",
+      "sha256": "770c4ab58603b4a5c6340ae3582137cb1976031a7cab4c24160c03d09f7374e8"
+    },
+    {
+      "path": "evidence/after/tablet-control-evidence-.png",
+      "sha256": "46ee21aaeaada04b589e1e4cba269495e70dc899f5689d7731587c6ffd9734a2"
+    },
+    {
+      "path": "evidence/after/tablet-control-water-.png",
+      "sha256": "46d209fc3c1ec5a6f8e72d706c61f3e38e91bb4628c03bd045fad6d8e0b175a2"
+    },
+    {
+      "path": "evidence/after/text200-control-.png",
+      "sha256": "f01e1406a59f2a34c70109eaf5e630644b2f33ec60fb3ff1ada37926eab6f7fd"
+    },
+    {
+      "path": "evidence/after/phone320-werkstatt-.png",
+      "sha256": "2bee425bbd8806f77844f277fd1b7ecf324329f31e983bc78a5c482c5cae16fe"
+    },
+    {
+      "path": "evidence/after/simulation.png",
+      "sha256": "6707cf24fca0b5344e1499b0d28255d3e93c40882bdeca947bf921977967ad18"
+    },
+    {
+      "path": "evidence/after/phone390-story.png",
+      "sha256": "a793c5b4f9db63aa2508eca13296fbb4ccc7788e2fedecd193cc43841639c2e3"
+    },
+    {
+      "path": "evidence/after/phone320-story.png",
+      "sha256": "8ac024bd162ac3bd29dc954c8d56936e0bc772a3512b5f9b271e1ba2ac429e25"
+    },
+    {
+      "path": "evidence/after/phone320-feld-.png",
+      "sha256": "849a8b5ab20c4ca0290a5b7c4836118cf36b0c1c413470ad62451ac496fb2f2e"
+    },
+    {
+      "path": "evidence/after/tablet-story.png",
+      "sha256": "e9c016799791df7a00896a6105909be10e7b76e0aabd368f2ba60d7b84776ac8"
+    },
+    {
+      "path": "evidence/after/desktop-control-.png",
+      "sha256": "d2f7c511ca3efe0775e69f869690f341cf1728c2ffbce5a96d866039c1deff18"
+    },
+    {
+      "path": "evidence/after/phone390-feld-.png",
+      "sha256": "c24c9dae73b9ba9e676422c52ebcf23f9f5a150a094bbc96f4564a9b5b1fff92"
+    },
+    {
+      "path": "evidence/after/phone390-control-.png",
+      "sha256": "848288e0d28d23f12bdb0de1355dde9340da34c64dda6be14b9d770cf2cd5a9b"
+    },
+    {
+      "path": "evidence/after/text200-werkstatt-.png",
+      "sha256": "9bf366e791ae75b5943b69d7e7723e981dcf0add514a6efb56ef4c4ae4de57d8"
+    },
+    {
+      "path": "evidence/after/desktop-control-water-.png",
+      "sha256": "5b27d9afbf0614d923d26ecab088e29ebc896964b814b1830d1e85b30b9706ee"
+    },
+    {
+      "path": "evidence/after/phone390-control-water-.png",
+      "sha256": "8829b9480fd8d59d2d006ceb8713e51566278da61f98822f5f3fdda43d06818e"
+    },
+    {
+      "path": "evidence/after/tablet-control-.png",
+      "sha256": "c877837fbf2f00a87f7970f1bad85735b38e44d8b6f76c84d0b12fcd3264ceb9"
+    },
+    {
+      "path": "evidence/after/tablet-feld-.png",
+      "sha256": "0f185d2d36ea1c60e2540f91af59b820c173e887c9d2a1c2555682cd39f97a68"
+    },
+    {
+      "path": "evidence/after/phone320-control-water-.png",
+      "sha256": "864213e4055193058f2191ea7f56740b5e5b6e43dfb9f5df2a420b4890edff6b"
+    },
+    {
+      "path": "evidence/after/desktop-story.png",
+      "sha256": "ba6c11e6ec683bffdd8b32a7b081e05e8064f506421b919c195b5184ddc26162"
+    },
+    {
+      "path": "evidence/after/desktop-werkstatt-.png",
+      "sha256": "00063aafeb9e5a7f339a4275b21fe991f3001ddb3e06c52a13e2f05edb1b35d5"
+    },
+    {
+      "path": "evidence/after/phone320-control-.png",
+      "sha256": "3c055702b0d9e3e80af6050954178e5522c0ecaf8d0d4d1be32a6fa451710f59"
+    },
+    {
+      "path": "evidence/after/text200-feld-.png",
+      "sha256": "349093f98b476a7213f0d3d8c52d544d35566b57ceb55258a268e04b7663b89c"
+    },
+    {
+      "path": "evidence/after/desktop-feld-.png",
+      "sha256": "ce7923fd08fef52b6bb6261e9e381badad098d76669e5c8d9037b1d7bd8ef663"
+    },
+    {
+      "path": "evidence/after/phone320-control-evidence-.png",
+      "sha256": "4062fccf6e954cf9dfa23f6a4334d59dd4668457e253e6481333b0ed654b009f"
+    },
+    {
+      "path": "evidence/after/phone390-control-evidence-.png",
+      "sha256": "5e0aa5a1c34ce189a2c6c22f0082dad4ba20e0c9192fb1a0f956c35118c71229"
+    },
+    {
+      "path": "evidence/before/text200-story.png",
+      "sha256": "2106a6c623b6f4c5c242b91d0c04a06900667507c4bca0785f29d22a1ebf6192"
+    },
+    {
+      "path": "evidence/before/phone390-feld.png",
+      "sha256": "1820bc06b3fd39f507dd1d51c2dcadf2697612a3057c2daacb606b2ba738ab87"
+    },
+    {
+      "path": "evidence/before/phone320-feld.png",
+      "sha256": "ec310f459581f5015417d3fc6bafe326b14abef1b57358ff95387a74e19ddde1"
+    },
+    {
+      "path": "evidence/before/text200-werkstatt.png",
+      "sha256": "35381a2ddfd1a699446c745f73d0aff6fc90b97c6fd2f77284981132110642d2"
+    },
+    {
+      "path": "evidence/before/desktop-werkstatt.png",
+      "sha256": "0161e0be5336025053839219987426cfcc6048b23c6118f3e4d5dc96ff5d1c55"
+    },
+    {
+      "path": "evidence/before/phone320-werkstatt.png",
+      "sha256": "c2f3366093653cb421f54f977bda6435160ed784e942157f60edc0221a9f4bd2"
+    },
+    {
+      "path": "evidence/before/phone390-story.png",
+      "sha256": "92377e330a8728bffac8a892613c92b0aef954e4a4849f896e361dc26fad63b0"
+    },
+    {
+      "path": "evidence/before/phone320-story.png",
+      "sha256": "2ed8a9b44aa0886b036e92ce37a7a913d40ac64058ef09580b66d97f1e2f418d"
+    },
+    {
+      "path": "evidence/before/tablet-werkstatt.png",
+      "sha256": "97d11f8448c2329bf61dd03acea3a935ef478be3fcb1b5a958d5fe34004e6720"
+    },
+    {
+      "path": "evidence/before/tablet-story.png",
+      "sha256": "217f194ddd9ea7c7cbf9b004e7839cc08b562e71a887031724cd7c03cd40e90c"
+    },
+    {
+      "path": "evidence/before/text200-feld.png",
+      "sha256": "e6c600994d6bcd66c5eee4db1cd7b7376c15c96b5c83b773f7af16d0be5adc9a"
+    },
+    {
+      "path": "evidence/before/desktop-feld.png",
+      "sha256": "838504ca2267fed90bd58b608aa690a7f4ee46fa00301e75d999c6be62cfa466"
+    },
+    {
+      "path": "evidence/before/tablet-feld.png",
+      "sha256": "2f3fc812f5f6888a6338e75560b116827beb6d294d6f619a9a8974663aa7202f"
+    },
+    {
+      "path": "evidence/before/desktop-story.png",
+      "sha256": "4268e81e9bba3d9acb20d3747790e59c110460d749df60c661fc2bbbd89e3dba"
+    },
+    {
+      "path": "evidence/before/phone390-werkstatt.png",
+      "sha256": "cd677b17620f86ca38f15254b4f624e73099626baab85ded355b1c2ae048b550"
+    }
+  ]
+}
