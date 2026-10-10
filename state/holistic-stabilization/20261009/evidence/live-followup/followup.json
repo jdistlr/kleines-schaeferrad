@@ -1,0 +1,73 @@
+{
+  "started": "2026-10-09T22:02:25.419Z",
+  "browser": "141.0.7390.37",
+  "checks": [
+    {
+      "name": "water via visible index, resume and stale query",
+      "executed": true,
+      "waterLinkVisible": false,
+      "title": "VOR STILLSETZEN: Wasserübergabe aufnehmen",
+      "next": "VOR STILLSETZEN: Wasserübergabe aufnehmen",
+      "afterNormalReload": "Scan-Datei und reale Referenzen zuordnen",
+      "queryReloadProgress": "Aufgabe 17 von 21 · Schritt 1 von 5",
+      "queryReloadTitle": "VOR STILLSETZEN: Wasserübergabe aufnehmen"
+    },
+    {
+      "name": "mobile measurements, removed media and tampered import",
+      "executed": true,
+      "exportedMedia": 1,
+      "referencedMedia": 0,
+      "budget": "1 Fotos · 0.7 MB. Browser: 0.0 / 554 MB belegt.",
+      "tamperedImport": "Bild-Prüfsumme stimmt nicht: SIMULATION.jpeg"
+    },
+    {
+      "name": "mobile menu and keyboard focus",
+      "executed": true,
+      "nav": "Geschichte\nVor Ort\nArbeitsplan\nWerkstatt",
+      "active": {
+        "id": "field-back",
+        "text": "Zurück"
+      }
+    },
+    {
+      "name": "reduced motion after camera settles and target hit areas",
+      "executed": true,
+      "status": "Rad angehalten · 2,2 U/min · Wasserübergabe am Trog",
+      "changed": true,
+      "labels": [
+        {
+          "text": " Nur Auswahlbereich",
+          "width": 158.390625,
+          "height": 46
+        },
+        {
+          "text": " Radkörper",
+          "width": 101.1875,
+          "height": 40
+        },
+        {
+          "text": " Tragwerk / Rahmen",
+          "width": 157.1875,
+          "height": 40
+        },
+        {
+          "text": " offene Stellen",
+          "width": 126.1875,
+          "height": 40
+        },
+        {
+          "text": " Scan-Arbeitsplatz",
+          "width": 151.1875,
+          "height": 40
+        },
+        {
+          "text": " Arbeitskontur",
+          "width": 125.1875,
+          "height": 40
+        }
+      ],
+      "match": true
+    }
+  ],
+  "finished": "2026-10-09T22:03:02.537Z"
+}

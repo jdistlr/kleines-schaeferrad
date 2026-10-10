@@ -1,0 +1,150 @@
+Direkt zum Arbeitsmodell
+Kleines Schäferrad
+Werkstatt
+Aufbau gemeinsam prüfen
+Arbeitsplan
+Vor Ort arbeiten
+
+Lokal gesichert · 0 Einträge · noch nicht gemeinsam geprüfte Einträge
+
+X: Welle · Z: oben · Seitenzuordnung vor Ort bestätigen
+
+Das Rad und sein Tragwerk
+Zur Ausgangsansicht
+Modell
+Rekonstruktionsvorschlag · ITER-003
+Truth · Quellengeometrie, Maße offen
+Überlappung
+A · führende Richtung
+B · Gegenrichtung prüfen
+Ausfluss (Kandidat)
+1,8 m/s · führend
+1,0 m/s · Vergleich
+0 m/s · nur Raddrehung
+Schaufelfläche
+X + radial · Kandidat
+15° Anstellung · Alternative
+X + tangential · V2-Vergleich
+Ansicht
+Gesamtanlage
+Radkörper
+Tragwerk
+Betrieb
+Welle / Arme
+Kranz
+Kumpf / Schaufel
+Lager
+Trog / Rinne
+Auseinandergezogen
+Schnitt
+Quellenstatus
+Scan-Abgleich
+Gesamtanlage
+Wasserweg zeigen
+Nur Auswahlbereich
+X
+Y
+Z
+
+Ziehen: drehen · zwei Finger: verschieben / vergrößern
+
+Betrieb · technisch rekonstruiert
+Rad laufen lassen
+Drehzahl
+Wasserstand zur Achse
+
+Rad angehalten · 2,2 U/min · Wasserübergabe am Trog
+
+Funktionsvisualisierung: Aufnahme, Anheben und Ausschütten. Drehzahl, Wasserstand, Fließrichtung und Übergabefenster sind Annahmen; keine Strömungsberechnung.
+Radkörper
+Tragwerk / Rahmen
+offene Stellen
+Scan-Arbeitsplatz
+Arbeitskontur
+Darstellung und Konstruktionsvarianten
+TEIL AUSWÄHLEN
+Wo sollen wir genauer hinsehen?
+Teilname oder Werkstattbegriff
+Welle/Achse
+Armzone Seite A
+Armzone Seite B
+Arme · Endpaarung noch offen
+Kranz Seite A
+Kranz Seite B
+Radkränze gemeinsam
+Krümmlinge
+Kümpfe/Schöpfgefäße
+Dauben
+Kumpfböden
+Kumpf-Spannringe
+Schaufeln / Flügelbretter
+Keile, Holzstifte, Metallbefestiger, Bänder
+Kumpfnägel (lang / kurz)
+Lager-/Zapfenkontaktzonen
+Radstatt/Tragwerk
+Schöpftrog/Gießtrog
+Rinne hinter Trog / Ableitung
+Biegematrize
+Brett-/Daubenvorlage
+Zwölfeck-Hilfsgeometrie
+Kontaktstreifen-Vorlage
+Lagerstöcke / Wellenauflager
+Tragbalken / Pfostenrahmen
+untere Trag- und Halterahmen
+seitliche Führungs- / Auffangrahmen
+Schetternbretter an Krümmlingstößen
+U-Holzbänder der Flügelbretter
+Bock am Rad
+A-Bock am Rinnenstoß
+Zweiteilige Ableitrinne
+Eisenschellen der Welle
+Radstadt (lokale Schreibvariante: Radstatt)
+
+AUSGEWÄHLT
+
+Welle/Achse
+
+Form und aktuelle Maße sind noch nicht nachgemessen.
+
+0 eigene Einträge
+ALS NÄCHSTES KLÄREN
+Räumliche Pose, Ringebenen und permanente Referenzen
+
+Vor erstem Lösen Land- und Wasserseite im Übersichtsbild mit Pfeilen dokumentieren; festen Bezugspunkt an verbleibender Radstatt benennen. Zwei unabhängige lange Maßstrecken + dritte Kontrollstrecke anlegen, Endpunkte im Foto. Gegenüberliegende Ringdatenflächen ausdrücklich wählen; axialen Abstand an mindestens drei Umfangsorten messen; Achs-/Lagerlage zum Bezugspunkt festhalten. Durchmesser in zwei Richtungen und axiale Gesamtbreite als Kontrolle. Alle Werte mit Einheit, Endpunktdefinition, Werkzeug und Messunsicherheit.
+
+Befund dazu festhalten
+Foto öffnen
+Foto öffnen
+Foto öffnen
+Foto öffnen
+Foto öffnen
+Beobachtung und Rekonstruktion
+Noch ungeklärt (2)
+Technische Quelldaten (21)
+Technische Verbindungsdaten
+Fragen an die Werkstatt
+Technische Details
+Befund am ausgewählten Teil festhalten
+ARBEITSPROTOKOLL
+Gesicherte Befunde 0 Einträge
+Sicherung als JSON
+Sicherung wieder einlesen
+Datei auswählen
+
+Noch kein Eintrag. Wähle ein Teil und erfasse die erste Beobachtung.
+
+PAPIER
+Werkstatt- und Aufnahmeplan
+A3-Arbeitsplan öffnen
+
+Für die Demontage ist der Arbeitsplan die primäre Führung. Die digitalen Zeichnungen bleiben ergänzende Prüfansichten.
+
+KS-00 · Prüfblatt
+KS-10 · Prüfblatt
+KS-20 · Prüfblatt
+KS-30 · Prüfblatt
+KS-40 · Prüfblatt
+KS-50 · Prüfblatt
+KS-60 · Prüfblatt
+KS-70 · Prüfblatt
+Arbeitsstand vor der Demontage 2026 · Technisches Repository

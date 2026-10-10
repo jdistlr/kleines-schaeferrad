@@ -1,0 +1,123 @@
+Direkt zum Arbeitsmodell
+Kleines Schäferrad
+Werkstatt
+Aufbau gemeinsam prüfen
+Arbeitsplan
+Vor Ort arbeiten
+
+Lokal gesichert · 0 Einträge · noch nicht gemeinsam geprüfte Einträge
+
+X: Welle · Z: oben · Seitenzuordnung vor Ort bestätigen
+
+Das Rad und sein Tragwerk
+Zur Ausgangsansicht
+Modell
+Rekonstruktionsvorschlag · ITER-003
+Truth · Quellengeometrie, Maße offen
+Überlappung
+A · führende Richtung
+B · Gegenrichtung prüfen
+Ausfluss (Kandidat)
+1,8 m/s · führend
+1,0 m/s · Vergleich
+0 m/s · nur Raddrehung
+Schaufelfläche
+X + radial · Kandidat
+15° Anstellung · Alternative
+X + tangential · V2-Vergleich
+Ansicht
+Gesamtanlage
+Radkörper
+Tragwerk
+Betrieb
+Welle / Arme
+Kranz
+Kumpf / Schaufel
+Lager
+Trog / Rinne
+Auseinandergezogen
+Schnitt
+Quellenstatus
+Scan-Abgleich
+Gesamtanlage
+Wasserweg zeigen
+Nur Auswahlbereich
+X
+Y
+Z
+
+Ziehen: drehen · zwei Finger: verschieben / vergrößern
+
+Kumpf / Schaufel · technisch rekonstruiert
+Radkörper
+Tragwerk / Rahmen
+offene Stellen
+Scan-Arbeitsplatz
+Arbeitskontur
+Darstellung und Konstruktionsvarianten
+TEIL AUSWÄHLEN
+Wo sollen wir genauer hinsehen?
+Teilname oder Werkstattbegriff
+Kümpfe/Schöpfgefäße
+Dauben
+Kumpfböden
+Kumpf-Spannringe
+Kumpfnägel (lang / kurz)
+
+AUSGEWÄHLT
+
+Kümpfe/Schöpfgefäße
+
+Form und aktuelle Maße sind noch nicht nachgemessen.
+
+0 eigene Einträge
+ALS NÄCHSTES KLÄREN
+Kumpf-Nut, Kumpfnagelwege, Überlappung und Varianten
+
+Referenzwissen festhalten statt erneut grundsätzlich zu fragen: 12 Dauben, 1 Nutboden, 3 Metallbänder, 2 gelochte Dauben, 2 Kumpfnägel lang/kurz und Befestigung am Krümmling sind fachlich beschrieben. Vor dem Lösen mindestens drei benachbarte Kümpfe gemeinsam fotografieren: Überlappungsrichtung, lang/kurz-Nagelposition, Kopfseite und Einsteckrichtung. Direkt nach Ausbau beide Nagelwege, vier Lochpositionen, Krümmlingkontakt, Nut/Boden und Partnerflächen dokumentieren. Daubendicke, Außenquerschnitt an allen drei Bandsitzen, Bandüberlappung und Nagelmaße mit Einheit messen.
+
+Befund dazu festhalten
+Foto öffnen
+Foto öffnen
+Foto öffnen
+Foto öffnen
+Foto öffnen
+Beobachtung und Rekonstruktion
+
+Heute sichtbar: Dauben, Boden, Metallreifen und schräge Einbaulage; vier neue Referenzfotos zeigen einen teilweise zerlegten Kumpf mit Maßstab.
+
+Alte Zeichnung: 22/24 mm Dauben; jeweils eigene Nutmaße. Zwölfeck ist historische Referenz, kein heutiger Zählnachweis.
+
+Im Modell: Referenz-Kumpf: 12 Dauben, Nutboden, drei Metallbänder. Umfangsmodell muss gerichtete Überlappung benachbarter Kümpfe zulassen; 24 Positionen bleiben externe Erwartung.
+
+Am Teil klären: Ist-Neigung, aktuelle Gesamtzahl, Überlappungsrichtung/-maß, all-vessel equivalence und metrische Außenquerschnitte.
+
+Noch ungeklärt (5)
+Technische Quelldaten (47)
+Technische Verbindungsdaten
+Fragen an die Werkstatt
+Technische Details
+Befund am ausgewählten Teil festhalten
+ARBEITSPROTOKOLL
+Gesicherte Befunde 0 Einträge
+Sicherung als JSON
+Sicherung wieder einlesen
+Datei auswählen
+
+Noch kein Eintrag. Wähle ein Teil und erfasse die erste Beobachtung.
+
+PAPIER
+Werkstatt- und Aufnahmeplan
+A3-Arbeitsplan öffnen
+
+Für die Demontage ist der Arbeitsplan die primäre Führung. Die digitalen Zeichnungen bleiben ergänzende Prüfansichten.
+
+KS-00 · Prüfblatt
+KS-10 · Prüfblatt
+KS-20 · Prüfblatt
+KS-30 · Prüfblatt
+KS-40 · Prüfblatt
+KS-50 · Prüfblatt
+KS-60 · Prüfblatt
+KS-70 · Prüfblatt
+Arbeitsstand vor der Demontage 2026 · Technisches Repository

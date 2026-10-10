@@ -1,0 +1,63 @@
+Kleines Schäferrad
+Arbeitsplan
+Werkstattmodell
+Lokal gesichert
+Offline-Vorrat nicht bestätigt. Online einmal vollständig laden.
+
+ORIENTIERUNG
+Alle Arbeitsschritte.
+Zur aktuellen Aufgabe
+
+Die Reihenfolge wird mit den erfahrenen Monteuren abgestimmt. Ein STOPP-Schritt bleibt offen, solange seine Aufnahmen fehlen.
+
+Phase
+Alle Phasen
+Vor dem Lösen
+Beim Öffnen
+Direkt nach dem Öffnen
+Nach dem Ausbau
+Blickseiten gemeinsam benennen
+KS-00 · Vor dem Lösen · Offen
+Bleibende Referenzen und Kontrollmaß setzen
+KS-00 · Vor dem Lösen · Offen
+Einbaumaße vor dem Lösen sichern
+KS-00 · Vor dem Lösen · Offen
+STOPP: Armzonen vor dem ersten Keilzug
+KS-10 · Vor dem Lösen · Offen
+Jeden Keilzug und jede Freigabe festhalten
+KS-11 · Beim Lösen · Offen
+Geöffnete Wellenzone ohne Deutung aufnehmen
+KS-11 · Direkt nach dem Öffnen · Offen
+Ausgebauten Arm vollständig erfassen
+KS-11 · Nach dem Ausbau · Offen
+STOPP: Kranzstoß vor der Trennung
+KS-20 · Vor dem Lösen · Offen
+Beide Stoßflächen zusammen dokumentieren
+KS-20 · Direkt nach dem Öffnen · Offen
+Umfangsfolge vor Ausbau sichern
+KS-20 · Vor dem Lösen · Offen
+STOPP: drei Kümpfe und beide Nagelwege
+KS-30 · Vor dem Lösen · Offen
+Referenz-Kumpf: Enden und Maße aufnehmen
+KS-30 · Direkt nach dem Öffnen · Offen
+Spannringe und Überlappung vergleichen
+KS-30 · Nach dem Ausbau · Offen
+Schaufel: Radbezug und Pitch trennen
+KS-40 · Beim Lösen · Offen
+Kleinteile behalten ihren Partner
+KS-40 · Beim Lösen · Offen
+STOPP: vor dem Anheben der Welle
+KS-50 · Vor dem Lösen · Offen
+VOR STILLSETZEN: Wasserübergabe aufnehmen
+KS-51 · Vor dem Lösen · Offen
+Scan-Datei und reale Referenzen zuordnen
+KS-51 · Vor dem Lösen · Offen
+Erfahrung direkt am Teil weitergeben
+KS-51 · Beim Lösen · Offen
+Reales Teil und Lagerplatz eintragen
+KS-50 · Nach dem Ausbau · Offen
+P0-Lücken und zweite Sicherung prüfen
+KS-51 · Nach dem Ausbau · Offen
+Teile / Lagerorte
+Sicherung
+Kurzübersicht

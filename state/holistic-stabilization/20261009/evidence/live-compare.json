@@ -1,0 +1,123 @@
+{
+  "at": "2026-10-09T21:56:03.548Z",
+  "scope": "Three routes, JS/CSS entry assets, offline manifest, service worker and KS-50; not full deployed byte inventory",
+  "rows": [
+    {
+      "url": "https://jdistlr.github.io/kleines-schaeferrad/",
+      "status": 200,
+      "bytes": 6583,
+      "sha256": "3c77e88cf7ea58b15b7011ef8881acbabb8cde1ea5cc0ece59a104c556824a5e",
+      "localPath": "dist/index.html",
+      "localSha256": "3c77e88cf7ea58b15b7011ef8881acbabb8cde1ea5cc0ece59a104c556824a5e",
+      "equal": true
+    },
+    {
+      "url": "https://jdistlr.github.io/kleines-schaeferrad/werkstatt/",
+      "status": 200,
+      "bytes": 18620,
+      "sha256": "38c8d9ab403d35149bbd806f37812ab4d37d3a426b041555dc54e16542a99d26",
+      "localPath": "dist/werkstatt/index.html",
+      "localSha256": "38c8d9ab403d35149bbd806f37812ab4d37d3a426b041555dc54e16542a99d26",
+      "equal": true
+    },
+    {
+      "url": "https://jdistlr.github.io/kleines-schaeferrad/feld/",
+      "status": 200,
+      "bytes": 5940,
+      "sha256": "df2e05ea7a666b3184da08722200d0792254d586d24fb6555cc01f021e6e2168",
+      "localPath": "dist/feld/index.html",
+      "localSha256": "df2e05ea7a666b3184da08722200d0792254d586d24fb6555cc01f021e6e2168",
+      "equal": true
+    },
+    {
+      "url": "https://jdistlr.github.io/kleines-schaeferrad/offline-manifest.json",
+      "status": 200,
+      "bytes": 12873,
+      "sha256": "982f8ac6bc8ff6c0b8964879021867ecd3f46a59975eb6f9b3999aaad9e6e418",
+      "localPath": "dist/offline-manifest.json",
+      "localSha256": "c675fb0e54ee766a0211cec684b7db26a25f5e957639e229fd2269a8bf284cd8",
+      "equal": false
+    },
+    {
+      "url": "https://jdistlr.github.io/kleines-schaeferrad/sw.js",
+      "status": 200,
+      "bytes": 12808,
+      "sha256": "8c4adcb4fc41ff659c559e386277ece893a6d104aa083ded6d8596ae00e27d31",
+      "localPath": "dist/sw.js",
+      "localSha256": "d5f33015b37b3343e4be87b75238919bcbf22e36658a5ce13b57ce4609032c18",
+      "equal": false
+    },
+    {
+      "url": "https://jdistlr.github.io/kleines-schaeferrad/drawings/KS-50.svg",
+      "status": 200,
+      "bytes": 305264,
+      "sha256": "a93bdb974200a3020bdc0e4bef0ade0856258aeb3333d6c77d3e2a63751a5227",
+      "localPath": "dist/drawings/KS-50.svg",
+      "localSha256": "a93bdb974200a3020bdc0e4bef0ade0856258aeb3333d6c77d3e2a63751a5227",
+      "equal": true
+    },
+    {
+      "url": "https://jdistlr.github.io/kleines-schaeferrad/_astro/components.BIFVsEFv.js",
+      "status": 200,
+      "bytes": 15347,
+      "sha256": "66530ff73057fe46e25cb2821f6cb81481d925666db489e777639c6822255cf8",
+      "localPath": "dist/_astro/components.BIFVsEFv.js",
+      "localSha256": "66530ff73057fe46e25cb2821f6cb81481d925666db489e777639c6822255cf8",
+      "equal": true
+    },
+    {
+      "url": "https://jdistlr.github.io/kleines-schaeferrad/_astro/feld.BQCZCCtA.css",
+      "status": 200,
+      "bytes": 10239,
+      "sha256": "3673a27ab5f54c73e89022c331dd4af98c76e5177c6a31c56dfb9687d5f24929",
+      "localPath": "dist/_astro/feld.BQCZCCtA.css",
+      "localSha256": "3673a27ab5f54c73e89022c331dd4af98c76e5177c6a31c56dfb9687d5f24929",
+      "equal": true
+    },
+    {
+      "url": "https://jdistlr.github.io/kleines-schaeferrad/_astro/feld.astro_astro_type_script_index_0_lang.BT_Nzoo4.js",
+      "status": 200,
+      "bytes": 53616,
+      "sha256": "b8807398f500817c13e3a214dac494c8c432cd8f54678b90d4cb4e85b7ba0575",
+      "localPath": "dist/_astro/feld.astro_astro_type_script_index_0_lang.BT_Nzoo4.js",
+      "localSha256": "b8807398f500817c13e3a214dac494c8c432cd8f54678b90d4cb4e85b7ba0575",
+      "equal": true
+    },
+    {
+      "url": "https://jdistlr.github.io/kleines-schaeferrad/_astro/index.Lw8Lp2BA.css",
+      "status": 200,
+      "bytes": 7529,
+      "sha256": "e71b96707978627ade57abc200d5101c4ddf3aa852e2e34196db9e67e03a1a73",
+      "localPath": "dist/_astro/index.Lw8Lp2BA.css",
+      "localSha256": "e71b96707978627ade57abc200d5101c4ddf3aa852e2e34196db9e67e03a1a73",
+      "equal": true
+    },
+    {
+      "url": "https://jdistlr.github.io/kleines-schaeferrad/_astro/paths.xHReAN7e.css",
+      "status": 200,
+      "bytes": 5242,
+      "sha256": "b534813981bfd87b5b897d4de3ae2fa9fd68136954ad484a1734f65457ad9936",
+      "localPath": "dist/_astro/paths.xHReAN7e.css",
+      "localSha256": "b534813981bfd87b5b897d4de3ae2fa9fd68136954ad484a1734f65457ad9936",
+      "equal": true
+    },
+    {
+      "url": "https://jdistlr.github.io/kleines-schaeferrad/_astro/werkstatt.Bg6CG69p.css",
+      "status": 200,
+      "bytes": 12067,
+      "sha256": "65cf413f0698bb79dfdbb225198c46e3aac3f4aa88be35d625a9e46063daf112",
+      "localPath": "dist/_astro/werkstatt.Bg6CG69p.css",
+      "localSha256": "65cf413f0698bb79dfdbb225198c46e3aac3f4aa88be35d625a9e46063daf112",
+      "equal": true
+    },
+    {
+      "url": "https://jdistlr.github.io/kleines-schaeferrad/_astro/werkstatt.astro_astro_type_script_index_0_lang.CIjyZMxZ.js",
+      "status": 200,
+      "bytes": 1021927,
+      "sha256": "38c71e5b68d131c2ba4caf5354a59d046fd819c1f560e5be6f5a8cee916f0431",
+      "localPath": "dist/_astro/werkstatt.astro_astro_type_script_index_0_lang.CIjyZMxZ.js",
+      "localSha256": "38c71e5b68d131c2ba4caf5354a59d046fd819c1f560e5be6f5a8cee916f0431",
+      "equal": true
+    }
+  ]
+}

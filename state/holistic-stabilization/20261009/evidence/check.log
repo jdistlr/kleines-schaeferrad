@@ -1,0 +1,32 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> kleines-schaeferrad-research-page@0.1.0 check
+> astro check
+
+05:54:02 [types] Generated 105ms
+05:54:02 [check] Getting diagnostics for Astro files in /workspace/scratch/64f677288b13/kleines-schaeferrad...
+[96mscripts/build-workbench.mjs[0m:[93m4[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'T' is declared but its value is never read.
+
+[7m4[0m import * as T from 'three';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96mscripts/export-calibration.mjs[0m:[93m5[0m:[93m24[0m - [93mwarning[0m[90m ts(6133): [0m'cfg' is declared but its value is never read.
+
+[7m5[0m import {referenceKumpf,cfg,calibratedCycle} from '../src/workbench/calibration.mjs';
+[7m [0m [93m                       ~~~[0m
+
+[96mtests/ux-recovery/browser-audit.mjs[0m:[93m3[0m:[93m1[0m - [93mwarning[0m[90m ts(6133): [0m'path' is declared but its value is never read.
+
+[7m3[0m import path from 'node:path';
+[7m [0m [93m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96mtests/ux-recovery/followup.mjs[0m:[93m2[0m:[93m26[0m - [93mwarning[0m[90m ts(6133): [0m'crypto' is declared but its value is never read.
+
+[7m2[0m import fs from 'node:fs';import crypto from 'node:crypto';import {pathToFileURL} from 'node:url';
+[7m [0m [93m                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+Result (50 files): 
+- 0 errors
+- 0 warnings
+- 4 hints
+

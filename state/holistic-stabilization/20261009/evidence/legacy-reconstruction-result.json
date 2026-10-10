@@ -1,0 +1,57 @@
+{
+  "exit_code": 1,
+  "generated_result": {
+    "asBuilt": false,
+    "results": [
+      {
+        "candidate": "staggered",
+        "core_samples": 11310,
+        "overlap_samples": 0,
+        "estimated_overlap_m3": 0,
+        "method": "20 mm deterministic voxel sample inside shaft core, one rim plane",
+        "ranking": 1,
+        "force_path": "Continuous beam carries opposite spoke ends; shaft contact and remaining timber unresolved.",
+        "insertion": "Candidate sliding path only after rim release; wedge and mortise clearance unmeasured.",
+        "photo_compatibility": "Entry staggering observed; opposite-end pairing not observable.",
+        "limitations": [
+          "Not full-machine collision certification.",
+          "Shaft mortise envelopes are unknown, not subtracted as measured surfaces.",
+          "No strength, fatigue or dismantling-sequence approval."
+        ]
+      },
+      {
+        "candidate": "independent",
+        "core_samples": 11310,
+        "overlap_samples": 0,
+        "estimated_overlap_m3": 0,
+        "method": "20 mm deterministic voxel sample inside shaft core, one rim plane",
+        "ranking": 2,
+        "force_path": "Each short arm requires its own mortise retention; unseen surfaces unresolved.",
+        "insertion": "Candidate sliding path only after rim release; wedge and mortise clearance unmeasured.",
+        "photo_compatibility": "Entry staggering observed; opposite-end pairing not observable.",
+        "limitations": [
+          "Not full-machine collision certification.",
+          "Shaft mortise envelopes are unknown, not subtracted as measured surfaces.",
+          "No strength, fatigue or dismantling-sequence approval."
+        ]
+      },
+      {
+        "candidate": "crossing",
+        "core_samples": 11310,
+        "overlap_samples": 0,
+        "estimated_overlap_m3": 0,
+        "method": "20 mm deterministic voxel sample inside shaft core, one rim plane",
+        "ranking": 3,
+        "force_path": "Continuous beam carries opposite spoke ends; shaft contact and remaining timber unresolved.",
+        "insertion": "Not insertable without additional cut-outs or split assembly.",
+        "photo_compatibility": "Entry staggering observed; opposite-end pairing not observable.",
+        "limitations": [
+          "Not full-machine collision certification.",
+          "Shaft mortise envelopes are unknown, not subtracted as measured surfaces.",
+          "No strength, fatigue or dismantling-sequence approval."
+        ]
+      }
+    ]
+  },
+  "historical_file_restored": true
+}

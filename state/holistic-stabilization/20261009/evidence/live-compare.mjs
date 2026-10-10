@@ -1,0 +1,6 @@
+import fs from 'node:fs';import crypto from 'node:crypto';
+const base='https://jdistlr.github.io/kleines-schaeferrad/',out='state/holistic-stabilization/20261009/evidence';
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex'),rows=[],manifest=JSON.parse(fs.readFileSync('dist/offline-manifest.json'));
+const paths=['','werkstatt/','feld/','offline-manifest.json','sw.js','drawings/KS-50.svg',...manifest.urls.filter(p=>p.includes('/_astro/')&&(p.endsWith('.js')||p.endsWith('.css'))).map(p=>p.replace('/kleines-schaeferrad/',''))];
+for(const p of paths){try{const r=await fetch(base+p),b=Buffer.from(await r.arrayBuffer()),local='dist/'+(p.endsWith('/')||p===''?p+'index.html':p);rows.push({url:base+p,status:r.status,bytes:b.length,sha256:hash(b),localPath:local,localSha256:fs.existsSync(local)?hash(fs.readFileSync(local)):null,equal:fs.existsSync(local)&&hash(b)===hash(fs.readFileSync(local))});if(p==='offline-manifest.json')fs.writeFileSync(out+'/live-offline-manifest.json',b)}catch(e){rows.push({url:base+p,error:String(e)})}}
+fs.writeFileSync(out+'/live-compare.json',JSON.stringify({at:new Date().toISOString(),scope:'Three routes, JS/CSS entry assets, offline manifest, service worker and KS-50; not full deployed byte inventory',rows},null,2));console.log(JSON.stringify(rows));

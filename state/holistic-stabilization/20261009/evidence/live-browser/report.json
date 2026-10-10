@@ -1,0 +1,4340 @@
+{
+  "started": "2026-10-09T21:55:33.208Z",
+  "base": "https://jdistlr.github.io/kleines-schaeferrad/",
+  "scope": "Chromium emulation; no physical iPhone/Safari, printer or field approval",
+  "profiles": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "routes": [
+        {
+          "route": "",
+          "screenshot": "desktop-story.png",
+          "metrics": {
+            "viewport": {
+              "width": 1440,
+              "height": 1000
+            },
+            "scrollWidth": 1440,
+            "scrollHeight": 1108,
+            "rootFont": "16px",
+            "overflow": [
+              {
+                "tag": "A",
+                "id": "",
+                "class": "skip-link"
+              }
+            ],
+            "targets": [
+              {
+                "id": "",
+                "text": "Kleines Schäferrad\nMöhrendorf / Oberndorf · Regnitz",
+                "w": 193.90625,
+                "h": 30
+              },
+              {
+                "id": "",
+                "text": "Gemeinde Möhrendorf",
+                "w": 306,
+                "h": 43.25
+              }
+            ],
+            "canvases": 0
+          }
+        },
+        {
+          "route": "werkstatt/",
+          "screenshot": "desktop-werkstatt.png",
+          "metrics": {
+            "viewport": {
+              "width": 1440,
+              "height": 1000
+            },
+            "scrollWidth": 1440,
+            "scrollHeight": 2419,
+            "rootFont": "16px",
+            "overflow": [
+              {
+                "tag": "A",
+                "id": "",
+                "class": "skip"
+              },
+              {
+                "tag": "LABEL",
+                "id": "",
+                "class": "hidden-control"
+              },
+              {
+                "tag": "INPUT",
+                "id": "layer-historical",
+                "class": ""
+              }
+            ],
+            "targets": [
+              {
+                "id": "",
+                "text": "Direkt zum Arbeitsmodell",
+                "w": 183,
+                "h": 24
+              },
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 116,
+                "h": 19.1875
+              },
+              {
+                "id": "",
+                "text": "Arbeitsplan",
+                "w": 74,
+                "h": 19.1875
+              },
+              {
+                "id": "",
+                "text": "Vor Ort arbeiten",
+                "w": 101,
+                "h": 19.1875
+              },
+              {
+                "id": "isolate",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-model",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-stationary",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-questions",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-scan",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-historical",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Befund dazu festhalten",
+                "w": 173,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Beobachtung und Rekonstruktion",
+                "w": 834.515625,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "Noch ungeklärt (2)",
+                "w": 834.515625,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 75,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "Technische Quelldaten (21)",
+                "w": 834.515625,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 78,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 78,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 79,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 86,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 124,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 255,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 260,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 260,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 255,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 260,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 260,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "Technische Verbindungsdaten",
+                "w": 834.515625,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 96,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 96,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 99,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 97,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 111,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 322,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 322,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Fragen an die Werkstatt",
+                "w": 834.515625,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "Technische Details",
+                "w": 834.515625,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Technisches Repository",
+                "w": 132,
+                "h": 17
+              }
+            ],
+            "canvases": 2,
+            "render": "Ziehen: drehen · zwei Finger: verschieben / vergrößern"
+          }
+        },
+        {
+          "route": "feld/",
+          "screenshot": "desktop-feld.png",
+          "metrics": {
+            "viewport": {
+              "width": 1440,
+              "height": 1000
+            },
+            "scrollWidth": 1440,
+            "scrollHeight": 1651,
+            "rootFont": "16px",
+            "overflow": [],
+            "targets": [
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 151,
+                "h": 24.796875
+              },
+              {
+                "id": "",
+                "text": "Technisches Blatt vergrößern",
+                "w": 177,
+                "h": 18
+              }
+            ],
+            "canvases": 0
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024,
+      "routes": [
+        {
+          "route": "",
+          "screenshot": "tablet-story.png",
+          "metrics": {
+            "viewport": {
+              "width": 768,
+              "height": 1024
+            },
+            "scrollWidth": 768,
+            "scrollHeight": 1481,
+            "rootFont": "16px",
+            "overflow": [
+              {
+                "tag": "A",
+                "id": "",
+                "class": "skip-link"
+              }
+            ],
+            "targets": [
+              {
+                "id": "",
+                "text": "Kleines Schäferrad\nMöhrendorf / Oberndorf · Regnitz",
+                "w": 193.90625,
+                "h": 30
+              },
+              {
+                "id": "",
+                "text": "Gemeinde Möhrendorf",
+                "w": 154,
+                "h": 20
+              }
+            ],
+            "canvases": 0
+          }
+        },
+        {
+          "route": "werkstatt/",
+          "screenshot": "tablet-werkstatt.png",
+          "metrics": {
+            "viewport": {
+              "width": 768,
+              "height": 1024
+            },
+            "scrollWidth": 768,
+            "scrollHeight": 3041,
+            "rootFont": "16px",
+            "overflow": [
+              {
+                "tag": "A",
+                "id": "",
+                "class": "skip"
+              },
+              {
+                "tag": "LABEL",
+                "id": "",
+                "class": "hidden-control"
+              },
+              {
+                "tag": "INPUT",
+                "id": "layer-historical",
+                "class": ""
+              }
+            ],
+            "targets": [
+              {
+                "id": "",
+                "text": "Direkt zum Arbeitsmodell",
+                "w": 183,
+                "h": 24
+              },
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 545,
+                "h": 19.1875
+              },
+              {
+                "id": "",
+                "text": "Arbeitsplan",
+                "w": 74,
+                "h": 19.1875
+              },
+              {
+                "id": "",
+                "text": "Vor Ort arbeiten",
+                "w": 101,
+                "h": 19.1875
+              },
+              {
+                "id": "isolate",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-model",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-stationary",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-questions",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-scan",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-historical",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Befund dazu festhalten",
+                "w": 173,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Beobachtung und Rekonstruktion",
+                "w": 744,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "Noch ungeklärt (2)",
+                "w": 744,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 75,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "Technische Quelldaten (21)",
+                "w": 744,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 78,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 78,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 79,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 86,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 124,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 255,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 712,
+                "h": 37.6875
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 260,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 255,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 712,
+                "h": 37.6875
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 260,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "Technische Verbindungsdaten",
+                "w": 744,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 96,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 96,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 99,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 97,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 111,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 322,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 322,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Fragen an die Werkstatt",
+                "w": 744,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "Technische Details",
+                "w": 744,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Technisches Repository",
+                "w": 132,
+                "h": 17
+              }
+            ],
+            "canvases": 2,
+            "render": "Ziehen: drehen · zwei Finger: verschieben / vergrößern"
+          }
+        },
+        {
+          "route": "feld/",
+          "screenshot": "tablet-feld.png",
+          "metrics": {
+            "viewport": {
+              "width": 768,
+              "height": 1024
+            },
+            "scrollWidth": 768,
+            "scrollHeight": 1490,
+            "rootFont": "16px",
+            "overflow": [],
+            "targets": [
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 151,
+                "h": 24.796875
+              },
+              {
+                "id": "",
+                "text": "Technisches Blatt vergrößern",
+                "w": 177,
+                "h": 18
+              }
+            ],
+            "canvases": 0
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "phone390",
+      "width": 390,
+      "height": 844,
+      "routes": [
+        {
+          "route": "",
+          "screenshot": "phone390-story.png",
+          "metrics": {
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "scrollWidth": 390,
+            "scrollHeight": 1652,
+            "rootFont": "16px",
+            "overflow": [
+              {
+                "tag": "A",
+                "id": "",
+                "class": "skip-link"
+              }
+            ],
+            "targets": [
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 168.90625,
+                "h": 30
+              },
+              {
+                "id": "",
+                "text": "Gemeinde Möhrendorf",
+                "w": 154,
+                "h": 20
+              }
+            ],
+            "canvases": 0
+          }
+        },
+        {
+          "route": "werkstatt/",
+          "screenshot": "phone390-werkstatt.png",
+          "metrics": {
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "scrollWidth": 390,
+            "scrollHeight": 3379,
+            "rootFont": "16px",
+            "overflow": [
+              {
+                "tag": "A",
+                "id": "",
+                "class": "skip"
+              },
+              {
+                "tag": "LABEL",
+                "id": "",
+                "class": "hidden-control"
+              },
+              {
+                "tag": "INPUT",
+                "id": "layer-historical",
+                "class": ""
+              },
+              {
+                "tag": "A",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "IMG",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "A",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "IMG",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "SPAN",
+                "id": "",
+                "class": ""
+              }
+            ],
+            "targets": [
+              {
+                "id": "",
+                "text": "Direkt zum Arbeitsmodell",
+                "w": 176,
+                "h": 22.5
+              },
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 249,
+                "h": 19.1875
+              },
+              {
+                "id": "",
+                "text": "Vor Ort arbeiten",
+                "w": 101,
+                "h": 19.1875
+              },
+              {
+                "id": "isolate",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-model",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-stationary",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-questions",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-scan",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-historical",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Befund dazu festhalten",
+                "w": 163,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "Beobachtung und Rekonstruktion",
+                "w": 366,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "Noch ungeklärt (2)",
+                "w": 366,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 75,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "Technische Quelldaten (21)",
+                "w": 366,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 78,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 78,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 79,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 86,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 124,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 255,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 334,
+                "h": 37.6875
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 337,
+                "h": 37.6875
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 310,
+                "h": 37.6875
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 255,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 334,
+                "h": 37.6875
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 337,
+                "h": 37.6875
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 310,
+                "h": 37.6875
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "Technische Verbindungsdaten",
+                "w": 366,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 88,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 88,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 91,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 89,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 102,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 275,
+                "h": 43.5
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 299,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "Fragen an die Werkstatt",
+                "w": 366,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "Technische Details",
+                "w": 366,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Technisches Repository",
+                "w": 132,
+                "h": 17
+              }
+            ],
+            "canvases": 2,
+            "render": "Ziehen: drehen · zwei Finger: verschieben / vergrößern"
+          }
+        },
+        {
+          "route": "feld/",
+          "screenshot": "phone390-feld.png",
+          "metrics": {
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "scrollWidth": 390,
+            "scrollHeight": 1675,
+            "rootFont": "16px",
+            "overflow": [],
+            "targets": [
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 140,
+                "h": 23.25
+              },
+              {
+                "id": "",
+                "text": "Technisches Blatt vergrößern",
+                "w": 177,
+                "h": 18
+              }
+            ],
+            "canvases": 0
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "phone320",
+      "width": 320,
+      "height": 740,
+      "routes": [
+        {
+          "route": "",
+          "screenshot": "phone320-story.png",
+          "metrics": {
+            "viewport": {
+              "width": 320,
+              "height": 740
+            },
+            "scrollWidth": 320,
+            "scrollHeight": 1835,
+            "rootFont": "16px",
+            "overflow": [
+              {
+                "tag": "A",
+                "id": "",
+                "class": "skip-link"
+              }
+            ],
+            "targets": [
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 168.90625,
+                "h": 30
+              },
+              {
+                "id": "",
+                "text": "Gemeinde Möhrendorf",
+                "w": 154,
+                "h": 20
+              }
+            ],
+            "canvases": 0
+          }
+        },
+        {
+          "route": "werkstatt/",
+          "screenshot": "phone320-werkstatt.png",
+          "metrics": {
+            "viewport": {
+              "width": 320,
+              "height": 740
+            },
+            "scrollWidth": 320,
+            "scrollHeight": 3563,
+            "rootFont": "16px",
+            "overflow": [
+              {
+                "tag": "A",
+                "id": "",
+                "class": "skip"
+              },
+              {
+                "tag": "LABEL",
+                "id": "",
+                "class": "hidden-control"
+              },
+              {
+                "tag": "INPUT",
+                "id": "layer-historical",
+                "class": ""
+              },
+              {
+                "tag": "A",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "IMG",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "SPAN",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "A",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "IMG",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "SPAN",
+                "id": "",
+                "class": ""
+              }
+            ],
+            "targets": [
+              {
+                "id": "",
+                "text": "Direkt zum Arbeitsmodell",
+                "w": 176,
+                "h": 22.5
+              },
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 179,
+                "h": 19.1875
+              },
+              {
+                "id": "",
+                "text": "Vor Ort arbeiten",
+                "w": 101,
+                "h": 19.1875
+              },
+              {
+                "id": "isolate",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-model",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-stationary",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-questions",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-scan",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-historical",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Befund dazu festhalten",
+                "w": 163,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "Beobachtung und Rekonstruktion",
+                "w": 296,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "Noch ungeklärt (2)",
+                "w": 296,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 75,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "Technische Quelldaten (21)",
+                "w": 296,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 78,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 78,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 79,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 86,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 124,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 255,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 260,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 260,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 255,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 260,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 260,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "Technische Verbindungsdaten",
+                "w": 296,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 88,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 88,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 91,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 89,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 102,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 275,
+                "h": 43.5
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 230,
+                "h": 43.5
+              },
+              {
+                "id": "",
+                "text": "Fragen an die Werkstatt",
+                "w": 296,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "Technische Details",
+                "w": 296,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Technisches Repository",
+                "w": 286,
+                "h": 35.234375
+              }
+            ],
+            "canvases": 2,
+            "render": "Ziehen: drehen · zwei Finger: verschieben / vergrößern"
+          }
+        },
+        {
+          "route": "feld/",
+          "screenshot": "phone320-feld.png",
+          "metrics": {
+            "viewport": {
+              "width": 320,
+              "height": 740
+            },
+            "scrollWidth": 320,
+            "scrollHeight": 1780,
+            "rootFont": "16px",
+            "overflow": [],
+            "targets": [
+              {
+                "id": "",
+                "text": "Technisches Blatt vergrößern",
+                "w": 177,
+                "h": 18
+              }
+            ],
+            "canvases": 0
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "text200",
+      "width": 1280,
+      "height": 1000,
+      "text200": true,
+      "routes": [
+        {
+          "route": "",
+          "screenshot": "text200-story.png",
+          "metrics": {
+            "viewport": {
+              "width": 1280,
+              "height": 1000
+            },
+            "scrollWidth": 1280,
+            "scrollHeight": 2203,
+            "rootFont": "16px",
+            "overflow": [
+              {
+                "tag": "A",
+                "id": "",
+                "class": "skip-link"
+              }
+            ],
+            "targets": [],
+            "canvases": 0
+          }
+        },
+        {
+          "route": "werkstatt/",
+          "screenshot": "text200-werkstatt.png",
+          "metrics": {
+            "viewport": {
+              "width": 1280,
+              "height": 1000
+            },
+            "scrollWidth": 1280,
+            "scrollHeight": 3975,
+            "rootFont": "16px",
+            "overflow": [
+              {
+                "tag": "A",
+                "id": "",
+                "class": "skip"
+              },
+              {
+                "tag": "LABEL",
+                "id": "",
+                "class": "hidden-control"
+              },
+              {
+                "tag": "INPUT",
+                "id": "layer-historical",
+                "class": ""
+              }
+            ],
+            "targets": [
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 233,
+                "h": 38.390625
+              },
+              {
+                "id": "",
+                "text": "Arbeitsplan",
+                "w": 144,
+                "h": 38.390625
+              },
+              {
+                "id": "",
+                "text": "Vor Ort arbeiten",
+                "w": 194,
+                "h": 38.390625
+              },
+              {
+                "id": "isolate",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-model",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-stationary",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-questions",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-scan",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-historical",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 153,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 155,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 153,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 151,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 156,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 153,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 150,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 153,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 150,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 153,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 150,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 153,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 150,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 153,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 150,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 153,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 150,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 153,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 150,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 153,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 150,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 153,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 150,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 156,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 157,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 157,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 158,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 158,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 159,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 153,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 175,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 252,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 153,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 155,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 513,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 532,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 513,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 532,
+                "h": 35
+              },
+              {
+                "id": "",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Technisches Repository",
+                "w": 268,
+                "h": 33
+              }
+            ],
+            "canvases": 2,
+            "render": "Ziehen: drehen · zwei Finger: verschieben / vergrößern"
+          }
+        },
+        {
+          "route": "feld/",
+          "screenshot": "text200-feld.png",
+          "metrics": {
+            "viewport": {
+              "width": 1280,
+              "height": 1000
+            },
+            "scrollWidth": 1280,
+            "scrollHeight": 2388,
+            "rootFont": "16px",
+            "overflow": [],
+            "targets": [
+              {
+                "id": "",
+                "text": "Technisches Blatt vergrößern",
+                "w": 341,
+                "h": 35
+              }
+            ],
+            "canvases": 0
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "reduced-motion",
+      "width": 1440,
+      "height": 1000,
+      "reducedMotion": {
+        "media": true,
+        "status": "Rad angehalten · 2,2 U/min · Wasserübergabe am Trog",
+        "canvasPixelsChanged": true,
+        "note": "Pixel change alone may include camera transition; inspect tick source and operation status before assigning severity"
+      },
+      "routes": [
+        {
+          "route": "",
+          "screenshot": "reduced-motion-story.png",
+          "metrics": {
+            "viewport": {
+              "width": 1440,
+              "height": 1000
+            },
+            "scrollWidth": 1440,
+            "scrollHeight": 1108,
+            "rootFont": "16px",
+            "overflow": [
+              {
+                "tag": "A",
+                "id": "",
+                "class": "skip-link"
+              }
+            ],
+            "targets": [
+              {
+                "id": "",
+                "text": "Kleines Schäferrad\nMöhrendorf / Oberndorf · Regnitz",
+                "w": 193.90625,
+                "h": 30
+              },
+              {
+                "id": "",
+                "text": "Gemeinde Möhrendorf",
+                "w": 306,
+                "h": 43.25
+              }
+            ],
+            "canvases": 0
+          }
+        },
+        {
+          "route": "werkstatt/",
+          "screenshot": "reduced-motion-werkstatt.png",
+          "metrics": {
+            "viewport": {
+              "width": 1440,
+              "height": 1000
+            },
+            "scrollWidth": 1440,
+            "scrollHeight": 2419,
+            "rootFont": "16px",
+            "overflow": [
+              {
+                "tag": "A",
+                "id": "",
+                "class": "skip"
+              },
+              {
+                "tag": "LABEL",
+                "id": "",
+                "class": "hidden-control"
+              },
+              {
+                "tag": "INPUT",
+                "id": "layer-historical",
+                "class": ""
+              }
+            ],
+            "targets": [
+              {
+                "id": "",
+                "text": "Direkt zum Arbeitsmodell",
+                "w": 183,
+                "h": 24
+              },
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 116,
+                "h": 19.1875
+              },
+              {
+                "id": "",
+                "text": "Arbeitsplan",
+                "w": 74,
+                "h": 19.1875
+              },
+              {
+                "id": "",
+                "text": "Vor Ort arbeiten",
+                "w": 101,
+                "h": 19.1875
+              },
+              {
+                "id": "isolate",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-model",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-stationary",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-questions",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-scan",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-historical",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Befund dazu festhalten",
+                "w": 173,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Beobachtung und Rekonstruktion",
+                "w": 834.515625,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "Noch ungeklärt (2)",
+                "w": 834.515625,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 75,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "Technische Quelldaten (21)",
+                "w": 834.515625,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 78,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 78,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 79,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 86,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 124,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 255,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 260,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 260,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 255,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 260,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 260,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "Technische Verbindungsdaten",
+                "w": 834.515625,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 96,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 96,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 99,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 97,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 111,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 322,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 322,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Fragen an die Werkstatt",
+                "w": 834.515625,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "Technische Details",
+                "w": 834.515625,
+                "h": 41.59375
+              },
+              {
+                "id": "",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Technisches Repository",
+                "w": 132,
+                "h": 17
+              }
+            ],
+            "canvases": 2,
+            "render": "Ziehen: drehen · zwei Finger: verschieben / vergrößern"
+          }
+        },
+        {
+          "route": "feld/",
+          "screenshot": "reduced-motion-feld.png",
+          "metrics": {
+            "viewport": {
+              "width": 1440,
+              "height": 1000
+            },
+            "scrollWidth": 1440,
+            "scrollHeight": 1651,
+            "rootFont": "16px",
+            "overflow": [],
+            "targets": [
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 151,
+                "h": 24.796875
+              },
+              {
+                "id": "",
+                "text": "Technisches Blatt vergrößern",
+                "w": 177,
+                "h": 18
+              }
+            ],
+            "canvases": 0
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "dark",
+      "width": 390,
+      "height": 844,
+      "colorScheme": "dark",
+      "routes": [
+        {
+          "route": "",
+          "screenshot": "dark-story.png",
+          "metrics": {
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "scrollWidth": 390,
+            "scrollHeight": 1652,
+            "rootFont": "16px",
+            "overflow": [
+              {
+                "tag": "A",
+                "id": "",
+                "class": "skip-link"
+              }
+            ],
+            "targets": [
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 168.90625,
+                "h": 30
+              },
+              {
+                "id": "",
+                "text": "Gemeinde Möhrendorf",
+                "w": 154,
+                "h": 20
+              }
+            ],
+            "canvases": 0
+          }
+        },
+        {
+          "route": "werkstatt/",
+          "screenshot": "dark-werkstatt.png",
+          "metrics": {
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "scrollWidth": 390,
+            "scrollHeight": 3379,
+            "rootFont": "16px",
+            "overflow": [
+              {
+                "tag": "A",
+                "id": "",
+                "class": "skip"
+              },
+              {
+                "tag": "LABEL",
+                "id": "",
+                "class": "hidden-control"
+              },
+              {
+                "tag": "INPUT",
+                "id": "layer-historical",
+                "class": ""
+              },
+              {
+                "tag": "A",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "IMG",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "A",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "IMG",
+                "id": "",
+                "class": ""
+              },
+              {
+                "tag": "SPAN",
+                "id": "",
+                "class": ""
+              }
+            ],
+            "targets": [
+              {
+                "id": "",
+                "text": "Direkt zum Arbeitsmodell",
+                "w": 176,
+                "h": 22.5
+              },
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 249,
+                "h": 19.1875
+              },
+              {
+                "id": "",
+                "text": "Vor Ort arbeiten",
+                "w": 101,
+                "h": 19.1875
+              },
+              {
+                "id": "isolate",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-model",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-stationary",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-questions",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-scan",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "layer-historical",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Befund dazu festhalten",
+                "w": 163,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "Beobachtung und Rekonstruktion",
+                "w": 366,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "Noch ungeklärt (2)",
+                "w": 366,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 75,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "Technische Quelldaten (21)",
+                "w": 366,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 74,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 77,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 78,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 78,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 79,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 86,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 124,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 76,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 255,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 334,
+                "h": 37.6875
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 337,
+                "h": 37.6875
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 310,
+                "h": 37.6875
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 255,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 334,
+                "h": 37.6875
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 337,
+                "h": 37.6875
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 310,
+                "h": 37.6875
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 264,
+                "h": 18
+              },
+              {
+                "id": "",
+                "text": "Technische Verbindungsdaten",
+                "w": 366,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 88,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 88,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 91,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 89,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 102,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 275,
+                "h": 43.5
+              },
+              {
+                "id": "",
+                "text": "",
+                "w": 299,
+                "h": 21
+              },
+              {
+                "id": "",
+                "text": "Fragen an die Werkstatt",
+                "w": 366,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "Technische Details",
+                "w": 366,
+                "h": 40.09375
+              },
+              {
+                "id": "",
+                "text": "checkbox",
+                "w": 22,
+                "h": 22
+              },
+              {
+                "id": "",
+                "text": "Technisches Repository",
+                "w": 132,
+                "h": 17
+              }
+            ],
+            "canvases": 2,
+            "render": "Ziehen: drehen · zwei Finger: verschieben / vergrößern"
+          }
+        },
+        {
+          "route": "feld/",
+          "screenshot": "dark-feld.png",
+          "metrics": {
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "scrollWidth": 390,
+            "scrollHeight": 1675,
+            "rootFont": "16px",
+            "overflow": [],
+            "targets": [
+              {
+                "id": "",
+                "text": "Kleines Schäferrad",
+                "w": 140,
+                "h": 23.25
+              },
+              {
+                "id": "",
+                "text": "Technisches Blatt vergrößern",
+                "w": 177,
+                "h": 18
+              }
+            ],
+            "canvases": 0
+          }
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "journeys": [
+    {
+      "name": "discover model, Kumpf sources, candidate and return",
+      "executed": true,
+      "selection": "AUSGEWÄHLT\n\nKümpfe/Schöpfgefäße\n\nForm und aktuelle Maße sind noch nicht nachgemessen.\n\n0 eigene Einträge\nALS NÄCHSTES KLÄREN\nKumpf-Nut, Kumpfnagelwege, Überlappung und Varianten\n\nReferenzwissen festhalten statt erneut grundsätzlich zu fragen: 12 Dauben, 1 Nutboden, 3 Metallbänder, 2 gelochte Dauben, 2 Kumpfnägel lang/kurz und Befestigung am Krümmling sind fachlich beschrieben. Vor dem Lösen mindestens drei benachbarte Kümpfe gemeinsam fotografieren: Überlappungsrichtung, lang/kurz-Nagelposition, Kopfseite und Einsteckrichtung. Direkt nach Ausbau beide Nagelwege, vier Lochpositionen, Krümmlingkontakt, Nut/Boden und Partnerflächen dokumentieren. Daubendicke, Außenquerschnitt an allen drei Bandsitzen, Bandüberlappung und Nagelmaße mit Einheit messen.\n\nBefund dazu festhalten\nFoto öffnen\nFoto öffnen\nFoto öffnen\nFoto öffnen\nFoto öffnen\nBeobachtung und Rekonstruktion\n\nHeute sichtbar: Dauben, Boden, Metallreifen und schräge Einbaulage; vier neue Referenzfotos zeigen einen teilweise zerlegten Kumpf mit Maßstab.\n\nAlte Zeichnung: 22/24 mm Dauben; jeweils eigene Nutmaße. Zwölfeck ist historische Referenz, kein heutiger Zählnachweis.\n\nIm Modell: Referenz-Kumpf: 12 Dauben, Nutboden, drei Metallbänder. Umfangsmodell muss gerichtete Überlappung benachbarter Kümpfe zulassen; 24 Positionen bleiben externe Erwartung.\n\nAm Teil klären: Ist-Neigung, aktuelle Gesamtzahl, Überlappungsrichtung/-maß, all-vessel equivalence und metrische Außenquerschnitte.\n\nNoch ungeklärt (5)\nTechnische Quelldaten (47)\nTechnische Verbindungsdaten\nFragen an die Werkstatt\nTechnische Details",
+      "links": [
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6823.jpeg",
+          "text": "Foto öffnen"
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6841.jpeg",
+          "text": "Foto öffnen"
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6809.jpeg",
+          "text": "Foto öffnen"
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6810.jpeg",
+          "text": "Foto öffnen"
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6811.jpeg",
+          "text": "Foto öffnen"
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6823.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6821.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6846.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6825.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6827.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6853.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6854.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://www.verein-zufriedenheit.com/info.html",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6858.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6859.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6854.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6858.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/Scaniverse%202026-10-07%20173556.ply",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/Scaniverse%202026-10-07%20173556.glb",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6821.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6821.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6821.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6821.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6821.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6821.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6821.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6821.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6823.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6823.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6823.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6823.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6823.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6823.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6823.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6823.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6846.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6847.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6846.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6847.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6846.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6847.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6846.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6847.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6846.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6847.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6846.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6847.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6846.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6847.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6846.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6847.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6846.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6847.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6854.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6854.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6854.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6854.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6858.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6859.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://www.verein-zufriedenheit.com/info.html",
+          "text": ""
+        },
+        {
+          "href": "https://www.verein-zufriedenheit.com/info.html",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6823.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6821.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6846.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://www.verein-zufriedenheit.com/info.html",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6858.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6859.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6854.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6858.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/Scaniverse%202026-10-07%20173556.ply",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/Scaniverse%202026-10-07%20173556.glb",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6831.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6858.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6854.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6854.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6823.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6854.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6858.jpeg",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        },
+        {
+          "href": "https://github.com/jdistlr/kleines-schaeferrad/blob/main/evidence/manifest.json",
+          "text": ""
+        }
+      ],
+      "sourceStatus": {
+        "url": "https://jdistlr.github.io/kleines-schaeferrad/evidence/raw/IMG_6823.jpeg",
+        "body": ""
+      },
+      "render": "Ziehen: drehen · zwei Finger: verschieben / vergrößern"
+    },
+    {
+      "name": "urgent water capture, task index and navigation",
+      "executed": false,
+      "error": "locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Zur Wasseraufnahme', exact: true })\u001b[22m\n\n    at /workspace/scratch/64f677288b13/kleines-schaeferrad/state/holistic-stabilization/20261009/evidence/browser-audit.mjs:29:164\n    at async journey (/workspace/scratch/64f677288b13/kleines-schaeferrad/state/holistic-stabilization/20261009/evidence/browser-audit.mjs:15:51)\n    at async file:///workspace/scratch/64f677288b13/kleines-schaeferrad/state/holistic-stabilization/20261009/evidence/browser-audit.mjs:29:2"
+    },
+    {
+      "name": "two measurements and reload, original photo metadata, export/import",
+      "executed": true,
+      "measurementFields": 6,
+      "resumed": "456",
+      "restored": "456",
+      "media": [
+        {
+          "name": "SIMULATION-original-reference.jpeg",
+          "bytes": 730724,
+          "sha256": "14931a3c2b10d1e9ba6d6121db1d434d7a63d790d15f099d9b2928ace9a1a492",
+          "actualHash": "14931a3c2b10d1e9ba6d6121db1d434d7a63d790d15f099d9b2928ace9a1a492"
+        }
+      ],
+      "originalHash": "14931a3c2b10d1e9ba6d6121db1d434d7a63d790d15f099d9b2928ace9a1a492",
+      "restore": "Sicherung eingelesen: 1 Fotos, Prüfsummen bestätigt. Gemeinsam prüfen; keine Ist-Freigabe.",
+      "conflictMessage": "Abweichender Aufgabenstand TASK-DATUM. Sicherungen getrennt halten; nichts überschrieben.",
+      "session": {
+        "schema": "ks-field-session/v1",
+        "id": "SESSION-e1475d34-f524-4f0c-9997-d099029157f5",
+        "created_at": "2026-10-09T21:57:32.760Z",
+        "task_index": 1,
+        "step": 2,
+        "responses": {
+          "TASK-ORIENT": {
+            "task_id": "TASK-ORIENT",
+            "status": "OPEN",
+            "person": "",
+            "media": [],
+            "measurement": {
+              "a": "Achsmitte",
+              "b": "fester Punkt am Tragwerk",
+              "unit": "mm"
+            },
+            "unknown": false,
+            "reason": "",
+            "quote": "",
+            "interpretation": "",
+            "reviewed": false
+          },
+          "TASK-DATUM": {
+            "task_id": "TASK-DATUM",
+            "status": "IN_PROGRESS",
+            "person": "UX AUDIT SIMULATION",
+            "media": [
+              {
+                "id": "MEDIA-1f6a2866-1536-4fec-8940-f4799ca4c598",
+                "name": "SIMULATION-original-reference.jpeg",
+                "view": "Jeder Marker nah",
+                "sha256": "14931a3c2b10d1e9ba6d6121db1d434d7a63d790d15f099d9b2928ace9a1a492"
+              }
+            ],
+            "measurement": {
+              "a": "SIMULATION DATUM A",
+              "b": "SIMULATION DATUM B",
+              "unit": "mm",
+              "value": "999",
+              "tool": "SIMULATION ruler",
+              "uncertainty": "1"
+            },
+            "unknown": false,
+            "reason": "",
+            "quote": "",
+            "interpretation": "",
+            "reviewed": false,
+            "updated_at": "2026-10-09T21:57:54.629Z"
+          }
+        },
+        "instances": [],
+        "events": [],
+        "person": "UX AUDIT SIMULATION",
+        "draft_instance": {}
+      },
+      "note": "First value 123 intentionally overwritten with 456 to observe missing second-measurement support; all values synthetic"
+    },
+    {
+      "name": "offline readiness, reload, local data recovery, export",
+      "executed": false,
+      "error": "page.waitForFunction: Timeout 150000ms exceeded.\n    at /workspace/scratch/64f677288b13/kleines-schaeferrad/state/holistic-stabilization/20261009/evidence/browser-audit.mjs:32:114\n    at async journey (/workspace/scratch/64f677288b13/kleines-schaeferrad/state/holistic-stabilization/20261009/evidence/browser-audit.mjs:15:51)\n    at async file:///workspace/scratch/64f677288b13/kleines-schaeferrad/state/holistic-stabilization/20261009/evidence/browser-audit.mjs:32:2"
+    },
+    {
+      "name": "keyboard, long labels, partner provenance",
+      "executed": true,
+      "registered": "KS-KUM-999 · SIMULATION sehr lange lokale Bauteilbezeichnung ohne echte Aufnahme\n\nSIMULATION A mit SIMULATION\n\nAlte Marke: offen · Partner: · noch eingebaut",
+      "focus": {
+        "id": "close-index",
+        "text": "Zur aktuellen Aufgabe"
+      },
+      "note": "Synthetic test instance, deliberately empty partners/media/event"
+    },
+    {
+      "name": "WebGL unavailable fallback",
+      "executed": true,
+      "status": "3D nicht verfügbar. Alle Aufgaben bleiben über Teilfinder, Quellen und Zeichnungen erreichbar.",
+      "sourceCount": 103
+    }
+  ],
+  "errors": [],
+  "browser": "141.0.7390.37",
+  "deployment": {
+    "schema": "ks-offline-preload/v1",
+    "cache_name": "ks-field-62bd8441e068e789",
+    "urls": [
+      "/kleines-schaeferrad/_astro/IMG_6858.BpdSKe7f_6R4o5.webp",
+      "/kleines-schaeferrad/_astro/IMG_6858.BpdSKe7f_PPje9.webp",
+      "/kleines-schaeferrad/_astro/IMG_6858.BpdSKe7f_ZSXckl.webp",
+      "/kleines-schaeferrad/_astro/components.BIFVsEFv.js",
+      "/kleines-schaeferrad/_astro/feld.BQCZCCtA.css",
+      "/kleines-schaeferrad/_astro/feld.astro_astro_type_script_index_0_lang.BT_Nzoo4.js",
+      "/kleines-schaeferrad/_astro/index.Lw8Lp2BA.css",
+      "/kleines-schaeferrad/_astro/manrope-cyrillic-wght-normal.Dvxsihut.woff2",
+      "/kleines-schaeferrad/_astro/manrope-greek-wght-normal.DL7QRZyv.woff2",
+      "/kleines-schaeferrad/_astro/manrope-latin-ext-wght-normal.Ch3YOpNY.woff2",
+      "/kleines-schaeferrad/_astro/manrope-latin-wght-normal.DHIcAJRg.woff2",
+      "/kleines-schaeferrad/_astro/manrope-vietnamese-wght-normal.usUDDRr7.woff2",
+      "/kleines-schaeferrad/_astro/paths.xHReAN7e.css",
+      "/kleines-schaeferrad/_astro/werkstatt.Bg6CG69p.css",
+      "/kleines-schaeferrad/_astro/werkstatt.astro_astro_type_script_index_0_lang.CIjyZMxZ.js",
+      "/kleines-schaeferrad/drawings/KS-00.svg",
+      "/kleines-schaeferrad/drawings/KS-10.svg",
+      "/kleines-schaeferrad/drawings/KS-11.svg",
+      "/kleines-schaeferrad/drawings/KS-20.svg",
+      "/kleines-schaeferrad/drawings/KS-30.svg",
+      "/kleines-schaeferrad/drawings/KS-31.svg",
+      "/kleines-schaeferrad/drawings/KS-40.svg",
+      "/kleines-schaeferrad/drawings/KS-50.svg",
+      "/kleines-schaeferrad/drawings/KS-51.svg",
+      "/kleines-schaeferrad/drawings/KS-60.svg",
+      "/kleines-schaeferrad/drawings/KS-70.svg",
+      "/kleines-schaeferrad/drawings/geometry-provenance.json",
+      "/kleines-schaeferrad/drawings/index.html",
+      "/kleines-schaeferrad/evidence/additions-v2.json",
+      "/kleines-schaeferrad/evidence/contributions/kumpf-20261008.json",
+      "/kleines-schaeferrad/evidence/contributions/schaufelstellung-20261008.json",
+      "/kleines-schaeferrad/evidence/contributions/thorsten-20261009-photos.json",
+      "/kleines-schaeferrad/evidence/contributions/thorsten-20261009.json",
+      "/kleines-schaeferrad/evidence/manifest.json",
+      "/kleines-schaeferrad/evidence/raw/1000046420.jpg",
+      "/kleines-schaeferrad/evidence/raw/1000046421.jpg",
+      "/kleines-schaeferrad/evidence/raw/1000046422.jpg",
+      "/kleines-schaeferrad/evidence/raw/1000046423.jpg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6790.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6792.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6793.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6794.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6795.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6797.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6798.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6799.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6800.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6801.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6803-upload2.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6804.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6808-upload2.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6809.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6810.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6811.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6812.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6816.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6817.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6818.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6819.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6820.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6821.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6822.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6823.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6824.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6825.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6827.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6828.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6829.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6830.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6831.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6832.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6833.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6836.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6837.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6838.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6839.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6840.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6841.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6842.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6843.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6844.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6845.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6846.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6847.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6848.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6849.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6850.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6851.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6852.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6853.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6854.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6855.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6856.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6858.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6859.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6860.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6861.jpeg",
+      "/kleines-schaeferrad/evidence/raw/IMG_6863.png",
+      "/kleines-schaeferrad/evidence/raw/Scaniverse%202026-10-07%20173556.glb",
+      "/kleines-schaeferrad/evidence/raw/Scaniverse%202026-10-07%20173556.ply",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/1000046530.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/1000046531.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/1000046532.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/1000046533.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/1000046534.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/1000046535.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/1000046536.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/1000046537.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/1000046538.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/1000046539.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/1000046540.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/1000046541.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/1000046542.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791540525839.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791540649435.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791540668918.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791540812566.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791540831514.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541084264.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541209669.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541224562.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541247032.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541265923.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541278244.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541421696.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541435456.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541442395.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541554648.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541561160.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541576861.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541641609.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541666129.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541735045.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541761724.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541781288.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541790124.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541863916.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541887655.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541908195.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541920559.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541961389.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541967728.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791541979278.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542028869.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542045602.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542108092.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542120355.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542146990.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542161221.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542172733.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542237069.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542257101.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542327774.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542342950.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542499680.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542573592.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542586169.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542766365.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791542778932.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791543053651.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791543487137.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791543497527.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791543505768.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791543574540.jpg",
+      "/kleines-schaeferrad/evidence/raw/thorsten-20261009/image-1791543757351.jpg",
+      "/kleines-schaeferrad/favicon.svg",
+      "/kleines-schaeferrad/feld/index.html",
+      "/kleines-schaeferrad/field-pack/KS-Einsatzleitung-A4.pdf",
+      "/kleines-schaeferrad/field-pack/KS-Field-Pack-A3.pdf",
+      "/kleines-schaeferrad/field-pack/KS-Kurzplan-A4.pdf",
+      "/kleines-schaeferrad/field-pack/KS-Werkstatt-Aufnahmeplan-A3.pdf",
+      "/kleines-schaeferrad/field-pack/einsatzkarte-20261009.html",
+      "/kleines-schaeferrad/field-visuals/GUIDE-ARM-AFTER.svg",
+      "/kleines-schaeferrad/field-visuals/GUIDE-ARM-BEFORE.jpg",
+      "/kleines-schaeferrad/field-visuals/GUIDE-ARM-BEFORE.svg",
+      "/kleines-schaeferrad/field-visuals/GUIDE-CONTEXT.jpg",
+      "/kleines-schaeferrad/field-visuals/GUIDE-CONTEXT.svg",
+      "/kleines-schaeferrad/field-visuals/GUIDE-KUMPF.jpg",
+      "/kleines-schaeferrad/field-visuals/GUIDE-KUMPF.svg",
+      "/kleines-schaeferrad/field-visuals/GUIDE-PADDLE.jpg",
+      "/kleines-schaeferrad/field-visuals/GUIDE-PADDLE.svg",
+      "/kleines-schaeferrad/field-visuals/GUIDE-RIM.jpg",
+      "/kleines-schaeferrad/field-visuals/GUIDE-RIM.svg",
+      "/kleines-schaeferrad/field-visuals/GUIDE-SYSTEM.jpg",
+      "/kleines-schaeferrad/field-visuals/GUIDE-SYSTEM.svg",
+      "/kleines-schaeferrad/field-visuals/GUIDE-WATER-SCAN.jpg",
+      "/kleines-schaeferrad/field-visuals/GUIDE-WATER-SCAN.svg",
+      "/kleines-schaeferrad/index.html",
+      "/kleines-schaeferrad/manifest.webmanifest",
+      "/kleines-schaeferrad/werkstatt/index.html",
+      "/kleines-schaeferrad/",
+      "/kleines-schaeferrad/feld/",
+      "/kleines-schaeferrad/werkstatt/"
+    ],
+    "bytes": 130999933,
+    "scope": "/kleines-schaeferrad/",
+    "policy": "Atomic complete install; old cache kept on failure; local captures in IndexedDB, never in SW cache."
+  },
+  "finished": "2026-10-09T22:00:49.797Z"
+}

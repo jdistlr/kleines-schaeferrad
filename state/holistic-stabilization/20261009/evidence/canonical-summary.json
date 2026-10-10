@@ -1,0 +1,135 @@
+{
+  "base": "118e5f7da51a89eaf04bfe85072169e902f4b532",
+  "audit_start": "7bff8234729b466507b1e59d021f98172f1c7c59",
+  "claims": 39,
+  "intake_value_mismatches": [],
+  "photo_paths": 65,
+  "unique_photo_hashes": 63,
+  "all_photo_hashes_match": true,
+  "claims_no_analysis": [],
+  "claims_incomplete_provenance_backlinks": {
+    "TH-20261009-01": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-02": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-03": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-04": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-05": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-06": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-07": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-08": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-09": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-10": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-11": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-12": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-13": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-14": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-15": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-16": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-17": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-18": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-19": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-20": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-21": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-22": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-23": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-24": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-30": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-31": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-32": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-33": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-34": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-35": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-36": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-37": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-38": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ],
+    "TH-20261009-39": [
+      "NARRATIVE-TH-CONSTRUCTION-20261009"
+    ]
+  },
+  "claims_subject_backlink_gaps": {},
+  "claims_no_graph": [
+    "TH-20261009-07",
+    "TH-20261009-08",
+    "TH-20261009-10",
+    "TH-20261009-11",
+    "TH-20261009-13",
+    "TH-20261009-20",
+    "TH-20261009-25",
+    "TH-20261009-26",
+    "TH-20261009-27",
+    "TH-20261009-28",
+    "TH-20261009-29",
+    "TH-20261009-38",
+    "TH-20261009-39"
+  ],
+  "claims_no_brute_mesh_tag": [
+    "TH-20261009-20",
+    "TH-20261009-37",
+    "TH-20261009-39"
+  ]
+}

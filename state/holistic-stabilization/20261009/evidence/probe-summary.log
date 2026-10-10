@@ -1,0 +1,1 @@
+{"models":{"truth":{"meshes":296,"mismatch":[],"maxPositionError":0,"maxMatrixError":4.440892098500626e-16},"brute":{"meshes":945,"mismatch":[],"maxPositionError":0,"maxMatrixError":6.106226635438361e-16}},"nails":48,"actualRimHitPaths":48,"proxyRimHitPaths":48,"bandLegs":96,"bandLegHitPaths":0,"armPinHitPaths":0,"views":39,"inputHashes":true}
