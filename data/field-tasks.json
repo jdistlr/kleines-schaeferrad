@@ -827,7 +827,8 @@
       "status": "OPEN",
       "source_refs": [
         "GAP-05",
-        "GAP-08"
+        "GAP-08",
+        "GAP-09"
       ],
       "stop_before_release": false,
       "measurement_required": false,

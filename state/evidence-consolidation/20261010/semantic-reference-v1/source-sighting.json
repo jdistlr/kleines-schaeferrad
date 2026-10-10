@@ -1,0 +1,1959 @@
+{
+  "base_commit": "727a0248c0234641453a08e4ae3984e27c9f970b",
+  "scope": "Open original-transfer visual review plus context identity and six focused reference originals; not a new audit of every historical repository image.",
+  "reviewer": "Codex visual review, 2026-10-10; not expert sign-off",
+  "photos": [
+    {
+      "path": "evidence/raw/originaltransfer-20261010/09bf54b5-ebe2-43f7-badc-310aee910605.jpeg",
+      "sha256": "06cc05e0b485daa4056fc54e129ac7ce3deaaca6cac64777a97a2ef3838d48be",
+      "bytes": 448966,
+      "pixels": [
+        1536,
+        2048
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Endansicht eines Daubengefäßes: Bodenfläche, umlaufende Holzstirnen und schräger Zollstock.",
+      "limit": "Endbezeichnung und Messendpunkte nicht allein aus Bildlage; keine Ist-Maßfreigabe.",
+      "existing_anchors": [
+        "COMP-KUEMPFE",
+        "GAP-04"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6790(1).jpeg",
+      "sha256": "ebda0d5488546fe5b197914c58da6b77579c669809e452fcc8bf93124e0054e6",
+      "bytes": 697816,
+      "pixels": [
+        1536,
+        1152
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6790"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Radiale Blattzeichnung mit farbigen Abschnitten, Armstrahlen, 198/213 und 396/426; Beschriftung Krümmling-Breite 14 cm.",
+      "limit": "Visuell dasselbe Blatt wie DOC-RIM-DETAILED; nicht sieben unabhängige Maßbelege.",
+      "existing_anchors": [
+        "COMP-RIMS",
+        "CONFLICT-04"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6791.jpeg",
+      "sha256": "c79fa259aa81b56ba1ebb9615d4875aecef53f7bee162f7239f9feb65f767a2c",
+      "bytes": 685918,
+      "pixels": [
+        1536,
+        1152
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Radiale Blattzeichnung mit farbigen Abschnitten, Armstrahlen, 198/213 und 396/426; Beschriftung Krümmling-Breite 14 cm.",
+      "limit": "Visuell dasselbe Blatt wie DOC-RIM-DETAILED; nicht sieben unabhängige Maßbelege.",
+      "existing_anchors": [
+        "COMP-RIMS",
+        "CONFLICT-04"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6792(1).jpeg",
+      "sha256": "84375bbc12673ba188e4f6fa5ba25e46d74ab518b239c3a2bed6fdc4ef3ad8ad",
+      "bytes": 636432,
+      "pixels": [
+        1536,
+        1152
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6792"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Blatt Radstatt kleines Schäferrad: Land-/Wasserseite, zwei Längshölzer und Queranordnung; 265/260 und 384 sichtbar.",
+      "limit": "Historische Zeichnung; Fotoabfolge ist keine Datierung; nicht aktuelles Aufmaß.",
+      "existing_anchors": [
+        "COMP-RADSTATT",
+        "GAP-01"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6793(1).jpeg",
+      "sha256": "e8999eaae15ce78042aa0ae48ce961917d96d9b3291669e4d77b922d12681be1",
+      "bytes": 643412,
+      "pixels": [
+        1536,
+        1152
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6793"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Blatt Radstatt kleines Schäferrad: Land-/Wasserseite, zwei Längshölzer und Queranordnung; 265/260 und 384 sichtbar.",
+      "limit": "Historische Zeichnung; Fotoabfolge ist keine Datierung; nicht aktuelles Aufmaß.",
+      "existing_anchors": [
+        "COMP-RADSTATT",
+        "GAP-01"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6794(1).jpeg",
+      "sha256": "1871fb48607087f15b362915b66adc1227085c9b86503fc0efa3a1d6ca154e7f",
+      "bytes": 644026,
+      "pixels": [
+        1536,
+        1152
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6794"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Blatt Radstatt kleines Schäferrad: Land-/Wasserseite, zwei Längshölzer und Queranordnung; 265/260 und 384 sichtbar.",
+      "limit": "Historische Zeichnung; Fotoabfolge ist keine Datierung; nicht aktuelles Aufmaß.",
+      "existing_anchors": [
+        "COMP-RADSTATT",
+        "GAP-01"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6795(1).jpeg",
+      "sha256": "00df562b9860d2685cf3f63414362b3cc78a0d858af1e91d801737c534b43d27",
+      "bytes": 661919,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6795"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Kariertes Blatt mit zwei Längsreihen Wasser/Land, rechteckigen Öffnungen, Maßketten und 2. Laufsteg.",
+      "limit": "Gleiche erkennbare Blattmerkmale; Beziehungen zu heutigem Tragwerk nicht metrisch freigegeben.",
+      "existing_anchors": [
+        "COMP-RADSTATT",
+        "GAP-01"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6796.jpeg",
+      "sha256": "cebffffa16287ce6fb5a3d8c7ca20b844ae47ca4c90fc896947fb74799cec026",
+      "bytes": 598740,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Kariertes Blatt mit zwei Längsreihen Wasser/Land, rechteckigen Öffnungen, Maßketten und 2. Laufsteg.",
+      "limit": "Gleiche erkennbare Blattmerkmale; Beziehungen zu heutigem Tragwerk nicht metrisch freigegeben.",
+      "existing_anchors": [
+        "COMP-RADSTATT",
+        "GAP-01"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6797(1).jpeg",
+      "sha256": "65652fc9ed636c371988213928f1a8acdb4ee034f29407cec0886e307c184ff5",
+      "bytes": 591715,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6797"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Kariertes Blatt mit zwei Längsreihen Wasser/Land, rechteckigen Öffnungen, Maßketten und 2. Laufsteg.",
+      "limit": "Gleiche erkennbare Blattmerkmale; Beziehungen zu heutigem Tragwerk nicht metrisch freigegeben.",
+      "existing_anchors": [
+        "COMP-RADSTATT",
+        "GAP-01"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6798(1).jpeg",
+      "sha256": "71d66f4d9f37b4646803867c78feccf3187993e35535336eaa65224cdafa580a",
+      "bytes": 624476,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6798"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Gezeichnetes langes gekröpftes Profil mit Endvorsprüngen und Maßlinien 455/395/50/30/14.",
+      "limit": "Gezeichnete Kröpfung nicht automatisch Geometrie eines bestimmten heutigen Armholzes.",
+      "existing_anchors": [
+        "COMP-ARMS",
+        "GAP-02"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6799(1).jpeg",
+      "sha256": "58d29aa43057d3070b1e576030382944abb2f37ea52597c470d35e75ac316aca",
+      "bytes": 644845,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6799"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Gezeichnetes langes gekröpftes Profil mit Endvorsprüngen und Maßlinien 455/395/50/30/14.",
+      "limit": "Gezeichnete Kröpfung nicht automatisch Geometrie eines bestimmten heutigen Armholzes.",
+      "existing_anchors": [
+        "COMP-ARMS",
+        "GAP-02"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6800(1).jpeg",
+      "sha256": "7ae6527e0d57c568cf5eec915efff8c181b3414cd518e3508d90b40f5781d912",
+      "bytes": 889040,
+      "pixels": [
+        1536,
+        1152
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6800"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Innenansicht: Welle, Arme, zwei Kranzebenen, Anschlussplatten und Strichmarke am Vorderarm; Wasser/Tragwerk dahinter.",
+      "limit": "Sichtbare Marke beweist keine innere Endpaarung; keine verdeckten Kontaktflächen oder metrische Pose.",
+      "existing_anchors": [
+        "COMP-ARMS",
+        "COMP-RIMS",
+        "GAP-02"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6801(1).jpeg",
+      "sha256": "4241659c6d3bf3185003e675cb08f61f76ac27b2e75f99845ae23cadac81d37e",
+      "bytes": 867812,
+      "pixels": [
+        1536,
+        1152
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6801"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Innenansicht: Welle, Arme, zwei Kranzebenen, Anschlussplatten und Strichmarke am Vorderarm; Wasser/Tragwerk dahinter.",
+      "limit": "Sichtbare Marke beweist keine innere Endpaarung; keine verdeckten Kontaktflächen oder metrische Pose.",
+      "existing_anchors": [
+        "COMP-ARMS",
+        "COMP-RIMS",
+        "GAP-02"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6802.jpeg",
+      "sha256": "6488581e1a4558a1a078d1f92baead100805b9b6df30540dc44f1a52cd201046",
+      "bytes": 866050,
+      "pixels": [
+        1536,
+        1152
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Innenansicht: Welle, Arme, zwei Kranzebenen, Anschlussplatten und Strichmarke am Vorderarm; Wasser/Tragwerk dahinter.",
+      "limit": "Sichtbare Marke beweist keine innere Endpaarung; keine verdeckten Kontaktflächen oder metrische Pose.",
+      "existing_anchors": [
+        "COMP-ARMS",
+        "COMP-RIMS",
+        "GAP-02"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6803(2).jpeg",
+      "sha256": "7c42459558f402f601958bf2ea332da1a5061e694c827401c622f8aa93dcd048",
+      "bytes": 881427,
+      "pixels": [
+        1536,
+        1152
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6803",
+        "V2-IMG_6803-upload2"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Schräge Gesamtansicht mit Wellenende im Holzauflager, Trog/Rinne und Kumpfreihe.",
+      "limit": "Verdeckte Unterseite und Teile hinter dem Tragwerk bleiben offen; keine vollständige Umfangszählung.",
+      "existing_anchors": [
+        "COMP-BEARINGS",
+        "COMP-TROUGH",
+        "GAP-06"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6804(1).jpeg",
+      "sha256": "a419e3de7d485b4ea5cb342626ef43aa4d5493582bb99a19739364bb9c6a3b3a",
+      "bytes": 903302,
+      "pixels": [
+        1536,
+        1152
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6804"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Frontalere Übersicht: Kranz mit Kümpfen/Schaufeln, Wellenende, Holzstützen und querlaufender Trog.",
+      "limit": "Keine registrierte Kamerapose; perspektivische Übersicht ist kein Durchmesser- oder Lagerhöhenmaß.",
+      "existing_anchors": [
+        "COMP-RIMS",
+        "COMP-RADSTATT",
+        "GAP-01"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6805.jpeg",
+      "sha256": "103f2817f91ab606a2c911a78fa6c22296a65084805511bcdef3133fbc6e56eb",
+      "bytes": 859804,
+      "pixels": [
+        1536,
+        1152
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Frontalere Übersicht: Kranz mit Kümpfen/Schaufeln, Wellenende, Holzstützen und querlaufender Trog.",
+      "limit": "Keine registrierte Kamerapose; perspektivische Übersicht ist kein Durchmesser- oder Lagerhöhenmaß.",
+      "existing_anchors": [
+        "COMP-RIMS",
+        "COMP-RADSTATT",
+        "GAP-01"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6806.jpeg",
+      "sha256": "d0a4b5009e28934a0fe6ff66849f6c00a010faaa58ac4672c42461bdda84a7b0",
+      "bytes": 869284,
+      "pixels": [
+        1536,
+        1152
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Frontalere Übersicht: Kranz mit Kümpfen/Schaufeln, Wellenende, Holzstützen und querlaufender Trog.",
+      "limit": "Keine registrierte Kamerapose; perspektivische Übersicht ist kein Durchmesser- oder Lagerhöhenmaß.",
+      "existing_anchors": [
+        "COMP-RIMS",
+        "COMP-RADSTATT",
+        "GAP-01"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6807.jpeg",
+      "sha256": "bcf41d94035ace17ecb02c28c5eeac79fbf261375c4e57bb97d00708b569e667",
+      "bytes": 759888,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Blick längs der Welle: Endschellen, vorstehender Dorn im Holzlager, Arme mit keilartigen Einlagen; L-Markierung.",
+      "limit": "Innenführung der Arme, Dornabmessungen und Lagerkontakt hinter dem Holz nicht sichtbar.",
+      "existing_anchors": [
+        "COMP-SHAFT",
+        "COMP-BEARINGS",
+        "GAP-02",
+        "GAP-06"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6808(2).jpeg",
+      "sha256": "195078732527b5eb75e4a437e40ed2e426d3a26a64ef6a511e31b6b4b4649f6d",
+      "bytes": 791892,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6808-upload2"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Blick längs der Welle: Endschellen, vorstehender Dorn im Holzlager, Arme mit keilartigen Einlagen; L-Markierung.",
+      "limit": "Innenführung der Arme, Dornabmessungen und Lagerkontakt hinter dem Holz nicht sichtbar.",
+      "existing_anchors": [
+        "COMP-SHAFT",
+        "COMP-BEARINGS",
+        "GAP-02",
+        "GAP-06"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6809(1).jpeg",
+      "sha256": "ac5890e0ac1e7f00a2d518fe2a45c794c56a748339234faf5904585a3bc2d62f",
+      "bytes": 678661,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6809"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Nahansicht mehrerer benachbarter Kümpfe mit Metallbändern, Köpfen und dazwischenliegenden Schaufelbrettern.",
+      "limit": "Rückseitige Nagelwege und Kontaktpartner verdeckt; keine Übernahme des Modellpfads.",
+      "existing_anchors": [
+        "COMP-KUEMPFE",
+        "COMP-KUMPF-NAILS",
+        "GAP-04"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6810(1).jpeg",
+      "sha256": "bf37f78ce1b05250a73a5a683714fcf124c0f6c6e7017c6e73762f3882749233",
+      "bytes": 734269,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6810"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Nahansicht mehrerer benachbarter Kümpfe mit Metallbändern, Köpfen und dazwischenliegenden Schaufelbrettern.",
+      "limit": "Rückseitige Nagelwege und Kontaktpartner verdeckt; keine Übernahme des Modellpfads.",
+      "existing_anchors": [
+        "COMP-KUEMPFE",
+        "COMP-KUMPF-NAILS",
+        "GAP-04"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6811(1).jpeg",
+      "sha256": "1f586f0bb350bd626e014e2efc437c9054ff144148fae7420b0e406aad47bcf8",
+      "bytes": 816407,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6811"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Seitliche Übersicht einer Kumpfreihe, Schaufeln, Holzsteg und Pfostenreihe im Wasser.",
+      "limit": "Nur Bildausschnitt; keine vollständige Zählung und keine Lagefreigabe für verdeckte Hölzer.",
+      "existing_anchors": [
+        "COMP-KUEMPFE",
+        "COMP-RADSTATT",
+        "GAP-05"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6812(1).jpeg",
+      "sha256": "f848cd958b6e12ee5eb383dcdad623d43e781faccfda9cc0db010be1a7e93a51",
+      "bytes": 559161,
+      "pixels": [
+        1536,
+        823
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6812"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Breite Uferübersicht mit Rad, Trog/Rinne, Stützrahmen und Pfostenreihe im Wasser.",
+      "limit": "Keine neue Registrierung oder reale Teilinstanzzuordnung aus der Gesamtansicht.",
+      "existing_anchors": [
+        "COMP-RADSTATT",
+        "COMP-TROUGH",
+        "GAP-07"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6813.jpeg",
+      "sha256": "20649c8f7a41fe3c5e4f84cb01ada3799eef4983607e0e88e4cd62f29e3d98c5",
+      "bytes": 907396,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Blick entlang der offenen Rinne zum Rad; Seitenbretter, Querleisten und Stützen sichtbar.",
+      "limit": "Gefälle, Länge und Wasserübergabe nicht metrisch oder im Betrieb nachgewiesen.",
+      "existing_anchors": [
+        "COMP-RINNE",
+        "GAP-07"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6814.jpeg",
+      "sha256": "4a8bf827ceeff09cf3ab93bc6aa4375315e509eb6bdb49099ab6dfb4b976bbd3",
+      "bytes": 900586,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Blick entlang der offenen Rinne zum Rad; Seitenbretter, Querleisten und Stützen sichtbar.",
+      "limit": "Gefälle, Länge und Wasserübergabe nicht metrisch oder im Betrieb nachgewiesen.",
+      "existing_anchors": [
+        "COMP-RINNE",
+        "GAP-07"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6815.jpeg",
+      "sha256": "4ec3ce41a05977c9a6195cae886579840c8b06e3e64011f2cf5302066cf7b4ac",
+      "bytes": 578685,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Wellenzeichnung: 370 längs, 37 quer, zwei Schlitzgruppen und gekreuzter Querschnitt.",
+      "limit": "Keine explizite lineare Einheit erkannt; nur Blattbefund, keine aktuelle Wellenlänge.",
+      "existing_anchors": [
+        "COMP-SHAFT",
+        "CLAIM-0001",
+        "CLAIM-0002",
+        "CONFLICT-03"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6816(1).jpeg",
+      "sha256": "9e200195f64046b7876314a90bfc01614c4a0b18447779b237e56638fe561bcd",
+      "bytes": 583092,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6816"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Wellenzeichnung: 370 längs, 37 quer, zwei Schlitzgruppen und gekreuzter Querschnitt.",
+      "limit": "Keine explizite lineare Einheit erkannt; nur Blattbefund, keine aktuelle Wellenlänge.",
+      "existing_anchors": [
+        "COMP-SHAFT",
+        "CLAIM-0001",
+        "CLAIM-0002",
+        "CONFLICT-03"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6817(1).jpeg",
+      "sha256": "fa5665fcc933b75c1c51161edb2eb3f8b2cbd7cbc804022febf00d15ea9e73cf",
+      "bytes": 585855,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6817"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Wellenzeichnung: 370 längs, 37 quer, zwei Schlitzgruppen und gekreuzter Querschnitt.",
+      "limit": "Keine explizite lineare Einheit erkannt; nur Blattbefund, keine aktuelle Wellenlänge.",
+      "existing_anchors": [
+        "COMP-SHAFT",
+        "CLAIM-0001",
+        "CLAIM-0002",
+        "CONFLICT-03"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6818(1).jpeg",
+      "sha256": "f54c4ac4b40f8424bc6beccb8313ab8fc292e79bb6edac9e8ff92cf814851df2",
+      "bytes": 692267,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6818"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Gelbes Reihenfolgeblatt: Land-/Wasserseite, sechs Markpositionen pro Kreis, Notiz Arme 1–4 sind mittig.",
+      "limit": "Historische Nummerierungs-/Montageangabe, keine beobachtete heutige Endpaarung.",
+      "existing_anchors": [
+        "COMP-ARMS",
+        "GAP-02"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6819(1).jpeg",
+      "sha256": "0fcf00112d053c19ccdc4296fa0eddf6b0dd6f135ab50acd14f68db38dc2b285",
+      "bytes": 643786,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6819"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Gelbes Reihenfolgeblatt: Land-/Wasserseite, sechs Markpositionen pro Kreis, Notiz Arme 1–4 sind mittig.",
+      "limit": "Historische Nummerierungs-/Montageangabe, keine beobachtete heutige Endpaarung.",
+      "existing_anchors": [
+        "COMP-ARMS",
+        "GAP-02"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6820(1).jpeg",
+      "sha256": "552c33f88b5a01f5a89ef64063fb96d8fefab67a633203e6096d6326176a9fda",
+      "bytes": 664801,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6820"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Gelbes Montageblatt: L/W, Schlusskeil-Notizen, abgestufte Armanordnung, Ausrichten über Kumpfnagel.",
+      "limit": "Notierte Reihenfolge ersetzt weder beobachtete Demontage noch Messung der Innenstruktur.",
+      "existing_anchors": [
+        "COMP-ARMS",
+        "GAP-02",
+        "GAP-08"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6821(1).jpeg",
+      "sha256": "7054d12136bcaec5119a71163fba8adf19050a29015c41d5b108cdb767f9a468",
+      "bytes": 652049,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6821"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Gelbe Kumpfskizze mit zwei Nagelzeichnungen und Zahlenfamilie 780/875/968 neben Ringnotiz.",
+      "limit": "Bandlänge, Überlappung, Umfang und konkrete Variante nicht gleichsetzen.",
+      "existing_anchors": [
+        "COMP-KUEMPFE",
+        "CONFLICT-02",
+        "GAP-04"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6822(1).jpeg",
+      "sha256": "71a1636063c91dab52297e37e3b0eb44d98e37d8e68408e88abb4d72038a361f",
+      "bytes": 1017003,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6822"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Zwei lose hölzerne Stifte mit Köpfen und Spitzen liegen nebeneinander auf einem Brett; unterschiedlich lang und gekrümmt.",
+      "limit": "Ohne Maßstab keine exakten Maße; Foto zeigt nicht den Einbauweg. Bestehende ID V2-IMG_6822.",
+      "existing_anchors": [
+        "COMP-KUMPF-NAILS",
+        "GAP-04"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6823(1).jpeg",
+      "sha256": "6fc02460e3a496e70ee878fcabe23d5add25b9760ae80764cdb557efebaeb6d1",
+      "bytes": 569999,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6823"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Weißer Zettel mit 24 mm / 22 mm, Nut-Zahlenfamilien 244/264 und 248/268 sowie Abstand von unten 36–48.",
+      "limit": "Überlagerte Ziffern und Zuordnung zu Varianten bleiben anhand der bestehenden Konfliktakte offen; keine Zahlenkorrektur.",
+      "existing_anchors": [
+        "COMP-KUMPF-STAVES",
+        "CONFLICT-01"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6824(1).jpeg",
+      "sha256": "28fc723a370c644e38c0eef699c935b4fe1cd83d72f80d646781952c7fb7a85e",
+      "bytes": 756961,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6824"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Handschriftliche Befestigerliste: Keile, Zwicker, Schetternnägel, Kumpfnägel und Bänder mit Mengenangaben.",
+      "limit": "Liste ist keine aktuelle Bestandszählung. Keine neue Begriffsfamilie aus Handschriftvarianten.",
+      "existing_anchors": [
+        "COMP-FASTENERS",
+        "GAP-05"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6825(1).jpeg",
+      "sha256": "58d1094ae10e4e0f934e9f18a662e1acebcfa280e23145387c9b536c3839c578",
+      "bytes": 751485,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6825"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Handschriftliche Befestigerliste: Keile, Zwicker, Schetternnägel, Kumpfnägel und Bänder mit Mengenangaben.",
+      "limit": "Liste ist keine aktuelle Bestandszählung. Keine neue Begriffsfamilie aus Handschriftvarianten.",
+      "existing_anchors": [
+        "COMP-FASTENERS",
+        "GAP-05"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6826.jpeg",
+      "sha256": "5e8f091b1b22a5ec7f312828487980ace654cd207e8706cc7c1e32159df3a9cd",
+      "bytes": 592262,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Gedruckte Tabelle Empfohlene Holzmaße und -längen; Wellenzeile 4,50 m / 50 cm / Einbaugröße 40 cm.",
+      "limit": "Allgemeine Empfehlung; keine Identität mit Wellenzeichnung oder Aufmaß bewiesen.",
+      "existing_anchors": [
+        "COMP-SHAFT",
+        "CONFLICT-03"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6827(1).jpeg",
+      "sha256": "11d984aa6870b27cf8a5fd48471ba8943cd7176406d96dda12c46c4159739449",
+      "bytes": 579107,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6827"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Gedruckte Tabelle Empfohlene Holzmaße und -längen; Wellenzeile 4,50 m / 50 cm / Einbaugröße 40 cm.",
+      "limit": "Allgemeine Empfehlung; keine Identität mit Wellenzeichnung oder Aufmaß bewiesen.",
+      "existing_anchors": [
+        "COMP-SHAFT",
+        "CONFLICT-03"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6828(1).jpeg",
+      "sha256": "26b74a01c7f033a8dfbeef71694d19912ceb53de507e4ad4c1c52272396f30b2",
+      "bytes": 336665,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6828"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Trogblatt in mehreren Ansichten mit 250 und eingeklammert 244, Querprofil und Öffnung.",
+      "limit": "Maßendpunkte und heutige Geltung ungeklärt; Byte-Dublette 6829(1)/(2) nicht doppelt zählen.",
+      "existing_anchors": [
+        "COMP-TROUGH",
+        "GAP-07"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6829(1).jpeg",
+      "sha256": "1cceff71a22b40b10a05f4f2b9333689b309312a1d589a092ec096db08be7aea",
+      "bytes": 340602,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6829"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Trogblatt in mehreren Ansichten mit 250 und eingeklammert 244, Querprofil und Öffnung.",
+      "limit": "Maßendpunkte und heutige Geltung ungeklärt; Byte-Dublette 6829(1)/(2) nicht doppelt zählen.",
+      "existing_anchors": [
+        "COMP-TROUGH",
+        "GAP-07"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6829(2).jpeg",
+      "sha256": "1cceff71a22b40b10a05f4f2b9333689b309312a1d589a092ec096db08be7aea",
+      "bytes": 340602,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6829"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Trogblatt in mehreren Ansichten mit 250 und eingeklammert 244, Querprofil und Öffnung.",
+      "limit": "Maßendpunkte und heutige Geltung ungeklärt; Byte-Dublette 6829(1)/(2) nicht doppelt zählen.",
+      "existing_anchors": [
+        "COMP-TROUGH",
+        "GAP-07"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6830(1).jpeg",
+      "sha256": "1069788c674d88a8fba0af71d5958f78dbb677ac2eb19ba0d1094a3ca7ff31d1",
+      "bytes": 604678,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6830"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Rinnenblatt: Längs-/Querschnitt, Latten/Leisten, 480 cm und mehrere Teilmaße; Verweis Mitte Trog.",
+      "limit": "Historische Auslegung; kein aktuelles Gefälle oder Höhenbezug.",
+      "existing_anchors": [
+        "COMP-RINNE",
+        "GAP-07"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6831(1).jpeg",
+      "sha256": "9683c5254dd8240c57b5993d0acf5ed4e2dec6068bbbfedc98535b7649043666",
+      "bytes": 642742,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6831"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Kariertes Reihenfolgeblatt: Landkrümmlinge mit Kumpflöchern, Wasserkrümmlinge ohne; Arm 1–4 mittig, zuerst eingebaut.",
+      "limit": "Dokumentinhalt nicht mit beobachteter heutiger Montagefolge gleichsetzen.",
+      "existing_anchors": [
+        "COMP-ARMS",
+        "COMP-KRUEMMLINGE",
+        "GAP-02"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6832(1).jpeg",
+      "sha256": "8d332c0429b392e7a4b460be68f5e58cd0bec6b6b8be24fb436910cd814b46a0",
+      "bytes": 973243,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "V2-IMG_6832"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Ein langer Holzstift mit Kopf wird vor dem Gelände gehalten.",
+      "limit": "Hand ist kein Maßstab; keine genaue Länge oder Teilidentität zum Paarfoto bewiesen. Bestehende ID V2-IMG_6832.",
+      "existing_anchors": [
+        "COMP-KUMPF-NAILS",
+        "GAP-04"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6833(1).jpeg",
+      "sha256": "10a86c13ddd4d8f634eee4620999ff4d2bb00a481b108521524e4a893bc7f46b",
+      "bytes": 632468,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6833"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Kontaktstreifenblatt mit drei Positionen, Cu/MS63/St-Blech, alten und gelb markierten Maßangaben.",
+      "limit": "Industrielle Vorlage; Bezug zum Wasserrad unbewiesen, gelbe Angaben sind keine automatisch freigegebene Revision. Bereits im Register so begrenzt.",
+      "existing_anchors": [
+        "REF-CONTACTSTRIPS"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6834.jpeg",
+      "sha256": "db6fbce24e439d1ae113372e204778e09be2a28d595818515faf28f5c23116c5",
+      "bytes": 594499,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Abfotografierte Beschilderung mit eingebettetem Radfoto und abgeschnittenem Schäferrad-Schriftzug.",
+      "limit": "Foto eines Fotos; ursprüngliches Datum und Zustand nicht bekannt. Nicht unabhängige aktuelle Vor-Ort-Aufnahme.",
+      "existing_anchors": [
+        "COMP-RIMS"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6835.jpeg",
+      "sha256": "4baf740ce66eec6fd701f5b541dabe4e319f9571712e2be281d8954901299d9d",
+      "bytes": 577437,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Abfotografierte Beschilderung mit eingebettetem Radfoto und abgeschnittenem Schäferrad-Schriftzug.",
+      "limit": "Foto eines Fotos; ursprüngliches Datum und Zustand nicht bekannt. Nicht unabhängige aktuelle Vor-Ort-Aufnahme.",
+      "existing_anchors": [
+        "COMP-RIMS"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6836(1).jpeg",
+      "sha256": "ef92de97534462a32f314ee1d9e59d6977ccc5a3a3e1f6584a9eca5e569fa1fa",
+      "bytes": 653769,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6836"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Blatt Biegematrize, Mat. St37, Menge 3; polygonale Kontur mit drei Öffnungen und Seitenansicht.",
+      "limit": "Werkzeugzeichnung, kein Radbauteil oder direkter Kumpf-Endquerschnitt.",
+      "existing_anchors": [
+        "TOOL-BENDING-DIE"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6837(1).jpeg",
+      "sha256": "e6bbb003abcbf6dd78cd89a245a26f3a76030181f6855cfe54e1c30295b60eb1",
+      "bytes": 666758,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6837"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Blatt Biegematrize, Mat. St37, Menge 3; polygonale Kontur mit drei Öffnungen und Seitenansicht.",
+      "limit": "Werkzeugzeichnung, kein Radbauteil oder direkter Kumpf-Endquerschnitt.",
+      "existing_anchors": [
+        "TOOL-BENDING-DIE"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6838(1).jpeg",
+      "sha256": "f3c823e5965934cef5e739cab6eb8a4199570dc3147e06cce556ebbd0e18ef5e",
+      "bytes": 671013,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6838"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Kariertes Kreis-/Polygonlayout mit Maßüberschreibungen und gestrichenen Notizen.",
+      "limit": "Überlagerte Varianten nicht zu einem Fertigmaß verschmelzen; Byte-Dublette 6838(1)/(2).",
+      "existing_anchors": [
+        "REF-POLYGON"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6838(2).jpeg",
+      "sha256": "f3c823e5965934cef5e739cab6eb8a4199570dc3147e06cce556ebbd0e18ef5e",
+      "bytes": 671013,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6838"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Kariertes Kreis-/Polygonlayout mit Maßüberschreibungen und gestrichenen Notizen.",
+      "limit": "Überlagerte Varianten nicht zu einem Fertigmaß verschmelzen; Byte-Dublette 6838(1)/(2).",
+      "existing_anchors": [
+        "REF-POLYGON"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6839(1).jpeg",
+      "sha256": "0e9b2915c726f0aa35bc84bdb72f61274c9ee011e45b06b8d6a7f36d23c735be",
+      "bytes": 520541,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6839"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Notizzettel mit Boden-/Deckelangaben für kleine und mittlere Kümpfe; Kreis- und Quadratzeichen.",
+      "limit": "Bezugsobjekt/Einheiten nicht durch Foto allein geklärt; Varianten nicht aktuellen Kümpfen zuweisen.",
+      "existing_anchors": [
+        "COMP-KUEMPFE",
+        "CONFLICT-01"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6840(1).jpeg",
+      "sha256": "2d6aea4ea18fabe18048d6503e6e1c33b396baedaea2ce987736a7bff08f3630",
+      "bytes": 577720,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6840"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Gemeinsame Mappe mit Kreislayout und benachbartem Boden-/Deckelnotizzettel.",
+      "limit": "Gemeinsame Ablage beweist keine gleiche Bauteilvariante oder Revision.",
+      "existing_anchors": [
+        "REF-POLYGON",
+        "COMP-KUEMPFE"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6841(1).jpeg",
+      "sha256": "6f51119e71a70b38663171f64c34322b5fbf85871ba0f9abba39e39cd899c69e",
+      "bytes": 570465,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6841"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Skizze 12 kant, überlagerte 26/38 und 97,0/141,8 sowie Winkelkonstruktion.",
+      "limit": "Hilfsgeometrie mit mehreren Zahlenständen, keine aktuelle Kumpfmaßfreigabe.",
+      "existing_anchors": [
+        "REF-POLYGON"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6842(1).jpeg",
+      "sha256": "adc623217a772dc55434364f4d479e7851eb906c65d7724ec1e17366d20148e0",
+      "bytes": 578855,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6842"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Langes Brettprofil auf industrieller Zeichnungsvorlage; handschriftliche Änderungen und Brettdicke 12/10.",
+      "limit": "Vorlagenfelder und Handschrift getrennt; genaue Verwendung am Rad bleibt offen, kein Wellenblatt.",
+      "existing_anchors": [
+        "REF-BOARD"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6843(1).jpeg",
+      "sha256": "145e4365e4dc17875801acdcb228dd939df874c77cfface80df37601717e7e22",
+      "bytes": 564636,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6843"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Langes Brettprofil auf industrieller Zeichnungsvorlage; handschriftliche Änderungen und Brettdicke 12/10.",
+      "limit": "Vorlagenfelder und Handschrift getrennt; genaue Verwendung am Rad bleibt offen, kein Wellenblatt.",
+      "existing_anchors": [
+        "REF-BOARD"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6844(1).jpeg",
+      "sha256": "b96164631e1c9e01b6013d57ecdd14d8f3387aeaa4d7ddbfb64124753af3dd6f",
+      "bytes": 572183,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6844"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Langes Brettprofil auf industrieller Zeichnungsvorlage; handschriftliche Änderungen und Brettdicke 12/10.",
+      "limit": "Vorlagenfelder und Handschrift getrennt; genaue Verwendung am Rad bleibt offen, kein Wellenblatt.",
+      "existing_anchors": [
+        "REF-BOARD"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6845(1).jpeg",
+      "sha256": "e085ad5dbd666c04718becbc82ffff259edcaa7a10aca371dbc774c9f2cb1f97",
+      "bytes": 757953,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6845"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Kontaktstreifenblatt mit drei Positionen, Cu/MS63/St-Blech, alten und gelb markierten Maßangaben.",
+      "limit": "Industrielle Vorlage; Bezug zum Wasserrad unbewiesen, gelbe Angaben sind keine automatisch freigegebene Revision. Bereits im Register so begrenzt.",
+      "existing_anchors": [
+        "REF-CONTACTSTRIPS"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6846(1).jpeg",
+      "sha256": "2997d13245e6c01e8f62369cd65ad4f0b8792de302d599bcdd837879e6b6aad2",
+      "bytes": 670869,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6846"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Spannringe für Kümpfe: drei Streifen mit 972/880/784, Bohrbildern und Materialnotiz.",
+      "limit": "Abgewickelte Blattlängen nicht automatisch fertiger Umfang; Varianten-/Überlappungsfrage bleibt offen.",
+      "existing_anchors": [
+        "COMP-KUMPF-HOOPS",
+        "CONFLICT-02"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6847(1).jpeg",
+      "sha256": "ace60ee58b41dd7d43ab1e0bdb0a384f36b0479ae4dec68c0eda7ec623a0aded",
+      "bytes": 698290,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6847"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Spannringe für Kümpfe: drei Streifen mit 972/880/784, Bohrbildern und Materialnotiz.",
+      "limit": "Abgewickelte Blattlängen nicht automatisch fertiger Umfang; Varianten-/Überlappungsfrage bleibt offen.",
+      "existing_anchors": [
+        "COMP-KUMPF-HOOPS",
+        "CONFLICT-02"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6848(2).jpeg",
+      "sha256": "745397683e1685d7bf0f3e0fb4a09ab3b06295e099ea17bb1eaf3a50ccd6cbab",
+      "bytes": 750020,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6848"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Detail des farbigen Kranzblattes mit Teilwinkeln, Schaufel-/Anschlussdarstellungen und Durchmessern.",
+      "limit": "Teilwinkel der Zeichnung nicht lokaler aktueller Schaufelpitch.",
+      "existing_anchors": [
+        "COMP-RIMS",
+        "GAP-09"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6849(1).jpeg",
+      "sha256": "aa94cf45888a828467b1af5c0a351cb9cad6e93a27c1bd00f1a9f2f5c57d7ac5",
+      "bytes": 745533,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6849"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Detail des gleichen Kranzblattes mit 198/213 und Maßstab 1:25; radiale Maßlinien.",
+      "limit": "Maßstab und Blattgeometrie ersetzen kein heutiges Aufmaß.",
+      "existing_anchors": [
+        "COMP-RIMS",
+        "CONFLICT-04"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6850(1).jpeg",
+      "sha256": "225de36b7ad475fb58fc4b840a5b921f3e1dd73dac81398c57300598bfcb28d2",
+      "bytes": 660844,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6850"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Kranzblatt-Ausschnitt mit 396/426, 198/213 sowie Arm- und Anschlusslinien.",
+      "limit": "Gleicher Dokumenthintergrund; keine unabhängige zweite Maßquelle.",
+      "existing_anchors": [
+        "COMP-RIMS",
+        "CONFLICT-04"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6851(2).jpeg",
+      "sha256": "8ea1fa40ee8720653bc60faab940085e60b1a05c1d841d3eb82ad325564f668b",
+      "bytes": 666537,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6851"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Kranzblatt-Ausschnitt mit ausdrücklicher Krümmling-Breite 14 cm und 198/213 sowie 396/426.",
+      "limit": "Axial-/Radialunterscheidung stammt zusätzlich aus TH-26 / CONFLICT-04; keine neue Ist-Messung.",
+      "existing_anchors": [
+        "COMP-RIMS",
+        "TH-20261009-26",
+        "CONFLICT-04"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6852(2).jpeg",
+      "sha256": "05c97fa50a12a041cf8d454ece9553ebf759f03ea15ee9dd1d80adfa3dd292bd",
+      "bytes": 680615,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6852"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Kranzblatt-Ausschnitt mit farbigen Anschlusszonen und Notiz Bogenlänge/Halbrad 669.",
+      "limit": "Gleiche Zeichnung; Bogenangabe nicht aus Foto zu aktuellem Umfang hochstufen.",
+      "existing_anchors": [
+        "COMP-RIMS"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6853(4).jpeg",
+      "sha256": "97259378a3ac3a4a0f01a556b76cfecde9833827254df8613259d555a2a04f6c",
+      "bytes": 896233,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6853"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Nahaufnahme beider Wellen-Armzonen, Keilhölzer, Eintrittsflächen und Endschelle.",
+      "limit": "Kein Blick durch den Wellenkörper; innere Paarung, Tiefe und verdeckte Verriegelung bleiben unbekannt.",
+      "existing_anchors": [
+        "COMP-SHAFT",
+        "COMP-ARMS",
+        "GAP-02"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6854(2).jpeg",
+      "sha256": "da8c9edc016c7519831ef6e11d9d1fcff3add00c2ba8f5557db477ee61a2a515",
+      "bytes": 532942,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6854"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Untersicht benachbarter Kumpfmündungen, Bänder, Köpfe und Schaufeln.",
+      "limit": "Innenraum dunkel; Bodenlage und verdeckter Nagelweg nicht vollständig ablesbar.",
+      "existing_anchors": [
+        "COMP-KUEMPFE",
+        "GAP-04"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6855(2).jpeg",
+      "sha256": "4777898e89fb05b037f3dd9fd9805c8661cb899947e60e6b94c81daa8dfc60dc",
+      "bytes": 794918,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6855"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Nahansicht der hinteren Armzone mit senkrechtem Arm, paarigen keilartigen Einlagen und seitlichen Austritten.",
+      "limit": "Keine abgesicherte innere Durchgangs- oder Endpaarzuordnung.",
+      "existing_anchors": [
+        "COMP-ARMS",
+        "GAP-02"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6856(2).jpeg",
+      "sha256": "388efbcd532d611e62bb34308b15df2d3e7fc33aebdbddf8fa0cffa011240005",
+      "bytes": 819887,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6856"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Nahansicht der hinteren Armzone mit senkrechtem Arm, paarigen keilartigen Einlagen und seitlichen Austritten.",
+      "limit": "Keine abgesicherte innere Durchgangs- oder Endpaarzuordnung.",
+      "existing_anchors": [
+        "COMP-ARMS",
+        "GAP-02"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6858(2).jpeg",
+      "sha256": "14931a3c2b10d1e9ba6d6121db1d434d7a63d790d15f099d9b2928ace9a1a492",
+      "bytes": 730724,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6858"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Gesamtansicht des Rades mit Kümpfen, Schaufeln, Trog und Wellenlager aus ähnlichen Perspektiven.",
+      "limit": "Keine vollständige Umfangsinventur, Maßfreigabe oder unabhängige Wiederholungsmessung.",
+      "existing_anchors": [
+        "COMP-RIMS",
+        "GAP-01",
+        "GAP-05"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6859(2).jpeg",
+      "sha256": "89a35e5d667c27fce445f6f3d3611999eb7d2b505b9309c3c9f4c4e170642867",
+      "bytes": 728900,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6859"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Gesamtansicht des Rades mit Kümpfen, Schaufeln, Trog und Wellenlager aus ähnlichen Perspektiven.",
+      "limit": "Keine vollständige Umfangsinventur, Maßfreigabe oder unabhängige Wiederholungsmessung.",
+      "existing_anchors": [
+        "COMP-RIMS",
+        "GAP-01",
+        "GAP-05"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6860(2).jpeg",
+      "sha256": "1ed26a327717e9659cdc82e49c937d97a51c7d70f8798029f3af56ceab55ea65",
+      "bytes": 723424,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6860"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Innenansicht beider Kranzebenen mit Welle, Armanschlüssen, Verbindungsbrettern und Holzstiften.",
+      "limit": "Verdeckte Stoßflächen und mechanischer Kranzabstand nicht gemessen.",
+      "existing_anchors": [
+        "COMP-RIMS",
+        "COMP-SCHETTERNBRETTER",
+        "GAP-03"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6861(2).jpeg",
+      "sha256": "ae274311aec8d93173a27eb8b830cc7623897c0464706032c1a2033625fd0152",
+      "bytes": 788482,
+      "pixels": [
+        1152,
+        1536
+      ],
+      "existing_source_ids": [
+        "PHOTO-6861"
+      ],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Innenansicht beider Kranzebenen mit Welle, Armanschlüssen, Verbindungsbrettern und Holzstiften.",
+      "limit": "Verdeckte Stoßflächen und mechanischer Kranzabstand nicht gemessen.",
+      "existing_anchors": [
+        "COMP-RIMS",
+        "COMP-SCHETTERNBRETTER",
+        "GAP-03"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/a6c861c8-05ce-4a8f-aa8a-636ffd464f11.jpeg",
+      "sha256": "0ae4c11dd18b2da77a2d2b5b86e982044993b08dbfc51969cae856b872d148b2",
+      "bytes": 435898,
+      "pixels": [
+        1536,
+        2048
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Teiloffenes Referenzgefäß: Dauben, eingelegter Boden am oberen Bildende, Nut und Zollstock längs.",
+      "limit": "Bild-oben ist nicht automatisch Mündung; keine Gleichsetzung mit eingebautem Kumpf.",
+      "existing_anchors": [
+        "COMP-KUEMPFE",
+        "GAP-04"
+      ]
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/da76dde4-72ef-442c-b7e8-3feac8f39255.jpeg",
+      "sha256": "e933634f05a6e0f5f50a03a660c5b13d78beaf43b8ccac7060c20c885430d7ce",
+      "bytes": 467251,
+      "pixels": [
+        1536,
+        2048
+      ],
+      "existing_source_ids": [],
+      "review": "individual-image-view; full image fitted within 1050x1050; no metric extraction",
+      "region": "whole image; features named in observation",
+      "observation": "Teiloffenes Referenzgefäß: Nut am oberen Bildende, gegenüberliegende Lochpaare, Bodenstück unten und Längszollstock.",
+      "limit": "Ähnliche Ansicht wie PHOTO-1000046420, andere Bytes; keine neue unabhängige Maßbestätigung.",
+      "existing_anchors": [
+        "COMP-KUEMPFE",
+        "GAP-04"
+      ]
+    }
+  ],
+  "focused_reference_originals": [
+    {
+      "path": "evidence/raw/1000046420.jpg",
+      "sha256": "a76cb11e6a27d3fa6db341408698925cd4f1b446475dbb4bbb64276db60acb22",
+      "observation": "Teiloffene Dauben, Nut, Lochpaare und Längszollstock.",
+      "limit": "Gezielter Originalgegenvergleich der Referenzfälle, kein neues Feldmaß.",
+      "review": "individual original image view"
+    },
+    {
+      "path": "evidence/raw/1000046421.jpg",
+      "sha256": "83278627dc3b96e7f15d9290ea5dcf96575c30104d1bea7b904783f4e2a955da",
+      "observation": "Endansicht mit Boden und diagonalem Zollstock.",
+      "limit": "Gezielter Originalgegenvergleich der Referenzfälle, kein neues Feldmaß.",
+      "review": "individual original image view"
+    },
+    {
+      "path": "evidence/raw/1000046422.jpg",
+      "sha256": "b07a4a00163dfa629c0655b6e7cc261a74f93434a2b969c5938aed4089fb0da4",
+      "observation": "Blick durch Mündung auf entfernten Boden, Zollstock am Rand.",
+      "limit": "Gezielter Originalgegenvergleich der Referenzfälle, kein neues Feldmaß.",
+      "review": "individual original image view"
+    },
+    {
+      "path": "evidence/raw/1000046423.jpg",
+      "sha256": "836b49ff126fccba4ec495660554870e52f5394649d8e03fdacf7be9f0e9f396",
+      "observation": "Außenansicht mit drei Metallbändern, Holzstiften und Längszollstock.",
+      "limit": "Gezielter Originalgegenvergleich der Referenzfälle, kein neues Feldmaß.",
+      "review": "individual original image view"
+    },
+    {
+      "path": "evidence/raw/thorsten-20261009/image-1791540525839.jpg",
+      "sha256": "c4de9636a619bcf9ef9655a6a50e07951f137c92f6b50edf5c5288c3a75e7934",
+      "observation": "Armsitz mit örtlicher Kranzverstärkung und Maßstab; nicht alle Kontaktflächen sichtbar.",
+      "limit": "Gezielter Originalgegenvergleich der Referenzfälle, kein neues Feldmaß.",
+      "review": "individual original image view"
+    },
+    {
+      "path": "evidence/raw/thorsten-20261009/image-1791540812566.jpg",
+      "sha256": "b7a6db38d432445b1f3cfd29a1d39295db7592e550f915b7ae011a8efbf8bbba",
+      "observation": "Seitliches Verbindungsbrett am Kranzstoß und vorstehende Holzstifte/Keile.",
+      "limit": "Gezielter Originalgegenvergleich der Referenzfälle, kein neues Feldmaß.",
+      "review": "individual original image view"
+    }
+  ],
+  "context": [
+    {
+      "path": "evidence/raw/context-unidentified-20261010/IMG_6875(1).jpeg",
+      "sha256": "5405aa649f47435dc6ca62f99d6b3d4bde0c2c1b897e0a8432a2ac74c6cded3c",
+      "review": "individual original image view",
+      "identity": "unconfirmed",
+      "target_support_allowed": false,
+      "observation": "Frontale Flussansicht mit Rad hinter Balken; Screenshot mit Zuschreibung Emil Wedel und relativer Zeit."
+    },
+    {
+      "path": "evidence/raw/context-unidentified-20261010/IMG_6876(1).jpeg",
+      "sha256": "c37228c57b49fcc9af165f1c4e58d4bf022f7a5765e518e7ec4072a2bcefaf9a",
+      "review": "individual original image view",
+      "identity": "unconfirmed",
+      "target_support_allowed": false,
+      "observation": "Schräge Flussansicht mit Rad/Tragwerk; Screenshot mit Zuschreibung Philipp und relativer Zeit."
+    },
+    {
+      "path": "evidence/raw/context-unidentified-20261010/IMG_6877(1).jpeg",
+      "sha256": "d4a4688472bc9332394d9952583c85f96181a9d97b8837a3f21dfddddfa8422a",
+      "review": "individual original image view",
+      "identity": "unconfirmed",
+      "target_support_allowed": false,
+      "observation": "Kleine Uferansicht mit Holzrad, Vegetation und Pfostenreihe."
+    }
+  ],
+  "video": {
+    "path": "evidence/raw/originaltransfer-20261010/IMG_6857.mp4",
+    "sha256": "bfcf16efd88f912f63bb7e66a9bed6fb6e6148da751659f6ef390598a85344ab",
+    "duration_seconds": 21.266667,
+    "decoded_frames": 638,
+    "overview_viewed_frame_ranges": [
+      [
+        0,
+        99
+      ],
+      [
+        100,
+        199
+      ],
+      [
+        200,
+        299
+      ],
+      [
+        300,
+        399
+      ],
+      [
+        400,
+        499
+      ],
+      [
+        500,
+        599
+      ],
+      [
+        600,
+        637
+      ]
+    ],
+    "overview_tile_width": 144,
+    "detailed_sample_seconds": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5,
+      4.0,
+      4.5,
+      5.0,
+      5.5,
+      6.0,
+      6.5,
+      7.0,
+      7.5,
+      8.0,
+      8.5,
+      9.0,
+      9.5,
+      10.0,
+      10.5,
+      11.0,
+      11.5,
+      12.0,
+      12.5,
+      13.0,
+      13.5,
+      14.0,
+      14.5,
+      15.0,
+      15.5,
+      16.0,
+      16.5,
+      17.0,
+      17.5,
+      18.0,
+      18.5,
+      19.0,
+      19.5,
+      20.0,
+      20.5,
+      21.0
+    ],
+    "detailed_tile_width": 350,
+    "sampling_limit": "638 frames viewed in overview sheets, plus 43 larger samples across the duration; not 638 full-resolution detail readings. No calibrated motion analysis.",
+    "audio": "AAC track present and technically decodable; not listened to or transcribed; no speech/content/absence-of-speech claim. No audio-analysis capability available in this session. Remains an explicit source-review boundary.",
+    "observations": [
+      {
+        "seconds": [
+          0,
+          2
+        ],
+        "text": "Innerer unterer Kranz, Arme und Tragwerk über Wasser."
+      },
+      {
+        "seconds": [
+          2,
+          8.5
+        ],
+        "text": "Kameraschwenk zur äußeren Kumpfreihe und zum oberen Trog; Bänder, Köpfe, Schaufeln sichtbar."
+      },
+      {
+        "seconds": [
+          8.5,
+          11.5
+        ],
+        "text": "Wellenende mit Schellen, Dorn-/Holzlagerbereich, senkrechte Stützen und Rinne."
+      },
+      {
+        "seconds": [
+          12,
+          15
+        ],
+        "text": "Seitliche Kümpfe, Steg und Pfostenreihe im Wasser."
+      },
+      {
+        "seconds": [
+          15,
+          19
+        ],
+        "text": "Rückschwenk zu Welle, Keilen, Lager und unterem Kranz."
+      },
+      {
+        "seconds": [
+          19,
+          21.266667
+        ],
+        "text": "Oberer Kranz, Kümpfe und Trog; letzte Frames ohne neue freigegebene Eigenschaft."
+      }
+    ],
+    "conclusion": "Keine vollständige Radumdrehung, keine metrische Aufnahme oder verdeckte Verbindungsfreilegung nachgewiesen. TASK-WATER/GAP-07 bleibt unerfüllt."
+  },
+  "attachments": [
+    {
+      "file": "01-IMG_6861.jpeg",
+      "sha256": "ae274311aec8d93173a27eb8b830cc7623897c0464706032c1a2033625fd0152",
+      "matches": [
+        "evidence/raw/IMG_6861.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6861(2).jpeg"
+      ]
+    },
+    {
+      "file": "02-IMG_6819.jpeg",
+      "sha256": "0fcf00112d053c19ccdc4296fa0eddf6b0dd6f135ab50acd14f68db38dc2b285",
+      "matches": [
+        "evidence/raw/IMG_6819.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6819(1).jpeg"
+      ]
+    },
+    {
+      "file": "03-IMG_6829.jpeg",
+      "sha256": "1cceff71a22b40b10a05f4f2b9333689b309312a1d589a092ec096db08be7aea",
+      "matches": [
+        "evidence/raw/IMG_6829.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6829(1).jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6829(2).jpeg"
+      ]
+    },
+    {
+      "file": "04-IMG_6825.jpeg",
+      "sha256": "58d1094ae10e4e0f934e9f18a662e1acebcfa280e23145387c9b536c3839c578",
+      "matches": [
+        "evidence/raw/IMG_6825.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6825(1).jpeg"
+      ]
+    },
+    {
+      "file": "05-IMG_6818.jpeg",
+      "sha256": "f54c4ac4b40f8424bc6beccb8313ab8fc292e79bb6edac9e8ff92cf814851df2",
+      "matches": [
+        "evidence/raw/IMG_6818.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6818(1).jpeg"
+      ]
+    },
+    {
+      "file": "06-IMG_6833.jpeg",
+      "sha256": "10a86c13ddd4d8f634eee4620999ff4d2bb00a481b108521524e4a893bc7f46b",
+      "matches": [
+        "evidence/raw/IMG_6833.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6833(1).jpeg"
+      ]
+    },
+    {
+      "file": "07-IMG_6827.jpeg",
+      "sha256": "11d984aa6870b27cf8a5fd48471ba8943cd7176406d96dda12c46c4159739449",
+      "matches": [
+        "evidence/raw/IMG_6827.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6827(1).jpeg"
+      ]
+    },
+    {
+      "file": "08-IMG_6844.jpeg",
+      "sha256": "b96164631e1c9e01b6013d57ecdd14d8f3387aeaa4d7ddbfb64124753af3dd6f",
+      "matches": [
+        "evidence/raw/IMG_6844.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6844(1).jpeg"
+      ]
+    },
+    {
+      "file": "09-IMG_6839.jpeg",
+      "sha256": "0e9b2915c726f0aa35bc84bdb72f61274c9ee011e45b06b8d6a7f36d23c735be",
+      "matches": [
+        "evidence/raw/IMG_6839.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6839(1).jpeg"
+      ]
+    },
+    {
+      "file": "10-IMG_6836.jpeg",
+      "sha256": "ef92de97534462a32f314ee1d9e59d6977ccc5a3a3e1f6584a9eca5e569fa1fa",
+      "matches": [
+        "evidence/raw/IMG_6836.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6836(1).jpeg"
+      ]
+    },
+    {
+      "file": "11-IMG_6852.jpeg",
+      "sha256": "05c97fa50a12a041cf8d454ece9553ebf759f03ea15ee9dd1d80adfa3dd292bd",
+      "matches": [
+        "evidence/raw/IMG_6852.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6852(2).jpeg"
+      ]
+    },
+    {
+      "file": "12-IMG_6851.jpeg",
+      "sha256": "8ea1fa40ee8720653bc60faab940085e60b1a05c1d841d3eb82ad325564f668b",
+      "matches": [
+        "evidence/raw/IMG_6851.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6851(2).jpeg"
+      ]
+    },
+    {
+      "file": "13-IMG_6856.jpeg",
+      "sha256": "388efbcd532d611e62bb34308b15df2d3e7fc33aebdbddf8fa0cffa011240005",
+      "matches": [
+        "evidence/raw/IMG_6856.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6856(2).jpeg"
+      ]
+    },
+    {
+      "file": "14-IMG_6838.jpeg",
+      "sha256": "f3c823e5965934cef5e739cab6eb8a4199570dc3147e06cce556ebbd0e18ef5e",
+      "matches": [
+        "evidence/raw/IMG_6838.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6838(2).jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6838(1).jpeg"
+      ]
+    },
+    {
+      "file": "15-IMG_6846.jpeg",
+      "sha256": "2997d13245e6c01e8f62369cd65ad4f0b8792de302d599bcdd837879e6b6aad2",
+      "matches": [
+        "evidence/raw/IMG_6846.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6846(1).jpeg"
+      ]
+    },
+    {
+      "file": "16-IMG_6817.jpeg",
+      "sha256": "fa5665fcc933b75c1c51161edb2eb3f8b2cbd7cbc804022febf00d15ea9e73cf",
+      "matches": [
+        "evidence/raw/IMG_6817.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6817(1).jpeg"
+      ]
+    },
+    {
+      "file": "17-IMG_6858.jpeg",
+      "sha256": "14931a3c2b10d1e9ba6d6121db1d434d7a63d790d15f099d9b2928ace9a1a492",
+      "matches": [
+        "evidence/raw/IMG_6858.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6858(2).jpeg"
+      ]
+    },
+    {
+      "file": "18-IMG_6860.jpeg",
+      "sha256": "1ed26a327717e9659cdc82e49c937d97a51c7d70f8798029f3af56ceab55ea65",
+      "matches": [
+        "evidence/raw/IMG_6860.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6860(2).jpeg"
+      ]
+    },
+    {
+      "file": "19-IMG_6837.jpeg",
+      "sha256": "e6bbb003abcbf6dd78cd89a245a26f3a76030181f6855cfe54e1c30295b60eb1",
+      "matches": [
+        "evidence/raw/IMG_6837.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6837(1).jpeg"
+      ]
+    },
+    {
+      "file": "20-IMG_6855.jpeg",
+      "sha256": "4777898e89fb05b037f3dd9fd9805c8661cb899947e60e6b94c81daa8dfc60dc",
+      "matches": [
+        "evidence/raw/IMG_6855.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6855(2).jpeg"
+      ]
+    },
+    {
+      "file": "21-IMG_6842.jpeg",
+      "sha256": "adc623217a772dc55434364f4d479e7851eb906c65d7724ec1e17366d20148e0",
+      "matches": [
+        "evidence/raw/IMG_6842.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6842(1).jpeg"
+      ]
+    },
+    {
+      "file": "22-IMG_6849.jpeg",
+      "sha256": "aa94cf45888a828467b1af5c0a351cb9cad6e93a27c1bd00f1a9f2f5c57d7ac5",
+      "matches": [
+        "evidence/raw/IMG_6849.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6849(1).jpeg"
+      ]
+    },
+    {
+      "file": "23-IMG_6840.jpeg",
+      "sha256": "2d6aea4ea18fabe18048d6503e6e1c33b396baedaea2ce987736a7bff08f3630",
+      "matches": [
+        "evidence/raw/IMG_6840.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6840(1).jpeg"
+      ]
+    },
+    {
+      "file": "24-IMG_6831.jpeg",
+      "sha256": "9683c5254dd8240c57b5993d0acf5ed4e2dec6068bbbfedc98535b7649043666",
+      "matches": [
+        "evidence/raw/IMG_6831.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6831(1).jpeg"
+      ]
+    },
+    {
+      "file": "25-IMG_6847.jpeg",
+      "sha256": "ace60ee58b41dd7d43ab1e0bdb0a384f36b0479ae4dec68c0eda7ec623a0aded",
+      "matches": [
+        "evidence/raw/IMG_6847.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6847(1).jpeg"
+      ]
+    },
+    {
+      "file": "26-IMG_6845.jpeg",
+      "sha256": "e085ad5dbd666c04718becbc82ffff259edcaa7a10aca371dbc774c9f2cb1f97",
+      "matches": [
+        "evidence/raw/IMG_6845.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6845(1).jpeg"
+      ]
+    },
+    {
+      "file": "27-IMG_6859.jpeg",
+      "sha256": "89a35e5d667c27fce445f6f3d3611999eb7d2b505b9309c3c9f4c4e170642867",
+      "matches": [
+        "evidence/raw/IMG_6859.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6859(2).jpeg"
+      ]
+    },
+    {
+      "file": "28-IMG_6841.jpeg",
+      "sha256": "6f51119e71a70b38663171f64c34322b5fbf85871ba0f9abba39e39cd899c69e",
+      "matches": [
+        "evidence/raw/IMG_6841.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6841(1).jpeg"
+      ]
+    },
+    {
+      "file": "29-IMG_6816.jpeg",
+      "sha256": "9e200195f64046b7876314a90bfc01614c4a0b18447779b237e56638fe561bcd",
+      "matches": [
+        "evidence/raw/IMG_6816.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6816(1).jpeg"
+      ]
+    },
+    {
+      "file": "30-IMG_6823.jpeg",
+      "sha256": "6fc02460e3a496e70ee878fcabe23d5add25b9760ae80764cdb557efebaeb6d1",
+      "matches": [
+        "evidence/raw/IMG_6823.jpeg",
+        "evidence/raw/originaltransfer-20261010/IMG_6823(1).jpeg"
+      ]
+    }
+  ]
+}

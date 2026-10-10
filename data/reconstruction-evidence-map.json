@@ -3,7 +3,7 @@
   "rules": [
     "Alle Modellkoordinaten sind ungemessene Rekonstruktionskoordinaten.",
     "Historische Maße und aktuelle Maße bleiben getrennt.",
-    "IMG_6875/6876 nur sekundäre Kontextbeschreibung; Originale fehlen.",
+    "IMG_6875–6877 sind archiviert, ihre Objektidentität ist unbestätigt. Ohne Identitätsnachweis keine Bestätigung von Topologie, Maßen oder Zustand des Zielrads. Siehe state/evidence-consolidation/20261010/CONTEXT-IDENTITY-ADDENDUM.md.",
     "Lokale Fachauskunft eines direkt beteiligten Wasserrad-Mitinitiators hat Vorrang vor externen Analogien und unbelegten Modellannahmen für Funktion/Terminologie; metrische Geometrie bleibt messpflichtig.",
     "ITER-003 integriert 39 Fachangaben; Expertenmaße bleiben als solche qualifiziert und sind kein aktuelles Feldaufmaß."
   ],
@@ -18,7 +18,7 @@
         "PHOTO-6816",
         "PHOTO-6855",
         "V2-IMG_6800",
-        "V2-IMG_6808",
+        "V2-IMG_6808-upload2",
         "TH-20261009-13",
         "TH-20261009-14",
         "TH-20261009-15"
@@ -54,7 +54,7 @@
         "V2-IMG_6798",
         "V2-IMG_6799",
         "V2-IMG_6800",
-        "V2-IMG_6808",
+        "V2-IMG_6808-upload2",
         "PHOTO-6831",
         "TH-20261009-01",
         "TH-20261009-02",
@@ -173,7 +173,7 @@
         "V2-IMG_6822",
         "V2-IMG_6832",
         "PHOTO-6825",
-        "V2-IMG_6808",
+        "V2-IMG_6808-upload2",
         "NARRATIVE-TH-KUMPF-20261008-02",
         "NARRATIVE-TH-KUMPF-20261008-03"
       ],
@@ -284,7 +284,7 @@
       "current_photo_constraints": "Sichtbare Form/Topologie gemäß Quellen; verdeckte Flächen nicht ergänzt als Befund.",
       "sources": [
         "V2-IMG_6804",
-        "V2-IMG_6808",
+        "V2-IMG_6808-upload2",
         "V2-IMG_6792",
         "V2-IMG_6795",
         "TH-20261009-15"

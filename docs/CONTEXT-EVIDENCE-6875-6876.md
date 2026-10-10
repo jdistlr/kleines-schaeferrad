@@ -1,3 +1,5 @@
+> **Geltungsgrenze, 10.10.2026:** Die nachgelieferten IMG_6875–6877 sind archiviert, ihre Identität als Kleines Schäferrad ist laut Nutzer unbestätigt. Die folgende historische Zielobjekt-Zuordnung trägt deshalb keine Bestätigung von Topologie, Maßen oder Zustand des Zielrads. Maßgeblich: [Kontextidentitäts-Nachtrag](../state/evidence-consolidation/20261010/CONTEXT-IDENTITY-ADDENDUM.md). Vergleichsmaterial bleibt erhalten; keine Geometrieänderung.
+
 # Neue Kontextbilder Wasserseite — IMG_6875 / IMG_6876
 
 Stand: 2026-10-07  

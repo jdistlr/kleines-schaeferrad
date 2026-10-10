@@ -1,0 +1,76 @@
+{
+  "basis": "f2bf574c6c6fed3a64ac0073823cd07ac24ee537",
+  "policy": "Ein gemeinsamer Leseeinstieg; keine PR-Schließung, kein Merge. Andere offene Arbeiten bleiben erhalten und sind keine Benutzeraufgaben.",
+  "open_pull_requests": [
+    {
+      "number": 20,
+      "title": "Evidence graph consolidation — scoped work session",
+      "head": "work/evidence-graph-consolidation-20261010",
+      "sha": "f2bf574c6c6fed3a64ac0073823cd07ac24ee537",
+      "base": "design/lab-ordnung-entwurf-20261010",
+      "draft": true,
+      "head_contained_in_reference_basis": true,
+      "head_contained_in_main": false
+    },
+    {
+      "number": 19,
+      "title": "Entwurf: Laborordnung und exemplarische Wellen-Fallakte",
+      "head": "design/lab-ordnung-entwurf-20261010",
+      "sha": "704c114a2ba0cd43db8e121df83b1981c7e9cace",
+      "base": "work/model-control-plane-20261010",
+      "draft": true,
+      "head_contained_in_reference_basis": true,
+      "head_contained_in_main": false
+    },
+    {
+      "number": 18,
+      "title": "Model Control Plane: experience architecture and functional vertical slice",
+      "head": "work/model-control-plane-20261010",
+      "sha": "c31bf8ae5cdc9d79090c1b53bfea1c867f255eb7",
+      "base": "main",
+      "draft": false,
+      "head_contained_in_reference_basis": true,
+      "head_contained_in_main": false
+    },
+    {
+      "number": 16,
+      "title": "Holistic stabilization audit — CONDITIONAL GO / review ready",
+      "head": "work/holistic-stabilization-audit-20261009",
+      "sha": "129a9a931ec945158dd3f7b3189cfb0f4b767ad5",
+      "base": "main",
+      "draft": false,
+      "head_contained_in_reference_basis": false,
+      "head_contained_in_main": false
+    },
+    {
+      "number": 14,
+      "title": "ITER-003 Truth Critic & Integration Audit — NO-GO",
+      "head": "work/iter003-truth-critic-20261009",
+      "sha": "05b54353211bd055b9f5f243c3ccc4162bf7c2d1",
+      "base": "main",
+      "draft": false,
+      "head_contained_in_reference_basis": false,
+      "head_contained_in_main": false
+    },
+    {
+      "number": 12,
+      "title": "Archive video evidence: timecoded intake and Thorsten capture delta",
+      "head": "work/archive-video-evidence-intake-20261009",
+      "sha": "609082bec794ad3d1091341493b5325f764da5f5",
+      "base": "main",
+      "draft": false,
+      "head_contained_in_reference_basis": false,
+      "head_contained_in_main": false
+    },
+    {
+      "number": 11,
+      "title": "Stage UX recovery R1/R4 with field-safe release gate",
+      "head": "work/ux-recovery-r1-r4-plan-20261009",
+      "sha": "0bba10bf0cdb48cc33c4be36eaf704711cfa099f",
+      "base": "main",
+      "draft": false,
+      "head_contained_in_reference_basis": false,
+      "head_contained_in_main": false
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+✔ URL context validates IDs and resolves historical Radstadt alias (2.044134ms)
+✔ synthetic viewer parameter bounds reject missing, nonnumeric and out-of-contract values (0.412644ms)
+✔ return URL includes only navigation context and current field step (0.220983ms)
+✔ canonical tasks have complete field contract and valid baseline refs (2.677183ms)
+✔ axis normalization maps Y-up to Z-up, is invertible and does not reflect or register (2.551077ms)
+✔ arm candidates expose different centre topology and preserve historical same-side tips (1385.003976ms)
+✔ task completion cannot hide missing views or missing measurement; unknown remains reasoned (0.422489ms)
+✔ physical instances require observation; merges reject divergent evidence (0.800489ms)
+✔ compact PDF keeps canonical task parity through shared visual sheets (4.420024ms)
+✔ all source schema variants resolve without mutating evidence; Thorsten JPEGs and narrative remain usable (37.65957ms)
+✔ all 39 expert statements keep canonical backlinks and no as-built promotion (5.050907ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1618.317244

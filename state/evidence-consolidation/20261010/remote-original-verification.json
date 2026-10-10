@@ -1,0 +1,547 @@
+{
+  "commit": "9c1bf563465b89e4aeded9935775efe0b17c3e26",
+  "scope": "Original-byte comparison only; remote provenance requires a separately documented fresh GitHub checkout",
+  "expected_count": 77,
+  "passed": 77,
+  "files": [
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6790(1).jpeg",
+      "expected_sha256": "ebda0d5488546fe5b197914c58da6b77579c669809e452fcc8bf93124e0054e6",
+      "bytes": 697816,
+      "sha256": "ebda0d5488546fe5b197914c58da6b77579c669809e452fcc8bf93124e0054e6",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6791.jpeg",
+      "expected_sha256": "c79fa259aa81b56ba1ebb9615d4875aecef53f7bee162f7239f9feb65f767a2c",
+      "bytes": 685918,
+      "sha256": "c79fa259aa81b56ba1ebb9615d4875aecef53f7bee162f7239f9feb65f767a2c",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6792(1).jpeg",
+      "expected_sha256": "84375bbc12673ba188e4f6fa5ba25e46d74ab518b239c3a2bed6fdc4ef3ad8ad",
+      "bytes": 636432,
+      "sha256": "84375bbc12673ba188e4f6fa5ba25e46d74ab518b239c3a2bed6fdc4ef3ad8ad",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6793(1).jpeg",
+      "expected_sha256": "e8999eaae15ce78042aa0ae48ce961917d96d9b3291669e4d77b922d12681be1",
+      "bytes": 643412,
+      "sha256": "e8999eaae15ce78042aa0ae48ce961917d96d9b3291669e4d77b922d12681be1",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6794(1).jpeg",
+      "expected_sha256": "1871fb48607087f15b362915b66adc1227085c9b86503fc0efa3a1d6ca154e7f",
+      "bytes": 644026,
+      "sha256": "1871fb48607087f15b362915b66adc1227085c9b86503fc0efa3a1d6ca154e7f",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6795(1).jpeg",
+      "expected_sha256": "00df562b9860d2685cf3f63414362b3cc78a0d858af1e91d801737c534b43d27",
+      "bytes": 661919,
+      "sha256": "00df562b9860d2685cf3f63414362b3cc78a0d858af1e91d801737c534b43d27",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6796.jpeg",
+      "expected_sha256": "cebffffa16287ce6fb5a3d8c7ca20b844ae47ca4c90fc896947fb74799cec026",
+      "bytes": 598740,
+      "sha256": "cebffffa16287ce6fb5a3d8c7ca20b844ae47ca4c90fc896947fb74799cec026",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6797(1).jpeg",
+      "expected_sha256": "65652fc9ed636c371988213928f1a8acdb4ee034f29407cec0886e307c184ff5",
+      "bytes": 591715,
+      "sha256": "65652fc9ed636c371988213928f1a8acdb4ee034f29407cec0886e307c184ff5",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6798(1).jpeg",
+      "expected_sha256": "71d66f4d9f37b4646803867c78feccf3187993e35535336eaa65224cdafa580a",
+      "bytes": 624476,
+      "sha256": "71d66f4d9f37b4646803867c78feccf3187993e35535336eaa65224cdafa580a",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6799(1).jpeg",
+      "expected_sha256": "58d29aa43057d3070b1e576030382944abb2f37ea52597c470d35e75ac316aca",
+      "bytes": 644845,
+      "sha256": "58d29aa43057d3070b1e576030382944abb2f37ea52597c470d35e75ac316aca",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6800(1).jpeg",
+      "expected_sha256": "7ae6527e0d57c568cf5eec915efff8c181b3414cd518e3508d90b40f5781d912",
+      "bytes": 889040,
+      "sha256": "7ae6527e0d57c568cf5eec915efff8c181b3414cd518e3508d90b40f5781d912",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6801(1).jpeg",
+      "expected_sha256": "4241659c6d3bf3185003e675cb08f61f76ac27b2e75f99845ae23cadac81d37e",
+      "bytes": 867812,
+      "sha256": "4241659c6d3bf3185003e675cb08f61f76ac27b2e75f99845ae23cadac81d37e",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6802.jpeg",
+      "expected_sha256": "6488581e1a4558a1a078d1f92baead100805b9b6df30540dc44f1a52cd201046",
+      "bytes": 866050,
+      "sha256": "6488581e1a4558a1a078d1f92baead100805b9b6df30540dc44f1a52cd201046",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6803(2).jpeg",
+      "expected_sha256": "7c42459558f402f601958bf2ea332da1a5061e694c827401c622f8aa93dcd048",
+      "bytes": 881427,
+      "sha256": "7c42459558f402f601958bf2ea332da1a5061e694c827401c622f8aa93dcd048",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6804(1).jpeg",
+      "expected_sha256": "a419e3de7d485b4ea5cb342626ef43aa4d5493582bb99a19739364bb9c6a3b3a",
+      "bytes": 903302,
+      "sha256": "a419e3de7d485b4ea5cb342626ef43aa4d5493582bb99a19739364bb9c6a3b3a",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6805.jpeg",
+      "expected_sha256": "103f2817f91ab606a2c911a78fa6c22296a65084805511bcdef3133fbc6e56eb",
+      "bytes": 859804,
+      "sha256": "103f2817f91ab606a2c911a78fa6c22296a65084805511bcdef3133fbc6e56eb",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6806.jpeg",
+      "expected_sha256": "d0a4b5009e28934a0fe6ff66849f6c00a010faaa58ac4672c42461bdda84a7b0",
+      "bytes": 869284,
+      "sha256": "d0a4b5009e28934a0fe6ff66849f6c00a010faaa58ac4672c42461bdda84a7b0",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6807.jpeg",
+      "expected_sha256": "bcf41d94035ace17ecb02c28c5eeac79fbf261375c4e57bb97d00708b569e667",
+      "bytes": 759888,
+      "sha256": "bcf41d94035ace17ecb02c28c5eeac79fbf261375c4e57bb97d00708b569e667",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6808(2).jpeg",
+      "expected_sha256": "195078732527b5eb75e4a437e40ed2e426d3a26a64ef6a511e31b6b4b4649f6d",
+      "bytes": 791892,
+      "sha256": "195078732527b5eb75e4a437e40ed2e426d3a26a64ef6a511e31b6b4b4649f6d",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6809(1).jpeg",
+      "expected_sha256": "ac5890e0ac1e7f00a2d518fe2a45c794c56a748339234faf5904585a3bc2d62f",
+      "bytes": 678661,
+      "sha256": "ac5890e0ac1e7f00a2d518fe2a45c794c56a748339234faf5904585a3bc2d62f",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6810(1).jpeg",
+      "expected_sha256": "bf37f78ce1b05250a73a5a683714fcf124c0f6c6e7017c6e73762f3882749233",
+      "bytes": 734269,
+      "sha256": "bf37f78ce1b05250a73a5a683714fcf124c0f6c6e7017c6e73762f3882749233",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6811(1).jpeg",
+      "expected_sha256": "1f586f0bb350bd626e014e2efc437c9054ff144148fae7420b0e406aad47bcf8",
+      "bytes": 816407,
+      "sha256": "1f586f0bb350bd626e014e2efc437c9054ff144148fae7420b0e406aad47bcf8",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6812(1).jpeg",
+      "expected_sha256": "f848cd958b6e12ee5eb383dcdad623d43e781faccfda9cc0db010be1a7e93a51",
+      "bytes": 559161,
+      "sha256": "f848cd958b6e12ee5eb383dcdad623d43e781faccfda9cc0db010be1a7e93a51",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6813.jpeg",
+      "expected_sha256": "20649c8f7a41fe3c5e4f84cb01ada3799eef4983607e0e88e4cd62f29e3d98c5",
+      "bytes": 907396,
+      "sha256": "20649c8f7a41fe3c5e4f84cb01ada3799eef4983607e0e88e4cd62f29e3d98c5",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6814.jpeg",
+      "expected_sha256": "4a8bf827ceeff09cf3ab93bc6aa4375315e509eb6bdb49099ab6dfb4b976bbd3",
+      "bytes": 900586,
+      "sha256": "4a8bf827ceeff09cf3ab93bc6aa4375315e509eb6bdb49099ab6dfb4b976bbd3",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6815.jpeg",
+      "expected_sha256": "4ec3ce41a05977c9a6195cae886579840c8b06e3e64011f2cf5302066cf7b4ac",
+      "bytes": 578685,
+      "sha256": "4ec3ce41a05977c9a6195cae886579840c8b06e3e64011f2cf5302066cf7b4ac",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6816(1).jpeg",
+      "expected_sha256": "9e200195f64046b7876314a90bfc01614c4a0b18447779b237e56638fe561bcd",
+      "bytes": 583092,
+      "sha256": "9e200195f64046b7876314a90bfc01614c4a0b18447779b237e56638fe561bcd",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6817(1).jpeg",
+      "expected_sha256": "fa5665fcc933b75c1c51161edb2eb3f8b2cbd7cbc804022febf00d15ea9e73cf",
+      "bytes": 585855,
+      "sha256": "fa5665fcc933b75c1c51161edb2eb3f8b2cbd7cbc804022febf00d15ea9e73cf",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6818(1).jpeg",
+      "expected_sha256": "f54c4ac4b40f8424bc6beccb8313ab8fc292e79bb6edac9e8ff92cf814851df2",
+      "bytes": 692267,
+      "sha256": "f54c4ac4b40f8424bc6beccb8313ab8fc292e79bb6edac9e8ff92cf814851df2",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6819(1).jpeg",
+      "expected_sha256": "0fcf00112d053c19ccdc4296fa0eddf6b0dd6f135ab50acd14f68db38dc2b285",
+      "bytes": 643786,
+      "sha256": "0fcf00112d053c19ccdc4296fa0eddf6b0dd6f135ab50acd14f68db38dc2b285",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6820(1).jpeg",
+      "expected_sha256": "552c33f88b5a01f5a89ef64063fb96d8fefab67a633203e6096d6326176a9fda",
+      "bytes": 664801,
+      "sha256": "552c33f88b5a01f5a89ef64063fb96d8fefab67a633203e6096d6326176a9fda",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6821(1).jpeg",
+      "expected_sha256": "7054d12136bcaec5119a71163fba8adf19050a29015c41d5b108cdb767f9a468",
+      "bytes": 652049,
+      "sha256": "7054d12136bcaec5119a71163fba8adf19050a29015c41d5b108cdb767f9a468",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6822(1).jpeg",
+      "expected_sha256": "71a1636063c91dab52297e37e3b0eb44d98e37d8e68408e88abb4d72038a361f",
+      "bytes": 1017003,
+      "sha256": "71a1636063c91dab52297e37e3b0eb44d98e37d8e68408e88abb4d72038a361f",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6823(1).jpeg",
+      "expected_sha256": "6fc02460e3a496e70ee878fcabe23d5add25b9760ae80764cdb557efebaeb6d1",
+      "bytes": 569999,
+      "sha256": "6fc02460e3a496e70ee878fcabe23d5add25b9760ae80764cdb557efebaeb6d1",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6824(1).jpeg",
+      "expected_sha256": "28fc723a370c644e38c0eef699c935b4fe1cd83d72f80d646781952c7fb7a85e",
+      "bytes": 756961,
+      "sha256": "28fc723a370c644e38c0eef699c935b4fe1cd83d72f80d646781952c7fb7a85e",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6825(1).jpeg",
+      "expected_sha256": "58d1094ae10e4e0f934e9f18a662e1acebcfa280e23145387c9b536c3839c578",
+      "bytes": 751485,
+      "sha256": "58d1094ae10e4e0f934e9f18a662e1acebcfa280e23145387c9b536c3839c578",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6826.jpeg",
+      "expected_sha256": "5e8f091b1b22a5ec7f312828487980ace654cd207e8706cc7c1e32159df3a9cd",
+      "bytes": 592262,
+      "sha256": "5e8f091b1b22a5ec7f312828487980ace654cd207e8706cc7c1e32159df3a9cd",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6827(1).jpeg",
+      "expected_sha256": "11d984aa6870b27cf8a5fd48471ba8943cd7176406d96dda12c46c4159739449",
+      "bytes": 579107,
+      "sha256": "11d984aa6870b27cf8a5fd48471ba8943cd7176406d96dda12c46c4159739449",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6828(1).jpeg",
+      "expected_sha256": "26b74a01c7f033a8dfbeef71694d19912ceb53de507e4ad4c1c52272396f30b2",
+      "bytes": 336665,
+      "sha256": "26b74a01c7f033a8dfbeef71694d19912ceb53de507e4ad4c1c52272396f30b2",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6829(1).jpeg",
+      "expected_sha256": "1cceff71a22b40b10a05f4f2b9333689b309312a1d589a092ec096db08be7aea",
+      "bytes": 340602,
+      "sha256": "1cceff71a22b40b10a05f4f2b9333689b309312a1d589a092ec096db08be7aea",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6829(2).jpeg",
+      "expected_sha256": "1cceff71a22b40b10a05f4f2b9333689b309312a1d589a092ec096db08be7aea",
+      "bytes": 340602,
+      "sha256": "1cceff71a22b40b10a05f4f2b9333689b309312a1d589a092ec096db08be7aea",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6830(1).jpeg",
+      "expected_sha256": "1069788c674d88a8fba0af71d5958f78dbb677ac2eb19ba0d1094a3ca7ff31d1",
+      "bytes": 604678,
+      "sha256": "1069788c674d88a8fba0af71d5958f78dbb677ac2eb19ba0d1094a3ca7ff31d1",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6831(1).jpeg",
+      "expected_sha256": "9683c5254dd8240c57b5993d0acf5ed4e2dec6068bbbfedc98535b7649043666",
+      "bytes": 642742,
+      "sha256": "9683c5254dd8240c57b5993d0acf5ed4e2dec6068bbbfedc98535b7649043666",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6832(1).jpeg",
+      "expected_sha256": "8d332c0429b392e7a4b460be68f5e58cd0bec6b6b8be24fb436910cd814b46a0",
+      "bytes": 973243,
+      "sha256": "8d332c0429b392e7a4b460be68f5e58cd0bec6b6b8be24fb436910cd814b46a0",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6833(1).jpeg",
+      "expected_sha256": "10a86c13ddd4d8f634eee4620999ff4d2bb00a481b108521524e4a893bc7f46b",
+      "bytes": 632468,
+      "sha256": "10a86c13ddd4d8f634eee4620999ff4d2bb00a481b108521524e4a893bc7f46b",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6834.jpeg",
+      "expected_sha256": "db6fbce24e439d1ae113372e204778e09be2a28d595818515faf28f5c23116c5",
+      "bytes": 594499,
+      "sha256": "db6fbce24e439d1ae113372e204778e09be2a28d595818515faf28f5c23116c5",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6835.jpeg",
+      "expected_sha256": "4baf740ce66eec6fd701f5b541dabe4e319f9571712e2be281d8954901299d9d",
+      "bytes": 577437,
+      "sha256": "4baf740ce66eec6fd701f5b541dabe4e319f9571712e2be281d8954901299d9d",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6836(1).jpeg",
+      "expected_sha256": "ef92de97534462a32f314ee1d9e59d6977ccc5a3a3e1f6584a9eca5e569fa1fa",
+      "bytes": 653769,
+      "sha256": "ef92de97534462a32f314ee1d9e59d6977ccc5a3a3e1f6584a9eca5e569fa1fa",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6837(1).jpeg",
+      "expected_sha256": "e6bbb003abcbf6dd78cd89a245a26f3a76030181f6855cfe54e1c30295b60eb1",
+      "bytes": 666758,
+      "sha256": "e6bbb003abcbf6dd78cd89a245a26f3a76030181f6855cfe54e1c30295b60eb1",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6838(1).jpeg",
+      "expected_sha256": "f3c823e5965934cef5e739cab6eb8a4199570dc3147e06cce556ebbd0e18ef5e",
+      "bytes": 671013,
+      "sha256": "f3c823e5965934cef5e739cab6eb8a4199570dc3147e06cce556ebbd0e18ef5e",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6838(2).jpeg",
+      "expected_sha256": "f3c823e5965934cef5e739cab6eb8a4199570dc3147e06cce556ebbd0e18ef5e",
+      "bytes": 671013,
+      "sha256": "f3c823e5965934cef5e739cab6eb8a4199570dc3147e06cce556ebbd0e18ef5e",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6839(1).jpeg",
+      "expected_sha256": "0e9b2915c726f0aa35bc84bdb72f61274c9ee011e45b06b8d6a7f36d23c735be",
+      "bytes": 520541,
+      "sha256": "0e9b2915c726f0aa35bc84bdb72f61274c9ee011e45b06b8d6a7f36d23c735be",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6840(1).jpeg",
+      "expected_sha256": "2d6aea4ea18fabe18048d6503e6e1c33b396baedaea2ce987736a7bff08f3630",
+      "bytes": 577720,
+      "sha256": "2d6aea4ea18fabe18048d6503e6e1c33b396baedaea2ce987736a7bff08f3630",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6841(1).jpeg",
+      "expected_sha256": "6f51119e71a70b38663171f64c34322b5fbf85871ba0f9abba39e39cd899c69e",
+      "bytes": 570465,
+      "sha256": "6f51119e71a70b38663171f64c34322b5fbf85871ba0f9abba39e39cd899c69e",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6842(1).jpeg",
+      "expected_sha256": "adc623217a772dc55434364f4d479e7851eb906c65d7724ec1e17366d20148e0",
+      "bytes": 578855,
+      "sha256": "adc623217a772dc55434364f4d479e7851eb906c65d7724ec1e17366d20148e0",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6843(1).jpeg",
+      "expected_sha256": "145e4365e4dc17875801acdcb228dd939df874c77cfface80df37601717e7e22",
+      "bytes": 564636,
+      "sha256": "145e4365e4dc17875801acdcb228dd939df874c77cfface80df37601717e7e22",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6844(1).jpeg",
+      "expected_sha256": "b96164631e1c9e01b6013d57ecdd14d8f3387aeaa4d7ddbfb64124753af3dd6f",
+      "bytes": 572183,
+      "sha256": "b96164631e1c9e01b6013d57ecdd14d8f3387aeaa4d7ddbfb64124753af3dd6f",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6845(1).jpeg",
+      "expected_sha256": "e085ad5dbd666c04718becbc82ffff259edcaa7a10aca371dbc774c9f2cb1f97",
+      "bytes": 757953,
+      "sha256": "e085ad5dbd666c04718becbc82ffff259edcaa7a10aca371dbc774c9f2cb1f97",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6846(1).jpeg",
+      "expected_sha256": "2997d13245e6c01e8f62369cd65ad4f0b8792de302d599bcdd837879e6b6aad2",
+      "bytes": 670869,
+      "sha256": "2997d13245e6c01e8f62369cd65ad4f0b8792de302d599bcdd837879e6b6aad2",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6847(1).jpeg",
+      "expected_sha256": "ace60ee58b41dd7d43ab1e0bdb0a384f36b0479ae4dec68c0eda7ec623a0aded",
+      "bytes": 698290,
+      "sha256": "ace60ee58b41dd7d43ab1e0bdb0a384f36b0479ae4dec68c0eda7ec623a0aded",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6848(2).jpeg",
+      "expected_sha256": "745397683e1685d7bf0f3e0fb4a09ab3b06295e099ea17bb1eaf3a50ccd6cbab",
+      "bytes": 750020,
+      "sha256": "745397683e1685d7bf0f3e0fb4a09ab3b06295e099ea17bb1eaf3a50ccd6cbab",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6849(1).jpeg",
+      "expected_sha256": "aa94cf45888a828467b1af5c0a351cb9cad6e93a27c1bd00f1a9f2f5c57d7ac5",
+      "bytes": 745533,
+      "sha256": "aa94cf45888a828467b1af5c0a351cb9cad6e93a27c1bd00f1a9f2f5c57d7ac5",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6850(1).jpeg",
+      "expected_sha256": "225de36b7ad475fb58fc4b840a5b921f3e1dd73dac81398c57300598bfcb28d2",
+      "bytes": 660844,
+      "sha256": "225de36b7ad475fb58fc4b840a5b921f3e1dd73dac81398c57300598bfcb28d2",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6851(2).jpeg",
+      "expected_sha256": "8ea1fa40ee8720653bc60faab940085e60b1a05c1d841d3eb82ad325564f668b",
+      "bytes": 666537,
+      "sha256": "8ea1fa40ee8720653bc60faab940085e60b1a05c1d841d3eb82ad325564f668b",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6852(2).jpeg",
+      "expected_sha256": "05c97fa50a12a041cf8d454ece9553ebf759f03ea15ee9dd1d80adfa3dd292bd",
+      "bytes": 680615,
+      "sha256": "05c97fa50a12a041cf8d454ece9553ebf759f03ea15ee9dd1d80adfa3dd292bd",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6853(4).jpeg",
+      "expected_sha256": "97259378a3ac3a4a0f01a556b76cfecde9833827254df8613259d555a2a04f6c",
+      "bytes": 896233,
+      "sha256": "97259378a3ac3a4a0f01a556b76cfecde9833827254df8613259d555a2a04f6c",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6854(2).jpeg",
+      "expected_sha256": "da8c9edc016c7519831ef6e11d9d1fcff3add00c2ba8f5557db477ee61a2a515",
+      "bytes": 532942,
+      "sha256": "da8c9edc016c7519831ef6e11d9d1fcff3add00c2ba8f5557db477ee61a2a515",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6855(2).jpeg",
+      "expected_sha256": "4777898e89fb05b037f3dd9fd9805c8661cb899947e60e6b94c81daa8dfc60dc",
+      "bytes": 794918,
+      "sha256": "4777898e89fb05b037f3dd9fd9805c8661cb899947e60e6b94c81daa8dfc60dc",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6856(2).jpeg",
+      "expected_sha256": "388efbcd532d611e62bb34308b15df2d3e7fc33aebdbddf8fa0cffa011240005",
+      "bytes": 819887,
+      "sha256": "388efbcd532d611e62bb34308b15df2d3e7fc33aebdbddf8fa0cffa011240005",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6858(2).jpeg",
+      "expected_sha256": "14931a3c2b10d1e9ba6d6121db1d434d7a63d790d15f099d9b2928ace9a1a492",
+      "bytes": 730724,
+      "sha256": "14931a3c2b10d1e9ba6d6121db1d434d7a63d790d15f099d9b2928ace9a1a492",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6859(2).jpeg",
+      "expected_sha256": "89a35e5d667c27fce445f6f3d3611999eb7d2b505b9309c3c9f4c4e170642867",
+      "bytes": 728900,
+      "sha256": "89a35e5d667c27fce445f6f3d3611999eb7d2b505b9309c3c9f4c4e170642867",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6860(2).jpeg",
+      "expected_sha256": "1ed26a327717e9659cdc82e49c937d97a51c7d70f8798029f3af56ceab55ea65",
+      "bytes": 723424,
+      "sha256": "1ed26a327717e9659cdc82e49c937d97a51c7d70f8798029f3af56ceab55ea65",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6861(2).jpeg",
+      "expected_sha256": "ae274311aec8d93173a27eb8b830cc7623897c0464706032c1a2033625fd0152",
+      "bytes": 788482,
+      "sha256": "ae274311aec8d93173a27eb8b830cc7623897c0464706032c1a2033625fd0152",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/a6c861c8-05ce-4a8f-aa8a-636ffd464f11.jpeg",
+      "expected_sha256": "0ae4c11dd18b2da77a2d2b5b86e982044993b08dbfc51969cae856b872d148b2",
+      "bytes": 435898,
+      "sha256": "0ae4c11dd18b2da77a2d2b5b86e982044993b08dbfc51969cae856b872d148b2",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/da76dde4-72ef-442c-b7e8-3feac8f39255.jpeg",
+      "expected_sha256": "e933634f05a6e0f5f50a03a660c5b13d78beaf43b8ccac7060c20c885430d7ce",
+      "bytes": 467251,
+      "sha256": "e933634f05a6e0f5f50a03a660c5b13d78beaf43b8ccac7060c20c885430d7ce",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/09bf54b5-ebe2-43f7-badc-310aee910605.jpeg",
+      "expected_sha256": "06cc05e0b485daa4056fc54e129ac7ce3deaaca6cac64777a97a2ef3838d48be",
+      "bytes": 448966,
+      "sha256": "06cc05e0b485daa4056fc54e129ac7ce3deaaca6cac64777a97a2ef3838d48be",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/raw/originaltransfer-20261010/IMG_6857.mp4",
+      "expected_sha256": "bfcf16efd88f912f63bb7e66a9bed6fb6e6148da751659f6ef390598a85344ab",
+      "bytes": 13408295,
+      "sha256": "bfcf16efd88f912f63bb7e66a9bed6fb6e6148da751659f6ef390598a85344ab",
+      "status": "PASS"
+    }
+  ]
+}

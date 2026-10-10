@@ -1,0 +1,325 @@
+{
+  "commit": "727a0248c0234641453a08e4ae3984e27c9f970b",
+  "counts": {
+    "claims": 408,
+    "components": 34,
+    "source_analyses": 117,
+    "source_ids_in_union": 159,
+    "gaps": 9,
+    "tasks": 21,
+    "conflicts": 13,
+    "assembly_nodes": 30,
+    "assembly_relations": 31,
+    "historical_slots": 66,
+    "physical_instances": 0,
+    "raw_files": 213,
+    "raw_unique_hashes": 150
+  },
+  "reference_candidates": [
+    {
+      "from": "COMP-KUMPF-NAILS",
+      "to": "PHOTO-6822",
+      "type": "cites-source",
+      "file": "data/components.json",
+      "pointer": "/components/14/provenance/0",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "COMP-KUMPF-NAILS",
+      "to": "PHOTO-6832",
+      "type": "cites-source",
+      "file": "data/components.json",
+      "pointer": "/components/14/provenance/1",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "TASK-ARM-BEFORE",
+      "to": "H-ARM-01",
+      "type": "references-context",
+      "file": "data/field-tasks.json",
+      "pointer": "/tasks/3/source_refs/1",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "TASK-ARM-BEFORE",
+      "to": "H-ARM-02",
+      "type": "references-context",
+      "file": "data/field-tasks.json",
+      "pointer": "/tasks/3/source_refs/2",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "TASK-ARM-BEFORE",
+      "to": "H-ARM-04",
+      "type": "references-context",
+      "file": "data/field-tasks.json",
+      "pointer": "/tasks/3/source_refs/3",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "TASK-ARM-RELEASE",
+      "to": "H-ARM-03",
+      "type": "references-context",
+      "file": "data/field-tasks.json",
+      "pointer": "/tasks/4/source_refs/2",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "TASK-MORTISE",
+      "to": "H-ARM-02",
+      "type": "references-context",
+      "file": "data/field-tasks.json",
+      "pointer": "/tasks/5/source_refs/1",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "TASK-MORTISE",
+      "to": "H-ARM-03",
+      "type": "references-context",
+      "file": "data/field-tasks.json",
+      "pointer": "/tasks/5/source_refs/2",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "TASK-ARM-PROFILE",
+      "to": "H-ARM-01",
+      "type": "references-context",
+      "file": "data/field-tasks.json",
+      "pointer": "/tasks/6/source_refs/1",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "TASK-ARM-PROFILE",
+      "to": "H-ARM-04",
+      "type": "references-context",
+      "file": "data/field-tasks.json",
+      "pointer": "/tasks/6/source_refs/2",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "CONFLICT-03",
+      "to": "REF-Welle",
+      "type": "about-component",
+      "file": "data/conflicts.json",
+      "pointer": "/conflicts/2/subjects/1",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "CONFLICT-10",
+      "to": "CAPTURE-01",
+      "type": "about-component",
+      "file": "data/conflicts.json",
+      "pointer": "/conflicts/9/subjects/0",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "COMP-SHAFT",
+      "to": "V2-IMG_6808",
+      "type": "model-map-cites",
+      "file": "data/reconstruction-evidence-map.json",
+      "pointer": "/components/0/sources/3",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "COMP-ARMS",
+      "to": "V2-IMG_6808",
+      "type": "model-map-cites",
+      "file": "data/reconstruction-evidence-map.json",
+      "pointer": "/components/1/sources/3",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "COMP-FASTENERS",
+      "to": "V2-IMG_6808",
+      "type": "model-map-cites",
+      "file": "data/reconstruction-evidence-map.json",
+      "pointer": "/components/4/sources/3",
+      "derivation": "explicit-contract-reference"
+    },
+    {
+      "from": "COMP-BEARINGS",
+      "to": "V2-IMG_6808",
+      "type": "model-map-cites",
+      "file": "data/reconstruction-evidence-map.json",
+      "pointer": "/components/7/sources/1",
+      "derivation": "explicit-contract-reference"
+    }
+  ],
+  "duplicate_ids": {
+    "claims": [],
+    "components": [],
+    "sources": [],
+    "tasks": []
+  },
+  "source_url_collisions": [
+    {
+      "id": "EXT-VZO",
+      "urls": [
+        "https://www.verein-zufriedenheit.com/info.html",
+        "https://www.verein-zufriedenheit.com/wasserrad.html"
+      ],
+      "registries": [
+        "evidence/manifest.json",
+        "data/external-construction-research-v2.json"
+      ]
+    }
+  ],
+  "semantic_duplicate_candidates": [
+    [
+      "CLAIM-0012",
+      "CLAIM-0154"
+    ],
+    [
+      "CLAIM-0014",
+      "CLAIM-0157"
+    ],
+    [
+      "CLAIM-0017",
+      "CLAIM-0158"
+    ],
+    [
+      "CLAIM-0201",
+      "CLAIM-0213"
+    ],
+    [
+      "CLAIM-0263",
+      "CLAIM-0268"
+    ],
+    [
+      "CLAIM-0264",
+      "CLAIM-0269"
+    ],
+    [
+      "CLAIM-0265",
+      "CLAIM-0270"
+    ],
+    [
+      "CLAIM-0266",
+      "CLAIM-0271"
+    ],
+    [
+      "CLAIM-0267",
+      "CLAIM-0272"
+    ],
+    [
+      "CLAIM-0273",
+      "CLAIM-0281"
+    ],
+    [
+      "CLAIM-0274",
+      "CLAIM-0282"
+    ],
+    [
+      "CLAIM-0275",
+      "CLAIM-0283"
+    ],
+    [
+      "CLAIM-0276",
+      "CLAIM-0284"
+    ],
+    [
+      "CLAIM-0277",
+      "CLAIM-0285"
+    ],
+    [
+      "CLAIM-0278",
+      "CLAIM-0286"
+    ],
+    [
+      "CLAIM-0279",
+      "CLAIM-0287"
+    ],
+    [
+      "CLAIM-0280",
+      "CLAIM-0288"
+    ],
+    [
+      "CLAIM-0289",
+      "CLAIM-0296"
+    ],
+    [
+      "CLAIM-0290",
+      "CLAIM-0297"
+    ],
+    [
+      "CLAIM-0291",
+      "CLAIM-0298"
+    ],
+    [
+      "CLAIM-0292",
+      "CLAIM-0299"
+    ],
+    [
+      "CLAIM-0293",
+      "CLAIM-0300"
+    ],
+    [
+      "CLAIM-0294",
+      "CLAIM-0301"
+    ],
+    [
+      "CLAIM-0295",
+      "CLAIM-0302"
+    ]
+  ],
+  "claim_support_cycles": [],
+  "gap_tasks": {
+    "GAP-01": [
+      "TASK-ORIENT",
+      "TASK-DATUM",
+      "TASK-POSE",
+      "TASK-SCAN"
+    ],
+    "GAP-02": [
+      "TASK-ARM-BEFORE",
+      "TASK-ARM-RELEASE",
+      "TASK-MORTISE",
+      "TASK-ARM-PROFILE",
+      "TASK-KEI"
+    ],
+    "GAP-03": [
+      "TASK-KRU-BEFORE",
+      "TASK-KRU-OPEN"
+    ],
+    "GAP-04": [
+      "TASK-KUM-BEFORE",
+      "TASK-KUM-VARIANT",
+      "TASK-HOOPS"
+    ],
+    "GAP-05": [
+      "TASK-COUNT",
+      "TASK-PAD"
+    ],
+    "GAP-06": [
+      "TASK-BEARING"
+    ],
+    "GAP-07": [
+      "TASK-ORIENT",
+      "TASK-WATER"
+    ],
+    "GAP-08": [
+      "TASK-ARM-RELEASE",
+      "TASK-PAD",
+      "TASK-KEI",
+      "TASK-CRAFT",
+      "TASK-REGISTER",
+      "TASK-FINAL"
+    ],
+    "GAP-09": []
+  },
+  "conflict_statuses": {
+    "CONFLICT-01": "unresolved",
+    "CONFLICT-02": "variant-family-confirmed-numeric-mapping-unresolved",
+    "CONFLICT-03": "unresolved",
+    "CONFLICT-04": "semantic-dimensions-resolved",
+    "CONFLICT-05": "unresolved",
+    "CONFLICT-06": "functions-resolved-metric-paths-open",
+    "CONFLICT-07": "unverified-multiplicity",
+    "CONFLICT-08": "capture-deficit-not-proof-of-absent-part",
+    "CONFLICT-09": "not-comparable-without-registration-and-field-scale",
+    "CONFLICT-10": "axis-candidate-supported-remaining-surface-differences",
+    "CONFLICT-11": "catalogue-correction-complete-physical-assignment-open",
+    "CONFLICT-12": "unresolved",
+    "CONFLICT-13": "rim-plane-reference-resolved-pitch-open"
+  }
+}

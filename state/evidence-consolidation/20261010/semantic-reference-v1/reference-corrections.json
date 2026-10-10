@@ -1,0 +1,51 @@
+{
+  "base": "727a0248c0234641453a08e4ae3984e27c9f970b",
+  "authorization": "Current user request: belegte technische Referenzkorrekturen und zugehörige Prüfungen",
+  "changes": [
+    {
+      "file": "data/components.json",
+      "old": "\"PHOTO-6822\"",
+      "new": "\"V2-IMG_6822\"",
+      "occurrences": 1
+    },
+    {
+      "file": "data/components.json",
+      "old": "\"PHOTO-6832\"",
+      "new": "\"V2-IMG_6832\"",
+      "occurrences": 1
+    },
+    {
+      "file": "data/reconstruction-evidence-map.json",
+      "old": "\"V2-IMG_6808\"",
+      "new": "\"V2-IMG_6808-upload2\"",
+      "occurrences": 4
+    },
+    {
+      "file": "data/reconstruction-evidence-map.json",
+      "old": "IMG_6875/6876 nur sekundäre Kontextbeschreibung; Originale fehlen.",
+      "new": "IMG_6875–6877 sind archiviert, ihre Objektidentität ist unbestätigt. Ohne Identitätsnachweis keine Bestätigung von Topologie, Maßen oder Zustand des Zielrads. Siehe state/evidence-consolidation/20261010/CONTEXT-IDENTITY-ADDENDUM.md.",
+      "occurrences": 1
+    },
+    {
+      "file": "data/field-tasks.json",
+      "pointer": "/tasks/13/source_refs",
+      "old": [
+        "GAP-05",
+        "GAP-08"
+      ],
+      "new": [
+        "GAP-05",
+        "GAP-08",
+        "GAP-09"
+      ],
+      "basis": "TASK-PAD instruction already explicitly investigates radial pitch, rim plane, partners and three paddles; GAP-09 requires that same capture."
+    },
+    {
+      "file": "docs/field-kit/field-pack-manifest.json",
+      "pointer": "/task_source_sha256",
+      "old": "5240fac418bfc81c049bed6fdb8ae425daf31a02b91c955441070b7f8f446baa",
+      "new": "5fc952ac5b70a7434a9b3a9c9baccc016752b04ebd2ecad21c047484e2dca242",
+      "basis": "Dependent input hash for GAP-09 reference addition. Existing renderer compared in scratch without geometry export; see field-pack-equivalence.json. No rendered-output change or new visual approval."
+    }
+  ]
+}

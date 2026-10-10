@@ -10,7 +10,7 @@
     "data/reconstruction-constraints.json": "7107eed171506485dc70ff09ad9d317aa5d1edac871e4ca7a7ffbdf9448df4ff"
   },
   "task_source": "data/field-tasks.json",
-  "task_source_sha256": "5240fac418bfc81c049bed6fdb8ae425daf31a02b91c955441070b7f8f446baa",
+  "task_source_sha256": "5fc952ac5b70a7434a9b3a9c9baccc016752b04ebd2ecad21c047484e2dca242",
   "visual_source": "data/visual-guides.json",
   "visual_source_sha256": "8852b38aaee569a5e147bb6a447a266c1ad5d37885d1fe2c12fcf64f17c7ef1f",
   "task_ids": [
