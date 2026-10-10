@@ -1,0 +1,314 @@
+[
+  {
+    "id": "TH-20261009-01",
+    "statement": "Arm mittig im Krümmling, durchgesteckt; nicht am Segmentstoß.",
+    "status": "QUALIFIED",
+    "independent_finding": "Arm läuft in Segmentmitte; 12 echte radiale Sitzöffnungen. Innenverlauf bleibt Kandidat.",
+    "views": "10,D2",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-02",
+    "statement": "Krümmling am Armsitz örtlich verstärkt.",
+    "status": "QUALIFIED",
+    "independent_finding": "Örtliche Verstärkung vorhanden; 45 mm Tiefe und Kontur sind synthetisch.",
+    "views": "10,D2",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-03",
+    "statement": "Zwei Keile und rückseitig eingesteckter zusätzlicher Sicherungsstift.",
+    "status": "QUALIFIED",
+    "independent_finding": "24 obere Keile und 12 rückseitige Stifte; 12 Stiftmittellinien frei durch Armöffnungen. Randabstände/Keilkontakt nicht nachgewiesen.",
+    "views": "D2",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-04",
+    "statement": "Keine direkte Segmentendverbindung; beidseitige Schetternbretter verbinden die Krümmlinge.",
+    "status": "QUALIFIED",
+    "independent_finding": "24 Schetternbretter an 12 Stößen, beidseitig. Rohlingfotos bestätigen nicht jedes eingebaute Ist-Teil.",
+    "views": "D1",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-05",
+    "statement": "Holznägel durch Löcher; zwei von jeder Seite, auf Gegenseite verkeilt.",
+    "status": "QUALIFIED",
+    "independent_finding": "48 Schetternnägel, je Stoß 2+2 Richtungen; Achsen durch Kranz und Bretter frei. Nicht mit 48 Kumpfnägeln verwechseln; Keilsicherung nicht volumen-/kraftgeprüft.",
+    "views": "D1",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-06",
+    "statement": "Flügelbrett im 90-Grad-Winkel zum Krümmling.",
+    "status": "QUALIFIED",
+    "independent_finding": "Kranzebene als 90°-Bezug korrekt; radialer Pitch bleibt offen. Veraltete Komponenten-Notiz widerspricht bereits geklärtem Bezug (F04).",
+    "views": "11,D3",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-07",
+    "statement": "Landseite angeschrägt zur Kollisionsvermeidung mit als Schöpftröge bezeichneten Teilen.",
+    "status": "QUALIFIED",
+    "independent_finding": "Landseitige Abschrägung modelliert; 120/60 mm und Gegenkontakt sind Kandidaten.",
+    "views": "D3",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-08",
+    "statement": "Flügelbrett etwa 35 cm breit.",
+    "status": "QUALIFIED",
+    "independent_finding": "350 mm Brettbreite als ungefähre Expertenangabe umgesetzt, kein Ist-Aufmaß.",
+    "views": "11",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-09",
+    "statement": "Eichenast gespalten, mehrere Stunden gekocht, zum U gebogen.",
+    "status": "QUALIFIED",
+    "independent_finding": "U-Topologie vorhanden; Eiche/Spalten/Kochen im Kanon. Fertiges Profil synthetisch.",
+    "views": "D3",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-10",
+    "statement": "Ast vor Spaltung 4–5 cm stark.",
+    "status": "QUALIFIED",
+    "independent_finding": "40–50 mm Rohastmaß getrennt vom Modellprofil 45×15 mm. Kein gemessener Fertigquerschnitt.",
+    "views": "D3",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-11",
+    "statement": "Band ungefähr 1,20 m lang.",
+    "status": "OPEN",
+    "independent_finding": "Ca. 1,20 m bewahrt; Längenbezug nicht bestimmt. Modellabwicklung keine Messbestätigung.",
+    "views": "D3",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-12",
+    "statement": "Band befestigt Flügelbrett am Krümmling.",
+    "status": "QUALIFIED",
+    "independent_finding": "Band über Brett und durch Kranz; 96 Schenkelmittellinien im Default frei. Keile vorhanden, Volumenfreiheit/Presskontakt und Alternativpitch ungeprüft.",
+    "views": "D3",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-13",
+    "statement": "Über komplette Holzwellenlänge gleichmäßiger Durchmesser.",
+    "status": "QUALIFIED",
+    "independent_finding": "Konstanter Holzwellenquerschnitt; achteckige Form und Durchmesser bleiben historisch/synthetisch.",
+    "views": "07,D4",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-14",
+    "statement": "Je zwei massive Eisenschellen an beiden Wellenenden.",
+    "status": "QUALIFIED",
+    "independent_finding": "Vier getrennte Schellen, zwei je Ende. Rundes Schellenprofil um facettierte Welle ist keine nachgewiesene Fassung.",
+    "views": "08,09,D4",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-15",
+    "statement": "Dorn läuft direkt im Holz der Auflage.",
+    "status": "QUALIFIED",
+    "independent_finding": "Brute: separate Eisendorne im Holzlager. Truth lässt unregistrierte stationäre Kontakte aus. Passung/Innenverankerung/Lastpfad unbestätigt.",
+    "views": "08,09,D4",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-16",
+    "statement": "Vom Krümmling abgewandte Vorderseite braucht längeren Kumpfnagel.",
+    "status": "BLOCKED",
+    "independent_finding": "Langer/kurzer Kandidat poseabhängig angelegt; alle 48 realen Mittellinien schneiden Kranzmaterial (F02). Keine fertige Verbindung.",
+    "views": "11,D5",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-17",
+    "statement": "Ausgangsholz 4 cm Durchmesser; Kopf bleibt stärker.",
+    "status": "QUALIFIED",
+    "independent_finding": "40 mm Kopfdurchmesser umgesetzt; 30 mm Kopflänge synthetisch, nicht Ist.",
+    "views": "D5",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-18",
+    "statement": "Schaft auf 2,6 cm geschnitzt.",
+    "status": "QUALIFIED",
+    "independent_finding": "26 mm Schaft umgesetzt, 28 mm Daubenloch Kandidat. Passender Durchmesser löst Kranzdurchdringungen nicht.",
+    "views": "D5",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-19",
+    "statement": "Gesamte Tragkonstruktion, auf der das Rad aufliegt, heißt Radstadt.",
+    "status": "QUALIFIED",
+    "independent_finding": "Radstadt als Gesamtrahmen erklärt. RADSTATT/RADSTADT parallel vorhanden: explizite Aliasauflösung sinnvoll, kein dangling endpoint.",
+    "views": "13,D6",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-20",
+    "statement": "Arme ungefähr 65 cm von Radstadt entfernt.",
+    "status": "OPEN",
+    "independent_finding": "Ca. 650 mm ohne definierte Endpunkte bewusst nicht erzwungen. Keine fehlende Geometrie als erfüllt gewertet.",
+    "views": "D6",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-21",
+    "statement": "Oberer Querbalken 1,20 m lang.",
+    "status": "QUALIFIED",
+    "independent_finding": "Oberer Bockbalken 1,20 m; Verbindung zur stationären Lastkette nicht bestätigt.",
+    "views": "D6",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-22",
+    "statement": "Balken des beschriebenen Bocks generell 14 × 14 cm.",
+    "status": "QUALIFIED",
+    "independent_finding": "140×140 mm lokale Bockhölzer; historischer/synthetischer Unterbau bleibt gesondert.",
+    "views": "D6",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-23",
+    "statement": "Ausgeklinkte Stützen greifen in oberen Querbalken; verkeilt.",
+    "status": "QUALIFIED",
+    "independent_finding": "Abgesetzte Pfosten, Querbalkenlöcher und Sicherungskörper vorhanden; Keilkörper sind einfache Balken, konstruktive Klemmung offen.",
+    "views": "D6",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-24",
+    "statement": "Konstruktion komplett achsensymmetrisch.",
+    "status": "QUALIFIED",
+    "independent_finding": "Lokale Bocksymmetrie umgesetzt; globale Modellspiegelung nicht als beobachtete Standortsymmetrie zulässig.",
+    "views": "13,D6",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-25",
+    "statement": "1,80 m lichter Abstand zwischen den Kränzen.",
+    "status": "QUALIFIED",
+    "independent_finding": "1,80 m lichte Weite an Runtime-Meshgrenzen geprüft; Expertenmaß, keine unabhängige Feldmessung. Rückverweis in source-analyses fehlt (F04).",
+    "views": "05,06",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-26",
+    "statement": "14 cm axial; frühere 15 cm waren falsch.",
+    "status": "QUALIFIED",
+    "independent_finding": "140 mm axiale Kranzbreite; historische radiale Tiefe separat. source-analyses-Rückverweis fehlt (F04).",
+    "views": "10",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-27",
+    "statement": "Arme 14 × 6,5 cm.",
+    "status": "QUALIFIED",
+    "independent_finding": "140×65 mm Armquerschnitt; Zuordnung und Verjüngung am Sitz Kandidaten. source-analyses-Rückverweis fehlt (F04).",
+    "views": "07,D2",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-28",
+    "statement": "Aus Innenabstand und zwei gleichen Kranzbreiten berechnet.",
+    "status": "QUALIFIED",
+    "independent_finding": "1,94 m Mittelebenenabstand korrekt aus 25/26 abgeleitet; kein zusätzlich gemessenes Maß. source-analyses-Rückverweis fehlt.",
+    "views": "05,06",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-29",
+    "statement": "Außenflächenabstand ohne Überstände.",
+    "status": "QUALIFIED",
+    "independent_finding": "2,08 m Außenweite korrekt aus 25/26 und an Meshgrenzen; kein neues Ist-Maß. source-analyses-Rückverweis fehlt.",
+    "views": "05,06",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-30",
+    "statement": "Rinne aus zwei Teilen.",
+    "status": "QUALIFIED",
+    "independent_finding": "Zwei Rinnenteile tatsächlich vorhanden; Profil, Neigung und Längen Kandidaten.",
+    "views": "14,D7",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-31",
+    "statement": "A-Bock trägt Rinne am Stoß.",
+    "status": "QUALIFIED",
+    "independent_finding": "Stoß auf A-Bockriegel gelegt; nur lokale synthetische Weltlage.",
+    "views": "D7",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-32",
+    "statement": "Beide A-förmig aufgestellte Balken 14 × 14 cm.",
+    "status": "QUALIFIED",
+    "independent_finding": "Beinquerschnitt 140×140 mm; Beinlänge/Neigung nicht gemessen.",
+    "views": "D7",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-33",
+    "statement": "Aussparung 5 cm breit; ausdrücklich aus Erklärung, nicht abgelesen.",
+    "status": "QUALIFIED",
+    "independent_finding": "50 mm breite echte Schlitze, 180 mm Höhe synthetisch. Kein Nachweis einer passgenauen verkeilten Verbindung.",
+    "views": "D7",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-34",
+    "statement": "Riegel 4 × 14 cm.",
+    "status": "QUALIFIED",
+    "independent_finding": "40×140 mm Riegel; Orientierung als Kandidat.",
+    "views": "D7",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-35",
+    "statement": "Riegel 90 cm lang.",
+    "status": "QUALIFIED",
+    "independent_finding": "900 mm Riegellänge an Bounds bestätigt; kein Beinachsabstand.",
+    "views": "D7",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-36",
+    "statement": "Durchgesteckter Riegel trägt die Rinne und wird oben und unten verkeilt.",
+    "status": "OPEN",
+    "independent_finding": "Riegel und obere/untere Sicherungskörper vorhanden. Je etwa 2 mm Abstand zum Riegel: keine geschlossene Klemmung nachgewiesen (F03).",
+    "views": "D7",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-37",
+    "statement": "Unterseite Rinnenboden am A-Bock 80 cm über Boden.",
+    "status": "QUALIFIED",
+    "independent_finding": "800 mm zur synthetischen lokalen Bezugsebene umgesetzt. Tatsächliche Fußunterkante ca. 14,6 mm tiefer: Ebenenwert nicht physisches Bodenaufmaß (F03).",
+    "views": "D7",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-38",
+    "statement": "Balkenlänge geht aus Zollstockmaß hervor.",
+    "status": "OPEN",
+    "independent_finding": "Vorhandene Zollstockfotos geprüft, verdeckter Fuß verhindert belastbare Beinlänge. 1,50 m/12° bleiben reine Anzeigeannahmen.",
+    "views": "D7",
+    "is_current_field_measurement": false
+  },
+  {
+    "id": "TH-20261009-39",
+    "statement": "Punktewolke zeigt Schöpftrog nach Nutzerangabe brauchbar.",
+    "status": "OPEN",
+    "independent_finding": "Scan vorhanden, Registrierung fehlt. Keine neue Transformation oder Ist-Metrik abgeleitet.",
+    "views": "14,16",
+    "is_current_field_measurement": false
+  }
+]

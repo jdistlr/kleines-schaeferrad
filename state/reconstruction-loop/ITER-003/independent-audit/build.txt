@@ -1,0 +1,22 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> kleines-schaeferrad-research-page@0.1.0 build
+> npm run prepare:workbench && npm run prepare:field && astro build && node scripts/build-offline.mjs
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> kleines-schaeferrad-research-page@0.1.0 prepare:workbench
+> node scripts/build-workbench.mjs
+
+file:///workspace/scratch/993f7095fe32/repo/src/workbench/projection.mjs:11
+ const all=edges.flatMap(e=>e.p);if(!all.length)return {visible:[],hidden:[],cuts:[],bounds:[0,1,0,1],camera:cam.matrixWorldInverse.toArray()};const xs=all.map(p=>p[0]),ys=all.map(p=>p[1]),bounds=[Math.min(...xs),Math.max(...xs),Math.min(...ys),Math.max(...ys)],[xmin,xmax,ymin,ymax]=bounds,R=resolution,sc=(R-3)/Math.max(xmax-xmin,ymax-ymin),pixel=p=>[(p[0]-xmin)*sc+1,(p[1]-ymin)*sc+1,p[2]],depth=new Float32Array(R*R).fill(-Infinity);
+                                                                                                                                                                                                          ^
+
+RangeError: Maximum call stack size exceeded
+    at projectMeshes (file:///workspace/scratch/993f7095fe32/repo/src/workbench/projection.mjs:11:203)
+    at file:///workspace/scratch/993f7095fe32/repo/scripts/build-workbench.mjs:29:309
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.19.0

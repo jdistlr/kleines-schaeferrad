@@ -1,0 +1,15 @@
+{
+  "url": "https://jdistlr.github.io/kleines-schaeferrad/werkstatt/",
+  "html_sha256": "f3385bce25b055a6cf821f6a18b754e3480b46fbf2dee1256cf2e0e5d1436030",
+  "scripts": [
+    {
+      "url": "https://jdistlr.github.io/kleines-schaeferrad/_astro/werkstatt.astro_astro_type_script_index_0_lang.DyxRXjLY.js",
+      "sha256": "3d2707b17eed7a199cf909d3e8c507c196eb48f286668dae1403b74395c2e49d",
+      "markers": {
+        "ITER-003": false,
+        "TH-SCHETTER-": false,
+        "TH-A-CROSSBAR": false
+      }
+    }
+  ]
+}
