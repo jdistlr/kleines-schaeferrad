@@ -1,0 +1,10 @@
+{
+  "head": "c378c1b36f0913dbe142c3cf414535ccc9dc7bf9",
+  "browser": "151.0.7922.34",
+  "run": 38034254543,
+  "status": "failed",
+  "error": "page.evaluate: TypeError: Cannot read properties of null (reading 'getBoundingClientRect')\n    at eval (eval at evaluate (:311:30), <anonymous>:1:55)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at /home/runner/work/kleines-schaeferrad/kleines-schaeferrad/tests/browser-control-plane.mjs:16:39",
+  "artifact": 11663044439,
+  "artifact_sha256": "8a1924cb263054c77c87abc7aea1f4eeadae222ae9ed680b39767067cd0d3499",
+  "disposition": "Test-server root route corrected; image height corrected after visual inspection; final evidence pending."
+}

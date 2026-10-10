@@ -13,3 +13,5 @@ User direction: maximum contemporary engineering UX, no obligation to retain MUX
 - Heavy simulation loads only on request. No WebGL on overview/evidence/water entry. Existing demand-rendered viewer remains in its dedicated route.
 
 Migration order: first observe/accept this slice; next integrate the viewer into the same shell without replacing renderer or store; then unify evidence inspector vocabulary; finally reshape field chrome only after physical field review. Multiple measurements per task require a separately reviewed additive storage contract, not a UI-only patch.
+
+Measured first-pass navigation fetched ~300 kB of JS because a shared client import pulled full source contracts. The adapter now embeds only validated ID allowlists in the server-rendered shell; full evidence stays server-rendered and the calculation module remains on-demand. Final browser payload metrics are in the acceptance report. Existing viewer camera transitions also respect Reduced Motion; explicit user-started wheel motion remains available.

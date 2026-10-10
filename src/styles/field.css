@@ -143,3 +143,5 @@ main{max-width:1050px;margin:auto;padding:1rem;overflow-wrap:anywhere}
 .field-context{grid-template-columns:minmax(0,1fr);gap:.75rem}.field-context-actions{justify-content:flex-start}
 .field-context h1{font-size:1.4rem}
 @media(max-width:600px){.field-context-actions{display:grid;grid-template-columns:minmax(0,1fr) auto}.field-context-actions>a.water-capture-action{min-width:0;padding:.65rem;line-height:1.5}}
+
+.field-guidance summary{min-height:44px;padding:.6rem 0;cursor:pointer;font-weight:650;font-size:.82rem}.field-guidance summary:focus-visible{outline:3px solid #1265c7;outline-offset:3px}

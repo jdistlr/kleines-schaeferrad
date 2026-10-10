@@ -8,7 +8,7 @@ const {title,area='overview',eyebrow='MODEL CONTROL PLANE'}=Astro.props;
 const nav=[['overview','Übersicht','control/'],['water','Wasser & Hydraulik','control/water/'],['construction','Konstruktion & 3D','werkstatt/'],['evidence','Evidenz & Wissen','control/evidence/'],['field','Feldaufnahme','feld/']];
 ---
 <!doctype html><html lang="de"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#101c2c"/><meta name="robots" content="noindex,nofollow"/><title>{title} · Schäferrad Control Plane</title><link rel="icon" href={href('favicon.svg')}/></head>
-<body class="cp" data-base={href('')}>
+<body class="cp" data-base={href('')} data-context={JSON.stringify({components:model.components.map(c=>({id:c.id})),gaps:model.gaps.map(g=>({id:g.id})),tasks:model.tasks.map(t=>({task_id:t.task_id}))})}>
 <a class="cp-skip" href="#cp-main">Zum Arbeitsbereich</a>
 <aside class="cp-rail">
 <a class="cp-brand" href={href('control/')}><span class="cp-brand-mark"><Icon name="wheel"/></span><span>Schäferrad<small>Engineering workspace</small></span></a>

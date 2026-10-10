@@ -1,6 +1,5 @@
-import {model} from './model.js';
 import {readContext,contextQuery} from './context.mjs';
-const root=document.querySelector('.cp'),base=root.dataset.base;
+const root=document.querySelector('.cp'),base=root.dataset.base,model=JSON.parse(root.dataset.context);
 const current=location.pathname.includes('/water/')?'water':location.pathname.includes('/evidence/')?'evidence':'overview';
 let context={...readContext(location.search,model.components,model.gaps),from:current};
 const incoming=new URLSearchParams(location.search);if(model.tasks.some(t=>t.task_id===incoming.get('task'))){context.task=incoming.get('task');if(/^[0-4]$/.test(incoming.get('step')||''))context.step=incoming.get('step')}
