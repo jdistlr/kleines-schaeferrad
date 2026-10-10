@@ -37,4 +37,4 @@ This is a small additive contract over existing files, not a new ontology, migra
 4. CI results for this branch at its final HEAD.
 5. Independent review of alias and TH-37 semantics.
 
-Until those are verified, this packet is **REVIEW IN PROGRESS**, not `STATE & SOURCE CONTRACT REVIEW READY`.
+Fresh byte and reciprocal-link verification is recorded in [STATE-SOURCE-REVIEW-EVIDENCE.md](STATE-SOURCE-REVIEW-EVIDENCE.md). Torsten’s attributed semantic clarifications are preserved in [TORSTEN-FACHREVIEW-20261010.md](TORSTEN-FACHREVIEW-20261010.md); they are not independent metric verification. The final-commit CI result and review gate decision are recorded in PR #17 after this commit. `SOURCE TRANSFER BLOCKED` remains a separate unresolved source-transfer blocker.

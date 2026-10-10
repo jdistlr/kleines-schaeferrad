@@ -21,7 +21,7 @@ Vom Nutzer übermittelte wörtliche Antworten Torstens:
 - Vom Nutzer in dieser Chat-Unterhaltung übermitteltes JPEG mit roter Markierung; zugeschrieben Torsten.
 - Original-Anhangsname in dieser Sitzung: `5f0dbdce-2f7a-40c3-9b75-c66153bb40fd.jpeg`.
 - Lokale SHA-256-Prüfsumme der empfangenen Datei: `048708cdf56fd72025b12c1bc1e0bd4bc8c201dc74654c4fb2c55ed45fe23eb5`; Dateigröße 559904 Bytes.
-- **WICHTIG:** Die Bildbytes sind mit diesem Dokument **nicht** in GitHub archiviert. Kein Repository-Pfad oder Originaltransfer darf als erfolgreich behauptet werden. `SOURCE TRANSFER PENDING` bis zur bytegleichen Ablage und erneuter SHA-256-Prüfung. Keine abgeleitete Skizze als Originalersatz.
+- **WICHTIG:** Die Bildbytes sind mit diesem Dokument **nicht** in GitHub archiviert. Kein Repository-Pfad oder Originaltransfer darf als erfolgreich behauptet werden. `SOURCE TRANSFER BLOCKED` bei der Abschlussprüfung am 2026-10-10: Unter den 498 zugänglichen Bilddateien (Repository und 30 aktuelle Anhänge) befindet sich kein Bytebestand mit dieser SHA-256. Der benannte Originalanhang ist in dieser Sitzung nicht bereitgestellt. Entsperrung erst nach bytegleicher Ablage und erneuter SHA-256-Prüfung. Keine abgeleitete Skizze als Originalersatz.
 
 ## Grenzen
 - Aussage/Übermittlung und Interpretation bleiben getrennt.

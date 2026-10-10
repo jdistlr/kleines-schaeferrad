@@ -1,6 +1,6 @@
 # Current state — 2026-10-10
 
-**Status:** STATE/SOURCE CONTRACT WORK IN REVIEW. This is the current navigation entry, not an engineering release.
+**Status:** STATE/SOURCE CONTRACT CLOSURE — evidence checks passed; final-commit CI decision recorded in PR #17. This is the current navigation entry, not an engineering release.
 
 ## Baseline and authority
 - Baseline main: `118e5f7da51a89eaf04bfe85072169e902f4b532` (PR #15 integrated). Recheck main SHA before any later merge.
@@ -18,7 +18,7 @@
 | PR #15 | Integrated on main | Current application baseline; never redo recovery by default |
 
 ## Protected facts and explicit unknowns
-- All 39 Thorsten expert statements preserved; 65 Thorsten photo paths (63 unique payloads) verified in audit. Expert statements are **not** independent as-built measurements.
+- All 39 Thorsten expert statements preserved; 65 Thorsten photo paths (63 unique payloads) freshly rehashed in [closure evidence](state-source-closure/20261010/verification.json). Expert statements are **not** independent as-built measurements.
 - Archived Truth and Brute are revision-bound models, not manufacturing approval.
 - F02: 48/48 Kumpfnagel centerline paths intersect rim material. F03: stationary supports, wedges and ground remain unverified. **Engineering NO-GO**; no inferred holes, new measurements, or geometry changes.
 - Physical iPhone/Safari, second-device, paper and live offline acceptance remain open; a proxy-browser SSL ServiceWorker error is not evidence of a product offline defect.
@@ -33,3 +33,8 @@
 5. P1-D read-only control plane after source and UX review; no new platform.
 
 **Stop:** `STATE & SOURCE CONTRACT REVIEW READY` only after actual edits, reciprocal provenance verification, preservation checks and review package are complete. No merge or deployment by this document.
+
+## Final evidence closure
+- [Reproducible verification and source-transfer disposition](STATE-SOURCE-REVIEW-EVIDENCE.md).
+- Torsten’s annotated original: **SOURCE TRANSFER BLOCKED**, expected SHA-256 `048708cdf56fd72025b12c1bc1e0bd4bc8c201dc74654c4fb2c55ed45fe23eb5`. No substitute produced.
+- Review-ready does not resolve the missing original or authorize merge / UX start. Exact final-HEAD CI and gate decision live in PR #17, avoiding a self-invalidating CI documentation commit.
