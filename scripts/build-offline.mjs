@@ -8,7 +8,7 @@ function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(d=>d.
 const files=walk('dist').filter(p=>!p.endsWith('/sw.js')&&!p.endsWith('/offline-manifest.json'));
 const fingerprint=crypto.createHash('sha256');for(const f of files.sort()){fingerprint.update(f);fingerprint.update(fs.readFileSync(f))}
 const cache_name='ks-field-'+fingerprint.digest('hex').slice(0,16),urls=files.map(f=>base+f.slice(5).split('/').map(encodeURIComponent).join('/'));
-for(const route of ['', 'feld/','werkstatt/'])urls.push(base+route);
+for(const route of ['', 'feld/','werkstatt/','control/','control/water/','control/evidence/'])urls.push(base+route);
 const info={schema:'ks-offline-preload/v1',cache_name,urls,bytes:files.reduce((s,p)=>s+fs.statSync(p).size,0),scope:base,policy:'Atomic complete install; old cache kept on failure; local captures in IndexedDB, never in SW cache.'};
 fs.writeFileSync('dist/offline-manifest.json',JSON.stringify(info,null,2));
 fs.writeFileSync('dist/sw.js',`const CACHE=${JSON.stringify(cache_name)},URLS=${JSON.stringify([...urls,base+'offline-manifest.json'])},BASE=${JSON.stringify(base)};

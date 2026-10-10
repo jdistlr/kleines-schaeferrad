@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://jdistlr.github.io/kleines-schaeferrad/",
+    "bytes": 6583,
+    "sha256": "3c77e88cf7ea58b15b7011ef8881acbabb8cde1ea5cc0ece59a104c556824a5e",
+    "baselineSha256": "3c77e88cf7ea58b15b7011ef8881acbabb8cde1ea5cc0ece59a104c556824a5e",
+    "identical": true
+  },
+  {
+    "url": "https://jdistlr.github.io/kleines-schaeferrad/feld/",
+    "bytes": 5940,
+    "sha256": "df2e05ea7a666b3184da08722200d0792254d586d24fb6555cc01f021e6e2168",
+    "baselineSha256": "df2e05ea7a666b3184da08722200d0792254d586d24fb6555cc01f021e6e2168",
+    "identical": true
+  },
+  {
+    "url": "https://jdistlr.github.io/kleines-schaeferrad/werkstatt/",
+    "bytes": 18620,
+    "sha256": "38c8d9ab403d35149bbd806f37812ab4d37d3a426b041555dc54e16542a99d26",
+    "baselineSha256": "38c8d9ab403d35149bbd806f37812ab4d37d3a426b041555dc54e16542a99d26",
+    "identical": true
+  }
+]

@@ -1,5 +1,7 @@
 ---
 import '@fontsource-variable/manrope';
+import WorkspaceBridge from '../components/WorkspaceBridge.astro';
+import '../styles/workspace-bridge.css';
 import '../styles/field.css';
 import {href} from '../lib/paths';
 ---
@@ -14,6 +16,7 @@ import {href} from '../lib/paths';
   <link rel="icon" href={href('favicon.svg')}/>
 </head>
 <body>
+<WorkspaceBridge area="field"/>
 <header class="field-header">
   <a class="field-brand" href={href('')}>Kleines Schäferrad</a>
   <nav aria-label="Arbeitswege">
@@ -39,6 +42,7 @@ import {href} from '../lib/paths';
         <p>Zusätzliche Messwerte auf beschriftetem Messblatt fotografieren. Videos als Originaldateien separat sichern und im Auftrag referenzieren.</p>
       </div>
       <div class="field-context-actions">
+        <a class="water-capture-action" href="?task=TASK-WATER">Wasseraufnahme · vor Stillsetzen →</a>
         <a href={href('field-pack/KS-Werkstatt-Aufnahmeplan-A3.pdf')}>A3-Arbeitsplan öffnen</a>
         <button id="open-index">Alle Schritte</button>
       </div>

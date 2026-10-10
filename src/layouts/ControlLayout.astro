@@ -1,0 +1,26 @@
+---
+import '@fontsource-variable/manrope';
+import '../styles/control.css';
+import {href} from '../lib/paths';
+import Icon from '../components/ControlIcon.astro';
+import {model,sourceRevision,sourceUrl} from '../control/model.js';
+const {title,area='overview',eyebrow='MODEL CONTROL PLANE'}=Astro.props;
+const nav=[['overview','Übersicht','control/'],['water','Wasser & Hydraulik','control/water/'],['construction','Konstruktion & 3D','werkstatt/'],['evidence','Evidenz & Wissen','control/evidence/'],['field','Feldaufnahme','feld/']];
+---
+<!doctype html><html lang="de"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#101c2c"/><meta name="robots" content="noindex,nofollow"/><title>{title} · Schäferrad Control Plane</title><link rel="icon" href={href('favicon.svg')}/></head>
+<body class="cp" data-base={href('')}>
+<a class="cp-skip" href="#cp-main">Zum Arbeitsbereich</a>
+<aside class="cp-rail">
+<a class="cp-brand" href={href('control/')}><span class="cp-brand-mark"><Icon name="wheel"/></span><span>Schäferrad<small>Engineering workspace</small></span></a>
+<span class="cp-nav-label">ARBEITSBEREICHE</span>
+<nav class="cp-nav" aria-label="Arbeitsbereiche">{nav.map(([id,label,path],i)=><a href={href(path)} data-context-link={id} aria-current={area===id?'page':undefined}><Icon name={id}/><span>{label}</span><small>{String(i+1).padStart(2,'0')}</small></a>)}</nav>
+<div class="cp-rail-foot"><span class="cp-location">Möhrendorf · Regnitz</span><a href={href('')}>Geschichte & Projekt ↗</a><a href={sourceUrl('state/SOURCE-STATUS-CONTRACT.md')}>Quellenvertrag ↗</a></div>
+</aside>
+<div class="cp-workspace">
+<header class="cp-topbar"><span>FORSCHEN <span aria-hidden="true">/</span> PRÜFEN <span aria-hidden="true">/</span> FESTHALTEN</span><a class="cp-revision" href={sourceUrl('data/calibration-v3.json')}>{model.revision} <span>· Arbeitsmodell</span></a></header>
+<main id="cp-main" tabindex="-1"><div class="cp-heading"><div><p class="cp-eyebrow">{eyebrow}</p><h1>{title}</h1></div><a class="cp-primary" data-water-capture href={href('feld/?task=TASK-WATER&part=COMP-TROUGH&property=GAP-07&from=water')}>Wasseraufnahme <Icon name="arrow"/></a></div>
+<slot/>
+</main>
+<footer class="cp-footer"><span>Quellenstand <a href={sourceUrl('state/TORSTEN-FACHREVIEW-20261010.md')}>{sourceRevision.slice(0,7)}</a> · Ist-Maße bleiben eigenschaftsbezogen offen.</span><span>Keine technische Freigabe.</span></footer>
+</div><script>import '../control/navigation.js';</script>
+</body></html>

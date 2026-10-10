@@ -1,0 +1,57 @@
+name: Model Control Plane acceptance
+on:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'scripts/build-offline.mjs'
+      - '.github/workflows/control-plane.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  experience:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install reportlab==4.4.3
+      - run: sudo apt-get update && sudo apt-get install -y fonts-dejavu-core
+      - run: npm ci --no-audit --no-fund
+      - run: npm install --no-save --package-lock=false playwright@1.62.1
+      - run: npx playwright install --with-deps chromium
+      - name: Build immutable baseline for before evidence
+        run: |
+          git worktree add "$RUNNER_TEMP/ks-cp-baseline" 606908bfe8cf1ab0560b337f37d92dd90d320dee
+          ln -s "$GITHUB_WORKSPACE/node_modules" "$RUNNER_TEMP/ks-cp-baseline/node_modules"
+          cd "$RUNNER_TEMP/ks-cp-baseline"
+          npm run build
+      - name: Capture baseline at five display profiles
+        run: KS_BASELINE_DIST="$RUNNER_TEMP/ks-cp-baseline/dist" node tests/control-baseline.mjs
+      - run: npm run check
+      - run: node --test tests/*.test.mjs
+      - run: python scripts/verify_evidence.py
+      - run: npm run build
+      - run: node tests/browser-control-plane.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: control-plane-browser-evidence
+          path: |
+            test-results/control-plane/
+            state/control-plane/20261010/evidence/before/
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: control-plane-review-site
+          path: dist/

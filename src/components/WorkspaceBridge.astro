@@ -1,0 +1,7 @@
+---
+import {href} from '../lib/paths';
+const {area}=Astro.props;
+---
+<nav class="workspace-bridge" aria-label="Control Plane Arbeitsbereiche">
+<a id="cp-return" href={href('control/')}>← Control Plane</a><a id="bridge-water" href={href('control/water/')}>Wasser & Hydraulik</a><a id="bridge-evidence" href={href('control/evidence/')}>Evidenz & Wissen</a><a id="bridge-tool" href={href(area==='field'?'werkstatt/':'feld/')}>{area==='field'?'Konstruktion & 3D':'Feldaufnahme'}</a>
+</nav>
