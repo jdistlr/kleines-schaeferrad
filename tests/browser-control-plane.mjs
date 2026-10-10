@@ -1,6 +1,6 @@
 import {chromium} from 'playwright';import fs from 'node:fs';import assert from 'node:assert/strict';import {execFileSync} from 'node:child_process';import {serve} from './control-server.mjs';
-const out='test-results/control-plane';fs.mkdirSync(out,{recursive:true});
-const server=await serve(),browser=await chromium.launch({executablePath:process.env.KS_CHROMIUM_PATH||undefined,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const out=process.env.KS_TEST_OUTPUT||'test-results/control-plane';fs.mkdirSync(out,{recursive:true});
+const server=process.env.KS_REVIEW_URL?{base:process.env.KS_REVIEW_URL,close:async()=>{}}:await serve(),browser=await chromium.launch({executablePath:process.env.KS_CHROMIUM_PATH||undefined,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const report={head:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),browser:browser.version(),scope:'Chromium; no physical device, Safari or engineering release',checks:[],performance:[]};
 let active;
 async function ready(p,route){await p.goto(server.base+route);if(route.startsWith('feld/'))await p.waitForFunction(()=>document.querySelector('#field-storage').textContent.includes('Lokal gesichert'));if(route.startsWith('werkstatt/'))await p.waitForFunction(()=>document.querySelector('#render-status').textContent.includes('Ziehen:'));}

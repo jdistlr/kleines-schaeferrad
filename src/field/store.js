@@ -1,6 +1,8 @@
 export const FIELD_SCHEMA='ks-field-session/v1';
+const storagePrefix=import.meta.env?.PUBLIC_STORAGE_NAMESPACE;
+const fieldDatabase=storagePrefix?storagePrefix+'-pre-disassembly':'ks-pre-disassembly';
 export const freshSession=()=>({schema:FIELD_SCHEMA,id:'SESSION-'+crypto.randomUUID(),created_at:new Date().toISOString(),task_index:0,step:0,responses:{},instances:[],events:[],person:'',draft_instance:{}});
-export function openFieldStore(){return new Promise((resolve,reject)=>{const r=indexedDB.open('ks-pre-disassembly',1);r.onupgradeneeded=()=>{r.result.createObjectStore('state');r.result.createObjectStore('media',{keyPath:'id'})};r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
+export function openFieldStore(){return new Promise((resolve,reject)=>{const r=indexedDB.open(fieldDatabase,1);r.onupgradeneeded=()=>{r.result.createObjectStore('state');r.result.createObjectStore('media',{keyPath:'id'})};r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
 export function getSession(db){return new Promise((resolve,reject)=>{const r=db.transaction('state').objectStore('state').get('session');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
 export function saveSession(db,s,media=[]){return new Promise((resolve,reject)=>{const tx=db.transaction(['state','media'],'readwrite');tx.objectStore('state').put(structuredClone(s),'session');for(const m of media)tx.objectStore('media').put(m);tx.oncomplete=()=>resolve();tx.onabort=()=>reject(tx.error||Error('Speichern abgebrochen'));tx.onerror=()=>reject(tx.error)})}
 export function getMedia(db){return new Promise((resolve,reject)=>{const r=db.transaction('media').objectStore('media').getAll();r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
