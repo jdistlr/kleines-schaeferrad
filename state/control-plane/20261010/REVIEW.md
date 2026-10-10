@@ -11,3 +11,10 @@ Local Chromium launch is blocked by environment socket permissions (Operation no
 Open physical gates: real iPhone/Safari, OS Dynamic Type, actual second-device restore, paper/physical acceptance and field storage pressure. Browser simulations cannot close these. Missing archive video bytes remain outside this task. One measurement object per existing v1 task remains a documented limitation; extra measurements go on labelled photographed sheets. F02/F03 remain unchanged engineering NO-GO.
 
 No merge, no deployment. Review milestone pending executed checks and visual inspection.
+
+## First executed CI findings (c378c1b)
+
+- Field-kit suite passed, including offline export/restore and 200% root text.
+- Integration pointer test used document coordinates without scrolling after the new question/navigation chrome moved the canvas. Fix: scroll the canvas into view and assert hit target is actually CANVAS before the same drag/redraw check. No assertion removed.
+- Reconstruction default-language gate rejected new arrow glyphs in the field bridge. Fix: plain actionable labels in existing field/workbench chrome, and explicit disclosure for property source internals. Gate unchanged.
+- New browser test server mapped an empty root path to a directory and returned 404. Fix the test server root mapping, rerun baseline and after evidence; first root screenshots are not valid product evidence.

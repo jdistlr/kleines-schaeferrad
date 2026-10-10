@@ -41,7 +41,10 @@ try{
  await page.locator('#play').click();await settled();
  // settled() requires twelve consecutive animation frames without a redraw.
  await page.locator('#reset').click();await settled();
+ // Navigation/question chrome changes canvas position; scroll before physical pointer input.
+ await canvas.scrollIntoViewIfNeeded();
  const beforeDrag=await frameCount(),bounds=await canvas.boundingBox();
+ assert.equal(await page.evaluate(({x,y})=>document.elementFromPoint(x,y)?.tagName,{x:bounds.x+bounds.width/2,y:bounds.y+bounds.height/2}),'CANVAS','drag target must be the visible canvas');
  await page.mouse.move(bounds.x+bounds.width/2,bounds.y+bounds.height/2);await page.mouse.down();
  await page.mouse.move(bounds.x+bounds.width/2+80,bounds.y+bounds.height/2+30,{steps:4});await page.mouse.up();
  await settled();assert.ok(await frameCount()>beforeDrag,'orbit interaction must redraw');

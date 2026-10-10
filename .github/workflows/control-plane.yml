@@ -41,6 +41,7 @@ jobs:
       - run: npm run check
       - run: node --test tests/*.test.mjs
       - run: python scripts/verify_evidence.py
+      - run: node scripts/verify-control-preservation.mjs
       - run: npm run build
       - run: node tests/browser-control-plane.mjs
       - uses: actions/upload-artifact@v4
