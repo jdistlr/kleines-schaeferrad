@@ -40,7 +40,7 @@ jobs:
         run: |
           ls -l baseline-archive/artifact.tar
           sha256sum baseline-archive/artifact.tar
-          echo '9a31ad078b177153348e4d5ce0915f83c1d60d97f17abba00fec816bd58e4f5f  baseline-archive/artifact.tar' | sha256sum -c -
+          echo '66f0e355e2fb024d6114e0161fe1811e9844bacd64c5ff62308a1ff9adf37e68  baseline-archive/artifact.tar' | sha256sum -c -
           mkdir baseline-dist
           tar --no-same-owner -xf baseline-archive/artifact.tar -C baseline-dist
       - uses: actions/upload-artifact@v4
