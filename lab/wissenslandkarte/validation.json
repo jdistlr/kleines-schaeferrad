@@ -1,0 +1,12 @@
+{
+  "basis": "f2bf574c6c6fed3a64ac0073823cd07ac24ee537",
+  "claim_selections": 38,
+  "derived_navigation": true,
+  "missing_unit_preserved": true,
+  "resolved_historical_conflict_label": true,
+  "component_count": 34,
+  "page_errors": [],
+  "baseline_tracked_files_unchanged": true,
+  "expert_corrections_preserved": 39,
+  "browser_visual_acceptance": "Not completed: browser launch blocked by environment socket permissions. No screenshots or responsive-layout pass claimed."
+}
