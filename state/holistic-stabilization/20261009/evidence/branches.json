@@ -1,0 +1,162 @@
+[
+  {
+    "branch": "origin",
+    "sha": "118e5f7da51a89eaf04bfe85072169e902f4b532",
+    "behind_main": 0,
+    "ahead_main": 0,
+    "last_commit": "2026-10-09T23:37:52+02:00 jdistlr Merge pull request #15 from jdistlr/work/iter003-integration-recovery-20261009",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/main",
+    "sha": "118e5f7da51a89eaf04bfe85072169e902f4b532",
+    "behind_main": 0,
+    "ahead_main": 0,
+    "last_commit": "2026-10-09T23:37:52+02:00 jdistlr Merge pull request #15 from jdistlr/work/iter003-integration-recovery-20261009",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/archive-video-evidence-intake-20261009",
+    "sha": "609082bec794ad3d1091341493b5325f764da5f5",
+    "behind_main": 21,
+    "ahead_main": 1,
+    "last_commit": "2026-10-09T10:02:22+02:00 jdistlr evidence: stage intensive timecoded archival video intake",
+    "unique_changes": "state/NEXT-ARCHIVE-VIDEO-EVIDENCE-SESSION.md | 28 ++++++++++++++++++++++++++++\n 1 file changed, 28 insertions(+)"
+  },
+  {
+    "branch": "origin/work/astra-abgleich-iter002-20261009",
+    "sha": "6017ba310d4a91158fe5f3d6edc8eb1bf3f5b6b5",
+    "behind_main": 18,
+    "ahead_main": 0,
+    "last_commit": "2026-10-09T18:04:12+02:00 jdistlr docs: complete ITER-002 Astra evidence comparison",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/astra-korrektur-iter003-20261009",
+    "sha": "6999e93146d2dc62337f60e9f72e8e84da2619e0",
+    "behind_main": 17,
+    "ahead_main": 0,
+    "last_commit": "2026-10-09T18:34:48+02:00 jdistlr feat: reconcile expert constraints and model geometry in ITER-003",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/baseline-refresh-thorsten-20261008",
+    "sha": "f73ec596f8091a4cbec50f5aa6d1601497e3f13d",
+    "behind_main": 40,
+    "ahead_main": 0,
+    "last_commit": "2026-10-08T22:34:25+02:00 jdistlr test: verify expert contribution sources and canonical evidence classes",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/bruteforce-functional-reconstruction-v2-20261008",
+    "sha": "395796a2edad6a2e20a37b36427ef6947ed72619",
+    "behind_main": 61,
+    "ahead_main": 0,
+    "last_commit": "2026-10-08T08:27:33+02:00 jdistlr test: align legacy field workbench acceptance with reconstruction v2 UX",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/field-operations-handoff-20261009",
+    "sha": "b3d319ffccc905b36ab6bfd7454b2cdbb55f6c51",
+    "behind_main": 29,
+    "ahead_main": 0,
+    "last_commit": "2026-10-09T08:22:59+02:00 jdistlr field: add high-contrast printable two-day capture card with measurement protocol",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/field-workbench-alpha-20261007",
+    "sha": "ba6d5d131c43c311c41ba03b86cce21409ad3bdb",
+    "behind_main": 172,
+    "ahead_main": 0,
+    "last_commit": "2026-10-07T20:46:40+02:00 jdistlr fix: correct Unicode diacritic normalization regex",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/github-pages-research-view-20261007",
+    "sha": "dd0cd480a4f509a1137ca19a7f9075a8aba0c30a",
+    "behind_main": 175,
+    "ahead_main": 0,
+    "last_commit": "2026-10-07T20:00:54+02:00 jdistlr state: prepare Astra field workbench alpha session",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/holistic-stabilization-audit-20261009",
+    "sha": "7bff8234729b466507b1e59d021f98172f1c7c59",
+    "behind_main": 0,
+    "ahead_main": 1,
+    "last_commit": "2026-10-09T23:51:17+02:00 jdistlr state: stage independent holistic stabilization and control-plane audit",
+    "unique_changes": "state/NEXT-HOLISTIC-STABILIZATION-WORK-SESSION.md | 28 +++++++++++++++++++++++\n 1 file changed, 28 insertions(+)"
+  },
+  {
+    "branch": "origin/work/iter-001-truth-critic-evidence-gate-20261009",
+    "sha": "6060bc1e81ceb20ea465507bb333dc30215f6237",
+    "behind_main": 34,
+    "ahead_main": 0,
+    "last_commit": "2026-10-09T08:10:38+02:00 jdistlr audit: independent ITER-001 truth critic and pre-disassembly evidence gate",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/iter003-integration-recovery-20261009",
+    "sha": "6a198686478178a285f73dbfc8ea70c87c58df12",
+    "behind_main": 1,
+    "ahead_main": 0,
+    "last_commit": "2026-10-09T23:26:01+02:00 jdistlr test(workbench): observe completed frames when asserting idle rendering",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/iter003-truth-critic-20261009",
+    "sha": "05b54353211bd055b9f5f243c3ccc4162bf7c2d1",
+    "behind_main": 19,
+    "ahead_main": 1,
+    "last_commit": "2026-10-09T20:19:26+02:00 jdistlr audit: independent ITER-003 truth critic and integration NO-GO",
+    "unique_changes": ".../ITER-003/independent-audit/CLAIMS-39.md        |    45 +\n .../ITER-003/independent-audit/README.md           |    92 +\n .../ITER-003/independent-audit/REPRODUCE.md        |    29 +\n .../ITER-003/independent-audit/SHA256.json         |    17 +\n .../ITER-003/independent-audit/VIEWS-39.md         |    45 +\n .../independent-audit/astro-only-build.txt         |    36 +\n .../ITER-003/independent-audit/attachments.json    |   152 +\n .../ITER-003/independent-audit/build.txt           |    22 +\n .../ITER-003/independent-audit/canonical.json      |  1231 ++\n .../ITER-003/independent-audit/canonical.py        |    28 +\n .../ITER-003/independent-audit/claims.json         |   314 +\n .../ITER-003/independent-audit/live-pages.json     |    15 +\n .../ITER-003/independent-audit/pages-workflow.json |    90 +\n .../ITER-003/independent-audit/probe.json          | 12718 +++++++++++++++++++\n .../ITER-003/independent-audit/probe.mjs           |    38 +\n .../ITER-003/independent-audit/tests.txt           |    43 +\n 16 files changed, 14915 insertions(+)"
+  },
+  {
+    "branch": "origin/work/maintenance-coherence-20261007",
+    "sha": "c709495a817ca6c459cedd8d6db85e25f79f4204",
+    "behind_main": 67,
+    "ahead_main": 0,
+    "last_commit": "2026-10-08T00:20:45+02:00 jdistlr web: tighten landing density and replace section cards with editorial lines",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/model-calibration-loop-v3-20261008",
+    "sha": "3b34eebaafc22cecc58a3723cdf03181b7da7666",
+    "behind_main": 36,
+    "ahead_main": 0,
+    "last_commit": "2026-10-08T23:58:26+02:00 jdistlr Calibrate Baseline V3 and package ITER-001 for truth critic",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/pre-disassembly-baseline-20261007",
+    "sha": "dd0cd480a4f509a1137ca19a7f9075a8aba0c30a",
+    "behind_main": 175,
+    "ahead_main": 0,
+    "last_commit": "2026-10-07T20:00:54+02:00 jdistlr state: prepare Astra field workbench alpha session",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/pre-disassembly-field-kit-20261007",
+    "sha": "d4ef4deb69466eb1145b4c736ba942f1f499e01c",
+    "behind_main": 143,
+    "ahead_main": 0,
+    "last_commit": "2026-10-07T22:34:57+02:00 jdistlr state: accept field kit and record integration resonance",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/ux-audit-semantic-contract-20261009",
+    "sha": "2c75dbc3afee58b36b628a0a3ef2bda0e9bd9f22",
+    "behind_main": 22,
+    "ahead_main": 0,
+    "last_commit": "2026-10-09T09:38:24+02:00 jdistlr docs(ux): independent audit evidence and P1 recovery review gate",
+    "unique_changes": ""
+  },
+  {
+    "branch": "origin/work/ux-recovery-r1-r4-plan-20261009",
+    "sha": "0bba10bf0cdb48cc33c4be36eaf704711cfa099f",
+    "behind_main": 21,
+    "ahead_main": 1,
+    "last_commit": "2026-10-09T09:44:25+02:00 jdistlr state: stage bounded R1/R4 UX recovery after independent audit",
+    "unique_changes": "state/NEXT-UX-R1-R4-WORK-SESSION.md | 21 +++++++++++++++++++++\n 1 file changed, 21 insertions(+)"
+  }
+]

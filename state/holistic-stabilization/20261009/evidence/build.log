@@ -1,0 +1,50 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> kleines-schaeferrad-research-page@0.1.0 build
+> npm run prepare:workbench && npm run prepare:field && astro build && node scripts/build-offline.mjs
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> kleines-schaeferrad-research-page@0.1.0 prepare:workbench
+> node scripts/build-workbench.mjs
+
+Prepared original evidence including all 19 new sources and 11 technical sheets.
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> kleines-schaeferrad-research-page@0.1.0 prepare:field
+> node scripts/build-field-sketches.mjs && python scripts/build-field-pack.py
+
+Verified shared technical projection set: 11
+Generated 11 A3 technical sheets, 2 A4 route pages and 8 evidence-based field visuals.
+05:54:32 [types] Generated 56ms
+05:54:32 [build] output: "static"
+05:54:32 [build] mode: "static"
+05:54:32 [build] directory: /workspace/scratch/64f677288b13/kleines-schaeferrad/dist/
+05:54:32 [build] Collecting build info...
+05:54:32 [build] ✓ Completed in 91ms.
+05:54:32 [build] Building static entrypoints...
+05:54:33 [vite] ✓ built in 269ms
+05:54:33 [WARN] [vite] [plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+05:54:33 [vite] ✓ built in 296ms
+05:54:33 [build] Rearranging server assets...
+
+ generating static routes 
+05:54:33   ├─ /feld/index.html (+9ms) 
+05:54:33   ├─ /werkstatt/index.html (+3ms) 
+05:54:33   ├─ /index.html (+9ms) 
+05:54:33 ✓ Completed in 34ms.
+
+ generating optimized images 
+05:54:33   ▶ /_astro/IMG_6858.BpdSKe7f_ZSXckl.webp (before: 713kB, after: 99kB) (+153ms) (1/3)
+05:54:33   ▶ /_astro/IMG_6858.BpdSKe7f_PPje9.webp (before: 713kB, after: 200kB) (+199ms) (2/3)
+05:54:34   ▶ /_astro/IMG_6858.BpdSKe7f_6R4o5.webp (before: 713kB, after: 277kB) (+212ms) (3/3)
+05:54:34 ✓ Completed in 565ms.
+
+05:54:34 [build] ✓ Completed in 1.20s.
+05:54:34 [build] 3 page(s) built in 1.29s
+05:54:34 [build] Complete!
+Offline shell: 193 files, 130999689 bytes

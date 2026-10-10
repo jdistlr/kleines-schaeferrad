@@ -1,0 +1,32 @@
+Kleines Schäferrad
+Arbeitsplan
+Werkstattmodell
+Lokal gesichert
+Offline-Vorrat nicht bestätigt. Online einmal vollständig laden.
+
+TEILE ERHALTEN IHRE IDENTITÄT
+Reales Teil beschriften.
+Zur Aufgabe
+
+Nur Teile eintragen, die wirklich gesehen und beschriftet wurden. Alte Marken bleiben erhalten.
+
+Neue ID
+So nennt ihr das Teil
+Alte Marken
+Einbaulage
+Partner-IDs
+Zustand
+Ausbauereignis
+Lagerplatz / noch eingebaut
+Person / Kürzel
+Foto-IDs / Dateinamen
+Dieses reale Teil ist gesehen und beschriftet.
+Teil lokal eintragen
+KS-KUM-999 · SIMULATION sehr lange lokale Bauteilbezeichnung ohne echte Aufnahme
+
+SIMULATION A mit SIMULATION
+
+Alte Marke: offen · Partner: · noch eingebaut
+Teile / Lagerorte
+Sicherung
+Kurzübersicht

@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-09T22:02:58.330Z",
+  "browser": "141.0.7390.37",
+  "registration": {
+    "registered": false,
+    "name": "SecurityError",
+    "message": "Failed to register a ServiceWorker for scope ('https://jdistlr.github.io/kleines-schaeferrad/') with script ('https://jdistlr.github.io/kleines-schaeferrad/sw.js'): An SSL certificate error occurred when fetching the script."
+  },
+  "errors": [
+    "An SSL certificate error occurred when fetching the script.",
+    "An SSL certificate error occurred when fetching the script."
+  ],
+  "status": "Offline-Vorrat nicht bestätigt. Online einmal vollständig laden.",
+  "scope": "Proxy Chromium diagnostic, no physical device"
+}

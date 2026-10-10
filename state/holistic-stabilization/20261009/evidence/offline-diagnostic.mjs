@@ -1,0 +1,6 @@
+import fs from 'node:fs';import {pathToFileURL} from 'node:url';
+const {chromium}=await import(pathToFileURL(process.env.UX_PLAYWRIGHT).href),b=await chromium.launch({executablePath:process.env.KS_CHROMIUM_PATH,proxy:process.env.HTTPS_PROXY?{server:process.env.HTTPS_PROXY}:undefined,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']}),c=await b.newContext({ignoreHTTPSErrors:true}),p=await c.newPage(),errors=[];
+p.on('console',m=>{if(m.type()==='error')errors.push(m.text())});p.on('requestfailed',r=>errors.push({url:r.url(),error:r.failure()?.errorText}));
+await p.goto('https://jdistlr.github.io/kleines-schaeferrad/feld/',{waitUntil:'networkidle'});
+const registration=await p.evaluate(async()=>{try{const r=await navigator.serviceWorker.register('/kleines-schaeferrad/sw.js',{scope:'/kleines-schaeferrad/'});return {registered:true,active:!!r.active,installing:!!r.installing}}catch(e){return {registered:false,name:e.name,message:e.message}}});
+const report={at:new Date().toISOString(),browser:b.version(),registration,errors,status:await p.locator('#offline-status').innerText(),scope:'Proxy Chromium diagnostic, no physical device'};fs.writeFileSync('state/holistic-stabilization/20261009/evidence/offline-diagnostic.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));await b.close();

@@ -1,0 +1,9 @@
+{
+  "against": "118e5f7da51a89eaf04bfe85072169e902f4b532",
+  "protected_files": 286,
+  "hash_drift": [],
+  "protected_git_diff": "",
+  "all_39_values_unchanged": true,
+  "F02_F03": "unchanged; open",
+  "source_of_claim_check": "canonical-summary.json"
+}

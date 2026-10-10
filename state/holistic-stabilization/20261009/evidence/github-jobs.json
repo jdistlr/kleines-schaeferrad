@@ -1,0 +1,2270 @@
+{
+  "final15": [
+    {
+      "id": 114033257688,
+      "name": "field-test (integration)",
+      "conclusion": "success",
+      "head_sha": "6a198686478178a285f73dbfc8ea70c87c58df12",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-09T21:26:19Z",
+          "completed_at": "2026-10-09T21:26:20Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-09T21:26:20Z",
+          "completed_at": "2026-10-09T21:26:35Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-09T21:26:35Z",
+          "completed_at": "2026-10-09T21:26:40Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-09T21:26:40Z",
+          "completed_at": "2026-10-09T21:26:40Z"
+        },
+        {
+          "name": "Run pip install reportlab==4.4.3",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-09T21:26:40Z",
+          "completed_at": "2026-10-09T21:26:45Z"
+        },
+        {
+          "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-09T21:26:45Z",
+          "completed_at": "2026-10-09T21:26:49Z"
+        },
+        {
+          "name": "Run npm ci --no-audit --no-fund",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-09T21:26:49Z",
+          "completed_at": "2026-10-09T21:26:55Z"
+        },
+        {
+          "name": "Run node --test tests/*.test.mjs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-09T21:26:55Z",
+          "completed_at": "2026-10-09T21:26:59Z"
+        },
+        {
+          "name": "Run python scripts/verify_evidence.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-09T21:26:59Z",
+          "completed_at": "2026-10-09T21:26:59Z"
+        },
+        {
+          "name": "Run npm run check && npm run build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-09T21:26:59Z",
+          "completed_at": "2026-10-09T21:27:43Z"
+        },
+        {
+          "name": "Install isolated browser test dependency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-09T21:27:43Z",
+          "completed_at": "2026-10-09T21:27:55Z"
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-09T21:27:55Z",
+          "completed_at": "2026-10-09T21:28:14Z"
+        },
+        {
+          "name": "Run node tests/browser-integration.mjs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-09T21:28:14Z",
+          "completed_at": "2026-10-09T21:29:53Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-09T21:29:53Z",
+          "completed_at": "2026-10-09T21:29:54Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-09T21:29:54Z",
+          "completed_at": "2026-10-09T21:29:59Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-10-09T21:29:59Z",
+          "completed_at": "2026-10-09T21:29:59Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-10-09T21:29:59Z",
+          "completed_at": "2026-10-09T21:29:59Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 30,
+          "started_at": "2026-10-09T21:29:59Z",
+          "completed_at": "2026-10-09T21:29:59Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31,
+          "started_at": "2026-10-09T21:29:59Z",
+          "completed_at": "2026-10-09T21:29:59Z"
+        }
+      ]
+    },
+    {
+      "id": 114033257961,
+      "name": "field-test (field-kit)",
+      "conclusion": "success",
+      "head_sha": "6a198686478178a285f73dbfc8ea70c87c58df12",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-09T21:26:19Z",
+          "completed_at": "2026-10-09T21:26:20Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-09T21:26:20Z",
+          "completed_at": "2026-10-09T21:26:34Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-09T21:26:34Z",
+          "completed_at": "2026-10-09T21:26:36Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-09T21:26:36Z",
+          "completed_at": "2026-10-09T21:26:36Z"
+        },
+        {
+          "name": "Run pip install reportlab==4.4.3",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-09T21:26:36Z",
+          "completed_at": "2026-10-09T21:26:40Z"
+        },
+        {
+          "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-09T21:26:40Z",
+          "completed_at": "2026-10-09T21:26:45Z"
+        },
+        {
+          "name": "Run npm ci --no-audit --no-fund",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-09T21:26:45Z",
+          "completed_at": "2026-10-09T21:26:51Z"
+        },
+        {
+          "name": "Run node --test tests/*.test.mjs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-09T21:26:51Z",
+          "completed_at": "2026-10-09T21:26:55Z"
+        },
+        {
+          "name": "Run python scripts/verify_evidence.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-09T21:26:55Z",
+          "completed_at": "2026-10-09T21:26:55Z"
+        },
+        {
+          "name": "Run npm run check && npm run build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-09T21:26:55Z",
+          "completed_at": "2026-10-09T21:27:40Z"
+        },
+        {
+          "name": "Install isolated browser test dependency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-09T21:27:40Z",
+          "completed_at": "2026-10-09T21:27:49Z"
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-09T21:27:49Z",
+          "completed_at": "2026-10-09T21:28:08Z"
+        },
+        {
+          "name": "Run node tests/browser-field-kit.mjs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-09T21:28:08Z",
+          "completed_at": "2026-10-09T21:28:46Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-09T21:28:46Z",
+          "completed_at": "2026-10-09T21:28:47Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-09T21:28:47Z",
+          "completed_at": "2026-10-09T21:28:52Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-10-09T21:28:52Z",
+          "completed_at": "2026-10-09T21:28:52Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-10-09T21:28:52Z",
+          "completed_at": "2026-10-09T21:28:52Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 30,
+          "started_at": "2026-10-09T21:28:52Z",
+          "completed_at": "2026-10-09T21:28:52Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31,
+          "started_at": "2026-10-09T21:28:52Z",
+          "completed_at": "2026-10-09T21:28:52Z"
+        }
+      ]
+    },
+    {
+      "id": 114033258033,
+      "name": "field-test (field)",
+      "conclusion": "success",
+      "head_sha": "6a198686478178a285f73dbfc8ea70c87c58df12",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-09T21:26:19Z",
+          "completed_at": "2026-10-09T21:26:20Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-09T21:26:20Z",
+          "completed_at": "2026-10-09T21:26:34Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-09T21:26:34Z",
+          "completed_at": "2026-10-09T21:26:36Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-09T21:26:36Z",
+          "completed_at": "2026-10-09T21:26:36Z"
+        },
+        {
+          "name": "Run pip install reportlab==4.4.3",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-09T21:26:36Z",
+          "completed_at": "2026-10-09T21:26:41Z"
+        },
+        {
+          "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-09T21:26:41Z",
+          "completed_at": "2026-10-09T21:26:46Z"
+        },
+        {
+          "name": "Run npm ci --no-audit --no-fund",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-09T21:26:46Z",
+          "completed_at": "2026-10-09T21:26:51Z"
+        },
+        {
+          "name": "Run node --test tests/*.test.mjs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-09T21:26:51Z",
+          "completed_at": "2026-10-09T21:26:54Z"
+        },
+        {
+          "name": "Run python scripts/verify_evidence.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-09T21:26:54Z",
+          "completed_at": "2026-10-09T21:26:54Z"
+        },
+        {
+          "name": "Run npm run check && npm run build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-09T21:26:54Z",
+          "completed_at": "2026-10-09T21:27:38Z"
+        },
+        {
+          "name": "Install isolated browser test dependency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-09T21:27:38Z",
+          "completed_at": "2026-10-09T21:27:47Z"
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-09T21:27:47Z",
+          "completed_at": "2026-10-09T21:28:05Z"
+        },
+        {
+          "name": "Run node tests/browser-field.mjs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-09T21:28:05Z",
+          "completed_at": "2026-10-09T21:29:56Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-09T21:29:56Z",
+          "completed_at": "2026-10-09T21:29:57Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-09T21:29:57Z",
+          "completed_at": "2026-10-09T21:30:02Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-10-09T21:30:02Z",
+          "completed_at": "2026-10-09T21:30:02Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-10-09T21:30:02Z",
+          "completed_at": "2026-10-09T21:30:02Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 30,
+          "started_at": "2026-10-09T21:30:02Z",
+          "completed_at": "2026-10-09T21:30:02Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31,
+          "started_at": "2026-10-09T21:30:02Z",
+          "completed_at": "2026-10-09T21:30:02Z"
+        }
+      ]
+    },
+    {
+      "id": 114033258069,
+      "name": "field-test (reconstruction)",
+      "conclusion": "success",
+      "head_sha": "6a198686478178a285f73dbfc8ea70c87c58df12",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-09T21:26:20Z",
+          "completed_at": "2026-10-09T21:26:21Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-09T21:26:21Z",
+          "completed_at": "2026-10-09T21:26:36Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-09T21:26:36Z",
+          "completed_at": "2026-10-09T21:26:40Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-09T21:26:40Z",
+          "completed_at": "2026-10-09T21:26:40Z"
+        },
+        {
+          "name": "Run pip install reportlab==4.4.3",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-09T21:26:40Z",
+          "completed_at": "2026-10-09T21:26:44Z"
+        },
+        {
+          "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-09T21:26:44Z",
+          "completed_at": "2026-10-09T21:26:49Z"
+        },
+        {
+          "name": "Run npm ci --no-audit --no-fund",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-09T21:26:49Z",
+          "completed_at": "2026-10-09T21:26:55Z"
+        },
+        {
+          "name": "Run node --test tests/*.test.mjs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-09T21:26:55Z",
+          "completed_at": "2026-10-09T21:26:58Z"
+        },
+        {
+          "name": "Run python scripts/verify_evidence.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-09T21:26:58Z",
+          "completed_at": "2026-10-09T21:26:58Z"
+        },
+        {
+          "name": "Run npm run check && npm run build",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-09T21:26:58Z",
+          "completed_at": "2026-10-09T21:27:43Z"
+        },
+        {
+          "name": "Install isolated browser test dependency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-09T21:27:43Z",
+          "completed_at": "2026-10-09T21:27:54Z"
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-09T21:27:54Z",
+          "completed_at": "2026-10-09T21:28:13Z"
+        },
+        {
+          "name": "Run node tests/browser-reconstruction.mjs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-09T21:28:13Z",
+          "completed_at": "2026-10-09T21:30:31Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-09T21:30:31Z",
+          "completed_at": "2026-10-09T21:30:34Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-09T21:30:34Z",
+          "completed_at": "2026-10-09T21:30:39Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-10-09T21:30:39Z",
+          "completed_at": "2026-10-09T21:30:39Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-10-09T21:30:39Z",
+          "completed_at": "2026-10-09T21:30:39Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 30,
+          "started_at": "2026-10-09T21:30:39Z",
+          "completed_at": "2026-10-09T21:30:40Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31,
+          "started_at": "2026-10-09T21:30:40Z",
+          "completed_at": "2026-10-09T21:30:40Z"
+        }
+      ]
+    }
+  ],
+  "audit": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "run": 37987615114,
+        "jobs": [
+          {
+            "id": 114013410401,
+            "name": "field-test",
+            "head_sha": "2677758f5671ea0d1d83e4ed90175ec7cfe71c5f",
+            "conclusion": "failure",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-10-09T20:31:58Z",
+                "completed_at": "2026-10-09T20:31:59Z"
+              },
+              {
+                "name": "Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-10-09T20:31:59Z",
+                "completed_at": "2026-10-09T20:32:17Z"
+              },
+              {
+                "name": "Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-10-09T20:32:17Z",
+                "completed_at": "2026-10-09T20:32:18Z"
+              },
+              {
+                "name": "Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-10-09T20:32:18Z",
+                "completed_at": "2026-10-09T20:32:19Z"
+              },
+              {
+                "name": "Run pip install reportlab==4.4.3",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-10-09T20:32:19Z",
+                "completed_at": "2026-10-09T20:32:25Z"
+              },
+              {
+                "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-10-09T20:32:25Z",
+                "completed_at": "2026-10-09T20:32:35Z"
+              },
+              {
+                "name": "Run npm ci --no-audit --no-fund",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-10-09T20:32:35Z",
+                "completed_at": "2026-10-09T20:32:41Z"
+              },
+              {
+                "name": "Run npm run test:workbench",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8,
+                "started_at": "2026-10-09T20:32:41Z",
+                "completed_at": "2026-10-09T20:32:42Z"
+              },
+              {
+                "name": "Run python scripts/verify_evidence.py",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9,
+                "started_at": "2026-10-09T20:32:42Z",
+                "completed_at": "2026-10-09T20:32:42Z"
+              },
+              {
+                "name": "Run npm run check && npm run build",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 10,
+                "started_at": "2026-10-09T20:32:42Z",
+                "completed_at": "2026-10-09T20:33:18Z"
+              },
+              {
+                "name": "Install isolated browser test dependency",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 11,
+                "started_at": "2026-10-09T20:33:18Z",
+                "completed_at": "2026-10-09T20:33:29Z"
+              },
+              {
+                "name": "Run npx playwright install --with-deps chromium",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 12,
+                "started_at": "2026-10-09T20:33:29Z",
+                "completed_at": "2026-10-09T20:33:50Z"
+              },
+              {
+                "name": "Run node tests/browser-field.mjs",
+                "status": "completed",
+                "conclusion": "failure",
+                "number": 13,
+                "started_at": "2026-10-09T20:33:50Z",
+                "completed_at": "2026-10-09T20:34:51Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 14,
+                "started_at": "2026-10-09T20:34:51Z",
+                "completed_at": "2026-10-09T20:34:52Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "skipped",
+                "number": 15,
+                "started_at": "2026-10-09T20:34:52Z",
+                "completed_at": "2026-10-09T20:34:52Z"
+              },
+              {
+                "name": "Post Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "skipped",
+                "number": 28,
+                "started_at": "2026-10-09T20:34:52Z",
+                "completed_at": "2026-10-09T20:34:52Z"
+              },
+              {
+                "name": "Post Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "skipped",
+                "number": 29,
+                "started_at": "2026-10-09T20:34:52Z",
+                "completed_at": "2026-10-09T20:34:52Z"
+              },
+              {
+                "name": "Post Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 30,
+                "started_at": "2026-10-09T20:34:52Z",
+                "completed_at": "2026-10-09T20:34:53Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 31,
+                "started_at": "2026-10-09T20:34:53Z",
+                "completed_at": "2026-10-09T20:34:53Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "run": 37992980382,
+        "jobs": [
+          {
+            "id": 114031659664,
+            "name": "field-test (field)",
+            "head_sha": "04484c9a9edc217fec911a957d21a84a8f8da05d",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-10-09T21:21:47Z",
+                "completed_at": "2026-10-09T21:21:49Z"
+              },
+              {
+                "name": "Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-10-09T21:21:49Z",
+                "completed_at": "2026-10-09T21:22:05Z"
+              },
+              {
+                "name": "Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-10-09T21:22:05Z",
+                "completed_at": "2026-10-09T21:22:14Z"
+              },
+              {
+                "name": "Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-10-09T21:22:14Z",
+                "completed_at": "2026-10-09T21:22:14Z"
+              },
+              {
+                "name": "Run pip install reportlab==4.4.3",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-10-09T21:22:14Z",
+                "completed_at": "2026-10-09T21:22:22Z"
+              },
+              {
+                "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-10-09T21:22:22Z",
+                "completed_at": "2026-10-09T21:22:37Z"
+              },
+              {
+                "name": "Run npm ci --no-audit --no-fund",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-10-09T21:22:37Z",
+                "completed_at": "2026-10-09T21:22:43Z"
+              },
+              {
+                "name": "Run node --test tests/*.test.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8,
+                "started_at": "2026-10-09T21:22:43Z",
+                "completed_at": "2026-10-09T21:22:45Z"
+              },
+              {
+                "name": "Run python scripts/verify_evidence.py",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9,
+                "started_at": "2026-10-09T21:22:45Z",
+                "completed_at": "2026-10-09T21:22:46Z"
+              },
+              {
+                "name": "Run npm run check && npm run build",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 10,
+                "started_at": "2026-10-09T21:22:46Z",
+                "completed_at": "2026-10-09T21:23:19Z"
+              },
+              {
+                "name": "Install isolated browser test dependency",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 11,
+                "started_at": "2026-10-09T21:23:19Z",
+                "completed_at": "2026-10-09T21:23:30Z"
+              },
+              {
+                "name": "Run npx playwright install --with-deps chromium",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 12,
+                "started_at": "2026-10-09T21:23:30Z",
+                "completed_at": "2026-10-09T21:24:02Z"
+              },
+              {
+                "name": "Run node tests/browser-field.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 13,
+                "started_at": "2026-10-09T21:24:02Z",
+                "completed_at": "2026-10-09T21:25:27Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 14,
+                "started_at": "2026-10-09T21:25:27Z",
+                "completed_at": "2026-10-09T21:25:28Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 15,
+                "started_at": "2026-10-09T21:25:28Z",
+                "completed_at": "2026-10-09T21:25:33Z"
+              },
+              {
+                "name": "Post Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 28,
+                "started_at": "2026-10-09T21:25:33Z",
+                "completed_at": "2026-10-09T21:25:33Z"
+              },
+              {
+                "name": "Post Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 29,
+                "started_at": "2026-10-09T21:25:33Z",
+                "completed_at": "2026-10-09T21:25:33Z"
+              },
+              {
+                "name": "Post Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 30,
+                "started_at": "2026-10-09T21:25:33Z",
+                "completed_at": "2026-10-09T21:25:33Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 31,
+                "started_at": "2026-10-09T21:25:33Z",
+                "completed_at": "2026-10-09T21:25:33Z"
+              }
+            ]
+          },
+          {
+            "id": 114031659910,
+            "name": "field-test (integration)",
+            "head_sha": "04484c9a9edc217fec911a957d21a84a8f8da05d",
+            "conclusion": "failure",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-10-09T21:21:48Z",
+                "completed_at": "2026-10-09T21:21:49Z"
+              },
+              {
+                "name": "Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-10-09T21:21:49Z",
+                "completed_at": "2026-10-09T21:22:04Z"
+              },
+              {
+                "name": "Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-10-09T21:22:04Z",
+                "completed_at": "2026-10-09T21:22:08Z"
+              },
+              {
+                "name": "Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-10-09T21:22:08Z",
+                "completed_at": "2026-10-09T21:22:08Z"
+              },
+              {
+                "name": "Run pip install reportlab==4.4.3",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-10-09T21:22:08Z",
+                "completed_at": "2026-10-09T21:22:11Z"
+              },
+              {
+                "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-10-09T21:22:11Z",
+                "completed_at": "2026-10-09T21:22:15Z"
+              },
+              {
+                "name": "Run npm ci --no-audit --no-fund",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-10-09T21:22:15Z",
+                "completed_at": "2026-10-09T21:22:21Z"
+              },
+              {
+                "name": "Run node --test tests/*.test.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8,
+                "started_at": "2026-10-09T21:22:21Z",
+                "completed_at": "2026-10-09T21:22:25Z"
+              },
+              {
+                "name": "Run python scripts/verify_evidence.py",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9,
+                "started_at": "2026-10-09T21:22:25Z",
+                "completed_at": "2026-10-09T21:22:25Z"
+              },
+              {
+                "name": "Run npm run check && npm run build",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 10,
+                "started_at": "2026-10-09T21:22:25Z",
+                "completed_at": "2026-10-09T21:23:10Z"
+              },
+              {
+                "name": "Install isolated browser test dependency",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 11,
+                "started_at": "2026-10-09T21:23:10Z",
+                "completed_at": "2026-10-09T21:23:19Z"
+              },
+              {
+                "name": "Run npx playwright install --with-deps chromium",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 12,
+                "started_at": "2026-10-09T21:23:19Z",
+                "completed_at": "2026-10-09T21:23:39Z"
+              },
+              {
+                "name": "Run node tests/browser-integration.mjs",
+                "status": "completed",
+                "conclusion": "failure",
+                "number": 13,
+                "started_at": "2026-10-09T21:23:39Z",
+                "completed_at": "2026-10-09T21:23:55Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 14,
+                "started_at": "2026-10-09T21:23:55Z",
+                "completed_at": "2026-10-09T21:23:57Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "skipped",
+                "number": 15,
+                "started_at": "2026-10-09T21:23:57Z",
+                "completed_at": "2026-10-09T21:23:57Z"
+              },
+              {
+                "name": "Post Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "skipped",
+                "number": 28,
+                "started_at": "2026-10-09T21:23:57Z",
+                "completed_at": "2026-10-09T21:23:57Z"
+              },
+              {
+                "name": "Post Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "skipped",
+                "number": 29,
+                "started_at": "2026-10-09T21:23:57Z",
+                "completed_at": "2026-10-09T21:23:57Z"
+              },
+              {
+                "name": "Post Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 30,
+                "started_at": "2026-10-09T21:23:57Z",
+                "completed_at": "2026-10-09T21:23:57Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 31,
+                "started_at": "2026-10-09T21:23:57Z",
+                "completed_at": "2026-10-09T21:23:57Z"
+              }
+            ]
+          },
+          {
+            "id": 114031659996,
+            "name": "field-test (field-kit)",
+            "head_sha": "04484c9a9edc217fec911a957d21a84a8f8da05d",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-10-09T21:21:47Z",
+                "completed_at": "2026-10-09T21:21:48Z"
+              },
+              {
+                "name": "Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-10-09T21:21:48Z",
+                "completed_at": "2026-10-09T21:22:05Z"
+              },
+              {
+                "name": "Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-10-09T21:22:05Z",
+                "completed_at": "2026-10-09T21:22:10Z"
+              },
+              {
+                "name": "Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-10-09T21:22:10Z",
+                "completed_at": "2026-10-09T21:22:10Z"
+              },
+              {
+                "name": "Run pip install reportlab==4.4.3",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-10-09T21:22:10Z",
+                "completed_at": "2026-10-09T21:22:15Z"
+              },
+              {
+                "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-10-09T21:22:15Z",
+                "completed_at": "2026-10-09T21:22:20Z"
+              },
+              {
+                "name": "Run npm ci --no-audit --no-fund",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-10-09T21:22:20Z",
+                "completed_at": "2026-10-09T21:22:25Z"
+              },
+              {
+                "name": "Run node --test tests/*.test.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8,
+                "started_at": "2026-10-09T21:22:25Z",
+                "completed_at": "2026-10-09T21:22:29Z"
+              },
+              {
+                "name": "Run python scripts/verify_evidence.py",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9,
+                "started_at": "2026-10-09T21:22:29Z",
+                "completed_at": "2026-10-09T21:22:30Z"
+              },
+              {
+                "name": "Run npm run check && npm run build",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 10,
+                "started_at": "2026-10-09T21:22:30Z",
+                "completed_at": "2026-10-09T21:23:08Z"
+              },
+              {
+                "name": "Install isolated browser test dependency",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 11,
+                "started_at": "2026-10-09T21:23:08Z",
+                "completed_at": "2026-10-09T21:23:21Z"
+              },
+              {
+                "name": "Run npx playwright install --with-deps chromium",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 12,
+                "started_at": "2026-10-09T21:23:21Z",
+                "completed_at": "2026-10-09T21:23:40Z"
+              },
+              {
+                "name": "Run node tests/browser-field-kit.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 13,
+                "started_at": "2026-10-09T21:23:40Z",
+                "completed_at": "2026-10-09T21:24:18Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 14,
+                "started_at": "2026-10-09T21:24:18Z",
+                "completed_at": "2026-10-09T21:24:20Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 15,
+                "started_at": "2026-10-09T21:24:20Z",
+                "completed_at": "2026-10-09T21:24:25Z"
+              },
+              {
+                "name": "Post Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 28,
+                "started_at": "2026-10-09T21:24:25Z",
+                "completed_at": "2026-10-09T21:24:25Z"
+              },
+              {
+                "name": "Post Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 29,
+                "started_at": "2026-10-09T21:24:25Z",
+                "completed_at": "2026-10-09T21:24:25Z"
+              },
+              {
+                "name": "Post Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 30,
+                "started_at": "2026-10-09T21:24:25Z",
+                "completed_at": "2026-10-09T21:24:25Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 31,
+                "started_at": "2026-10-09T21:24:25Z",
+                "completed_at": "2026-10-09T21:24:25Z"
+              }
+            ]
+          },
+          {
+            "id": 114031660073,
+            "name": "field-test (reconstruction)",
+            "head_sha": "04484c9a9edc217fec911a957d21a84a8f8da05d",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-10-09T21:21:47Z",
+                "completed_at": "2026-10-09T21:21:48Z"
+              },
+              {
+                "name": "Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-10-09T21:21:48Z",
+                "completed_at": "2026-10-09T21:22:03Z"
+              },
+              {
+                "name": "Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-10-09T21:22:03Z",
+                "completed_at": "2026-10-09T21:22:06Z"
+              },
+              {
+                "name": "Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-10-09T21:22:06Z",
+                "completed_at": "2026-10-09T21:22:06Z"
+              },
+              {
+                "name": "Run pip install reportlab==4.4.3",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-10-09T21:22:06Z",
+                "completed_at": "2026-10-09T21:22:08Z"
+              },
+              {
+                "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-10-09T21:22:08Z",
+                "completed_at": "2026-10-09T21:22:13Z"
+              },
+              {
+                "name": "Run npm ci --no-audit --no-fund",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-10-09T21:22:13Z",
+                "completed_at": "2026-10-09T21:22:16Z"
+              },
+              {
+                "name": "Run node --test tests/*.test.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8,
+                "started_at": "2026-10-09T21:22:16Z",
+                "completed_at": "2026-10-09T21:22:18Z"
+              },
+              {
+                "name": "Run python scripts/verify_evidence.py",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9,
+                "started_at": "2026-10-09T21:22:18Z",
+                "completed_at": "2026-10-09T21:22:18Z"
+              },
+              {
+                "name": "Run npm run check && npm run build",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 10,
+                "started_at": "2026-10-09T21:22:18Z",
+                "completed_at": "2026-10-09T21:22:44Z"
+              },
+              {
+                "name": "Install isolated browser test dependency",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 11,
+                "started_at": "2026-10-09T21:22:44Z",
+                "completed_at": "2026-10-09T21:22:56Z"
+              },
+              {
+                "name": "Run npx playwright install --with-deps chromium",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 12,
+                "started_at": "2026-10-09T21:22:56Z",
+                "completed_at": "2026-10-09T21:23:10Z"
+              },
+              {
+                "name": "Run node tests/browser-reconstruction.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 13,
+                "started_at": "2026-10-09T21:23:10Z",
+                "completed_at": "2026-10-09T21:24:26Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 14,
+                "started_at": "2026-10-09T21:24:26Z",
+                "completed_at": "2026-10-09T21:24:28Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 15,
+                "started_at": "2026-10-09T21:24:28Z",
+                "completed_at": "2026-10-09T21:24:31Z"
+              },
+              {
+                "name": "Post Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 28,
+                "started_at": "2026-10-09T21:24:31Z",
+                "completed_at": "2026-10-09T21:24:31Z"
+              },
+              {
+                "name": "Post Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 29,
+                "started_at": "2026-10-09T21:24:31Z",
+                "completed_at": "2026-10-09T21:24:31Z"
+              },
+              {
+                "name": "Post Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 30,
+                "started_at": "2026-10-09T21:24:31Z",
+                "completed_at": "2026-10-09T21:24:32Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 31,
+                "started_at": "2026-10-09T21:24:32Z",
+                "completed_at": "2026-10-09T21:24:32Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "run": 37995923429,
+        "jobs": [
+          {
+            "id": 114041866795,
+            "name": "field-test (integration)",
+            "head_sha": "7bff8234729b466507b1e59d021f98172f1c7c59",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-10-09T21:51:29Z",
+                "completed_at": "2026-10-09T21:51:30Z"
+              },
+              {
+                "name": "Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-10-09T21:51:30Z",
+                "completed_at": "2026-10-09T21:51:45Z"
+              },
+              {
+                "name": "Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-10-09T21:51:45Z",
+                "completed_at": "2026-10-09T21:51:46Z"
+              },
+              {
+                "name": "Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-10-09T21:51:46Z",
+                "completed_at": "2026-10-09T21:51:46Z"
+              },
+              {
+                "name": "Run pip install reportlab==4.4.3",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-10-09T21:51:46Z",
+                "completed_at": "2026-10-09T21:51:48Z"
+              },
+              {
+                "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-10-09T21:51:48Z",
+                "completed_at": "2026-10-09T21:51:56Z"
+              },
+              {
+                "name": "Run npm ci --no-audit --no-fund",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-10-09T21:51:56Z",
+                "completed_at": "2026-10-09T21:52:02Z"
+              },
+              {
+                "name": "Run node --test tests/*.test.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8,
+                "started_at": "2026-10-09T21:52:02Z",
+                "completed_at": "2026-10-09T21:52:06Z"
+              },
+              {
+                "name": "Run python scripts/verify_evidence.py",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9,
+                "started_at": "2026-10-09T21:52:06Z",
+                "completed_at": "2026-10-09T21:52:06Z"
+              },
+              {
+                "name": "Run npm run check && npm run build",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 10,
+                "started_at": "2026-10-09T21:52:06Z",
+                "completed_at": "2026-10-09T21:52:42Z"
+              },
+              {
+                "name": "Install isolated browser test dependency",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 11,
+                "started_at": "2026-10-09T21:52:42Z",
+                "completed_at": "2026-10-09T21:52:56Z"
+              },
+              {
+                "name": "Run npx playwright install --with-deps chromium",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 12,
+                "started_at": "2026-10-09T21:52:56Z",
+                "completed_at": "2026-10-09T21:53:16Z"
+              },
+              {
+                "name": "Run node tests/browser-integration.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 13,
+                "started_at": "2026-10-09T21:53:16Z",
+                "completed_at": "2026-10-09T21:54:48Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 14,
+                "started_at": "2026-10-09T21:54:48Z",
+                "completed_at": "2026-10-09T21:54:50Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 15,
+                "started_at": "2026-10-09T21:54:50Z",
+                "completed_at": "2026-10-09T21:54:55Z"
+              },
+              {
+                "name": "Post Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 28,
+                "started_at": "2026-10-09T21:54:55Z",
+                "completed_at": "2026-10-09T21:54:55Z"
+              },
+              {
+                "name": "Post Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 29,
+                "started_at": "2026-10-09T21:54:55Z",
+                "completed_at": "2026-10-09T21:54:56Z"
+              },
+              {
+                "name": "Post Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 30,
+                "started_at": "2026-10-09T21:54:56Z",
+                "completed_at": "2026-10-09T21:54:56Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 31,
+                "started_at": "2026-10-09T21:54:56Z",
+                "completed_at": "2026-10-09T21:54:56Z"
+              }
+            ]
+          },
+          {
+            "id": 114041867066,
+            "name": "field-test (reconstruction)",
+            "head_sha": "7bff8234729b466507b1e59d021f98172f1c7c59",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-10-09T21:51:29Z",
+                "completed_at": "2026-10-09T21:51:30Z"
+              },
+              {
+                "name": "Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-10-09T21:51:30Z",
+                "completed_at": "2026-10-09T21:51:45Z"
+              },
+              {
+                "name": "Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-10-09T21:51:45Z",
+                "completed_at": "2026-10-09T21:51:48Z"
+              },
+              {
+                "name": "Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-10-09T21:51:48Z",
+                "completed_at": "2026-10-09T21:51:48Z"
+              },
+              {
+                "name": "Run pip install reportlab==4.4.3",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-10-09T21:51:48Z",
+                "completed_at": "2026-10-09T21:51:52Z"
+              },
+              {
+                "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-10-09T21:51:52Z",
+                "completed_at": "2026-10-09T21:52:00Z"
+              },
+              {
+                "name": "Run npm ci --no-audit --no-fund",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-10-09T21:52:00Z",
+                "completed_at": "2026-10-09T21:52:08Z"
+              },
+              {
+                "name": "Run node --test tests/*.test.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8,
+                "started_at": "2026-10-09T21:52:08Z",
+                "completed_at": "2026-10-09T21:52:12Z"
+              },
+              {
+                "name": "Run python scripts/verify_evidence.py",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9,
+                "started_at": "2026-10-09T21:52:12Z",
+                "completed_at": "2026-10-09T21:52:12Z"
+              },
+              {
+                "name": "Run npm run check && npm run build",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 10,
+                "started_at": "2026-10-09T21:52:12Z",
+                "completed_at": "2026-10-09T21:52:56Z"
+              },
+              {
+                "name": "Install isolated browser test dependency",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 11,
+                "started_at": "2026-10-09T21:52:56Z",
+                "completed_at": "2026-10-09T21:53:10Z"
+              },
+              {
+                "name": "Run npx playwright install --with-deps chromium",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 12,
+                "started_at": "2026-10-09T21:53:10Z",
+                "completed_at": "2026-10-09T21:53:33Z"
+              },
+              {
+                "name": "Run node tests/browser-reconstruction.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 13,
+                "started_at": "2026-10-09T21:53:33Z",
+                "completed_at": "2026-10-09T21:55:52Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 14,
+                "started_at": "2026-10-09T21:55:52Z",
+                "completed_at": "2026-10-09T21:55:54Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 15,
+                "started_at": "2026-10-09T21:55:54Z",
+                "completed_at": "2026-10-09T21:55:59Z"
+              },
+              {
+                "name": "Post Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 28,
+                "started_at": "2026-10-09T21:55:59Z",
+                "completed_at": "2026-10-09T21:55:59Z"
+              },
+              {
+                "name": "Post Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 29,
+                "started_at": "2026-10-09T21:55:59Z",
+                "completed_at": "2026-10-09T21:56:00Z"
+              },
+              {
+                "name": "Post Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 30,
+                "started_at": "2026-10-09T21:56:00Z",
+                "completed_at": "2026-10-09T21:56:00Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 31,
+                "started_at": "2026-10-09T21:56:00Z",
+                "completed_at": "2026-10-09T21:56:00Z"
+              }
+            ]
+          },
+          {
+            "id": 114041867156,
+            "name": "field-test (field-kit)",
+            "head_sha": "7bff8234729b466507b1e59d021f98172f1c7c59",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-10-09T21:51:29Z",
+                "completed_at": "2026-10-09T21:51:30Z"
+              },
+              {
+                "name": "Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-10-09T21:51:30Z",
+                "completed_at": "2026-10-09T21:51:48Z"
+              },
+              {
+                "name": "Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-10-09T21:51:48Z",
+                "completed_at": "2026-10-09T21:51:51Z"
+              },
+              {
+                "name": "Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-10-09T21:51:51Z",
+                "completed_at": "2026-10-09T21:51:51Z"
+              },
+              {
+                "name": "Run pip install reportlab==4.4.3",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-10-09T21:51:51Z",
+                "completed_at": "2026-10-09T21:51:55Z"
+              },
+              {
+                "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-10-09T21:51:55Z",
+                "completed_at": "2026-10-09T21:52:06Z"
+              },
+              {
+                "name": "Run npm ci --no-audit --no-fund",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-10-09T21:52:06Z",
+                "completed_at": "2026-10-09T21:52:13Z"
+              },
+              {
+                "name": "Run node --test tests/*.test.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8,
+                "started_at": "2026-10-09T21:52:13Z",
+                "completed_at": "2026-10-09T21:52:16Z"
+              },
+              {
+                "name": "Run python scripts/verify_evidence.py",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9,
+                "started_at": "2026-10-09T21:52:16Z",
+                "completed_at": "2026-10-09T21:52:16Z"
+              },
+              {
+                "name": "Run npm run check && npm run build",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 10,
+                "started_at": "2026-10-09T21:52:16Z",
+                "completed_at": "2026-10-09T21:52:55Z"
+              },
+              {
+                "name": "Install isolated browser test dependency",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 11,
+                "started_at": "2026-10-09T21:52:55Z",
+                "completed_at": "2026-10-09T21:53:14Z"
+              },
+              {
+                "name": "Run npx playwright install --with-deps chromium",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 12,
+                "started_at": "2026-10-09T21:53:14Z",
+                "completed_at": "2026-10-09T21:53:36Z"
+              },
+              {
+                "name": "Run node tests/browser-field-kit.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 13,
+                "started_at": "2026-10-09T21:53:36Z",
+                "completed_at": "2026-10-09T21:54:15Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 14,
+                "started_at": "2026-10-09T21:54:15Z",
+                "completed_at": "2026-10-09T21:54:17Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 15,
+                "started_at": "2026-10-09T21:54:17Z",
+                "completed_at": "2026-10-09T21:54:23Z"
+              },
+              {
+                "name": "Post Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 28,
+                "started_at": "2026-10-09T21:54:23Z",
+                "completed_at": "2026-10-09T21:54:23Z"
+              },
+              {
+                "name": "Post Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 29,
+                "started_at": "2026-10-09T21:54:23Z",
+                "completed_at": "2026-10-09T21:54:26Z"
+              },
+              {
+                "name": "Post Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 30,
+                "started_at": "2026-10-09T21:54:26Z",
+                "completed_at": "2026-10-09T21:54:27Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 31,
+                "started_at": "2026-10-09T21:54:27Z",
+                "completed_at": "2026-10-09T21:54:27Z"
+              }
+            ]
+          },
+          {
+            "id": 114041867375,
+            "name": "field-test (field)",
+            "head_sha": "7bff8234729b466507b1e59d021f98172f1c7c59",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-10-09T21:51:29Z",
+                "completed_at": "2026-10-09T21:51:30Z"
+              },
+              {
+                "name": "Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-10-09T21:51:30Z",
+                "completed_at": "2026-10-09T21:51:46Z"
+              },
+              {
+                "name": "Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-10-09T21:51:46Z",
+                "completed_at": "2026-10-09T21:51:48Z"
+              },
+              {
+                "name": "Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-10-09T21:51:48Z",
+                "completed_at": "2026-10-09T21:51:48Z"
+              },
+              {
+                "name": "Run pip install reportlab==4.4.3",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-10-09T21:51:48Z",
+                "completed_at": "2026-10-09T21:51:52Z"
+              },
+              {
+                "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-10-09T21:51:52Z",
+                "completed_at": "2026-10-09T21:51:57Z"
+              },
+              {
+                "name": "Run npm ci --no-audit --no-fund",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-10-09T21:51:57Z",
+                "completed_at": "2026-10-09T21:52:04Z"
+              },
+              {
+                "name": "Run node --test tests/*.test.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8,
+                "started_at": "2026-10-09T21:52:04Z",
+                "completed_at": "2026-10-09T21:52:07Z"
+              },
+              {
+                "name": "Run python scripts/verify_evidence.py",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9,
+                "started_at": "2026-10-09T21:52:07Z",
+                "completed_at": "2026-10-09T21:52:08Z"
+              },
+              {
+                "name": "Run npm run check && npm run build",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 10,
+                "started_at": "2026-10-09T21:52:08Z",
+                "completed_at": "2026-10-09T21:52:52Z"
+              },
+              {
+                "name": "Install isolated browser test dependency",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 11,
+                "started_at": "2026-10-09T21:52:52Z",
+                "completed_at": "2026-10-09T21:53:05Z"
+              },
+              {
+                "name": "Run npx playwright install --with-deps chromium",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 12,
+                "started_at": "2026-10-09T21:53:05Z",
+                "completed_at": "2026-10-09T21:53:24Z"
+              },
+              {
+                "name": "Run node tests/browser-field.mjs",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 13,
+                "started_at": "2026-10-09T21:53:24Z",
+                "completed_at": "2026-10-09T21:55:18Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 14,
+                "started_at": "2026-10-09T21:55:18Z",
+                "completed_at": "2026-10-09T21:55:20Z"
+              },
+              {
+                "name": "Run actions/upload-artifact@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 15,
+                "started_at": "2026-10-09T21:55:20Z",
+                "completed_at": "2026-10-09T21:55:25Z"
+              },
+              {
+                "name": "Post Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 28,
+                "started_at": "2026-10-09T21:55:25Z",
+                "completed_at": "2026-10-09T21:55:25Z"
+              },
+              {
+                "name": "Post Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 29,
+                "started_at": "2026-10-09T21:55:25Z",
+                "completed_at": "2026-10-09T21:55:26Z"
+              },
+              {
+                "name": "Post Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 30,
+                "started_at": "2026-10-09T21:55:26Z",
+                "completed_at": "2026-10-09T21:55:27Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 31,
+                "started_at": "2026-10-09T21:55:27Z",
+                "completed_at": "2026-10-09T21:55:27Z"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "run": 37994601533,
+        "jobs": [
+          {
+            "id": 114037298332,
+            "name": "build",
+            "head_sha": "118e5f7da51a89eaf04bfe85072169e902f4b532",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-10-09T21:37:58Z",
+                "completed_at": "2026-10-09T21:37:59Z"
+              },
+              {
+                "name": "Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-10-09T21:37:59Z",
+                "completed_at": "2026-10-09T21:38:16Z"
+              },
+              {
+                "name": "Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-10-09T21:38:16Z",
+                "completed_at": "2026-10-09T21:38:19Z"
+              },
+              {
+                "name": "Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-10-09T21:38:19Z",
+                "completed_at": "2026-10-09T21:38:19Z"
+              },
+              {
+                "name": "Run pip install reportlab==4.4.3",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-10-09T21:38:19Z",
+                "completed_at": "2026-10-09T21:38:21Z"
+              },
+              {
+                "name": "Run sudo apt-get update && sudo apt-get install -y fonts-dejavu-core",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-10-09T21:38:21Z",
+                "completed_at": "2026-10-09T21:38:30Z"
+              },
+              {
+                "name": "Run npm install --no-audit --no-fund",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-10-09T21:38:30Z",
+                "completed_at": "2026-10-09T21:38:33Z"
+              },
+              {
+                "name": "Run npm run check",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8,
+                "started_at": "2026-10-09T21:38:33Z",
+                "completed_at": "2026-10-09T21:38:39Z"
+              },
+              {
+                "name": "Run npm run build",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9,
+                "started_at": "2026-10-09T21:38:39Z",
+                "completed_at": "2026-10-09T21:39:07Z"
+              },
+              {
+                "name": "Run actions/upload-pages-artifact@v3",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 10,
+                "started_at": "2026-10-09T21:39:07Z",
+                "completed_at": "2026-10-09T21:39:12Z"
+              },
+              {
+                "name": "Post Run actions/setup-python@v5",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 18,
+                "started_at": "2026-10-09T21:39:12Z",
+                "completed_at": "2026-10-09T21:39:12Z"
+              },
+              {
+                "name": "Post Run actions/setup-node@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 19,
+                "started_at": "2026-10-09T21:39:12Z",
+                "completed_at": "2026-10-09T21:39:12Z"
+              },
+              {
+                "name": "Post Run actions/checkout@v4",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 20,
+                "started_at": "2026-10-09T21:39:12Z",
+                "completed_at": "2026-10-09T21:39:12Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 21,
+                "started_at": "2026-10-09T21:39:12Z",
+                "completed_at": "2026-10-09T21:39:12Z"
+              }
+            ]
+          },
+          {
+            "id": 114037741539,
+            "name": "deploy",
+            "head_sha": "118e5f7da51a89eaf04bfe85072169e902f4b532",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-10-09T21:39:20Z",
+                "completed_at": "2026-10-09T21:39:20Z"
+              },
+              {
+                "name": "Deploy GitHub Pages",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-10-09T21:39:20Z",
+                "completed_at": "2026-10-09T21:39:26Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-10-09T21:39:26Z",
+                "completed_at": "2026-10-09T21:39:26Z"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
