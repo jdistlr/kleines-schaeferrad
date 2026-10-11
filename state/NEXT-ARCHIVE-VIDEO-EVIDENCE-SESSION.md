@@ -1,3 +1,5 @@
+> **Abgelöst am 11.10.2026.** Diese Datei ist kein Arbeitsauftrag mehr. Maßgeblich sind [AGENTS.md](../AGENTS.md), der [Wissenskern](../kern/README.md) und der [Ordnungsplan](../docs/ordnung/PLAN.md). Neue Fachangaben nicht hier anhängen, sondern wie in AGENTS.md beschrieben in `kern/` eintragen.
+
 # ARCHIVE VIDEO EVIDENCE INTAKE — review mandate
 
 Date: 2026-10-09. Source: user-provided archival stills and seven MOV files in ChatGPT conversation, NOT field measurements obtained from today's directed capture.

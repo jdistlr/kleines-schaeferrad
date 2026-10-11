@@ -1,0 +1,19 @@
+#!/bin/sh
+# Durchsetzt AGENTS.md lokal. Aktiviert durch: npm install (setzt core.hooksPath).
+ast=$(git symbolic-ref --short -q HEAD)
+if [ "$ast" = "main" ] || [ "$ast" = "gh-pages" ]; then
+  echo "Abgelehnt: nicht direkt auf '$ast' committen. Arbeitsbranch anlegen (siehe AGENTS.md)." >&2; exit 1
+fi
+if git diff --cached --name-only --diff-filter=AM | grep -q '^\.github/workflows/'; then
+  echo "Abgelehnt: keine GitHub-Actions-Workflows (siehe AGENTS.md)." >&2; exit 1
+fi
+eingefroren=$(git diff --cached --name-only | grep -E '^(data/(geometry\.claims|components|conflicts|knowledge-gaps)\.json|evidence/contributions/)')
+if [ -n "$eingefroren" ] && [ -z "$KS_ALTDATEN_FREIGABE" ]; then
+  echo "Abgelehnt: eingefrorene Altdaten geändert:" >&2; echo "$eingefroren" >&2
+  echo "Neues Wissen gehört in kern/ (siehe kern/README.md)." >&2; exit 1
+fi
+if git diff --cached --name-only | grep -q '^kern/'; then
+  python3 scripts/kern/pruefe_kern.py >/dev/null 2>&1 || python scripts/kern/pruefe_kern.py >/dev/null 2>&1 || {
+    echo "Abgelehnt: Kernprüfung schlägt fehl. Details: python scripts/kern/pruefe_kern.py" >&2; exit 1; }
+fi
+exit 0

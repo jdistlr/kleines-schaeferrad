@@ -1,3 +1,5 @@
+> **Abgelöst am 11.10.2026.** Diese Datei ist kein Arbeitsauftrag mehr. Maßgeblich sind [AGENTS.md](../AGENTS.md), der [Wissenskern](../kern/README.md) und der [Ordnungsplan](../docs/ordnung/PLAN.md). Neue Fachangaben nicht hier anhängen, sondern wie in AGENTS.md beschrieben in `kern/` eintragen.
+
 # Current state — 2026-10-10
 
 **Status:** STATE/SOURCE CONTRACT CLOSURE — evidence checks passed; final-commit CI decision recorded in PR #17. This is the current navigation entry, not an engineering release.
