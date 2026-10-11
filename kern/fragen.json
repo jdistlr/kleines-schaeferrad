@@ -21,7 +21,7 @@
       "entscheidet": "P-THORSTEN",
       "status": "offen",
       "antwort": [],
-      "hinweis": "Drehkreis mit Flügelbrettern 4,66–4,96 m. 4,40 m genügen nur, wenn die Balken mindestens 0,77–1,14 m über oder unter der Achse liegen. Herleitung: evidence/raw/Radstadt/MASSABGLEICH.md.",
+      "hinweis": "Drehkreis mit Flügelbrettern 4,66–4,96 m. 4,40 m genügen nur, wenn die Balken mindestens 0,77–1,14 m über oder unter der Achse liegen. Herleitung: evidence/raw/Radstadt/MASSABGLEICH.md. Stand 12.10.2026: Liegt die Achse nur ≈ 0,35 m über den Radstadt-Balken (AN-20261012-30) und liegen alle Balken gleich hoch, braucht der Drehkreis eine lichte Weite von 4.61–4.91 m. Das spricht für 5,25 m (Zeichnung) und gegen 4,40 m – es sei denn, 4,40 m ist an anderer Stelle oder Höhe gemessen. Thorsten fragen, wo genau.",
       "herkunft": []
     },
     {
@@ -58,7 +58,7 @@
       "entscheidet": "P-THORSTEN",
       "status": "offen",
       "antwort": [],
-      "hinweis": null,
+      "hinweis": "Stand 12.10.2026: Landseitig liegt die Wellenmitte rund 0,31–0,38 m über der Oberkante des uferparallelen Radstadt-Balkens (AN-20261012-30, abgeleitet aus AN-20261012-27/28). Wasserseite und Mittigkeit noch offen.",
       "herkunft": []
     },
     {
@@ -75,7 +75,7 @@
       "entscheidet": "P-THORSTEN",
       "status": "offen",
       "antwort": [],
-      "hinweis": "Befund Auffangtrog nennt dieselben Maße für den landseitigen Lagerbock.",
+      "hinweis": "Befund Auffangtrog nennt dieselben Maße für den landseitigen Lagerbock. Stand 12.10.2026: Der wasserseitige Bock hat 14,5 cm starke Pfosten, aber einen 16,5 cm hohen Kopfbalken (AN-20261012-31/32); landseitig genannt sind 14 × 14 cm. Entweder sind die Böcke verschieden oder eine Angabe ist gerundet.",
       "herkunft": []
     },
     {
@@ -276,7 +276,7 @@
       "entscheidet": "P-THORSTEN",
       "status": "offen",
       "antwort": [],
-      "hinweis": null,
+      "hinweis": "Stand 12.10.2026: Landseitig liegt der Dorn unten in einem offenen senkrechten Schlitz des Lagerklotzes (AN-20261012-26); der Schlitz sitzt nicht mittig im Klotz (AN-20261012-29). Dorn ≈ 7,5 cm stark, steht ≈ 17,5 cm über (AN-20261012-21/22).",
       "herkunft": [
         "CLAIM-0341",
         "GAP-06"
