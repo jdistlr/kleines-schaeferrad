@@ -98,6 +98,16 @@ svg .wasserweg { fill: none; stroke: var(--wasser); stroke-width: 1.2; stroke-da
 .fragekarte img { width: 72px; height: 72px; object-fit: cover; border-radius: 4px; background: var(--linie); }
 .fragekarte b { display: block; font-weight: 500; line-height: 1.35; }
 .fragekarte span { display: block; margin-top: 4px; font-size: var(--m1); color: var(--leise); }
+.spur { margin-top: 10px; padding: 12px 14px; background: var(--wasser-hauch); border-radius: 8px; font-size: var(--m2); max-width: 62ch; }
+.spur b { display: block; font: 500 var(--m1)/1.2 var(--sans); letter-spacing: .04em; text-transform: uppercase; color: var(--wasser); margin-bottom: 4px; }
+.spurkarte { display: block; width: 100%; text-align: left; padding: 12px 14px; margin-top: 10px; background: var(--flaeche); border: 1px solid var(--linie); border-left: 3px solid var(--wasser); border-radius: 8px; cursor: pointer; }
+.spurkarte:hover { border-color: var(--wasser); }
+.spurkarte b { display: block; font-weight: 500; line-height: 1.35; }
+.spurkarte span { display: block; margin-top: 4px; font-size: var(--m2); color: var(--leise); }
+.abgleich { display: block; font: 400 var(--m1) var(--sans); margin-top: 3px; }
+.abgleich.gleich { color: var(--eiche); }
+.abgleich.anders { color: var(--roetel); }
+.fuss { margin-top: 36px; padding-top: 12px; border-top: 1px solid var(--linie); font-size: var(--m1); color: var(--leise); }
 .figurkachel { display: block; width: 100%; text-align: left; padding: 12px 14px; margin-top: 10px; background: var(--flaeche); border: 1px solid var(--linie); border-left: 3px solid var(--wasser); border-radius: 8px; cursor: pointer; }
 .figurkachel:hover { border-color: var(--wasser); }
 .figurkachel b { display: block; font: 500 var(--m3)/1.3 var(--serif); }
@@ -277,6 +287,27 @@ function wertText(a) {
   if (a.tol?.art === "vereinfachung") t += ", vereinfacht";
   return t;
 }
+// Neue Spuren: Fragen tragen im Hinweis Absätze „Stand TT.MM.JJJJ: …“; die werden hervorgehoben.
+const SPUR = /\s*Stand (\d{1,2}\.\d{1,2}\.\d{4}): /;
+const teileHinweis = h => { const i = (h || "").search(SPUR); if (i < 0) return { alt: h || "", spuren: [] }; const rest = h.slice(i); const spuren = rest.split(/(?=Stand \d{1,2}\.\d{1,2}\.\d{4}: )/).map(x => x.trim()).filter(Boolean).map(x => { const m = x.match(/^Stand (\S+): ([\s\S]*)$/); return m ? { datum: m[1], text: m[2] } : { datum: "", text: x }; }); return { alt: h.slice(0, i).trim(), spuren }; };
+const KERN_ID = /\b(?:AN-\d{8}-\d{2}|TH-\d{8}-\d{2}|CLAIM-\d{4})\b/g;
+const genannteAngaben = text => [...new Set((text || "").match(KERN_ID) || [])].map(id => angabenById[id]).filter(Boolean);
+// Mit IDs in Bereichen („AN-20261012-27/28“) auch die Folge-IDs auflösen
+const genannteAngabenVoll = text => { const ids = new Set(); (text || "").replace(/\b(AN-\d{8}-)(\d{2})((?:\/\d{2})+)/g, (m, p, a, r) => { ids.add(p + a); r.split("/").filter(Boolean).forEach(n => ids.add(p + n)); return m; }); return [...new Set([...genannteAngaben(text), ...[...ids].map(i => angabenById[i]).filter(Boolean)])]; };
+const zahlenVon = a => typeof a.wert === "number" ? [a.wert] : Array.isArray(a.wert) && a.wert.every(x => typeof x === "number") ? a.wert : null;
+// Skizzenmaße ohne Einheit sind je nach Blatt cm oder mm: beide Lesarten prüfen.
+const inMeter = (a, v) => a.einheit === "m" ? [v] : a.einheit === "cm" ? [v / 100] : a.einheit === "mm" ? [v / 1000] : !a.einheit && a.grund === "skizze" ? [v / 100, v / 1000] : null;
+function abgleich(a, alle) {
+  const za = zahlenVon(a); if (!za) return "";
+  const nah = (x, y) => x && Math.abs(y - x) / x < 0.06;
+  const gleichWerte = (b, zb) => za.length === zb.length && za.every((v, i) => { const xs = inMeter(a, v), ys = inMeter(b, zb[i]); return xs && ys && xs.some(x => ys.some(y => nah(x, y))); });
+  const andere = alle.filter(b => b !== a && b.eig.replace(/_skizze$/, "") === a.eig.replace(/_skizze$/, "") && b.grund !== a.grund && b.guelt !== "ueberholt");
+  const teile_ = andere.map(b => { const z = zahlenVon(b); if (!z || z.length !== za.length || !inMeter(b, z[0])) return null; return { b, gleich: gleichWerte(b, z) }; }).filter(Boolean);
+  if (!teile_.length) return "";
+  const g = teile_.filter(x => x.gleich), n = teile_.filter(x => !x.gleich);
+  return (g.length ? `<span class="abgleich gleich">${[...new Set(g.map(x => GRUND[x.b.grund]))].join(", ")} stützt das</span>` : "") +
+    (n.length ? `<span class="abgleich anders">${n.map(x => `${GRUND[x.b.grund]}: ${esc(wertText(x.b))}`).join("; ")}</span>` : "");
+}
 const istMass = a => (typeof a.wert === "number" || (Array.isArray(a.wert) && a.wert.length && a.wert.every(x => typeof x === "number"))) && a.einheit && a.einheit !== "exporteinheit";
 
 // ---------- Speicher für Antworten: Claude-Arbeitsfassung, später eigener Server ----------
@@ -429,6 +460,7 @@ function start() {
   const zuerst = reihe.slice(0, 3), rest = reihe.slice(3), alt = offen.filter(altLuecke);
   const gruppeVon = f => { const t = [...f.betrifft, ...f.blockiert].flatMap(bezugVon).find(x => teile[x]); const v = t ? [...vorfahren(t), t] : []; return v.includes("COMP-WHEEL") ? "Wasserrad" : v.includes("COMP-RADSTATT") ? "Radstadt" : v.includes("COMP-WATERWAY") ? "Wasserführung" : "Allgemein"; };
   const gruppiert = {}; rest.forEach(f => (gruppiert[gruppeVon(f)] ||= []).push(f));
+  const mitSpur = nach(offen.filter(f => teileHinweis(f.hinweis).spuren.length), gewicht);
   karte.innerHTML = `
     <p class="einstieg">Tippe ein Teil am Rad an, um zu sehen, was darüber bekannt ist. Oder beginne mit den Fragen, deren Antwort am meisten weiterhilft.</p>
     <div class="wissen">
@@ -436,12 +468,17 @@ function start() {
       <dl><div><dt>bestätigt</dt><dd>${best}</dd></div><div><dt>noch offen</dt><dd>${off}</dd></div><div><dt>Messfotos ausgewertet</dt><dd>${messAus}<span> / ${messfotos.length}</span></dd></div></dl>
       <p class="leise">Das Rad wurde am 10. Oktober 2026 abgebaut. Bis zum Aufbau im Frühjahr liegen alle Teile einzeln im Lager.</p>
     </div>
+    ${mitSpur.length ? `<h3>Neue Spuren<small>${mitSpur.length}</small></h3><p class="leise klein">Was die Auswertung der Abbau-Fotos zu offenen Fragen ergeben hat. Entschieden ist damit noch nichts.</p>${mitSpur.map(f => { const sp = teileHinweis(f.hinweis).spuren.at(-1); return `<button class="spurkarte" data-gehe="${f.id}"><b>${esc(kurz(f.frage, 120))}</b><span>${esc(kurz(sp.text, 210))}</span></button>`; }).join("")}` : ""}
     <h3>Als Nächstes klären</h3>
     ${zuerst.map(fragekarte).join("")}
+    ${FIGUREN.length ? `<h3>Figuren<small>${FIGUREN.length}</small></h3><p class="leise klein">Gezeichnet aus den Maßen im Wissenskern. Was offen ist, steht in der Bildunterschrift.</p>${figurKacheln(FIGUREN)}` : ""}
     <h3>Weitere offene Fragen<small>${rest.length}</small></h3>
     ${["Wasserrad", "Radstadt", "Wasserführung", "Allgemein"].filter(g => gruppiert[g]).map(g => `<details class="gruppe"><summary>${g}<small>${gruppiert[g].length}</small></summary><div class="innen">${gruppiert[g].map(fragezeile).join("")}</div></details>`).join("")}
-    ${alt.length ? `<details class="gruppe"><summary>Aus der Zeit vor dem Abbau<small>${alt.length}</small></summary><div class="innen"><p class="leise klein">Aufnahmewünsche von vor dem Abbau. Prüfen, ob die Fotos vom Abbau sie schon beantworten, sonst beim Aufbau im Frühjahr nachholen.</p>${alt.map(fragezeile).join("")}</div></details>` : ""}`;
+    ${alt.length ? `<details class="gruppe"><summary>Aus der Zeit vor dem Abbau<small>${alt.length}</small></summary><div class="innen"><p class="leise klein">Aufnahmewünsche von vor dem Abbau. Prüfen, ob die Fotos vom Abbau sie schon beantworten, sonst beim Aufbau im Frühjahr nachholen.</p>${alt.map(fragezeile).join("")}</div></details>` : ""}
+    ${fuss()}`;
 }
+const neuSeitAbbau = K.angaben.filter(a => /^AN-2026101[1-9]/.test(a.id)).length;
+const fuss = () => `<p class="fuss">Erzeugt aus dem Wissenskern${K.commit ? ", Stand " + esc(K.commit) : ""}. ${S.angaben} Angaben, davon ${neuSeitAbbau} seit dem Abbau neu; ${K.quellen.length} Quellen; ${offen.length} offene Fragen. Fachlich gültig ist erst, was Thorsten bestätigt.</p>`;
 
 const FIGUREN = K.figuren || [];
 function figurKacheln(liste) {
@@ -486,7 +523,7 @@ function antwortBereich(ziel, art) {
 function bauteil(id) {
   const b = teile[id], beg = begriffe[b.begriff];
   const ang = sammle(angabenJe, id), anzBest = ang.filter(a => a.guelt === "bestaetigt").length;
-  const masse = nach((direktJe[id] || []).filter(a => istMass(a) && !["holzliste", "fremdvorlage", "scan"].includes(a.grund) && a.guelt !== "ueberholt"), a => ({ messung: 5, muendlich: 4, skizze: 3, foto: 2, ableitung: 1 }[a.grund] || 0)).slice(0, 6);
+  const masse = nach((direktJe[id] || []).filter(a => istMass(a) && !["holzliste", "fremdvorlage", "scan"].includes(a.grund) && a.guelt !== "ueberholt"), a => ({ messung: 5, muendlich: 4, skizze: 3, foto: 2, ableitung: 1 }[a.grund] || 0)).filter((a, i, l) => l.findIndex(b => b.eig.replace(/_skizze$/, "") === a.eig.replace(/_skizze$/, "")) === i).slice(0, 6);
   const fr = nach(sammle(fragenJe, id).filter(f => !altLuecke(f)), gewicht);
   const fotos = fotosVon([id]);
   const unter = (kinder[id] || []).map(k => teile[k]);
@@ -501,7 +538,7 @@ function bauteil(id) {
     ${b.hinweis ? `<p class="hinweis">${esc(b.hinweis)}</p>` : ""}
     ${FIGUREN.some(x => x.bauteile.includes(id)) ? `<h3>Figur</h3>${figurKacheln(FIGUREN.filter(x => x.bauteile.includes(id)))}` : ""}
     <h3>Wichtigste Maße</h3>
-    ${masse.length ? `<dl class="masse">${masse.map(a => `<div><dt>${esc(eig(a.eig))}</dt><dd>${esc(wertText(a))}<small>${GRUND[a.grund]}, ${a.guelt === "bestaetigt" ? "bestätigt" : "noch offen"}</small></dd></div>`).join("")}</dl>` : `<p class="leer-text">Noch keine Maße für dieses Teil.</p>`}
+    ${masse.length ? `<dl class="masse">${masse.map(a => `<div><dt>${esc(eig(a.eig))}</dt><dd>${esc(wertText(a))}<small>${GRUND[a.grund]}, ${a.guelt === "bestaetigt" ? "bestätigt" : "noch offen"}</small>${abgleich(a, direktJe[id] || [])}</dd></div>`).join("")}</dl>` : `<p class="leer-text">Noch keine Maße für dieses Teil.</p>`}
     ${fr.length ? `<h3>Offen<small>${fr.length}</small></h3>${fr.slice(0, 3).map(fragekarte).join("")}${fr.length > 3 ? `<details class="gruppe" style="margin-top:10px"><summary>Weitere Fragen zu diesem Teil<small>${fr.length - 3}</small></summary><div class="innen">${fr.slice(3).map(fragezeile).join("")}</div></details>` : ""}` : ""}
     <h3>Fotos<small>${fotos.length}</small></h3>${fotostreifen(fotos)}
     ${unter.length ? `<h3>Besteht aus</h3><div class="chips">${unter.map(k => `<button data-gehe="${k.id}">${esc(k.name)}</button>`).join("")}</div>` : ""}
@@ -513,16 +550,18 @@ function frage(id) {
   const f = fragen[id];
   const frei = freischaltet(id).map(x => fragen[x]), warte = f.haengt_ab_von.map(x => fragen[x]);
   const bez = [...new Set([...f.betrifft, ...f.blockiert].flatMap(bezugVon))].filter(t => teile[t]);
-  const bekannt = f.betrifft.map(x => angabenById[x]).filter(Boolean);
+  const { alt: hinweisAlt, spuren } = teileHinweis(f.hinweis);
+  const bekannt = [...new Set([...f.betrifft.map(x => angabenById[x]).filter(Boolean), ...genannteAngabenVoll(f.hinweis)])];
   karte.innerHTML = `
     <button class="zurueck" data-gehe="">Zurück zum Überblick</button>
     <p class="pfad">${vorname(f.entscheidet) ? esc(vorname(f.entscheidet)) + " entscheidet" : "Offene Frage"}</p>
     <h2 class="frage-titel">${esc(f.frage)}</h2>
-    ${f.hinweis ? `<p class="hinweis">${esc(f.hinweis)}</p>` : ""}
+    ${spuren.map(sp => `<div class="spur"><b>Neue Spur${sp.datum ? " · " + esc(sp.datum) : ""}</b>${esc(sp.text)}</div>`).join("")}
+    ${hinweisAlt ? `<p class="hinweis">${esc(hinweisAlt)}</p>` : ""}
     ${frei.length || warte.length ? `<h3>Warum sie wichtig ist</h3>` : ""}
     ${frei.length ? `<p class="leise klein">Die Antwort macht diese Fragen beantwortbar:</p>${frei.map(fragezeile).join("")}` : ""}
     ${warte.length ? `<p class="leise klein" style="margin-top:14px">Leichter, wenn zuerst diese geklärt ist:</p>${warte.map(fragezeile).join("")}` : ""}
-    ${bekannt.length ? `<h3>Bisheriger Stand</h3><dl class="masse">${bekannt.map(a => `<div><dt>${esc(eig(a.eig))}</dt><dd>${esc(wertText(a))}<small>${GRUND[a.grund]}, ${GUELT[a.guelt]}</small></dd></div>`).join("")}</dl>` : ""}
+    ${bekannt.length ? `<h3>Bisheriger Stand</h3><dl class="masse">${bekannt.map(a => `<div><dt>${esc(eig(a.eig))}</dt><dd>${esc(wertText(a))}<small>${GRUND[a.grund]}, ${GUELT[a.guelt]} · ${esc(a.id)}</small></dd></div>`).join("")}</dl>` : ""}
     ${FIGUREN.some(x => x.fragen.includes(id)) ? `<h3>Figur</h3>${figurKacheln(FIGUREN.filter(x => x.fragen.includes(id)))}` : ""}
     ${bez.length ? `<h3>Betrifft</h3><div class="chips">${bez.map(t => `<button data-gehe="${t}">${esc(teile[t].name)}</button>`).join("")}</div>` : ""}
     <h3>Passende Fotos</h3>${fotostreifen(fotosZuFrage(f), 14)}

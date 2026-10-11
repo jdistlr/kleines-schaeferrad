@@ -14176,15 +14176,12 @@
     {
       "id": "AN-20261012-23",
       "ziel": "COMP-SHAFT",
-      "eigenschaft": "lage_aeussere_armoeffnung_vom_holzende",
-      "wert": [
-        0.6,
-        0.82
-      ],
+      "eigenschaft": "mitte_aeussere_armoeffnung_vom_holzende",
+      "wert": 0.71,
       "einheit": "m",
       "toleranz": {
         "art": "ungefaehr",
-        "text": "Anfang und Ende der Öffnung, perspektivisch"
+        "text": "ca., perspektivisch"
       },
       "grundlage": "foto",
       "quellen": [
@@ -14198,7 +14195,7 @@
       "bestaetigt": null,
       "ersetzt_durch": null,
       "begruendung": null,
-      "hinweis": "Mitte der Öffnung damit bei ≈ 0,71 m. Skizze: mittlere Öffnung 90 vom Ende, äußere um 25 versetzt (CLAIM-0003/0004) → äußere bei 65. Passt im Rahmen der Schrägsicht; die gemessene Länge 22 cm ist perspektivisch zu groß (Skizze 16, CLAIM-0005).",
+      "hinweis": "Öffnung reicht im Foto von ≈ 0,60 bis ≈ 0,82 m. Skizze: mittlere Öffnung 90 vom Ende, äußere um 25 versetzt (CLAIM-0003/0004) → äußere bei 65. Passt im Rahmen der Schrägsicht; die gemessene Länge 22 cm ist perspektivisch zu groß (Skizze 16, CLAIM-0005).",
       "herkunft": {
         "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
         "id": null
