@@ -9,11 +9,11 @@ Erklärende isometrische Figuren, gebaut mit dem Anatomie-Skill (`.claude/skills
 | Figur | Inhalt | Fragen |
 |---|---|---|
 | `armtypen` | Mittelarm mit Hals und zwei gekröpfte Außenarme, wie beim Abbau am 10.10.2026 vermessen; ein Zollstock zeigt die Maße | F-005, F-034 |
+| `wellenlager` | Wellenende mit Dorn im offenen Schlitz des landseitigen Lagerklotzes; Herleitung der Achshöhe | F-003, F-015, F-001 |
 
 Bauen und prüfen:
 
 ```
-node figuren/armtypen/build.mjs --audit     # Geometrie und Zeichenreihenfolge
-node figuren/armtypen/build.mjs --light     # helles Thema
+npm run figuren     # alle Figuren: Audit und helles Thema
 node .claude/skills/anatomy/scripts/lines.mjs figuren/armtypen/armtypen-hell.html   # jede Linie endet auf etwas
 ```
