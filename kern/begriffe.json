@@ -1920,6 +1920,96 @@
       "id": "zweite_laenge_skizze",
       "name": "Zweite Länge (Skizze)",
       "kategorie": "eigenschaft"
+    },
+    {
+      "id": "laenge_zwischen_schultern_skizze",
+      "name": "Länge zwischen den Schultern (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "zapfenlaenge_skizze",
+      "name": "Zapfenlänge (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "kroepfungszone_skizze",
+      "name": "Länge der Kröpfungszone (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "kroepfung_versatz_skizze",
+      "name": "Versatz der Kröpfung (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "armbreite_skizze",
+      "name": "Armbreite (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "zapfenlaenge",
+      "name": "Zapfenlänge",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "abstand_bohrung_im_zapfen",
+      "name": "Abstand der Zapfenbohrung von der Schulter",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "armbreite",
+      "name": "Armbreite",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "armdicke",
+      "name": "Armdicke",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "kerbtiefe",
+      "name": "Kerbtiefe",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "kerblaenge",
+      "name": "Kerblänge",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "abstand_schulter_bis_kerbe",
+      "name": "Abstand von der äußeren Schulter bis zur Kerbe",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "kerbform_je_armtyp",
+      "name": "Kerbform je Armtyp",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "halsbreite_mittelarm",
+      "name": "Halsbreite des Mittelarms",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "schraeges_feld_auf_schmalseite",
+      "name": "Schräges Feld auf der Schmalseite",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "durchmesser_querbohrung",
+      "name": "Durchmesser der Querbohrung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "dunkle_zone_um_kerben",
+      "name": "Dunkle Zone um die Kerben",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "kerbe_in_armmitte",
+      "name": "Kerbe liegt in der Armmitte",
+      "kategorie": "eigenschaft"
     }
   ]
 }

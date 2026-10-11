@@ -13484,6 +13484,603 @@
         "datei": "Nachtrag 11.10.2026",
         "id": null
       }
+    },
+    {
+      "id": "AN-20261012-01",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "gesamtlaenge_skizze",
+      "wert": 455,
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "skizze",
+      "quellen": [
+        {
+          "quelle": "V2-IMG_6798",
+          "stelle": "rechte Längsmaßlinie, Zapfenspitze bis Zapfenspitze"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Einheit nicht angeschrieben, vermutlich cm.",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-02",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "laenge_zwischen_schultern_skizze",
+      "wert": 395,
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "skizze",
+      "quellen": [
+        {
+          "quelle": "V2-IMG_6798",
+          "stelle": "linke Längsmaßlinie"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Einheit nicht angeschrieben, vermutlich cm. Hälfte: 197,5.",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-03",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "zapfenlaenge_skizze",
+      "wert": 30,
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "skizze",
+      "quellen": [
+        {
+          "quelle": "V2-IMG_6798",
+          "stelle": "unteres Endmaß"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Gilt laut Zeichnung für beide Enden (455 − 395 = 60).",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-04",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "kroepfungszone_skizze",
+      "wert": 50,
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "skizze",
+      "quellen": [
+        {
+          "quelle": "V2-IMG_6798",
+          "stelle": "Maß in der Armmitte"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Die Zone liegt mittig zwischen den Schultern; in ihr ist der Arm versetzt gezeichnet.",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-05",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "kroepfung_versatz_skizze",
+      "wert": 4,
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "skizze",
+      "quellen": [
+        {
+          "quelle": "V2-IMG_6798",
+          "stelle": "kleines Quermaß in der Armmitte"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Ziffer klein und schwer lesbar. Passt zu „gekröpfte Außenarme“ (AN-20261011-12). Auf IMG20261010125020 sind die beiden Armhälften an der Kerbe sichtbar gegeneinander versetzt; nicht gemessen.",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-06",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "armbreite_skizze",
+      "wert": 14,
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "skizze",
+      "quellen": [
+        {
+          "quelle": "V2-IMG_6798",
+          "stelle": "Quermaß am unteren Ende"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": null,
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-07",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "zapfenlaenge",
+      "wert": 0.34,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.33,
+        "bis": 0.35
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-ARME-IMG20261010124442",
+          "stelle": "Zollstock ab Schulter, Zapfenspitze bei 34–35 cm"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010124455",
+          "stelle": "Zollstock ab Zapfenspitze, Schulter bei etwa 33 cm"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Gemessen am eingebauten Arm. Skizze: 30 (siehe zapfenlaenge_skizze).",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-08",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "abstand_bohrung_im_zapfen",
+      "wert": 0.155,
+      "einheit": "m",
+      "toleranz": {
+        "art": "ungefaehr",
+        "text": "ca., Bohrungsmitte"
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-ARME-IMG20261010124442",
+          "stelle": "Bohrungsmitte bei 15–16 cm"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": null,
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-09",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "armbreite",
+      "wert": 0.14,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.13,
+        "bis": 0.145
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-ARME-IMG20261010124459",
+          "stelle": "Zollstock quer über die Breitseite"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125010",
+          "stelle": "Breitseite neben dem Zollstock"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125016",
+          "stelle": "Breitseite neben dem Zollstock"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010130112",
+          "stelle": "Zollstock quer, Oberkante bei etwa 14 cm"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Stimmt mit TH-20261009-27 (14 cm) überein.",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-10",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "armdicke",
+      "wert": 0.07,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.064,
+        "bis": 0.08
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125949",
+          "stelle": "Schmalseite neben dem Zollstock, etwa 6,4 cm"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010130123",
+          "stelle": "Zollstock quer über die Schmalseite, etwa 7,5–8 cm"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "TH-20261009-27 nennt 6,5 cm. 130123 ist schräg aufgenommen, der Wert dort eher zu groß.",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-11",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "kerbtiefe",
+      "wert": 0.05,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.045,
+        "bis": 0.055
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125010",
+          "stelle": "Zollstock ab Kerbgrund zur Außenkante, etwa 5–5,5 cm"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125016",
+          "stelle": "Zollstock ab Kerbgrund zur Außenkante, etwa 4,5 cm"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Entspricht etwa einem Drittel der Armbreite.",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-12",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "kerblaenge",
+      "wert": 0.09,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.08,
+        "bis": 0.11
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125010",
+          "stelle": "Kerbe längs, etwa 11 cm"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125016",
+          "stelle": "Kerbe längs, etwa 8 cm"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125020",
+          "stelle": "Zollstock ab innerer Kerbschulter, Gegenschulter bei etwa 9 cm"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010130112",
+          "stelle": "Hals des Mittelarms, etwa 7–11 cm"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Zum Vergleich: Armdicke 6,5 cm (TH-20261009-27), Breite der Armöffnung in der Welle 9 (CLAIM-0006).",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-13",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "abstand_schulter_bis_kerbe",
+      "wert": 1.95,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 1.9,
+        "bis": 2.0
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125334",
+          "stelle": "2-m-Zollstock ab äußerer Schulter, Kerbe etwa 7 cm vor dem Ende"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125320",
+          "stelle": "Ende des 2-m-Zollstocks an der Kerbe; Schulter außerhalb des Bildes"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Segmentfugen des Zollstocks gezählt (10 × 20 cm). Starke Perspektive; Wert nur auf etwa ±5 cm genau.",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-14",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "kerbform_je_armtyp",
+      "wert": "Je Dreiergruppe ist ein Arm beidseitig ausgeklinkt (schmaler Hals), die beiden anderen nur einseitig.",
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125215",
+          "stelle": "zwei Arme nebeneinander"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125246",
+          "stelle": "drei Arme nebeneinander"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125251",
+          "stelle": "drei Arme nebeneinander"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010130138",
+          "stelle": "unterer Balken mit Hals, oberer mit einseitiger Kerbe"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Nach dem Bildhinweis in ASTRA-HANDOFF.md ist der Arm mit Hals der Mittelarm, die einseitig ausgeklinkten sind die Außenarme (AN-20261011-12). Von Thorsten bestätigen lassen.",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-15",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "halsbreite_mittelarm",
+      "wert": 0.055,
+      "einheit": "m",
+      "toleranz": {
+        "art": "ungefaehr",
+        "text": "ca."
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-ARME-IMG20261010130112",
+          "stelle": "Zollstock quer über die Breite; Hals zwischen etwa 5 und 10 cm"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Beide Kerben zusammen etwa 8,5 cm tief.",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-16",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "schraeges_feld_auf_schmalseite",
+      "wert": "Auf der Schmalseite eines Außenarms ist an der Kerbe ein schräg begrenztes Feld (Parallelogramm) eingeschnitten, etwa 9–10 cm lang, mit einer Querbohrung.",
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125824",
+          "stelle": "linker Arm, Schmalseite"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125949",
+          "stelle": "Schmalseite mit Zollstock"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010130123",
+          "stelle": "Schmalseite mit Zollstock"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010130129",
+          "stelle": "Schmalseite mit Zollstock, Feld etwa 0–10 cm"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010130138",
+          "stelle": "oberer Balken"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Wohl die „diagonale Kerbe des gedrehten Außenarms“ aus ASTRA-HANDOFF.md. Zweck der Bohrung offen.",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-17",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "durchmesser_querbohrung",
+      "wert": 0.017,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.014,
+        "bis": 0.02
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125949",
+          "stelle": "Bohrung im schrägen Feld"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010130129",
+          "stelle": "Bohrung im schrägen Feld"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": null,
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-18",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "dunkle_zone_um_kerben",
+      "wert": "Der Bereich um die Kerben ist dunkel und frei von Bewuchs, der übrige Arm ist bemoost.",
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125246",
+          "stelle": "drei Arme"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125251",
+          "stelle": "drei Arme"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125320",
+          "stelle": "drei Arme"
+        },
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125334",
+          "stelle": "drei Arme"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Deutung offen, z. B. dass dieser Teil in der Welle steckt.",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-19",
+      "ziel": "COMP-ARMS",
+      "eigenschaft": "kerbe_in_armmitte",
+      "wert": true,
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "ableitung",
+      "quellen": [
+        {
+          "quelle": "PHOTO-ARME-IMG20261010125334",
+          "stelle": "Abstand Schulter bis Kerbe"
+        },
+        {
+          "quelle": "V2-IMG_6798",
+          "stelle": "Länge zwischen den Schultern"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Halbe Länge zwischen den Schultern 197,5 (Skizze), Kerbe gemessen bei 190–200 cm. Die Kerbe sitzt damit dort, wo der Arm durch die Welle geht (CLAIM-0254). Das passt zur Aussage, dass die Arme in der Welle ineinandergreifen (F-005).",
+      "herkunft": {
+        "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
+        "id": null
+      }
     }
   ]
 }
