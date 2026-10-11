@@ -6,8 +6,28 @@
       "titel": "Drei Armtypen",
       "beschreibung": "Mittelarm mit Hals und die zwei gekröpften Außenarme, wie sie beim Abbau vermessen wurden. Ein Zollstock zeigt nacheinander die Maße mit ihren Kern-IDs.",
       "build": "figuren/armtypen/build.mjs",
-      "fragen": ["F-005", "F-034"],
-      "bauteile": ["COMP-ARMS"]
+      "fragen": [
+        "F-005",
+        "F-034"
+      ],
+      "bauteile": [
+        "COMP-ARMS"
+      ]
+    },
+    {
+      "id": "wellenlager",
+      "titel": "Wellenlager Landseite",
+      "beschreibung": "Wellenende mit Dorn im offenen Schlitz des Lagerklotzes. Zeigt, woraus die Achshöhe über der Radstadt abgeleitet ist.",
+      "build": "figuren/wellenlager/build.mjs",
+      "fragen": [
+        "F-003",
+        "F-015",
+        "F-001"
+      ],
+      "bauteile": [
+        "COMP-BEARINGS",
+        "COMP-SHAFT"
+      ]
     }
   ]
 }
