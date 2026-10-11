@@ -28,9 +28,11 @@ Der reale Bestand hat unterschiedliche Brettstärken und Balkenbreiten. Der rech
 
 ## Bilder und weiterer Abgleich
 
-Der [Komponentenordner](README.md) enthält zum dokumentierten Prüfstand 16 Fotos. Die aktuelle Maßvorgabe stammt aus der Nutzererklärung; sie wird hier nicht als Fotoablesung ausgegeben.
+Der neue Bildsatz liegt unter [`evidence/raw/Radstatt/`](../Radstatt/README.md): **18 Fotos**, im Fork mit dem Commit `d3dd3b72e95c58a235e4af6207c22e268d332a5a` auf `main` angekommen. Die bestehende Ablage [`evidence/raw/Radstadt/`](README.md) mit 16 älteren Fotos bleibt erhalten; beide Schreibweisen beziehen sich in dieser Dokumentation auf die Radstadt.
 
-Der Nutzer kündigt einen zusätzlich angelegten Bilderordner zur Radstadt an. Dessen genaue Ablage beziehungsweise ein weiterer Bildsatz war zum Prüfstand auf `main` noch nicht identifiziert. Nach Eingang die Bilder gezielt auf obere Balken, Verbindungen und die Radstadt ohne eingebautes Wasserrad prüfen. Weitere in Maßstabbildern enthaltene Maße zuerst auswerten, bevor dieselben Informationen erneut angefragt werden.
+Die Übersichtsaufnahmen [IMG20261010133541.jpg](../Radstatt/IMG20261010133541.jpg), [IMG20261010133632.jpg](../Radstatt/IMG20261010133632.jpg) und [IMG20261010135620.jpg](../Radstatt/IMG20261010135620.jpg) wurden visuell geöffnet. Sie zeigen das verbleibende Tragwerk ohne eingebautes Wasserrad, obere liegende Hölzer sowie Stützen und untere Verbindungshölzer. Natürliche Konturen und ungleichmäßige Holzoberflächen sind sichtbar. Diese Sichtprüfung bestätigt keine metrischen Querschnitte.
+
+Die 40 × 20 cm stammen ausschließlich aus der Nutzererklärung und werden hier nicht als Fotoablesung ausgegeben. Der übrige Bildsatz ist damit noch nicht vollständig metrisch ausgewertet. Für den späteren Abgleich alle relevanten Bilder auf Balkenlängen, Verbindungen, Auflager und mögliche Maßstäbe prüfen; Bildbeobachtungen von Maßvorgaben getrennt halten.
 
 Für eine später ausdrücklich beauftragte Rekonstruktion:
 - obere Balken mit 400 mm Breite und 200 mm Höhe als Nutzervereinfachung ansetzen;

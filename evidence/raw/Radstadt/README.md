@@ -2,7 +2,7 @@
 
 [Alle Komponenten](../README.md) · [Quellenverzeichnis](../../component-index.json)
 
-**Neue Fachangabe vom 11.10.2026:** Die oberen Balken der Radstadt werden zur Vereinfachung mit **40 cm Breite × 20 cm Höhe** angesetzt. Brettstärken und Balkenbreiten des Naturmaterials variieren tatsächlich. Dies ist eine Nutzervereinfachung für die spätere Konstruktion. Details und Abgrenzung zum Bock: [Radstadt-Befund](BEFUND.md).
+**Neue Fachangabe vom 11.10.2026:** Die oberen Balken der Radstadt werden zur Vereinfachung mit **40 cm Breite × 20 cm Höhe** angesetzt. Brettstärken und Balkenbreiten des Naturmaterials variieren tatsächlich. Dies ist eine Nutzervereinfachung für die spätere Konstruktion. Details und Abgrenzung zum Bock: [Radstadt-Befund](BEFUND.md). Der neue Bildsatz mit 18 Fotos liegt im zusätzlich angelegten Ordner [Radstatt](../Radstatt/README.md).
 
 Originalfotos und fotografierte Zeichnungen. Die Ablage ändert weder Messstatus noch Modellgeometrie. Unter Arbeitsunterlagen sind Vorlagen mit ungesicherter Bauteilzuordnung gesammelt.
 
