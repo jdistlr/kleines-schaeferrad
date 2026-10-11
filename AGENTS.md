@@ -53,6 +53,15 @@ Nicht mehr: Nachträge an `state/NEXT-ASTRA-WORK-SESSION.md` oder andere Überga
 - Keine weiteren Seiten oder Vorschauen auf Pages legen.
 - Das Repository ist öffentlich: keine privaten Daten, Adressen oder Telefonnummern in Kern, Befunde oder Cockpit.
 
+## Figuren mit dem Anatomie-Skill
+
+Der Skill liegt unter `.claude/skills/anatomy/` (MIT, Herkunft in `HERKUNFT.md`). Er zeichnet erklärende isometrische Figuren aus vielen massiven Einzelteilen. Für dieses Projekt gilt zusätzlich:
+
+- **Wahrheit aus dem Kern.** Jedes Maß, jede Anzahl und jede Bewegung einer Figur stammt aus `kern/` und nennt die Kern-ID. Was dort `offen` ist, wird in der Figur als offen erkennbar (Legende unter der Figur), nicht als Tatsache gezeichnet. Fehlt ein Wert, gilt er als Annahme und wird im Kern als `annahme` vorgeschlagen.
+- **Das Rad ist das Objekt.** Anders als im allgemeinen Skill wird hier kein Ersatzgerät erfunden: Die Figur zeigt das echte Bauteil und seinen echten Mechanismus (z. B. Krümmlingstoß mit Schetternbrett und Stoßkeil).
+- **Größe ansagen.** Das ganze Rad ist ein „Epic“ und wird nur auf ausdrücklichen Auftrag begonnen; einzelne Baugruppen sind „Hero“-Figuren.
+- Figuren liegen unter `figuren/<name>/`, mit Build-Skript; gebaute Seiten werden nicht versioniert. Veröffentlichung nur über `npm run cockpit:pages`.
+
 ## Keine GitHub Actions
 
 Ausdrückliche Vorgabe vom 11.10.2026: Für dieses Projekt sind keine GitHub Actions gewünscht; Actions sind gesperrt.
