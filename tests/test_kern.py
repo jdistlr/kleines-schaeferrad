@@ -123,6 +123,20 @@ class KernTest(unittest.TestCase):
         self.aendere("angaben", lambda d: self.angabe(d, "CLAIM-0001").update(eigenschaft="drawn_overall_length"))
         self.erwarte_fehler("fehlt im Glossar")
 
+    def test_doppelte_datei_wird_abgelehnt(self):
+        def f(d):
+            foto = next(q for q in d["quellen"] if q["art"] == "foto" and q.get("pfad"))
+            kopie = dict(foto, id="DATEI-TEST-KOPIE", kopien=[], alt_ids=[])
+            d["quellen"].append(kopie)
+        self.aendere("quellen", f)
+        self.erwarte_fehler("Kopien zusammenführen")
+
+    def test_unbekannte_bildart(self):
+        def f(d):
+            next(q for q in d["quellen"] if q["art"] == "foto")["bildart"] = "schnappschuss"
+        self.aendere("quellen", f)
+        self.erwarte_fehler("Bildart schnappschuss unbekannt")
+
     def test_angabe_ohne_quelle(self):
         self.aendere("angaben", lambda d: self.angabe(d, "CLAIM-0001").update(quellen=[]))
         self.erwarte_fehler("keine Quelle")
