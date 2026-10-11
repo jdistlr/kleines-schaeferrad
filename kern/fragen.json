@@ -718,6 +718,23 @@
       "herkunft": [
         "GAP-09"
       ]
+    },
+    {
+      "id": "F-034",
+      "frage": "Wie kommen beim Einbau der zweite und der dritte Arm an der Kerbe des schon eingeschobenen Arms vorbei?",
+      "betrifft": [
+        "COMP-ARMS",
+        "COMP-SHAFT"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [
+        "F-005"
+      ],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": "Die Kerben sitzen in der Armmitte (AN-20261012-19). Ein starrer Arm, der durch die Welle geschoben wird, führt aber auf dem Weg seine volle Breite von 14 cm durch die Wellenmitte, wo schon der erste Arm liegt. Möglich wären eine bestimmte Reihenfolge, versetzte Armöffnungen (CLAIM-0004) oder die Kröpfung (AN-20261012-05). Rein geometrische Überlegung beim Ablesen der Fotos, keine Aussage.",
+      "herkunft": []
     }
   ]
 }
