@@ -1,7 +1,7 @@
 {
   "schema": "ks-evidence-component-index/v1",
   "base_commit": "feb8cd78c70f5966093cf457b27577a677be8134",
-  "note": "Component filing only. Existing original sources unchanged; eleven new shaft sources intentionally resized and original bytes removed at user request. See evidence/derived/welle-compression.json. Five further resized Wellenkeil reference photos added by user in commit 8f56195; component identification is user-confirmed, exact dimensions and pose remain open. Twenty-one existing dismantled-arm JPEGs copied unchanged from fork snapshot 52578f5 and linked to the 2026-10-11 Astra handoff; user-confirmed joint principles are documented separately, exact recess geometry remains unresolved.",
+  "note": "Component filing only. Existing original sources unchanged; eleven new shaft sources intentionally resized and original bytes removed at user request. See evidence/derived/welle-compression.json. Five further resized Wellenkeil reference photos added by user in commit 8f56195; component identification is user-confirmed, exact dimensions and pose remain open. Twenty-one existing dismantled-arm JPEGs copied unchanged from fork snapshot 52578f5 and linked to the 2026-10-11 Astra handoff; user-confirmed joint principles are documented separately, exact recess geometry remains unresolved. Twenty existing Rinne/land-side Lagerbock JPEG paths (nineteen unique blobs) copied unchanged from fork main snapshot 296287e24da33555baad14bc4dd5dacf59d503c2. Trough shape, support chain, two overlapping channel parts and local-ground relationship are documented in component BEFUND.md files. No model or render update.",
   "assets": [
     {
       "filename": "1000046420.jpg",
@@ -2465,6 +2465,359 @@
         "Kruemmlinge"
       ],
       "source_commit": "52578f5c3d774c21783eb43798d45ecb067dd842"
+    },
+    {
+      "filename": "IMG20261010121353.jpg",
+      "component": "Lagerboch Landseite",
+      "path": "evidence/raw/Lagerboch Landseite/IMG20261010121353.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "6e136c823bbf649e44c4969f5c5c2bd336e86392",
+      "bytes": 440839,
+      "source_id": "PHOTO-LAGERBOCK-LAND-IMG20261010121353",
+      "title": "Rinnenanschluss über Bockquerbalken; Maßstab",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Radstadt",
+        "Auffangtrog",
+        "Rinne",
+        "Welle"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261010121407.jpg",
+      "component": "Lagerboch Landseite",
+      "path": "evidence/raw/Lagerboch Landseite/IMG20261010121407.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "d47cc13855d941892f03175940bf0b5475fd967a",
+      "bytes": 467661,
+      "source_id": "PHOTO-LAGERBOCK-LAND-IMG20261010121407",
+      "title": "Oberer Querbalken und Trog/Rinnenanschluss; Maßstab",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Radstadt",
+        "Auffangtrog",
+        "Rinne",
+        "Welle"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261010121434.jpg",
+      "component": "Lagerboch Landseite",
+      "path": "evidence/raw/Lagerboch Landseite/IMG20261010121434.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "99f1ba55148b0857cd4ee3491fd1f187e7521f7d",
+      "bytes": 537954,
+      "source_id": "PHOTO-LAGERBOCK-LAND-IMG20261010121434",
+      "title": "Vertikaler Gelände-, Radstadt-, Bock- und Rinnenbezug",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Radstadt",
+        "Auffangtrog",
+        "Rinne",
+        "Welle"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261010121501.jpg",
+      "component": "Lagerboch Landseite",
+      "path": "evidence/raw/Lagerboch Landseite/IMG20261010121501.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "b54e2118733c0c43566b14d26b7b96f5f46ac09c",
+      "bytes": 592358,
+      "source_id": "PHOTO-LAGERBOCK-LAND-IMG20261010121501",
+      "title": "Trogstirnseite neben Kranz/Kumpf; Maßstab",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Radstadt",
+        "Auffangtrog",
+        "Rinne",
+        "Welle"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261010121518.jpg",
+      "component": "Lagerboch Landseite",
+      "path": "evidence/raw/Lagerboch Landseite/IMG20261010121518.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "f0e70a9aaeacd0bec86a40e4eeebb0ca3d2f42f9",
+      "bytes": 649826,
+      "source_id": "PHOTO-LAGERBOCK-LAND-IMG20261010121518",
+      "title": "Diagonal liegende Rinne über Bockquerbalken; Draufsicht",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Radstadt",
+        "Auffangtrog",
+        "Rinne",
+        "Welle"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261010121555.jpg",
+      "component": "Lagerboch Landseite",
+      "path": "evidence/raw/Lagerboch Landseite/IMG20261010121555.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "2bf6b84e44184a57811e7184ca2428df58856124",
+      "bytes": 553138,
+      "source_id": "PHOTO-LAGERBOCK-LAND-IMG20261010121555",
+      "title": "Lagerbock ohne Trog; oberer Querbalken und Welle",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Radstadt",
+        "Auffangtrog",
+        "Rinne",
+        "Welle"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261010121620.jpg",
+      "component": "Lagerboch Landseite",
+      "path": "evidence/raw/Lagerboch Landseite/IMG20261010121620.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "bd8ccd95aca634c48535a3fdaf497805b3d130cd",
+      "bytes": 601640,
+      "source_id": "PHOTO-LAGERBOCK-LAND-IMG20261010121620",
+      "title": "Vertikaler Maßstab ab Radstadt im Lagerbereich",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Radstadt",
+        "Auffangtrog",
+        "Rinne",
+        "Welle"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261010121733.jpg",
+      "component": "Lagerboch Landseite",
+      "path": "evidence/raw/Lagerboch Landseite/IMG20261010121733.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "d17ad874f5dd8314f742109f9c28125bf14d42c5",
+      "bytes": 569119,
+      "source_id": "PHOTO-LAGERBOCK-LAND-IMG20261010121733",
+      "title": "Wellenlager im Lagerklotz; vertikaler Maßstab",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Radstadt",
+        "Auffangtrog",
+        "Rinne",
+        "Welle"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261010121738.jpg",
+      "component": "Lagerboch Landseite",
+      "path": "evidence/raw/Lagerboch Landseite/IMG20261010121738.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "a92479bdda7f13c6300950e32a39a31b73e92f35",
+      "bytes": 588512,
+      "source_id": "PHOTO-LAGERBOCK-LAND-IMG20261010121738",
+      "title": "Wellenlager im Lagerklotz; horizontaler Maßstab",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Radstadt",
+        "Auffangtrog",
+        "Rinne",
+        "Welle"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261010121749.jpg",
+      "component": "Lagerboch Landseite",
+      "path": "evidence/raw/Lagerboch Landseite/IMG20261010121749.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "fd94ab3ad3f80eb7cedb2273733da66540ff292b",
+      "bytes": 531414,
+      "source_id": "PHOTO-LAGERBOCK-LAND-IMG20261010121749",
+      "title": "Lagerklotz und Wellenende von oben; Maßstab",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Radstadt",
+        "Auffangtrog",
+        "Rinne",
+        "Welle"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261010121802.jpg",
+      "component": "Lagerboch Landseite",
+      "path": "evidence/raw/Lagerboch Landseite/IMG20261010121802.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "1046f05607d30953e68d19157a1cfa1c03db12ef",
+      "bytes": 363757,
+      "source_id": "PHOTO-LAGERBOCK-LAND-IMG20261010121802",
+      "title": "Bockverbindung/Aussparung mit Keil; Querbezug",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Radstadt",
+        "Auffangtrog",
+        "Rinne",
+        "Welle"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261010121808.jpg",
+      "component": "Lagerboch Landseite",
+      "path": "evidence/raw/Lagerboch Landseite/IMG20261010121808.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "3dc4e70514731030cbe3718160d2628f30b11b58",
+      "bytes": 410439,
+      "source_id": "PHOTO-LAGERBOCK-LAND-IMG20261010121808",
+      "title": "Bockverbindung/Aussparung mit Keil; Längsbezug",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Radstadt",
+        "Auffangtrog",
+        "Rinne",
+        "Welle"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261003110312.jpg",
+      "component": "Rinne",
+      "path": "evidence/raw/Rinne/IMG20261003110312.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "45b66e69258cb2cd43a98808edce50e57d297548",
+      "bytes": 669064,
+      "source_id": "PHOTO-RINNE-IMG20261003110312",
+      "title": "Gesamtverlauf Wasserrad → A-Bock → Wasserauslass",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Auffangtrog",
+        "A-Bock",
+        "Radstadt"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261003110323.jpg",
+      "component": "Rinne",
+      "path": "evidence/raw/Rinne/IMG20261003110323.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "88ff5647c7119935f72c018c165ccad08418aa81",
+      "bytes": 631685,
+      "source_id": "PHOTO-RINNE-IMG20261003110323",
+      "title": "Trog/Rinne und landseitiger Lagerbock im Radkontext",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Auffangtrog",
+        "A-Bock",
+        "Radstadt"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261003111006.jpg",
+      "component": "Rinne",
+      "path": "evidence/raw/Rinne/IMG20261003111006.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "9db269265604d7b7420cba2b2980009169c1875a",
+      "bytes": 723982,
+      "source_id": "PHOTO-RINNE-IMG20261003111006",
+      "title": "Unterer Rinnenteil und Wasserauslass",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Auffangtrog",
+        "A-Bock",
+        "Radstadt"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261003111009.jpg",
+      "component": "Rinne",
+      "path": "evidence/raw/Rinne/IMG20261003111009.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "4bdc062c84f6b5892bfc3c4fe5c81b4815927377",
+      "bytes": 712683,
+      "source_id": "PHOTO-RINNE-IMG20261003111009",
+      "title": "Gesamter landseitiger Rinnenverlauf zum Auslass",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Auffangtrog",
+        "A-Bock",
+        "Radstadt"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261003111015.jpg",
+      "component": "Rinne",
+      "path": "evidence/raw/Rinne/IMG20261003111015.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "04377a81badd7e377e73fb38ab5ec9619a726f75",
+      "bytes": 678628,
+      "source_id": "PHOTO-RINNE-IMG20261003111015",
+      "title": "Rinnenübergang mit Verstärkung und A-Bock auf Gelände",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Auffangtrog",
+        "A-Bock",
+        "Radstadt"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261003111022 1.jpg",
+      "component": "Rinne",
+      "path": "evidence/raw/Rinne/IMG20261003111022 1.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "8431f96e6e1feff99355a67c6729bc47df6a6d41",
+      "bytes": 443502,
+      "source_id": "PHOTO-RINNE-IMG20261003111022-1",
+      "title": "Bytegleiches Duplikat von IMG20261003111022.jpg",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Auffangtrog",
+        "A-Bock",
+        "Radstadt"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2",
+      "duplicate_of": "evidence/raw/Rinne/IMG20261003111022.jpg"
+    },
+    {
+      "filename": "IMG20261003111022.jpg",
+      "component": "Rinne",
+      "path": "evidence/raw/Rinne/IMG20261003111022.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "8431f96e6e1feff99355a67c6729bc47df6a6d41",
+      "bytes": 443502,
+      "source_id": "PHOTO-RINNE-IMG20261003111022",
+      "title": "Anschluss Schöpftrog/Rinne/Lagerbock",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Auffangtrog",
+        "A-Bock",
+        "Radstadt"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
+    },
+    {
+      "filename": "IMG20261003111029.jpg",
+      "component": "Rinne",
+      "path": "evidence/raw/Rinne/IMG20261003111029.jpg",
+      "previous_path": null,
+      "git_blob_sha1": "01ef5d7bd41acdeddfc6a32c10e7a2449ff7a5b0",
+      "bytes": 593726,
+      "source_id": "PHOTO-RINNE-IMG20261003111029",
+      "title": "Weitere Ansicht Anschluss Schöpftrog/Rinne/Lagerbock",
+      "classification": "reference-photo; visually-reviewed-20261011; metric-readouts-require-targeted-review; not geometry authority",
+      "related_components": [
+        "Auffangtrog",
+        "A-Bock",
+        "Radstadt"
+      ],
+      "source_commit": "296287e24da33555baad14bc4dd5dacf59d503c2"
     }
   ]
 }

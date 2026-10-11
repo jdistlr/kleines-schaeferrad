@@ -2,6 +2,8 @@
 
 [Alle Komponenten](../README.md) · [Quellenverzeichnis](../../component-index.json)
 
+[Befund und Einbaubezug vom 11.10.2026](BEFUND.md) · [Zusammenhängender Trog-/Rinnenabgleich](../Auffangtrog/BEFUND.md)
+
 Originalfotos und fotografierte Zeichnungen. Die Ablage ändert weder Messstatus noch Modellgeometrie. Unter Arbeitsunterlagen sind Vorlagen mit ungesicherter Bauteilzuordnung gesammelt.
 
 | Datei | Quellennummer | Beschreibung / weiterer Bezug |
@@ -10,6 +12,23 @@ Originalfotos und fotografierte Zeichnungen. Die Ablage ändert weder Messstatus
 | [image-1791541961389.jpg](image-1791541961389.jpg) | PHOTO-TH-20261009-image-1791541961389 | Foto / Originalquelle |
 | [image-1791541967728.jpg](image-1791541967728.jpg) | PHOTO-TH-20261009-image-1791541967728 | Foto / Originalquelle |
 | [image-1791541979278.jpg](image-1791541979278.jpg) | PHOTO-TH-20261009-image-1791541979278 | Foto / Originalquelle |
+
+## Neuere Rinnenaufnahmen
+
+Unverändert aus dem Fork übernommen (Snapshot `296287e24da33555baad14bc4dd5dacf59d503c2`). Sieben unterschiedliche Bilder unter acht vorhandenen Dateinamen; IMG20261003111022 1.jpg ist bytegleich zu IMG20261003111022.jpg.
+
+| Datei | Inventarkennung | Sichtbarer Bezug |
+|---|---|---|
+| [IMG20261003110312.jpg](IMG20261003110312.jpg) | PHOTO-RINNE-IMG20261003110312 | Gesamtverlauf Wasserrad → A-Bock → Wasserauslass |
+| [IMG20261003110323.jpg](IMG20261003110323.jpg) | PHOTO-RINNE-IMG20261003110323 | Trog/Rinne und landseitiger Lagerbock im Radkontext |
+| [IMG20261003111006.jpg](IMG20261003111006.jpg) | PHOTO-RINNE-IMG20261003111006 | Unterer Rinnenteil und Wasserauslass |
+| [IMG20261003111009.jpg](IMG20261003111009.jpg) | PHOTO-RINNE-IMG20261003111009 | Gesamter landseitiger Rinnenverlauf zum Auslass |
+| [IMG20261003111015.jpg](IMG20261003111015.jpg) | PHOTO-RINNE-IMG20261003111015 | Rinnenübergang mit Verstärkung und A-Bock auf Gelände |
+| [IMG20261003111022 1.jpg](IMG20261003111022%201.jpg) | PHOTO-RINNE-IMG20261003111022-1 | Bytegleiches Duplikat von IMG20261003111022.jpg |
+| [IMG20261003111022.jpg](IMG20261003111022.jpg) | PHOTO-RINNE-IMG20261003111022 | Anschluss Schöpftrog/Rinne/Lagerbock |
+| [IMG20261003111029.jpg](IMG20261003111029.jpg) | PHOTO-RINNE-IMG20261003111029 | Weitere Ansicht Anschluss Schöpftrog/Rinne/Lagerbock |
+
+[Lagerbock Landseite: zwölf weitere Anschluss- und Maßfotos](<../Lagerboch Landseite/README.md>).
 
 Weitere Bezüge in anderen Ordnern:
 

@@ -2,6 +2,8 @@
 
 [Alle Komponenten](../README.md) · [Quellenverzeichnis](../../component-index.json)
 
+[Befund und Einbaubezug vom 11.10.2026](BEFUND.md) · [Zusammenhängender Trog-/Rinnenabgleich](../Auffangtrog/BEFUND.md)
+
 Originalfotos und fotografierte Zeichnungen. Die Ablage ändert weder Messstatus noch Modellgeometrie. Unter Arbeitsunterlagen sind Vorlagen mit ungesicherter Bauteilzuordnung gesammelt.
 
 | Datei | Quellennummer | Beschreibung / weiterer Bezug |
