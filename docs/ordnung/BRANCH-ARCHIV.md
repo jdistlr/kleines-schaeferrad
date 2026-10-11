@@ -43,7 +43,7 @@ Bei Branches mit Pull Request geht es auch über die Schaltfläche „Restore br
 
 ## Ab jetzt
 
-- `main` ist der einzige dauerhafte Branch.
+- `main` ist der einzige dauerhafte Arbeitsbranch. Daneben gibt es `gh-pages`: Er enthält nur die veröffentlichte Cockpit-Seite, wird ausschließlich von `npm run cockpit:pages` geschrieben und nie gemergt.
 - Arbeit läuft in kurzlebigen Branches mit Präfix nach Zweck: `ordnung/`, `kern/`, `modell/`, `cockpit/`, `befund/`. Datum am Ende.
 - Jeder Branch endet in einem Pull Request; nach dem Merge löscht GitHub ihn automatisch. Dafür in den Repository-Einstellungen unter *General → Pull Requests* „Automatically delete head branches“ einschalten.
 - Höchstens ein offener Branch pro Thema. Aufeinander aufbauende PRs nennen ihre Basis in der Beschreibung.

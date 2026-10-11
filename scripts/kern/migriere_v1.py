@@ -31,6 +31,9 @@ import subprocess
 import sys
 from collections import OrderedDict, defaultdict
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from eigenschaften_de import BAUTEIL_TEXTE, EIG, KONTEXT_TITEL, SCHLUESSEL, WERT, slug  # noqa: E402
+
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 KERN = os.path.join(ROOT, "kern")
 STAND = "2026-10-11"
@@ -135,6 +138,16 @@ EINHEIT = {"m": "m", "cm": "cm", "mm": "mm", "degree": "grad", "deg": "grad",
            "count": "anzahl", "export-unit": "exporteinheit", None: None}
 
 
+def deutsch(wert):
+    if isinstance(wert, str):
+        return WERT.get(wert, wert)
+    if isinstance(wert, list):
+        return [deutsch(x) for x in wert]
+    if isinstance(wert, dict):
+        return OrderedDict((SCHLUESSEL.get(k, k), deutsch(v)) for k, v in wert.items())
+    return wert
+
+
 def grundlage(klasse, bereich):
     if klasse == "measured":
         return "scan" if bereich == "digital-artifact-only" else "messung"
@@ -236,7 +249,7 @@ def baue_quellen(dateien, sa):
     for a in man["context_sources"]:
         qid = a["id"]
         quellen.setdefault(qid, OrderedDict([
-            ("id", qid), ("art", "kontext"), ("pfad", aktuell(a.get("path"))), ("titel", a.get("kind")),
+            ("id", qid), ("art", "kontext"), ("pfad", aktuell(a.get("path"))), ("titel", KONTEXT_TITEL.get(a.get("kind"))),
             ("person", None), ("ordner", None), ("erschlossen", False), ("identisch_mit", []),
             ("alt_ids", []), ("hinweis", None)]))
     for a in lade("evidence/additions-v2.json")["assets"]:
@@ -478,15 +491,11 @@ def main():
         if c["id"] == "COMP-RADSTADT":
             zuordnung[c["id"]] = {"kern_id": "COMP-RADSTATT", "datei": "bauteile.json", "art": "schreibvariante"}
             continue
-        hinweis = c.get("note")
-        if c["id"] == "COMP-TROUGH-SUPPORT":
-            hinweis = "Vermutlich der landseitige Lagerbock der Radstadt; Identität siehe F-004."
-        if c["id"] == "COMP-RINNE":
-            hinweis = "Rinne 1 (hinter Trog), nach Skizze IMG_6830."
+        anzahl, hinweis = BAUTEIL_TEXTE[c["id"]]
         bauteile[c["id"]] = OrderedDict([
             ("id", c["id"]), ("name", "Rinne 1 (hinter Trog)" if c["id"] == "COMP-RINNE" else c["label"]),
             ("begriff", BEGRIFF_JE_KOMPONENTE[c["id"]]), ("art", ART_JE_KIND[c["kind"]]),
-            ("teil_von", TEIL_VON.get(c["id"])), ("anzahl", (c.get("multiplicity") or {}).get("description")),
+            ("teil_von", TEIL_VON.get(c["id"])), ("anzahl", anzahl),
             ("hinweis", hinweis), ("herkunft", {"datei": "data/components.json", "id": c["id"]}),
         ])
         zuordnung[c["id"]] = {"kern_id": c["id"], "datei": "bauteile.json", "art": "bauteil"}
@@ -553,18 +562,20 @@ def main():
         hinweise = [x for x in (c.get("note"), ("Ersetzt laut Altdaten: " + c["supersedes"]) if c.get("supersedes") else None) if x]
         person = "P-THORSTEN" if grund == "muendlich" and (c["id"].startswith("TH-") or any("-TH-" in (p or "") for p in prov)) else None
         angaben[c["id"]] = OrderedDict([
-            ("id", c["id"]), ("ziel", ziel(c["subject"], prov)), ("eigenschaft", c["predicate"]),
-            ("wert", c["value"]), ("einheit", EINHEIT[c["unit"]]),
+            ("id", c["id"]), ("ziel", ziel(c["subject"], prov)), ("eigenschaft", slug(EIG[c["predicate"]])),
+            ("wert", deutsch(c["value"])), ("einheit", EINHEIT[c["unit"]]),
             ("toleranz", {"art": "ungefaehr", "text": "ca."} if c.get("approximate") or c["predicate"].endswith("_approx") else None),
             ("grundlage", grund),
             ("quellen", [{"quelle": q_alias.get(p["source_id"], p["source_id"]), "stelle": p.get("region")} for p in c["provenance"]]),
             ("aussage_von", person), ("gueltigkeit", gueltigkeit_fuer(grund)), ("bestaetigt", None),
             ("ersetzt_durch", None), ("begruendung", None), ("hinweis", " ".join(hinweise) or None),
             ("herkunft", {"datei": "data/geometry.claims.json", "id": c["id"], "klasse": c["evidence_class"],
-                          "bereich": c["scope"], "sicherheit": c["confidence"]}),
+                          "bereich": c["scope"], "sicherheit": c["confidence"], "eigenschaft": c["predicate"],
+                          **({"wert": c["value"]} if deutsch(c["value"]) != c["value"] else {})}),
         ])
         zuordnung[c["id"]] = {"kern_id": c["id"], "datei": "angaben.json", "art": "angabe"}
     for a in nachtraege():
+        a["eigenschaft"] = slug(EIG[a["eigenschaft"]])
         angaben[a["id"]] = a
     angaben["CLAIM-0368"]["begruendung"] = "G-001"
 
@@ -658,6 +669,18 @@ def main():
         for q in a["quellen"]:
             if q["quelle"] in quellen:
                 quellen[q["quelle"]]["erschlossen"] = True
+
+    with open(os.path.join(KERN, "begriffe.json"), encoding="utf-8") as f:
+        begriffe = json.load(f, object_pairs_hook=OrderedDict)
+    eig_namen = OrderedDict()
+    for alt, name in EIG.items():
+        eig_namen.setdefault(slug(name), name)
+    benutzt = {a["eigenschaft"] for a in angaben.values()}
+    begriffe["begriffe"] = [b for b in begriffe["begriffe"] if b["kategorie"] != "eigenschaft"] + [
+        OrderedDict([("id", k), ("name", n), ("kategorie", "eigenschaft")]) for k, n in sorted(eig_namen.items()) if k in benutzt]
+    with open(os.path.join(KERN, "begriffe.json"), "w", encoding="utf-8") as f:
+        json.dump(begriffe, f, ensure_ascii=False, indent=2)
+        f.write("\n")
 
     kopf = lambda name, hinweis: OrderedDict([("schema", f"ks-kern-{name}/v1"), ("stand", STAND), ("hinweis", hinweis)])
     hand = "Handgepflegt seit der Migration vom 11.10.2026 (scripts/kern/migriere_v1.py)."

@@ -26,13 +26,13 @@ def main():
     with open(os.path.join(kern_dir, "angaben.json"), encoding="utf-8") as f:
         stand = json.load(f).get("stand")
 
+    import subprocess
+    commit = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, text=True, capture_output=True).stdout.strip() or None
     daten = {
         "stand": stand,
+        "commit": commit,
         "statistik": {k: (dict(v) if hasattr(v, "items") else v) for k, v in st.items()},
-        "bauteile": [{**{k: b.get(k) for k in ("id", "name", "begriff", "art", "teil_von", "hinweis")},
-                      # Anzahltexte aus den Altdaten sind teils englisch und vage; nur gepflegte zeigen.
-                      "anzahl": None if (b.get("herkunft") or {}).get("datei") == "data/components.json" else b.get("anzahl")}
-                     for b in d["bauteile"]],
+        "bauteile": [{k: b.get(k) for k in ("id", "name", "begriff", "art", "teil_von", "anzahl", "hinweis")} for b in d["bauteile"]],
         "begriffe": [{k: b.get(k) for k in ("id", "name", "definition", "aliase")} for b in d["begriffe"]],
         "personen": [{"id": p["id"], "name": p["name"]} for p in d["personen"]],
         "beziehungen": [{k: b.get(k) for k in ("id", "von", "art", "zu", "ueber")} for b in d["beziehungen"]],

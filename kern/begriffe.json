@@ -2,72 +2,1924 @@
   "schema": "ks-kern-begriffe/v1",
   "hinweis": "Glossar: ein Begriff, eine ID. Aliase sind andere Schreibweisen oder Wörter für denselben Begriff. Was nur ähnlich klingt, steht unter nicht_verwechseln_mit. Handgepflegt.",
   "begriffe": [
-    {"id": "B-BAUTEIL", "name": "Bauteil", "kategorie": "kernbegriff", "definition": "Ein Ding im Inventar: Teil, Baugruppe, Zone, Werkzeug, Vorlage oder Posten der Holzliste. Datei kern/bauteile.json.", "aliase": ["Komponente", "Objekt"]},
-    {"id": "B-BEZIEHUNG", "name": "Beziehung", "kategorie": "kernbegriff", "definition": "Wie zwei Bauteile zusammengehören, z. B. „Rinne liegt auf A-Bock“. Datei kern/beziehungen.json.", "aliase": ["Relation"]},
-    {"id": "B-ANGABE", "name": "Angabe", "kategorie": "kernbegriff", "definition": "Ein einzelner Wert zu einem Bauteil, einer Beziehung oder einer Quelle, mit Grundlage, Quellen und Gültigkeit. Datei kern/angaben.json.", "aliase": ["Claim", "Fakt"]},
-    {"id": "B-QUELLE", "name": "Quelle", "kategorie": "kernbegriff", "definition": "Woher eine Angabe stammt: Foto, Skizze, Scan, Video, mündliche Aussage, Kontextdokument. Datei kern/quellen.json.", "aliase": ["Beleg", "Evidenz"]},
-    {"id": "B-FRAGE", "name": "Offene Frage", "kategorie": "kernbegriff", "definition": "Etwas, das entschieden oder gemessen werden muss, mit Abhängigkeiten und der Person, die entscheidet. Datei kern/fragen.json.", "aliase": ["Frage", "Konflikt", "Wissenslücke"]},
-    {"id": "B-ARBEITSSCHRITT", "name": "Arbeitsschritt", "kategorie": "kernbegriff", "definition": "Ein Schritt beim Aufbau oder Abbau, mit beteiligten Bauteilen, Werkzeugen und Reihenfolge. Datei kern/arbeitsschritte.json.", "aliase": ["Montageschritt"]},
-    {"id": "B-WISSENSTRAEGER", "name": "Wissensträger", "kategorie": "kernbegriff", "definition": "Eine Person, die Wissen beiträgt oder Angaben bestätigt. Datei kern/personen.json.", "aliase": ["Person"]},
-    {"id": "B-BEGRUENDUNG", "name": "Begründung", "kategorie": "kernbegriff", "definition": "Warum etwas so gebaut wird. Datei kern/begruendungen.json.", "aliase": ["Warum"]},
-    {"id": "B-GUELTIGKEIT", "name": "Gültigkeit", "kategorie": "kernbegriff", "definition": "Ob eine Angabe für das heutige Rad gilt: offen, bestaetigt, historisch, ueberholt, verworfen. Nur Menschen setzen „bestaetigt“.", "aliase": []},
-    {"id": "B-GRUNDLAGE", "name": "Grundlage", "kategorie": "kernbegriff", "definition": "Art des Wissens hinter einer Angabe: messung, muendlich, skizze, foto, scan, holzliste, fremdvorlage, kontext, ableitung, annahme.", "aliase": ["Evidenzklasse"]},
-    {"id": "B-TOLERANZ", "name": "Toleranz", "kategorie": "kernbegriff", "definition": "Erlaubte oder beobachtete Abweichung. Bei Naturholz der Normalfall, kein Mangel. Auch eine bewusste Vereinsvereinfachung.", "aliase": ["Vereinfachung"]},
-
-    {"id": "B-ANLAGE", "name": "Anlage", "kategorie": "bauteil", "definition": "Das Kleine Schäferrad als Ganzes: Rad, Radstadt und Wasserführung am Standort.", "aliase": ["Gesamtanlage", "Kleines Schäferrad"]},
-    {"id": "B-WASSERRAD", "name": "Wasserrad", "kategorie": "bauteil", "definition": "Der drehende Teil: Welle, Arme, Kränze, Kümpfe, Flügelbretter und ihre Verbindungen.", "aliase": ["Rad", "Schöpfrad", "Wasserschöpfrad"]},
-    {"id": "B-WELLE", "name": "Welle", "kategorie": "bauteil", "definition": "Zwölfeckiger Holzbalken in der Radmitte, durch den die Arme gesteckt werden.", "aliase": ["Achse", "Radwelle", "Shaft"], "nicht_verwechseln_mit": ["B-ANWELLE"]},
-    {"id": "B-ARMZONE", "name": "Armzone", "kategorie": "bauteil", "definition": "Bereich der Welle mit den Armöffnungen; je eine auf Land- und Wasserseite.", "aliase": ["Nabe", "Hub"]},
-    {"id": "B-ARM", "name": "Arm", "kategorie": "bauteil", "definition": "Durchgehendes Holz durch die Welle mit zwei radialen Enden. Drei Armtypen je Armzone, miteinander verschränkt.", "aliase": ["Speiche", "Arme"]},
-    {"id": "B-KRANZ", "name": "Kranz", "kategorie": "bauteil", "definition": "Ring aus Krümmlingen; Landkranz und Wasserkranz.", "aliase": ["Radkranz", "Ring", "Rim"]},
-    {"id": "B-KRUEMMLING", "name": "Krümmling", "kategorie": "bauteil", "definition": "Gebogenes Kranzsegment. Landseitige Krümmlinge tragen zusätzlich die Kumpfbohrungen.", "aliase": ["Krümmlinge", "Kranzsegment"]},
-    {"id": "B-SCHETTERNBRETT", "name": "Schetternbrett", "kategorie": "bauteil", "definition": "Brett, das zwei Krümmlinge am Stoß verbindet; je Seite eines.", "aliase": ["Schetternbretter", "Schetter", "Schäterenbrett"], "nicht_verwechseln_mit": ["B-FLUEGELBRETT"]},
-    {"id": "B-SCHETTERNAGEL", "name": "Schetternagel", "kategorie": "bauteil", "definition": "Holznagel der Schetternbrett-Verbindung; vier je Verbindung, zwei aus jeder Richtung, Gegenseite verkeilt.", "aliase": ["Schetternägel"]},
-    {"id": "B-STOSSKEIL", "name": "Stoßkeil", "kategorie": "bauteil", "definition": "Keil im Spalt zwischen zwei Krümmlingen; verspannt den Kranz über die Schetternägel.", "aliase": [], "nicht_verwechseln_mit": ["B-WELLENKEIL", "B-KEIL"]},
-    {"id": "B-WELLENKEIL", "name": "Wellenkeil", "kategorie": "bauteil", "definition": "Eigenständiger Keil, der zusammen mit äußeren Keilen die eingesteckten Arme in der Welle sichert.", "aliase": [], "nicht_verwechseln_mit": ["B-STOSSKEIL"]},
-    {"id": "B-KEIL", "name": "Keil", "kategorie": "bauteil", "definition": "Allgemein: Holzkeil zur Sicherung einer Verbindung. Für bekannte Arten den genaueren Begriff verwenden.", "aliase": ["Keile"]},
-    {"id": "B-ZWICKER", "name": "Zwicker", "kategorie": "bauteil", "definition": "Lokaler Begriff für ein Befestigungselement; Funktion noch nicht geklärt.", "aliase": ["Nasenzwicker"]},
-    {"id": "B-FROSCHKEIL", "name": "Froschkeil", "kategorie": "bauteil", "definition": "Lokaler Begriff für einen Keil; Funktion noch nicht geklärt.", "aliase": []},
-    {"id": "B-BEFESTIGUNG", "name": "Befestigungsteile", "kategorie": "bauteil", "definition": "Sammelbegriff: Keile, Holzstifte, Metallbefestiger, Bänder.", "aliase": ["Fastener"]},
-    {"id": "B-KUMPF", "name": "Kumpf", "kategorie": "bauteil", "definition": "Schöpfgefäß aus Dauben, Boden und Reifen, am landseitigen Kranz befestigt; benachbarte Kümpfe überlappen.", "aliase": ["Kümpfe", "Schöpfgefäß", "Schöpfeimer"]},
-    {"id": "B-DAUBE", "name": "Daube", "kategorie": "bauteil", "definition": "Wandbrett eines Kumpfs; zwölf je Kumpf, zwei davon mit je zwei Löchern für die Kumpfnägel.", "aliase": ["Dauben", "Taube", "Tauben"]},
-    {"id": "B-KUMPFBODEN", "name": "Kumpfboden", "kategorie": "bauteil", "definition": "Boden eines Kumpfs, in einer Nut der Dauben gehalten.", "aliase": ["Kumpfböden"]},
-    {"id": "B-KUMPFREIFEN", "name": "Kumpfreifen", "kategorie": "bauteil", "definition": "Spannring um einen Kumpf; drei je Kumpf.", "aliase": ["Spannring", "Kumpf-Spannring", "Reifen"]},
-    {"id": "B-KUMPFNAGEL", "name": "Kumpfnagel", "kategorie": "bauteil", "definition": "Holznagel, der einen Kumpf am Krümmling befestigt; ein langer und ein kurzer je Kumpf.", "aliase": ["Kumpfnägel"]},
-    {"id": "B-FLUEGELBRETT", "name": "Flügelbrett", "kategorie": "bauteil", "definition": "Schaufel, die das Rad antreibt; rund 35 cm breit, landseitig abgeschrägt.", "aliase": ["Flügelbretter", "Schaufel", "Schaufeln", "Paddle"], "nicht_verwechseln_mit": ["B-SCHETTERNBRETT"]},
-    {"id": "B-HOLZBAND", "name": "Holzband", "kategorie": "bauteil", "definition": "U-förmig gebogenes Eichenband über dem Flügelbrett, durch den Krümmling geführt und hinten verkeilt.", "aliase": ["U-Holzband", "Bänder", "Band"], "nicht_verwechseln_mit": ["B-SCHELLE"]},
-    {"id": "B-SCHELLE", "name": "Schelle", "kategorie": "bauteil", "definition": "Zweiteiliges verschraubtes Metallband an den Wellenenden; zwei je Ende.", "aliase": ["Eisenschelle", "Metallschelle", "Wellenschelle"], "nicht_verwechseln_mit": ["B-HOLZBAND", "B-KUMPFREIFEN"]},
-    {"id": "B-LAGER", "name": "Lager", "kategorie": "bauteil", "definition": "Kontaktzone, in der der Dorn der Welle aufliegt.", "aliase": ["Wellenlager", "Lagerklotz", "Zapfenlager"]},
-    {"id": "B-DORN", "name": "Dorn", "kategorie": "bauteil", "definition": "In die Welle eingearbeiteter Zapfen, der beidseitig herausragt und im Lager läuft.", "aliase": ["Zapfen", "Stahlzapfen"]},
-    {"id": "B-RADSTADT", "name": "Radstadt", "kategorie": "bauteil", "definition": "Gesamte feste Tragkonstruktion, auf der das Rad aufliegt und in deren Öffnung es sich dreht.", "aliase": ["Radstatt", "Tragwerk"]},
-    {"id": "B-LAGERBOCK", "name": "Lagerbock", "kategorie": "bauteil", "definition": "Bock der Radstadt, der ein Wellenlager trägt; je einer auf Land- und Wasserseite.", "aliase": ["Lagerstock", "Wellenauflager", "Lagerboch"], "nicht_verwechseln_mit": ["B-A-BOCK"]},
-    {"id": "B-RAHMEN", "name": "Rahmenholz", "kategorie": "bauteil", "definition": "Balken der Radstadt: obere Balken, Pfosten, untere und seitliche Rahmenhölzer.", "aliase": ["Tragbalken", "Pfostenrahmen"]},
-    {"id": "B-WASSERFUEHRUNG", "name": "Wasserführung", "kategorie": "bauteil", "definition": "Schöpftrog, Rinne und A-Bock: der Weg des geschöpften Wassers zum Auslass.", "aliase": []},
-    {"id": "B-SCHOEPFTROG", "name": "Schöpftrog", "kategorie": "bauteil", "definition": "Trog, in den die Kümpfe ausschütten; trapezförmiger Querschnitt, 45°-Stirnseiten.", "aliase": ["Gießtrog", "Auffangtrog", "Trog"]},
-    {"id": "B-RINNE", "name": "Rinne", "kategorie": "bauteil", "definition": "Hölzerne Ableitung vom Schöpftrog zum Auslass, aus zwei überlappenden Teilen.", "aliase": ["Ableitrinne", "Rinne 1", "Rinne 2"]},
-    {"id": "B-A-BOCK", "name": "A-Bock", "kategorie": "bauteil", "definition": "Bock aus zwei schrägen Balken mit Riegel, steht unter der Überlappung der Rinnenteile auf dem Gelände.", "aliase": ["ABock"], "nicht_verwechseln_mit": ["B-LAGERBOCK"]},
-    {"id": "B-ANWELLE", "name": "Anwelle", "kategorie": "bauteil", "definition": "Posten der allgemeinen Holzliste (Stütz-/Lagerholz); Zuordnung zu einem Bauteil offen.", "aliase": [], "nicht_verwechseln_mit": ["B-WELLE"]},
-    {"id": "B-HOLZLISTENPOSTEN", "name": "Holzlistenposten", "kategorie": "bauteil", "definition": "Eintrag der allgemeinen Holz- und Materialempfehlung für Schöpfräder (Arbeitsunterlage IMG_6827). Beschreibt Rohholz, nicht dieses Rad.", "aliase": ["Holzliste", "Stammliste"]},
-    {"id": "B-VORLAGE", "name": "Vorlage", "kategorie": "bauteil", "definition": "Zeichnung oder Schablone, die nicht selbst Teil des Rades ist, z. B. Brett- oder Kontaktstreifenvorlage.", "aliase": ["Schablone", "Template"]},
-
-    {"id": "B-BIEGEMATRIZE", "name": "Biegematrize", "kategorie": "werkzeug", "definition": "Form zum Biegen, aus den Arbeitsunterlagen; Verwendung beim Rad zu klären.", "aliase": ["Biegeform"]},
-
-    {"id": "B-LANDSEITE", "name": "Landseite", "kategorie": "ort", "definition": "Die dem Ufer zugewandte Seite des Rades; dort sitzen die Kümpfe.", "aliase": ["landseitig", "Land"]},
-    {"id": "B-WASSERSEITE", "name": "Wasserseite", "kategorie": "ort", "definition": "Die dem Fluss zugewandte Seite des Rades.", "aliase": ["wasserseitig", "Wasser"]},
-    {"id": "B-AXIAL", "name": "axial", "kategorie": "ort", "definition": "Entlang der Welle.", "aliase": []},
-    {"id": "B-RADIAL", "name": "radial", "kategorie": "ort", "definition": "Von der Radmitte nach außen.", "aliase": []},
-    {"id": "B-LICHTE-WEITE", "name": "lichte Weite", "kategorie": "ort", "definition": "Abstand zwischen den Innenflächen zweier gegenüberliegender Hölzer.", "aliase": ["lichtes Maß", "Innenmaß"]},
-    {"id": "B-DREHKREIS", "name": "Drehkreis", "kategorie": "ort", "definition": "Durchmesser, den das Rad mit allen Flügelbrettern beim Drehen braucht.", "aliase": ["Drehdurchmesser"]},
-
-    {"id": "liegt_auf", "name": "liegt auf", "kategorie": "beziehungsart", "definition": "von liegt auf zu und wird von ihm getragen. „X trägt Y“ wird als „Y liegt auf X“ geschrieben.", "aliase": ["trägt", "ruht auf", "aufgelagert auf"]},
-    {"id": "steckt_in", "name": "steckt in", "kategorie": "beziehungsart", "definition": "von ist durch eine Öffnung von zu gesteckt.", "aliase": ["durchgesteckt durch", "eingesteckt in"]},
-    {"id": "verschraenkt_mit", "name": "verschränkt mit", "kategorie": "beziehungsart", "definition": "Teile greifen über Aussparungen ineinander.", "aliase": ["überblattet mit"]},
-    {"id": "verkeilt", "name": "verkeilt", "kategorie": "beziehungsart", "definition": "von (ein Keil) sichert zu; ueber nennt das Teil, in dem der Keil sitzt.", "aliase": ["gesichert durch Keil"]},
-    {"id": "befestigt", "name": "befestigt", "kategorie": "beziehungsart", "definition": "von hält zu fest; ueber nennt das Teil, an dem befestigt wird.", "aliase": ["hält"]},
-    {"id": "verbindet", "name": "verbindet", "kategorie": "beziehungsart", "definition": "von verbindet zu mit den Teilen unter ueber.", "aliase": []},
-    {"id": "ueberlappt", "name": "überlappt", "kategorie": "beziehungsart", "definition": "Zwei Teile liegen an einem Übergang übereinander.", "aliase": []},
-    {"id": "lagert_in", "name": "lagert in", "kategorie": "beziehungsart", "definition": "von dreht sich in zu.", "aliase": ["läuft in"]},
-    {"id": "abstand_zu", "name": "Abstand zu", "kategorie": "beziehungsart", "definition": "Ein Maß zwischen zwei Bauteilen; die Angabe nennt Wert und Messpunkte.", "aliase": []},
-    {"id": "zusammenhang", "name": "Zusammenhang (unbestimmt)", "kategorie": "beziehungsart", "definition": "Aus Altdaten übernommen; genaue Art noch festzulegen.", "aliase": []}
+    {
+      "id": "B-BAUTEIL",
+      "name": "Bauteil",
+      "kategorie": "kernbegriff",
+      "definition": "Ein Ding im Inventar: Teil, Baugruppe, Zone, Werkzeug, Vorlage oder Posten der Holzliste. Datei kern/bauteile.json.",
+      "aliase": [
+        "Komponente",
+        "Objekt"
+      ]
+    },
+    {
+      "id": "B-BEZIEHUNG",
+      "name": "Beziehung",
+      "kategorie": "kernbegriff",
+      "definition": "Wie zwei Bauteile zusammengehören, z. B. „Rinne liegt auf A-Bock“. Datei kern/beziehungen.json.",
+      "aliase": [
+        "Relation"
+      ]
+    },
+    {
+      "id": "B-ANGABE",
+      "name": "Angabe",
+      "kategorie": "kernbegriff",
+      "definition": "Ein einzelner Wert zu einem Bauteil, einer Beziehung oder einer Quelle, mit Grundlage, Quellen und Gültigkeit. Datei kern/angaben.json.",
+      "aliase": [
+        "Claim",
+        "Fakt"
+      ]
+    },
+    {
+      "id": "B-QUELLE",
+      "name": "Quelle",
+      "kategorie": "kernbegriff",
+      "definition": "Woher eine Angabe stammt: Foto, Skizze, Scan, Video, mündliche Aussage, Kontextdokument. Datei kern/quellen.json.",
+      "aliase": [
+        "Beleg",
+        "Evidenz"
+      ]
+    },
+    {
+      "id": "B-FRAGE",
+      "name": "Offene Frage",
+      "kategorie": "kernbegriff",
+      "definition": "Etwas, das entschieden oder gemessen werden muss, mit Abhängigkeiten und der Person, die entscheidet. Datei kern/fragen.json.",
+      "aliase": [
+        "Frage",
+        "Konflikt",
+        "Wissenslücke"
+      ]
+    },
+    {
+      "id": "B-ARBEITSSCHRITT",
+      "name": "Arbeitsschritt",
+      "kategorie": "kernbegriff",
+      "definition": "Ein Schritt beim Aufbau oder Abbau, mit beteiligten Bauteilen, Werkzeugen und Reihenfolge. Datei kern/arbeitsschritte.json.",
+      "aliase": [
+        "Montageschritt"
+      ]
+    },
+    {
+      "id": "B-WISSENSTRAEGER",
+      "name": "Wissensträger",
+      "kategorie": "kernbegriff",
+      "definition": "Eine Person, die Wissen beiträgt oder Angaben bestätigt. Datei kern/personen.json.",
+      "aliase": [
+        "Person"
+      ]
+    },
+    {
+      "id": "B-BEGRUENDUNG",
+      "name": "Begründung",
+      "kategorie": "kernbegriff",
+      "definition": "Warum etwas so gebaut wird. Datei kern/begruendungen.json.",
+      "aliase": [
+        "Warum"
+      ]
+    },
+    {
+      "id": "B-GUELTIGKEIT",
+      "name": "Gültigkeit",
+      "kategorie": "kernbegriff",
+      "definition": "Ob eine Angabe für das heutige Rad gilt: offen, bestaetigt, historisch, ueberholt, verworfen. Nur Menschen setzen „bestaetigt“.",
+      "aliase": []
+    },
+    {
+      "id": "B-GRUNDLAGE",
+      "name": "Grundlage",
+      "kategorie": "kernbegriff",
+      "definition": "Art des Wissens hinter einer Angabe: messung, muendlich, skizze, foto, scan, holzliste, fremdvorlage, kontext, ableitung, annahme.",
+      "aliase": [
+        "Evidenzklasse"
+      ]
+    },
+    {
+      "id": "B-TOLERANZ",
+      "name": "Toleranz",
+      "kategorie": "kernbegriff",
+      "definition": "Erlaubte oder beobachtete Abweichung. Bei Naturholz der Normalfall, kein Mangel. Auch eine bewusste Vereinsvereinfachung.",
+      "aliase": [
+        "Vereinfachung"
+      ]
+    },
+    {
+      "id": "B-ANLAGE",
+      "name": "Anlage",
+      "kategorie": "bauteil",
+      "definition": "Das Kleine Schäferrad als Ganzes: Rad, Radstadt und Wasserführung am Standort.",
+      "aliase": [
+        "Gesamtanlage",
+        "Kleines Schäferrad"
+      ]
+    },
+    {
+      "id": "B-WASSERRAD",
+      "name": "Wasserrad",
+      "kategorie": "bauteil",
+      "definition": "Der drehende Teil: Welle, Arme, Kränze, Kümpfe, Flügelbretter und ihre Verbindungen.",
+      "aliase": [
+        "Rad",
+        "Schöpfrad",
+        "Wasserschöpfrad"
+      ]
+    },
+    {
+      "id": "B-WELLE",
+      "name": "Welle",
+      "kategorie": "bauteil",
+      "definition": "Zwölfeckiger Holzbalken in der Radmitte, durch den die Arme gesteckt werden.",
+      "aliase": [
+        "Achse",
+        "Radwelle",
+        "Shaft"
+      ],
+      "nicht_verwechseln_mit": [
+        "B-ANWELLE"
+      ]
+    },
+    {
+      "id": "B-ARMZONE",
+      "name": "Armzone",
+      "kategorie": "bauteil",
+      "definition": "Bereich der Welle mit den Armöffnungen; je eine auf Land- und Wasserseite.",
+      "aliase": [
+        "Nabe",
+        "Hub"
+      ]
+    },
+    {
+      "id": "B-ARM",
+      "name": "Arm",
+      "kategorie": "bauteil",
+      "definition": "Durchgehendes Holz durch die Welle mit zwei radialen Enden. Drei Armtypen je Armzone, miteinander verschränkt.",
+      "aliase": [
+        "Speiche",
+        "Arme"
+      ]
+    },
+    {
+      "id": "B-KRANZ",
+      "name": "Kranz",
+      "kategorie": "bauteil",
+      "definition": "Ring aus Krümmlingen; Landkranz und Wasserkranz.",
+      "aliase": [
+        "Radkranz",
+        "Ring",
+        "Rim"
+      ]
+    },
+    {
+      "id": "B-KRUEMMLING",
+      "name": "Krümmling",
+      "kategorie": "bauteil",
+      "definition": "Gebogenes Kranzsegment. Landseitige Krümmlinge tragen zusätzlich die Kumpfbohrungen.",
+      "aliase": [
+        "Krümmlinge",
+        "Kranzsegment"
+      ]
+    },
+    {
+      "id": "B-SCHETTERNBRETT",
+      "name": "Schetternbrett",
+      "kategorie": "bauteil",
+      "definition": "Brett, das zwei Krümmlinge am Stoß verbindet; je Seite eines.",
+      "aliase": [
+        "Schetternbretter",
+        "Schetter",
+        "Schäterenbrett"
+      ],
+      "nicht_verwechseln_mit": [
+        "B-FLUEGELBRETT"
+      ]
+    },
+    {
+      "id": "B-SCHETTERNAGEL",
+      "name": "Schetternagel",
+      "kategorie": "bauteil",
+      "definition": "Holznagel der Schetternbrett-Verbindung; vier je Verbindung, zwei aus jeder Richtung, Gegenseite verkeilt.",
+      "aliase": [
+        "Schetternägel"
+      ]
+    },
+    {
+      "id": "B-STOSSKEIL",
+      "name": "Stoßkeil",
+      "kategorie": "bauteil",
+      "definition": "Keil im Spalt zwischen zwei Krümmlingen; verspannt den Kranz über die Schetternägel.",
+      "aliase": [],
+      "nicht_verwechseln_mit": [
+        "B-WELLENKEIL",
+        "B-KEIL"
+      ]
+    },
+    {
+      "id": "B-WELLENKEIL",
+      "name": "Wellenkeil",
+      "kategorie": "bauteil",
+      "definition": "Eigenständiger Keil, der zusammen mit äußeren Keilen die eingesteckten Arme in der Welle sichert.",
+      "aliase": [],
+      "nicht_verwechseln_mit": [
+        "B-STOSSKEIL"
+      ]
+    },
+    {
+      "id": "B-KEIL",
+      "name": "Keil",
+      "kategorie": "bauteil",
+      "definition": "Allgemein: Holzkeil zur Sicherung einer Verbindung. Für bekannte Arten den genaueren Begriff verwenden.",
+      "aliase": [
+        "Keile"
+      ]
+    },
+    {
+      "id": "B-ZWICKER",
+      "name": "Zwicker",
+      "kategorie": "bauteil",
+      "definition": "Lokaler Begriff für ein Befestigungselement; Funktion noch nicht geklärt.",
+      "aliase": [
+        "Nasenzwicker"
+      ]
+    },
+    {
+      "id": "B-FROSCHKEIL",
+      "name": "Froschkeil",
+      "kategorie": "bauteil",
+      "definition": "Lokaler Begriff für einen Keil; Funktion noch nicht geklärt.",
+      "aliase": []
+    },
+    {
+      "id": "B-BEFESTIGUNG",
+      "name": "Befestigungsteile",
+      "kategorie": "bauteil",
+      "definition": "Sammelbegriff: Keile, Holzstifte, Metallbefestiger, Bänder.",
+      "aliase": [
+        "Fastener"
+      ]
+    },
+    {
+      "id": "B-KUMPF",
+      "name": "Kumpf",
+      "kategorie": "bauteil",
+      "definition": "Schöpfgefäß aus Dauben, Boden und Reifen, am landseitigen Kranz befestigt; benachbarte Kümpfe überlappen.",
+      "aliase": [
+        "Kümpfe",
+        "Schöpfgefäß",
+        "Schöpfeimer"
+      ]
+    },
+    {
+      "id": "B-DAUBE",
+      "name": "Daube",
+      "kategorie": "bauteil",
+      "definition": "Wandbrett eines Kumpfs; zwölf je Kumpf, zwei davon mit je zwei Löchern für die Kumpfnägel.",
+      "aliase": [
+        "Dauben",
+        "Taube",
+        "Tauben"
+      ]
+    },
+    {
+      "id": "B-KUMPFBODEN",
+      "name": "Kumpfboden",
+      "kategorie": "bauteil",
+      "definition": "Boden eines Kumpfs, in einer Nut der Dauben gehalten.",
+      "aliase": [
+        "Kumpfböden"
+      ]
+    },
+    {
+      "id": "B-KUMPFREIFEN",
+      "name": "Kumpfreifen",
+      "kategorie": "bauteil",
+      "definition": "Spannring um einen Kumpf; drei je Kumpf.",
+      "aliase": [
+        "Spannring",
+        "Kumpf-Spannring",
+        "Reifen"
+      ]
+    },
+    {
+      "id": "B-KUMPFNAGEL",
+      "name": "Kumpfnagel",
+      "kategorie": "bauteil",
+      "definition": "Holznagel, der einen Kumpf am Krümmling befestigt; ein langer und ein kurzer je Kumpf.",
+      "aliase": [
+        "Kumpfnägel"
+      ]
+    },
+    {
+      "id": "B-FLUEGELBRETT",
+      "name": "Flügelbrett",
+      "kategorie": "bauteil",
+      "definition": "Schaufel, die das Rad antreibt; rund 35 cm breit, landseitig abgeschrägt.",
+      "aliase": [
+        "Flügelbretter",
+        "Schaufel",
+        "Schaufeln",
+        "Paddle"
+      ],
+      "nicht_verwechseln_mit": [
+        "B-SCHETTERNBRETT"
+      ]
+    },
+    {
+      "id": "B-HOLZBAND",
+      "name": "Holzband",
+      "kategorie": "bauteil",
+      "definition": "U-förmig gebogenes Eichenband über dem Flügelbrett, durch den Krümmling geführt und hinten verkeilt.",
+      "aliase": [
+        "U-Holzband",
+        "Bänder",
+        "Band"
+      ],
+      "nicht_verwechseln_mit": [
+        "B-SCHELLE"
+      ]
+    },
+    {
+      "id": "B-SCHELLE",
+      "name": "Schelle",
+      "kategorie": "bauteil",
+      "definition": "Zweiteiliges verschraubtes Metallband an den Wellenenden; zwei je Ende.",
+      "aliase": [
+        "Eisenschelle",
+        "Metallschelle",
+        "Wellenschelle"
+      ],
+      "nicht_verwechseln_mit": [
+        "B-HOLZBAND",
+        "B-KUMPFREIFEN"
+      ]
+    },
+    {
+      "id": "B-LAGER",
+      "name": "Lager",
+      "kategorie": "bauteil",
+      "definition": "Kontaktzone, in der der Dorn der Welle aufliegt.",
+      "aliase": [
+        "Wellenlager",
+        "Lagerklotz",
+        "Zapfenlager"
+      ]
+    },
+    {
+      "id": "B-DORN",
+      "name": "Dorn",
+      "kategorie": "bauteil",
+      "definition": "In die Welle eingearbeiteter Zapfen, der beidseitig herausragt und im Lager läuft.",
+      "aliase": [
+        "Zapfen",
+        "Stahlzapfen"
+      ]
+    },
+    {
+      "id": "B-RADSTADT",
+      "name": "Radstadt",
+      "kategorie": "bauteil",
+      "definition": "Gesamte feste Tragkonstruktion, auf der das Rad aufliegt und in deren Öffnung es sich dreht.",
+      "aliase": [
+        "Radstatt",
+        "Tragwerk"
+      ]
+    },
+    {
+      "id": "B-LAGERBOCK",
+      "name": "Lagerbock",
+      "kategorie": "bauteil",
+      "definition": "Bock der Radstadt, der ein Wellenlager trägt; je einer auf Land- und Wasserseite.",
+      "aliase": [
+        "Lagerstock",
+        "Wellenauflager",
+        "Lagerboch"
+      ],
+      "nicht_verwechseln_mit": [
+        "B-A-BOCK"
+      ]
+    },
+    {
+      "id": "B-RAHMEN",
+      "name": "Rahmenholz",
+      "kategorie": "bauteil",
+      "definition": "Balken der Radstadt: obere Balken, Pfosten, untere und seitliche Rahmenhölzer.",
+      "aliase": [
+        "Tragbalken",
+        "Pfostenrahmen"
+      ]
+    },
+    {
+      "id": "B-WASSERFUEHRUNG",
+      "name": "Wasserführung",
+      "kategorie": "bauteil",
+      "definition": "Schöpftrog, Rinne und A-Bock: der Weg des geschöpften Wassers zum Auslass.",
+      "aliase": []
+    },
+    {
+      "id": "B-SCHOEPFTROG",
+      "name": "Schöpftrog",
+      "kategorie": "bauteil",
+      "definition": "Trog, in den die Kümpfe ausschütten; trapezförmiger Querschnitt, 45°-Stirnseiten.",
+      "aliase": [
+        "Gießtrog",
+        "Auffangtrog",
+        "Trog"
+      ]
+    },
+    {
+      "id": "B-RINNE",
+      "name": "Rinne",
+      "kategorie": "bauteil",
+      "definition": "Hölzerne Ableitung vom Schöpftrog zum Auslass, aus zwei überlappenden Teilen.",
+      "aliase": [
+        "Ableitrinne",
+        "Rinne 1",
+        "Rinne 2"
+      ]
+    },
+    {
+      "id": "B-A-BOCK",
+      "name": "A-Bock",
+      "kategorie": "bauteil",
+      "definition": "Bock aus zwei schrägen Balken mit Riegel, steht unter der Überlappung der Rinnenteile auf dem Gelände.",
+      "aliase": [
+        "ABock"
+      ],
+      "nicht_verwechseln_mit": [
+        "B-LAGERBOCK"
+      ]
+    },
+    {
+      "id": "B-ANWELLE",
+      "name": "Anwelle",
+      "kategorie": "bauteil",
+      "definition": "Posten der allgemeinen Holzliste (Stütz-/Lagerholz); Zuordnung zu einem Bauteil offen.",
+      "aliase": [],
+      "nicht_verwechseln_mit": [
+        "B-WELLE"
+      ]
+    },
+    {
+      "id": "B-HOLZLISTENPOSTEN",
+      "name": "Holzlistenposten",
+      "kategorie": "bauteil",
+      "definition": "Eintrag der allgemeinen Holz- und Materialempfehlung für Schöpfräder (Arbeitsunterlage IMG_6827). Beschreibt Rohholz, nicht dieses Rad.",
+      "aliase": [
+        "Holzliste",
+        "Stammliste"
+      ]
+    },
+    {
+      "id": "B-VORLAGE",
+      "name": "Vorlage",
+      "kategorie": "bauteil",
+      "definition": "Zeichnung oder Schablone, die nicht selbst Teil des Rades ist, z. B. Brett- oder Kontaktstreifenvorlage.",
+      "aliase": [
+        "Schablone",
+        "Template"
+      ]
+    },
+    {
+      "id": "B-BIEGEMATRIZE",
+      "name": "Biegematrize",
+      "kategorie": "werkzeug",
+      "definition": "Form zum Biegen, aus den Arbeitsunterlagen; Verwendung beim Rad zu klären.",
+      "aliase": [
+        "Biegeform"
+      ]
+    },
+    {
+      "id": "B-LANDSEITE",
+      "name": "Landseite",
+      "kategorie": "ort",
+      "definition": "Die dem Ufer zugewandte Seite des Rades; dort sitzen die Kümpfe.",
+      "aliase": [
+        "landseitig",
+        "Land"
+      ]
+    },
+    {
+      "id": "B-WASSERSEITE",
+      "name": "Wasserseite",
+      "kategorie": "ort",
+      "definition": "Die dem Fluss zugewandte Seite des Rades.",
+      "aliase": [
+        "wasserseitig",
+        "Wasser"
+      ]
+    },
+    {
+      "id": "B-AXIAL",
+      "name": "axial",
+      "kategorie": "ort",
+      "definition": "Entlang der Welle.",
+      "aliase": []
+    },
+    {
+      "id": "B-RADIAL",
+      "name": "radial",
+      "kategorie": "ort",
+      "definition": "Von der Radmitte nach außen.",
+      "aliase": []
+    },
+    {
+      "id": "B-LICHTE-WEITE",
+      "name": "lichte Weite",
+      "kategorie": "ort",
+      "definition": "Abstand zwischen den Innenflächen zweier gegenüberliegender Hölzer.",
+      "aliase": [
+        "lichtes Maß",
+        "Innenmaß"
+      ]
+    },
+    {
+      "id": "B-DREHKREIS",
+      "name": "Drehkreis",
+      "kategorie": "ort",
+      "definition": "Durchmesser, den das Rad mit allen Flügelbrettern beim Drehen braucht.",
+      "aliase": [
+        "Drehdurchmesser"
+      ]
+    },
+    {
+      "id": "liegt_auf",
+      "name": "liegt auf",
+      "kategorie": "beziehungsart",
+      "definition": "von liegt auf zu und wird von ihm getragen. „X trägt Y“ wird als „Y liegt auf X“ geschrieben.",
+      "aliase": [
+        "trägt",
+        "ruht auf",
+        "aufgelagert auf"
+      ]
+    },
+    {
+      "id": "steckt_in",
+      "name": "steckt in",
+      "kategorie": "beziehungsart",
+      "definition": "von ist durch eine Öffnung von zu gesteckt.",
+      "aliase": [
+        "durchgesteckt durch",
+        "eingesteckt in"
+      ]
+    },
+    {
+      "id": "verschraenkt_mit",
+      "name": "verschränkt mit",
+      "kategorie": "beziehungsart",
+      "definition": "Teile greifen über Aussparungen ineinander.",
+      "aliase": [
+        "überblattet mit"
+      ]
+    },
+    {
+      "id": "verkeilt",
+      "name": "verkeilt",
+      "kategorie": "beziehungsart",
+      "definition": "von (ein Keil) sichert zu; ueber nennt das Teil, in dem der Keil sitzt.",
+      "aliase": [
+        "gesichert durch Keil"
+      ]
+    },
+    {
+      "id": "befestigt",
+      "name": "befestigt",
+      "kategorie": "beziehungsart",
+      "definition": "von hält zu fest; ueber nennt das Teil, an dem befestigt wird.",
+      "aliase": [
+        "hält"
+      ]
+    },
+    {
+      "id": "verbindet",
+      "name": "verbindet",
+      "kategorie": "beziehungsart",
+      "definition": "von verbindet zu mit den Teilen unter ueber.",
+      "aliase": []
+    },
+    {
+      "id": "ueberlappt",
+      "name": "überlappt",
+      "kategorie": "beziehungsart",
+      "definition": "Zwei Teile liegen an einem Übergang übereinander.",
+      "aliase": []
+    },
+    {
+      "id": "lagert_in",
+      "name": "lagert in",
+      "kategorie": "beziehungsart",
+      "definition": "von dreht sich in zu.",
+      "aliase": [
+        "läuft in"
+      ]
+    },
+    {
+      "id": "abstand_zu",
+      "name": "Abstand zu",
+      "kategorie": "beziehungsart",
+      "definition": "Ein Maß zwischen zwei Bauteilen; die Angabe nennt Wert und Messpunkte.",
+      "aliase": []
+    },
+    {
+      "id": "zusammenhang",
+      "name": "Zusammenhang (unbestimmt)",
+      "kategorie": "beziehungsart",
+      "definition": "Aus Altdaten übernommen; genaue Art noch festzulegen.",
+      "aliase": []
+    },
+    {
+      "id": "abbaudatum_vermutet",
+      "name": "Abbaudatum (vermutet)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "abgestrebtes_holztragwerk",
+      "name": "Abgestrebtes Holztragwerk",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ablauf_fuehrt_nach_links",
+      "name": "Ablauf führt nach links",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "abstand",
+      "name": "Abstand",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "abstand_armzone_zum_wellenende",
+      "name": "Abstand Armzone zum Wellenende",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "abstand_der_kranzmitten",
+      "name": "Abstand der Kranzmitten",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "abstand_der_lochmitten",
+      "name": "Abstand der Lochmitten",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "abstand_der_querlatten_skizze",
+      "name": "Abstand der Querlatten (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "abstand_oberes_loch",
+      "name": "Abstand oberes Loch",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "abstand_unteres_loch",
+      "name": "Abstand unteres Loch",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "achsenzuordnung_der_exporte_vorschlag",
+      "name": "Achsenzuordnung der Exporte (Vorschlag)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "aeussere_loecher",
+      "name": "Äußere Löcher",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "aeusserer_nutdurchmesser_variante_a",
+      "name": "Äußerer Nutdurchmesser, Variante A",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "aeusserer_nutdurchmesser_variante_b",
+      "name": "Äußerer Nutdurchmesser, Variante B",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "am_armsitz_verstaerkt",
+      "name": "Am Armsitz verstärkt",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "am_vorderen_kranz_befestigt",
+      "name": "Am vorderen Kranz befestigt",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anweisung_zum_verkeilen",
+      "name": "Anweisung zum Verkeilen",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anzahl_aeussere_schlusskeile",
+      "name": "Anzahl äußere Schlusskeile",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anzahl_armkeile",
+      "name": "Anzahl Armkeile",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anzahl_baender",
+      "name": "Anzahl Bänder",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anzahl_froschkeile",
+      "name": "Anzahl Froschkeile",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anzahl_kraenze_laut_beschreibung",
+      "name": "Anzahl Kränze laut Beschreibung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anzahl_kruemmlingkeile",
+      "name": "Anzahl Krümmlingkeile",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anzahl_kumpfnaegel",
+      "name": "Anzahl Kumpfnägel",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anzahl_laut_beschreibung",
+      "name": "Anzahl laut Beschreibung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anzahl_naegel_variante_1",
+      "name": "Anzahl Nägel Variante 1",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anzahl_naegel_variante_2",
+      "name": "Anzahl Nägel Variante 2",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anzahl_nasenzwicker",
+      "name": "Anzahl Nasenzwicker",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anzahl_schetternaegel",
+      "name": "Anzahl Schetternägel",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anzahl_schlusskeile",
+      "name": "Anzahl Schlusskeile",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "anzahl_teile",
+      "name": "Anzahl Teile",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "arm_geht_mittig_durch_den_kruemmling",
+      "name": "Arm geht mittig durch den Krümmling",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "armfolge_landseitig",
+      "name": "Armfolge landseitig",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "armfolge_wasserseitig",
+      "name": "Armfolge wasserseitig",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "armoeffnung_groesser_als_armquerschnitt",
+      "name": "Armöffnung größer als Armquerschnitt",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "armpaare_skizze",
+      "name": "Armpaare (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "armrichtungen_je_gruppe_skizze",
+      "name": "Armrichtungen je Gruppe (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "armtypen",
+      "name": "Armtypen",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "armzone_sichtbar",
+      "name": "Armzone sichtbar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "astdurchmesser",
+      "name": "Astdurchmesser",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "aufnahmezeit_laut_scan_app",
+      "name": "Aufnahmezeit laut Scan-App",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ausdehnung_des_scans",
+      "name": "Ausdehnung des Scans",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ausfuehrung_der_stoesse",
+      "name": "Ausführung der Stöße",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "aussendurchmesser_notiz",
+      "name": "Außendurchmesser (Notiz)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "aussendurchmesser_oben",
+      "name": "Außendurchmesser oben",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "aussendurchmesser_unten",
+      "name": "Außendurchmesser unten",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "aussenradius_notiz",
+      "name": "Außenradius (Notiz)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "balkenquerschnitt",
+      "name": "Balkenquerschnitt",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "bandbreite",
+      "name": "Bandbreite",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "bauteilbegriffe_auf_der_skizze",
+      "name": "Bauteilbegriffe auf der Skizze",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "befestigungen_an_den_stoessen_sichtbar",
+      "name": "Befestigungen an den Stößen sichtbar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "befestigungsseite_laut_beschreibung",
+      "name": "Befestigungsseite laut Beschreibung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "befestigungsweg",
+      "name": "Befestigungsweg",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "begriffe_ohne_stueckzahl",
+      "name": "Begriffe ohne Stückzahl",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "beinquerschnitt",
+      "name": "Beinquerschnitt",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "benachbarte_kuempfe_ueberlappen",
+      "name": "Benachbarte Kümpfe überlappen",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "beschreibung_des_ply_exports",
+      "name": "Beschreibung des PLY-Exports",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "beschriftung",
+      "name": "Beschriftung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "bestellmenge_edelstahlblech",
+      "name": "Bestellmenge Edelstahlblech",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "bestellmenge_kupferblech",
+      "name": "Bestellmenge Kupferblech",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "bestellmenge_messingblech_ms63",
+      "name": "Bestellmenge Messingblech MS63",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "bleibt_ueber_den_winter_stehen",
+      "name": "Bleibt über den Winter stehen",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "boden_in_daubennut_gehalten",
+      "name": "Boden in Daubennut gehalten",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "bodendurchmesser",
+      "name": "Bodendurchmesser",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "bodenrohling_quadrat",
+      "name": "Bodenrohling (Quadrat)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "boeden_je_kumpf",
+      "name": "Böden je Kumpf",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "bogenlaenge_bei_halbteilung",
+      "name": "Bogenlänge bei Halbteilung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "bogenlaenge_bei_viertelteilung",
+      "name": "Bogenlänge bei Viertelteilung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "bogenlaenge_der_feinteilung",
+      "name": "Bogenlänge der Feinteilung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "bogenlaenge_eines_sektors_skizze",
+      "name": "Bogenlänge eines Sektors (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "breite",
+      "name": "Breite",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "breite_axial",
+      "name": "Breite axial",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "breite_bretter_sichtbar",
+      "name": "Breite Bretter sichtbar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "breite_der_armoeffnung",
+      "name": "Breite der Armöffnung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "breite_der_aussparung",
+      "name": "Breite der Aussparung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "breite_des_auslasses_notiz",
+      "name": "Breite des Auslasses (Notiz)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "breite_oben_skizze",
+      "name": "Breite oben (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "breite_ueber_aussenflaechen",
+      "name": "Breite über Außenflächen",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "breite_unten_skizze",
+      "name": "Breite unten (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "breitenmasse_notiz",
+      "name": "Breitenmaße (Notiz)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "breitenvarianten_sw",
+      "name": "Breitenvarianten (SW)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "dauben_je_kumpf",
+      "name": "Dauben je Kumpf",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "daubenstaerke_variante_a",
+      "name": "Daubenstärke, Variante A",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "daubenstaerke_variante_b",
+      "name": "Daubenstärke, Variante B",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "deckeldurchmesser",
+      "name": "Deckeldurchmesser",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "deckelrohling_quadrat",
+      "name": "Deckelrohling (Quadrat)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "doppelte_punkte_im_scan",
+      "name": "Doppelte Punkte im Scan",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "dorn_und_auflage",
+      "name": "Dorn und Auflage",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "durchgehende_arme_je_kranz_laut_beschreibung",
+      "name": "Durchgehende Arme je Kranz laut Beschreibung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "durchgehende_arme_je_seite",
+      "name": "Durchgehende Arme je Seite",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "durchmesser_befestigungsloecher_notiz",
+      "name": "Durchmesser Befestigungslöcher (Notiz)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "durchmesser_der_kumpfbohrung",
+      "name": "Durchmesser der Kumpfbohrung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "durchmesser_ueber_ecken",
+      "name": "Durchmesser über Ecken",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "durchmesser_uebrige_loecher_notiz",
+      "name": "Durchmesser übrige Löcher (Notiz)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "eisenschellen_an_den_enden",
+      "name": "Eisenschellen an den Enden",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "empfohlene_rohholzlaenge",
+      "name": "Empfohlene Rohholzlänge",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "empfohlenes_holz",
+      "name": "Empfohlenes Holz",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "endschnittwinkel_skizze",
+      "name": "Endschnittwinkel (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "endwinkel_notiz",
+      "name": "Endwinkel (Notiz)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "erkennbare_bereiche_im_scan",
+      "name": "Erkennbare Bereiche im Scan",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "es_gibt_gefertigte_massvarianten",
+      "name": "Es gibt gefertigte Maßvarianten",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "exportformate_der_scan_app",
+      "name": "Exportformate der Scan-App",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "flaechen_im_scan",
+      "name": "Flächen im Scan",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "flaechen_ohne_inhalt_im_scan",
+      "name": "Flächen ohne Inhalt im Scan",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "fremde_geometrie_im_scan",
+      "name": "Fremde Geometrie im Scan",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "funktion",
+      "name": "Funktion",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "gebohrte_dauben_je_kumpf",
+      "name": "Gebohrte Dauben je Kumpf",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "gedruckter_titel",
+      "name": "Gedruckter Titel",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "gesamtlaenge_skizze",
+      "name": "Gesamtlänge (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "gleichbleibender_wellendurchmesser",
+      "name": "Gleichbleibender Wellendurchmesser",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "grenze_fuer_die_rekonstruktion",
+      "name": "Grenze für die Rekonstruktion",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "groesste_aussenbreite_skizze",
+      "name": "Größte Außenbreite (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "grund_fuer_den_langen_nagel",
+      "name": "Grund für den langen Nagel",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "grund_fuer_ungleiche_laengen",
+      "name": "Grund für ungleiche Längen",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "grundrisswinkel_frei_waehlbar",
+      "name": "Grundrisswinkel frei wählbar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "gruppen_von_armoeffnungen_skizze",
+      "name": "Gruppen von Armöffnungen (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "halber_sektorwinkel_skizze",
+      "name": "Halber Sektorwinkel (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "halber_teilungsschritt_notiz",
+      "name": "Halber Teilungsschritt (Notiz)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "herstellung",
+      "name": "Herstellung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "hoehe_am_ende_skizze",
+      "name": "Höhe am Ende (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "hoehe_skizze",
+      "name": "Höhe (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "holzkeile_sichtbar",
+      "name": "Holzkeile sichtbar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "innendurchmesser_notiz",
+      "name": "Innendurchmesser (Notiz)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "innenradius_notiz",
+      "name": "Innenradius (Notiz)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "innere_breite_skizze",
+      "name": "Innere Breite (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "innere_laenge_skizze",
+      "name": "Innere Länge (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "innerer_nutdurchmesser_variante_a",
+      "name": "Innerer Nutdurchmesser, Variante A",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "innerer_nutdurchmesser_variante_b",
+      "name": "Innerer Nutdurchmesser, Variante B",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "kleines_versatzmass_notiz",
+      "name": "Kleines Versatzmaß (Notiz)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "koepfe_der_befestigungsstifte_sichtbar",
+      "name": "Köpfe der Befestigungsstifte sichtbar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "konstruktion",
+      "name": "Konstruktion",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "konstruktionsschritt",
+      "name": "Konstruktionsschritt",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "koordinaten_gueltig",
+      "name": "Koordinaten gültig",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "kopfdurchmesser",
+      "name": "Kopfdurchmesser",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "kranz_aus_holzsegmenten",
+      "name": "Kranz aus Holzsegmenten",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "kruemmlingbreite",
+      "name": "Krümmlingbreite",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "kumpfbohrungen",
+      "name": "Kumpfbohrungen",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "laenge",
+      "name": "Länge",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "laenge_gebogener_nagel",
+      "name": "Länge gebogener Nagel",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "laenge_gedruckt",
+      "name": "Länge (gedruckt)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "laenge_handschriftlich",
+      "name": "Länge (handschriftlich)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "laenge_oberer_querbalken",
+      "name": "Länge oberer Querbalken",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "laenge_skizze",
+      "name": "Länge (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "laenge_variante_a",
+      "name": "Länge Variante A",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "laenge_variante_b",
+      "name": "Länge Variante B",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "laenge_variante_c",
+      "name": "Länge Variante C",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "laengenpaar",
+      "name": "Längenpaar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "lage_des_auflagers",
+      "name": "Lage des Auflagers",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "landseitig_abgeschraegt",
+      "name": "Landseitig abgeschrägt",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "lastweg_und_sicherung",
+      "name": "Lastweg und Sicherung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "lichte_weite_land_wasser",
+      "name": "Lichte Weite Land–Wasser",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "lichte_weite_parallel_zum_ufer",
+      "name": "Lichte Weite parallel zum Ufer",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "lichter_abstand_der_innenflaechen",
+      "name": "Lichter Abstand der Innenflächen",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "lochabstand",
+      "name": "Lochabstand",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "lochabstand_links_gedruckt",
+      "name": "Lochabstand links (gedruckt)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "lochabstand_links_handschriftlich",
+      "name": "Lochabstand links (handschriftlich)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "lochabstand_rechts",
+      "name": "Lochabstand rechts",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "lochabstand_skizze",
+      "name": "Lochabstand (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "lochdurchmesser",
+      "name": "Lochdurchmesser",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "lochdurchmesser_skizze",
+      "name": "Lochdurchmesser (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "loecher_je_ende",
+      "name": "Löcher je Ende",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "loecher_je_gebohrter_daube",
+      "name": "Löcher je gebohrter Daube",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "mass_ausrichten_an_armnummern",
+      "name": "Maß ausrichten an Armnummern",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "mass_der_mittleren_armoeffnung",
+      "name": "Maß der mittleren Armöffnung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "massstab_variante_a",
+      "name": "Maßstab Variante A",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "massstab_variante_b",
+      "name": "Maßstab Variante B",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "material",
+      "name": "Material",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "material_laut_beschreibung",
+      "name": "Material laut Beschreibung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "mehrere_reifen_sichtbar",
+      "name": "Mehrere Reifen sichtbar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "metallband_mit_sechskantkopf_sichtbar",
+      "name": "Metallband mit Sechskantkopf sichtbar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "mittelloch",
+      "name": "Mittelloch",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "naegel_je_kumpfbefestigung",
+      "name": "Nägel je Kumpfbefestigung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "naegel_und_sicherung",
+      "name": "Nägel und Sicherung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "name_in_der_scan_app",
+      "name": "Name in der Scan-App",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "neigung_der_stirnseiten_skizze",
+      "name": "Neigung der Stirnseiten (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "nicht_mannigfaltige_kanten_im_scan",
+      "name": "Nicht-mannigfaltige Kanten im Scan",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "nieten_am_ringstoss",
+      "name": "Nieten am Ringstoß",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "nummern_des_mittelarms",
+      "name": "Nummern des Mittelarms",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "nutabstand_vom_boden_variante_a",
+      "name": "Nutabstand vom Boden, Variante A",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "nutabstand_vom_boden_variante_b",
+      "name": "Nutabstand vom Boden, Variante B",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "obere_verbindung",
+      "name": "Obere Verbindung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "oberflaeche",
+      "name": "Oberfläche",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "offener_holztrog_sichtbar",
+      "name": "Offener Holztrog sichtbar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ortsuebliche_bezeichnung",
+      "name": "Ortsübliche Bezeichnung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "pfosten_und_querbalken_sichtbar",
+      "name": "Pfosten und Querbalken sichtbar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "projektziel",
+      "name": "Projektziel",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "punkte_im_scan",
+      "name": "Punkte im Scan",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "quelle_fuer_beinlaenge",
+      "name": "Quelle für Beinlänge",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "quermass_skizze",
+      "name": "Quermaß (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "querschnitt",
+      "name": "Querschnitt",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "querschnitt_breite_x_hoehe",
+      "name": "Querschnitt Breite × Höhe",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "querschnittsform",
+      "name": "Querschnittsform",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "radiale_hoehe_notiz",
+      "name": "Radiale Höhe (Notiz)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "randkanten_im_scan",
+      "name": "Randkanten im Scan",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "referenz_kumpf_mit_den_richtigen_massen",
+      "name": "Referenz-Kumpf mit den richtigen Maßen",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "reichen_von_kranz_zu_kranz",
+      "name": "Reichen von Kranz zu Kranz",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "reifen_je_kumpf",
+      "name": "Reifen je Kumpf",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "reihenfolge_der_sechs_positionen_von_oben_gegen_den_uhrzeigersinn",
+      "name": "Reihenfolge der sechs Positionen, von oben gegen den Uhrzeigersinn",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "reihenfolge_der_sechs_positionen_von_oben_im_uhrzeigersinn",
+      "name": "Reihenfolge der sechs Positionen, von oben im Uhrzeigersinn",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "riegellaenge",
+      "name": "Riegellänge",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "riegelquerschnitt",
+      "name": "Riegelquerschnitt",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ringbreite",
+      "name": "Ringbreite",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ringlaengen_andere_reihe",
+      "name": "Ringlängen (andere Reihe)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ringueberlappung",
+      "name": "Ringüberlappung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "scan_kontext_beim_fachkenner_vorhanden",
+      "name": "Scan-Kontext beim Fachkenner vorhanden",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "schaftdurchmesser_geschnitzt",
+      "name": "Schaftdurchmesser geschnitzt",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "schluesselweiten_varianten",
+      "name": "Schlüsselweiten (Varianten)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "schritt_der_feinteilung",
+      "name": "Schritt der Feinteilung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "schulterkloetze_sichtbar",
+      "name": "Schulterklötze sichtbar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "segmente_je_kranz_laut_beschreibung",
+      "name": "Segmente je Kranz laut Beschreibung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "sehnenmasse",
+      "name": "Sehnenmaße",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "seitenhoehe_skizze",
+      "name": "Seitenhöhe (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "seitenmasse",
+      "name": "Seitenmaße",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "seitenwinkel",
+      "name": "Seitenwinkel",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "seitenwinkel_skizze",
+      "name": "Seitenwinkel (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "sektorwinkel_skizze",
+      "name": "Sektorwinkel (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "sicherung_des_armsitzes",
+      "name": "Sicherung des Armsitzes",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "sichtbare_kranzebenen",
+      "name": "Sichtbare Kranzebenen",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "spalte_durchmesser",
+      "name": "Spalte Durchmesser",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "spalte_einbau",
+      "name": "Spalte Einbau",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "spanne_der_feinteilung",
+      "name": "Spanne der Feinteilung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "staerke",
+      "name": "Stärke",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "staerke_am_ende",
+      "name": "Stärke am Ende",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "staerke_variante_a",
+      "name": "Stärke Variante A",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "staerke_variante_b",
+      "name": "Stärke Variante B",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "stehen_ueber_den_kranz_hinaus",
+      "name": "Stehen über den Kranz hinaus",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "stellung_zum_rad",
+      "name": "Stellung zum Rad",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "stossbereich_notiz",
+      "name": "Stoßbereich (Notiz)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "stueckzahl",
+      "name": "Stückzahl",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "stueckzahl_je_laenge",
+      "name": "Stückzahl je Länge",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "symmetrie",
+      "name": "Symmetrie",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "teilungsschritt",
+      "name": "Teilungsschritt",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "tiefe_der_aussparung_skizze",
+      "name": "Tiefe der Aussparung (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "tiefe_des_auslasses_notiz",
+      "name": "Tiefe des Auslasses (Notiz)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "tiefe_skizze",
+      "name": "Tiefe (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ueberlappungskloetze_an_den_stoessen_sichtbar",
+      "name": "Überlappungsklötze an den Stößen sichtbar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ueberstehende_holzkeile_sichtbar",
+      "name": "Überstehende Holzkeile sichtbar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ueberstehende_stifte_am_kranz",
+      "name": "Überstehende Stifte am Kranz",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "unterer_teil_unter_wasser_oder_verdeckt",
+      "name": "Unterer Teil unter Wasser oder verdeckt",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "unterseite_rinnenboden_ueber_gelaende",
+      "name": "Unterseite Rinnenboden über Gelände",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "verbinden_welle_und_kranz",
+      "name": "Verbinden Welle und Kranz",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "verbindung_am_stoss",
+      "name": "Verbindung am Stoß",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "verbindung_zur_welle",
+      "name": "Verbindung zur Welle",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "verdeckt_das_rad",
+      "name": "Verdeckt das Rad",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "versatz_der_aeusseren_armoeffnungen",
+      "name": "Versatz der äußeren Armöffnungen",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "vieleck_teilung",
+      "name": "Vieleck-Teilung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "wandstaerke_skizze",
+      "name": "Wandstärke (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "wasserweg_laut_beschreibung",
+      "name": "Wasserweg laut Beschreibung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "weitere_laengen_skizze",
+      "name": "Weitere Längen (Skizze)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "wellenende_verdeckt",
+      "name": "Wellenende verdeckt",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "winkel_brettebene_zum_kranz",
+      "name": "Winkel Brettebene zum Kranz",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ziffern_zeigen_nach",
+      "name": "Ziffern zeigen nach",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ziffern_zeigen_nach_wasserseitig",
+      "name": "Ziffern zeigen nach (wasserseitig)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ziffernform_landseitig",
+      "name": "Ziffernform landseitig",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ziffernform_wasserseitig",
+      "name": "Ziffernform wasserseitig",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "zuerst_eingebaute_armenden",
+      "name": "Zuerst eingebaute Armenden",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "zusaetzliche_bohrungen_je_kumpf",
+      "name": "Zusätzliche Bohrungen je Kumpf",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "zwei_getrennte_armzonen_sichtbar",
+      "name": "Zwei getrennte Armzonen sichtbar",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "zweite_laenge_skizze",
+      "name": "Zweite Länge (Skizze)",
+      "kategorie": "eigenschaft"
+    }
   ]
 }

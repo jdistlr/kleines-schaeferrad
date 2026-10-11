@@ -9,7 +9,7 @@
       "begriff": "B-WELLE",
       "art": "teil",
       "teil_von": "COMP-WHEEL",
-      "anzahl": "one",
+      "anzahl": "eine",
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
@@ -22,8 +22,8 @@
       "begriff": "B-ARMZONE",
       "art": "zone",
       "teil_von": "COMP-SHAFT",
-      "anzahl": "one",
-      "hinweis": "Armzone is not a proven separate hub component.",
+      "anzahl": "eine",
+      "hinweis": "Bereich der Welle, kein eigenes Bauteil.",
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-HUB-LAND"
@@ -35,8 +35,8 @@
       "begriff": "B-ARMZONE",
       "art": "zone",
       "teil_von": "COMP-SHAFT",
-      "anzahl": "one",
-      "hinweis": "Armzone is not a proven separate hub component.",
+      "anzahl": "eine",
+      "hinweis": "Bereich der Welle, kein eigenes Bauteil.",
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-HUB-WATER"
@@ -48,7 +48,7 @@
       "begriff": "B-ARM",
       "art": "teil",
       "teil_von": "COMP-WHEEL",
-      "anzahl": "3 per side (historical/external); current uncounted",
+      "anzahl": "drei Armtypen je Armzone, jeder Typ zweimal im Rad (mündlich); heute noch nicht gezählt",
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
@@ -61,7 +61,7 @@
       "begriff": "B-KRANZ",
       "art": "baugruppe",
       "teil_von": "COMP-RIMS",
-      "anzahl": "one",
+      "anzahl": "einer",
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
@@ -74,7 +74,7 @@
       "begriff": "B-KRANZ",
       "art": "baugruppe",
       "teil_von": "COMP-RIMS",
-      "anzahl": "one",
+      "anzahl": "einer",
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
@@ -87,7 +87,7 @@
       "begriff": "B-KRANZ",
       "art": "baugruppe",
       "teil_von": "COMP-WHEEL",
-      "anzahl": "2 visible",
+      "anzahl": "zwei",
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
@@ -100,7 +100,7 @@
       "begriff": "B-KRUEMMLING",
       "art": "teil",
       "teil_von": "COMP-RIMS",
-      "anzahl": "6 per ring (historical/external)",
+      "anzahl": "sechs je Kranz laut Skizze",
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
@@ -113,8 +113,8 @@
       "begriff": "B-KUMPF",
       "art": "baugruppe",
       "teil_von": "COMP-WHEEL",
-      "anzahl": "24 external expected; current uncounted",
-      "hinweis": "Referenz-Kumpf durch ThorstenHalsch fachlich beschrieben: 12 Dauben, 1 Nutboden, 3 Metallbänder; benachbarte Kümpfe überlappen. Aktuelle Gesamtzahl/Einbaupose weiterhin vor Ort zu verifizieren.",
+      "anzahl": "24 laut Veröffentlichung; heute noch nicht gezählt",
+      "hinweis": "Referenz-Kumpf laut Thorsten: 12 Dauben, ein Boden in der Nut, drei Metallreifen; benachbarte Kümpfe überlappen.",
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-KUEMPFE"
@@ -126,8 +126,8 @@
       "begriff": "B-DAUBE",
       "art": "teil",
       "teil_von": "COMP-KUEMPFE",
-      "anzahl": "12 per photographed reference Kumpf (expert-confirmed); all-vessel equivalence to verify",
-      "hinweis": "Zwei der zwölf Dauben besitzen laut Fachauskunft je zwei Löcher für Kumpfnägel. Boden sitzt in einer Einfräsung der Dauben.",
+      "anzahl": "zwölf je Kumpf (am Referenz-Kumpf); ob alle Kümpfe gleich sind, ist offen",
+      "hinweis": "Zwei der zwölf Dauben haben je zwei Löcher für die Kumpfnägel. Der Boden sitzt in einer Nut der Dauben.",
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-KUMPF-STAVES"
@@ -139,8 +139,8 @@
       "begriff": "B-KUMPFBODEN",
       "art": "teil",
       "teil_von": "COMP-KUEMPFE",
-      "anzahl": "1 per photographed reference Kumpf (expert-confirmed)",
-      "hinweis": "Referenzboden sitzt laut Fachauskunft in einer Einfräsung der Dauben; exakte Nut-/Bodengeometrie bleibt zu messen.",
+      "anzahl": "einer je Kumpf",
+      "hinweis": "Sitzt in einer Nut der Dauben; Nut- und Bodenmaße noch nicht gemessen.",
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-KUMPF-BASE"
@@ -152,8 +152,8 @@
       "begriff": "B-KUMPFREIFEN",
       "art": "teil",
       "teil_von": "COMP-KUEMPFE",
-      "anzahl": "3 metal hoops per photographed reference Kumpf (expert-confirmed); historical dimension variants exist",
-      "hinweis": "Drei Metallbänder am Referenz-Kumpf; historische Zeichnungen zeigen gefertigte Maßvarianten, deren numerische Zuordnung noch offen ist.",
+      "anzahl": "drei Metallreifen je Kumpf; es gab gefertigte Maßvarianten",
+      "hinweis": "Welche Längenreihe aus den Skizzen zum Referenz-Kumpf gehört, ist offen (F-019).",
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-KUMPF-HOOPS"
@@ -165,8 +165,8 @@
       "begriff": "B-FLUEGELBRETT",
       "art": "teil",
       "teil_von": "COMP-WHEEL",
-      "anzahl": "24 external expected; current uncounted",
-      "hinweis": "Thorsten: Brettfläche 90° zur Kranzebene. Der radiale Anstellwinkel, die Einbaulage und Scanregistrierung bleiben ungeklärt; keine bestätigte Ist-Metrik.",
+      "anzahl": "24 laut Veröffentlichung; heute noch nicht gezählt",
+      "hinweis": "Laut Thorsten steht die Brettfläche 90° zur Kranzebene. Anstellung und genaue Lage sind offen.",
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-PADDLES"
@@ -178,8 +178,8 @@
       "begriff": "B-BEFESTIGUNG",
       "art": "teil",
       "teil_von": "COMP-WHEEL",
-      "anzahl": "historical subtypes only; current uncounted",
-      "hinweis": "Enthält mehrere Fastener-Familien. Kumpfnägel werden ab Baseline v3 als eigene Unterfamilie geführt; ihre Lang-/Kurzfunktion ist fachlich durch Kumpfüberlappung erklärt.",
+      "anzahl": "nur aus historischen Unterlagen; heute nicht gezählt",
+      "hinweis": "Sammelgruppe für Keile, Stifte und Bänder. Kumpfnägel, Wellenkeil und Stoßkeile sind inzwischen eigene Bauteile.",
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-FASTENERS"
@@ -191,8 +191,8 @@
       "begriff": "B-KUMPFNAGEL",
       "art": "teil",
       "teil_von": "COMP-KUEMPFE",
-      "anzahl": "2 per photographed reference Kumpf attachment: one long, one short (expert-confirmed); current all-vessel equivalence to verify",
-      "hinweis": "Fachlich bestätigte Funktion: Befestigung des Kumpfs am Krümmling durch gelochte Dauben. Unterschiedliche Länge wird durch Überlappung benachbarter Kümpfe erklärt. Exakter Nagelweg, Längen und Sitze bleiben metrisch offen.",
+      "anzahl": "zwei je Kumpf, ein langer und ein kurzer",
+      "hinweis": "Befestigen den Kumpf durch die gelochten Dauben am Krümmling. Längen und genauer Nagelweg sind noch nicht gemessen.",
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-KUMPF-NAILS"
@@ -204,7 +204,7 @@
       "begriff": "B-LAGER",
       "art": "zone",
       "teil_von": "COMP-WHEEL",
-      "anzahl": "2 external expected; current centres unknown",
+      "anzahl": "zwei; Lage der Lagermitten offen",
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
@@ -217,7 +217,7 @@
       "begriff": "B-RADSTADT",
       "art": "baugruppe",
       "teil_von": "ANLAGE",
-      "anzahl": "one",
+      "anzahl": "eine",
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
@@ -230,7 +230,7 @@
       "begriff": "B-SCHOEPFTROG",
       "art": "baugruppe",
       "teil_von": "COMP-WATERWAY",
-      "anzahl": "one visible",
+      "anzahl": "einer",
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
@@ -243,7 +243,7 @@
       "begriff": "B-RINNE",
       "art": "baugruppe",
       "teil_von": "COMP-CHANNEL",
-      "anzahl": "one visible; downstream unknown",
+      "anzahl": "einer",
       "hinweis": "Rinne 1 (hinter Trog), nach Skizze IMG_6830.",
       "herkunft": {
         "datei": "data/components.json",
@@ -256,7 +256,7 @@
       "begriff": "B-BIEGEMATRIZE",
       "art": "werkzeug",
       "teil_von": null,
-      "anzahl": "3 historical",
+      "anzahl": "drei laut Unterlage",
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
@@ -269,7 +269,7 @@
       "begriff": "B-VORLAGE",
       "art": "vorlage",
       "teil_von": null,
-      "anzahl": "unknown",
+      "anzahl": null,
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
@@ -282,7 +282,7 @@
       "begriff": "B-VORLAGE",
       "art": "vorlage",
       "teil_von": null,
-      "anzahl": "unknown",
+      "anzahl": null,
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
@@ -295,7 +295,7 @@
       "begriff": "B-VORLAGE",
       "art": "vorlage",
       "teil_von": null,
-      "anzahl": "3 length variants",
+      "anzahl": "drei Längenvarianten",
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
@@ -308,8 +308,8 @@
       "begriff": "B-LAGERBOCK",
       "art": "baugruppe",
       "teil_von": "COMP-RADSTATT",
-      "anzahl": "mehrere sichtbar; genaue Zuordnung noch offen",
-      "hinweis": "Stationärer Kontext. Lage und Maße im 3D-Modell sind bis zur Feldaufnahme nur Arbeitsannahmen.",
+      "anzahl": "zwei, je Seite einer",
+      "hinweis": "Lage und Maße sind noch nicht aufgenommen.",
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-BEARING-STANDS"
@@ -321,8 +321,8 @@
       "begriff": "B-RAHMEN",
       "art": "baugruppe",
       "teil_von": "COMP-RADSTATT",
-      "anzahl": "mehrere Hölzer sichtbar; genaue Stückliste offen",
-      "hinweis": "Umgebendes Tragwerk des Rades; noch nicht als reale Einzelteile inventarisiert.",
+      "anzahl": "mehrere; Stückliste offen",
+      "hinweis": "Noch nicht als einzelne Hölzer inventarisiert.",
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-FRAME-MAIN"
@@ -334,8 +334,8 @@
       "begriff": "B-RAHMEN",
       "art": "baugruppe",
       "teil_von": "COMP-RADSTATT",
-      "anzahl": "teilweise sichtbar; genaue Topologie offen",
-      "hinweis": "Ghosted Kontext für Aufnahmeplanung; keine freigegebene Ist-Geometrie.",
+      "anzahl": "mehrere; Aufbau offen",
+      "hinweis": "Noch nicht als einzelne Hölzer inventarisiert.",
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-FRAME-LOWER"
@@ -347,8 +347,8 @@
       "begriff": "B-RAHMEN",
       "art": "baugruppe",
       "teil_von": "COMP-RADSTATT",
-      "anzahl": "teilweise sichtbar; Funktion und genaue Lage offen",
-      "hinweis": "Ghosted Kontext; Funktion und Verbindungspartner vor Ort klären.",
+      "anzahl": "mehrere; Funktion offen",
+      "hinweis": "Funktion und Anschlüsse vor Ort klären.",
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-FRAME-SIDE"
@@ -360,8 +360,8 @@
       "begriff": "B-SCHETTERNBRETT",
       "art": "baugruppe",
       "teil_von": "COMP-RIMS",
-      "anzahl": "expert topology; physical inventory open",
-      "hinweis": "New canonical family mapped from reviewed intake; no measured physical-instance promotion.",
+      "anzahl": "je Krümmlingstoß und Seite eines",
+      "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-SCHETTERNBRETTER"
@@ -373,8 +373,8 @@
       "begriff": "B-HOLZBAND",
       "art": "baugruppe",
       "teil_von": "COMP-PADDLES",
-      "anzahl": "expert topology; physical inventory open",
-      "hinweis": "New canonical family mapped from reviewed intake; no measured physical-instance promotion.",
+      "anzahl": "je Flügelbrett, Anzahl offen",
+      "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-WOOD-BANDS"
@@ -386,7 +386,7 @@
       "begriff": "B-LAGERBOCK",
       "art": "baugruppe",
       "teil_von": "COMP-RADSTATT",
-      "anzahl": "expert topology; physical inventory open",
+      "anzahl": "einer",
       "hinweis": "Vermutlich der landseitige Lagerbock der Radstadt; Identität siehe F-004.",
       "herkunft": {
         "datei": "data/components.json",
@@ -399,8 +399,8 @@
       "begriff": "B-A-BOCK",
       "art": "baugruppe",
       "teil_von": "COMP-WATERWAY",
-      "anzahl": "expert topology; physical inventory open",
-      "hinweis": "New canonical family mapped from reviewed intake; no measured physical-instance promotion.",
+      "anzahl": "einer",
+      "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-A-BOCK"
@@ -412,8 +412,8 @@
       "begriff": "B-RINNE",
       "art": "baugruppe",
       "teil_von": "COMP-WATERWAY",
-      "anzahl": "expert topology; physical inventory open",
-      "hinweis": "New canonical family mapped from reviewed intake; no measured physical-instance promotion.",
+      "anzahl": "zwei Teile",
+      "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-CHANNEL"
@@ -425,8 +425,8 @@
       "begriff": "B-SCHELLE",
       "art": "baugruppe",
       "teil_von": "COMP-SHAFT",
-      "anzahl": "expert topology; physical inventory open",
-      "hinweis": "New canonical family mapped from reviewed intake; no measured physical-instance promotion.",
+      "anzahl": "zwei je Wellenende, vier insgesamt",
+      "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
         "id": "COMP-SHAFT-CLAMPS"

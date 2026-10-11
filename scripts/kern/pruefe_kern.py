@@ -24,7 +24,7 @@ QUELLEN_ARTEN = {"foto", "skizze", "scan", "video", "aussage", "kontext", "ablei
 FRAGE_STATUS = {"offen", "beantwortet", "verworfen"}
 PHASEN = {"aufbau", "abbau", "pflege"}
 TOLERANZ_ARTEN = {"bereich", "plusminus", "ungefaehr", "vereinfachung"}
-KATEGORIEN = {"kernbegriff", "bauteil", "werkzeug", "ort", "beziehungsart"}
+KATEGORIEN = {"kernbegriff", "bauteil", "werkzeug", "ort", "beziehungsart", "eigenschaft"}
 DATUM = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 DATEIEN = {
@@ -103,7 +103,7 @@ def pruefe(kern_dir, root=ROOT, altdaten=True):
     for b in begriffe.values():
         if b.get("kategorie") not in KATEGORIEN:
             F(f"{b['id']}: unbekannte Kategorie {b.get('kategorie')}")
-        if not b.get("definition"):
+        if not b.get("definition") and b.get("kategorie") != "eigenschaft":
             F(f"{b['id']}: Definition fehlt")
         for wort in [b["name"]] + b.get("aliase", []):
             key = wort.casefold()
@@ -115,6 +115,7 @@ def pruefe(kern_dir, root=ROOT, altdaten=True):
                 F(f"{b['id']}: nicht_verwechseln_mit verweist auf unbekannten Begriff {n}")
     beziehungsarten = {k for k, b in begriffe.items() if b["kategorie"] == "beziehungsart"}
     werkzeugbegriffe = {k for k, b in begriffe.items() if b["kategorie"] == "werkzeug"}
+    eigenschaften = {k for k, b in begriffe.items() if b["kategorie"] == "eigenschaft"}
 
     def person_ok(p, wo):
         if p is not None and p not in personen:
@@ -180,6 +181,8 @@ def pruefe(kern_dir, root=ROOT, altdaten=True):
         wo = a["id"]
         if a["ziel"] not in bauteile and a["ziel"] not in beziehungen and a["ziel"] not in quellen:
             F(f"{wo}: Ziel {a['ziel']} ist weder Bauteil, Beziehung noch Quelle")
+        if a["eigenschaft"] not in eigenschaften:
+            F(f"{wo}: Eigenschaft {a['eigenschaft']} fehlt im Glossar (kategorie eigenschaft, deutscher Name)")
         if a["grundlage"] not in GRUNDLAGEN:
             F(f"{wo}: Grundlage {a['grundlage']} unbekannt")
         if a.get("einheit") not in EINHEITEN:

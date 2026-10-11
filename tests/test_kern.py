@@ -119,6 +119,10 @@ class KernTest(unittest.TestCase):
             json.dump(z, f)
         self.erwarte_fehler("CLAIM-0001 ist im Kern nicht abgebildet")
 
+    def test_eigenschaft_ohne_deutschen_namen(self):
+        self.aendere("angaben", lambda d: self.angabe(d, "CLAIM-0001").update(eigenschaft="drawn_overall_length"))
+        self.erwarte_fehler("fehlt im Glossar")
+
     def test_angabe_ohne_quelle(self):
         self.aendere("angaben", lambda d: self.angabe(d, "CLAIM-0001").update(quellen=[]))
         self.erwarte_fehler("keine Quelle")

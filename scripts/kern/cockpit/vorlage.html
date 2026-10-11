@@ -232,7 +232,7 @@ table.ordner td { padding: 7px 12px 7px 0; border-bottom: 1px solid var(--linie)
   </section>
 
   <footer class="fuss">
-    <span>Erzeugt aus dem Wissenskern (<code>kern/</code>) mit <code>scripts/kern/baue_cockpit.py</code>.</span>
+    <span>Erzeugt aus dem Wissenskern (<code>kern/</code>), Stand <span id="quelle-commit"></span>.</span>
     <span>Nur lesen. Änderungen am Kern per Pull Request.</span>
   </footer>
 </div>
@@ -286,6 +286,7 @@ const bestaetigt = S.gueltigkeit.bestaetigt || 0, gemessen = S.grundlage.messung
 $("#stand").textContent = "Wissenskern, Stand " + new Date(K.stand).toLocaleDateString("de-DE", { day: "numeric", month: "long", year: "numeric" });
 $("#lage").innerHTML = `${zahl(S.angaben)} Angaben. Bestätigt sind ${bestaetigt ? zahl(bestaetigt) : "noch keine"}, am Rad gemessen ${gemessen ? zahl(gemessen) : "noch keine"}. ${zahl(S.fragen_offen)} Fragen sind offen.`;
 $("#n-teile").textContent = K.bauteile.length;
+$("#quelle-commit").innerHTML = K.commit ? `<a href="https://github.com/jdistlr/kleines-schaeferrad/tree/${K.commit}/kern" target="_blank" rel="noopener">Commit ${K.commit}</a>` : "lokal";
 $("#n-fragen").textContent = S.fragen_offen;
 $("#n-quellen").textContent = S.quellen;
 
@@ -404,7 +405,7 @@ const GRUND = { messung: "Gemessen", muendlich: "Mündlich überliefert", skizze
   ableitung: "Abgeleitet", annahme: "Annahme", kontext: "Kontext", holzliste: "Allgemeine Holzliste", fremdvorlage: "Fremde Vorlagen" };
 const GUELT = { offen: "offen", bestaetigt: "bestätigt", historisch: "historisch", ueberholt: "überholt", verworfen: "verworfen" };
 const REIHENFOLGE = ["messung", "muendlich", "skizze", "foto", "ableitung", "annahme", "scan", "kontext"];
-const eig = s => s.replaceAll("_", " ");
+const eig = s => begriffe[s]?.name || s.replaceAll("_", " ");
 
 function frageHtml(f) {
   const vor = f.haengt_ab_von.map(x => `<button data-frage="${x}">${x}</button>`).join(", ");
