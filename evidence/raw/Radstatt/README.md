@@ -4,6 +4,8 @@
 
 **Nutzervorgabe vom 11.10.2026:** Obere Balken vereinfacht **40 cm breit × 20 cm hoch**. Naturmaterial hat unterschiedliche Brettstärken und Balkenbreiten. Die Maßvorgabe ist keine individuelle Messung jedes Holzes. Siehe [Radstadt-Befund](../Radstadt/BEFUND.md) und [Astra-Übergabe](../../../state/NEXT-ASTRA-WORK-SESSION.md).
 
+**Lichte Öffnung, Nutzerangabe vom 11.10.2026:** **4,40 m parallel zum Land/Ufer × 2,40 m vom Land zum Wasser**, jeweils zwischen den Innenflächen der begrenzenden Balken.
+
 Drei Übersichtsaufnahmen wurden visuell geöffnet; der Bildsatz ist noch nicht vollständig metrisch ausgewertet. Die Fotos bleiben unverändert. Weitere Maße und Verbindungen bei der nächsten gezielten Auswertung anhand der Originalbilder prüfen.
 
 | Foto | Stand der Sichtung |
