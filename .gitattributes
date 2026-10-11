@@ -8,3 +8,7 @@ evidence/derived/*.jpg -text -filter -diff -merge
 *.png binary
 *.jpg binary
 *.gz binary
+
+# Text-Befunde in den Evidenzordnern bleiben diffbar und reviewbar (11.10.2026).
+evidence/raw/**/*.md text diff
+evidence/raw/**/*.json text diff
