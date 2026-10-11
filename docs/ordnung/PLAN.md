@@ -78,3 +78,8 @@ Das Projekt hat in fünf Tagen viel Wissen gesammelt, aber die Wahrheit liegt ve
 - Kein Löschen von Originalen oder Befunden.
 - Keine GitHub Actions (siehe [`AGENTS.md`](../../AGENTS.md)).
 - Keine Veröffentlichung auf GitHub Pages ohne ausdrückliche Freigabe.
+
+## Entscheidungen und Vormerkungen
+
+- **12.10.2026 – Hosting:** Johannes erwägt, Cockpit und Forschungsseite von GitHub Pages auf seinen eigenen Webspace mit PHP und MySQL zu übertragen. Dort sollen Antworten und Mehrfachantworten dauerhaft gespeichert werden. Das Cockpit ist darauf vorbereitet (`--api`), die Schnittstelle steht in [ANTWORTEN-SCHNITTSTELLE.md](ANTWORTEN-SCHNITTSTELLE.md). Bis dahin: Arbeitsfassung als Claude-Artefakt, öffentliche Seite nur zum Lesen.
+

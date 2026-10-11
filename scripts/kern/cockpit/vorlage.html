@@ -3,321 +3,351 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
 <style>
-/* Layout: Kopfsatz, dann drei Ansichten (Rad, Fragen, Quellen). Rad = Aufriss links, Akte rechts. */
+/* Werkbank: oben eine schmale Leiste, links immer das Rad, rechts eine Karte, die nur in sich scrollt. */
 :root {
-  --papier: #edf1ec;      /* Flusslicht, leicht grün-grau */
-  --flaeche: #f6f8f5;
-  --tinte: #1c2726;       /* Zimmermannsbleistift */
-  --leise: #5f6d6a;
-  --linie: #c5cec9;
-  --wasser: #2b6a76;      /* Auswahl, Bedienung */
-  --wasser-hauch: #d6e6e8;
-  --roetel: #a5412a;      /* offene Fragen, wie Rötel auf Bauholz */
-  --eiche: #4f6f2a;       /* bestätigt */
-  --holz: #e2d8c6;        /* beschriebenes Bauteil */
-  --holz-dunkel: #b9a88c;
-  --fluss: #c9dcdc;
+  --papier: #edf1ec; --flaeche: #f6f8f5; --tinte: #1c2726; --leise: #5f6d6a; --linie: #c9d1cc;
+  --wasser: #2b6a76; --wasser-hauch: #d6e6e8; --roetel: #a5412a; --roetel-hauch: #f3e2dc;
+  --eiche: #4f6f2a; --holz: #e2d8c6; --holz-dunkel: #b9a88c; --fluss: #c9dcdc;
   --serif: "Alegreya", "Iowan Old Style", Georgia, serif;
   --sans: "Alegreya Sans", "Gill Sans", "Segoe UI", system-ui, sans-serif;
-  --mass-1: .8125rem; --mass-2: .9375rem; --mass-3: 1.0625rem; --mass-4: 1.375rem; --mass-5: 2rem; --mass-6: 2.75rem;
+  --m1: .8125rem; --m2: .9375rem; --m3: 1.0625rem; --m4: 1.3125rem; --m5: 1.75rem;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --papier: #121817; --flaeche: #1a2120; --tinte: #dfe6e2; --leise: #9aa8a4; --linie: #33403d;
-  --wasser: #86bec7; --wasser-hauch: #20393d; --roetel: #e48c71; --eiche: #a9c77a;
+  --wasser: #86bec7; --wasser-hauch: #20393d; --roetel: #e48c71; --roetel-hauch: #3a2520; --eiche: #a9c77a;
   --holz: #3a352b; --holz-dunkel: #6f6450; --fluss: #1d3033; color-scheme: dark; } }
 :root[data-theme="dark"] {
   --papier: #121817; --flaeche: #1a2120; --tinte: #dfe6e2; --leise: #9aa8a4; --linie: #33403d;
-  --wasser: #86bec7; --wasser-hauch: #20393d; --roetel: #e48c71; --eiche: #a9c77a;
+  --wasser: #86bec7; --wasser-hauch: #20393d; --roetel: #e48c71; --roetel-hauch: #3a2520; --eiche: #a9c77a;
   --holz: #3a352b; --holz-dunkel: #6f6450; --fluss: #1d3033; color-scheme: dark; }
 
 * { box-sizing: border-box; }
-body { background: var(--papier); color: var(--tinte); font: 400 var(--mass-3)/1.5 var(--sans); margin: 0; }
-.seite { max-width: 1240px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 40px); padding-block: 28px 64px; }
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body { background: var(--papier); color: var(--tinte); font: 400 var(--m3)/1.5 var(--sans); margin: 0; }
+button, input, textarea, select { font: inherit; color: inherit; }
 a { color: var(--wasser); text-underline-offset: 3px; }
-button { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--wasser); outline-offset: 2px; border-radius: 3px; }
+.leise { color: var(--leise); }
 .zahl { font-variant-numeric: tabular-nums; }
 
-/* Kopf */
-.kopf { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 32px; align-items: end; padding-bottom: 20px; border-bottom: 1px solid var(--linie); }
-.kopf h1 { font: 700 var(--mass-5)/1.05 var(--serif); margin: 0; letter-spacing: -.01em; }
-.kopf .stand { color: var(--leise); font-size: var(--mass-2); margin: 6px 0 0; }
-.lage { grid-column: 1 / -1; font: 400 clamp(1.375rem, 2.6vw, 2.125rem)/1.25 var(--serif); margin: 22px 0 0; max-width: 34ch; text-wrap: balance; }
-.saison { grid-column: 1 / -1; color: var(--leise); font-size: var(--mass-2); margin: 10px 0 0; max-width: 70ch; }
+.app { height: 100%; display: grid; grid-template-rows: auto minmax(0, 1fr); max-width: 1440px; margin: 0 auto; padding-inline: clamp(16px, 3vw, 32px); }
 
-nav.ansichten { display: flex; gap: 4px; margin: 22px 0 26px; border-bottom: 1px solid var(--linie); flex-wrap: wrap; }
-nav.ansichten button { background: none; border: 0; padding: 10px 14px 12px; cursor: pointer; color: var(--leise); font-size: var(--mass-3); border-bottom: 3px solid transparent; margin-bottom: -1px; }
-nav.ansichten button[aria-selected="true"] { color: var(--tinte); border-bottom-color: var(--wasser); font-weight: 500; }
-nav.ansichten button span { font-variant-numeric: tabular-nums; color: var(--leise); margin-left: 6px; font-size: var(--mass-2); }
+.leiste { display: flex; align-items: center; gap: 10px 24px; flex-wrap: wrap; padding-block: 14px; border-bottom: 1px solid var(--linie); }
+.leiste h1 { font: 700 var(--m4)/1 var(--serif); margin: 0; white-space: nowrap; }
+.leiste h1 a { color: inherit; text-decoration: none; }
+.stand-mini { display: flex; align-items: center; gap: 10px; font-size: var(--m2); color: var(--leise); }
+.stand-mini .balken { width: 120px; height: 6px; border-radius: 3px; background: var(--linie); overflow: hidden; display: flex; }
+.balken i { display: block; height: 100%; }
+.suche { position: relative; margin-left: auto; flex: 0 1 320px; min-width: 200px; }
+.suche input { width: 100%; padding: 8px 12px; border: 1px solid var(--linie); border-radius: 6px; background: var(--flaeche); }
+.suche input::placeholder { color: var(--leise); }
+.treffer-liste { position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 4px); margin: 0; padding: 4px; list-style: none; background: var(--flaeche); border: 1px solid var(--linie); border-radius: 6px; box-shadow: 0 8px 24px rgb(0 0 0 / .12); max-height: 60vh; overflow: auto; }
+.treffer-liste li { padding: 7px 10px; border-radius: 4px; cursor: pointer; }
+.treffer-liste li[aria-selected="true"], .treffer-liste li:hover { background: var(--wasser-hauch); }
+.treffer-liste small { display: block; color: var(--leise); font-size: var(--m1); }
 
-/* Ansicht Rad */
-.rad { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: start; }
-.aufriss { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); }
-.aufriss svg { width: 100%; height: auto; display: block; }
-.aufriss .notiz { color: var(--leise); font-size: var(--mass-1); margin: 4px 0 0; }
-.legende { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 12px 0 0; padding: 0; list-style: none; font-size: var(--mass-2); color: var(--leise); }
-.legende li { display: flex; align-items: center; gap: 8px; }
-.legende svg { width: 26px; height: 14px; flex: none; }
+.werkbank { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(340px, 1fr); gap: 32px; min-height: 0; padding-top: 16px; }
+.rad { min-height: 0; display: flex; flex-direction: column; position: relative; }
+.rad svg#aufriss { width: 100%; height: auto; max-height: calc(100% - 52px); display: block; }
+.legende { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 6px 0 0; padding: 0; list-style: none; font-size: var(--m1); color: var(--leise); }
+.legende li { display: flex; align-items: center; gap: 6px; }
+.legende svg { width: 22px; height: 12px; }
+.etikett { position: absolute; pointer-events: none; background: var(--tinte); color: var(--papier); font-size: var(--m2); padding: 3px 9px; border-radius: 4px; white-space: nowrap; transform: translate(-50%, calc(-100% - 10px)); z-index: 5; }
 
 svg .teil { cursor: pointer; }
-svg .teil .form { fill: var(--holz); stroke: var(--tinte); stroke-width: 1.4; transition: fill .15s; }
+svg .teil .form { fill: var(--holz); stroke: var(--tinte); stroke-width: 1.3; transition: fill .15s; }
+svg .teil .treffer { fill: none; stroke: transparent; stroke-width: 14; pointer-events: stroke; }
 svg .teil.leer .form { fill: none; stroke-dasharray: 4 3; stroke: var(--leise); }
-svg .teil.bestaetigt .form { fill: color-mix(in srgb, var(--eiche) 30%, var(--holz)); }
+svg .teil.bestaetigt .form { fill: color-mix(in srgb, var(--eiche) 32%, var(--holz)); }
 svg .teil:hover .form, svg .teil:focus-visible .form { fill: var(--wasser-hauch); }
-svg .teil.gewaehlt .form { stroke: var(--wasser); stroke-width: 2.6; fill: var(--wasser-hauch); }
+svg .teil.gewaehlt .form { stroke: var(--wasser); stroke-width: 2.4; fill: var(--wasser-hauch); }
 svg .teil:focus-visible { outline: none; }
-svg .marke circle { fill: var(--roetel); }
-svg .marke text { fill: var(--papier); font: 700 11px var(--sans); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+svg .marke circle { fill: var(--roetel); stroke: var(--papier); stroke-width: 2; }
+svg .marke text { fill: #fff; font: 700 12px var(--sans); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
 svg .fluss { fill: var(--fluss); }
 svg .welle { fill: none; stroke: var(--wasser); stroke-width: 1; opacity: .7; }
 svg .gelaende { fill: none; stroke: var(--leise); stroke-width: 1.2; }
-svg .gelaende-schraffur { stroke: var(--linie); stroke-width: 1; }
-svg .beschriftung { fill: var(--leise); font: 400 12px var(--sans); }
+svg .schraffur { stroke: var(--linie); stroke-width: 1; }
 svg .wasserweg { fill: none; stroke: var(--wasser); stroke-width: 1.2; stroke-dasharray: 2 5; stroke-linecap: round; }
 
-/* Akte */
-.akte { min-width: 0; }
-.akte .pfad { color: var(--leise); font-size: var(--mass-2); margin: 0 0 4px; }
-.akte .pfad button { background: none; border: 0; padding: 0; color: var(--wasser); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
-.akte h2 { font: 700 var(--mass-5)/1.1 var(--serif); margin: 0; text-wrap: balance; }
-.akte .definition { font: italic 400 var(--mass-3)/1.45 var(--serif); color: var(--leise); margin: 8px 0 0; max-width: 60ch; }
-.akte .auch { font-size: var(--mass-2); color: var(--leise); margin: 6px 0 0; }
-.akte .bilanz { margin: 16px 0 0; font-size: var(--mass-3); }
-.akte .hinweis { margin: 10px 0 0; padding: 10px 14px; background: var(--flaeche); border-left: 3px solid var(--holz-dunkel); font-size: var(--mass-2); max-width: 64ch; }
-.akte h3 { font: 500 var(--mass-4)/1.2 var(--serif); margin: 30px 0 10px; }
-.akte h3 small { font: 400 var(--mass-2) var(--sans); color: var(--leise); margin-left: 6px; }
+.karte { min-height: 0; overflow-y: auto; padding: 4px 6px 48px 2px; overscroll-behavior: contain; }
+.zurueck { background: none; border: 0; padding: 4px 0; color: var(--wasser); cursor: pointer; font-size: var(--m2); }
+.pfad { color: var(--leise); font-size: var(--m2); margin: 8px 0 2px; }
+.karte h2 { font: 700 var(--m5)/1.12 var(--serif); margin: 0; text-wrap: balance; }
+.karte h2.frage-titel { font-weight: 500; }
+.karte h3 { font: 500 var(--m4)/1.2 var(--serif); margin: 28px 0 10px; }
+.karte h3 small { font: 400 var(--m2) var(--sans); color: var(--leise); margin-left: 6px; }
+.definition { font: italic 400 var(--m3)/1.45 var(--serif); color: var(--leise); margin: 6px 0 0; max-width: 58ch; }
+.auch { font-size: var(--m2); color: var(--leise); margin: 6px 0 0; }
+.hinweis { margin: 12px 0 0; padding: 10px 14px; background: var(--flaeche); border-left: 3px solid var(--holz-dunkel); font-size: var(--m2); max-width: 62ch; }
+.einstieg { font: 400 var(--m4)/1.35 var(--serif); margin: 0; max-width: 36ch; text-wrap: balance; }
+.klein { font-size: var(--m2); margin: 0 0 4px; }
 
-.frage { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 12px; padding: 12px 0; border-top: 1px solid var(--linie); }
-.frage:last-child { border-bottom: 1px solid var(--linie); }
-.frage .fid { color: var(--roetel); font-weight: 700; font-variant-numeric: tabular-nums; font-size: var(--mass-2); padding-top: 2px; }
-.frage p { margin: 0; }
-.frage .unter { grid-column: 2; color: var(--leise); font-size: var(--mass-2); }
-.frage .unter button { background: none; border: 0; padding: 0; color: var(--wasser); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.wissen { margin: 18px 0 0; padding: 14px 16px; background: var(--flaeche); border: 1px solid var(--linie); border-radius: 8px; }
+.wissen .balken { display: flex; height: 10px; border-radius: 5px; overflow: hidden; background: var(--linie); }
+.wissen p { margin: 10px 0 0; font-size: var(--m2); }
+.wissen dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 12px 0 0; }
+.wissen dt { font-size: var(--m1); color: var(--leise); }
+.wissen dd { margin: 0; font: 500 var(--m4)/1.1 var(--serif); font-variant-numeric: tabular-nums; }
+.wissen dd span { font: 400 var(--m2) var(--sans); color: var(--leise); }
 
-table.angaben { width: 100%; border-collapse: collapse; font-size: var(--mass-2); }
-table.angaben th { text-align: left; font-weight: 500; color: var(--leise); padding: 6px 10px 6px 0; border-bottom: 1px solid var(--linie); }
-table.angaben td { padding: 8px 10px 8px 0; border-bottom: 1px solid var(--linie); vertical-align: top; }
-table.angaben td.wert { font-variant-numeric: tabular-nums; font-weight: 500; white-space: nowrap; }
-table.angaben td:first-child { width: 48%; overflow-wrap: anywhere; }
-table.angaben .bezug { font-size: var(--mass-1); color: var(--leise); margin-top: 2px; }
-table.angaben td.wert.lang { white-space: normal; font-weight: 400; }
-table.angaben .gruppe td { padding-top: 16px; color: var(--leise); font-style: italic; font-family: var(--serif); border-bottom: 0; }
-.tabelle { overflow-x: auto; }
-.status { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; color: var(--leise); }
-.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid currentColor; }
-.status.bestaetigt { color: var(--eiche); } .status.bestaetigt::before { background: currentColor; }
-.status.ueberholt, .status.verworfen { text-decoration: line-through; }
-.status.historisch::before { border-style: dotted; }
-details.historie { margin-top: 14px; }
-details.historie summary { cursor: pointer; color: var(--wasser); font-size: var(--mass-2); }
-.quellenliste { columns: 2 14rem; column-gap: 24px; font-size: var(--mass-2); padding: 0; margin: 0; list-style: none; }
-.quellenliste li { break-inside: avoid; padding: 3px 0; }
+.fragekarte { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 12px; width: 100%; text-align: left; padding: 12px; margin-top: 10px; background: var(--flaeche); border: 1px solid var(--linie); border-radius: 8px; cursor: pointer; }
+.fragekarte:hover { border-color: var(--wasser); }
+.fragekarte.ohne-bild { grid-template-columns: minmax(0, 1fr); }
+.fragekarte img { width: 72px; height: 72px; object-fit: cover; border-radius: 4px; background: var(--linie); }
+.fragekarte b { display: block; font-weight: 500; line-height: 1.35; }
+.fragekarte span { display: block; margin-top: 4px; font-size: var(--m1); color: var(--leise); }
+.fragezeile { display: block; width: 100%; text-align: left; background: none; border: 0; border-top: 1px solid var(--linie); padding: 10px 2px; cursor: pointer; }
+.fragezeile:hover b { color: var(--wasser); }
+.fragezeile b { font-weight: 400; }
+.fragezeile span { display: block; font-size: var(--m1); color: var(--leise); margin-top: 2px; }
+details.gruppe { border-top: 1px solid var(--linie); }
+details.gruppe:last-of-type { border-bottom: 1px solid var(--linie); }
+details.gruppe > summary { cursor: pointer; padding: 11px 2px; list-style: none; display: flex; gap: 12px; font-weight: 500; }
+details.gruppe > summary::-webkit-details-marker { display: none; }
+details.gruppe > summary::after { content: "+"; color: var(--leise); width: 1ch; text-align: center; }
+details.gruppe[open] > summary::after { content: "–"; }
+details.gruppe > summary small { margin-left: auto; color: var(--leise); font-weight: 400; }
+details.gruppe .innen { padding-bottom: 8px; }
 
-.baum { margin-top: 36px; font-size: var(--mass-2); }
-.baum h3 { font: 500 var(--mass-4)/1.2 var(--serif); margin: 0 0 8px; }
-.baum ul { list-style: none; margin: 0; padding-left: 18px; border-left: 1px solid var(--linie); }
-.baum > ul { padding-left: 0; border: 0; }
-.baum li { margin: 2px 0; }
-.baum button { background: none; border: 0; padding: 2px 4px; cursor: pointer; text-align: left; border-radius: 3px; }
-.baum button:hover { background: var(--wasser-hauch); }
-.baum button[aria-current="true"] { background: var(--wasser-hauch); color: var(--wasser); font-weight: 500; }
-.baum .z { color: var(--leise); font-variant-numeric: tabular-nums; margin-left: 4px; }
-.baum .z .r { color: var(--roetel); }
+.masse { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin: 0; }
+.masse div { background: var(--flaeche); border: 1px solid var(--linie); border-radius: 6px; padding: 10px 12px; min-width: 0; }
+.masse dt { font-size: var(--m1); color: var(--leise); line-height: 1.3; }
+.masse dd { margin: 4px 0 0; font: 500 var(--m4)/1.15 var(--serif); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.masse dd small { display: block; font: 400 var(--m1) var(--sans); color: var(--leise); margin-top: 3px; }
+.leer-text { color: var(--leise); font-size: var(--m2); margin: 0; }
 
-/* Ansicht Fragen */
-.fragen-kopf { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px 24px; }
-.fragen-kopf p { margin: 0; max-width: 62ch; color: var(--leise); }
-.filter { display: inline-flex; border: 1px solid var(--linie); border-radius: 999px; padding: 3px; gap: 2px; }
-.filter button { border: 0; background: none; padding: 5px 14px; border-radius: 999px; cursor: pointer; font-size: var(--mass-2); color: var(--leise); }
-.filter button[aria-pressed="true"] { background: var(--tinte); color: var(--papier); }
-.kette { margin: 22px 0 8px; padding: 18px 20px; background: var(--flaeche); border: 1px solid var(--linie); border-radius: 6px; }
-.kette h3 { font: 500 var(--mass-4)/1.2 var(--serif); margin: 0 0 4px; }
-.kette p { margin: 0 0 12px; color: var(--leise); font-size: var(--mass-2); }
-.kette ol { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 0; padding: 0; list-style: none; }
-.kette li { display: flex; align-items: center; gap: 10px; }
-.kette li + li::before { content: ""; width: 18px; height: 1.5px; background: var(--roetel); flex: none; }
-.kette .glied { background: var(--papier); border: 1px solid var(--linie); border-radius: 4px; padding: 8px 12px; max-width: 26ch; font-size: var(--mass-2); }
-.kette .glied b { color: var(--roetel); font-variant-numeric: tabular-nums; margin-right: 6px; }
-.fragenliste { margin-top: 18px; }
-.fragenliste .frage { grid-template-columns: 3.4rem minmax(0, 1fr) auto; }
-.fragenliste .frage .unter { grid-column: 2 / -1; }
-.fragenliste .wer { font-size: var(--mass-2); color: var(--leise); white-space: nowrap; }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
-.chips button { border: 1px solid var(--linie); background: var(--papier); border-radius: 999px; padding: 1px 10px; font-size: var(--mass-1); cursor: pointer; color: var(--tinte); }
+.fotos { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; scroll-snap-type: x proximity; }
+.fotos button { flex: none; padding: 0; border: 0; background: none; cursor: pointer; position: relative; scroll-snap-align: start; border-radius: 6px; }
+.fotos img { width: 128px; height: 128px; object-fit: cover; border-radius: 6px; display: block; background: var(--linie); }
+.fotos .art { position: absolute; left: 6px; bottom: 6px; background: rgb(0 0 0 / .62); color: #fff; font-size: 11px; padding: 1px 6px; border-radius: 3px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.chips button { border: 1px solid var(--linie); background: var(--flaeche); border-radius: 999px; padding: 2px 11px; font-size: var(--m2); cursor: pointer; }
 .chips button:hover { border-color: var(--wasser); color: var(--wasser); }
 
-/* Ansicht Quellen */
-.quellen-ansicht { display: grid; gap: 40px; }
-.quellen-ansicht h2 { font: 500 var(--mass-4)/1.2 var(--serif); margin: 0 0 6px; }
-.quellen-ansicht > section > p { margin: 0 0 16px; color: var(--leise); max-width: 66ch; }
-.streifen { display: flex; height: 34px; border-radius: 4px; overflow: hidden; border: 1px solid var(--linie); }
-.streifen div { min-width: 0; }
-.streifen-legende { display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 6px 20px; margin: 12px 0 0; padding: 0; list-style: none; font-size: var(--mass-2); }
-.streifen-legende li { display: flex; align-items: baseline; gap: 8px; }
-.streifen-legende i { width: 10px; height: 10px; border-radius: 2px; flex: none; transform: translateY(1px); }
-.streifen-legende .n { font-variant-numeric: tabular-nums; font-weight: 500; margin-left: auto; }
-.streifen-legende li.fehlt { color: var(--roetel); }
-.streifen-legende li.fehlt i { background: none; border: 1.5px dashed var(--roetel); }
-table.ordner { border-collapse: collapse; width: 100%; font-size: var(--mass-2); }
-table.ordner th { text-align: left; font-weight: 500; color: var(--leise); padding: 6px 12px 6px 0; border-bottom: 1px solid var(--linie); }
-table.ordner th.r, table.ordner td.r { text-align: right; }
-table.ordner td { padding: 7px 12px 7px 0; border-bottom: 1px solid var(--linie); font-variant-numeric: tabular-nums; }
-.balken { width: 100%; min-width: 80px; height: 8px; background: var(--linie); border-radius: 4px; overflow: hidden; }
-.balken div { height: 100%; background: var(--wasser); }
+details.alle { margin-top: 24px; border-top: 1px solid var(--linie); }
+details.alle > summary { cursor: pointer; padding: 12px 0; color: var(--wasser); }
+table.angaben { width: 100%; border-collapse: collapse; font-size: var(--m2); }
+table.angaben td { padding: 7px 10px 7px 0; border-bottom: 1px solid var(--linie); vertical-align: top; }
+table.angaben td:first-child { width: 50%; overflow-wrap: anywhere; }
+table.angaben td.wert { font-variant-numeric: tabular-nums; font-weight: 500; overflow-wrap: anywhere; }
+table.angaben .gruppe td { padding-top: 14px; color: var(--leise); font: italic var(--m2) var(--serif); border-bottom: 0; }
+table.angaben .bezug { font-size: var(--m1); color: var(--leise); }
+.status { white-space: nowrap; color: var(--leise); font-size: var(--m1); }
+.status.bestaetigt { color: var(--eiche); font-weight: 500; }
 
-.fuss { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--linie); color: var(--leise); font-size: var(--mass-2); display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+.antwort { padding: 10px 0; border-top: 1px solid var(--linie); }
+.antwort header { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; font-size: var(--m2); }
+.antwort header b { font-weight: 500; }
+.antwort header span { color: var(--leise); font-size: var(--m1); }
+.antwort p { margin: 4px 0 0; white-space: pre-wrap; }
+.antwort header .marker-art { font-size: var(--m1); padding: 0 7px; border-radius: 3px; background: var(--wasser-hauch); color: var(--wasser); }
+.antwort header .marker-art.nein { background: var(--roetel-hauch); color: var(--roetel); }
+.formular { margin-top: 12px; padding: 14px; border: 1px solid var(--linie); border-radius: 8px; background: var(--flaeche); display: grid; gap: 10px; }
+.wahl { display: flex; flex-wrap: wrap; gap: 6px; }
+.wahl button { border: 1px solid var(--linie); background: var(--papier); border-radius: 999px; padding: 5px 14px; cursor: pointer; }
+.wahl button[aria-pressed="true"] { background: var(--tinte); color: var(--papier); border-color: var(--tinte); }
+.formular label { font-size: var(--m2); color: var(--leise); display: grid; gap: 4px; }
+.formular textarea, .formular input { width: 100%; padding: 8px 10px; border: 1px solid var(--linie); border-radius: 6px; background: var(--papier); color: var(--tinte); }
+.formular textarea { min-height: 84px; resize: vertical; }
+.reihe { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.reihe label { flex: 1 1 160px; }
+.knopf { border: 0; background: var(--wasser); color: var(--papier); padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 500; }
+.knopf:disabled { opacity: .5; cursor: default; }
+.nurlesen { font-size: var(--m2); color: var(--leise); margin: 10px 0 0; }
 
-@media (max-width: 520px) {
-  nav.ansichten { flex-wrap: nowrap; overflow-x: auto; }
-  nav.ansichten button { padding-inline: 10px; white-space: nowrap; }
-}
+.bildfenster { position: fixed; inset: 0; z-index: 50; background: rgb(10 14 14 / .84); display: grid; place-items: center; padding: 24px 16px; }
+.bildfenster figure { margin: 0; max-width: min(960px, 100%); }
+.bildfenster img { max-width: 100%; max-height: 78vh; border-radius: 6px; display: block; margin: 0 auto; }
+.bildfenster figcaption { color: #e6ecea; font-size: var(--m2); margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
+.bildfenster a { color: #9fd0d8; }
+.bildfenster > button { position: absolute; top: calc(env(safe-area-inset-top, 0px) + 10px); right: 16px; background: none; border: 0; color: #fff; font-size: 30px; line-height: 1; cursor: pointer; padding: 6px 10px; }
+.toast { position: fixed; bottom: calc(env(safe-area-inset-bottom, 0px) + 20px); left: 50%; transform: translateX(-50%); background: var(--tinte); color: var(--papier); padding: 9px 18px; border-radius: 6px; font-size: var(--m2); z-index: 60; max-width: calc(100% - 32px); }
+
 @media (max-width: 880px) {
-  .rad { grid-template-columns: minmax(0, 1fr); }
-  .aufriss { position: static; }
-  .kopf { grid-template-columns: minmax(0, 1fr); }
-  .fragenliste .frage { grid-template-columns: 3rem minmax(0, 1fr); }
-  .fragenliste .wer { grid-column: 2; }
+  html, body { height: auto; }
+  .app { height: auto; display: block; }
+  .leiste { padding-block: 10px; }
+  .stand-mini { display: none; }
+  .suche { flex-basis: 100%; margin-left: 0; }
+  .werkbank { display: block; padding-top: 0; }
+  .rad { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--papier); height: 34vh; padding-top: 6px; border-bottom: 1px solid var(--linie); }
+  .rad svg#aufriss { height: 100%; max-height: none; }
+  .legende { display: none; }
+  .karte { overflow: visible; padding: 14px 0 64px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
-<div class="seite">
-  <header class="kopf">
-    <div>
-      <h1>Kleines Schäferrad</h1>
-      <p class="stand" id="stand"></p>
+<div class="app">
+  <header class="leiste">
+    <h1><a href="#" id="startlink">Kleines Schäferrad</a></h1>
+    <div class="stand-mini" id="stand-mini"></div>
+    <div class="suche" role="search">
+      <input id="suche" type="search" placeholder="Bauteil oder Frage suchen, z. B. Schetter" autocomplete="off" aria-label="Bauteil oder Frage suchen" aria-controls="treffer" aria-expanded="false">
+      <ul class="treffer-liste" id="treffer" role="listbox" hidden></ul>
     </div>
-    <p class="lage" id="lage"></p>
-    <p class="saison">Das Rad wurde am 10. Oktober 2026 abgebaut. Bis zum Aufbau im Frühjahr liegen alle Teile einzeln im Lager – die beste Zeit, um nachzumessen.</p>
   </header>
-
-  <nav class="ansichten" role="tablist" aria-label="Ansicht">
-    <button role="tab" id="tab-rad" aria-controls="ansicht-rad" data-ansicht="rad">Rad<span id="n-teile"></span></button>
-    <button role="tab" id="tab-fragen" aria-controls="ansicht-fragen" data-ansicht="fragen">Offene Fragen<span id="n-fragen"></span></button>
-    <button role="tab" id="tab-quellen" aria-controls="ansicht-quellen" data-ansicht="quellen">Quellen<span id="n-quellen"></span></button>
-  </nav>
-
-  <section id="ansicht-rad" role="tabpanel" aria-labelledby="tab-rad">
-    <div class="rad">
-      <div class="aufriss">
-        <svg id="aufriss" viewBox="0 0 780 560" role="group" aria-label="Schematischer Aufriss des Kleinen Schäferrads; Bauteile sind anwählbar"></svg>
-        <ul class="legende" aria-label="Legende">
-          <li><svg viewBox="0 0 26 14"><rect x="1" y="2" width="24" height="10" fill="var(--holz)" stroke="var(--tinte)"/></svg>beschrieben</li>
-          <li><svg viewBox="0 0 26 14"><rect x="1" y="2" width="24" height="10" fill="none" stroke="var(--leise)" stroke-dasharray="4 3"/></svg>noch keine Angabe</li>
-          <li><svg viewBox="0 0 26 14"><rect x="1" y="2" width="24" height="10" fill="color-mix(in srgb, var(--eiche) 30%, var(--holz))" stroke="var(--tinte)"/></svg>bestätigt</li>
-          <li><svg viewBox="0 0 26 14"><circle cx="13" cy="7" r="6" fill="var(--roetel)"/></svg>offene Fragen</li>
-        </ul>
-        <p class="notiz">Schema, nicht maßstäblich. Blick entlang der Welle, Land rechts.</p>
-      </div>
-      <div class="akte" id="akte" aria-live="polite"></div>
-    </div>
-    <div class="baum" id="baum"></div>
-  </section>
-
-  <section id="ansicht-fragen" role="tabpanel" aria-labelledby="tab-fragen" hidden>
-    <div class="fragen-kopf">
-      <p>Sortiert danach, wie viel eine Antwort freischaltet. Wer entscheidet, steht rechts.</p>
-      <div class="filter" role="group" aria-label="Wer entscheidet">
-        <button data-wer="" aria-pressed="true">Alle</button>
-        <button data-wer="P-THORSTEN" aria-pressed="false">Thorsten</button>
-        <button data-wer="P-JOHANNES" aria-pressed="false">Johannes</button>
-      </div>
-    </div>
-    <div class="kette" id="kette"></div>
-    <div class="fragenliste" id="fragenliste"></div>
-  </section>
-
-  <section id="ansicht-quellen" role="tabpanel" aria-labelledby="tab-quellen" hidden>
-    <div class="quellen-ansicht" id="quellen-ansicht"></div>
-  </section>
-
-  <footer class="fuss">
-    <span>Erzeugt aus dem Wissenskern (<code>kern/</code>), Stand <span id="quelle-commit"></span>.</span>
-    <span>Nur lesen. Änderungen am Kern per Pull Request.</span>
-  </footer>
+  <main class="werkbank">
+    <section class="rad" aria-label="Das Rad">
+      <svg id="aufriss" viewBox="0 0 780 560" role="group" aria-label="Schematischer Aufriss des Kleinen Schäferrads. Jedes Teil lässt sich anwählen."></svg>
+      <div class="etikett" id="etikett" hidden></div>
+      <ul class="legende" aria-label="Legende">
+        <li><svg viewBox="0 0 22 12"><rect x="1" y="1" width="20" height="10" fill="var(--holz)" stroke="var(--tinte)"/></svg>beschrieben</li>
+        <li><svg viewBox="0 0 22 12"><rect x="1" y="1" width="20" height="10" fill="none" stroke="var(--leise)" stroke-dasharray="4 3"/></svg>noch unbekannt</li>
+        <li><svg viewBox="0 0 22 12"><rect x="1" y="1" width="20" height="10" fill="color-mix(in srgb, var(--eiche) 32%, var(--holz))" stroke="var(--tinte)"/></svg>bestätigt</li>
+        <li><svg viewBox="0 0 22 12"><circle cx="11" cy="6" r="5" fill="var(--roetel)"/></svg>offene Fragen</li>
+        <li>Schema, nicht maßstäblich. Land rechts.</li>
+      </ul>
+    </section>
+    <section class="karte" id="karte" aria-live="polite"></section>
+  </main>
 </div>
+<div class="bildfenster" id="bildfenster" hidden role="dialog" aria-modal="true" aria-label="Foto"></div>
+<div class="toast" id="toast" hidden role="status"></div>
 
 <script>
 const K = /*__DATEN__*/null;
 const REPO = "https://github.com/jdistlr/kleines-schaeferrad/blob/main/";
 const $ = (s, el = document) => el.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-const zahl = n => typeof n === "number" ? n.toLocaleString("de-DE", { maximumFractionDigits: 4 }) : n;
+const zahl = n => typeof n === "number" ? n.toLocaleString("de-DE", { maximumFractionDigits: 3 }) : n;
+const nach = (liste, f) => liste.slice().sort((a, b) => f(b) - f(a));
 
+// ---------- Daten ----------
 const teile = Object.fromEntries(K.bauteile.map(b => [b.id, b]));
 const begriffe = Object.fromEntries(K.begriffe.map(b => [b.id, b]));
 const personen = Object.fromEntries(K.personen.map(p => [p.id, p]));
 const fragen = Object.fromEntries(K.fragen.map(f => [f.id, f]));
 const quellen = Object.fromEntries(K.quellen.map(q => [q.id, q]));
 const beziehungen = Object.fromEntries(K.beziehungen.map(b => [b.id, b]));
-const kinder = {};
-K.bauteile.forEach(b => { if (b.teil_von) (kinder[b.teil_von] ||= []).push(b.id); });
-
-// Angaben je Bauteil (direkt oder über eine Beziehung)
-const angabenJe = {};
+const angabenById = Object.fromEntries(K.angaben.map(a => [a.id, a]));
+const kinder = {}; K.bauteile.forEach(b => { if (b.teil_von) (kinder[b.teil_von] ||= []).push(b.id); });
+const unterteile = id => [id, ...(kinder[id] || []).flatMap(unterteile)];
+const vorfahren = id => { const k = []; let p = teile[id]?.teil_von; while (p) { k.unshift(p); p = teile[p].teil_von; } return k; };
+const angabenJe = {}, direktJe = {};
 K.angaben.forEach(a => {
+  if (teile[a.ziel]) (direktJe[a.ziel] ||= []).push(a);
   const ziele = teile[a.ziel] ? [a.ziel] : beziehungen[a.ziel] ? [beziehungen[a.ziel].von, beziehungen[a.ziel].zu] : [];
   [...new Set(ziele)].forEach(t => (angabenJe[t] ||= []).push(a));
 });
-// Offene Fragen je Bauteil
-const angabeZiel = Object.fromEntries(K.angaben.map(a => [a.id, a.ziel]));
+const bezugVon = x => teile[x] ? [x] : teile[angabenById[x]?.ziel] ? [angabenById[x].ziel] : beziehungen[x] ? [beziehungen[x].von, beziehungen[x].zu] : quellen[x]?.bauteil ? [quellen[x].bauteil] : [];
+const offen = K.fragen.filter(f => f.status === "offen");
 const fragenJe = {};
-K.fragen.filter(f => f.status === "offen").forEach(f => {
-  const bezug = new Set();
-  [...f.betrifft, ...f.blockiert].forEach(x => {
-    if (teile[x]) bezug.add(x);
-    else if (angabeZiel[x] && teile[angabeZiel[x]]) bezug.add(angabeZiel[x]);
-    else if (beziehungen[x]) { bezug.add(beziehungen[x].von); bezug.add(beziehungen[x].zu); }
-  });
-  bezug.forEach(t => (fragenJe[t] ||= []).push(f));
-});
-const unterteile = id => [id, ...(kinder[id] || []).flatMap(unterteile)];
+offen.forEach(f => new Set([...f.betrifft, ...f.blockiert].flatMap(bezugVon)).forEach(t => (fragenJe[t] ||= []).push(f)));
 const sammle = (je, id) => [...new Set(unterteile(id).flatMap(t => je[t] || []))];
-
-// Was eine Frage freischaltet (transitiv)
-const abhaengige = {};
-K.fragen.forEach(f => f.haengt_ab_von.forEach(v => (abhaengige[v] ||= []).push(f.id)));
+const abhaengige = {}; K.fragen.forEach(f => f.haengt_ab_von.forEach(v => (abhaengige[v] ||= []).push(f.id)));
 const freischaltet = id => { const s = new Set(), st = [...(abhaengige[id] || [])]; while (st.length) { const x = st.pop(); if (!s.has(x)) { s.add(x); st.push(...(abhaengige[x] || [])); } } return [...s]; };
-const gewicht = f => freischaltet(f.id).length * 3 + f.blockiert.length * 2 + f.betrifft.length * .5 + (f.herkunft.length ? 0 : 1);
+const altLuecke = f => f.herkunft.some(h => h.startsWith("GAP-")) && !f.herkunft.some(h => h.startsWith("CLAIM-"));
+const gewicht = f => freischaltet(f.id).length * 4 + Math.min(f.blockiert.length, 2) * 2 + (f.herkunft.length ? 0 : 3) - (f.haengt_ab_von.length ? 2 : 0) - (altLuecke(f) ? 20 : 0);
+const rang = q => q.bildart === "messfoto" ? 3 : q.bildart === "konstruktionsfoto" ? 2 : q.art === "skizze" ? 1.5 : 1;
+const fotosVon = ids => { const s = new Set(ids.flatMap(unterteile)); return nach(K.quellen.filter(q => q.bild && s.has(q.bauteil)), rang); };
+const fotosZuFrage = f => {
+  const namen = (f.hinweis || "").match(/IMG[_0-9A-Za-z-]+/g) || [];
+  const genannt = K.quellen.filter(q => q.bild && namen.some(n => (q.pfad || "").includes(n)));
+  const bez = [...new Set([...f.betrifft, ...f.blockiert].flatMap(bezugVon))].filter(t => teile[t] && teile[t].art !== "anlage");
+  return [...new Set([...genannt, ...fotosVon(bez)])];
+};
+const kurz = (s, n = 110) => s.length > n ? s.slice(0, n - 2).replace(/\s\S*$/, "") + " …" : s;
+const vorname = pid => (personen[pid]?.name || "").split(" ")[0];
 
-// ---------- Kopf ----------
-const S = K.statistik;
-const bestaetigt = S.gueltigkeit.bestaetigt || 0, gemessen = S.grundlage.messung || 0;
-$("#stand").textContent = "Wissenskern, Stand " + new Date(K.stand).toLocaleDateString("de-DE", { day: "numeric", month: "long", year: "numeric" });
-$("#lage").innerHTML = `${zahl(S.angaben)} Angaben. Bestätigt sind ${bestaetigt ? zahl(bestaetigt) : "noch keine"}, am Rad gemessen ${gemessen ? zahl(gemessen) : "noch keine"}. ${zahl(S.fragen_offen)} Fragen sind offen.`;
-$("#n-teile").textContent = K.bauteile.length;
-$("#quelle-commit").innerHTML = K.commit ? `<a href="https://github.com/jdistlr/kleines-schaeferrad/tree/${K.commit}/kern" target="_blank" rel="noopener">Commit ${K.commit}</a>` : "lokal";
-$("#n-fragen").textContent = S.fragen_offen;
-$("#n-quellen").textContent = S.quellen;
+const EINHEIT = { m: " m", cm: " cm", mm: " mm", grad: "°", anzahl: "", exporteinheit: " E" };
+const GRUND = { messung: "gemessen", muendlich: "mündlich", skizze: "Skizze", foto: "Foto", scan: "Scan", ableitung: "berechnet", annahme: "Annahme", kontext: "Kontext", holzliste: "Holzliste", fremdvorlage: "Fremdvorlage" };
+const GRUND_LANG = { messung: "Gemessen", muendlich: "Mündlich überliefert", skizze: "Aus Vereinsskizzen", foto: "Auf Fotos beobachtet", scan: "Aus dem 3D-Scan", ableitung: "Berechnet", annahme: "Annahme", kontext: "Kontext", holzliste: "Allgemeine Holzliste", fremdvorlage: "Fremde Vorlagen" };
+const GUELT = { offen: "offen", bestaetigt: "bestätigt", historisch: "Unterlage", ueberholt: "überholt", verworfen: "verworfen" };
+const BILDART = { messfoto: "Messfoto", konstruktionsfoto: "Detail", uebersicht: "Übersicht" };
+const TYPEN = { stimmt: "Stimmt so", stimmt_nicht: "Stimmt nicht", genauer: "Ich weiß es genauer", ergaenzung: "Ergänzung", korrektur: "Korrektur" };
+const eig = s => begriffe[s]?.name || s.replaceAll("_", " ");
+function wertText(a) {
+  const f = v => v === true ? "ja" : v === false ? "nein" : v === null ? "–" : typeof v === "number" ? zahl(v)
+    : Array.isArray(v) ? v.map(f).join(" × ") : typeof v === "object" ? Object.entries(v).map(([k, x]) => `${k.replaceAll("_", " ")}: ${f(x)}`).join("; ") : String(v);
+  let t = f(a.wert) + (a.einheit && typeof a.wert !== "boolean" ? (EINHEIT[a.einheit] ?? " " + a.einheit) : "");
+  if (a.tol?.art === "ungefaehr") t = "ca. " + t;
+  if (a.tol?.art === "bereich") t += ` (${zahl(a.tol.von)}–${zahl(a.tol.bis)})`;
+  if (a.tol?.art === "vereinfachung") t += ", vereinfacht";
+  return t;
+}
+const istMass = a => (typeof a.wert === "number" || (Array.isArray(a.wert) && a.wert.length && a.wert.every(x => typeof x === "number"))) && a.einheit && a.einheit !== "exporteinheit";
+
+// ---------- Speicher für Antworten: Claude-Arbeitsfassung, später eigener Server ----------
+const Speicher = {
+  modus: "lesen", antworten: [], namen: {}, uid: null, hoerer: [],
+  melde() { this.hoerer.forEach(f => f()); },
+  async start() {
+    if (K.api) return this.ladeServer();
+    if (typeof claude === "undefined" || !claude.use) return;
+    try {
+      const db = await claude.use("db"); if (!db) return;
+      const user = await claude.use("user");
+      this.user = user; this.uid = user ? await user.id() : null;
+      const darf = user ? await user.can("data.write") : null;
+      this.modus = darf === false ? "lesen" : "claude";
+      this.col = db.collection("antworten");
+      this.col.orderBy("am").onSnapshot(async s => {
+        this.antworten = s.docs.map(d => ({ id: d.id, ...d.data() }));
+        if (this.user) { const ids = [...new Set(this.antworten.map(a => a.von).filter(Boolean))]; const ps = await this.user.profiles(ids); this.namen = Object.fromEntries(ids.map(i => [i, ps[i]?.name || ""])); }
+        this.melde();
+      }, () => { this.modus = "lesen"; this.melde(); });
+      this.melde();
+    } catch { this.modus = "lesen"; }
+  },
+  async ladeServer() {
+    try {
+      const r = await fetch(K.api + "?aktion=liste", { credentials: "include" });
+      if (!r.ok) throw new Error(String(r.status));
+      this.antworten = await r.json(); this.modus = "server"; this.melde();
+    } catch { this.modus = "lesen"; this.melde(); }
+  },
+  async speichern(a) {
+    const eintrag = { ...a, am: new Date().toISOString(), uebernommen: false };
+    if (this.modus === "claude") { eintrag.von = this.uid; await this.col.add(eintrag); return; }
+    if (this.modus === "server") {
+      const r = await fetch(K.api + "?aktion=speichern", { method: "POST", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify(eintrag) });
+      if (!r.ok) throw new Error(String(r.status));
+      return this.ladeServer();
+    }
+    throw new Error("nur lesen");
+  },
+  zu(ziel) { return this.antworten.filter(a => a.ziel === ziel); },
+  name(a) { return a.name || this.namen[a.von] || "Jemand"; },
+};
 
 // ---------- Aufriss ----------
-const NS = "http://www.w3.org/2000/svg";
-const svg = $("#aufriss");
+const NS = "http://www.w3.org/2000/svg", svg = $("#aufriss");
 const el = (tag, attrs = {}, eltern = svg) => { const e = document.createElementNS(NS, tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); eltern.appendChild(e); return e; };
-const C = { x: 300, y: 235 }, R_AUSSEN = 176, R_INNEN = 160, R_SCHAUFEL = 214;
+const C = { x: 300, y: 235 }, RA = 176, RI = 160, RS = 214;
 const pol = (r, w) => [C.x + r * Math.cos(w), C.y + r * Math.sin(w)];
 const pfad = pts => "M" + pts.map(p => p.map(v => v.toFixed(1)).join(" ")).join("L") + "Z";
 const gruppen = {};
-function teil(id, titel) {
+function zeigeEtikett(id, e) {
+  if (matchMedia("(hover: none)").matches) return;
+  const box = $(".rad").getBoundingClientRect(), et = $("#etikett");
+  let x, y;
+  if (e) { x = e.clientX - box.left; y = e.clientY - box.top; }
+  else { const r = gruppen[id].getBoundingClientRect(); x = r.left + r.width / 2 - box.left; y = r.top - box.top; }
+  et.textContent = teile[id]?.name || id; et.style.left = x + "px"; et.style.top = y + "px"; et.hidden = false;
+}
+function teil(id) {
   if (!gruppen[id]) {
-    const g = el("g", { class: "teil", "data-teil": id, tabindex: "0", role: "button", "aria-label": titel || teile[id]?.name || id });
-    g.addEventListener("click", () => waehle(id));
-    g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); waehle(id); } });
+    const g = el("g", { class: "teil", "data-teil": id, tabindex: "0", role: "button", "aria-label": teile[id]?.name || id });
+    g.addEventListener("click", () => gehe(id));
+    g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); gehe(id); } });
+    g.addEventListener("pointermove", e => zeigeEtikett(id, e));
+    g.addEventListener("pointerleave", () => { $("#etikett").hidden = true; });
+    g.addEventListener("focus", () => zeigeEtikett(id));
+    g.addEventListener("blur", () => { $("#etikett").hidden = true; });
     gruppen[id] = g;
   }
   return gruppen[id];
 }
-const form = (id, tag, attrs) => el(tag, { ...attrs, class: "form" }, teil(id));
+function form(id, tag, attrs) { const g = teil(id); el(tag, { ...attrs, class: "treffer" }, g); return el(tag, { ...attrs, class: "form" }, g); }
 
-// Fluss und Ufer
 el("rect", { class: "fluss", x: 0, y: 372, width: 548, height: 188 });
-el("path", { class: "welle", d: "M0 372 " + Array.from({ length: 23 }, (_, i) => `q 12 -5 24 0`).join(" ") });
+el("path", { class: "welle", d: "M0 372 " + Array.from({ length: 23 }, () => "q 12 -5 24 0").join(" ") });
 el("path", { class: "gelaende", d: "M548 560 L548 352 L620 344 L700 338 L780 334" });
-for (let x = 556; x < 780; x += 14) el("line", { class: "gelaende-schraffur", x1: x, y1: 352 - (x - 548) * .08 + 2, x2: x - 10, y2: 352 - (x - 548) * .08 + 14 });
-el("text", { class: "beschriftung", x: 16, y: 548 }, svg).textContent = "Regnitz";
-el("text", { class: "beschriftung", x: 700, y: 360 }, svg).textContent = "Ufer";
-
-// Radstadt: Pfosten, untere Hölzer, obere Balken, Lagerbock
+for (let x = 556; x < 780; x += 14) el("line", { class: "schraffur", x1: x, y1: 352 - (x - 548) * .08 + 2, x2: x - 10, y2: 352 - (x - 548) * .08 + 14 });
 form("COMP-FRAME-MAIN", "rect", { x: 70, y: 340, width: 16, height: 200 });
 form("COMP-FRAME-MAIN", "rect", { x: 514, y: 340, width: 16, height: 200 });
 form("COMP-FRAME-LOWER", "rect", { x: 60, y: 520, width: 480, height: 12 });
@@ -327,211 +357,223 @@ form("COMP-BEARING-STANDS", "path", { d: "M244 326 L284 252 L296 256 L258 326 Z 
 form("COMP-TROUGH-SUPPORT", "path", { d: "M470 326 L470 96 L448 96 L448 86 L514 86 L514 96 L482 96 L482 326 Z" });
 form("COMP-RADSTATT-OBERBALKEN", "rect", { x: 56, y: 326, width: 490, height: 16 });
 form("COMP-BEARINGS", "rect", { x: 270, y: 222, width: 60, height: 28, rx: 2 });
-
-// Flügelbretter und Kümpfe (Anzahl offen, schematisch 12)
 for (let i = 0; i < 12; i++) {
   const w = (i / 12) * 2 * Math.PI - Math.PI / 2, b = .06;
-  form("COMP-PADDLES", "path", { d: pfad([pol(R_AUSSEN + 2, w - b * .55), pol(R_SCHAUFEL, w - b * .45), pol(R_SCHAUFEL, w + b * .45), pol(R_AUSSEN + 2, w + b * .55)]) });
+  form("COMP-PADDLES", "path", { d: pfad([pol(RA + 2, w - b * .55), pol(RS, w - b * .45), pol(RS, w + b * .45), pol(RA + 2, w + b * .55)]) });
   const wk = w + Math.PI / 12;
-  form("COMP-KUEMPFE", "path", { d: pfad([pol(R_AUSSEN + 1, wk - .07), pol(R_AUSSEN + 26, wk - .085), pol(R_AUSSEN + 26, wk + .085), pol(R_AUSSEN + 1, wk + .07)]) });
+  form("COMP-KUEMPFE", "path", { d: pfad([pol(RA + 1, wk - .07), pol(RA + 26, wk - .085), pol(RA + 26, wk + .085), pol(RA + 1, wk + .07)]) });
 }
-// Krümmlinge mit Stoßspalt, Stoßkeilen und Schetternbrettern
 for (let i = 0; i < 6; i++) {
-  const a0 = (i / 6) * 2 * Math.PI - Math.PI / 2 + .025, a1 = ((i + 1) / 6) * 2 * Math.PI - Math.PI / 2 - .025, n = 14, pts = [];
-  for (let k = 0; k <= n; k++) pts.push(pol(R_AUSSEN, a0 + (a1 - a0) * k / n));
-  for (let k = n; k >= 0; k--) pts.push(pol(R_INNEN, a0 + (a1 - a0) * k / n));
+  const a0 = (i / 6) * 2 * Math.PI - Math.PI / 2 + .025, a1 = ((i + 1) / 6) * 2 * Math.PI - Math.PI / 2 - .025, pts = [];
+  for (let k = 0; k <= 14; k++) pts.push(pol(RA, a0 + (a1 - a0) * k / 14));
+  for (let k = 14; k >= 0; k--) pts.push(pol(RI, a0 + (a1 - a0) * k / 14));
   form("COMP-KRUEMMLINGE", "path", { d: pfad(pts) });
 }
 for (let i = 0; i < 6; i++) {
   const w = (i / 6) * 2 * Math.PI - Math.PI / 2;
-  form("COMP-SCHETTERNBRETTER", "path", { d: pfad([pol(R_INNEN + 3, w - .07), pol(R_AUSSEN - 3, w - .07), pol(R_AUSSEN - 3, w + .07), pol(R_INNEN + 3, w + .07)]) });
-  form("COMP-RIM-JOINT-WEDGE", "path", { d: pfad([pol(R_INNEN - 2, w - .012), pol(R_AUSSEN + 4, w - .03), pol(R_AUSSEN + 4, w + .03), pol(R_INNEN - 2, w + .012)]) });
+  form("COMP-SCHETTERNBRETTER", "path", { d: pfad([pol(RI + 3, w - .07), pol(RA - 3, w - .07), pol(RA - 3, w + .07), pol(RI + 3, w + .07)]) });
+  form("COMP-RIM-JOINT-WEDGE", "path", { d: pfad([pol(RI - 2, w - .012), pol(RA + 4, w - .03), pol(RA + 4, w + .03), pol(RI - 2, w + .012)]) });
 }
-// Arme: drei durchgehende Hölzer
 for (let i = 0; i < 3; i++) {
-  const w = (i / 3) * Math.PI + Math.PI / 6, q = 5;
-  const [x1, y1] = pol(R_INNEN + 4, w), [x2, y2] = pol(R_INNEN + 4, w + Math.PI);
-  const nx = -Math.sin(w) * q, ny = Math.cos(w) * q;
+  const w = (i / 3) * Math.PI + Math.PI / 6, q = 5, [x1, y1] = pol(RI + 4, w), [x2, y2] = pol(RI + 4, w + Math.PI), nx = -Math.sin(w) * q, ny = Math.cos(w) * q;
   form("COMP-ARMS", "path", { d: `M${x1 + nx} ${y1 + ny}L${x2 + nx} ${y2 + ny}L${x2 - nx} ${y2 - ny}L${x1 - nx} ${y1 - ny}Z` });
 }
-// Welle: Zwölfeck, Schellen, Wellenkeil
 form("COMP-SHAFT", "path", { d: pfad(Array.from({ length: 12 }, (_, i) => pol(24, i * Math.PI / 6 + Math.PI / 12))) });
 form("COMP-SHAFT-CLAMPS", "circle", { cx: C.x, cy: C.y, r: 16, "fill-opacity": .001 });
 form("COMP-SHAFT-WEDGE", "path", { d: `M${C.x - 4} ${C.y - 30} L${C.x + 4} ${C.y - 30} L${C.x + 2} ${C.y - 16} L${C.x - 2} ${C.y - 16} Z` });
-
-// Wasserführung: Schöpftrog, Rinne 1, Rinne 2 mit Überlappung, A-Bock
 form("COMP-TROUGH", "path", { d: "M440 60 L514 60 L506 84 L448 84 Z" });
 form("COMP-RINNE", "path", { d: "M502 78 L612 178 L604 188 L494 88 Z" });
 form("COMP-RINNE-2", "path", { d: "M588 168 L760 266 L754 278 L582 180 Z" });
 form("COMP-A-BOCK", "path", { d: "M584 348 L600 194 L608 195 L596 348 Z M628 345 L606 194 L614 193 L640 344 Z M590 262 L630 262 L630 268 L590 268 Z" });
 el("path", { class: "wasserweg", d: "M478 54 C 470 26, 420 16, 388 34" });
 el("path", { class: "wasserweg", d: "M760 284 q 6 30 -2 56" });
-el("text", { class: "beschriftung", x: 676, y: 320 }, svg).textContent = "Auslass";
-
-// Marken für offene Fragen
-const markenOrt = { "COMP-RADSTATT": [540, 318], "COMP-PADDLES": [300, 14], "COMP-SHAFT": [330, 205], "COMP-ARMS": [210, 160], "COMP-TROUGH": [524, 52],
-  "COMP-RINNE": [566, 116], "COMP-RINNE-2": [700, 226], "COMP-A-BOCK": [646, 300], "COMP-TROUGH-SUPPORT": [496, 230], "COMP-BEARINGS": [338, 222],
-  "COMP-KUEMPFE": [118, 120], "COMP-KRUEMMLINGE": [128, 300], "COMP-BEARING-STANDS": [232, 300] };
-function zeichneMarken() {
-  Object.entries(markenOrt).forEach(([id, [x, y]]) => {
-    const n = (fragenJe[id] || []).length;
-    if (!n) return;
-    const g = el("g", { class: "marke" }, teil(id));
-    el("circle", { cx: x, cy: y, r: 10 }, g);
-    el("text", { x, y }, g).textContent = n;
-  });
-}
+const MARKE = { "COMP-RADSTATT": [540, 316], "COMP-PADDLES": [300, 12], "COMP-SHAFT": [332, 204], "COMP-ARMS": [208, 158], "COMP-TROUGH": [526, 50],
+  "COMP-RINNE": [568, 114], "COMP-RINNE-2": [702, 224], "COMP-A-BOCK": [650, 300], "COMP-TROUGH-SUPPORT": [498, 228], "COMP-BEARINGS": [342, 222],
+  "COMP-KUEMPFE": [116, 118], "COMP-KRUEMMLINGE": [126, 300], "COMP-BEARING-STANDS": [230, 300] };
+Object.entries(MARKE).forEach(([id, [x, y]]) => {
+  const n = (fragenJe[id] || []).filter(f => !altLuecke(f)).length; if (!n) return;
+  const g = el("g", { class: "marke" }, teil(id)); el("circle", { cx: x, cy: y, r: 13 }, g); el("text", { x, y }, g).textContent = n;
+});
 Object.entries(gruppen).forEach(([id, g]) => {
   const a = angabenJe[id] || [];
-  if (!a.length) g.classList.add("leer");
+  if (!a.length && id !== "COMP-RADSTATT") g.classList.add("leer");
   if (a.some(x => x.guelt === "bestaetigt")) g.classList.add("bestaetigt");
 });
-zeichneMarken();
 
-// ---------- Akte ----------
-const EINHEIT = { m: " m", cm: " cm", mm: " mm", grad: "°", anzahl: "", exporteinheit: " E" };
-function wertText(a) {
-  const f = v => v === true ? "ja" : v === false ? "nein" : v === null ? "–" : typeof v === "number" ? zahl(v)
-    : Array.isArray(v) ? v.map(f).join(" × ") : typeof v === "object" ? Object.entries(v).map(([k, x]) => `${k.replaceAll("_", " ")}: ${f(x)}`).join("; ") : String(v);
-  let t = f(a.wert) + (a.einheit && typeof a.wert !== "boolean" ? (EINHEIT[a.einheit] ?? " " + a.einheit) : "");
-  const tol = a.tol;
-  if (tol?.art === "ungefaehr") t = "ca. " + t;
-  if (tol?.art === "bereich") t += ` (${zahl(tol.von)}–${zahl(tol.bis)})`;
-  if (tol?.art === "plusminus") t += ` ± ${zahl(tol.wert)}`;
-  if (tol?.art === "vereinfachung") t += ", vereinfacht";
-  return t;
+// ---------- Wissensstand ----------
+const S = K.statistik, G = S.gueltigkeit;
+const best = G.bestaetigt || 0, off = G.offen || 0, unterlage = G.historisch || 0;
+const messfotos = K.quellen.filter(q => q.bildart === "messfoto"), messAus = messfotos.filter(q => q.erschlossen).length;
+const balken = `<i style="width:${best / S.angaben * 100}%;background:var(--eiche)"></i><i style="width:${off / S.angaben * 100}%;background:var(--holz-dunkel)"></i>`;
+$("#stand-mini").innerHTML = `<span class="balken" aria-hidden="true"><i style="width:${best / S.angaben * 100}%;background:var(--eiche)"></i></span><span class="zahl">${best} von ${S.angaben} bestätigt</span>`;
+
+// ---------- Karten ----------
+const karte = $("#karte");
+function fragekarte(f) {
+  const foto = fotosZuFrage(f)[0], frei = freischaltet(f.id).length;
+  const meta = [vorname(f.entscheidet) && `${vorname(f.entscheidet)} entscheidet`, frei && `Schaltet ${frei} weitere ${frei === 1 ? "Frage" : "Fragen"} frei`, f.haengt_ab_von.length && "Wartet auf eine andere Antwort"].filter(Boolean).join(". ");
+  return `<button class="fragekarte${foto ? "" : " ohne-bild"}" data-gehe="${f.id}">${foto ? `<img src="${foto.bild}" alt="" loading="lazy">` : ""}<div><b>${esc(f.frage)}</b><span>${esc(meta)}${meta ? "." : ""}</span></div></button>`;
 }
-const GRUND = { messung: "Gemessen", muendlich: "Mündlich überliefert", skizze: "Aus Vereinsskizzen", foto: "Auf Fotos beobachtet", scan: "Aus dem 3D-Scan",
-  ableitung: "Abgeleitet", annahme: "Annahme", kontext: "Kontext", holzliste: "Allgemeine Holzliste", fremdvorlage: "Fremde Vorlagen" };
-const GUELT = { offen: "offen", bestaetigt: "bestätigt", historisch: "historisch", ueberholt: "überholt", verworfen: "verworfen" };
-const REIHENFOLGE = ["messung", "muendlich", "skizze", "foto", "ableitung", "annahme", "scan", "kontext"];
-const BILDART = { messfoto: "Messfoto", konstruktionsfoto: "Konstruktionsfoto", uebersicht: "Übersicht" };
-const eig = s => begriffe[s]?.name || s.replaceAll("_", " ");
+const fragezeile = f => `<button class="fragezeile" data-gehe="${f.id}"><b>${esc(kurz(f.frage, 140))}</b><span>${vorname(f.entscheidet) ? esc(vorname(f.entscheidet)) + " entscheidet" : ""}</span></button>`;
 
-function frageHtml(f) {
-  const vor = f.haengt_ab_von.map(x => `<button data-frage="${x}">${x}</button>`).join(", ");
-  const frei = freischaltet(f.id);
-  return `<div class="frage"><span class="fid">${f.id}</span><p>${esc(f.frage)}</p>
-    <div class="unter">${personen[f.entscheidet] ? "Entscheidet " + esc(personen[f.entscheidet].name.split(" ")[0]) : ""}${vor ? ". Wartet auf " + vor : ""}${frei.length ? ". Schaltet frei: " + frei.map(x => `<button data-frage="${x}">${x}</button>`).join(", ") : ""}</div></div>`;
+function start() {
+  const reihe = nach(offen.filter(f => !altLuecke(f)), gewicht);
+  const zuerst = reihe.slice(0, 3), rest = reihe.slice(3), alt = offen.filter(altLuecke);
+  const gruppeVon = f => { const t = [...f.betrifft, ...f.blockiert].flatMap(bezugVon).find(x => teile[x]); const v = t ? [...vorfahren(t), t] : []; return v.includes("COMP-WHEEL") ? "Wasserrad" : v.includes("COMP-RADSTATT") ? "Radstadt" : v.includes("COMP-WATERWAY") ? "Wasserführung" : "Allgemein"; };
+  const gruppiert = {}; rest.forEach(f => (gruppiert[gruppeVon(f)] ||= []).push(f));
+  karte.innerHTML = `
+    <p class="einstieg">Tippe ein Teil am Rad an, um zu sehen, was darüber bekannt ist. Oder beginne mit den Fragen, deren Antwort am meisten weiterhilft.</p>
+    <div class="wissen">
+      <div class="balken" role="img" aria-label="${best} bestätigt, ${off} offen, ${unterlage} aus allgemeinen Unterlagen">${balken}</div>
+      <dl><div><dt>bestätigt</dt><dd>${best}</dd></div><div><dt>noch offen</dt><dd>${off}</dd></div><div><dt>Messfotos ausgewertet</dt><dd>${messAus}<span> / ${messfotos.length}</span></dd></div></dl>
+      <p class="leise">Das Rad wurde am 10. Oktober 2026 abgebaut. Bis zum Aufbau im Frühjahr liegen alle Teile einzeln im Lager.</p>
+    </div>
+    <h3>Als Nächstes klären</h3>
+    ${zuerst.map(fragekarte).join("")}
+    <h3>Weitere offene Fragen<small>${rest.length}</small></h3>
+    ${["Wasserrad", "Radstadt", "Wasserführung", "Allgemein"].filter(g => gruppiert[g]).map(g => `<details class="gruppe"><summary>${g}<small>${gruppiert[g].length}</small></summary><div class="innen">${gruppiert[g].map(fragezeile).join("")}</div></details>`).join("")}
+    ${alt.length ? `<details class="gruppe"><summary>Aus der Zeit vor dem Abbau<small>${alt.length}</small></summary><div class="innen"><p class="leise klein">Aufnahmewünsche von vor dem Abbau. Prüfen, ob die Fotos vom Abbau sie schon beantworten, sonst beim Aufbau im Frühjahr nachholen.</p>${alt.map(fragezeile).join("")}</div></details>` : ""}`;
 }
 
-let gewaehlt = null;
-function waehle(id, { scroll = false } = {}) {
-  gewaehlt = id;
-  const markiert = unterteile(id);
-  Object.entries(gruppen).forEach(([k, g]) => g.classList.toggle("gewaehlt", markiert.includes(k)));
-  document.querySelectorAll("#baum button").forEach(b => b.setAttribute("aria-current", b.dataset.teil === id ? "true" : "false"));
+function fotostreifen(liste, max = 18) {
+  if (!liste.length) return `<p class="leer-text">Noch keine Fotos zugeordnet.</p>`;
+  return `<div class="fotos">${liste.slice(0, max).map(q => `<button data-foto="${q.id}" aria-label="Foto öffnen"><img src="${q.bild}" alt="" loading="lazy"><span class="art">${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}</span></button>`).join("")}</div>${liste.length > max ? `<p class="leer-text">und ${liste.length - max} weitere</p>` : ""}`;
+}
+
+function angabenTabelle(liste, id) {
+  const reihen = ["messung", "muendlich", "skizze", "foto", "ableitung", "annahme", "scan", "kontext", "holzliste", "fremdvorlage"];
+  const bez = a => beziehungen[a.ziel] ? `${teile[beziehungen[a.ziel].von]?.name || ""} ${begriffe[beziehungen[a.ziel].art]?.name || ""} ${teile[beziehungen[a.ziel].zu]?.name || ""}` : a.ziel !== id && teile[a.ziel] ? teile[a.ziel].name : "";
+  const z = a => `<tr><td>${esc(eig(a.eig))}${bez(a) ? `<div class="bezug">${esc(bez(a))}</div>` : ""}</td><td class="wert">${esc(wertText(a))}</td><td><span class="status ${a.guelt}">${GUELT[a.guelt]}</span></td></tr>`;
+  return `<table class="angaben"><tbody>${reihen.filter(g => liste.some(a => a.grund === g)).map(g => `<tr class="gruppe"><td colspan="3">${GRUND_LANG[g]}</td></tr>` + liste.filter(a => a.grund === g).map(z).join("")).join("")}</tbody></table>`;
+}
+
+function antwortBereich(ziel, art) {
+  const liste = Speicher.zu(ziel);
+  const vorhanden = liste.length ? liste.map(a => `<div class="antwort"><header><b>${esc(Speicher.name(a))}</b><span>${new Date(a.am).toLocaleString("de-DE", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}</span><span class="marker-art${a.typ === "stimmt_nicht" ? " nein" : ""}">${esc(TYPEN[a.typ] || a.typ || "")}</span>${a.uebernommen ? `<span class="status bestaetigt">im Wissenskern</span>` : ""}</header>${a.wert ? `<p><b>${esc(a.wert)}</b></p>` : ""}${a.text ? `<p>${esc(a.text)}</p>` : ""}</div>`).join("") : "";
+  if (Speicher.modus === "lesen") return vorhanden + `<p class="nurlesen">Antworten und Ergänzungen gibt man in der Arbeitsfassung des Cockpits. Diese Seite ist zum Lesen.</p>`;
+  const wahl = art === "frage" ? ["stimmt", "stimmt_nicht", "genauer"] : ["ergaenzung", "korrektur"];
+  return vorhanden + `<form class="formular" id="antwort-form" data-ziel="${esc(ziel)}">
+    <div class="wahl" role="group" aria-label="Art der Antwort">${wahl.map((w, i) => `<button type="button" data-typ="${w}" aria-pressed="${i === 0}">${TYPEN[w]}</button>`).join("")}</div>
+    <label for="antwort-text">${art === "frage" ? "Was weißt du dazu?" : "Was möchtest du ergänzen?"}<textarea id="antwort-text" placeholder="${art === "frage" ? "Zum Beispiel: gemessen an der Innenkante, auf Höhe der Achse" : "Zum Beispiel: Die Keile werden von oben eingetrieben"}"></textarea></label>
+    <div class="reihe"><label for="antwort-wert">Wert, falls es ein Maß ist<input id="antwort-wert" placeholder="z. B. 4,40 m"></label>${Speicher.modus === "server" ? `<label for="antwort-name">Dein Name<input id="antwort-name" autocomplete="name"></label>` : ""}</div>
+    <div class="reihe"><button class="knopf" type="submit">Antwort speichern</button><span class="leise" style="font-size:var(--m1)">Johannes übernimmt Antworten in den Wissenskern, Thorsten bestätigt sie.</span></div>
+  </form>`;
+}
+
+function bauteil(id) {
   const b = teile[id], beg = begriffe[b.begriff];
-  const kette = []; let p = b.teil_von; while (p) { kette.unshift(p); p = teile[p].teil_von; }
-  const ang = sammle(angabenJe, id), fr = sammle(fragenJe, id);
-  const aktuell = ang.filter(a => !["holzliste", "fremdvorlage"].includes(a.grund));
-  const historie = ang.filter(a => ["holzliste", "fremdvorlage"].includes(a.grund));
-  const best = ang.filter(a => a.guelt === "bestaetigt").length;
-  const zeile = a => `<tr><td>${esc(eig(a.eig))}${a.ziel !== id && teile[a.ziel] ? `<div class="bezug">${esc(teile[a.ziel].name)}</div>` : ""}${beziehungen[a.ziel] ? `<div class="bezug">${esc(beziehungsText(beziehungen[a.ziel]))}</div>` : ""}</td>
-      <td class="wert${String(wertText(a)).length > 22 ? " lang" : ""}">${esc(wertText(a))}</td><td><span class="status ${a.guelt}">${GUELT[a.guelt]}</span></td></tr>`;
-  const gruppiert = (liste, reihenfolge) => reihenfolge.filter(g => liste.some(a => a.grund === g)).map(g =>
-    `<tr class="gruppe"><td colspan="3">${GRUND[g]}</td></tr>` + liste.filter(a => a.grund === g).map(zeile).join("")).join("");
-  const qids = [...new Set(ang.flatMap(a => a.quellen))].filter(q => quellen[q]);
-  const kinderListe = (kinder[id] || []).map(k => teile[k]);
-  $("#akte").innerHTML = `
-    <p class="pfad">${kette.map(k => `<button data-teil="${k}">${esc(teile[k].name)}</button>`).join(" / ") || "Inventar"}</p>
+  const ang = sammle(angabenJe, id), anzBest = ang.filter(a => a.guelt === "bestaetigt").length;
+  const masse = nach((direktJe[id] || []).filter(a => istMass(a) && !["holzliste", "fremdvorlage", "scan"].includes(a.grund) && a.guelt !== "ueberholt"), a => ({ messung: 5, muendlich: 4, skizze: 3, foto: 2, ableitung: 1 }[a.grund] || 0)).slice(0, 6);
+  const fr = nach(sammle(fragenJe, id).filter(f => !altLuecke(f)), gewicht);
+  const fotos = fotosVon([id]);
+  const unter = (kinder[id] || []).map(k => teile[k]);
+  const pfadK = vorfahren(id);
+  karte.innerHTML = `
+    <button class="zurueck" data-gehe="">Zurück zum Überblick</button>
+    ${pfadK.length ? `<p class="pfad">${pfadK.map(k => `<a href="#${k}" data-gehe="${k}">${esc(teile[k].name)}</a>`).join(" / ")}</p>` : ""}
     <h2>${esc(b.name)}</h2>
-    ${beg && beg.id !== "B-VORLAGE" ? `<p class="definition">${esc(beg.definition)}</p>` : ""}
-    ${beg?.aliase?.length ? `<p class="auch">Auch genannt: ${beg.aliase.map(esc).join(", ")}</p>` : ""}
-    <p class="bilanz">${ang.length ? `${ang.length} Angaben, davon ${best ? best + " bestätigt" : "keine bestätigt"}` : "Noch keine Angaben"}${fr.length ? `, <span style="color:var(--roetel)">${fr.length} offene ${fr.length === 1 ? "Frage" : "Fragen"}</span>` : ""}.${b.anzahl ? ` Anzahl: ${esc(b.anzahl)}.` : ""}</p>
+    ${beg && !["B-VORLAGE", "B-HOLZLISTENPOSTEN"].includes(beg.id) ? `<p class="definition">${esc(beg.definition)}</p>` : ""}
+    ${beg?.aliase?.length ? `<p class="auch">Im Verein auch: ${beg.aliase.map(esc).join(", ")}</p>` : ""}
+    ${b.anzahl ? `<p class="auch">Anzahl: ${esc(b.anzahl)}</p>` : ""}
     ${b.hinweis ? `<p class="hinweis">${esc(b.hinweis)}</p>` : ""}
-    ${kinderListe.length ? `<p class="auch">Besteht aus: ${kinderListe.map(k => `<button class="link" data-teil="${k.id}" style="background:none;border:0;padding:0;color:var(--wasser);cursor:pointer;text-decoration:underline;text-underline-offset:3px">${esc(k.name)}</button>`).join(", ")}</p>` : ""}
-    ${fr.length ? `<h3>Offen<small>${fr.length}</small></h3>${fr.sort((a, z) => gewicht(z) - gewicht(a)).map(frageHtml).join("")}` : ""}
-    ${aktuell.length ? `<h3>Was bekannt ist<small>${aktuell.length}</small></h3><div class="tabelle"><table class="angaben"><thead><tr><th>Eigenschaft</th><th>Wert</th><th>Status</th></tr></thead><tbody>${gruppiert(aktuell, REIHENFOLGE)}</tbody></table></div>` : ""}
-    ${historie.length ? `<details class="historie"><summary>Historische Unterlagen anzeigen (${historie.length})</summary><div class="tabelle"><table class="angaben"><tbody>${gruppiert(historie, ["holzliste", "fremdvorlage"])}</tbody></table></div></details>` : ""}
-    ${qids.length ? `<h3>Belegt durch<small>${qids.length} Quellen</small></h3><ul class="quellenliste">${qids.map(q => { const x = quellen[q]; return `<li>${x.pfad ? `<a href="${REPO + encodeURI(x.pfad)}" target="_blank" rel="noopener">${esc(x.titel || q)}</a>` : esc(x.titel || q)} <span class="status">${esc(BILDART[x.bildart] || x.art)}</span></li>`; }).join("")}</ul>` : ""}`;
-  if (scroll) $("#akte").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+    <h3>Wichtigste Maße</h3>
+    ${masse.length ? `<dl class="masse">${masse.map(a => `<div><dt>${esc(eig(a.eig))}</dt><dd>${esc(wertText(a))}<small>${GRUND[a.grund]}, ${a.guelt === "bestaetigt" ? "bestätigt" : "noch offen"}</small></dd></div>`).join("")}</dl>` : `<p class="leer-text">Noch keine Maße für dieses Teil.</p>`}
+    ${fr.length ? `<h3>Offen<small>${fr.length}</small></h3>${fr.slice(0, 3).map(fragekarte).join("")}${fr.length > 3 ? `<details class="gruppe" style="margin-top:10px"><summary>Weitere Fragen zu diesem Teil<small>${fr.length - 3}</small></summary><div class="innen">${fr.slice(3).map(fragezeile).join("")}</div></details>` : ""}` : ""}
+    <h3>Fotos<small>${fotos.length}</small></h3>${fotostreifen(fotos)}
+    ${unter.length ? `<h3>Besteht aus</h3><div class="chips">${unter.map(k => `<button data-gehe="${k.id}">${esc(k.name)}</button>`).join("")}</div>` : ""}
+    <h3>Ergänzen</h3>${antwortBereich(id, "bauteil")}
+    ${ang.length ? `<details class="alle"><summary>Alle ${ang.length} Angaben anzeigen, ${anzBest ? anzBest + " bestätigt" : "keine bestätigt"}</summary>${angabenTabelle(ang, id)}</details>` : ""}`;
 }
-const beziehungsText = r => `${teile[r.von]?.name} ${begriffe[r.art]?.name || r.art} ${teile[r.zu]?.name}`;
 
+function frage(id) {
+  const f = fragen[id];
+  const frei = freischaltet(id).map(x => fragen[x]), warte = f.haengt_ab_von.map(x => fragen[x]);
+  const bez = [...new Set([...f.betrifft, ...f.blockiert].flatMap(bezugVon))].filter(t => teile[t]);
+  const bekannt = f.betrifft.map(x => angabenById[x]).filter(Boolean);
+  karte.innerHTML = `
+    <button class="zurueck" data-gehe="">Zurück zum Überblick</button>
+    <p class="pfad">${vorname(f.entscheidet) ? esc(vorname(f.entscheidet)) + " entscheidet" : "Offene Frage"}</p>
+    <h2 class="frage-titel">${esc(f.frage)}</h2>
+    ${f.hinweis ? `<p class="hinweis">${esc(f.hinweis)}</p>` : ""}
+    ${frei.length || warte.length ? `<h3>Warum sie wichtig ist</h3>` : ""}
+    ${frei.length ? `<p class="leise klein">Die Antwort macht diese Fragen beantwortbar:</p>${frei.map(fragezeile).join("")}` : ""}
+    ${warte.length ? `<p class="leise klein" style="margin-top:14px">Leichter, wenn zuerst diese geklärt ist:</p>${warte.map(fragezeile).join("")}` : ""}
+    ${bekannt.length ? `<h3>Bisheriger Stand</h3><dl class="masse">${bekannt.map(a => `<div><dt>${esc(eig(a.eig))}</dt><dd>${esc(wertText(a))}<small>${GRUND[a.grund]}, ${GUELT[a.guelt]}</small></dd></div>`).join("")}</dl>` : ""}
+    ${bez.length ? `<h3>Betrifft</h3><div class="chips">${bez.map(t => `<button data-gehe="${t}">${esc(teile[t].name)}</button>`).join("")}</div>` : ""}
+    <h3>Passende Fotos</h3>${fotostreifen(fotosZuFrage(f), 14)}
+    <h3>Antworten</h3>${antwortBereich(id, "frage")}`;
+}
+
+// ---------- Navigation ----------
+let aktuell = null;
+function zeige({ neu = true } = {}) {
+  const z = decodeURIComponent(location.hash.slice(1));
+  const ziel = teile[z] || fragen[z] ? z : "";
+  const gewechselt = ziel !== aktuell; aktuell = ziel;
+  const markiert = teile[ziel] ? unterteile(ziel) : fragen[ziel] ? [...new Set([...fragen[ziel].betrifft, ...fragen[ziel].blockiert].flatMap(bezugVon))] : [];
+  Object.entries(gruppen).forEach(([k, g]) => g.classList.toggle("gewaehlt", markiert.includes(k)));
+  const scroll = karte.scrollTop;
+  if (teile[ziel]) bauteil(ziel); else if (fragen[ziel]) frage(ziel); else start();
+  if (gewechselt && neu) { karte.scrollTop = 0; if (ziel && matchMedia("(max-width: 880px)").matches) window.scrollTo({ top: karte.offsetTop - $(".rad").offsetHeight - 8 }); }
+  else karte.scrollTop = scroll;
+  document.title = (teile[ziel]?.name || (fragen[ziel] ? "Offene Frage" : "")) + (ziel ? " – " : "") + "Kleines Schäferrad";
+}
+function gehe(id) { if (decodeURIComponent(location.hash.slice(1)) === id) zeige(); else location.hash = id; }
+window.addEventListener("hashchange", () => zeige());
+$("#startlink").addEventListener("click", e => { e.preventDefault(); gehe(""); });
 document.addEventListener("click", e => {
-  const t = e.target.closest("[data-teil]:not(g)");
-  if (t) { zeige("rad"); waehle(t.dataset.teil, { scroll: matchMedia("(max-width: 880px)").matches }); }
-  const f = e.target.closest("[data-frage]");
-  if (f) { zeige("fragen"); const z = document.getElementById("frage-" + f.dataset.frage); z?.scrollIntoView({ block: "center" }); z?.animate?.([{ background: "var(--wasser-hauch)" }, { background: "transparent" }], { duration: 1200 }); }
+  const g = e.target.closest("[data-gehe]"); if (g) { e.preventDefault(); gehe(g.dataset.gehe); return; }
+  const f = e.target.closest("[data-foto]"); if (f) { oeffneFoto(f.dataset.foto); return; }
+  const w = e.target.closest(".wahl button"); if (w) w.parentElement.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b === w ? "true" : "false"));
 });
-
-// Inventarbaum
-function baumHtml(id) {
-  const b = teile[id], n = sammle(angabenJe, id).length, f = sammle(fragenJe, id).length;
-  const sub = (kinder[id] || []).map(baumHtml).join("");
-  return `<li><button data-teil="${id}">${esc(b.name)}<span class="z">${n}${f ? ` <span class="r">/ ${f}</span>` : ""}</span></button>${sub ? `<ul>${sub}</ul>` : ""}</li>`;
-}
-const wurzeln = K.bauteile.filter(b => !b.teil_von).map(b => b.id);
-const hauptbaum = wurzeln.filter(w => teile[w].art === "anlage");
-const lose = wurzeln.filter(w => teile[w].art !== "anlage");
-$("#baum").innerHTML = `<h3>Alle Bauteile</h3><p class="auch" style="color:var(--leise);margin:0 0 10px">Zahl = Angaben, rot = offene Fragen. Vorlagen und Holzlisten-Posten stehen am Ende, weil ihre Zuordnung zum Rad offen ist.</p>
-  <ul>${hauptbaum.map(baumHtml).join("")}${lose.map(baumHtml).join("")}</ul>`;
-
-// ---------- Fragen ----------
-let filterWer = "";
-function zeichneFragen() {
-  const offen = K.fragen.filter(f => f.status === "offen" && (!filterWer || f.entscheidet === filterWer)).sort((a, z) => gewicht(z) - gewicht(a));
-  // längste Abhängigkeitskette
-  const tiefe = id => 1 + Math.max(0, ...fragen[id].haengt_ab_von.map(tiefe));
-  const spitze = K.fragen.filter(f => f.status === "offen").sort((a, z) => tiefe(z.id) - tiefe(a.id))[0];
-  const kette = []; let k = spitze; while (k) { kette.unshift(k); k = k.haengt_ab_von.map(x => fragen[x]).sort((a, z) => tiefe(z.id) - tiefe(a.id))[0]; }
-  $("#kette").innerHTML = `<h3>Längste Kette</h3><p>Diese Fragen bauen aufeinander auf. Von links beantwortet, öffnet jede Antwort die nächste.</p>
-    <ol>${kette.map(f => `<li><div class="glied"><b>${f.id}</b>${esc(f.frage.length > 90 ? f.frage.slice(0, 88).replace(/\s\S*$/, "") + " …" : f.frage)}</div></li>`).join("")}</ol>`;
-  $("#fragenliste").innerHTML = offen.map(f => {
-    const vor = f.haengt_ab_von.map(x => `<button data-frage="${x}">${x}</button>`).join(", ");
-    const frei = freischaltet(f.id);
-    const bez = [...new Set([...f.betrifft, ...f.blockiert].map(x => teile[x] ? x : teile[angabeZiel[x]] ? angabeZiel[x] : null).filter(Boolean))];
-    return `<div class="frage" id="frage-${f.id}"><span class="fid">${f.id}</span><p>${esc(f.frage)}</p><span class="wer">${esc(personen[f.entscheidet]?.name.split(" ")[0] || "")}</span>
-      <div class="unter">${vor ? "Wartet auf " + vor + ". " : ""}${frei.length ? "Schaltet frei: " + frei.map(x => `<button data-frage="${x}">${x}</button>`).join(", ") + ". " : ""}${f.hinweis ? esc(f.hinweis) : ""}
-      ${bez.length ? `<div class="chips">${bez.map(t => `<button data-teil="${t}">${esc(teile[t].name)}</button>`).join("")}</div>` : ""}</div></div>`;
-  }).join("") || `<p>Keine offenen Fragen für diese Auswahl.</p>`;
-}
-document.querySelectorAll(".filter button").forEach(b => b.addEventListener("click", () => {
-  filterWer = b.dataset.wer;
-  document.querySelectorAll(".filter button").forEach(x => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
-  zeichneFragen();
-}));
-zeichneFragen();
-
-// ---------- Quellen ----------
-(function () {
-  const FARBE = { skizze: "var(--holz-dunkel)", muendlich: "var(--tinte)", foto: "var(--wasser)", holzliste: "var(--linie)", fremdvorlage: "var(--linie)",
-    scan: "color-mix(in srgb, var(--wasser) 45%, var(--papier))", kontext: "color-mix(in srgb, var(--leise) 50%, var(--papier))", ableitung: "var(--leise)", annahme: "var(--leise)", messung: "var(--eiche)" };
-  const G = S.grundlage, summe = Object.values(G).reduce((a, b) => a + b, 0);
-  const reihe = ["messung", "muendlich", "skizze", "foto", "scan", "ableitung", "kontext", "holzliste", "fremdvorlage", "annahme"];
-  const streifen = reihe.filter(g => G[g]).map(g => `<div title="${GRUND[g]}: ${G[g]}" style="flex:${G[g]};background:${FARBE[g]}${g === "fremdvorlage" ? ";background-image:repeating-linear-gradient(135deg,transparent 0 4px,var(--papier) 4px 6px)" : ""}"></div>`).join("");
-  const leg = reihe.map(g => G[g] ? `<li><i style="background:${FARBE[g]}"></i>${GRUND[g]}<span class="n">${G[g]}</span></li>` : g === "messung" ? `<li class="fehlt"><i></i>Am Rad gemessen<span class="n">0</span></li>` : "").join("");
-  const U = S.gueltigkeit;
-  const ordner = {};
-  K.quellen.filter(q => q.ordner).forEach(q => { const o = (ordner[q.ordner] ||= { n: 0, e: 0, d: 0, m: 0 }); o.n++; if (q.erschlossen) o.e++; o.d += q.kopien || 0; if (q.bildart === "messfoto") o.m++; });
-  const zeilen = Object.entries(ordner).sort((a, z) => (z[1].n - z[1].e) - (a[1].n - a[1].e)).map(([o, v]) =>
-    `<tr><td><a href="https://github.com/jdistlr/kleines-schaeferrad/tree/main/evidence/raw/${encodeURIComponent(o)}" target="_blank" rel="noopener">${esc(o.replace("Lagerboch", "Lagerbock"))}</a></td><td class="r">${v.n}</td><td class="r">${v.m || ""}</td><td class="r">${v.e}</td><td style="width:34%"><div class="balken" role="img" aria-label="${v.e} von ${v.n} ausgewertet"><div style="width:${(v.e / v.n * 100).toFixed(1)}%"></div></div></td><td class="r">${v.d || ""}</td></tr>`).join("");
-  $("#quellen-ansicht").innerHTML = `
-    <section><h2>Woher das Wissen stammt</h2><p>Alle ${summe} Angaben nach ihrer Grundlage. Mündliche Überlieferung und Vereinsskizzen tragen das meiste. Eine Messung am Rad selbst gibt es noch nicht; die Zahlen aus dem 3D-Scan beschreiben die Scan-Dateien.</p>
-      <div class="streifen" role="img" aria-label="Verteilung der Angaben nach Grundlage">${streifen}</div><ul class="streifen-legende">${leg}</ul></section>
-    <section><h2>Was davon heute gilt</h2><p>Bestätigen kann nur ein Wissensträger, meist Thorsten. „Historisch“ heißt: die Angabe dokumentiert eine Unterlage wie die allgemeine Holzliste und sagt nichts über das heutige Rad.</p>
-      <ul class="streifen-legende">${Object.entries(GUELT).map(([k, v]) => `<li><span class="status ${k}">${v}</span><span class="n">${U[k] || 0}</span></li>`).join("")}</ul></section>
-    <section><h2>Fotos und Dateien je Bauteilordner</h2><p>${S.quellen} Quellen, ${S.quellen - S.quellen_unerschlossen} davon ausgewertet. Jedes Foto ist eingeordnet als Messfoto (Zollstock oder Maßband im Bild), Konstruktionsfoto oder Übersicht. Kopien sind Dateien mit gleichem Inhalt unter anderem Namen; sie sind zusammengeführt und zählen nicht als eigener Beleg.</p>
-      <div class="tabelle"><table class="ordner"><thead><tr><th>Ordner</th><th class="r">Dateien</th><th class="r">Messfotos</th><th class="r">ausgewertet</th><th></th><th class="r">Kopien</th></tr></thead><tbody>${zeilen}</tbody></table></div></section>`;
-})();
-
-// ---------- Ansichten ----------
-function zeige(name) {
-  ["rad", "fragen", "quellen"].forEach(n => {
-    $("#ansicht-" + n).hidden = n !== name;
-    $("#tab-" + n).setAttribute("aria-selected", n === name ? "true" : "false");
-    $("#tab-" + n).tabIndex = n === name ? 0 : -1;
-  });
-  if (location.hash !== "#" + name) history.replaceState(null, "", "#" + name);
-}
-document.querySelectorAll("nav.ansichten button").forEach((b, i, alle) => {
-  b.addEventListener("click", () => zeige(b.dataset.ansicht));
-  b.addEventListener("keydown", e => {
-    const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
-    if (d) { const n = alle[(i + d + alle.length) % alle.length]; n.focus(); zeige(n.dataset.ansicht); }
-  });
+document.addEventListener("submit", async e => {
+  if (e.target.id !== "antwort-form") return;
+  e.preventDefault();
+  const fm = e.target, text = $("#antwort-text").value.trim(), wert = $("#antwort-wert").value.trim();
+  const typ = fm.querySelector(".wahl [aria-pressed=true]")?.dataset.typ;
+  if (!text && !wert && typ !== "stimmt") { $("#antwort-text").focus(); toast("Bitte kurz beschreiben, was du weißt."); return; }
+  const knopf = fm.querySelector(".knopf"); knopf.disabled = true;
+  try {
+    await Speicher.speichern({ ziel: fm.dataset.ziel, typ, text, wert, ...(Speicher.modus === "server" ? { name: $("#antwort-name")?.value.trim() || "" } : {}) });
+    toast("Antwort gespeichert");
+  } catch { toast("Speichern hat nicht geklappt. Bitte später noch einmal versuchen."); knopf.disabled = false; }
 });
-zeige(["rad", "fragen", "quellen"].includes(location.hash.slice(1)) ? location.hash.slice(1) : "rad");
-waehle("COMP-RADSTATT");
+Speicher.hoerer.push(() => { if (!document.activeElement?.closest("#antwort-form")) zeige({ neu: false }); });
+
+function oeffneFoto(id) {
+  const q = quellen[id], f = $("#bildfenster"), vorher = document.activeElement;
+  f.innerHTML = `<button aria-label="Schließen" id="bild-zu">×</button><figure><img src="${q.bild}" alt=""><figcaption><span>${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}${q.bauteil && teile[q.bauteil] ? ", " + esc(teile[q.bauteil].name) : ""}</span>${q.pfad ? `<a href="${REPO + encodeURI(q.pfad)}" target="_blank" rel="noopener">Original in voller Größe</a>` : ""}</figcaption></figure>`;
+  f.hidden = false; $("#bild-zu").focus();
+  const taste = e => { if (e.key === "Escape") zu(); };
+  const zu = () => { f.hidden = true; document.removeEventListener("keydown", taste); vorher?.focus?.(); };
+  $("#bild-zu").onclick = zu; f.onclick = e => { if (e.target === f) zu(); }; document.addEventListener("keydown", taste);
+}
+function toast(t) { const n = $("#toast"); n.textContent = t; n.hidden = false; clearTimeout(toast.z); toast.z = setTimeout(() => { n.hidden = true; }, 2600); }
+
+// Suche: kennt Vereinsbegriffe und Schreibvarianten
+const index = [
+  ...K.bauteile.filter(b => b.art !== "listenposten").map(b => ({ id: b.id, titel: b.name, text: [b.name, ...(begriffe[b.begriff]?.aliase || [])].join(" "), art: "Bauteil" })),
+  ...offen.map(f => ({ id: f.id, titel: kurz(f.frage, 90), text: f.frage, art: "Offene Frage" })),
+];
+const suche = $("#suche"), trefferListe = $("#treffer"); let auswahl = 0, liste = [];
+function sucheAus() {
+  const w = suche.value.trim().toLowerCase();
+  liste = w.length < 2 ? [] : index.map(x => ({ x, p: x.titel.toLowerCase().startsWith(w) ? 3 : x.text.toLowerCase().split(/[\s/,()]+/).some(t => t.startsWith(w)) ? 2 : x.text.toLowerCase().includes(w) ? 1 : 0 }))
+    .filter(r => r.p).sort((a, b) => b.p - a.p || (a.x.art === "Bauteil" ? -1 : 1)).slice(0, 8).map(r => r.x);
+  auswahl = 0;
+  trefferListe.innerHTML = liste.map((x, i) => `<li role="option" aria-selected="${i === 0}" data-gehe="${x.id}">${esc(x.titel)}<small>${x.art}</small></li>`).join("") || (w.length >= 2 ? `<li aria-disabled="true">Nichts gefunden</li>` : "");
+  trefferListe.hidden = w.length < 2; suche.setAttribute("aria-expanded", String(!trefferListe.hidden));
+}
+suche.addEventListener("input", sucheAus);
+suche.addEventListener("keydown", e => {
+  if ((e.key === "ArrowDown" || e.key === "ArrowUp") && liste.length) { e.preventDefault(); auswahl = (auswahl + (e.key === "ArrowDown" ? 1 : -1) + liste.length) % liste.length; trefferListe.querySelectorAll("li").forEach((l, i) => l.setAttribute("aria-selected", String(i === auswahl))); }
+  if (e.key === "Enter" && liste[auswahl]) { gehe(liste[auswahl].id); suche.value = ""; sucheAus(); suche.blur(); }
+  if (e.key === "Escape") { suche.value = ""; sucheAus(); }
+});
+trefferListe.addEventListener("click", () => { suche.value = ""; sucheAus(); });
+document.addEventListener("keydown", e => { if (e.key === "/" && !/INPUT|TEXTAREA/.test(document.activeElement?.tagName || "")) { e.preventDefault(); suche.focus(); } });
+document.addEventListener("click", e => { if (!e.target.closest(".suche")) trefferListe.hidden = true; });
+
+zeige();
+Speicher.start();
 </script>

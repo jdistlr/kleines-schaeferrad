@@ -222,6 +222,8 @@ def pruefe(kern_dir, root=ROOT, altdaten=True):
         for k in q.get("kopien", []):
             if not os.path.exists(os.path.join(root, k["pfad"])):
                 F(f"{q['id']}: Kopie {k['pfad']} existiert nicht")
+        if q.get("bauteil") and q["bauteil"] not in bauteile:
+            F(f"{q['id']}: Bauteil {q['bauteil']} unbekannt")
         if q.get("bildart") is not None:
             if q["art"] != "foto":
                 F(f"{q['id']}: Bildart nur für Fotos")

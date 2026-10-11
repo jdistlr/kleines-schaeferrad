@@ -3,7 +3,10 @@
 
 Aufruf:
   python scripts/kern/baue_cockpit.py              # schreibt cockpit/index.html (vollständiges Dokument)
-  python scripts/kern/baue_cockpit.py --artefakt   # ohne Dokumentrahmen, für die Artifact-Vorschau
+  python scripts/kern/baue_cockpit.py --artefakt   # ohne Dokumentrahmen, für die Arbeitsfassung (Antworten speicherbar)
+  python scripts/kern/baue_cockpit.py --api URL    # Antworten über einen eigenen Server (siehe docs/ordnung/ANTWORTEN-SCHNITTSTELLE.md)
+
+Vorschaubilder landen unter cockpit/bilder/ (braucht Pillow) und werden mitveröffentlicht.
 
 Das Cockpit ist nur eine Ansicht. Es wird nie von Hand bearbeitet; Änderungen gehören in kern/.
 """
@@ -17,7 +20,30 @@ sys.path.insert(0, HIER)
 from pruefe_kern import lade_kern, pruefe  # noqa: E402
 
 
+BILDER = os.path.join(ROOT, "cockpit", "bilder")
+
+
+def vorschau(q):
+    """Erzeugt ein verkleinertes Vorschaubild (lange Seite 560 px) und gibt den relativen Pfad zurück."""
+    pfad = q.get("pfad") or ""
+    if q["art"] not in ("foto", "skizze") or not pfad.lower().endswith((".jpg", ".jpeg", ".png")):
+        return None
+    ziel = os.path.join(BILDER, q["id"] + ".jpg")
+    if not os.path.exists(ziel):
+        try:
+            from PIL import Image, ImageOps
+        except ImportError:
+            return None
+        os.makedirs(BILDER, exist_ok=True)
+        with Image.open(os.path.join(ROOT, pfad)) as im:
+            im = ImageOps.exif_transpose(im).convert("RGB")
+            im.thumbnail((560, 560))
+            im.save(ziel, "JPEG", quality=70, optimize=True, progressive=True)
+    return "bilder/" + q["id"] + ".jpg"
+
+
 def main():
+    api = sys.argv[sys.argv.index("--api") + 1] if "--api" in sys.argv else None
     kern_dir = os.path.join(ROOT, "kern")
     fehler, _, st = pruefe(kern_dir, ROOT)
     if fehler:
@@ -41,7 +67,9 @@ def main():
                      "quellen": [q["quelle"] for q in a["quellen"]]} for a in d["angaben"]],
         "fragen": [{k: f.get(k) for k in ("id", "frage", "betrifft", "blockiert", "haengt_ab_von", "entscheidet", "status", "hinweis", "herkunft")} for f in d["fragen"]],
         "quellen": [{"id": q["id"], "art": q["art"], "pfad": q["pfad"], "titel": q["titel"], "ordner": q["ordner"],
-                     "erschlossen": q["erschlossen"], "kopien": len(q.get("kopien", [])), "bildart": q.get("bildart")} for q in d["quellen"]],
+                     "bauteil": q.get("bauteil"), "erschlossen": q["erschlossen"], "kopien": len(q.get("kopien", [])),
+                     "bildart": q.get("bildart"), "bild": vorschau(q)} for q in d["quellen"]],
+        "api": api,
     }
     with open(os.path.join(HIER, "cockpit", "vorlage.html"), encoding="utf-8") as f:
         vorlage = f.read()

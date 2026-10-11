@@ -59,8 +59,8 @@ def main():
                 p = os.path.join(tmp, name)
                 shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
         shutil.copytree(seite, tmp, dirs_exist_ok=True)
-        os.makedirs(os.path.join(tmp, "cockpit"), exist_ok=True)
-        shutil.copy(os.path.join(ROOT, "cockpit", "index.html"), os.path.join(tmp, "cockpit", "index.html"))
+        shutil.copytree(os.path.join(ROOT, "cockpit"), os.path.join(tmp, "cockpit"), dirs_exist_ok=True,
+                        ignore=shutil.ignore_patterns("artefakt.html"))
         open(os.path.join(tmp, ".nojekyll"), "w").close()
         git("add", "-A", cwd=tmp)
         if not git("status", "--porcelain", cwd=tmp).stdout.strip():
