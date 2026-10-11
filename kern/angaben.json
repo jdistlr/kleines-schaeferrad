@@ -14081,6 +14081,964 @@
         "datei": "evidence/raw/Arme/MESSFOTOS-20261012.md",
         "id": null
       }
+    },
+    {
+      "id": "AN-20261012-20",
+      "ziel": "COMP-SHAFT",
+      "eigenschaft": "durchmesser_ueber_ecken",
+      "wert": 0.37,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.36,
+        "bis": 0.38
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-WELLE-20261010133424",
+          "stelle": "Zollstock quer über die Stirnfläche"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Stützt AN-20261011-11 (37 cm über Ecken). Starke Schrägsicht.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-21",
+      "ziel": "COMP-SHAFT",
+      "eigenschaft": "dorn_ueberstand",
+      "wert": 0.175,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.17,
+        "bis": 0.18
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-WELLE-20261010133433",
+          "stelle": "Zollstock längs am Dorn, Null an der Stirnfläche"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Der Dorn ist ein Stahlzapfen mit umlaufenden Rillen (Laufspuren).",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-22",
+      "ziel": "COMP-SHAFT",
+      "eigenschaft": "dorn_durchmesser",
+      "wert": 0.075,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.065,
+        "bis": 0.08
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-WELLE-20261010133433",
+          "stelle": "Breite des Dorns neben dem Zollstock"
+        },
+        {
+          "quelle": "PHOTO-LAGERBOCK-LAND-IMG20261010121733",
+          "stelle": "Dorn im Lagerschlitz, Zollstock senkrecht daneben"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": null,
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-23",
+      "ziel": "COMP-SHAFT",
+      "eigenschaft": "lage_aeussere_armoeffnung_vom_holzende",
+      "wert": [
+        0.6,
+        0.82
+      ],
+      "einheit": "m",
+      "toleranz": {
+        "art": "ungefaehr",
+        "text": "Anfang und Ende der Öffnung, perspektivisch"
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-WELLE-20261010133404",
+          "stelle": "Zollstock längs auf der Welle ab äußerer Schelle"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Mitte der Öffnung damit bei ≈ 0,71 m. Skizze: mittlere Öffnung 90 vom Ende, äußere um 25 versetzt (CLAIM-0003/0004) → äußere bei 65. Passt im Rahmen der Schrägsicht; die gemessene Länge 22 cm ist perspektivisch zu groß (Skizze 16, CLAIM-0005).",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-24",
+      "ziel": "COMP-SHAFT-CLAMPS",
+      "eigenschaft": "abstand_innere_schelle_vom_holzende",
+      "wert": 0.32,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.3,
+        "bis": 0.36
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-WELLE-20261010133404",
+          "stelle": "Zollstock längs, Schraube der inneren Schelle"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Stützt die Fotoabschätzung 33–36 cm im Wellenbefund.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-25",
+      "ziel": "COMP-SHAFT-WEDGE",
+      "eigenschaft": "breite_im_breiten_bereich",
+      "wert": 0.08,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.07,
+        "bis": 0.09
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-WELLENKEIL-IMG20261010124828",
+          "stelle": "Zollstock quer über die Breitfläche"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Aus WELLENKEIL.md übernommen; dort am 11.10.2026 abgelesen.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-26",
+      "ziel": "COMP-BEARINGS",
+      "eigenschaft": "lagerform",
+      "wert": "Offener senkrechter Schlitz im Lagerklotz; der Dorn liegt unten im runden Schlitzgrund, oben deckt ein Brett ab.",
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-LAGERBOCK-LAND-IMG20261010121733",
+          "stelle": "Lagerklotz Landseite von vorn"
+        },
+        {
+          "quelle": "PHOTO-LAGERBOCK-LAND-IMG20261010121738",
+          "stelle": "Lagerklotz mit Zollstock waagrecht"
+        },
+        {
+          "quelle": "PHOTO-LAGERBOCK-LAND-IMG20261010121749",
+          "stelle": "Lagerklotz von oben"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Der Klotz trägt ein eingeschnittenes „L“ (Landseite). Beantwortet F-015 teilweise: Der Dorn liegt im Schlitzgrund auf.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-27",
+      "ziel": "COMP-BEARINGS",
+      "eigenschaft": "dornmitte_unter_oberkante_lagerklotz",
+      "wert": 0.115,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.1,
+        "bis": 0.13
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-LAGERBOCK-LAND-IMG20261010121733",
+          "stelle": "Zollstock senkrecht: Dorn ≈ 2,5–10, Oberkante Klotz ≈ 17,5"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Landseite.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-28",
+      "ziel": "COMP-BEARINGS",
+      "eigenschaft": "oberkante_lagerklotz_ueber_radstadt",
+      "wert": 0.46,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.44,
+        "bis": 0.48
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-LAGERBOCK-LAND-IMG20261010121620",
+          "stelle": "Zollstock senkrecht am Pfosten, Fuß auf dem Radstadt-Balken"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Landseite. Nullpunkt: Oberkante des uferparallelen Radstadt-Balkens unter dem Lagerbock.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-29",
+      "ziel": "COMP-BEARINGS",
+      "eigenschaft": "abstand_schlitz_vom_klotzende",
+      "wert": 0.38,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.37,
+        "bis": 0.39
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "PHOTO-LAGERBOCK-LAND-IMG20261010121738",
+          "stelle": "Zollstock waagrecht, Null an der Schlitzkante, linkes Ende am Pfosten bei ≈ 38,5"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Klotzlänge grob 0,64 m (aus dem Bild verhältnisgleich geschätzt): Der Schlitz sitzt nicht mittig.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-30",
+      "ziel": "COMP-SHAFT",
+      "eigenschaft": "wellenmitte_ueber_oberkante_radstadt_landseite",
+      "wert": 0.345,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.31,
+        "bis": 0.38
+      },
+      "grundlage": "ableitung",
+      "quellen": [
+        {
+          "quelle": "PHOTO-LAGERBOCK-LAND-IMG20261010121620",
+          "stelle": "Oberkante Lagerklotz"
+        },
+        {
+          "quelle": "PHOTO-LAGERBOCK-LAND-IMG20261010121733",
+          "stelle": "Dornmitte unter Oberkante"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "0,46 − 0,115 m. Erster Messwert zu F-003. Gilt für die Landseite und den Nullpunkt dort; ob alle Radstadt-Balken gleich hoch liegen, ist offen.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-31",
+      "ziel": "COMP-BEARING-STANDS",
+      "eigenschaft": "pfostenbreite_wasserseite",
+      "wert": 0.145,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.14,
+        "bis": 0.15
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Lagerbock-Wasserseite-IMG20261010123212",
+          "stelle": "Zollstock waagrecht über den Pfosten"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Passt zu 14 × 14 cm landseitig (TH-20261009-22).",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-32",
+      "ziel": "COMP-BEARING-STANDS",
+      "eigenschaft": "kopfbalkenhoehe_wasserseite",
+      "wert": 0.165,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.16,
+        "bis": 0.17
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Lagerbock-Wasserseite-IMG20261010123225",
+          "stelle": "Zollstock senkrecht an der Stirn des Kopfbalkens"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Höher als die 14 cm des landseitigen Bocks (TH-20261009-22). Ob die Böcke verschieden sind, ist offen.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-33",
+      "ziel": "COMP-BEARING-STANDS",
+      "eigenschaft": "kopfverbindung_wasserseite",
+      "wert": "Pfosten als Durchsteckzapfen durch den Kopfbalken, oben mit Keil gesichert.",
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Lagerbock-Wasserseite-IMG20261010123204",
+          "stelle": "Draufsicht"
+        },
+        {
+          "quelle": "DATEI-Lagerbock-Wasserseite-IMG20261010123225",
+          "stelle": "Zapfen und Keil oben"
+        },
+        {
+          "quelle": "DATEI-Lagerbock-Wasserseite-IMG20261010123147",
+          "stelle": "Übersicht"
+        },
+        {
+          "quelle": "DATEI-Lagerbock-Wasserseite-IMG20261010123157",
+          "stelle": "Übersicht"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Gleiches Prinzip wie landseitig (TH-20261009-23).",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-34",
+      "ziel": "COMP-RADSTATT-OBERBALKEN",
+      "eigenschaft": "querschnitt_breite_x_hoehe",
+      "wert": [
+        0.41,
+        0.205
+      ],
+      "einheit": "m",
+      "toleranz": {
+        "art": "ungefaehr",
+        "text": "Breite 40–42, Höhe 20–21 cm"
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Radstatt-IMG20261010133945",
+          "stelle": "Zollstock an der Stirnfläche, waagrecht"
+        },
+        {
+          "quelle": "DATEI-Radstatt-IMG20261010133950",
+          "stelle": "Zollstock an der Stirnfläche, senkrecht und waagrecht"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Neu gehauener Balken. Stützt AN-20261011-01 (40 × 20 cm, Vereinfachung).",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-35",
+      "ziel": "COMP-RADSTATT",
+      "eigenschaft": "ansichtshoehe_radstadt_balken",
+      "wert": 0.21,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.2,
+        "bis": 0.22
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Radstatt-IMG20261010133603",
+          "stelle": "Zollstock senkrecht vor dem Balken"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": null,
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-36",
+      "ziel": "COMP-RADSTATT",
+      "eigenschaft": "zapfenloecher_mit_eingelassenem_brett",
+      "wert": "Liegender Radstadt-Balken mit zwei rechteckigen Zapfenlöchern; dazwischen ist ein Brett bündig eingelassen.",
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Radstatt-IMG20261010133558",
+          "stelle": "Balken von oben"
+        },
+        {
+          "quelle": "DATEI-Radstatt-IMG20261010134011",
+          "stelle": "Zapfenloch"
+        },
+        {
+          "quelle": "DATEI-Radstatt-IMG20261010134025",
+          "stelle": "Zapfenloch"
+        },
+        {
+          "quelle": "DATEI-Radstatt-IMG20261010134037",
+          "stelle": "Balken längs mit Zollstock"
+        },
+        {
+          "quelle": "DATEI-Radstatt-IMG20261010133914",
+          "stelle": "Balken längs"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Zahlen bei dieser Auflösung nicht sicher lesbar. Zweck des Bretts offen (Ausbesserung?).",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-37",
+      "ziel": "COMP-RADSTATT",
+      "eigenschaft": "breite_querholz",
+      "wert": 0.365,
+      "einheit": "m",
+      "toleranz": {
+        "art": "ungefaehr",
+        "text": "unsicher, Splitterkante"
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Radstatt-IMG20261010133611",
+          "stelle": "Zollstock waagrecht ab Balkenende"
+        },
+        {
+          "quelle": "DATEI-Radstatt-IMG20261010133616",
+          "stelle": "Schrägansicht"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": null,
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-38",
+      "ziel": "COMP-FASTENERS",
+      "eigenschaft": "keillaenge",
+      "wert": 0.295,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.29,
+        "bis": 0.3
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Keile-IMG20261010115250",
+          "stelle": "Keil neben Zollstock"
+        },
+        {
+          "quelle": "DATEI-Keile-IMG20261010115300",
+          "stelle": "Keil neben Zollstock"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Zwei Keile. Welcher Keiltyp (Arm-, Krümmling-, Froschkeil, CLAIM-0048–0052) ist offen.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-39",
+      "ziel": "COMP-FASTENERS",
+      "eigenschaft": "keilkopf",
+      "wert": 0.053,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.05,
+        "bis": 0.056
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Keile-IMG20261010115250",
+          "stelle": "Kopfende"
+        },
+        {
+          "quelle": "DATEI-Keile-IMG20261010115300",
+          "stelle": "Kopfende"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": null,
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-40",
+      "ziel": "COMP-KRUEMMLINGE",
+      "eigenschaft": "breite_axial",
+      "wert": 0.14,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.135,
+        "bis": 0.145
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122917",
+          "stelle": "Zollstock quer"
+        },
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122920",
+          "stelle": "Zollstock quer"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Stützt TH-20261009-26.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-41",
+      "ziel": "COMP-RIM-LAND",
+      "eigenschaft": "durchmesser_der_kumpfbohrung",
+      "wert": 0.05,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.045,
+        "bis": 0.055
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122917",
+          "stelle": "Rundloch am Zollstock"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Stützt CLAIM-0038 (50, Skizze).",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-42",
+      "ziel": "COMP-KRUEMMLINGE",
+      "eigenschaft": "langloch_breite",
+      "wert": 0.055,
+      "einheit": "m",
+      "toleranz": {
+        "art": "ungefaehr",
+        "text": "ca."
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122920",
+          "stelle": "Langloch am Zollstock"
+        },
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122649",
+          "stelle": "Langloch mit Zollstock"
+        },
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122657",
+          "stelle": "Langloch mit Zollstock"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Langloch im Krümmling, vermutlich Armsitz oder Keilloch; Zweck offen.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-43",
+      "ziel": "COMP-SCHETTERNBRETTER",
+      "eigenschaft": "brettbreite",
+      "wert": 0.145,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.14,
+        "bis": 0.15
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122633",
+          "stelle": "Zollstock quer"
+        },
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122555",
+          "stelle": "Zollstock quer"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": null,
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-44",
+      "ziel": "COMP-SCHETTERNBRETTER",
+      "eigenschaft": "nagelabstand_vom_brettende",
+      "wert": 0.16,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.14,
+        "bis": 0.18
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122605",
+          "stelle": "Zollstock längs ab Brettende"
+        },
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122549",
+          "stelle": "Zollstock längs ab Nagel"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": null,
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-45",
+      "ziel": "COMP-KRUEMMLINGE",
+      "eigenschaft": "stoss_mit_ausklinkung",
+      "wert": "Am Krümmlingsende ist eine Stufe (Blatt) ausgeklinkt; dort liegen beim Einbau Schetternbretter beidseitig auf.",
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122436",
+          "stelle": "Stoßende"
+        },
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122443",
+          "stelle": "Stoßende"
+        },
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122454",
+          "stelle": "Stoßende"
+        },
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122501",
+          "stelle": "Stoßende"
+        },
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122421",
+          "stelle": "liegender Krümmling"
+        },
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122427",
+          "stelle": "Krümmling mit Schetternbrett"
+        },
+        {
+          "quelle": "DATEI-Kruemmlinge-IMG20261010122530",
+          "stelle": "Stoß mit Schetternbrettern"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Bestätigt das Bild von TH-20261009-04. Maße der Ausklinkung nicht sicher ablesbar.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-46",
+      "ziel": "COMP-KUEMPFE",
+      "eigenschaft": "hoehe",
+      "wert": 0.6,
+      "einheit": "m",
+      "toleranz": {
+        "art": "bereich",
+        "von": 0.58,
+        "bis": 0.62
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-originaltransfer-20261010-a6c861c8-05ce-4a8f-aa8a-636ffd464f11",
+          "stelle": "Zollstock senkrecht"
+        },
+        {
+          "quelle": "DATEI-originaltransfer-20261010-da76dde4-72ef-442c-b7e8-3feac8f39255",
+          "stelle": "Zollstock senkrecht"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Neu gebauter Kumpf (wohl der Referenzkumpf, CLAIM-0361). Stützt CLAIM-0024 (600).",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-47",
+      "ziel": "COMP-KUMPF-STAVES",
+      "eigenschaft": "daubenstaerke",
+      "wert": 0.025,
+      "einheit": "m",
+      "toleranz": {
+        "art": "ungefaehr",
+        "text": "ca."
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-originaltransfer-20261010-09bf54b5-ebe2-43f7-badc-310aee910605",
+          "stelle": "Draufsicht mit Zollstock"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Vgl. CLAIM-0040/0041 (24 bzw. 22 mm).",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-48",
+      "ziel": "COMP-KUEMPFE",
+      "eigenschaft": "boden_am_weiten_ende",
+      "wert": true,
+      "einheit": null,
+      "toleranz": null,
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-originaltransfer-20261010-a6c861c8-05ce-4a8f-aa8a-636ffd464f11",
+          "stelle": "Boden in der Nut nahe dem weiten Rand"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "Das schmale Ende ist offen. Passt zu CLAIM-0025/0026 (oben 210, unten 280), wenn „unten“ der Boden ist.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
+    },
+    {
+      "id": "AN-20261012-49",
+      "ziel": "COMP-KUMPF-STAVES",
+      "eigenschaft": "abstand_der_daubenbohrungen",
+      "wert": 0.21,
+      "einheit": "m",
+      "toleranz": {
+        "art": "ungefaehr",
+        "text": "perspektivisch unsicher"
+      },
+      "grundlage": "foto",
+      "quellen": [
+        {
+          "quelle": "DATEI-originaltransfer-20261010-da76dde4-72ef-442c-b7e8-3feac8f39255",
+          "stelle": "zwei Bohrungen in einer Daube"
+        }
+      ],
+      "aussage_von": null,
+      "gueltigkeit": "offen",
+      "bestaetigt": null,
+      "ersetzt_durch": null,
+      "begruendung": null,
+      "hinweis": "CLAIM-0030 (Skizze) nennt 270. Widerspruch oder Perspektive: am Kumpf nachmessen.",
+      "herkunft": {
+        "datei": "evidence/raw/MESSFOTOS-REST-20261012.md",
+        "id": null
+      }
     }
   ]
 }

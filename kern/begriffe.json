@@ -2010,6 +2010,136 @@
       "id": "kerbe_in_armmitte",
       "name": "Kerbe liegt in der Armmitte",
       "kategorie": "eigenschaft"
+    },
+    {
+      "id": "dorn_ueberstand",
+      "name": "Überstand des Dorns über die Stirnfläche",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "dorn_durchmesser",
+      "name": "Durchmesser des Dorns",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "lage_aeussere_armoeffnung_vom_holzende",
+      "name": "Lage der äußeren Armöffnung vom Holzende",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "abstand_innere_schelle_vom_holzende",
+      "name": "Abstand der inneren Schelle vom Holzende",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "breite_im_breiten_bereich",
+      "name": "Breite im breiten Bereich",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "lagerform",
+      "name": "Lagerform",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "dornmitte_unter_oberkante_lagerklotz",
+      "name": "Dornmitte unter Oberkante Lagerklotz",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "oberkante_lagerklotz_ueber_radstadt",
+      "name": "Oberkante Lagerklotz über Oberkante Radstadt",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "abstand_schlitz_vom_klotzende",
+      "name": "Abstand des Lagerschlitzes vom linken Klotzende",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "wellenmitte_ueber_oberkante_radstadt_landseite",
+      "name": "Wellenmitte über Oberkante Radstadt (Landseite)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "pfostenbreite_wasserseite",
+      "name": "Pfostenbreite (Wasserseite)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "kopfbalkenhoehe_wasserseite",
+      "name": "Höhe des Kopfbalkens (Wasserseite)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "kopfverbindung_wasserseite",
+      "name": "Kopfverbindung (Wasserseite)",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "ansichtshoehe_radstadt_balken",
+      "name": "Ansichtshöhe eines Radstadt-Balkens",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "zapfenloecher_mit_eingelassenem_brett",
+      "name": "Zapfenlöcher mit eingelassenem Brett",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "breite_querholz",
+      "name": "Breite eines Querholzes",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "keillaenge",
+      "name": "Keillänge",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "keilkopf",
+      "name": "Kopfstärke des Keils",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "langloch_breite",
+      "name": "Breite des Langlochs",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "brettbreite",
+      "name": "Brettbreite",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "nagelabstand_vom_brettende",
+      "name": "Abstand der Nägel vom Brettende",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "stoss_mit_ausklinkung",
+      "name": "Stoß mit Ausklinkung",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "hoehe",
+      "name": "Höhe",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "daubenstaerke",
+      "name": "Daubenstärke",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "boden_am_weiten_ende",
+      "name": "Boden sitzt am weiten Ende",
+      "kategorie": "eigenschaft"
+    },
+    {
+      "id": "abstand_der_daubenbohrungen",
+      "name": "Abstand der beiden Daubenbohrungen",
+      "kategorie": "eigenschaft"
     }
   ]
 }
