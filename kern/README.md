@@ -68,6 +68,10 @@ python scripts/kern/pruefe_kern.py --begriff Schetter
 3. Falls es eine offene Frage beantwortet: Frage auf `beantwortet` setzen und die Angabe unter `antwort` eintragen.
 4. Prüfung laufen lassen, Pull Request öffnen. Thorsten bestätigt fachlich.
 
+## Cockpit
+
+`npm run cockpit` (oder `python scripts/kern/baue_cockpit.py`) erzeugt aus dem Kern eine Übersichtsseite unter `cockpit/index.html`: das Rad als anwählbarer Aufriss mit der Akte jedes Bauteils, die offenen Fragen nach dem, was ihre Antwort freischaltet, und die Herkunft des Wissens. Die Seite ist nur eine Ansicht und wird nie von Hand bearbeitet.
+
 ## Herkunft und Altdaten
 
 Der Kern wurde am 11.10.2026 aus den bisherigen Daten erzeugt (`scripts/kern/migriere_v1.py`). Die Altdateien unter `data/` und `evidence/` bleiben **unverändert und eingefroren**, bis das Modell auf den Kern umgestellt ist (Phase 3 im [Ordnungsplan](../docs/ordnung/PLAN.md)). `migration/v1-zuordnung.json` führt jede Alt-ID auf ihre Kern-ID; die Prüfung stellt sicher, dass keine Alt-Angabe verloren geht. Alte Claim-IDs (`CLAIM-…`, `TH-…`) wurden beibehalten.

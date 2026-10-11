@@ -326,7 +326,7 @@
     },
     {
       "id": "F-018",
-      "frage": "Widerspruch klären (drawing-vs-drawing): 24 vs 22 mm Dauben; Nutdurchmesser 244/264 vs 248/268",
+      "frage": "Zwei Kumpfskizzen widersprechen sich: Dauben 24 oder 22 mm, Nutdurchmesser 244/264 oder 248/268. Welche gilt für den Referenz-Kumpf?",
       "betrifft": [
         "COMP-KUMPF-BASE",
         "COMP-KUMPF-STAVES",
@@ -352,7 +352,7 @@
     },
     {
       "id": "F-019",
-      "frage": "Widerspruch klären (drawing-vs-drawing): Historische Ringlängen 780/875/968 vs 784/880/972: Fachauskunft bestätigt gefertigte Maßvarianten; Zuordnung der Zahlenreihe zum fotografierten Referenz-Kumpf bleibt offen.",
+      "frage": "Zwei Reihen von Reifenlängen (780/875/968 und 784/880/972). Laut Fachauskunft gibt es Maßvarianten – welche Reihe gehört zum fotografierten Referenz-Kumpf?",
       "betrifft": [
         "COMP-FASTENERS",
         "COMP-KUMPF-HOOPS",
@@ -382,7 +382,7 @@
     },
     {
       "id": "F-020",
-      "frage": "Widerspruch klären (drawing-vs-drawing): 370/37 shaft sketch vs generic stock 4.50 m/50 cm, installation 40 cm",
+      "frage": "Wellenskizze 370/37 gegen Holzliste 4,50 m / 50 cm (Einbau 40 cm): Beschreibt die Holzliste nur das Rohholz?",
       "betrifft": [
         "COMP-SHAFT",
         "CLAIM-0001",
@@ -411,7 +411,7 @@
     },
     {
       "id": "F-021",
-      "frage": "Widerspruch klären (drawing-vs-drawing): 14 cm Krümmling-Breite vs radial ring difference 15 (213−198)",
+      "frage": "Krümmling 14 cm breit gegen 15 cm Ringdifferenz (213 − 198) in der Skizze.",
       "betrifft": [
         "COMP-RIMS",
         "CLAIM-0234",
@@ -440,7 +440,7 @@
     },
     {
       "id": "F-022",
-      "frage": "Widerspruch klären (drawing-vs-current): historical straight/slanted numbers and three mortise passages cannot be assigned to all current arms",
+      "frage": "Die Zahlen auf der Armskizze (gerade/schräg) und die drei Durchtritte je Armzone lassen sich nicht allen heutigen Armen zuordnen.",
       "betrifft": [
         "COMP-ARMS",
         "COMP-SHAFT",
@@ -470,7 +470,7 @@
     },
     {
       "id": "F-023",
-      "frage": "Widerspruch klären (drawing-vs-current): Fastener terminology/functions were mixed. Kumpfnägel are now a distinct expert-confirmed wooden fastener family for Kumpf→Krümmling attachment; other wedges/bands remain separate.",
+      "frage": "Befestigungsbegriffe waren vermischt. Kumpfnägel sind inzwischen geklärt; welche Funktion haben die übrigen Keile und Bänder?",
       "betrifft": [
         "COMP-FASTENERS",
         "COMP-KUMPF-HOOPS",
@@ -500,7 +500,7 @@
     },
     {
       "id": "F-024",
-      "frage": "Widerspruch klären (drawing-vs-current): published 24 vessels/24 paddles not fully countable in current views",
+      "frage": "Veröffentlicht sind 24 Kümpfe und 24 Flügelbretter; auf den Fotos lassen sie sich nicht vollständig zählen.",
       "betrifft": [
         "COMP-KUEMPFE",
         "COMP-PADDLES",
@@ -525,7 +525,7 @@
     },
     {
       "id": "F-025",
-      "frage": "Widerspruch klären (photo-vs-scan): photo-visible surfaces absent/discontinuous in capture",
+      "frage": "Auf Fotos sichtbare Flächen fehlen im 3D-Scan oder sind lückenhaft. Taugt der Scan für Maße?",
       "betrifft": [
         "COMP-ARMS",
         "COMP-KUEMPFE",
@@ -550,7 +550,7 @@
     },
     {
       "id": "F-026",
-      "frage": "Widerspruch klären (scan-vs-known-dimensions): drawing interpreted diameter 4.26/3.96 m vs full-cloud extent 6.03/7.03/4.50 export units",
+      "frage": "Kranzdurchmesser laut Skizze 4,26 / 3,96 m, der Scan hat eine Ausdehnung von 6,03 / 7,03 / 4,50 Exporteinheiten. Wie sind Scan-Einheiten und Maßstab zu lesen?",
       "betrifft": [
         "COMP-RIMS",
         "CLAIM-0234",
@@ -579,7 +579,7 @@
     },
     {
       "id": "F-027",
-      "frage": "Widerspruch klären (scan-vs-scan): different XYZ bounds and vertex sets",
+      "frage": "Die beiden Scan-Exporte (PLY und GLB) haben unterschiedliche Ausdehnung und Punktmengen. Welcher ist maßgeblich?",
       "betrifft": [
         "SCAN-20261007-01-PLY",
         "CLAIM-0324"
@@ -597,7 +597,7 @@
     },
     {
       "id": "F-028",
-      "frage": "Widerspruch klären (drawing-vs-drawing): industrial/contact and board templates previously catalogued as Kumpf fasteners / shaft",
+      "frage": "Industrielle Kontaktstreifen- und Brettvorlagen waren früher als Kumpfbefestigung bzw. Welle eingeordnet. Gehören sie überhaupt zum Rad?",
       "betrifft": [
         "REF-BOARD",
         "REF-CONTACTSTRIPS",
@@ -624,7 +624,7 @@
     },
     {
       "id": "F-029",
-      "frage": "Widerspruch klären (drawing-vs-drawing): 250 overall dimension and parenthesized 244 coexist",
+      "frage": "Die Trogskizze nennt 250 cm Gesamtlänge und daneben 244 cm in Klammern. Welche Kanten sind jeweils gemeint?",
       "betrifft": [
         "COMP-TROUGH",
         "CLAIM-0130",
@@ -653,7 +653,7 @@
     },
     {
       "id": "F-030",
-      "frage": "Widerspruch klären (expert-vs-model): Fachkenner korrigiert sichtbare Schaufelstellung auf 90° zum Rad; aktueller Code ist formal senkrecht zur Kranzebene, kann aber lokale radial/tangentiale Anstellung, Position oder Anschluss falsch darstellen.",
+      "frage": "Flügelbretter stehen laut Fachkenner 90° zum Rad. Das Modell stellt sie formal senkrecht zur Kranzebene, Lage und Anstellung können trotzdem falsch sein.",
       "betrifft": [
         "COMP-PADDLES",
         "CLAIM-0369",

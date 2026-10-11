@@ -10,3 +10,6 @@ public/field-pack/
 tmp/
 
 /node_modules
+
+# Erzeugtes Cockpit (python scripts/kern/baue_cockpit.py)
+/cockpit/

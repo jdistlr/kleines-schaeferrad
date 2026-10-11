@@ -409,6 +409,23 @@ UNBEKANNT_TEXT = {
 }
 
 
+KONFLIKT_TEXT = {
+    "CONFLICT-01": "Zwei Kumpfskizzen widersprechen sich: Dauben 24 oder 22 mm, Nutdurchmesser 244/264 oder 248/268. Welche gilt für den Referenz-Kumpf?",
+    "CONFLICT-02": "Zwei Reihen von Reifenlängen (780/875/968 und 784/880/972). Laut Fachauskunft gibt es Maßvarianten – welche Reihe gehört zum fotografierten Referenz-Kumpf?",
+    "CONFLICT-03": "Wellenskizze 370/37 gegen Holzliste 4,50 m / 50 cm (Einbau 40 cm): Beschreibt die Holzliste nur das Rohholz?",
+    "CONFLICT-04": "Krümmling 14 cm breit gegen 15 cm Ringdifferenz (213 − 198) in der Skizze.",
+    "CONFLICT-05": "Die Zahlen auf der Armskizze (gerade/schräg) und die drei Durchtritte je Armzone lassen sich nicht allen heutigen Armen zuordnen.",
+    "CONFLICT-06": "Befestigungsbegriffe waren vermischt. Kumpfnägel sind inzwischen geklärt; welche Funktion haben die übrigen Keile und Bänder?",
+    "CONFLICT-07": "Veröffentlicht sind 24 Kümpfe und 24 Flügelbretter; auf den Fotos lassen sie sich nicht vollständig zählen.",
+    "CONFLICT-08": "Auf Fotos sichtbare Flächen fehlen im 3D-Scan oder sind lückenhaft. Taugt der Scan für Maße?",
+    "CONFLICT-09": "Kranzdurchmesser laut Skizze 4,26 / 3,96 m, der Scan hat eine Ausdehnung von 6,03 / 7,03 / 4,50 Exporteinheiten. Wie sind Scan-Einheiten und Maßstab zu lesen?",
+    "CONFLICT-10": "Die beiden Scan-Exporte (PLY und GLB) haben unterschiedliche Ausdehnung und Punktmengen. Welcher ist maßgeblich?",
+    "CONFLICT-11": "Industrielle Kontaktstreifen- und Brettvorlagen waren früher als Kumpfbefestigung bzw. Welle eingeordnet. Gehören sie überhaupt zum Rad?",
+    "CONFLICT-12": "Die Trogskizze nennt 250 cm Gesamtlänge und daneben 244 cm in Klammern. Welche Kanten sind jeweils gemeint?",
+    "CONFLICT-13": "Flügelbretter stehen laut Fachkenner 90° zum Rad. Das Modell stellt sie formal senkrecht zur Kranzebene, Lage und Anstellung können trotzdem falsch sein.",
+}
+
+
 def neue_arbeitsschritte():
     A, WK, K = "Q-AUSSAGE-20261011-ARME", "Q-AUSSAGE-20261011-WELLENKEIL", "Q-AUSSAGE-20261011-KRUEMMLINGE"
     TH = "NARRATIVE-TH-CONSTRUCTION-20261009"
@@ -604,7 +621,7 @@ def main():
         if k["id"] == "CONFLICT-04":
             hinweis = ("Vermutlich kein Widerspruch: 14 cm ist die axiale Breite (entlang der Welle), 15 cm die "
                        "radiale Kranzhöhe (213 − 198). Siehe evidence/raw/Radstadt/MASSABGLEICH.md; Bestätigung offen.")
-        text = f"Widerspruch klären ({k['comparison']}): {k['issue']}"
+        text = KONFLIKT_TEXT[k["id"]]
         neue_frage("legacy:" + k["id"], text, betrifft + [x for x in k["claim_ids"] if x in angaben][:12], [], [],
                    "P-THORSTEN", hinweis, herkunft)
         verwendet.update(herkunft)
