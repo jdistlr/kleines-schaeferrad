@@ -25,13 +25,15 @@ Vom Nutzer ausdrücklich angegebene Innenmaße zwischen den Balken, in deren Öf
 | Richtung | Lichtes Maß | Maßbezug |
 |---|---|---|
 | Parallel zum Land / Ufer | **4,40 m / 4400 mm** | Zwischen den Innenflächen der gegenüberliegenden begrenzenden Balken |
-| Vom Land zum Wasser | **2,40 m / 2400 mm** | Zwischen den Innenflächen der gegenüberliegenden begrenzenden Balken |
+| Vom Land zum Wasser | **3,40 m / 3400 mm** | Zwischen den Innenflächen der gegenüberliegenden begrenzenden Balken |
 
-Wörtliche Nutzerangabe:
+Frühere Nutzerangabe, hinsichtlich 2,40 m ausdrücklich überholt:
 
 > Das lichte Maß zwischen den Balken, in dem sich das Wasserrad dreht, ist 4 Meter 40 in der Breite, also das heißt parallel zum Land und 2 Meter 40 vom Land zum Wasser.
 
-**Status:** Explizite Fachangabe des Nutzers; Richtungen und Innenmaßbezug sind bestätigt. Diese Maße wurden hier nicht aus Fotos abgelesen. Für den späteren Abgleich als lichte Rahmenöffnung verwenden und die Richtung Land → Wasser beibehalten.
+**Korrektur vom 11.10.2026:** Der Nutzer hat 2,40 m ausdrücklich als Fehler zurückgenommen und auf **3,40 m** korrigiert. Die **4,40 m** sind eine tatsächliche Nutzer-Messung, wurden nun aber ausdrücklich zur Überprüfung gestellt („Möglicherweise habe ich mich vermessen“). Richtung und Innenmaßbezug bleiben erhalten; 4,40 m derzeit als vorläufig führen. Diese Werte stammen nicht aus einer Fotoablesung.
+
+Der [Maßabgleich mit den Originalzeichnungen und dem Schaufel-Drehkreis](MASSABGLEICH.md) dokumentiert die Zeichnungsmaße **4,26/3,96 m Kranz-Ø**, die Radstadt-Maßkette **2,65 + 2,60 = 5,25 m** und **3,84 m**, sowie bedingte Schaufel-Drehdurchmesser **4,66 bzw. 4,96 m**. Insbesondere den Kanten- und Höhenbezug prüfen, bevor 4,40 m als endgültige Rahmenweite übernommen werden.
 
 Der vereinfachte Balkenquerschnitt **40 cm Breite × 20 cm Höhe** wird gesondert berücksichtigt. Tatsächliche Holzlängen, äußere Rahmenabmessungen, Eckverbindungen und Achslage benötigen jeweils ihren eigenen Maßbezug; sie sind mit der Angabe der lichten Öffnung allein nicht zusätzlich bestätigt.
 
@@ -53,7 +55,7 @@ Die 40 × 20 cm stammen ausschließlich aus der Nutzererklärung und werden hier
 
 Für eine später ausdrücklich beauftragte Rekonstruktion:
 - obere Balken mit 400 mm Breite und 200 mm Höhe als Nutzervereinfachung ansetzen;
-- lichte Rahmenöffnung mit 4400 mm parallel zum Ufer und 2400 mm vom Land zum Wasser berücksichtigen; Maßbezüge auf die Innenflächen anwenden;
+- korrigierte lichte Weite mit 3400 mm vom Land zum Wasser festhalten; 4400 mm parallel zum Ufer als vorläufige Nutzer-Messung gegen Zeichnungsmaßkette und Drehkreis prüfen; Innenkanten und Balkenhöhe auswerten;
 - andere Hölzer anhand ihrer eigenen Quellen zuordnen;
 - Balkenlängen, Stückzahl und Verbindungen nicht aus dem Querschnitt ableiten;
 - natürliche Unregelmäßigkeiten und individuelle Fotoablesungen vom vereinfachten Querschnitt getrennt dokumentieren.
