@@ -58,8 +58,9 @@ python scripts/kern/pruefe_kern.py --begriff Schetter
 2. **Nichts löschen.** Falsches wird `verworfen`, Altes `ueberholt` – mit Nachfolger.
 3. **Mündliche Angaben brauchen eine Person** (`aussage_von`), bevor sie bestätigt werden können.
 4. **Keine neuen Dateien oder Felder** ohne Freigabe von Johannes. Neue Begriffe ins Glossar.
-5. **Agenten schlagen vor** (per Pull Request, Gültigkeit `offen`). Menschen bestätigen.
-6. **Vor jedem Commit prüfen:** `python scripts/kern/pruefe_kern.py` und `python -m unittest tests/test_kern.py`.
+5. **Alles auf Deutsch.** Jede Eigenschaft einer Angabe steht mit deutschem Namen im Glossar (Kategorie `eigenschaft`, Schlüssel in Kleinbuchstaben ohne Umlaute, z. B. `lichte_weite_land_wasser` → „Lichte Weite Land–Wasser“). Die Prüfung lehnt Eigenschaften ohne Glossareintrag ab. Englische Originalwerte aus den Altdaten stehen unter `herkunft`.
+6. **Agenten schlagen vor** (per Pull Request, Gültigkeit `offen`). Menschen bestätigen.
+7. **Vor jedem Commit prüfen:** `python scripts/kern/pruefe_kern.py` und `python -m unittest tests/test_kern.py`.
 
 ## Neues Wissen eintragen
 
@@ -67,6 +68,12 @@ python scripts/kern/pruefe_kern.py --begriff Schetter
 2. Angabe in `angaben.json` mit `grundlage`, `quellen`, `aussage_von` und `gueltigkeit: "offen"`.
 3. Falls es eine offene Frage beantwortet: Frage auf `beantwortet` setzen und die Angabe unter `antwort` eintragen.
 4. Prüfung laufen lassen, Pull Request öffnen. Thorsten bestätigt fachlich.
+
+## Cockpit
+
+`npm run cockpit` (oder `python scripts/kern/baue_cockpit.py`) erzeugt aus dem Kern eine Übersichtsseite unter `cockpit/index.html`: das Rad als anwählbarer Aufriss mit der Akte jedes Bauteils, die offenen Fragen nach dem, was ihre Antwort freischaltet, und die Herkunft des Wissens. Die Seite ist nur eine Ansicht und wird nie von Hand bearbeitet.
+
+**Veröffentlichen** (von Hand, ohne GitHub Actions): `npm run cockpit:pages` baut die Seite und legt sie als einzigen Inhalt auf den Branch `gh-pages`. Adresse: https://jdistlr.github.io/kleines-schaeferrad/. Nach jeder bestätigten Änderung am Kern erneut ausführen; die Seite nennt den Commit, aus dem sie erzeugt wurde.
 
 ## Herkunft und Altdaten
 
