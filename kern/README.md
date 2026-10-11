@@ -62,6 +62,18 @@ python scripts/kern/pruefe_kern.py --begriff Schetter
 6. **Agenten schlagen vor** (per Pull Request, Gültigkeit `offen`). Menschen bestätigen.
 7. **Vor jedem Commit prüfen:** `python scripts/kern/pruefe_kern.py` und `python -m unittest tests/test_kern.py`.
 
+## Fotos
+
+Jede Datei steht genau einmal im Kern. Identische Dateien unter anderem Namen sind in der Hauptquelle unter `kopien` zusammengeführt (`python scripts/kern/werkzeuge/kopien_zusammenfuehren.py`); die Prüfung lehnt neue Doppelungen ab. Jedes Foto hat eine `bildart`:
+
+| Bildart | Woran man es erkennt | Wozu es dient |
+|---|---|---|
+| `messfoto` | Zollstock oder Maßband im Bild | Maße ablesen und als Angabe mit Grundlage `foto` und Toleranz eintragen |
+| `konstruktionsfoto` | Nahaufnahme einer Verbindung oder eines Mechanismus | Beziehungen, Arbeitsschritte und offene Fragen belegen |
+| `uebersicht` | Gesamtansicht, Umgebung, Kontext | Beleg und Orientierung; muss nichts weiter bewirken |
+
+Ausgewertet werden Fotos von den offenen Fragen her: Welche Messfotos können eine Frage beantworten?
+
 ## Neues Wissen eintragen
 
 1. Quelle in `quellen.json` anlegen (Foto, Aussage mit Protokoll-Pfad, …).

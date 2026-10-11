@@ -41,7 +41,7 @@ def main():
                      "quellen": [q["quelle"] for q in a["quellen"]]} for a in d["angaben"]],
         "fragen": [{k: f.get(k) for k in ("id", "frage", "betrifft", "blockiert", "haengt_ab_von", "entscheidet", "status", "hinweis", "herkunft")} for f in d["fragen"]],
         "quellen": [{"id": q["id"], "art": q["art"], "pfad": q["pfad"], "titel": q["titel"], "ordner": q["ordner"],
-                     "erschlossen": q["erschlossen"], "identisch": bool(q["identisch_mit"])} for q in d["quellen"]],
+                     "erschlossen": q["erschlossen"], "kopien": len(q.get("kopien", [])), "bildart": q.get("bildart")} for q in d["quellen"]],
     }
     with open(os.path.join(HIER, "cockpit", "vorlage.html"), encoding="utf-8") as f:
         vorlage = f.read()

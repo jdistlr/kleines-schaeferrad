@@ -23,6 +23,7 @@ BAUTEIL_ARTEN = {"anlage", "baugruppe", "teil", "zone", "werkzeug", "vorlage", "
 QUELLEN_ARTEN = {"foto", "skizze", "scan", "video", "aussage", "kontext", "ableitung", "dokument"}
 FRAGE_STATUS = {"offen", "beantwortet", "verworfen"}
 PHASEN = {"aufbau", "abbau", "pflege"}
+BILDARTEN = {"messfoto", "konstruktionsfoto", "uebersicht"}
 TOLERANZ_ARTEN = {"bereich", "plusminus", "ungefaehr", "vereinfachung"}
 KATEGORIEN = {"kernbegriff", "bauteil", "werkzeug", "ort", "beziehungsart", "eigenschaft"}
 DATUM = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -218,9 +219,31 @@ def pruefe(kern_dir, root=ROOT, altdaten=True):
         if q.get("pfad") and not os.path.exists(os.path.join(root, q["pfad"])):
             F(f"{q['id']}: Pfad {q['pfad']} existiert nicht")
         person_ok(q.get("person"), q["id"])
-        for x in q.get("identisch_mit", []):
-            if x not in quellen:
-                F(f"{q['id']}: identisch_mit {x} unbekannt")
+        for k in q.get("kopien", []):
+            if not os.path.exists(os.path.join(root, k["pfad"])):
+                F(f"{q['id']}: Kopie {k['pfad']} existiert nicht")
+        if q.get("bildart") is not None:
+            if q["art"] != "foto":
+                F(f"{q['id']}: Bildart nur für Fotos")
+            elif q["bildart"] not in BILDARTEN:
+                F(f"{q['id']}: Bildart {q['bildart']} unbekannt")
+
+    # Identische Dateien müssen zusammengeführt sein
+    try:
+        import subprocess
+        blobs = {}
+        for zeile in subprocess.check_output(["git", "ls-files", "-s", "evidence/raw"], cwd=root, text=True).splitlines():
+            meta, pfad = zeile.split("\t", 1)
+            blobs[pfad] = meta.split()[1]
+        gesehen = {}
+        for q in quellen.values():
+            b = blobs.get(q.get("pfad"))
+            if b and q["art"] in ("foto", "skizze", "scan", "video"):
+                if b in gesehen:
+                    F(f"{q['id']}: gleicher Inhalt wie {gesehen[b]}; Kopien zusammenführen (scripts/kern/werkzeuge/kopien_zusammenfuehren.py)")
+                gesehen[b] = q["id"]
+    except (OSError, subprocess.CalledProcessError):
+        W("Git nicht verfügbar; Prüfung auf identische Dateien übersprungen")
 
     # Fragen
     for f in fragen.values():
@@ -298,6 +321,8 @@ def pruefe(kern_dir, root=ROOT, altdaten=True):
         "gueltigkeit": Counter(a["gueltigkeit"] for a in angaben.values()),
         "grundlage": Counter(a["grundlage"] for a in angaben.values()),
         "quellen_unerschlossen": sum(not q["erschlossen"] for q in quellen.values()),
+        "kopien": sum(len(q.get("kopien", [])) for q in quellen.values()),
+        "bildart": Counter(q.get("bildart") or "ohne" for q in quellen.values() if q["art"] == "foto"),
     }
     return fehler, warnungen, statistik
 

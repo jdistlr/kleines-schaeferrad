@@ -11,11 +11,16 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6816-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6816(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6816-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6817",
@@ -25,11 +30,16 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6817-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6817(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6817-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6818",
@@ -39,11 +49,16 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6818-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6818(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6818-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6819",
@@ -53,11 +68,16 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6819-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6819(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6819-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6820",
@@ -67,11 +87,16 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6820-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6820(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6820-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6821",
@@ -81,11 +106,16 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6821-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6821(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6821-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6823",
@@ -95,11 +125,16 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6823-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6823(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6823-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6824",
@@ -109,11 +144,16 @@
       "person": null,
       "ordner": "Arbeitsunterlagen",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6824-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6824(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6824-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6825",
@@ -123,11 +163,16 @@
       "person": null,
       "ordner": "Arbeitsunterlagen",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6825-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6825(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6825-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6827",
@@ -137,11 +182,16 @@
       "person": null,
       "ordner": "Arbeitsunterlagen",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6827-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6827(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6827-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6828",
@@ -151,11 +201,16 @@
       "person": null,
       "ordner": "Auffangtrog",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6828-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6828(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6828-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6829",
@@ -165,12 +220,21 @@
       "person": null,
       "ordner": "Auffangtrog",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6829-1",
         "DATEI-originaltransfer-20261010-IMG-6829-2"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6829(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6829-1"
+        },
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6829(2).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6829-2"
+        }
+      ]
     },
     {
       "id": "PHOTO-6830",
@@ -180,11 +244,16 @@
       "person": null,
       "ordner": "Rinne",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6830-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6830(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6830-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6831",
@@ -194,11 +263,16 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6831-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6831(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6831-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6833",
@@ -208,11 +282,16 @@
       "person": null,
       "ordner": "Arbeitsunterlagen",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6833-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6833(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6833-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6836",
@@ -222,11 +301,16 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6836-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6836(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6836-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6837",
@@ -236,11 +320,16 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6837-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6837(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6837-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6838",
@@ -250,12 +339,21 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6838-1",
         "DATEI-originaltransfer-20261010-IMG-6838-2"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6838(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6838-1"
+        },
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6838(2).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6838-2"
+        }
+      ]
     },
     {
       "id": "PHOTO-6839",
@@ -265,11 +363,16 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6839-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6839(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6839-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6840",
@@ -279,11 +382,16 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6840-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6840(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6840-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6841",
@@ -293,11 +401,16 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6841-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6841(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6841-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6842",
@@ -307,11 +420,16 @@
       "person": null,
       "ordner": "Arbeitsunterlagen",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6842-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6842(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6842-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6843",
@@ -321,11 +439,16 @@
       "person": null,
       "ordner": "Arbeitsunterlagen",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6843-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6843(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6843-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6844",
@@ -335,11 +458,16 @@
       "person": null,
       "ordner": "Arbeitsunterlagen",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6844-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6844(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6844-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6845",
@@ -349,11 +477,16 @@
       "person": null,
       "ordner": "Arbeitsunterlagen",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6845-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6845(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6845-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6846",
@@ -363,11 +496,16 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6846-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6846(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6846-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6847",
@@ -377,11 +515,16 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6847-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6847(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6847-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6848",
@@ -391,11 +534,16 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6848-2"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6848(2).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6848-2"
+        }
+      ]
     },
     {
       "id": "PHOTO-6849",
@@ -405,11 +553,16 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6849-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6849(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6849-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6850",
@@ -419,11 +572,16 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6850-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6850(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6850-1"
+        }
+      ]
     },
     {
       "id": "PHOTO-6851",
@@ -433,11 +591,16 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6851-2"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6851(2).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6851-2"
+        }
+      ]
     },
     {
       "id": "PHOTO-6852",
@@ -447,11 +610,16 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6852-2"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6852(2).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6852-2"
+        }
+      ]
     },
     {
       "id": "PHOTO-6853",
@@ -461,11 +629,17 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6853-4"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6853(4).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6853-4"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-6854",
@@ -475,11 +649,17 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6854-2"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6854(2).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6854-2"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-6855",
@@ -489,11 +669,17 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6855-2"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6855(2).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6855-2"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-6856",
@@ -503,11 +689,17 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6856-2"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6856(2).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6856-2"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-6858",
@@ -517,11 +709,17 @@
       "person": null,
       "ordner": "Gesamtansichten",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6858-2"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6858(2).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6858-2"
+        }
+      ],
+      "bildart": "uebersicht"
     },
     {
       "id": "PHOTO-6859",
@@ -531,11 +729,17 @@
       "person": null,
       "ordner": "Gesamtansichten",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6859-2"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6859(2).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6859-2"
+        }
+      ],
+      "bildart": "uebersicht"
     },
     {
       "id": "PHOTO-6860",
@@ -545,11 +749,17 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6860-2"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6860(2).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6860-2"
+        }
+      ],
+      "bildart": "uebersicht"
     },
     {
       "id": "PHOTO-6861",
@@ -559,11 +769,17 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6861-2"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6861(2).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6861-2"
+        }
+      ],
+      "bildart": "uebersicht"
     },
     {
       "id": "META-SCANIVERSE-EXPORT",
@@ -573,9 +789,9 @@
       "person": null,
       "ordner": "Gesamtansichten",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "SCAN-20261007-01-GLB",
@@ -585,9 +801,9 @@
       "person": null,
       "ordner": "Gesamtansichten",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "SCAN-20261007-01-PLY",
@@ -597,9 +813,9 @@
       "person": null,
       "ordner": "Gesamtansichten",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "PHOTO-TH-20261009-image-1791543053651",
@@ -609,9 +825,10 @@
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791540525839",
@@ -621,9 +838,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541666129",
@@ -633,9 +851,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541735045",
@@ -645,9 +864,10 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541761724",
@@ -657,9 +877,10 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541781288",
@@ -669,9 +890,10 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541790124",
@@ -681,9 +903,10 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542327774",
@@ -693,9 +916,10 @@
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542342950",
@@ -705,9 +929,10 @@
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-1000046540",
@@ -717,9 +942,10 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-1000046539",
@@ -729,9 +955,10 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-1000046538",
@@ -741,9 +968,10 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-1000046537",
@@ -753,9 +981,10 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-1000046536",
@@ -765,9 +994,10 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542028869",
@@ -777,9 +1007,10 @@
       "person": null,
       "ordner": "Auffangtrog",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542045602",
@@ -789,9 +1020,10 @@
       "person": null,
       "ordner": "Auffangtrog",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542499680",
@@ -801,9 +1033,10 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542573592",
@@ -813,9 +1046,10 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542586169",
@@ -825,9 +1059,10 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542766365",
@@ -837,9 +1072,10 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542778932",
@@ -849,9 +1085,10 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-1000046530",
@@ -861,37 +1098,10 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "PHOTO-TH-20261009-image-1791540812566",
-      "art": "foto",
-      "pfad": "evidence/raw/Schetternbretter/image-1791540812566.jpg",
-      "titel": "image-1791540812566.jpg",
-      "person": null,
-      "ordner": "Schetternbretter",
-      "erschlossen": true,
-      "identisch_mit": [
-        "PHOTO-TH-20261009-1000046531"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "PHOTO-TH-20261009-image-1791540831514",
-      "art": "foto",
-      "pfad": "evidence/raw/Schetternbretter/image-1791540831514.jpg",
-      "titel": "image-1791540831514.jpg",
-      "person": null,
-      "ordner": "Schetternbretter",
-      "erschlossen": true,
-      "identisch_mit": [
-        "PHOTO-TH-20261009-1000046532"
-      ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-1000046542",
@@ -901,9 +1111,10 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-1000046541",
@@ -913,9 +1124,10 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541554648",
@@ -925,9 +1137,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541561160",
@@ -937,9 +1150,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541576861",
@@ -949,9 +1163,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541863916",
@@ -961,9 +1176,10 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791540649435",
@@ -973,9 +1189,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791540668918",
@@ -985,9 +1202,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791543487137",
@@ -997,9 +1215,10 @@
       "person": null,
       "ordner": "A-Bock",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791543497527",
@@ -1009,9 +1228,10 @@
       "person": null,
       "ordner": "A-Bock",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791543505768",
@@ -1021,9 +1241,10 @@
       "person": null,
       "ordner": "A-Bock",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791543574540",
@@ -1033,9 +1254,10 @@
       "person": null,
       "ordner": "A-Bock",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-1000046535",
@@ -1045,9 +1267,10 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-1000046534",
@@ -1057,9 +1280,10 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-1000046533",
@@ -1069,9 +1293,10 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-1000046532",
@@ -1081,11 +1306,17 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "PHOTO-TH-20261009-image-1791540831514"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/Schetternbretter/image-1791540831514.jpg",
+          "id": "PHOTO-TH-20261009-image-1791540831514"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-1000046531",
@@ -1095,11 +1326,17 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [
+      "alt_ids": [
         "PHOTO-TH-20261009-image-1791540812566"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/Schetternbretter/image-1791540812566.jpg",
+          "id": "PHOTO-TH-20261009-image-1791540812566"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542237069",
@@ -1109,9 +1346,10 @@
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542257101",
@@ -1121,9 +1359,10 @@
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541961389",
@@ -1133,9 +1372,10 @@
       "person": null,
       "ordner": "Rinne",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541967728",
@@ -1145,9 +1385,10 @@
       "person": null,
       "ordner": "Rinne",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541979278",
@@ -1157,9 +1398,10 @@
       "person": null,
       "ordner": "Rinne",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791543757351",
@@ -1169,9 +1411,10 @@
       "person": null,
       "ordner": "A-Bock",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541887655",
@@ -1181,9 +1424,10 @@
       "person": null,
       "ordner": "Auffangtrog",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541908195",
@@ -1193,9 +1437,10 @@
       "person": null,
       "ordner": "Auffangtrog",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541920559",
@@ -1205,9 +1450,10 @@
       "person": null,
       "ordner": "Auffangtrog",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542108092",
@@ -1217,9 +1463,10 @@
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542120355",
@@ -1229,9 +1476,10 @@
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542146990",
@@ -1241,9 +1489,10 @@
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542161221",
@@ -1253,9 +1502,10 @@
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791542172733",
@@ -1265,9 +1515,10 @@
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541209669",
@@ -1277,9 +1528,10 @@
       "person": null,
       "ordner": "Fluegelbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541224562",
@@ -1289,9 +1541,10 @@
       "person": null,
       "ordner": "Fluegelbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541247032",
@@ -1301,9 +1554,10 @@
       "person": null,
       "ordner": "Fluegelbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541265923",
@@ -1313,9 +1567,10 @@
       "person": null,
       "ordner": "Fluegelbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541278244",
@@ -1325,9 +1580,10 @@
       "person": null,
       "ordner": "Fluegelbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541421696",
@@ -1337,9 +1593,10 @@
       "person": null,
       "ordner": "Fluegelbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541435456",
@@ -1349,9 +1606,10 @@
       "person": null,
       "ordner": "Fluegelbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541442395",
@@ -1361,9 +1619,10 @@
       "person": null,
       "ordner": "Fluegelbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541641609",
@@ -1373,9 +1632,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TH-20261009-image-1791541084264",
@@ -1385,9 +1645,10 @@
       "person": null,
       "ordner": "Schetternbretter",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "NARRATIVE-TH-CONSTRUCTION-20261009",
@@ -1397,9 +1658,9 @@
       "person": "P-THORSTEN",
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DERIVED-contact-sheet-01",
@@ -1409,9 +1670,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DERIVED-contact-sheet-02",
@@ -1421,9 +1682,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DERIVED-contact-sheet-03",
@@ -1433,9 +1694,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DERIVED-contact-sheet-04",
@@ -1445,9 +1706,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DERIVED-export-alignment",
@@ -1457,9 +1718,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DERIVED-glb-orthographic",
@@ -1469,9 +1730,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DERIVED-glb-spatial",
@@ -1481,9 +1742,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DERIVED-ply-orthographic",
@@ -1493,9 +1754,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DERIVED-ply-spatial",
@@ -1505,9 +1766,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DERIVED-scan-audit",
@@ -1517,9 +1778,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "CTX-USER-20261007",
@@ -1529,9 +1790,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "CTX-RETRIEVED-20261007",
@@ -1541,9 +1802,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "CTX-REPO-806819d",
@@ -1553,9 +1814,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "EXT-VZO-INFO",
@@ -1565,9 +1826,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "EXT-VZO",
@@ -1577,9 +1838,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "EXT-GEMEINDE",
@@ -1589,121 +1850,161 @@
       "person": null,
       "ordner": null,
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "V2-IMG_6790",
-      "art": "foto",
+      "art": "skizze",
       "pfad": "evidence/raw/Gesamtansichten/IMG_6790.jpeg",
       "titel": "IMG_6790.jpeg",
       "person": null,
       "ordner": "Gesamtansichten",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6790-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6790(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6790-1"
+        }
+      ]
     },
     {
       "id": "V2-IMG_6792",
-      "art": "foto",
+      "art": "skizze",
       "pfad": "evidence/raw/Radstadt/IMG_6792.jpeg",
       "titel": "IMG_6792.jpeg",
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6792-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6792(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6792-1"
+        }
+      ]
     },
     {
       "id": "V2-IMG_6793",
-      "art": "foto",
+      "art": "skizze",
       "pfad": "evidence/raw/Radstadt/IMG_6793.jpeg",
       "titel": "IMG_6793.jpeg",
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6793-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6793(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6793-1"
+        }
+      ]
     },
     {
       "id": "V2-IMG_6794",
-      "art": "foto",
+      "art": "skizze",
       "pfad": "evidence/raw/Radstadt/IMG_6794.jpeg",
       "titel": "IMG_6794.jpeg",
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6794-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6794(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6794-1"
+        }
+      ]
     },
     {
       "id": "V2-IMG_6795",
-      "art": "foto",
+      "art": "skizze",
       "pfad": "evidence/raw/Radstadt/IMG_6795.jpeg",
       "titel": "IMG_6795.jpeg",
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6795-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6795(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6795-1"
+        }
+      ]
     },
     {
       "id": "V2-IMG_6797",
-      "art": "foto",
+      "art": "skizze",
       "pfad": "evidence/raw/Radstadt/IMG_6797.jpeg",
       "titel": "IMG_6797.jpeg",
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6797-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6797(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6797-1"
+        }
+      ]
     },
     {
       "id": "V2-IMG_6798",
-      "art": "foto",
+      "art": "skizze",
       "pfad": "evidence/raw/Arme/IMG_6798.jpeg",
       "titel": "IMG_6798.jpeg",
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6798-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6798(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6798-1"
+        }
+      ]
     },
     {
       "id": "V2-IMG_6799",
-      "art": "foto",
+      "art": "skizze",
       "pfad": "evidence/raw/Arme/IMG_6799.jpeg",
       "titel": "IMG_6799.jpeg",
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6799-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6799(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6799-1"
+        }
+      ]
     },
     {
       "id": "V2-IMG_6800",
@@ -1713,11 +2014,17 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6800-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6800(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6800-1"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "V2-IMG_6801",
@@ -1727,11 +2034,17 @@
       "person": null,
       "ordner": "Gesamtansichten",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6801-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6801(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6801-1"
+        }
+      ],
+      "bildart": "uebersicht"
     },
     {
       "id": "V2-IMG_6803-upload2",
@@ -1741,13 +2054,18 @@
       "person": null,
       "ordner": "Gesamtansichten",
       "erschlossen": false,
-      "identisch_mit": [
-        "DATEI-originaltransfer-20261010-IMG-6803-2"
-      ],
       "alt_ids": [
+        "DATEI-originaltransfer-20261010-IMG-6803-2",
         "V2-IMG_6803"
       ],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6803(2).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6803-2"
+        }
+      ],
+      "bildart": "uebersicht"
     },
     {
       "id": "V2-IMG_6804",
@@ -1757,11 +2075,17 @@
       "person": null,
       "ordner": "Radstadt",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6804-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6804(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6804-1"
+        }
+      ],
+      "bildart": "uebersicht"
     },
     {
       "id": "V2-IMG_6808-upload2",
@@ -1771,11 +2095,17 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6808-2"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6808(2).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6808-2"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "V2-IMG_6809",
@@ -1785,11 +2115,17 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6809-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6809(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6809-1"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "V2-IMG_6810",
@@ -1799,11 +2135,17 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6810-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6810(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6810-1"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "V2-IMG_6811",
@@ -1813,11 +2155,17 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6811-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6811(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6811-1"
+        }
+      ],
+      "bildart": "uebersicht"
     },
     {
       "id": "V2-IMG_6812",
@@ -1827,11 +2175,17 @@
       "person": null,
       "ordner": "Gesamtansichten",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6812-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6812(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6812-1"
+        }
+      ],
+      "bildart": "uebersicht"
     },
     {
       "id": "V2-IMG_6822",
@@ -1841,11 +2195,17 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6822-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6822(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6822-1"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "V2-IMG_6832",
@@ -1855,11 +2215,17 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-originaltransfer-20261010-IMG-6832-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/originaltransfer-20261010/IMG_6832(1).jpeg",
+          "id": "DATEI-originaltransfer-20261010-IMG-6832-1"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-1000046420",
@@ -1869,9 +2235,10 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-1000046421",
@@ -1881,9 +2248,10 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-1000046422",
@@ -1893,9 +2261,10 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-1000046423",
@@ -1905,9 +2274,10 @@
       "person": null,
       "ordner": "Kumpf",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-TORSTEN-20261010-TH37-ANNOTATED",
@@ -1917,9 +2287,10 @@
       "person": null,
       "ordner": "A-Bock",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLE-20261010133248",
@@ -1929,9 +2300,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLE-20261010133257",
@@ -1941,9 +2313,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLE-20261010133344",
@@ -1953,9 +2326,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLE-20261010133349",
@@ -1965,9 +2339,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLE-20261010133352",
@@ -1977,9 +2352,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLE-20261010133404",
@@ -1989,9 +2365,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLE-20261010133412",
@@ -2001,9 +2378,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "PHOTO-WELLE-20261010133424",
@@ -2013,9 +2391,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLE-20261010133430",
@@ -2025,9 +2404,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLE-20261010133433",
@@ -2037,9 +2417,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLE-20261010133518",
@@ -2049,9 +2430,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLENKEIL-IMG20261010124805",
@@ -2061,9 +2443,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLENKEIL-IMG20261010124808",
@@ -2073,9 +2456,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLENKEIL-IMG20261010124813",
@@ -2085,9 +2469,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLENKEIL-IMG20261010124820",
@@ -2097,9 +2482,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-WELLENKEIL-IMG20261010124828",
@@ -2109,9 +2495,10 @@
       "person": null,
       "ordner": "Welle",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010123515",
@@ -2121,12 +2508,22 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [
-        "DATEI-Kruemmlinge-IMG20261010123515-Kopie",
-        "DATEI-Kruemmlinge-IMG20261010123515"
+      "alt_ids": [
+        "DATEI-Kruemmlinge-IMG20261010123515",
+        "DATEI-Kruemmlinge-IMG20261010123515-Kopie"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/Kruemmlinge/IMG20261010123515.jpg",
+          "id": "DATEI-Kruemmlinge-IMG20261010123515"
+        },
+        {
+          "pfad": "evidence/raw/Kruemmlinge/IMG20261010123515 - Kopie.jpg",
+          "id": "DATEI-Kruemmlinge-IMG20261010123515-Kopie"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010124418",
@@ -2136,9 +2533,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "PHOTO-ARME-IMG20261010124442",
@@ -2148,9 +2546,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010124447",
@@ -2160,9 +2559,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010124455",
@@ -2172,9 +2572,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010124459",
@@ -2184,9 +2585,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010125010",
@@ -2196,9 +2598,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010125016",
@@ -2208,9 +2611,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010125020",
@@ -2220,9 +2624,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010125104",
@@ -2232,9 +2637,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010125215",
@@ -2244,9 +2650,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010125246",
@@ -2256,9 +2663,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010125251",
@@ -2268,9 +2676,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010125320",
@@ -2280,9 +2689,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010125334",
@@ -2292,9 +2702,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010125824",
@@ -2304,9 +2715,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010125949",
@@ -2316,9 +2728,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010130112",
@@ -2328,9 +2741,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010130123",
@@ -2340,9 +2754,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010130129",
@@ -2352,9 +2767,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-ARME-IMG20261010130138",
@@ -2364,9 +2780,10 @@
       "person": null,
       "ordner": "Arme",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-LAGERBOCK-LAND-IMG20261010121353",
@@ -2376,9 +2793,10 @@
       "person": null,
       "ordner": "Lagerboch Landseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-LAGERBOCK-LAND-IMG20261010121407",
@@ -2388,9 +2806,10 @@
       "person": null,
       "ordner": "Lagerboch Landseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-LAGERBOCK-LAND-IMG20261010121434",
@@ -2400,9 +2819,10 @@
       "person": null,
       "ordner": "Lagerboch Landseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-LAGERBOCK-LAND-IMG20261010121501",
@@ -2412,9 +2832,10 @@
       "person": null,
       "ordner": "Lagerboch Landseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-LAGERBOCK-LAND-IMG20261010121518",
@@ -2424,9 +2845,10 @@
       "person": null,
       "ordner": "Lagerboch Landseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-LAGERBOCK-LAND-IMG20261010121555",
@@ -2436,9 +2858,10 @@
       "person": null,
       "ordner": "Lagerboch Landseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-LAGERBOCK-LAND-IMG20261010121620",
@@ -2448,9 +2871,10 @@
       "person": null,
       "ordner": "Lagerboch Landseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-LAGERBOCK-LAND-IMG20261010121733",
@@ -2460,9 +2884,10 @@
       "person": null,
       "ordner": "Lagerboch Landseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-LAGERBOCK-LAND-IMG20261010121738",
@@ -2472,9 +2897,10 @@
       "person": null,
       "ordner": "Lagerboch Landseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-LAGERBOCK-LAND-IMG20261010121749",
@@ -2484,9 +2910,10 @@
       "person": null,
       "ordner": "Lagerboch Landseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-LAGERBOCK-LAND-IMG20261010121802",
@@ -2496,9 +2923,10 @@
       "person": null,
       "ordner": "Lagerboch Landseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-LAGERBOCK-LAND-IMG20261010121808",
@@ -2508,9 +2936,10 @@
       "person": null,
       "ordner": "Lagerboch Landseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "PHOTO-RINNE-IMG20261003110312",
@@ -2520,9 +2949,10 @@
       "person": null,
       "ordner": "Rinne",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "PHOTO-RINNE-IMG20261003110323",
@@ -2532,9 +2962,10 @@
       "person": null,
       "ordner": "Rinne",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "PHOTO-RINNE-IMG20261003111006",
@@ -2544,9 +2975,10 @@
       "person": null,
       "ordner": "Rinne",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-RINNE-IMG20261003111009",
@@ -2556,9 +2988,10 @@
       "person": null,
       "ordner": "Rinne",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-RINNE-IMG20261003111015",
@@ -2568,23 +3001,10 @@
       "person": null,
       "ordner": "Rinne",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "PHOTO-RINNE-IMG20261003111022-1",
-      "art": "foto",
-      "pfad": "evidence/raw/Rinne/IMG20261003111022 1.jpg",
-      "titel": "IMG20261003111022 1.jpg",
-      "person": null,
-      "ordner": "Rinne",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-RINNE-IMG20261003111022"
-      ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "PHOTO-RINNE-IMG20261003111022",
@@ -2594,11 +3014,17 @@
       "person": null,
       "ordner": "Rinne",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "PHOTO-RINNE-IMG20261003111022-1"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/Rinne/IMG20261003111022 1.jpg",
+          "id": "PHOTO-RINNE-IMG20261003111022-1"
+        }
+      ],
+      "bildart": "uebersicht"
     },
     {
       "id": "PHOTO-RINNE-IMG20261003111029",
@@ -2608,9 +3034,10 @@
       "person": null,
       "ordner": "Rinne",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "NARRATIVE-TH-KUMPF-20261008-01",
@@ -2620,9 +3047,9 @@
       "person": "P-THORSTEN",
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "NARRATIVE-TH-KUMPF-20261008-02",
@@ -2632,9 +3059,9 @@
       "person": "P-THORSTEN",
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "NARRATIVE-TH-KUMPF-20261008-03",
@@ -2644,9 +3071,9 @@
       "person": "P-THORSTEN",
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "NARRATIVE-TH-PADDLE-20261008-01",
@@ -2656,9 +3083,9 @@
       "person": "P-THORSTEN",
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DATEI-Keile-IMG20261010114911",
@@ -2668,9 +3095,10 @@
       "person": null,
       "ordner": "Keile",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "DATEI-Keile-IMG20261010114919",
@@ -2680,9 +3108,10 @@
       "person": null,
       "ordner": "Keile",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "DATEI-Keile-IMG20261010115131",
@@ -2692,9 +3121,10 @@
       "person": null,
       "ordner": "Keile",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "DATEI-Keile-IMG20261010115250",
@@ -2704,9 +3134,10 @@
       "person": null,
       "ordner": "Keile",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Keile-IMG20261010115300",
@@ -2716,9 +3147,10 @@
       "person": null,
       "ordner": "Keile",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Keile-IMG20261010121916",
@@ -2728,11 +3160,17 @@
       "person": null,
       "ordner": "Keile",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-Kruemmlinge-IMG20261010121916"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/Kruemmlinge/IMG20261010121916.jpg",
+          "id": "DATEI-Kruemmlinge-IMG20261010121916"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "DATEI-Keile-IMG20261010121942",
@@ -2742,11 +3180,17 @@
       "person": null,
       "ordner": "Keile",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-Kruemmlinge-IMG20261010121942"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/Kruemmlinge/IMG20261010121942.jpg",
+          "id": "DATEI-Kruemmlinge-IMG20261010121942"
+        }
+      ],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010120710",
@@ -2756,9 +3200,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010120711",
@@ -2768,9 +3213,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010121822",
@@ -2780,9 +3226,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010121829",
@@ -2792,37 +3239,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-Kruemmlinge-IMG20261010121916",
-      "art": "foto",
-      "pfad": "evidence/raw/Kruemmlinge/IMG20261010121916.jpg",
-      "titel": "IMG20261010121916.jpg",
-      "person": null,
-      "ordner": "Kruemmlinge",
-      "erschlossen": false,
-      "identisch_mit": [
-        "DATEI-Keile-IMG20261010121916"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-Kruemmlinge-IMG20261010121942",
-      "art": "foto",
-      "pfad": "evidence/raw/Kruemmlinge/IMG20261010121942.jpg",
-      "titel": "IMG20261010121942.jpg",
-      "person": null,
-      "ordner": "Kruemmlinge",
-      "erschlossen": false,
-      "identisch_mit": [
-        "DATEI-Keile-IMG20261010121942"
-      ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010121954",
@@ -2832,9 +3252,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010121959",
@@ -2844,9 +3265,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122421",
@@ -2856,9 +3278,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122427",
@@ -2868,9 +3291,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122436",
@@ -2880,9 +3304,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122443",
@@ -2892,9 +3317,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122454",
@@ -2904,9 +3330,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122501",
@@ -2916,9 +3343,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122530",
@@ -2928,9 +3356,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122541",
@@ -2940,9 +3369,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122549",
@@ -2952,9 +3382,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122555",
@@ -2964,9 +3395,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122558",
@@ -2976,9 +3408,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122605",
@@ -2988,9 +3421,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122629",
@@ -3000,9 +3434,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122633",
@@ -3012,9 +3447,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122649",
@@ -3024,9 +3460,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122657",
@@ -3036,9 +3473,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122759",
@@ -3048,9 +3486,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122804",
@@ -3060,9 +3499,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122856",
@@ -3072,9 +3512,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122900",
@@ -3084,9 +3525,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122904",
@@ -3096,23 +3538,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-Kruemmlinge-IMG20261010122906-Kopie",
-      "art": "foto",
-      "pfad": "evidence/raw/Kruemmlinge/IMG20261010122906 - Kopie.jpg",
-      "titel": "IMG20261010122906 - Kopie.jpg",
-      "person": null,
-      "ordner": "Kruemmlinge",
-      "erschlossen": false,
-      "identisch_mit": [
-        "DATEI-Kruemmlinge-IMG20261010122906"
-      ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122906",
@@ -3122,11 +3551,17 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [
+      "alt_ids": [
         "DATEI-Kruemmlinge-IMG20261010122906-Kopie"
       ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [
+        {
+          "pfad": "evidence/raw/Kruemmlinge/IMG20261010122906 - Kopie.jpg",
+          "id": "DATEI-Kruemmlinge-IMG20261010122906-Kopie"
+        }
+      ],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122910",
@@ -3136,9 +3571,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122917",
@@ -3148,9 +3584,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010122920",
@@ -3160,9 +3597,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010123511",
@@ -3172,39 +3610,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-Kruemmlinge-IMG20261010123515-Kopie",
-      "art": "foto",
-      "pfad": "evidence/raw/Kruemmlinge/IMG20261010123515 - Kopie.jpg",
-      "titel": "IMG20261010123515 - Kopie.jpg",
-      "person": null,
-      "ordner": "Kruemmlinge",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-ARME-IMG20261010123515",
-        "DATEI-Kruemmlinge-IMG20261010123515"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-Kruemmlinge-IMG20261010123515",
-      "art": "foto",
-      "pfad": "evidence/raw/Kruemmlinge/IMG20261010123515.jpg",
-      "titel": "IMG20261010123515.jpg",
-      "person": null,
-      "ordner": "Kruemmlinge",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-ARME-IMG20261010123515",
-        "DATEI-Kruemmlinge-IMG20261010123515-Kopie"
-      ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-Kruemmlinge-IMG20261010123518",
@@ -3214,9 +3623,10 @@
       "person": null,
       "ordner": "Kruemmlinge",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "DATEI-Lagerbock-Wasserseite-IMG20261010123147",
@@ -3226,9 +3636,10 @@
       "person": null,
       "ordner": "Lagerbock Wasserseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Lagerbock-Wasserseite-IMG20261010123157",
@@ -3238,9 +3649,10 @@
       "person": null,
       "ordner": "Lagerbock Wasserseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Lagerbock-Wasserseite-IMG20261010123204",
@@ -3250,9 +3662,10 @@
       "person": null,
       "ordner": "Lagerbock Wasserseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Lagerbock-Wasserseite-IMG20261010123212",
@@ -3262,9 +3675,10 @@
       "person": null,
       "ordner": "Lagerbock Wasserseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Lagerbock-Wasserseite-IMG20261010123225",
@@ -3274,9 +3688,10 @@
       "person": null,
       "ordner": "Lagerbock Wasserseite",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010133541",
@@ -3286,9 +3701,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010133547",
@@ -3298,9 +3714,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010133558",
@@ -3310,9 +3727,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010133603",
@@ -3322,9 +3740,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010133611",
@@ -3334,9 +3753,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010133616",
@@ -3346,9 +3766,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010133626",
@@ -3358,9 +3779,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010133628",
@@ -3370,9 +3792,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010133632",
@@ -3382,9 +3805,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010133809",
@@ -3394,9 +3818,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010133914",
@@ -3406,9 +3831,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010133945",
@@ -3418,9 +3844,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010133950",
@@ -3430,9 +3857,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010134011",
@@ -3442,9 +3870,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010134025",
@@ -3454,9 +3883,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010134037",
@@ -3466,9 +3896,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010135616",
@@ -3478,9 +3909,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-Radstatt-IMG20261010135620",
@@ -3490,9 +3922,10 @@
       "person": null,
       "ordner": "Radstatt",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-context-unidentified-20261010-IMG-6875-1",
@@ -3502,9 +3935,10 @@
       "person": null,
       "ordner": "context-unidentified-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-context-unidentified-20261010-IMG-6876-1",
@@ -3514,9 +3948,10 @@
       "person": null,
       "ordner": "context-unidentified-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-context-unidentified-20261010-IMG-6877-1",
@@ -3526,9 +3961,10 @@
       "person": null,
       "ordner": "context-unidentified-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-originaltransfer-20261010-09bf54b5-ebe2-43f7-badc-310aee910605",
@@ -3538,173 +3974,34 @@
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6790-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6790(1).jpeg",
-      "titel": "IMG_6790(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6790"
-      ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-originaltransfer-20261010-IMG-6791",
-      "art": "foto",
+      "art": "skizze",
       "pfad": "evidence/raw/originaltransfer-20261010/IMG_6791.jpeg",
       "titel": "IMG_6791.jpeg",
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6792-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6792(1).jpeg",
-      "titel": "IMG_6792(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6792"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6793-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6793(1).jpeg",
-      "titel": "IMG_6793(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6793"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6794-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6794(1).jpeg",
-      "titel": "IMG_6794(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6794"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6795-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6795(1).jpeg",
-      "titel": "IMG_6795(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6795"
-      ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DATEI-originaltransfer-20261010-IMG-6796",
-      "art": "foto",
+      "art": "skizze",
       "pfad": "evidence/raw/originaltransfer-20261010/IMG_6796.jpeg",
       "titel": "IMG_6796.jpeg",
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6797-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6797(1).jpeg",
-      "titel": "IMG_6797(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6797"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6798-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6798(1).jpeg",
-      "titel": "IMG_6798(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6798"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6799-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6799(1).jpeg",
-      "titel": "IMG_6799(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6799"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6800-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6800(1).jpeg",
-      "titel": "IMG_6800(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6800"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6801-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6801(1).jpeg",
-      "titel": "IMG_6801(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6801"
-      ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DATEI-originaltransfer-20261010-IMG-6802",
@@ -3714,37 +4011,10 @@
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6803-2",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6803(2).jpeg",
-      "titel": "IMG_6803(2).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6803-upload2"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6804-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6804(1).jpeg",
-      "titel": "IMG_6804(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6804"
-      ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-originaltransfer-20261010-IMG-6805",
@@ -3754,9 +4024,10 @@
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-originaltransfer-20261010-IMG-6806",
@@ -3766,9 +4037,10 @@
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-originaltransfer-20261010-IMG-6807",
@@ -3778,79 +4050,10 @@
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6808-2",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6808(2).jpeg",
-      "titel": "IMG_6808(2).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6808-upload2"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6809-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6809(1).jpeg",
-      "titel": "IMG_6809(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6809"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6810-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6810(1).jpeg",
-      "titel": "IMG_6810(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6810"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6811-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6811(1).jpeg",
-      "titel": "IMG_6811(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6811"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6812-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6812(1).jpeg",
-      "titel": "IMG_6812(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6812"
-      ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "konstruktionsfoto"
     },
     {
       "id": "DATEI-originaltransfer-20261010-IMG-6813",
@@ -3860,9 +4063,10 @@
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-originaltransfer-20261010-IMG-6814",
@@ -3872,287 +4076,34 @@
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-originaltransfer-20261010-IMG-6815",
-      "art": "foto",
+      "art": "skizze",
       "pfad": "evidence/raw/originaltransfer-20261010/IMG_6815.jpeg",
       "titel": "IMG_6815.jpeg",
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6816-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6816(1).jpeg",
-      "titel": "IMG_6816(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6816"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6817-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6817(1).jpeg",
-      "titel": "IMG_6817(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6817"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6818-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6818(1).jpeg",
-      "titel": "IMG_6818(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6818"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6819-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6819(1).jpeg",
-      "titel": "IMG_6819(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6819"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6820-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6820(1).jpeg",
-      "titel": "IMG_6820(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6820"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6821-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6821(1).jpeg",
-      "titel": "IMG_6821(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6821"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6822-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6822(1).jpeg",
-      "titel": "IMG_6822(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6822"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6823-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6823(1).jpeg",
-      "titel": "IMG_6823(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6823"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6824-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6824(1).jpeg",
-      "titel": "IMG_6824(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6824"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6825-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6825(1).jpeg",
-      "titel": "IMG_6825(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6825"
-      ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DATEI-originaltransfer-20261010-IMG-6826",
-      "art": "foto",
+      "art": "skizze",
       "pfad": "evidence/raw/originaltransfer-20261010/IMG_6826.jpeg",
       "titel": "IMG_6826.jpeg",
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6827-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6827(1).jpeg",
-      "titel": "IMG_6827(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6827"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6828-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6828(1).jpeg",
-      "titel": "IMG_6828(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6828"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6829-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6829(1).jpeg",
-      "titel": "IMG_6829(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6829",
-        "DATEI-originaltransfer-20261010-IMG-6829-2"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6829-2",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6829(2).jpeg",
-      "titel": "IMG_6829(2).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6829",
-        "DATEI-originaltransfer-20261010-IMG-6829-1"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6830-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6830(1).jpeg",
-      "titel": "IMG_6830(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6830"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6831-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6831(1).jpeg",
-      "titel": "IMG_6831(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6831"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6832-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6832(1).jpeg",
-      "titel": "IMG_6832(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "V2-IMG_6832"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6833-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6833(1).jpeg",
-      "titel": "IMG_6833(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6833"
-      ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DATEI-originaltransfer-20261010-IMG-6834",
@@ -4162,9 +4113,10 @@
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-originaltransfer-20261010-IMG-6835",
@@ -4174,319 +4126,10 @@
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6836-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6836(1).jpeg",
-      "titel": "IMG_6836(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6836"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6837-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6837(1).jpeg",
-      "titel": "IMG_6837(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6837"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6838-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6838(1).jpeg",
-      "titel": "IMG_6838(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6838",
-        "DATEI-originaltransfer-20261010-IMG-6838-2"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6838-2",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6838(2).jpeg",
-      "titel": "IMG_6838(2).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6838",
-        "DATEI-originaltransfer-20261010-IMG-6838-1"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6839-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6839(1).jpeg",
-      "titel": "IMG_6839(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6839"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6840-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6840(1).jpeg",
-      "titel": "IMG_6840(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6840"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6841-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6841(1).jpeg",
-      "titel": "IMG_6841(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6841"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6842-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6842(1).jpeg",
-      "titel": "IMG_6842(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6842"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6843-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6843(1).jpeg",
-      "titel": "IMG_6843(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6843"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6844-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6844(1).jpeg",
-      "titel": "IMG_6844(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6844"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6845-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6845(1).jpeg",
-      "titel": "IMG_6845(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6845"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6846-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6846(1).jpeg",
-      "titel": "IMG_6846(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6846"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6847-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6847(1).jpeg",
-      "titel": "IMG_6847(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6847"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6848-2",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6848(2).jpeg",
-      "titel": "IMG_6848(2).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6848"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6849-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6849(1).jpeg",
-      "titel": "IMG_6849(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6849"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6850-1",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6850(1).jpeg",
-      "titel": "IMG_6850(1).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6850"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6851-2",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6851(2).jpeg",
-      "titel": "IMG_6851(2).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6851"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6852-2",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6852(2).jpeg",
-      "titel": "IMG_6852(2).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6852"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6853-4",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6853(4).jpeg",
-      "titel": "IMG_6853(4).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6853"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6854-2",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6854(2).jpeg",
-      "titel": "IMG_6854(2).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6854"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6855-2",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6855(2).jpeg",
-      "titel": "IMG_6855(2).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6855"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6856-2",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6856(2).jpeg",
-      "titel": "IMG_6856(2).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6856"
-      ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "uebersicht"
     },
     {
       "id": "DATEI-originaltransfer-20261010-IMG-6857",
@@ -4496,65 +4139,9 @@
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6858-2",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6858(2).jpeg",
-      "titel": "IMG_6858(2).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6858"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6859-2",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6859(2).jpeg",
-      "titel": "IMG_6859(2).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6859"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6860-2",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6860(2).jpeg",
-      "titel": "IMG_6860(2).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6860"
-      ],
-      "alt_ids": [],
-      "hinweis": null
-    },
-    {
-      "id": "DATEI-originaltransfer-20261010-IMG-6861-2",
-      "art": "foto",
-      "pfad": "evidence/raw/originaltransfer-20261010/IMG_6861(2).jpeg",
-      "titel": "IMG_6861(2).jpeg",
-      "person": null,
-      "ordner": "originaltransfer-20261010",
-      "erschlossen": false,
-      "identisch_mit": [
-        "PHOTO-6861"
-      ],
-      "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": []
     },
     {
       "id": "DATEI-originaltransfer-20261010-a6c861c8-05ce-4a8f-aa8a-636ffd464f11",
@@ -4564,9 +4151,10 @@
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "DATEI-originaltransfer-20261010-da76dde4-72ef-442c-b7e8-3feac8f39255",
@@ -4576,9 +4164,10 @@
       "person": null,
       "ordner": "originaltransfer-20261010",
       "erschlossen": false,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": null
+      "hinweis": null,
+      "kopien": [],
+      "bildart": "messfoto"
     },
     {
       "id": "Q-AUSSAGE-20261011-RADSTADT",
@@ -4588,9 +4177,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": "Im Befund als „Nutzer“ bezeichnet; Person in Frage F-007 klären."
+      "hinweis": "Im Befund als „Nutzer“ bezeichnet; Person in Frage F-007 klären.",
+      "kopien": []
     },
     {
       "id": "Q-AUSSAGE-20261011-RINNE",
@@ -4600,9 +4189,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": "Im Befund als „Nutzer“ bezeichnet; Person in Frage F-007 klären."
+      "hinweis": "Im Befund als „Nutzer“ bezeichnet; Person in Frage F-007 klären.",
+      "kopien": []
     },
     {
       "id": "Q-AUSSAGE-20261011-TROG",
@@ -4612,9 +4201,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": "Im Befund als „Nutzer“ bezeichnet; Person in Frage F-007 klären."
+      "hinweis": "Im Befund als „Nutzer“ bezeichnet; Person in Frage F-007 klären.",
+      "kopien": []
     },
     {
       "id": "Q-AUSSAGE-20261011-KRUEMMLINGE",
@@ -4624,9 +4213,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": "Im Befund als „Nutzer“ bezeichnet; Person in Frage F-007 klären."
+      "hinweis": "Im Befund als „Nutzer“ bezeichnet; Person in Frage F-007 klären.",
+      "kopien": []
     },
     {
       "id": "Q-AUSSAGE-20261011-ARME",
@@ -4636,9 +4225,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": "Im Befund als „Nutzer“ bezeichnet; Person in Frage F-007 klären."
+      "hinweis": "Im Befund als „Nutzer“ bezeichnet; Person in Frage F-007 klären.",
+      "kopien": []
     },
     {
       "id": "Q-AUSSAGE-20261011-WELLE",
@@ -4648,9 +4237,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": "Im Befund als „Nutzer“ bezeichnet; Person in Frage F-007 klären."
+      "hinweis": "Im Befund als „Nutzer“ bezeichnet; Person in Frage F-007 klären.",
+      "kopien": []
     },
     {
       "id": "Q-AUSSAGE-20261011-WELLENKEIL",
@@ -4660,9 +4249,9 @@
       "person": null,
       "ordner": null,
       "erschlossen": true,
-      "identisch_mit": [],
       "alt_ids": [],
-      "hinweis": "Im Befund als „Nutzer“ bezeichnet; Person in Frage F-007 klären."
+      "hinweis": "Im Befund als „Nutzer“ bezeichnet; Person in Frage F-007 klären.",
+      "kopien": []
     }
   ]
 }

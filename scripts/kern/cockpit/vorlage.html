@@ -405,6 +405,7 @@ const GRUND = { messung: "Gemessen", muendlich: "Mündlich überliefert", skizze
   ableitung: "Abgeleitet", annahme: "Annahme", kontext: "Kontext", holzliste: "Allgemeine Holzliste", fremdvorlage: "Fremde Vorlagen" };
 const GUELT = { offen: "offen", bestaetigt: "bestätigt", historisch: "historisch", ueberholt: "überholt", verworfen: "verworfen" };
 const REIHENFOLGE = ["messung", "muendlich", "skizze", "foto", "ableitung", "annahme", "scan", "kontext"];
+const BILDART = { messfoto: "Messfoto", konstruktionsfoto: "Konstruktionsfoto", uebersicht: "Übersicht" };
 const eig = s => begriffe[s]?.name || s.replaceAll("_", " ");
 
 function frageHtml(f) {
@@ -443,7 +444,7 @@ function waehle(id, { scroll = false } = {}) {
     ${fr.length ? `<h3>Offen<small>${fr.length}</small></h3>${fr.sort((a, z) => gewicht(z) - gewicht(a)).map(frageHtml).join("")}` : ""}
     ${aktuell.length ? `<h3>Was bekannt ist<small>${aktuell.length}</small></h3><div class="tabelle"><table class="angaben"><thead><tr><th>Eigenschaft</th><th>Wert</th><th>Status</th></tr></thead><tbody>${gruppiert(aktuell, REIHENFOLGE)}</tbody></table></div>` : ""}
     ${historie.length ? `<details class="historie"><summary>Historische Unterlagen anzeigen (${historie.length})</summary><div class="tabelle"><table class="angaben"><tbody>${gruppiert(historie, ["holzliste", "fremdvorlage"])}</tbody></table></div></details>` : ""}
-    ${qids.length ? `<h3>Belegt durch<small>${qids.length} Quellen</small></h3><ul class="quellenliste">${qids.map(q => { const x = quellen[q]; return `<li>${x.pfad ? `<a href="${REPO + encodeURI(x.pfad)}" target="_blank" rel="noopener">${esc(x.titel || q)}</a>` : esc(x.titel || q)} <span class="status">${esc(x.art)}</span></li>`; }).join("")}</ul>` : ""}`;
+    ${qids.length ? `<h3>Belegt durch<small>${qids.length} Quellen</small></h3><ul class="quellenliste">${qids.map(q => { const x = quellen[q]; return `<li>${x.pfad ? `<a href="${REPO + encodeURI(x.pfad)}" target="_blank" rel="noopener">${esc(x.titel || q)}</a>` : esc(x.titel || q)} <span class="status">${esc(BILDART[x.bildart] || x.art)}</span></li>`; }).join("")}</ul>` : ""}`;
   if (scroll) $("#akte").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
 }
 const beziehungsText = r => `${teile[r.von]?.name} ${begriffe[r.art]?.name || r.art} ${teile[r.zu]?.name}`;
@@ -503,16 +504,16 @@ zeichneFragen();
   const leg = reihe.map(g => G[g] ? `<li><i style="background:${FARBE[g]}"></i>${GRUND[g]}<span class="n">${G[g]}</span></li>` : g === "messung" ? `<li class="fehlt"><i></i>Am Rad gemessen<span class="n">0</span></li>` : "").join("");
   const U = S.gueltigkeit;
   const ordner = {};
-  K.quellen.filter(q => q.ordner).forEach(q => { const o = (ordner[q.ordner] ||= { n: 0, e: 0, d: 0 }); o.n++; if (q.erschlossen) o.e++; if (q.identisch) o.d++; });
+  K.quellen.filter(q => q.ordner).forEach(q => { const o = (ordner[q.ordner] ||= { n: 0, e: 0, d: 0, m: 0 }); o.n++; if (q.erschlossen) o.e++; o.d += q.kopien || 0; if (q.bildart === "messfoto") o.m++; });
   const zeilen = Object.entries(ordner).sort((a, z) => (z[1].n - z[1].e) - (a[1].n - a[1].e)).map(([o, v]) =>
-    `<tr><td><a href="https://github.com/jdistlr/kleines-schaeferrad/tree/main/evidence/raw/${encodeURIComponent(o)}" target="_blank" rel="noopener">${esc(o.replace("Lagerboch", "Lagerbock"))}</a></td><td class="r">${v.n}</td><td class="r">${v.e}</td><td style="width:34%"><div class="balken" role="img" aria-label="${v.e} von ${v.n} ausgewertet"><div style="width:${(v.e / v.n * 100).toFixed(1)}%"></div></div></td><td class="r">${v.d || ""}</td></tr>`).join("");
+    `<tr><td><a href="https://github.com/jdistlr/kleines-schaeferrad/tree/main/evidence/raw/${encodeURIComponent(o)}" target="_blank" rel="noopener">${esc(o.replace("Lagerboch", "Lagerbock"))}</a></td><td class="r">${v.n}</td><td class="r">${v.m || ""}</td><td class="r">${v.e}</td><td style="width:34%"><div class="balken" role="img" aria-label="${v.e} von ${v.n} ausgewertet"><div style="width:${(v.e / v.n * 100).toFixed(1)}%"></div></div></td><td class="r">${v.d || ""}</td></tr>`).join("");
   $("#quellen-ansicht").innerHTML = `
     <section><h2>Woher das Wissen stammt</h2><p>Alle ${summe} Angaben nach ihrer Grundlage. Mündliche Überlieferung und Vereinsskizzen tragen das meiste. Eine Messung am Rad selbst gibt es noch nicht; die Zahlen aus dem 3D-Scan beschreiben die Scan-Dateien.</p>
       <div class="streifen" role="img" aria-label="Verteilung der Angaben nach Grundlage">${streifen}</div><ul class="streifen-legende">${leg}</ul></section>
     <section><h2>Was davon heute gilt</h2><p>Bestätigen kann nur ein Wissensträger, meist Thorsten. „Historisch“ heißt: die Angabe dokumentiert eine Unterlage wie die allgemeine Holzliste und sagt nichts über das heutige Rad.</p>
       <ul class="streifen-legende">${Object.entries(GUELT).map(([k, v]) => `<li><span class="status ${k}">${v}</span><span class="n">${U[k] || 0}</span></li>`).join("")}</ul></section>
-    <section><h2>Fotos und Dateien je Bauteilordner</h2><p>${S.quellen} Quellen, ${S.quellen - S.quellen_unerschlossen} davon ausgewertet. Identische Kopien sind Dateien mit gleichem Inhalt unter anderem Namen; sie zählen nicht als zusätzlicher Beleg.</p>
-      <div class="tabelle"><table class="ordner"><thead><tr><th>Ordner</th><th class="r">Dateien</th><th class="r">ausgewertet</th><th></th><th class="r">Kopien</th></tr></thead><tbody>${zeilen}</tbody></table></div></section>`;
+    <section><h2>Fotos und Dateien je Bauteilordner</h2><p>${S.quellen} Quellen, ${S.quellen - S.quellen_unerschlossen} davon ausgewertet. Jedes Foto ist eingeordnet als Messfoto (Zollstock oder Maßband im Bild), Konstruktionsfoto oder Übersicht. Kopien sind Dateien mit gleichem Inhalt unter anderem Namen; sie sind zusammengeführt und zählen nicht als eigener Beleg.</p>
+      <div class="tabelle"><table class="ordner"><thead><tr><th>Ordner</th><th class="r">Dateien</th><th class="r">Messfotos</th><th class="r">ausgewertet</th><th></th><th class="r">Kopien</th></tr></thead><tbody>${zeilen}</tbody></table></div></section>`;
 })();
 
 // ---------- Ansichten ----------
