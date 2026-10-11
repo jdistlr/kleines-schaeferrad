@@ -14,14 +14,14 @@ Wasserlauf: Schöpftrog-Auslass → radnaher Rinnenteil → Überlappung auf A-B
 
 ## Zeichnung: Rinne 1 hinter Trog
 
-[IMG_6830.jpeg](IMG_6830.jpeg), Quelle PHOTO-6830; bestehende Claims CLAIM-0142 bis CLAIM-0151 in [geometry.claims.json](../../../data/geometry.claims.json).
+[IMG_6830.jpeg](IMG_6830.jpeg), Quelle PHOTO-6830; bestehende Claims CLAIM-0142 bis CLAIM-0151 in [geometry.claims.json](../../../data/geometry.claims.json). **Am 11.10.2026 bestätigt der Nutzer ausdrücklich die exakte Übereinstimmung der Rinnenzeichnung mit dem heutigen Bauteil.** Lesbare Maße und dargestellte Form sind maßgeblich. Die fotografische Ablesung einiger Kontur-/Randbezüge bleibt getrennt offen. Der [Zeichnungs-/Fotoabgleich](../Auffangtrog/ZEICHNUNGSABGLEICH.md) dokumentiert die Übereinstimmungen und aktualisierte Quellenautorität.
 
 | Eintrag | Ablesung / Status |
 |---|---|
 | Titel | „Rinne 1 (hinter Trog)“; nicht als Zeichnung beider Teile behandeln. |
 | Lange Maßlinie | ausdrücklich 480 cm |
 | Weitere Längeneinträge | 415 und 422; andere Konturen/Endschnittbezüge vor Übernahme zuordnen |
-| Abschnittsabstände | 100 cm; zusätzliche Rand-/Anfangsbezüge in der Zeichnung |
+| Abschnittsabstände | 125 cm Anfangsabschnitt und wiederholt 100 cm; genaue Maßlinien-Endpunkte zuordnen |
 | Querschnitt innen | 18 cm breit |
 | Querschnitt außen | maximal 23 cm breit |
 | Seitenhöhe | 20 cm |
@@ -29,7 +29,7 @@ Wasserlauf: Schöpftrog-Auslass → radnaher Rinnenteil → Überlappung auf A-B
 | Weiteres Endmaß | 22 cm; genauen Bezug anhand Zeichnung prüfen |
 | Konstruktionshinweise | „Leiste“ und „Latte“ |
 
-Die Länge des zweiten Rinnenteils und die Überlappungslänge sind damit noch nicht sicher bestimmt. 480 und 415/422 nicht zu einer Zweiteil-Gesamtlänge addieren. Für die spätere Konstruktion zunächst vorhandene Fotos/Zeichnungsbezüge auswerten; verbleibende Ersatzmaße ausdrücklich als Kandidaten führen.
+Das Blatt benennt ausdrücklich Rinne 1. Eine separat benannte Maßzeichnung von Rinne 2 wurde im gesichteten Bestand nicht identifiziert; Länge des zweiten Teils und Überlappungslänge sind aus dieser Ablesung noch nicht sicher bestimmt. Das ist keine Rücknahme der bestätigten heutigen Geltung des gezeichneten Teils. 480 und 415/422 nicht zu einer Zweiteil-Gesamtlänge addieren. Vor Ersatzmaßen die vorhandenen Kontur-/Enddetails und Fotos auswerten.
 
 ## Geeignete Fotos
 
@@ -41,6 +41,14 @@ Die Länge des zweiten Rinnenteils und die Überlappungslänge sind damit noch n
 - [Ältere A-Bock-Fotos](../A-Bock/README.md): Überlappungsbereich, Riegel, Keile, Bodenkontakt.
 
 IMG20261003111022 1.jpg und IMG20261003111022.jpg besitzen identische Git-Blobs. Die zweite Datei ist kein unabhängiger Blickwinkel und kein zusätzlicher Messbeleg. Beide vorhandenen Dateinamen bleiben erhalten.
+
+## Zeichnung und sichtbarer Aufbau passen zusammen
+
+Die Fotos zeigen Boden und zwei Seitenbretter, Querlatten und längs laufende Leisten/Verstärkungen entsprechend den Konstruktionsmerkmalen der Zeichnung. Eine belastbare reale Formabweichung wurde nicht gefunden. Perspektivfotos bestätigen dabei nicht unabhängig die exakten Querschnittszahlen oder Lattenabstände.
+
+Der Trog-Auslass von 27,5 cm und maximal 23 cm Rinnenaußenbreite sind vereinbar (bedingt mindestens 4,5 cm Breitenunterschied). Seitliche Anschlussleisten sind sichtbar; deren Maße und ein tatsächlicher Restspalt sind nicht vermessen.
+
+Nahe dem unteren Wasserauslass ist in IMG20261003111006 ein kleiner Pfosten bzw. eine zusätzliche Abstützung neben der Rinne zu sehen. Funktion und Maße bleiben offen; nicht als A-Bock am Rinnenübergang behandeln.
 
 ## Abweichung im vorhandenen Code
 

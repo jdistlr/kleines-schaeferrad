@@ -2,9 +2,9 @@
 
 [Alle Komponenten](../README.md) · [Quellenverzeichnis](../../component-index.json)
 
-[Befund und Einbaubezug vom 11.10.2026](BEFUND.md) · [Zusammenhängender Trog-/Rinnenabgleich](../Auffangtrog/BEFUND.md)
+[Befund und Einbaubezug vom 11.10.2026](BEFUND.md) · [Zeichnungen ↔ Fotos: Abgleich der heutigen Bauteile](../Auffangtrog/ZEICHNUNGSABGLEICH.md)
 
-Originalfotos und fotografierte Zeichnungen. Die Ablage ändert weder Messstatus noch Modellgeometrie. Unter Arbeitsunterlagen sind Vorlagen mit ungesicherter Bauteilzuordnung gesammelt.
+Originalfotos und fotografierte Zeichnungen. **Die Trog-/Rinnenzeichnungen sind vom Nutzer am 11.10.2026 als exakt dem heutigen Bauteil entsprechend bestätigt; lesbare Maße und Form sind maßgeblich.** Die Ablage allein ändert weder Messstatus noch Modellgeometrie. Unter Arbeitsunterlagen sind Vorlagen mit ungesicherter Bauteilzuordnung gesammelt.
 
 | Datei | Quellennummer | Beschreibung / weiterer Bezug |
 |---|---|---|

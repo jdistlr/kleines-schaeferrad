@@ -15,15 +15,15 @@ Der landseitige Lagerbock gehört zur Radstadt. Er ist vom A-Bock am Rinnenüber
 
 Der Nutzer erlaubt ausdrücklich, den Winkel und die Position der Rinne zum Wasserrad plausibel zu wählen. Fest bleiben die Auflagerfolge, der Verlauf landwärts zum Wasserauslass, zwei überlappende Rinnenteile und der A-Bock auf dem Gelände unter der Überlappung. Eine exakte Scanregistrierung oder ein vermessener Grundrisswinkel ist deshalb keine Vorbedingung für eine spätere plausible Anordnung. Gewählte Werte trotzdem als Annahmen kennzeichnen.
 
-## Zeichnung als Formquelle
+## Zeichnung als maßgebliche heutige Form- und Maßquelle
 
-[IMG_6828.jpeg](IMG_6828.jpeg) und [IMG_6829.jpeg](IMG_6829.jpeg) zeigen dieselbe Trogzeichnung in unterschiedlichen Aufnahmen. Historische Zeichnungsmaße von individuell gemessenen Ist-Maßen unterscheiden. Die folgende cm-Interpretation entspricht den bereits erfassten Claims CLAIM-0130 bis CLAIM-0141 in [geometry.claims.json](../../../data/geometry.claims.json); keine neuen as-built-Maße.
+[IMG_6828.jpeg](IMG_6828.jpeg) und [IMG_6829.jpeg](IMG_6829.jpeg) zeigen dieselbe Trogzeichnung in unterschiedlichen Aufnahmen. **Der Nutzer bestätigt am 11.10.2026, dass diese Zeichnung exakt dem heutigen Schöpftrog entspricht.** Lesbare Zeichnungsmaße und Bauteilform sind deshalb maßgeblich; die frühere pauschale historische Einstufung gilt für diesen Trog nicht mehr. Die Tabelle greift bestehende Claims CLAIM-0130 bis CLAIM-0141 in [geometry.claims.json](../../../data/geometry.claims.json) auf. Zeichnungswerte bleiben von unabhängigen Zollstockmessungen und noch unklaren fotografischen Maßbezügen unterscheidbar. Der vollständige [Zeichnungs-/Fotoabgleich](ZEICHNUNGSABGLEICH.md) enthält konkrete Bildbelege und die auf diese Zeichnungen begrenzte Quellenkorrektur.
 
 | Zeichnungseintrag | Ablesung | Bedeutung / Vorbehalt |
 |---|---:|---|
 | Links und rechts angeschrägte Stirnseiten | 45° | Im Längsbild ausdrücklich eingezeichnet; die beiden Enden sind keine senkrechten Abschlussplatten. |
 | Länge über äußere Maßlinie | 250 cm | Gesamtlängenangabe der Zeichnung. |
-| Weitere Längenangabe in Klammern | 244 cm | Alternative/andere Bezugskanten; nicht ohne Klärung als zweite unabhängige Gesamtlänge einsetzen. |
+| Weitere Längenangabe in Klammern | 244 cm | Auf einer eigenen Maßlinie; Bezugskanten nachvollziehen, nicht als zweite unabhängige Gesamtlänge oder widersprechenden Entwurf behandeln. |
 | Mittlere gerade Strecke | 180 cm | Bezug zur jeweiligen Kontur vor der Konstruktion nachvollziehen. |
 | Tiefe/Höhe | 30 cm | Voller Trogquerschnitt; nicht mit der Auslasstiefe 16 cm verwechseln. |
 | Brettstärke | 3 cm | Zeichnungswert. |
@@ -34,7 +34,7 @@ Der Nutzer erlaubt ausdrücklich, den Winkel und die Position der Rinne zum Wass
 
 **Beide Anschrägungen beachten:** Die Stirnseiten sind links/rechts geneigt; zusätzlich sind die Längswände im Querschnitt nach außen geneigt. Ein rechteckiger U-Trog bildet diese Form nicht ab.
 
-Die Maßbezüge sind noch nicht vollständig aufgelöst: 180 + 2 × 30 = 240 cm erklärt weder 250 noch 244 cm unmittelbar. Die drei Maße dürfen nicht als zusammenhängende Maßkette ohne identische Bezugskanten ausgegeben werden. Stirnseitenwinkel und trapezförmiger Querschnitt bleiben davon unabhängig eindeutig. Handschriftliche Ergänzungen am Auslass enthalten unklare Bezüge; keine verdeckte Gleichsetzung mit dem Rinnenquerschnitt.
+Die fotografische Zuordnung einzelner Maßlinien ist noch nicht vollständig aufgelöst: 180 + 2 × 30 = 240 cm verwendet keine nachgewiesen identischen Innen-/Außenkanten und erklärt deshalb 250/(244) noch nicht. **Das ist eine offene Ablese-/Referenzaufgabe, kein nachgewiesener Widerspruch der heutigen Bauteile zur exakten Zeichnung.** Stirnseitenwinkel und trapezförmiger Querschnitt sind eindeutig. Handschriftliche Ergänzungen am Auslass enthalten unklare Bezüge; keine verdeckte Gleichsetzung mit dem Rinnenquerschnitt. Auslass 27,5 cm und Rinne außen maximal 23 cm sind geometrisch vereinbar: bedingt mindestens 4,5 cm Breitenunterschied, keine Fotomessung des tatsächlichen Spalts.
 
 ## Fotos für den Kontaktabgleich
 
@@ -47,7 +47,7 @@ Die Maßbezüge sind noch nicht vollständig aufgelöst: 180 + 2 × 30 = 240 cm 
 | [IMG20261010121501.jpg](<../Lagerboch Landseite/IMG20261010121501.jpg>) | Stirnansicht des Trogs neben Kranz/Kumpf, Rinne und Bock; Zollstock als weiterer Referenzbezug. |
 | [IMG20261010121518.jpg](<../Lagerboch Landseite/IMG20261010121518.jpg>) | Draufsicht auf die diagonal über dem Querbalken verlaufende Rinne und die Bockverbindungen. |
 | [IMG20261010121555.jpg](<../Lagerboch Landseite/IMG20261010121555.jpg>), [IMG20261010121620.jpg](<../Lagerboch Landseite/IMG20261010121620.jpg>) | Lagerbock und Wellenlager bei fehlendem Trog/Rinnenanschluss; Maßstab mit Radstadt-Bezug. |
-| [image-1791542028869.jpg](image-1791542028869.jpg), [image-1791542045602.jpg](image-1791542045602.jpg) | Ältere Anschluss-/Abstandsfotos. Historische, bislang offene Endpunktzuordnung nicht als vermessene Einbauposition übernehmen. |
+| [image-1791542028869.jpg](image-1791542028869.jpg), [image-1791542045602.jpg](image-1791542045602.jpg) | Ältere Anschluss-/Abstandsfotos. Offene Endpunktzuordnung nicht als vermessene Einbauposition übernehmen. Der vertikale Zollstock misst einen Abstand zum Kumpf, nicht automatisch Troghöhe oder Auslasstiefe. |
 
 Alle zwölf Fotos im [landseitigen Lagerbock-Ordner](<../Lagerboch Landseite/README.md>) wurden visuell geöffnet. Verdeckte oder überstrahlte Maßstäbe bleiben offen; die Bilder sind nicht allein anhand ihrer Dateinamen als Messbeleg gewertet.
 

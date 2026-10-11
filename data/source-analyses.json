@@ -312,7 +312,7 @@
       "source_id": "PHOTO-6828",
       "document_group": "DOC-TROUGH",
       "title": "Schöpftrog Kl. Schäferrad",
-      "review": "original image individually visually inspected",
+      "review": "original image individually visually inspected; rechecked 2026-10-11 against current component and assembly photographs",
       "status": "analyzed-with-explicit-legibility-limits",
       "relation_to_group": "same-sheet-different-photograph",
       "claim_ids": [
@@ -330,17 +330,26 @@
         "CLAIM-0141"
       ],
       "unresolved": [
-        "Einheiten der linearen Maße fehlen; cm naheliegend, nicht gemessen.",
-        "180/24? im Mittelbereich überlagert; Zusammenhang zum Auslass nicht entscheiden.",
-        "Alternative 244 und 250 nicht stillschweigend korrigieren."
+        "Lineare Werte als cm interpretiert; Zeichnungsmaße sind nutzerbestätigte aktuelle Konstruktionsreferenz, keine zusätzlich vorgenommenen Zollstockmessungen.",
+        "Überlagerte 180/24?-Notiz am Auslass fotografisch noch nicht sicher zugeordnet.",
+        "250/(244)/180 liegen auf unterschiedlichen Maßlinien; Innen-/Außenkanten nachvollziehen, keinen realen Maßkonflikt aus einer ungesicherten Maßkette ableiten."
       ],
-      "current_geometry_authority": false
+      "current_geometry_authority": true,
+      "current_applicability": {
+        "confirmed_on": "2026-10-11",
+        "confirmed_by": "user / ThorstenHalsch",
+        "confirmation": "Diese Zeichnungen entsprechen exakt der heutigen Rinne und des heutigen Schöpftrogs.",
+        "scope": "Readable dimensions and depicted form of the current Schöpftrog.",
+        "evidence_type": "user-confirmed-current-component-drawing",
+        "comparison": "evidence/raw/Auffangtrog/ZEICHNUNGSABGLEICH.md",
+        "limits": "Not an independent photographic field measurement, global pose registration or blanket promotion of historical drawings."
+      }
     },
     {
       "source_id": "PHOTO-6829",
       "document_group": "DOC-TROUGH",
       "title": "Schöpftrog Kl. Schäferrad",
-      "review": "original image individually visually inspected",
+      "review": "original image individually visually inspected; rechecked 2026-10-11 against current component and assembly photographs",
       "status": "analyzed-with-explicit-legibility-limits",
       "relation_to_group": "same-sheet-different-photograph",
       "claim_ids": [
@@ -358,17 +367,26 @@
         "CLAIM-0141"
       ],
       "unresolved": [
-        "Einheiten der linearen Maße fehlen; cm naheliegend, nicht gemessen.",
-        "180/24? im Mittelbereich überlagert; Zusammenhang zum Auslass nicht entscheiden.",
-        "Alternative 244 und 250 nicht stillschweigend korrigieren."
+        "Lineare Werte als cm interpretiert; Zeichnungsmaße sind nutzerbestätigte aktuelle Konstruktionsreferenz, keine zusätzlich vorgenommenen Zollstockmessungen.",
+        "Überlagerte 180/24?-Notiz am Auslass fotografisch noch nicht sicher zugeordnet.",
+        "250/(244)/180 liegen auf unterschiedlichen Maßlinien; Innen-/Außenkanten nachvollziehen, keinen realen Maßkonflikt aus einer ungesicherten Maßkette ableiten."
       ],
-      "current_geometry_authority": false
+      "current_geometry_authority": true,
+      "current_applicability": {
+        "confirmed_on": "2026-10-11",
+        "confirmed_by": "user / ThorstenHalsch",
+        "confirmation": "Diese Zeichnungen entsprechen exakt der heutigen Rinne und des heutigen Schöpftrogs.",
+        "scope": "Readable dimensions and depicted form of the current Schöpftrog.",
+        "evidence_type": "user-confirmed-current-component-drawing",
+        "comparison": "evidence/raw/Auffangtrog/ZEICHNUNGSABGLEICH.md",
+        "limits": "Not an independent photographic field measurement, global pose registration or blanket promotion of historical drawings."
+      }
     },
     {
       "source_id": "PHOTO-6830",
       "document_group": "DOC-RINNE",
       "title": "Rinne hinter Trog",
-      "review": "original image individually visually inspected",
+      "review": "original image individually visually inspected; rechecked 2026-10-11 against current component and assembly photographs",
       "status": "analyzed-with-explicit-legibility-limits",
       "relation_to_group": "same-sheet-different-photograph",
       "claim_ids": [
@@ -384,10 +402,20 @@
         "CLAIM-0151"
       ],
       "unresolved": [
-        "Mehrere Längen referenzieren unterschiedliche Konturen; nicht gleichsetzen.",
-        "25 + 5 cm, 18 und 20–1 Randnotizen nicht vollständig in eine Schnittgeometrie auflösbar."
+        "Maßlinien 480/415/422 den jeweiligen Konturen/Endbezügen zuordnen; nicht als zwei Teillängen addieren.",
+        "Randnotizen 25 + 5 cm, 20–1 und Endbezug 22 cm vor geometrischer Übernahme nachzeichnen.",
+        "Das Blatt benennt Rinne 1; separate Rinne-2-Zeichnung und verdeckte Bodenüberlappung im gesichteten Bestand nicht sicher zugeordnet."
       ],
-      "current_geometry_authority": false
+      "current_geometry_authority": true,
+      "current_applicability": {
+        "confirmed_on": "2026-10-11",
+        "confirmed_by": "user / ThorstenHalsch",
+        "confirmation": "Diese Zeichnungen entsprechen exakt der heutigen Rinne und des heutigen Schöpftrogs.",
+        "scope": "Readable dimensions and depicted form of the channel part labelled Rinne 1 (hinter Trog).",
+        "evidence_type": "user-confirmed-current-component-drawing",
+        "comparison": "evidence/raw/Auffangtrog/ZEICHNUNGSABGLEICH.md",
+        "limits": "Not an independent photographic field measurement, global pose registration or blanket promotion of historical drawings."
+      }
     },
     {
       "source_id": "PHOTO-6831",

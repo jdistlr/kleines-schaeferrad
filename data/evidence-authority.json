@@ -1,6 +1,6 @@
 {
   "schema": "ks-evidence-authority/v1",
-  "date": "2026-10-08",
+  "date": "2026-10-11",
   "purpose": "Resolve reconstruction inputs by source authority without collapsing evidence classes.",
   "precedence": [
     {
@@ -21,7 +21,7 @@
     {
       "rank": 4,
       "class": "historical-local-drawing",
-      "rule": "Local historical drawings govern documented historical design, but are not silently promoted to current as-built geometry."
+      "rule": "Local historical drawings govern documented historical design, but are not silently promoted to current as-built geometry. Explicit, source-scoped current_drawing_confirmations override the historical-only applicability for the named drawings; legibility and reference-edge interpretation remain separate checks."
     },
     {
       "rank": 5,
@@ -55,5 +55,31 @@
       "caveat": "Expert authority outranks analogy and unsupported model assumptions, but does not replace direct current measurement for metric geometry."
     }
   },
-  "promotion_rule": "Synthetic geometry may enter the Truth Model only when supported by current observation/measurement or by explicit expert construction knowledge for the claimed non-metric property. Metric values still require metric evidence."
+  "promotion_rule": "Synthetic geometry may enter the Truth Model only when supported by current observation/measurement or by explicit expert construction knowledge for the claimed non-metric property. Metric values still require metric evidence. Explicitly confirmed current component drawings supply metric evidence for their readable dimensions within the documented scope; ambiguous references and global pose remain unresolved.",
+  "current_drawing_confirmations": [
+    {
+      "date": "2026-10-11",
+      "source_ids": [
+        "PHOTO-6828",
+        "PHOTO-6829",
+        "PHOTO-6830"
+      ],
+      "document_groups": [
+        "DOC-TROUGH",
+        "DOC-RINNE"
+      ],
+      "confirmed_by": "user / ThorstenHalsch",
+      "confirmation": "Diese Zeichnungen entsprechen exakt der heutigen Rinne und des heutigen Schöpftrogs.",
+      "scope": "Lesbare Maße und dargestellte Form des heutigen Schöpftrogs sowie des auf IMG_6830 ausdrücklich als Rinne 1 bezeichneten Bauteils.",
+      "authority": "authoritative-current-component-drawing",
+      "rule": "For these sources, use readable drawing dimensions and depicted component form as the current construction reference ahead of perspective-based estimates and synthetic model geometry. Preserve each dimension line's reference edges; photograph legibility limits do not invalidate confirmed current applicability.",
+      "limits": [
+        "Two trough images show the same sheet, not independent designs.",
+        "Does not confirm a surveyed global installation angle, scan registration or terrain profile.",
+        "Does not assign the 415/422/480 lines to two separate channel parts or infer concealed overlap dimensions.",
+        "Does not promote other historical drawings or generic stock recommendations."
+      ],
+      "comparison": "evidence/raw/Auffangtrog/ZEICHNUNGSABGLEICH.md"
+    }
+  ]
 }

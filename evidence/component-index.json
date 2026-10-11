@@ -465,11 +465,12 @@
       "bytes": 336665,
       "source_id": "PHOTO-6828",
       "title": "Schöpftrog Kl. Schäferrad",
-      "classification": "editorial-filing-only; not geometry authority",
+      "classification": "photographed-current-component-drawing; current-applicability-confirmed-by-user-20261011; readable-dimensions-and-form-authoritative",
       "related_components": [
         "Rinne",
         "Gesamtansichten"
-      ]
+      ],
+      "authority_reference": "data/evidence-authority.json#current_drawing_confirmations"
     },
     {
       "filename": "IMG_6829.jpeg",
@@ -480,11 +481,12 @@
       "bytes": 340602,
       "source_id": "PHOTO-6829",
       "title": "Schöpftrog Kl. Schäferrad",
-      "classification": "editorial-filing-only; not geometry authority",
+      "classification": "photographed-current-component-drawing; current-applicability-confirmed-by-user-20261011; readable-dimensions-and-form-authoritative",
       "related_components": [
         "Rinne",
         "Gesamtansichten"
-      ]
+      ],
+      "authority_reference": "data/evidence-authority.json#current_drawing_confirmations"
     },
     {
       "filename": "IMG_6830.jpeg",
@@ -495,8 +497,9 @@
       "bytes": 604678,
       "source_id": "PHOTO-6830",
       "title": "Rinne hinter Trog",
-      "classification": "editorial-filing-only; not geometry authority",
-      "related_components": []
+      "classification": "photographed-current-component-drawing; current-applicability-confirmed-by-user-20261011; readable-dimensions-and-form-authoritative",
+      "related_components": [],
+      "authority_reference": "data/evidence-authority.json#current_drawing_confirmations"
     },
     {
       "filename": "IMG_6831.jpeg",

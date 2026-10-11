@@ -13,7 +13,7 @@ Dieses Paket ist eine neue Eingabe für den 3D-Abgleich; noch kein fertig korrig
 4. Alle relevanten **Originalfotos visuell öffnen**, Maßstäbe vergrößern; Bilder nicht nur anhand des Dateinamens als ausgewertet behandeln.
 5. Danach bestehende V3-Baseline, Evidenzautorität, Source-Reconciliation, Assembly-Graph, Knowledge-Gaps und ITER-001 Truth-Critic-Audit lesen.
 
-Die neueren expliziten Nutzerkorrekturen ersetzen ältere Nutzerformulierungen und synthetische Modellannahmen. Historische Zeichnungsmaße und Fotoablesungen bleiben als solche kenntlich.
+Die neueren expliziten Nutzerkorrekturen ersetzen ältere Nutzerformulierungen und synthetische Modellannahmen. **PHOTO-6828/6829 (Schöpftrog) und PHOTO-6830 (Rinne 1) sind am 11.10.2026 ausdrücklich als exakt den heutigen Bauteilen entsprechend bestätigt:** lesbare Maße und Form sind maßgeblich; den [Zeichnungs-/Fotoabgleich](../evidence/raw/Auffangtrog/ZEICHNUNGSABGLEICH.md) lesen. Offene Maßlinienbezüge sind Ablese-/Referenzaufgaben, keine fehlende heutige Geltung. Andere historische Zeichnungsmaße und unabhängige Fotoablesungen behalten ihren jeweiligen Quellenstatus.
 
 ## Auftrag
 
