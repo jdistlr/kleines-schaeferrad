@@ -5,7 +5,7 @@
   "bauteile": [
     {
       "id": "COMP-SHAFT",
-      "name": "Welle/Achse",
+      "name": "Welle",
       "begriff": "B-WELLE",
       "art": "teil",
       "teil_von": "COMP-WHEEL",
@@ -13,12 +13,13 @@
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-SHAFT"
+        "id": "COMP-SHAFT",
+        "name": "Welle/Achse"
       }
     },
     {
       "id": "COMP-HUB-LAND",
-      "name": "landseitige Armzone",
+      "name": "Armzone Land",
       "begriff": "B-ARMZONE",
       "art": "zone",
       "teil_von": "COMP-SHAFT",
@@ -26,12 +27,13 @@
       "hinweis": "Bereich der Welle, kein eigenes Bauteil.",
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-HUB-LAND"
+        "id": "COMP-HUB-LAND",
+        "name": "landseitige Armzone"
       }
     },
     {
       "id": "COMP-HUB-WATER",
-      "name": "wasserseitige Armzone",
+      "name": "Armzone Wasser",
       "begriff": "B-ARMZONE",
       "art": "zone",
       "teil_von": "COMP-SHAFT",
@@ -39,12 +41,13 @@
       "hinweis": "Bereich der Welle, kein eigenes Bauteil.",
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-HUB-WATER"
+        "id": "COMP-HUB-WATER",
+        "name": "wasserseitige Armzone"
       }
     },
     {
       "id": "COMP-ARMS",
-      "name": "durchgehende Arme mit zwei Speichenenden",
+      "name": "Arme",
       "begriff": "B-ARM",
       "art": "teil",
       "teil_von": "COMP-WHEEL",
@@ -52,7 +55,8 @@
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-ARMS"
+        "id": "COMP-ARMS",
+        "name": "durchgehende Arme mit zwei Speichenenden"
       }
     },
     {
@@ -83,7 +87,7 @@
     },
     {
       "id": "COMP-RIMS",
-      "name": "Radkränze gemeinsam",
+      "name": "Kränze",
       "begriff": "B-KRANZ",
       "art": "baugruppe",
       "teil_von": "COMP-WHEEL",
@@ -91,7 +95,8 @@
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-RIMS"
+        "id": "COMP-RIMS",
+        "name": "Radkränze gemeinsam"
       }
     },
     {
@@ -109,7 +114,7 @@
     },
     {
       "id": "COMP-KUEMPFE",
-      "name": "Kümpfe/Schöpfgefäße",
+      "name": "Kümpfe",
       "begriff": "B-KUMPF",
       "art": "baugruppe",
       "teil_von": "COMP-WHEEL",
@@ -117,7 +122,8 @@
       "hinweis": "Referenz-Kumpf laut Thorsten: 12 Dauben, ein Boden in der Nut, drei Metallreifen; benachbarte Kümpfe überlappen.",
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-KUEMPFE"
+        "id": "COMP-KUEMPFE",
+        "name": "Kümpfe/Schöpfgefäße"
       }
     },
     {
@@ -148,7 +154,7 @@
     },
     {
       "id": "COMP-KUMPF-HOOPS",
-      "name": "Kumpf-Spannringe",
+      "name": "Kumpfreifen",
       "begriff": "B-KUMPFREIFEN",
       "art": "teil",
       "teil_von": "COMP-KUEMPFE",
@@ -156,12 +162,13 @@
       "hinweis": "Welche Längenreihe aus den Skizzen zum Referenz-Kumpf gehört, ist offen (F-019).",
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-KUMPF-HOOPS"
+        "id": "COMP-KUMPF-HOOPS",
+        "name": "Kumpf-Spannringe"
       }
     },
     {
       "id": "COMP-PADDLES",
-      "name": "Flügelbretter / Schaufeln",
+      "name": "Flügelbretter",
       "begriff": "B-FLUEGELBRETT",
       "art": "teil",
       "teil_von": "COMP-WHEEL",
@@ -169,12 +176,13 @@
       "hinweis": "Laut Thorsten steht die Brettfläche 90° zur Kranzebene. Anstellung und genaue Lage sind offen.",
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-PADDLES"
+        "id": "COMP-PADDLES",
+        "name": "Flügelbretter / Schaufeln"
       }
     },
     {
       "id": "COMP-FASTENERS",
-      "name": "Keile, Holzstifte, Metallbefestiger, Bänder",
+      "name": "Keile, Stifte und Bänder",
       "begriff": "B-BEFESTIGUNG",
       "art": "teil",
       "teil_von": "COMP-WHEEL",
@@ -182,12 +190,13 @@
       "hinweis": "Sammelgruppe für Keile, Stifte und Bänder. Kumpfnägel, Wellenkeil und Stoßkeile sind inzwischen eigene Bauteile.",
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-FASTENERS"
+        "id": "COMP-FASTENERS",
+        "name": "Keile, Holzstifte, Metallbefestiger, Bänder"
       }
     },
     {
       "id": "COMP-KUMPF-NAILS",
-      "name": "Kumpfnägel (lang / kurz)",
+      "name": "Kumpfnägel",
       "begriff": "B-KUMPFNAGEL",
       "art": "teil",
       "teil_von": "COMP-KUEMPFE",
@@ -195,12 +204,13 @@
       "hinweis": "Befestigen den Kumpf durch die gelochten Dauben am Krümmling. Längen und genauer Nagelweg sind noch nicht gemessen.",
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-KUMPF-NAILS"
+        "id": "COMP-KUMPF-NAILS",
+        "name": "Kumpfnägel (lang / kurz)"
       }
     },
     {
       "id": "COMP-BEARINGS",
-      "name": "Lager-/Zapfenkontaktzonen",
+      "name": "Wellenlager",
       "begriff": "B-LAGER",
       "art": "zone",
       "teil_von": "COMP-WHEEL",
@@ -208,12 +218,13 @@
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-BEARINGS"
+        "id": "COMP-BEARINGS",
+        "name": "Lager-/Zapfenkontaktzonen"
       }
     },
     {
       "id": "COMP-RADSTATT",
-      "name": "Radstatt/Tragwerk",
+      "name": "Radstadt",
       "begriff": "B-RADSTADT",
       "art": "baugruppe",
       "teil_von": "ANLAGE",
@@ -221,12 +232,13 @@
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-RADSTATT"
+        "id": "COMP-RADSTATT",
+        "name": "Radstatt/Tragwerk"
       }
     },
     {
       "id": "COMP-TROUGH",
-      "name": "Schöpftrog/Gießtrog",
+      "name": "Schöpftrog",
       "begriff": "B-SCHOEPFTROG",
       "art": "baugruppe",
       "teil_von": "COMP-WATERWAY",
@@ -234,12 +246,13 @@
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-TROUGH"
+        "id": "COMP-TROUGH",
+        "name": "Schöpftrog/Gießtrog"
       }
     },
     {
       "id": "COMP-RINNE",
-      "name": "Rinne 1 (hinter Trog)",
+      "name": "Rinne 1 (am Trog)",
       "begriff": "B-RINNE",
       "art": "baugruppe",
       "teil_von": "COMP-CHANNEL",
@@ -247,7 +260,8 @@
       "hinweis": "Rinne 1 (hinter Trog), nach Skizze IMG_6830.",
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-RINNE"
+        "id": "COMP-RINNE",
+        "name": "Rinne 1 (hinter Trog)"
       }
     },
     {
@@ -304,7 +318,7 @@
     },
     {
       "id": "COMP-BEARING-STANDS",
-      "name": "Lagerstöcke / Wellenauflager",
+      "name": "Lagerböcke",
       "begriff": "B-LAGERBOCK",
       "art": "baugruppe",
       "teil_von": "COMP-RADSTATT",
@@ -312,12 +326,13 @@
       "hinweis": "Lage und Maße sind noch nicht aufgenommen.",
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-BEARING-STANDS"
+        "id": "COMP-BEARING-STANDS",
+        "name": "Lagerstöcke / Wellenauflager"
       }
     },
     {
       "id": "COMP-FRAME-MAIN",
-      "name": "Tragbalken / Pfostenrahmen",
+      "name": "Pfosten und Tragbalken",
       "begriff": "B-RAHMEN",
       "art": "baugruppe",
       "teil_von": "COMP-RADSTATT",
@@ -325,12 +340,13 @@
       "hinweis": "Noch nicht als einzelne Hölzer inventarisiert.",
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-FRAME-MAIN"
+        "id": "COMP-FRAME-MAIN",
+        "name": "Tragbalken / Pfostenrahmen"
       }
     },
     {
       "id": "COMP-FRAME-LOWER",
-      "name": "untere Trag- und Halterahmen",
+      "name": "Untere Rahmenhölzer",
       "begriff": "B-RAHMEN",
       "art": "baugruppe",
       "teil_von": "COMP-RADSTATT",
@@ -338,12 +354,13 @@
       "hinweis": "Noch nicht als einzelne Hölzer inventarisiert.",
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-FRAME-LOWER"
+        "id": "COMP-FRAME-LOWER",
+        "name": "untere Trag- und Halterahmen"
       }
     },
     {
       "id": "COMP-FRAME-SIDE",
-      "name": "seitliche Führungs- / Auffangrahmen",
+      "name": "Seitliche Rahmenhölzer",
       "begriff": "B-RAHMEN",
       "art": "baugruppe",
       "teil_von": "COMP-RADSTATT",
@@ -351,12 +368,13 @@
       "hinweis": "Funktion und Anschlüsse vor Ort klären.",
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-FRAME-SIDE"
+        "id": "COMP-FRAME-SIDE",
+        "name": "seitliche Führungs- / Auffangrahmen"
       }
     },
     {
       "id": "COMP-SCHETTERNBRETTER",
-      "name": "Schetternbretter an Krümmlingstößen",
+      "name": "Schetternbretter",
       "begriff": "B-SCHETTERNBRETT",
       "art": "baugruppe",
       "teil_von": "COMP-RIMS",
@@ -364,12 +382,13 @@
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-SCHETTERNBRETTER"
+        "id": "COMP-SCHETTERNBRETTER",
+        "name": "Schetternbretter an Krümmlingstößen"
       }
     },
     {
       "id": "COMP-WOOD-BANDS",
-      "name": "U-Holzbänder der Flügelbretter",
+      "name": "Holzbänder",
       "begriff": "B-HOLZBAND",
       "art": "baugruppe",
       "teil_von": "COMP-PADDLES",
@@ -377,7 +396,8 @@
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-WOOD-BANDS"
+        "id": "COMP-WOOD-BANDS",
+        "name": "U-Holzbänder der Flügelbretter"
       }
     },
     {
@@ -395,7 +415,7 @@
     },
     {
       "id": "COMP-A-BOCK",
-      "name": "A-Bock am Rinnenstoß",
+      "name": "A-Bock",
       "begriff": "B-A-BOCK",
       "art": "baugruppe",
       "teil_von": "COMP-WATERWAY",
@@ -403,12 +423,13 @@
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-A-BOCK"
+        "id": "COMP-A-BOCK",
+        "name": "A-Bock am Rinnenstoß"
       }
     },
     {
       "id": "COMP-CHANNEL",
-      "name": "Zweiteilige Ableitrinne",
+      "name": "Rinne",
       "begriff": "B-RINNE",
       "art": "baugruppe",
       "teil_von": "COMP-WATERWAY",
@@ -416,12 +437,13 @@
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-CHANNEL"
+        "id": "COMP-CHANNEL",
+        "name": "Zweiteilige Ableitrinne"
       }
     },
     {
       "id": "COMP-SHAFT-CLAMPS",
-      "name": "Eisenschellen der Welle",
+      "name": "Wellenschellen",
       "begriff": "B-SCHELLE",
       "art": "baugruppe",
       "teil_von": "COMP-SHAFT",
@@ -429,12 +451,13 @@
       "hinweis": null,
       "herkunft": {
         "datei": "data/components.json",
-        "id": "COMP-SHAFT-CLAMPS"
+        "id": "COMP-SHAFT-CLAMPS",
+        "name": "Eisenschellen der Welle"
       }
     },
     {
       "id": "ANLAGE",
-      "name": "Kleines Schäferrad (Gesamtanlage)",
+      "name": "Kleines Schäferrad",
       "begriff": "B-ANLAGE",
       "art": "anlage",
       "teil_von": null,
@@ -442,7 +465,8 @@
       "hinweis": "Wurzel des Inventars; nimmt auch Projekt- und Standortangaben auf.",
       "herkunft": {
         "datei": "Nachtrag 11.10.2026",
-        "id": null
+        "id": null,
+        "name": "Kleines Schäferrad (Gesamtanlage)"
       }
     },
     {
@@ -512,7 +536,7 @@
     },
     {
       "id": "COMP-RIM-JOINT-WEDGE",
-      "name": "Stoßkeile der Krümmlinge",
+      "name": "Stoßkeile",
       "begriff": "B-STOSSKEIL",
       "art": "teil",
       "teil_von": "COMP-RIMS",
@@ -520,7 +544,8 @@
       "hinweis": null,
       "herkunft": {
         "datei": "Nachtrag 11.10.2026",
-        "id": null
+        "id": null,
+        "name": "Stoßkeile der Krümmlinge"
       }
     },
     {
