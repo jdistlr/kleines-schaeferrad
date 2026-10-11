@@ -1,6 +1,12 @@
 # Branch-Archiv
 
-Stand: 11.10.2026. Am 11.10.2026 wurden 22 abgeschlossene Arbeitsbranches vom Repository entfernt. **Jeder davon war vollständig in `main` enthalten.** Es ging also kein Commit verloren; die Branches waren nur noch Namen für längst übernommene Arbeit.
+Stand: 11.10.2026. 22 abgeschlossene Arbeitsbranches werden vom Repository entfernt. **Jeder davon ist vollständig in `main` enthalten** (geprüft am 11.10.2026). Es geht also kein Commit verloren; die Branches sind nur noch Namen für längst übernommene Arbeit.
+
+Löschen in einem Schritt (lokal, mit Schreibrechten):
+
+```
+git push origin --delete $(grep -o '^| `[^`]*`' docs/ordnung/BRANCH-ARCHIV.md | tr -d '|` ')
+```
 
 Die Tabelle hält jeden Namen mit seinem letzten Commit fest. Ein Branch lässt sich jederzeit wiederherstellen:
 
@@ -39,7 +45,7 @@ Bei Branches mit Pull Request geht es auch über die Schaltfläche „Restore br
 
 - `main` ist der einzige dauerhafte Branch.
 - Arbeit läuft in kurzlebigen Branches mit Präfix nach Zweck: `ordnung/`, `kern/`, `modell/`, `cockpit/`, `befund/`. Datum am Ende.
-- Jeder Branch endet in einem Pull Request; nach dem Merge löscht GitHub ihn automatisch (Einstellung „Automatically delete head branches“, seit 11.10.2026 aktiv).
+- Jeder Branch endet in einem Pull Request; nach dem Merge löscht GitHub ihn automatisch. Dafür in den Repository-Einstellungen unter *General → Pull Requests* „Automatically delete head branches“ einschalten.
 - Höchstens ein offener Branch pro Thema. Aufeinander aufbauende PRs nennen ihre Basis in der Beschreibung.
 
 Thorstens Fork `ThorstenHalsch/kleines-schaeferrad` hat ebenfalls fünf Branches, die alle vollständig in `main` enthalten sind. Sie liegen in seinem Repository; aufräumen kann nur er.
