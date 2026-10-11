@@ -52,7 +52,7 @@ Diese Liste **ändert keine Fakten und kein Modell**. Sie ist die Vorlage für e
 | C8 | Welle ist Zwölfeck, 37 cm über **Ecken** | Welle/BEFUND | ⚠️ CLAIM-0002 nur „transverse_width 37“ | Präzisieren | |
 | C9 | Je Wellenende 2 Metallschellen, zweiteilig verschraubt | Welle/BEFUND | ✅ TH-20261009-14 (Anzahl) | Maße offen, nur Fotoschätzung | |
 | C10 | Arme werden mit Wellenkeil + äußeren Keilen gesichert | [wellenkeil-20261011.json](../../evidence/contributions/wellenkeil-20261011.json) | ❌ | Eintragen; Länge ca. 44 cm nur Fotoschätzung | |
-| C11 | Kumpf: 12 Dauben, 1 Boden in Nut, 3 Reifen, 2 gebohrte Dauben à 2 Löcher, 2 Kumpfnägel (lang/kurz wegen Überlappung) | [kumpf-20261008.json](../../evidence/contributions/kumpf-20261008.json) | ❌ 13 Einträge nur in Beitragsdatei | Übernehmen | |
+| C11 | Kumpf: 12 Dauben, 1 Boden in Nut, 3 Reifen, 2 gebohrte Dauben à 2 Löcher, 2 Kumpfnägel (lang/kurz wegen Überlappung) | [kumpf-20261008.json](../../evidence/contributions/kumpf-20261008.json) | ✅ CLAIM-0356…0368 | Beitragsdatei führt dieselben Angaben unter eigenen IDs (EXPERT-KUMPF-*) – doppelte Ablage auflösen | |
 | C12 | Flügelbretter 90° zum Rad | Fachbeitrag 08./09.10. | ⚠️ doppelt: CLAIM-0369, TH-20261009-06, EXPERT-PADDLE-…-ANGLE | Auf einen Eintrag zusammenführen | |
 | C13 | Flügelbretter ca. 35 cm breit, landseitig abgeschrägt | Fachbeitrag 09.10. | ✅ TH-20261009-07, -08 | Radialer Überstand über Kranz offen (bestimmt Drehkreis, siehe A4) | |
 
@@ -65,6 +65,6 @@ In den Befunden vom 11.10. steht oft „Nutzer“. In `evidence-authority.json` 
 | | Anzahl |
 |---|---:|
 | Angaben in dieser Liste | 28 |
-| ✅ korrekt im Register | 10 |
+| ✅ korrekt im Register | 11 |
 | ⚠️ im Register, aber veraltet / falsch zugeordnet / doppelt | 8 |
-| ❌ fehlen im Register | 10 (davon C11 mit 13 Einzelangaben) |
+| ❌ fehlen im Register | 9 |
