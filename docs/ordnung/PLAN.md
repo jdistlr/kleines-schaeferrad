@@ -14,7 +14,7 @@ Das Projekt hat in fünf Tagen viel Wissen gesammelt, aber die Wahrheit liegt ve
 
 ## Grundsätze
 
-1. **Ein Register.** Fakten stehen nur in `data/geometry.claims.json`. Alles andere – Befunde, Pläne, Code – verweist mit Claim-ID darauf.
+1. **Ein Kern.** Fakten stehen nur im Wissenskern [`kern/`](../../kern/README.md). Alles andere – Befunde, Pläne, Code – verweist mit Claim-ID darauf.
 2. **Jeder Fakt hat drei klare Angaben:**
    - **Quelle:** Messung · heute bestätigte Zeichnung · historische Zeichnung · Fachaussage · Fotobeobachtung · Ableitung · Annahme
    - **Gültigkeit:** heute gültig · historisch · überholt (mit Verweis auf den Nachfolger)
@@ -41,6 +41,8 @@ Das Projekt hat in fünf Tagen viel Wissen gesammelt, aber die Wahrheit liegt ve
 **Fertig, wenn:** jede Zeile eine Entscheidung von Thorsten hat.
 
 ### Phase 2 – Register bereinigen
+> **Stand 11.10.2026:** Kernschema, Glossar, Prüfskript und Migration sind umgesetzt ([`kern/`](../../kern/README.md)). Statt das Altregister zu erweitern, gibt es einen neuen Wissenskern mit acht Begriffen; die Altdaten sind vollständig abgebildet und eingefroren. Offen in dieser Phase: Entscheidungen aus Phase 1 eintragen.
+
 - Register-Schema um **Gültigkeit** und **Bestätigt von/am** ergänzen; `as_built_eligible` daraus ableiten statt pauschal `false`.
 - Bestätigte Angaben aus Phase 1 eintragen; ⚠️-Einträge korrigieren (alte Werte als „überholt“).
 - Beitragsdateien (`evidence/contributions/`) vollständig ins Register überführen; danach sind sie nur noch Quellenbeleg.

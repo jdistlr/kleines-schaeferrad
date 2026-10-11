@@ -1,0 +1,55 @@
+{
+  "schema": "ks-kern-begruendungen/v1",
+  "stand": "2026-10-11",
+  "hinweis": "Handgepflegt seit der Migration vom 11.10.2026 (scripts/kern/migriere_v1.py).",
+  "begruendungen": [
+    {
+      "id": "G-001",
+      "text": "Ein langer und ein kurzer Kumpfnagel, weil benachbarte Kümpfe überlappen.",
+      "betrifft": [
+        "COMP-KUMPF-NAILS",
+        "CLAIM-0368"
+      ],
+      "quellen": [
+        "NARRATIVE-TH-KUMPF-20261008-03"
+      ],
+      "gueltigkeit": "offen"
+    },
+    {
+      "id": "G-002",
+      "text": "Die Armöffnungen der Welle sind größer als der Armquerschnitt, damit Platz für die Verkeilung bleibt.",
+      "betrifft": [
+        "COMP-SHAFT",
+        "AN-20261011-13"
+      ],
+      "quellen": [
+        "Q-AUSSAGE-20261011-WELLE"
+      ],
+      "gueltigkeit": "offen"
+    },
+    {
+      "id": "G-003",
+      "text": "Der Stoßkeil drückt auf die Schetternägel und verspannt so den ganzen Kranz.",
+      "betrifft": [
+        "COMP-RIM-JOINT-WEDGE",
+        "AN-20261011-07"
+      ],
+      "quellen": [
+        "Q-AUSSAGE-20261011-KRUEMMLINGE"
+      ],
+      "gueltigkeit": "offen"
+    },
+    {
+      "id": "G-004",
+      "text": "Die Außenarme sind gekröpft, damit alle Armenden gemeinsam am jeweiligen Kranz liegen.",
+      "betrifft": [
+        "COMP-ARMS",
+        "AN-20261011-12"
+      ],
+      "quellen": [
+        "Q-AUSSAGE-20261011-ARME"
+      ],
+      "gueltigkeit": "offen"
+    }
+  ]
+}

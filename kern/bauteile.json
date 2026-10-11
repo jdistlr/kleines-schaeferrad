@@ -1,0 +1,748 @@
+{
+  "schema": "ks-kern-bauteile/v1",
+  "stand": "2026-10-11",
+  "hinweis": "Handgepflegt seit der Migration vom 11.10.2026 (scripts/kern/migriere_v1.py).",
+  "bauteile": [
+    {
+      "id": "COMP-SHAFT",
+      "name": "Welle/Achse",
+      "begriff": "B-WELLE",
+      "art": "teil",
+      "teil_von": "COMP-WHEEL",
+      "anzahl": "one",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-SHAFT"
+      }
+    },
+    {
+      "id": "COMP-HUB-LAND",
+      "name": "landseitige Armzone",
+      "begriff": "B-ARMZONE",
+      "art": "zone",
+      "teil_von": "COMP-SHAFT",
+      "anzahl": "one",
+      "hinweis": "Armzone is not a proven separate hub component.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-HUB-LAND"
+      }
+    },
+    {
+      "id": "COMP-HUB-WATER",
+      "name": "wasserseitige Armzone",
+      "begriff": "B-ARMZONE",
+      "art": "zone",
+      "teil_von": "COMP-SHAFT",
+      "anzahl": "one",
+      "hinweis": "Armzone is not a proven separate hub component.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-HUB-WATER"
+      }
+    },
+    {
+      "id": "COMP-ARMS",
+      "name": "durchgehende Arme mit zwei Speichenenden",
+      "begriff": "B-ARM",
+      "art": "teil",
+      "teil_von": "COMP-WHEEL",
+      "anzahl": "3 per side (historical/external); current uncounted",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-ARMS"
+      }
+    },
+    {
+      "id": "COMP-RIM-LAND",
+      "name": "Landkranz",
+      "begriff": "B-KRANZ",
+      "art": "baugruppe",
+      "teil_von": "COMP-RIMS",
+      "anzahl": "one",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-RIM-LAND"
+      }
+    },
+    {
+      "id": "COMP-RIM-WATER",
+      "name": "Wasserkranz",
+      "begriff": "B-KRANZ",
+      "art": "baugruppe",
+      "teil_von": "COMP-RIMS",
+      "anzahl": "one",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-RIM-WATER"
+      }
+    },
+    {
+      "id": "COMP-RIMS",
+      "name": "Radkränze gemeinsam",
+      "begriff": "B-KRANZ",
+      "art": "baugruppe",
+      "teil_von": "COMP-WHEEL",
+      "anzahl": "2 visible",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-RIMS"
+      }
+    },
+    {
+      "id": "COMP-KRUEMMLINGE",
+      "name": "Krümmlinge",
+      "begriff": "B-KRUEMMLING",
+      "art": "teil",
+      "teil_von": "COMP-RIMS",
+      "anzahl": "6 per ring (historical/external)",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-KRUEMMLINGE"
+      }
+    },
+    {
+      "id": "COMP-KUEMPFE",
+      "name": "Kümpfe/Schöpfgefäße",
+      "begriff": "B-KUMPF",
+      "art": "baugruppe",
+      "teil_von": "COMP-WHEEL",
+      "anzahl": "24 external expected; current uncounted",
+      "hinweis": "Referenz-Kumpf durch ThorstenHalsch fachlich beschrieben: 12 Dauben, 1 Nutboden, 3 Metallbänder; benachbarte Kümpfe überlappen. Aktuelle Gesamtzahl/Einbaupose weiterhin vor Ort zu verifizieren.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-KUEMPFE"
+      }
+    },
+    {
+      "id": "COMP-KUMPF-STAVES",
+      "name": "Dauben",
+      "begriff": "B-DAUBE",
+      "art": "teil",
+      "teil_von": "COMP-KUEMPFE",
+      "anzahl": "12 per photographed reference Kumpf (expert-confirmed); all-vessel equivalence to verify",
+      "hinweis": "Zwei der zwölf Dauben besitzen laut Fachauskunft je zwei Löcher für Kumpfnägel. Boden sitzt in einer Einfräsung der Dauben.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-KUMPF-STAVES"
+      }
+    },
+    {
+      "id": "COMP-KUMPF-BASE",
+      "name": "Kumpfböden",
+      "begriff": "B-KUMPFBODEN",
+      "art": "teil",
+      "teil_von": "COMP-KUEMPFE",
+      "anzahl": "1 per photographed reference Kumpf (expert-confirmed)",
+      "hinweis": "Referenzboden sitzt laut Fachauskunft in einer Einfräsung der Dauben; exakte Nut-/Bodengeometrie bleibt zu messen.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-KUMPF-BASE"
+      }
+    },
+    {
+      "id": "COMP-KUMPF-HOOPS",
+      "name": "Kumpf-Spannringe",
+      "begriff": "B-KUMPFREIFEN",
+      "art": "teil",
+      "teil_von": "COMP-KUEMPFE",
+      "anzahl": "3 metal hoops per photographed reference Kumpf (expert-confirmed); historical dimension variants exist",
+      "hinweis": "Drei Metallbänder am Referenz-Kumpf; historische Zeichnungen zeigen gefertigte Maßvarianten, deren numerische Zuordnung noch offen ist.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-KUMPF-HOOPS"
+      }
+    },
+    {
+      "id": "COMP-PADDLES",
+      "name": "Flügelbretter / Schaufeln",
+      "begriff": "B-FLUEGELBRETT",
+      "art": "teil",
+      "teil_von": "COMP-WHEEL",
+      "anzahl": "24 external expected; current uncounted",
+      "hinweis": "Thorsten: Brettfläche 90° zur Kranzebene. Der radiale Anstellwinkel, die Einbaulage und Scanregistrierung bleiben ungeklärt; keine bestätigte Ist-Metrik.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-PADDLES"
+      }
+    },
+    {
+      "id": "COMP-FASTENERS",
+      "name": "Keile, Holzstifte, Metallbefestiger, Bänder",
+      "begriff": "B-BEFESTIGUNG",
+      "art": "teil",
+      "teil_von": "COMP-WHEEL",
+      "anzahl": "historical subtypes only; current uncounted",
+      "hinweis": "Enthält mehrere Fastener-Familien. Kumpfnägel werden ab Baseline v3 als eigene Unterfamilie geführt; ihre Lang-/Kurzfunktion ist fachlich durch Kumpfüberlappung erklärt.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-FASTENERS"
+      }
+    },
+    {
+      "id": "COMP-KUMPF-NAILS",
+      "name": "Kumpfnägel (lang / kurz)",
+      "begriff": "B-KUMPFNAGEL",
+      "art": "teil",
+      "teil_von": "COMP-KUEMPFE",
+      "anzahl": "2 per photographed reference Kumpf attachment: one long, one short (expert-confirmed); current all-vessel equivalence to verify",
+      "hinweis": "Fachlich bestätigte Funktion: Befestigung des Kumpfs am Krümmling durch gelochte Dauben. Unterschiedliche Länge wird durch Überlappung benachbarter Kümpfe erklärt. Exakter Nagelweg, Längen und Sitze bleiben metrisch offen.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-KUMPF-NAILS"
+      }
+    },
+    {
+      "id": "COMP-BEARINGS",
+      "name": "Lager-/Zapfenkontaktzonen",
+      "begriff": "B-LAGER",
+      "art": "zone",
+      "teil_von": "COMP-WHEEL",
+      "anzahl": "2 external expected; current centres unknown",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-BEARINGS"
+      }
+    },
+    {
+      "id": "COMP-RADSTATT",
+      "name": "Radstatt/Tragwerk",
+      "begriff": "B-RADSTADT",
+      "art": "baugruppe",
+      "teil_von": "ANLAGE",
+      "anzahl": "one",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-RADSTATT"
+      }
+    },
+    {
+      "id": "COMP-TROUGH",
+      "name": "Schöpftrog/Gießtrog",
+      "begriff": "B-SCHOEPFTROG",
+      "art": "baugruppe",
+      "teil_von": "COMP-WATERWAY",
+      "anzahl": "one visible",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-TROUGH"
+      }
+    },
+    {
+      "id": "COMP-RINNE",
+      "name": "Rinne 1 (hinter Trog)",
+      "begriff": "B-RINNE",
+      "art": "baugruppe",
+      "teil_von": "COMP-CHANNEL",
+      "anzahl": "one visible; downstream unknown",
+      "hinweis": "Rinne 1 (hinter Trog), nach Skizze IMG_6830.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-RINNE"
+      }
+    },
+    {
+      "id": "TOOL-BENDING-DIE",
+      "name": "Biegematrize",
+      "begriff": "B-BIEGEMATRIZE",
+      "art": "werkzeug",
+      "teil_von": null,
+      "anzahl": "3 historical",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "TOOL-BENDING-DIE"
+      }
+    },
+    {
+      "id": "REF-BOARD",
+      "name": "Brett-/Daubenvorlage",
+      "begriff": "B-VORLAGE",
+      "art": "vorlage",
+      "teil_von": null,
+      "anzahl": "unknown",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "REF-BOARD"
+      }
+    },
+    {
+      "id": "REF-POLYGON",
+      "name": "Zwölfeck-Hilfsgeometrie",
+      "begriff": "B-VORLAGE",
+      "art": "vorlage",
+      "teil_von": null,
+      "anzahl": "unknown",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "REF-POLYGON"
+      }
+    },
+    {
+      "id": "REF-CONTACTSTRIPS",
+      "name": "Kontaktstreifen-Vorlage",
+      "begriff": "B-VORLAGE",
+      "art": "vorlage",
+      "teil_von": null,
+      "anzahl": "3 length variants",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "REF-CONTACTSTRIPS"
+      }
+    },
+    {
+      "id": "COMP-BEARING-STANDS",
+      "name": "Lagerstöcke / Wellenauflager",
+      "begriff": "B-LAGERBOCK",
+      "art": "baugruppe",
+      "teil_von": "COMP-RADSTATT",
+      "anzahl": "mehrere sichtbar; genaue Zuordnung noch offen",
+      "hinweis": "Stationärer Kontext. Lage und Maße im 3D-Modell sind bis zur Feldaufnahme nur Arbeitsannahmen.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-BEARING-STANDS"
+      }
+    },
+    {
+      "id": "COMP-FRAME-MAIN",
+      "name": "Tragbalken / Pfostenrahmen",
+      "begriff": "B-RAHMEN",
+      "art": "baugruppe",
+      "teil_von": "COMP-RADSTATT",
+      "anzahl": "mehrere Hölzer sichtbar; genaue Stückliste offen",
+      "hinweis": "Umgebendes Tragwerk des Rades; noch nicht als reale Einzelteile inventarisiert.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-FRAME-MAIN"
+      }
+    },
+    {
+      "id": "COMP-FRAME-LOWER",
+      "name": "untere Trag- und Halterahmen",
+      "begriff": "B-RAHMEN",
+      "art": "baugruppe",
+      "teil_von": "COMP-RADSTATT",
+      "anzahl": "teilweise sichtbar; genaue Topologie offen",
+      "hinweis": "Ghosted Kontext für Aufnahmeplanung; keine freigegebene Ist-Geometrie.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-FRAME-LOWER"
+      }
+    },
+    {
+      "id": "COMP-FRAME-SIDE",
+      "name": "seitliche Führungs- / Auffangrahmen",
+      "begriff": "B-RAHMEN",
+      "art": "baugruppe",
+      "teil_von": "COMP-RADSTATT",
+      "anzahl": "teilweise sichtbar; Funktion und genaue Lage offen",
+      "hinweis": "Ghosted Kontext; Funktion und Verbindungspartner vor Ort klären.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-FRAME-SIDE"
+      }
+    },
+    {
+      "id": "COMP-SCHETTERNBRETTER",
+      "name": "Schetternbretter an Krümmlingstößen",
+      "begriff": "B-SCHETTERNBRETT",
+      "art": "baugruppe",
+      "teil_von": "COMP-RIMS",
+      "anzahl": "expert topology; physical inventory open",
+      "hinweis": "New canonical family mapped from reviewed intake; no measured physical-instance promotion.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-SCHETTERNBRETTER"
+      }
+    },
+    {
+      "id": "COMP-WOOD-BANDS",
+      "name": "U-Holzbänder der Flügelbretter",
+      "begriff": "B-HOLZBAND",
+      "art": "baugruppe",
+      "teil_von": "COMP-PADDLES",
+      "anzahl": "expert topology; physical inventory open",
+      "hinweis": "New canonical family mapped from reviewed intake; no measured physical-instance promotion.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-WOOD-BANDS"
+      }
+    },
+    {
+      "id": "COMP-TROUGH-SUPPORT",
+      "name": "Bock am Rad",
+      "begriff": "B-LAGERBOCK",
+      "art": "baugruppe",
+      "teil_von": "COMP-RADSTATT",
+      "anzahl": "expert topology; physical inventory open",
+      "hinweis": "Vermutlich der landseitige Lagerbock der Radstadt; Identität siehe F-004.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-TROUGH-SUPPORT"
+      }
+    },
+    {
+      "id": "COMP-A-BOCK",
+      "name": "A-Bock am Rinnenstoß",
+      "begriff": "B-A-BOCK",
+      "art": "baugruppe",
+      "teil_von": "COMP-WATERWAY",
+      "anzahl": "expert topology; physical inventory open",
+      "hinweis": "New canonical family mapped from reviewed intake; no measured physical-instance promotion.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-A-BOCK"
+      }
+    },
+    {
+      "id": "COMP-CHANNEL",
+      "name": "Zweiteilige Ableitrinne",
+      "begriff": "B-RINNE",
+      "art": "baugruppe",
+      "teil_von": "COMP-WATERWAY",
+      "anzahl": "expert topology; physical inventory open",
+      "hinweis": "New canonical family mapped from reviewed intake; no measured physical-instance promotion.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-CHANNEL"
+      }
+    },
+    {
+      "id": "COMP-SHAFT-CLAMPS",
+      "name": "Eisenschellen der Welle",
+      "begriff": "B-SCHELLE",
+      "art": "baugruppe",
+      "teil_von": "COMP-SHAFT",
+      "anzahl": "expert topology; physical inventory open",
+      "hinweis": "New canonical family mapped from reviewed intake; no measured physical-instance promotion.",
+      "herkunft": {
+        "datei": "data/components.json",
+        "id": "COMP-SHAFT-CLAMPS"
+      }
+    },
+    {
+      "id": "ANLAGE",
+      "name": "Kleines Schäferrad (Gesamtanlage)",
+      "begriff": "B-ANLAGE",
+      "art": "anlage",
+      "teil_von": null,
+      "anzahl": "eine",
+      "hinweis": "Wurzel des Inventars; nimmt auch Projekt- und Standortangaben auf.",
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "COMP-WHEEL",
+      "name": "Wasserrad",
+      "begriff": "B-WASSERRAD",
+      "art": "baugruppe",
+      "teil_von": "ANLAGE",
+      "anzahl": "eines",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "COMP-WATERWAY",
+      "name": "Wasserführung",
+      "begriff": "B-WASSERFUEHRUNG",
+      "art": "baugruppe",
+      "teil_von": "ANLAGE",
+      "anzahl": "eine",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "COMP-RINNE-2",
+      "name": "Rinne 2 (zum Auslass)",
+      "begriff": "B-RINNE",
+      "art": "teil",
+      "teil_von": "COMP-CHANNEL",
+      "anzahl": "eines",
+      "hinweis": "Zweiter Rinnenteil; keine eigene Zeichnung bekannt. COMP-RINNE ist Rinne 1 (hinter Trog).",
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "COMP-RADSTATT-OBERBALKEN",
+      "name": "Obere Balken der Radstadt",
+      "begriff": "B-RAHMEN",
+      "art": "teil",
+      "teil_von": "COMP-RADSTATT",
+      "anzahl": "mehrere; Anzahl offen",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "COMP-SHAFT-WEDGE",
+      "name": "Wellenkeil",
+      "begriff": "B-WELLENKEIL",
+      "art": "teil",
+      "teil_von": "COMP-WHEEL",
+      "anzahl": "mindestens einer; Anzahl offen",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "COMP-RIM-JOINT-WEDGE",
+      "name": "Stoßkeile der Krümmlinge",
+      "begriff": "B-STOSSKEIL",
+      "art": "teil",
+      "teil_von": "COMP-RIMS",
+      "anzahl": "einer je Krümmlingstoß",
+      "hinweis": null,
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "REF-MEDIUM-KUMPF",
+      "name": "Kumpf-Größenvariante „mittel“ (Skizze)",
+      "begriff": "B-VORLAGE",
+      "art": "vorlage",
+      "teil_von": null,
+      "anzahl": "Skizze",
+      "hinweis": "Größenvariante laut Kumpfskizze; Bezug zum heutigen Kumpf über Frage zu klären.",
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "REF-SMALL-KUMPF",
+      "name": "Kumpf-Größenvariante „klein“ (Skizze)",
+      "begriff": "B-VORLAGE",
+      "art": "vorlage",
+      "teil_von": null,
+      "anzahl": "Skizze",
+      "hinweis": "Größenvariante laut Kumpfskizze; Bezug zum heutigen Kumpf über Frage zu klären.",
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "REF-CONTACTSTRIP-1",
+      "name": "Kontaktstreifen-Vorlage 1",
+      "begriff": "B-VORLAGE",
+      "art": "vorlage",
+      "teil_von": "REF-CONTACTSTRIPS",
+      "anzahl": "Vorlage",
+      "hinweis": "Industrielle Vorlage; ob sie zum Rad gehört, ist offen.",
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "REF-CONTACTSTRIP-2",
+      "name": "Kontaktstreifen-Vorlage 2",
+      "begriff": "B-VORLAGE",
+      "art": "vorlage",
+      "teil_von": "REF-CONTACTSTRIPS",
+      "anzahl": "Vorlage",
+      "hinweis": "Industrielle Vorlage; ob sie zum Rad gehört, ist offen.",
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "REF-CONTACTSTRIP-3",
+      "name": "Kontaktstreifen-Vorlage 3",
+      "begriff": "B-VORLAGE",
+      "art": "vorlage",
+      "teil_von": "REF-CONTACTSTRIPS",
+      "anzahl": "Vorlage",
+      "hinweis": "Industrielle Vorlage; ob sie zum Rad gehört, ist offen.",
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "HL-Bänder",
+      "name": "Holzliste: Bänder",
+      "begriff": "B-HOLZLISTENPOSTEN",
+      "art": "listenposten",
+      "teil_von": null,
+      "anzahl": null,
+      "hinweis": "Posten der allgemeinen Holzliste; Zuordnung offen (F-009).",
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "REF-Bänder"
+      }
+    },
+    {
+      "id": "HL-Nägel",
+      "name": "Holzliste: Nägel",
+      "begriff": "B-HOLZLISTENPOSTEN",
+      "art": "listenposten",
+      "teil_von": null,
+      "anzahl": null,
+      "hinweis": "Posten der allgemeinen Holzliste; Zuordnung offen (F-009).",
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "REF-Nägel"
+      }
+    },
+    {
+      "id": "HL-Nägel-Variante",
+      "name": "Holzliste: Nägel Variante",
+      "begriff": "B-HOLZLISTENPOSTEN",
+      "art": "listenposten",
+      "teil_von": null,
+      "anzahl": null,
+      "hinweis": "Posten der allgemeinen Holzliste; Zuordnung offen (F-009).",
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "REF-Nägel Variante"
+      }
+    },
+    {
+      "id": "HL-Anwelle",
+      "name": "Holzliste: Anwelle",
+      "begriff": "B-HOLZLISTENPOSTEN",
+      "art": "listenposten",
+      "teil_von": null,
+      "anzahl": null,
+      "hinweis": "Posten der allgemeinen Holzliste; Zuordnung offen (F-009).",
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "REF-Anwelle"
+      }
+    },
+    {
+      "id": "HL-Flügel-Versatz",
+      "name": "Holzliste: Flügel-Versatz",
+      "begriff": "B-HOLZLISTENPOSTEN",
+      "art": "listenposten",
+      "teil_von": null,
+      "anzahl": null,
+      "hinweis": "Posten der allgemeinen Holzliste; Zuordnung offen (F-009).",
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "REF-Flügel-Versatz"
+      }
+    },
+    {
+      "id": "HL-Laufsteg",
+      "name": "Holzliste: Laufsteg",
+      "begriff": "B-HOLZLISTENPOSTEN",
+      "art": "listenposten",
+      "teil_von": null,
+      "anzahl": null,
+      "hinweis": "Posten der allgemeinen Holzliste; Zuordnung offen (F-009).",
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "REF-Laufsteg"
+      }
+    },
+    {
+      "id": "HL-Zwergsteg",
+      "name": "Holzliste: Zwergsteg",
+      "begriff": "B-HOLZLISTENPOSTEN",
+      "art": "listenposten",
+      "teil_von": null,
+      "anzahl": null,
+      "hinweis": "Posten der allgemeinen Holzliste; Zuordnung offen (F-009).",
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "REF-Zwergsteg"
+      }
+    },
+    {
+      "id": "HL-Fangbaum",
+      "name": "Holzliste: Fangbaum",
+      "begriff": "B-HOLZLISTENPOSTEN",
+      "art": "listenposten",
+      "teil_von": null,
+      "anzahl": null,
+      "hinweis": "Posten der allgemeinen Holzliste; Zuordnung offen (F-009).",
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "REF-Fangbaum"
+      }
+    },
+    {
+      "id": "HL-Zwergrinne",
+      "name": "Holzliste: Zwergrinne",
+      "begriff": "B-HOLZLISTENPOSTEN",
+      "art": "listenposten",
+      "teil_von": null,
+      "anzahl": null,
+      "hinweis": "Posten der allgemeinen Holzliste; Zuordnung offen (F-009).",
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "REF-Zwergrinne"
+      }
+    },
+    {
+      "id": "HL-Pfosten",
+      "name": "Holzliste: Pfosten",
+      "begriff": "B-HOLZLISTENPOSTEN",
+      "art": "listenposten",
+      "teil_von": null,
+      "anzahl": null,
+      "hinweis": "Posten der allgemeinen Holzliste; Zuordnung offen (F-009).",
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "REF-Pfosten"
+      }
+    },
+    {
+      "id": "HL-Landrinne",
+      "name": "Holzliste: Landrinne",
+      "begriff": "B-HOLZLISTENPOSTEN",
+      "art": "listenposten",
+      "teil_von": null,
+      "anzahl": null,
+      "hinweis": "Posten der allgemeinen Holzliste; Zuordnung offen (F-009).",
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "REF-Landrinne"
+      }
+    },
+    {
+      "id": "HL-Rüst-und-Landestange",
+      "name": "Holzliste: Rüst- und Landestange",
+      "begriff": "B-HOLZLISTENPOSTEN",
+      "art": "listenposten",
+      "teil_von": null,
+      "anzahl": null,
+      "hinweis": "Posten der allgemeinen Holzliste; Zuordnung offen (F-009).",
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "REF-Rüst- und Landestange"
+      }
+    }
+  ]
+}

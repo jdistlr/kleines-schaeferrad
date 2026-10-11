@@ -2,6 +2,8 @@
 
 Zweck: Jede Fachangabe von Thorsten aus den Gesprächen vom 08. bis 11.10.2026 einmal sichtbar machen – mit Quelle und der Frage, ob sie im Faktenregister [`data/geometry.claims.json`](../../data/geometry.claims.json) steht. Grundlage für Phase 1 des [Ordnungsplans](PLAN.md).
 
+Seit der Migration in den [Wissenskern](../../kern/README.md) stehen die fehlenden Angaben als `AN-20261011-*` (Gültigkeit `offen`) und die kritischen Punkte als offene Fragen `F-001` bis `F-011` in [`kern/fragen.json`](../../kern/fragen.json). Die Claim-IDs in dieser Liste gelten im Kern unverändert.
+
 Diese Liste **ändert keine Fakten und kein Modell**. Sie ist die Vorlage für einen gemeinsamen Durchgang mit Thorsten. Erst nach seiner Bestätigung werden Einträge ins Register übernommen oder dort korrigiert.
 
 **Spalte „Register“:**

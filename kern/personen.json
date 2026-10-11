@@ -1,0 +1,20 @@
+{
+  "schema": "ks-kern-personen/v1",
+  "hinweis": "Wissensträger und Entscheider. Nur hier eingetragene Personen können Angaben bestätigen oder Fragen entscheiden. Handgepflegt.",
+  "personen": [
+    {
+      "id": "P-THORSTEN",
+      "name": "Thorsten Halsch",
+      "github": "ThorstenHalsch",
+      "rolle": "Fachkenner im Wasserradverein; entscheidet über fachliche Gültigkeit",
+      "darf_bestaetigen": true
+    },
+    {
+      "id": "P-JOHANNES",
+      "name": "Johannes Distler",
+      "github": "jdistlr",
+      "rolle": "Projektleitung und Repository; entscheidet über Struktur, Ontologie und Veröffentlichung",
+      "darf_bestaetigen": true
+    }
+  ]
+}

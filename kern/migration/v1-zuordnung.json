@@ -1,0 +1,2487 @@
+{
+  "schema": "ks-kern-zuordnung/v1",
+  "stand": "2026-10-11",
+  "hinweis": "Alt-ID → Kern-ID. Altdateien bleiben unverändert; Rückbau: kern/ entfernen.",
+  "zuordnung": {
+    "V2-IMG_6803": {
+      "kern_id": "V2-IMG_6803-upload2",
+      "datei": "quellen.json",
+      "art": "quelle-alias"
+    },
+    "COMP-SHAFT": {
+      "kern_id": "COMP-SHAFT",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-HUB-LAND": {
+      "kern_id": "COMP-HUB-LAND",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-HUB-WATER": {
+      "kern_id": "COMP-HUB-WATER",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-ARMS": {
+      "kern_id": "COMP-ARMS",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-RIM-LAND": {
+      "kern_id": "COMP-RIM-LAND",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-RIM-WATER": {
+      "kern_id": "COMP-RIM-WATER",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-RIMS": {
+      "kern_id": "COMP-RIMS",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-KRUEMMLINGE": {
+      "kern_id": "COMP-KRUEMMLINGE",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-KUEMPFE": {
+      "kern_id": "COMP-KUEMPFE",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-KUMPF-STAVES": {
+      "kern_id": "COMP-KUMPF-STAVES",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-KUMPF-BASE": {
+      "kern_id": "COMP-KUMPF-BASE",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-KUMPF-HOOPS": {
+      "kern_id": "COMP-KUMPF-HOOPS",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-PADDLES": {
+      "kern_id": "COMP-PADDLES",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-FASTENERS": {
+      "kern_id": "COMP-FASTENERS",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-KUMPF-NAILS": {
+      "kern_id": "COMP-KUMPF-NAILS",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-BEARINGS": {
+      "kern_id": "COMP-BEARINGS",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-RADSTATT": {
+      "kern_id": "COMP-RADSTATT",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-TROUGH": {
+      "kern_id": "COMP-TROUGH",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-RINNE": {
+      "kern_id": "COMP-RINNE",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "TOOL-BENDING-DIE": {
+      "kern_id": "TOOL-BENDING-DIE",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "REF-BOARD": {
+      "kern_id": "REF-BOARD",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "REF-POLYGON": {
+      "kern_id": "REF-POLYGON",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "REF-CONTACTSTRIPS": {
+      "kern_id": "REF-CONTACTSTRIPS",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-BEARING-STANDS": {
+      "kern_id": "COMP-BEARING-STANDS",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-FRAME-MAIN": {
+      "kern_id": "COMP-FRAME-MAIN",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-FRAME-LOWER": {
+      "kern_id": "COMP-FRAME-LOWER",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-FRAME-SIDE": {
+      "kern_id": "COMP-FRAME-SIDE",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-SCHETTERNBRETTER": {
+      "kern_id": "COMP-SCHETTERNBRETTER",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-WOOD-BANDS": {
+      "kern_id": "COMP-WOOD-BANDS",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-TROUGH-SUPPORT": {
+      "kern_id": "COMP-TROUGH-SUPPORT",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-A-BOCK": {
+      "kern_id": "COMP-A-BOCK",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-CHANNEL": {
+      "kern_id": "COMP-CHANNEL",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-SHAFT-CLAMPS": {
+      "kern_id": "COMP-SHAFT-CLAMPS",
+      "datei": "bauteile.json",
+      "art": "bauteil"
+    },
+    "COMP-RADSTADT": {
+      "kern_id": "COMP-RADSTATT",
+      "datei": "bauteile.json",
+      "art": "schreibvariante"
+    },
+    "REF-Bänder": {
+      "kern_id": "HL-Bänder",
+      "datei": "bauteile.json",
+      "art": "holzlistenposten"
+    },
+    "REF-Nägel": {
+      "kern_id": "HL-Nägel",
+      "datei": "bauteile.json",
+      "art": "holzlistenposten"
+    },
+    "REF-Nägel Variante": {
+      "kern_id": "HL-Nägel-Variante",
+      "datei": "bauteile.json",
+      "art": "holzlistenposten"
+    },
+    "REF-Anwelle": {
+      "kern_id": "HL-Anwelle",
+      "datei": "bauteile.json",
+      "art": "holzlistenposten"
+    },
+    "REF-Flügel-Versatz": {
+      "kern_id": "HL-Flügel-Versatz",
+      "datei": "bauteile.json",
+      "art": "holzlistenposten"
+    },
+    "REF-Laufsteg": {
+      "kern_id": "HL-Laufsteg",
+      "datei": "bauteile.json",
+      "art": "holzlistenposten"
+    },
+    "REF-Zwergsteg": {
+      "kern_id": "HL-Zwergsteg",
+      "datei": "bauteile.json",
+      "art": "holzlistenposten"
+    },
+    "REF-Fangbaum": {
+      "kern_id": "HL-Fangbaum",
+      "datei": "bauteile.json",
+      "art": "holzlistenposten"
+    },
+    "REF-Zwergrinne": {
+      "kern_id": "HL-Zwergrinne",
+      "datei": "bauteile.json",
+      "art": "holzlistenposten"
+    },
+    "REF-Pfosten": {
+      "kern_id": "HL-Pfosten",
+      "datei": "bauteile.json",
+      "art": "holzlistenposten"
+    },
+    "REF-Landrinne": {
+      "kern_id": "HL-Landrinne",
+      "datei": "bauteile.json",
+      "art": "holzlistenposten"
+    },
+    "REF-Rüst- und Landestange": {
+      "kern_id": "HL-Rüst-und-Landestange",
+      "datei": "bauteile.json",
+      "art": "holzlistenposten"
+    },
+    "COMP-A-BOCK/COMP-CHANNEL": {
+      "kern_id": "BZ-001",
+      "datei": "beziehungen.json",
+      "art": "zusammengesetztes-subjekt"
+    },
+    "COMP-ARMS/COMP-KRUEMMLINGE": {
+      "kern_id": "BZ-002",
+      "datei": "beziehungen.json",
+      "art": "zusammengesetztes-subjekt"
+    },
+    "COMP-ARMS/COMP-RADSTATT": {
+      "kern_id": "BZ-003",
+      "datei": "beziehungen.json",
+      "art": "zusammengesetztes-subjekt"
+    },
+    "COMP-SHAFT/COMP-BEARINGS": {
+      "kern_id": "BZ-004",
+      "datei": "beziehungen.json",
+      "art": "zusammengesetztes-subjekt"
+    },
+    "COMP-WOOD-BANDS/COMP-PADDLES/COMP-KRUEMMLINGE": {
+      "kern_id": "BZ-005",
+      "datei": "beziehungen.json",
+      "art": "zusammengesetztes-subjekt"
+    },
+    "CLAIM-0001": {
+      "kern_id": "CLAIM-0001",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0002": {
+      "kern_id": "CLAIM-0002",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0003": {
+      "kern_id": "CLAIM-0003",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0004": {
+      "kern_id": "CLAIM-0004",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0005": {
+      "kern_id": "CLAIM-0005",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0006": {
+      "kern_id": "CLAIM-0006",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0007": {
+      "kern_id": "CLAIM-0007",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0008": {
+      "kern_id": "CLAIM-0008",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0009": {
+      "kern_id": "CLAIM-0009",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0010": {
+      "kern_id": "CLAIM-0010",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0011": {
+      "kern_id": "CLAIM-0011",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0012": {
+      "kern_id": "CLAIM-0012",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0013": {
+      "kern_id": "CLAIM-0013",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0014": {
+      "kern_id": "CLAIM-0014",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0015": {
+      "kern_id": "CLAIM-0015",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0016": {
+      "kern_id": "CLAIM-0016",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0017": {
+      "kern_id": "CLAIM-0017",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0018": {
+      "kern_id": "CLAIM-0018",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0019": {
+      "kern_id": "CLAIM-0019",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0020": {
+      "kern_id": "CLAIM-0020",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0021": {
+      "kern_id": "CLAIM-0021",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0022": {
+      "kern_id": "CLAIM-0022",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0023": {
+      "kern_id": "CLAIM-0023",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0024": {
+      "kern_id": "CLAIM-0024",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0025": {
+      "kern_id": "CLAIM-0025",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0026": {
+      "kern_id": "CLAIM-0026",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0027": {
+      "kern_id": "CLAIM-0027",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0028": {
+      "kern_id": "CLAIM-0028",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0029": {
+      "kern_id": "CLAIM-0029",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0030": {
+      "kern_id": "CLAIM-0030",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0031": {
+      "kern_id": "CLAIM-0031",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0032": {
+      "kern_id": "CLAIM-0032",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0033": {
+      "kern_id": "CLAIM-0033",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0034": {
+      "kern_id": "CLAIM-0034",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0035": {
+      "kern_id": "CLAIM-0035",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0036": {
+      "kern_id": "CLAIM-0036",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0037": {
+      "kern_id": "CLAIM-0037",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0038": {
+      "kern_id": "CLAIM-0038",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0039": {
+      "kern_id": "CLAIM-0039",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0040": {
+      "kern_id": "CLAIM-0040",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0041": {
+      "kern_id": "CLAIM-0041",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0042": {
+      "kern_id": "CLAIM-0042",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0043": {
+      "kern_id": "CLAIM-0043",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0044": {
+      "kern_id": "CLAIM-0044",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0045": {
+      "kern_id": "CLAIM-0045",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0046": {
+      "kern_id": "CLAIM-0046",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0047": {
+      "kern_id": "CLAIM-0047",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0048": {
+      "kern_id": "CLAIM-0048",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0049": {
+      "kern_id": "CLAIM-0049",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0050": {
+      "kern_id": "CLAIM-0050",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0051": {
+      "kern_id": "CLAIM-0051",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0052": {
+      "kern_id": "CLAIM-0052",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0053": {
+      "kern_id": "CLAIM-0053",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0054": {
+      "kern_id": "CLAIM-0054",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0055": {
+      "kern_id": "CLAIM-0055",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0056": {
+      "kern_id": "CLAIM-0056",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0057": {
+      "kern_id": "CLAIM-0057",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0058": {
+      "kern_id": "CLAIM-0058",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0059": {
+      "kern_id": "CLAIM-0059",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0060": {
+      "kern_id": "CLAIM-0060",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0061": {
+      "kern_id": "CLAIM-0061",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0062": {
+      "kern_id": "CLAIM-0062",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0063": {
+      "kern_id": "CLAIM-0063",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0064": {
+      "kern_id": "CLAIM-0064",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0065": {
+      "kern_id": "CLAIM-0065",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0066": {
+      "kern_id": "CLAIM-0066",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0067": {
+      "kern_id": "CLAIM-0067",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0068": {
+      "kern_id": "CLAIM-0068",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0069": {
+      "kern_id": "CLAIM-0069",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0070": {
+      "kern_id": "CLAIM-0070",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0071": {
+      "kern_id": "CLAIM-0071",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0072": {
+      "kern_id": "CLAIM-0072",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0073": {
+      "kern_id": "CLAIM-0073",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0074": {
+      "kern_id": "CLAIM-0074",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0075": {
+      "kern_id": "CLAIM-0075",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0076": {
+      "kern_id": "CLAIM-0076",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0077": {
+      "kern_id": "CLAIM-0077",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0078": {
+      "kern_id": "CLAIM-0078",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0079": {
+      "kern_id": "CLAIM-0079",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0080": {
+      "kern_id": "CLAIM-0080",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0081": {
+      "kern_id": "CLAIM-0081",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0082": {
+      "kern_id": "CLAIM-0082",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0083": {
+      "kern_id": "CLAIM-0083",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0084": {
+      "kern_id": "CLAIM-0084",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0085": {
+      "kern_id": "CLAIM-0085",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0086": {
+      "kern_id": "CLAIM-0086",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0087": {
+      "kern_id": "CLAIM-0087",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0088": {
+      "kern_id": "CLAIM-0088",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0089": {
+      "kern_id": "CLAIM-0089",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0090": {
+      "kern_id": "CLAIM-0090",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0091": {
+      "kern_id": "CLAIM-0091",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0092": {
+      "kern_id": "CLAIM-0092",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0093": {
+      "kern_id": "CLAIM-0093",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0094": {
+      "kern_id": "CLAIM-0094",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0095": {
+      "kern_id": "CLAIM-0095",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0096": {
+      "kern_id": "CLAIM-0096",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0097": {
+      "kern_id": "CLAIM-0097",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0098": {
+      "kern_id": "CLAIM-0098",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0099": {
+      "kern_id": "CLAIM-0099",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0100": {
+      "kern_id": "CLAIM-0100",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0101": {
+      "kern_id": "CLAIM-0101",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0102": {
+      "kern_id": "CLAIM-0102",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0103": {
+      "kern_id": "CLAIM-0103",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0104": {
+      "kern_id": "CLAIM-0104",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0105": {
+      "kern_id": "CLAIM-0105",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0106": {
+      "kern_id": "CLAIM-0106",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0107": {
+      "kern_id": "CLAIM-0107",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0108": {
+      "kern_id": "CLAIM-0108",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0109": {
+      "kern_id": "CLAIM-0109",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0110": {
+      "kern_id": "CLAIM-0110",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0111": {
+      "kern_id": "CLAIM-0111",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0112": {
+      "kern_id": "CLAIM-0112",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0113": {
+      "kern_id": "CLAIM-0113",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0114": {
+      "kern_id": "CLAIM-0114",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0115": {
+      "kern_id": "CLAIM-0115",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0116": {
+      "kern_id": "CLAIM-0116",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0117": {
+      "kern_id": "CLAIM-0117",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0118": {
+      "kern_id": "CLAIM-0118",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0119": {
+      "kern_id": "CLAIM-0119",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0120": {
+      "kern_id": "CLAIM-0120",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0121": {
+      "kern_id": "CLAIM-0121",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0122": {
+      "kern_id": "CLAIM-0122",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0123": {
+      "kern_id": "CLAIM-0123",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0124": {
+      "kern_id": "CLAIM-0124",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0125": {
+      "kern_id": "CLAIM-0125",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0126": {
+      "kern_id": "CLAIM-0126",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0127": {
+      "kern_id": "CLAIM-0127",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0128": {
+      "kern_id": "CLAIM-0128",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0129": {
+      "kern_id": "CLAIM-0129",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0130": {
+      "kern_id": "CLAIM-0130",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0131": {
+      "kern_id": "CLAIM-0131",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0132": {
+      "kern_id": "CLAIM-0132",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0133": {
+      "kern_id": "CLAIM-0133",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0134": {
+      "kern_id": "CLAIM-0134",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0135": {
+      "kern_id": "CLAIM-0135",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0136": {
+      "kern_id": "CLAIM-0136",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0137": {
+      "kern_id": "CLAIM-0137",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0138": {
+      "kern_id": "CLAIM-0138",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0139": {
+      "kern_id": "CLAIM-0139",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0140": {
+      "kern_id": "CLAIM-0140",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0141": {
+      "kern_id": "CLAIM-0141",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0142": {
+      "kern_id": "CLAIM-0142",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0143": {
+      "kern_id": "CLAIM-0143",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0144": {
+      "kern_id": "CLAIM-0144",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0145": {
+      "kern_id": "CLAIM-0145",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0146": {
+      "kern_id": "CLAIM-0146",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0147": {
+      "kern_id": "CLAIM-0147",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0148": {
+      "kern_id": "CLAIM-0148",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0149": {
+      "kern_id": "CLAIM-0149",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0150": {
+      "kern_id": "CLAIM-0150",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0151": {
+      "kern_id": "CLAIM-0151",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0152": {
+      "kern_id": "CLAIM-0152",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0153": {
+      "kern_id": "CLAIM-0153",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0154": {
+      "kern_id": "CLAIM-0154",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0155": {
+      "kern_id": "CLAIM-0155",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0156": {
+      "kern_id": "CLAIM-0156",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0157": {
+      "kern_id": "CLAIM-0157",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0158": {
+      "kern_id": "CLAIM-0158",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0159": {
+      "kern_id": "CLAIM-0159",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0160": {
+      "kern_id": "CLAIM-0160",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0161": {
+      "kern_id": "CLAIM-0161",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0162": {
+      "kern_id": "CLAIM-0162",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0163": {
+      "kern_id": "CLAIM-0163",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0164": {
+      "kern_id": "CLAIM-0164",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0165": {
+      "kern_id": "CLAIM-0165",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0166": {
+      "kern_id": "CLAIM-0166",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0167": {
+      "kern_id": "CLAIM-0167",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0168": {
+      "kern_id": "CLAIM-0168",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0169": {
+      "kern_id": "CLAIM-0169",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0170": {
+      "kern_id": "CLAIM-0170",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0171": {
+      "kern_id": "CLAIM-0171",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0172": {
+      "kern_id": "CLAIM-0172",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0173": {
+      "kern_id": "CLAIM-0173",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0174": {
+      "kern_id": "CLAIM-0174",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0175": {
+      "kern_id": "CLAIM-0175",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0176": {
+      "kern_id": "CLAIM-0176",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0177": {
+      "kern_id": "CLAIM-0177",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0178": {
+      "kern_id": "CLAIM-0178",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0179": {
+      "kern_id": "CLAIM-0179",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0180": {
+      "kern_id": "CLAIM-0180",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0181": {
+      "kern_id": "CLAIM-0181",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0182": {
+      "kern_id": "CLAIM-0182",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0183": {
+      "kern_id": "CLAIM-0183",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0184": {
+      "kern_id": "CLAIM-0184",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0185": {
+      "kern_id": "CLAIM-0185",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0186": {
+      "kern_id": "CLAIM-0186",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0187": {
+      "kern_id": "CLAIM-0187",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0188": {
+      "kern_id": "CLAIM-0188",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0189": {
+      "kern_id": "CLAIM-0189",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0190": {
+      "kern_id": "CLAIM-0190",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0191": {
+      "kern_id": "CLAIM-0191",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0192": {
+      "kern_id": "CLAIM-0192",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0193": {
+      "kern_id": "CLAIM-0193",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0194": {
+      "kern_id": "CLAIM-0194",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0195": {
+      "kern_id": "CLAIM-0195",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0196": {
+      "kern_id": "CLAIM-0196",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0197": {
+      "kern_id": "CLAIM-0197",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0198": {
+      "kern_id": "CLAIM-0198",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0199": {
+      "kern_id": "CLAIM-0199",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0200": {
+      "kern_id": "CLAIM-0200",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0201": {
+      "kern_id": "CLAIM-0201",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0202": {
+      "kern_id": "CLAIM-0202",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0203": {
+      "kern_id": "CLAIM-0203",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0204": {
+      "kern_id": "CLAIM-0204",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0205": {
+      "kern_id": "CLAIM-0205",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0206": {
+      "kern_id": "CLAIM-0206",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0207": {
+      "kern_id": "CLAIM-0207",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0208": {
+      "kern_id": "CLAIM-0208",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0209": {
+      "kern_id": "CLAIM-0209",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0210": {
+      "kern_id": "CLAIM-0210",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0211": {
+      "kern_id": "CLAIM-0211",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0212": {
+      "kern_id": "CLAIM-0212",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0213": {
+      "kern_id": "CLAIM-0213",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0214": {
+      "kern_id": "CLAIM-0214",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0215": {
+      "kern_id": "CLAIM-0215",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0216": {
+      "kern_id": "CLAIM-0216",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0217": {
+      "kern_id": "CLAIM-0217",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0218": {
+      "kern_id": "CLAIM-0218",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0219": {
+      "kern_id": "CLAIM-0219",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0220": {
+      "kern_id": "CLAIM-0220",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0221": {
+      "kern_id": "CLAIM-0221",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0222": {
+      "kern_id": "CLAIM-0222",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0223": {
+      "kern_id": "CLAIM-0223",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0224": {
+      "kern_id": "CLAIM-0224",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0225": {
+      "kern_id": "CLAIM-0225",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0226": {
+      "kern_id": "CLAIM-0226",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0227": {
+      "kern_id": "CLAIM-0227",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0228": {
+      "kern_id": "CLAIM-0228",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0229": {
+      "kern_id": "CLAIM-0229",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0230": {
+      "kern_id": "CLAIM-0230",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0231": {
+      "kern_id": "CLAIM-0231",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0232": {
+      "kern_id": "CLAIM-0232",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0233": {
+      "kern_id": "CLAIM-0233",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0234": {
+      "kern_id": "CLAIM-0234",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0235": {
+      "kern_id": "CLAIM-0235",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0236": {
+      "kern_id": "CLAIM-0236",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0237": {
+      "kern_id": "CLAIM-0237",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0238": {
+      "kern_id": "CLAIM-0238",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0239": {
+      "kern_id": "CLAIM-0239",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0240": {
+      "kern_id": "CLAIM-0240",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0241": {
+      "kern_id": "CLAIM-0241",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0242": {
+      "kern_id": "CLAIM-0242",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0243": {
+      "kern_id": "CLAIM-0243",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0244": {
+      "kern_id": "CLAIM-0244",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0245": {
+      "kern_id": "CLAIM-0245",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0246": {
+      "kern_id": "CLAIM-0246",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0247": {
+      "kern_id": "CLAIM-0247",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0248": {
+      "kern_id": "CLAIM-0248",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0249": {
+      "kern_id": "CLAIM-0249",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0250": {
+      "kern_id": "CLAIM-0250",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0251": {
+      "kern_id": "CLAIM-0251",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0252": {
+      "kern_id": "CLAIM-0252",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0253": {
+      "kern_id": "CLAIM-0253",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0254": {
+      "kern_id": "CLAIM-0254",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0255": {
+      "kern_id": "CLAIM-0255",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0256": {
+      "kern_id": "CLAIM-0256",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0257": {
+      "kern_id": "CLAIM-0257",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0258": {
+      "kern_id": "CLAIM-0258",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0259": {
+      "kern_id": "CLAIM-0259",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0260": {
+      "kern_id": "CLAIM-0260",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0261": {
+      "kern_id": "CLAIM-0261",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0262": {
+      "kern_id": "CLAIM-0262",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0263": {
+      "kern_id": "CLAIM-0263",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0264": {
+      "kern_id": "CLAIM-0264",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0265": {
+      "kern_id": "CLAIM-0265",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0266": {
+      "kern_id": "CLAIM-0266",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0267": {
+      "kern_id": "CLAIM-0267",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0268": {
+      "kern_id": "CLAIM-0268",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0269": {
+      "kern_id": "CLAIM-0269",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0270": {
+      "kern_id": "CLAIM-0270",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0271": {
+      "kern_id": "CLAIM-0271",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0272": {
+      "kern_id": "CLAIM-0272",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0273": {
+      "kern_id": "CLAIM-0273",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0274": {
+      "kern_id": "CLAIM-0274",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0275": {
+      "kern_id": "CLAIM-0275",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0276": {
+      "kern_id": "CLAIM-0276",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0277": {
+      "kern_id": "CLAIM-0277",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0278": {
+      "kern_id": "CLAIM-0278",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0279": {
+      "kern_id": "CLAIM-0279",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0280": {
+      "kern_id": "CLAIM-0280",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0281": {
+      "kern_id": "CLAIM-0281",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0282": {
+      "kern_id": "CLAIM-0282",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0283": {
+      "kern_id": "CLAIM-0283",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0284": {
+      "kern_id": "CLAIM-0284",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0285": {
+      "kern_id": "CLAIM-0285",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0286": {
+      "kern_id": "CLAIM-0286",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0287": {
+      "kern_id": "CLAIM-0287",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0288": {
+      "kern_id": "CLAIM-0288",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0289": {
+      "kern_id": "CLAIM-0289",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0290": {
+      "kern_id": "CLAIM-0290",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0291": {
+      "kern_id": "CLAIM-0291",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0292": {
+      "kern_id": "CLAIM-0292",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0293": {
+      "kern_id": "CLAIM-0293",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0294": {
+      "kern_id": "CLAIM-0294",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0295": {
+      "kern_id": "CLAIM-0295",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0296": {
+      "kern_id": "CLAIM-0296",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0297": {
+      "kern_id": "CLAIM-0297",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0298": {
+      "kern_id": "CLAIM-0298",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0299": {
+      "kern_id": "CLAIM-0299",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0300": {
+      "kern_id": "CLAIM-0300",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0301": {
+      "kern_id": "CLAIM-0301",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0302": {
+      "kern_id": "CLAIM-0302",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0303": {
+      "kern_id": "CLAIM-0303",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0304": {
+      "kern_id": "CLAIM-0304",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0305": {
+      "kern_id": "CLAIM-0305",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0306": {
+      "kern_id": "CLAIM-0306",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0307": {
+      "kern_id": "CLAIM-0307",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0308": {
+      "kern_id": "CLAIM-0308",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0309": {
+      "kern_id": "CLAIM-0309",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0310": {
+      "kern_id": "CLAIM-0310",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0311": {
+      "kern_id": "CLAIM-0311",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0312": {
+      "kern_id": "CLAIM-0312",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0313": {
+      "kern_id": "CLAIM-0313",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0314": {
+      "kern_id": "CLAIM-0314",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0315": {
+      "kern_id": "CLAIM-0315",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0316": {
+      "kern_id": "CLAIM-0316",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0317": {
+      "kern_id": "CLAIM-0317",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0318": {
+      "kern_id": "CLAIM-0318",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0319": {
+      "kern_id": "CLAIM-0319",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0320": {
+      "kern_id": "CLAIM-0320",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0321": {
+      "kern_id": "CLAIM-0321",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0322": {
+      "kern_id": "CLAIM-0322",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0323": {
+      "kern_id": "CLAIM-0323",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0324": {
+      "kern_id": "CLAIM-0324",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0325": {
+      "kern_id": "CLAIM-0325",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0326": {
+      "kern_id": "CLAIM-0326",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0327": {
+      "kern_id": "CLAIM-0327",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0328": {
+      "kern_id": "CLAIM-0328",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0329": {
+      "kern_id": "CLAIM-0329",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0330": {
+      "kern_id": "CLAIM-0330",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0331": {
+      "kern_id": "CLAIM-0331",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0332": {
+      "kern_id": "CLAIM-0332",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0333": {
+      "kern_id": "CLAIM-0333",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0334": {
+      "kern_id": "CLAIM-0334",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0335": {
+      "kern_id": "CLAIM-0335",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0356": {
+      "kern_id": "CLAIM-0356",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0357": {
+      "kern_id": "CLAIM-0357",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0358": {
+      "kern_id": "CLAIM-0358",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0359": {
+      "kern_id": "CLAIM-0359",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0360": {
+      "kern_id": "CLAIM-0360",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0361": {
+      "kern_id": "CLAIM-0361",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0362": {
+      "kern_id": "CLAIM-0362",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0363": {
+      "kern_id": "CLAIM-0363",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0364": {
+      "kern_id": "CLAIM-0364",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0365": {
+      "kern_id": "CLAIM-0365",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0366": {
+      "kern_id": "CLAIM-0366",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0367": {
+      "kern_id": "CLAIM-0367",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0368": {
+      "kern_id": "CLAIM-0368",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "CLAIM-0369": {
+      "kern_id": "CLAIM-0369",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-01": {
+      "kern_id": "TH-20261009-01",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-02": {
+      "kern_id": "TH-20261009-02",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-03": {
+      "kern_id": "TH-20261009-03",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-04": {
+      "kern_id": "TH-20261009-04",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-05": {
+      "kern_id": "TH-20261009-05",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-06": {
+      "kern_id": "TH-20261009-06",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-07": {
+      "kern_id": "TH-20261009-07",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-08": {
+      "kern_id": "TH-20261009-08",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-09": {
+      "kern_id": "TH-20261009-09",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-10": {
+      "kern_id": "TH-20261009-10",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-11": {
+      "kern_id": "TH-20261009-11",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-12": {
+      "kern_id": "TH-20261009-12",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-13": {
+      "kern_id": "TH-20261009-13",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-14": {
+      "kern_id": "TH-20261009-14",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-15": {
+      "kern_id": "TH-20261009-15",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-16": {
+      "kern_id": "TH-20261009-16",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-17": {
+      "kern_id": "TH-20261009-17",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-18": {
+      "kern_id": "TH-20261009-18",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-19": {
+      "kern_id": "TH-20261009-19",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-20": {
+      "kern_id": "TH-20261009-20",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-21": {
+      "kern_id": "TH-20261009-21",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-22": {
+      "kern_id": "TH-20261009-22",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-23": {
+      "kern_id": "TH-20261009-23",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-24": {
+      "kern_id": "TH-20261009-24",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-25": {
+      "kern_id": "TH-20261009-25",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-26": {
+      "kern_id": "TH-20261009-26",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-27": {
+      "kern_id": "TH-20261009-27",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-28": {
+      "kern_id": "TH-20261009-28",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-29": {
+      "kern_id": "TH-20261009-29",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-30": {
+      "kern_id": "TH-20261009-30",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-31": {
+      "kern_id": "TH-20261009-31",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-32": {
+      "kern_id": "TH-20261009-32",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-33": {
+      "kern_id": "TH-20261009-33",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-34": {
+      "kern_id": "TH-20261009-34",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-35": {
+      "kern_id": "TH-20261009-35",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-36": {
+      "kern_id": "TH-20261009-36",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-37": {
+      "kern_id": "TH-20261009-37",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-38": {
+      "kern_id": "TH-20261009-38",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "TH-20261009-39": {
+      "kern_id": "TH-20261009-39",
+      "datei": "angaben.json",
+      "art": "angabe"
+    },
+    "EXPERT-KUMPF-20261008-STAVE-COUNT": {
+      "kern_id": "CLAIM-0356",
+      "datei": "angaben.json",
+      "art": "zweitablage"
+    },
+    "EXPERT-KUMPF-20261008-BASE-COUNT": {
+      "kern_id": "CLAIM-0357",
+      "datei": "angaben.json",
+      "art": "zweitablage"
+    },
+    "EXPERT-KUMPF-20261008-BASE-GROOVE": {
+      "kern_id": "CLAIM-0358",
+      "datei": "angaben.json",
+      "art": "zweitablage"
+    },
+    "EXPERT-KUMPF-20261008-HOOP-COUNT": {
+      "kern_id": "CLAIM-0359",
+      "datei": "angaben.json",
+      "art": "zweitablage"
+    },
+    "EXPERT-KUMPF-20261008-HOOP-VARIANTS": {
+      "kern_id": "CLAIM-0360",
+      "datei": "angaben.json",
+      "art": "zweitablage"
+    },
+    "EXPERT-KUMPF-20261008-REFERENCE": {
+      "kern_id": "CLAIM-0361",
+      "datei": "angaben.json",
+      "art": "zweitablage"
+    },
+    "EXPERT-KUMPF-20261008-DRILLED-STAVES": {
+      "kern_id": "CLAIM-0362",
+      "datei": "angaben.json",
+      "art": "zweitablage"
+    },
+    "EXPERT-KUMPF-20261008-HOLES-PER-DRILLED-STAVE": {
+      "kern_id": "CLAIM-0363",
+      "datei": "angaben.json",
+      "art": "zweitablage"
+    },
+    "EXPERT-KUMPF-20261008-NAIL-ATTACHMENT": {
+      "kern_id": "CLAIM-0364",
+      "datei": "angaben.json",
+      "art": "zweitablage"
+    },
+    "EXPERT-KUMPF-20261008-NAIL-COUNT": {
+      "kern_id": "CLAIM-0365",
+      "datei": "angaben.json",
+      "art": "zweitablage"
+    },
+    "EXPERT-KUMPF-20261008-NAIL-LENGTH-PAIR": {
+      "kern_id": "CLAIM-0366",
+      "datei": "angaben.json",
+      "art": "zweitablage"
+    },
+    "EXPERT-KUMPF-20261008-VESSEL-OVERLAP": {
+      "kern_id": "CLAIM-0367",
+      "datei": "angaben.json",
+      "art": "zweitablage"
+    },
+    "EXPERT-KUMPF-20261008-NAIL-LENGTH-REASON": {
+      "kern_id": "CLAIM-0368",
+      "datei": "angaben.json",
+      "art": "zweitablage"
+    },
+    "EXPERT-PADDLE-20261008-ANGLE": {
+      "kern_id": "CLAIM-0369",
+      "datei": "angaben.json",
+      "art": "zweitablage"
+    },
+    "CLAIM-0336": {
+      "kern_id": "F-012",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0337": {
+      "kern_id": "F-012",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "GAP-02": {
+      "kern_id": "F-012",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0338": {
+      "kern_id": "F-013",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "GAP-01": {
+      "kern_id": "F-013",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0339": {
+      "kern_id": "F-014",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0340": {
+      "kern_id": "F-014",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "GAP-05": {
+      "kern_id": "F-014",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0341": {
+      "kern_id": "F-015",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "GAP-06": {
+      "kern_id": "F-015",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0342": {
+      "kern_id": "F-016",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "GAP-07": {
+      "kern_id": "F-016",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0343": {
+      "kern_id": "F-017",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "GAP-08": {
+      "kern_id": "F-017",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CONFLICT-01": {
+      "kern_id": "F-018",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0344": {
+      "kern_id": "F-018",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CONFLICT-02": {
+      "kern_id": "F-019",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0345": {
+      "kern_id": "F-019",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CONFLICT-03": {
+      "kern_id": "F-020",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0346": {
+      "kern_id": "F-020",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CONFLICT-04": {
+      "kern_id": "F-021",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0347": {
+      "kern_id": "F-021",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CONFLICT-05": {
+      "kern_id": "F-022",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0348": {
+      "kern_id": "F-022",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CONFLICT-06": {
+      "kern_id": "F-023",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0349": {
+      "kern_id": "F-023",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CONFLICT-07": {
+      "kern_id": "F-024",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0350": {
+      "kern_id": "F-024",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CONFLICT-08": {
+      "kern_id": "F-025",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0351": {
+      "kern_id": "F-025",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CONFLICT-09": {
+      "kern_id": "F-026",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0352": {
+      "kern_id": "F-026",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CONFLICT-10": {
+      "kern_id": "F-027",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0353": {
+      "kern_id": "F-027",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CONFLICT-11": {
+      "kern_id": "F-028",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0354": {
+      "kern_id": "F-028",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CONFLICT-12": {
+      "kern_id": "F-029",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CLAIM-0355": {
+      "kern_id": "F-029",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "CONFLICT-13": {
+      "kern_id": "F-030",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "GAP-03": {
+      "kern_id": "F-031",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "GAP-04": {
+      "kern_id": "F-032",
+      "datei": "fragen.json",
+      "art": "frage"
+    },
+    "GAP-09": {
+      "kern_id": "F-033",
+      "datei": "fragen.json",
+      "art": "frage"
+    }
+  }
+}
