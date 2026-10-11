@@ -15,8 +15,10 @@ Explizite Nutzervorgabe vom 11.10.2026: Für dieses Projekt sind keine GitHub Ac
 
 Gilt ab 11.10.2026 bis zum Abschluss von Phase 2 des [Ordnungsplans](docs/ordnung/PLAN.md). Aufhebung nur durch den Nutzer.
 
-- **Ein Register:** Fakten stehen ausschließlich in `data/geometry.claims.json`. Befunde, Pläne und Code verweisen mit Claim-ID darauf. Fachangaben nicht nur in Markdown oder Beitragsdateien ablegen.
-- **Menschen entscheiden:** Thorsten entscheidet über fachliche Gültigkeit, der Nutzer über Struktur. Agenten schlagen Einträge vor, setzen aber keine Gültigkeit („heute gültig“, `as_built_eligible`, Quellenautorität) eigenständig.
+- **Ein Kern:** Fakten stehen ausschließlich im Wissenskern unter [`kern/`](kern/README.md). Befunde, Pläne und Code verweisen mit IDs darauf. Fachangaben nicht nur in Markdown oder Beitragsdateien ablegen.
+- **Altdaten eingefroren:** `data/geometry.claims.json`, `data/components.json`, `data/conflicts.json`, `data/knowledge-gaps.json` und `evidence/contributions/` nicht mehr ändern; sie bleiben nur bis zur Umstellung des Modells (Phase 3) für den bestehenden Code erhalten.
+- **Vor jedem Commit:** `python scripts/kern/pruefe_kern.py` und `python -m unittest tests/test_kern.py` müssen grün sein. Unbekannte Wörter mit `--begriff` nachschlagen; neue Begriffe ins Glossar `kern/begriffe.json`.
+- **Menschen entscheiden:** Thorsten entscheidet über fachliche Gültigkeit, der Nutzer über Struktur. Agenten schlagen Einträge vor (Gültigkeit `offen`), setzen aber nie `bestaetigt`, `verworfen` oder Quellenautorität eigenständig.
 - **Keine neuen Wahrheitsschichten:** keine neuen Schemas, Steuerungs- oder Referenzebenen, Iterationsordner oder parallelen Faktenablagen anlegen.
 - **Kein Modellumbau:** Geometrie, Kalibrierung und Modellparameter bleiben eingefroren, bis Phase 2 abgeschlossen ist.
 - **Nichts still löschen:** Überholte Angaben bleiben mit Verweis auf den Nachfolger erhalten.

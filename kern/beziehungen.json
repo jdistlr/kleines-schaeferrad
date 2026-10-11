@@ -1,0 +1,227 @@
+{
+  "schema": "ks-kern-beziehungen/v1",
+  "stand": "2026-10-11",
+  "hinweis": "Handgepflegt seit der Migration vom 11.10.2026 (scripts/kern/migriere_v1.py).",
+  "beziehungen": [
+    {
+      "id": "BZ-001",
+      "von": "COMP-CHANNEL",
+      "art": "liegt_auf",
+      "zu": "COMP-A-BOCK",
+      "ueber": [],
+      "gueltigkeit": "offen",
+      "quellen": [],
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "COMP-A-BOCK/COMP-CHANNEL"
+      }
+    },
+    {
+      "id": "BZ-002",
+      "von": "COMP-ARMS",
+      "art": "steckt_in",
+      "zu": "COMP-KRUEMMLINGE",
+      "ueber": [],
+      "gueltigkeit": "offen",
+      "quellen": [],
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "COMP-ARMS/COMP-KRUEMMLINGE"
+      }
+    },
+    {
+      "id": "BZ-003",
+      "von": "COMP-ARMS",
+      "art": "abstand_zu",
+      "zu": "COMP-RADSTATT",
+      "ueber": [],
+      "gueltigkeit": "offen",
+      "quellen": [],
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "COMP-ARMS/COMP-RADSTATT"
+      }
+    },
+    {
+      "id": "BZ-004",
+      "von": "COMP-SHAFT",
+      "art": "lagert_in",
+      "zu": "COMP-BEARINGS",
+      "ueber": [],
+      "gueltigkeit": "offen",
+      "quellen": [],
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "COMP-SHAFT/COMP-BEARINGS"
+      }
+    },
+    {
+      "id": "BZ-005",
+      "von": "COMP-WOOD-BANDS",
+      "art": "befestigt",
+      "zu": "COMP-PADDLES",
+      "ueber": [
+        "COMP-KRUEMMLINGE"
+      ],
+      "gueltigkeit": "offen",
+      "quellen": [],
+      "hinweis": null,
+      "herkunft": {
+        "datei": "data/geometry.claims.json",
+        "id": "COMP-WOOD-BANDS/COMP-PADDLES/COMP-KRUEMMLINGE"
+      }
+    },
+    {
+      "id": "BZ-006",
+      "von": "COMP-RINNE",
+      "art": "liegt_auf",
+      "zu": "COMP-TROUGH-SUPPORT",
+      "ueber": [],
+      "gueltigkeit": "offen",
+      "quellen": [
+        "Q-AUSSAGE-20261011-TROG"
+      ],
+      "hinweis": "Rinne 1 liegt auf dem oberen Querbalken des landseitigen Lagerbocks; Identität siehe F-004.",
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "BZ-007",
+      "von": "COMP-TROUGH",
+      "art": "liegt_auf",
+      "zu": "COMP-RINNE",
+      "ueber": [],
+      "gueltigkeit": "offen",
+      "quellen": [
+        "Q-AUSSAGE-20261011-TROG"
+      ],
+      "hinweis": "Schöpftrog liegt im Anschlussbereich auf der Rinne.",
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "BZ-008",
+      "von": "COMP-RINNE",
+      "art": "ueberlappt",
+      "zu": "COMP-RINNE-2",
+      "ueber": [],
+      "gueltigkeit": "offen",
+      "quellen": [
+        "Q-AUSSAGE-20261011-RINNE"
+      ],
+      "hinweis": "Überlappungslänge offen (F-006). Präzisiert den „Stoß“ in TH-20261009-31.",
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "BZ-009",
+      "von": "COMP-ARMS",
+      "art": "verschraenkt_mit",
+      "zu": "COMP-ARMS",
+      "ueber": [],
+      "gueltigkeit": "offen",
+      "quellen": [
+        "Q-AUSSAGE-20261011-ARME"
+      ],
+      "hinweis": "Die drei Arme einer Armzone greifen über Aussparungen ineinander; siehe F-005.",
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "BZ-010",
+      "von": "COMP-ARMS",
+      "art": "steckt_in",
+      "zu": "COMP-SHAFT",
+      "ueber": [],
+      "gueltigkeit": "offen",
+      "quellen": [
+        "Q-AUSSAGE-20261011-WELLENKEIL"
+      ],
+      "hinweis": null,
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "BZ-011",
+      "von": "COMP-SHAFT-WEDGE",
+      "art": "verkeilt",
+      "zu": "COMP-ARMS",
+      "ueber": [
+        "COMP-SHAFT"
+      ],
+      "gueltigkeit": "offen",
+      "quellen": [
+        "Q-AUSSAGE-20261011-WELLENKEIL"
+      ],
+      "hinweis": "Zusammen mit zusätzlichen äußeren Keilen; Lage und Anzahl offen.",
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "BZ-012",
+      "von": "COMP-RIM-JOINT-WEDGE",
+      "art": "verkeilt",
+      "zu": "COMP-KRUEMMLINGE",
+      "ueber": [],
+      "gueltigkeit": "offen",
+      "quellen": [
+        "Q-AUSSAGE-20261011-KRUEMMLINGE"
+      ],
+      "hinweis": null,
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "BZ-013",
+      "von": "COMP-SCHETTERNBRETTER",
+      "art": "verbindet",
+      "zu": "COMP-KRUEMMLINGE",
+      "ueber": [],
+      "gueltigkeit": "offen",
+      "quellen": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "hinweis": "Aus TH-20261009-04/05: je Stoß und Seite ein Schetternbrett, vier Schetternägel.",
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    },
+    {
+      "id": "BZ-014",
+      "von": "COMP-KUMPF-NAILS",
+      "art": "befestigt",
+      "zu": "COMP-KUEMPFE",
+      "ueber": [
+        "COMP-RIM-LAND"
+      ],
+      "gueltigkeit": "offen",
+      "quellen": [
+        "NARRATIVE-TH-KUMPF-20261008-02"
+      ],
+      "hinweis": "Aus CLAIM-0364.",
+      "herkunft": {
+        "datei": "Nachtrag 11.10.2026",
+        "id": null
+      }
+    }
+  ]
+}

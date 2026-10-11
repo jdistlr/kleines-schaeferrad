@@ -15,7 +15,8 @@
     "prepare:model": "node scripts/export-reconstruction.mjs",
     "test:reconstruction": "node --test tests/mechanics.test.mjs tests/reconstruction-geometry.test.mjs && node scripts/audit-candidates.mjs",
     "test:calibration": "node --test tests/calibration.test.mjs && node scripts/audit-calibration.mjs && node scripts/audit-calibration-contacts.mjs && node scripts/audit-calibration-stationary.mjs",
-    "prepare:calibration": "node scripts/export-calibration.mjs && python scripts/render-calibration.py canonical technical comparisons animation && python scripts/calibration-source-plates.py && node scripts/package-calibration.mjs"
+    "prepare:calibration": "node scripts/export-calibration.mjs && python scripts/render-calibration.py canonical technical comparisons animation && python scripts/calibration-source-plates.py && node scripts/package-calibration.mjs",
+    "test:kern": "python scripts/kern/pruefe_kern.py && python -m unittest tests/test_kern.py"
   },
   "dependencies": {
     "@fontsource-variable/manrope": "5.3.0",

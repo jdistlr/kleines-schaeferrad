@@ -1,0 +1,140 @@
+{
+  "schema": "ks-kern-arbeitsschritte/v1",
+  "stand": "2026-10-11",
+  "hinweis": "Handgepflegt seit der Migration vom 11.10.2026 (scripts/kern/migriere_v1.py).",
+  "arbeitsschritte": [
+    {
+      "id": "AS-AUF-01",
+      "phase": "aufbau",
+      "name": "Arme in die Welle stecken und miteinander verschränken",
+      "bauteile": [
+        "COMP-ARMS",
+        "COMP-SHAFT"
+      ],
+      "werkzeuge": [],
+      "nach": [],
+      "personen": null,
+      "grundlage": "muendlich",
+      "quellen": [
+        "Q-AUSSAGE-20261011-ARME",
+        "Q-AUSSAGE-20261011-WELLENKEIL"
+      ],
+      "gueltigkeit": "offen",
+      "hinweis": "Reihenfolge nur dort gesetzt, wo sie ausdrücklich genannt wurde; siehe Frage zur Auf-/Abbaureihenfolge."
+    },
+    {
+      "id": "AS-AUF-02",
+      "phase": "aufbau",
+      "name": "Arme mit Wellenkeil und äußeren Keilen sichern",
+      "bauteile": [
+        "COMP-SHAFT-WEDGE",
+        "COMP-ARMS"
+      ],
+      "werkzeuge": [],
+      "nach": [
+        "AS-AUF-01"
+      ],
+      "personen": null,
+      "grundlage": "muendlich",
+      "quellen": [
+        "Q-AUSSAGE-20261011-WELLENKEIL"
+      ],
+      "gueltigkeit": "offen",
+      "hinweis": "Reihenfolge nur dort gesetzt, wo sie ausdrücklich genannt wurde; siehe Frage zur Auf-/Abbaureihenfolge."
+    },
+    {
+      "id": "AS-AUF-03",
+      "phase": "aufbau",
+      "name": "Krümmlinge mittig auf die Armenden setzen und Armsitz verkeilen",
+      "bauteile": [
+        "COMP-KRUEMMLINGE",
+        "COMP-ARMS"
+      ],
+      "werkzeuge": [],
+      "nach": [],
+      "personen": null,
+      "grundlage": "muendlich",
+      "quellen": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "gueltigkeit": "offen",
+      "hinweis": "Reihenfolge nur dort gesetzt, wo sie ausdrücklich genannt wurde; siehe Frage zur Auf-/Abbaureihenfolge."
+    },
+    {
+      "id": "AS-AUF-04",
+      "phase": "aufbau",
+      "name": "Krümmlingstöße mit Schetternbrettern und Schetternägeln verbinden, Gegenseite verkeilen",
+      "bauteile": [
+        "COMP-SCHETTERNBRETTER",
+        "COMP-KRUEMMLINGE"
+      ],
+      "werkzeuge": [],
+      "nach": [],
+      "personen": null,
+      "grundlage": "muendlich",
+      "quellen": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "gueltigkeit": "offen",
+      "hinweis": "Reihenfolge nur dort gesetzt, wo sie ausdrücklich genannt wurde; siehe Frage zur Auf-/Abbaureihenfolge."
+    },
+    {
+      "id": "AS-AUF-05",
+      "phase": "aufbau",
+      "name": "Stoßspalte mit Stoßkeilen schließen und den Kranz verspannen",
+      "bauteile": [
+        "COMP-RIM-JOINT-WEDGE",
+        "COMP-KRUEMMLINGE"
+      ],
+      "werkzeuge": [],
+      "nach": [
+        "AS-AUF-04"
+      ],
+      "personen": null,
+      "grundlage": "muendlich",
+      "quellen": [
+        "Q-AUSSAGE-20261011-KRUEMMLINGE"
+      ],
+      "gueltigkeit": "offen",
+      "hinweis": "Reihenfolge nur dort gesetzt, wo sie ausdrücklich genannt wurde; siehe Frage zur Auf-/Abbaureihenfolge."
+    },
+    {
+      "id": "AS-AUF-06",
+      "phase": "aufbau",
+      "name": "Kümpfe mit langem und kurzem Kumpfnagel am landseitigen Kranz befestigen",
+      "bauteile": [
+        "COMP-KUEMPFE",
+        "COMP-KUMPF-NAILS",
+        "COMP-RIM-LAND"
+      ],
+      "werkzeuge": [],
+      "nach": [],
+      "personen": null,
+      "grundlage": "muendlich",
+      "quellen": [
+        "NARRATIVE-TH-KUMPF-20261008-02"
+      ],
+      "gueltigkeit": "offen",
+      "hinweis": "Reihenfolge nur dort gesetzt, wo sie ausdrücklich genannt wurde; siehe Frage zur Auf-/Abbaureihenfolge."
+    },
+    {
+      "id": "AS-AUF-07",
+      "phase": "aufbau",
+      "name": "Flügelbretter mit Holzbändern über den Krümmling befestigen und hinten verkeilen",
+      "bauteile": [
+        "COMP-PADDLES",
+        "COMP-WOOD-BANDS",
+        "COMP-KRUEMMLINGE"
+      ],
+      "werkzeuge": [],
+      "nach": [],
+      "personen": null,
+      "grundlage": "muendlich",
+      "quellen": [
+        "NARRATIVE-TH-CONSTRUCTION-20261009"
+      ],
+      "gueltigkeit": "offen",
+      "hinweis": "Reihenfolge nur dort gesetzt, wo sie ausdrücklich genannt wurde; siehe Frage zur Auf-/Abbaureihenfolge."
+    }
+  ]
+}

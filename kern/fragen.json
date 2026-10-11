@@ -1,0 +1,723 @@
+{
+  "schema": "ks-kern-fragen/v1",
+  "stand": "2026-10-11",
+  "hinweis": "Handgepflegt seit der Migration vom 11.10.2026 (scripts/kern/migriere_v1.py).",
+  "fragen": [
+    {
+      "id": "F-001",
+      "frage": "Wie groß ist die lichte Weite der Radstadt parallel zum Ufer wirklich – 4,40 m (Aussage) oder 5,25 m (Zeichnung)? Welche Innenkanten, auf welcher Höhe?",
+      "betrifft": [
+        "COMP-RADSTATT",
+        "AN-20261011-04"
+      ],
+      "blockiert": [
+        "COMP-RADSTATT",
+        "COMP-WHEEL"
+      ],
+      "haengt_ab_von": [
+        "F-002",
+        "F-003"
+      ],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": "Drehkreis mit Flügelbrettern 4,66–4,96 m. 4,40 m genügen nur, wenn die Balken mindestens 0,77–1,14 m über oder unter der Achse liegen. Herleitung: evidence/raw/Radstadt/MASSABGLEICH.md.",
+      "herkunft": []
+    },
+    {
+      "id": "F-002",
+      "frage": "Wie weit stehen die Flügelbretter radial über die Kranz-Außenkante hinaus?",
+      "betrifft": [
+        "COMP-PADDLES",
+        "COMP-RIMS"
+      ],
+      "blockiert": [
+        "COMP-PADDLES"
+      ],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": "Bestimmt den Drehkreis.",
+      "herkunft": []
+    },
+    {
+      "id": "F-003",
+      "frage": "Wie hoch liegt die Wellenmitte über der Oberkante der Radstadt-Balken, und liegt die Achse mittig?",
+      "betrifft": [
+        "COMP-SHAFT",
+        "COMP-RADSTATT",
+        "COMP-BEARINGS"
+      ],
+      "blockiert": [
+        "COMP-WHEEL"
+      ],
+      "haengt_ab_von": [
+        "F-015"
+      ],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": []
+    },
+    {
+      "id": "F-004",
+      "frage": "Ist der „Bock am Rad“ (14 × 14 cm, Querbalken 1,20 m) derselbe Bauteil wie der landseitige Lagerbock der Radstadt?",
+      "betrifft": [
+        "COMP-TROUGH-SUPPORT",
+        "COMP-BEARING-STANDS"
+      ],
+      "blockiert": [
+        "COMP-TROUGH-SUPPORT"
+      ],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": "Befund Auffangtrog nennt dieselben Maße für den landseitigen Lagerbock.",
+      "herkunft": []
+    },
+    {
+      "id": "F-005",
+      "frage": "Wie genau greifen die drei Arme einer Armzone ineinander? Das Modell-Audit verlangt bisher, dass sich kreuzende Arme kollidieren.",
+      "betrifft": [
+        "COMP-ARMS",
+        "COMP-SHAFT"
+      ],
+      "blockiert": [
+        "COMP-ARMS"
+      ],
+      "haengt_ab_von": [
+        "F-012"
+      ],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": "scripts/audit-candidates.mjs schlägt deshalb seit ITER-003 fehl. Testannahme erst nach dieser Antwort ändern.",
+      "herkunft": []
+    },
+    {
+      "id": "F-006",
+      "frage": "Wie lang ist Rinne 2, und wie lang ist die Überlappung der beiden Rinnenteile?",
+      "betrifft": [
+        "COMP-RINNE",
+        "COMP-RINNE-2",
+        "COMP-A-BOCK"
+      ],
+      "blockiert": [
+        "COMP-CHANNEL",
+        "COMP-A-BOCK"
+      ],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": []
+    },
+    {
+      "id": "F-007",
+      "frage": "Wer hat die in den Befunden vom 11.10.2026 als „Nutzer“ bezeichneten Angaben gemacht?",
+      "betrifft": [
+        "AN-20261011-01",
+        "AN-20261011-02",
+        "AN-20261011-04",
+        "AN-20261011-05",
+        "AN-20261011-12"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-JOHANNES",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": "Ohne Person kann keine dieser Angaben bestätigt werden.",
+      "herkunft": []
+    },
+    {
+      "id": "F-008",
+      "frage": "Gelten die Skizzen von Welle (IMG_6816/6817), Schöpftrog (IMG_6828/6829) und Rinne 1 (IMG_6830) für das heutige Rad?",
+      "betrifft": [
+        "PHOTO-6816",
+        "PHOTO-6817",
+        "PHOTO-6828",
+        "PHOTO-6829",
+        "PHOTO-6830"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": "Bestätigung ist in Befunden und evidence-authority.json vermerkt, aber ohne eindeutige Person.",
+      "herkunft": []
+    },
+    {
+      "id": "F-009",
+      "frage": "Zu welchen Bauteilen gehören die Holzlisten-Posten Anwelle, Bänder, Nägel, Fangbaum, Laufsteg, Zwergrinne, Zwergsteg, Landrinne, Pfosten, Rüst- und Landestange und Flügel-Versatz?",
+      "betrifft": [
+        "HL-Anwelle",
+        "HL-Bänder",
+        "HL-Nägel",
+        "HL-Fangbaum",
+        "HL-Laufsteg"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": []
+    },
+    {
+      "id": "F-010",
+      "frage": "Die Angabe „Flügelbrett 90°“ steht doppelt (CLAIM-0369, TH-20261009-06). Worauf genau beziehen sich die 90°?",
+      "betrifft": [
+        "CLAIM-0369",
+        "TH-20261009-06"
+      ],
+      "blockiert": [
+        "COMP-PADDLES"
+      ],
+      "haengt_ab_von": [
+        "F-033"
+      ],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": []
+    },
+    {
+      "id": "F-011",
+      "frage": "Welche Werkzeuge werden beim Auf- und Abbau verwendet, und für welchen Schritt?",
+      "betrifft": [
+        "COMP-WHEEL"
+      ],
+      "blockiert": [
+        "AS-AUF-01",
+        "AS-AUF-02",
+        "AS-AUF-03",
+        "AS-AUF-04",
+        "AS-AUF-05",
+        "AS-AUF-06"
+      ],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": "Kern der Überlieferung: alte Werkzeuge sind der Stolz des Vereins.",
+      "herkunft": []
+    },
+    {
+      "id": "F-012",
+      "frage": "Wie sehen die Armöffnungen der Welle innen aus, und welche Arme gehören in welcher Reihenfolge zusammen?",
+      "betrifft": [
+        "COMP-ARMS",
+        "COMP-SHAFT"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CLAIM-0336",
+        "CLAIM-0337",
+        "GAP-02"
+      ]
+    },
+    {
+      "id": "F-013",
+      "frage": "Wo liegen die beiden Kranzebenen und die festen Bezugspunkte des Rades im Raum?",
+      "betrifft": [
+        "COMP-RIMS"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": "Teilantwort: lichter Kranzabstand 1,80 m (TH-20261009-25).",
+      "herkunft": [
+        "CLAIM-0338",
+        "GAP-01"
+      ]
+    },
+    {
+      "id": "F-014",
+      "frage": "Wie viele Kümpfe und Flügelbretter hat das Rad, und in welcher Folge sitzen sie am Umfang?",
+      "betrifft": [
+        "COMP-KUEMPFE",
+        "COMP-PADDLES"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CLAIM-0339",
+        "CLAIM-0340",
+        "GAP-05"
+      ]
+    },
+    {
+      "id": "F-015",
+      "frage": "Wo liegen die Lagermitten, und wie liegt der Dorn im Lager auf?",
+      "betrifft": [
+        "COMP-BEARINGS"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CLAIM-0341",
+        "GAP-06"
+      ]
+    },
+    {
+      "id": "F-016",
+      "frage": "Wo steht das Wasser im Betrieb relativ zur Achse, und wie liegen Trog und Rinne dazu?",
+      "betrifft": [
+        "ANLAGE"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CLAIM-0342",
+        "GAP-07"
+      ]
+    },
+    {
+      "id": "F-017",
+      "frage": "In welcher Reihenfolge wird das Rad abgebaut und aufgebaut?",
+      "betrifft": [
+        "ANLAGE"
+      ],
+      "blockiert": [
+        "AS-AUF-01",
+        "AS-AUF-02",
+        "AS-AUF-03",
+        "AS-AUF-04",
+        "AS-AUF-05",
+        "AS-AUF-06",
+        "AS-AUF-07"
+      ],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CLAIM-0343",
+        "GAP-08"
+      ]
+    },
+    {
+      "id": "F-018",
+      "frage": "Widerspruch klären (drawing-vs-drawing): 24 vs 22 mm Dauben; Nutdurchmesser 244/264 vs 248/268",
+      "betrifft": [
+        "COMP-KUMPF-BASE",
+        "COMP-KUMPF-STAVES",
+        "CLAIM-0040",
+        "CLAIM-0041",
+        "CLAIM-0042",
+        "CLAIM-0043",
+        "CLAIM-0044",
+        "CLAIM-0045",
+        "CLAIM-0046",
+        "CLAIM-0047"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CONFLICT-01",
+        "CLAIM-0344"
+      ]
+    },
+    {
+      "id": "F-019",
+      "frage": "Widerspruch klären (drawing-vs-drawing): Historische Ringlängen 780/875/968 vs 784/880/972: Fachauskunft bestätigt gefertigte Maßvarianten; Zuordnung der Zahlenreihe zum fotografierten Referenz-Kumpf bleibt offen.",
+      "betrifft": [
+        "COMP-FASTENERS",
+        "COMP-KUMPF-HOOPS",
+        "CLAIM-0032",
+        "CLAIM-0033",
+        "CLAIM-0034",
+        "CLAIM-0035",
+        "CLAIM-0036",
+        "CLAIM-0037",
+        "CLAIM-0039",
+        "CLAIM-0225",
+        "CLAIM-0226",
+        "CLAIM-0227",
+        "CLAIM-0228",
+        "CLAIM-0229"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CONFLICT-02",
+        "CLAIM-0345"
+      ]
+    },
+    {
+      "id": "F-020",
+      "frage": "Widerspruch klären (drawing-vs-drawing): 370/37 shaft sketch vs generic stock 4.50 m/50 cm, installation 40 cm",
+      "betrifft": [
+        "COMP-SHAFT",
+        "CLAIM-0001",
+        "CLAIM-0002",
+        "CLAIM-0003",
+        "CLAIM-0004",
+        "CLAIM-0005",
+        "CLAIM-0006",
+        "CLAIM-0007",
+        "CLAIM-0008",
+        "CLAIM-0009",
+        "CLAIM-0057",
+        "CLAIM-0058",
+        "CLAIM-0059"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CONFLICT-03",
+        "CLAIM-0346"
+      ]
+    },
+    {
+      "id": "F-021",
+      "frage": "Widerspruch klären (drawing-vs-drawing): 14 cm Krümmling-Breite vs radial ring difference 15 (213−198)",
+      "betrifft": [
+        "COMP-RIMS",
+        "CLAIM-0234",
+        "CLAIM-0235",
+        "CLAIM-0236",
+        "CLAIM-0237",
+        "CLAIM-0238",
+        "CLAIM-0239",
+        "CLAIM-0240",
+        "CLAIM-0241",
+        "CLAIM-0242",
+        "CLAIM-0243",
+        "CLAIM-0244",
+        "CLAIM-0245"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": "Vermutlich kein Widerspruch: 14 cm ist die axiale Breite (entlang der Welle), 15 cm die radiale Kranzhöhe (213 − 198). Siehe evidence/raw/Radstadt/MASSABGLEICH.md; Bestätigung offen.",
+      "herkunft": [
+        "CONFLICT-04",
+        "CLAIM-0347"
+      ]
+    },
+    {
+      "id": "F-022",
+      "frage": "Widerspruch klären (drawing-vs-current): historical straight/slanted numbers and three mortise passages cannot be assigned to all current arms",
+      "betrifft": [
+        "COMP-ARMS",
+        "COMP-SHAFT",
+        "CLAIM-0001",
+        "CLAIM-0002",
+        "CLAIM-0003",
+        "CLAIM-0004",
+        "CLAIM-0005",
+        "CLAIM-0006",
+        "CLAIM-0007",
+        "CLAIM-0008",
+        "CLAIM-0009",
+        "CLAIM-0154",
+        "CLAIM-0155",
+        "CLAIM-0156"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CONFLICT-05",
+        "CLAIM-0348"
+      ]
+    },
+    {
+      "id": "F-023",
+      "frage": "Widerspruch klären (drawing-vs-current): Fastener terminology/functions were mixed. Kumpfnägel are now a distinct expert-confirmed wooden fastener family for Kumpf→Krümmling attachment; other wedges/bands remain separate.",
+      "betrifft": [
+        "COMP-FASTENERS",
+        "COMP-KUMPF-HOOPS",
+        "CLAIM-0048",
+        "CLAIM-0049",
+        "CLAIM-0050",
+        "CLAIM-0051",
+        "CLAIM-0052",
+        "CLAIM-0053",
+        "CLAIM-0054",
+        "CLAIM-0055",
+        "CLAIM-0056",
+        "CLAIM-0255",
+        "CLAIM-0256",
+        "CLAIM-0259"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CONFLICT-06",
+        "CLAIM-0349"
+      ]
+    },
+    {
+      "id": "F-024",
+      "frage": "Widerspruch klären (drawing-vs-current): published 24 vessels/24 paddles not fully countable in current views",
+      "betrifft": [
+        "COMP-KUEMPFE",
+        "COMP-PADDLES",
+        "CLAIM-0274",
+        "CLAIM-0275",
+        "CLAIM-0282",
+        "CLAIM-0283",
+        "CLAIM-0329",
+        "CLAIM-0330",
+        "CLAIM-0331"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CONFLICT-07",
+        "CLAIM-0350"
+      ]
+    },
+    {
+      "id": "F-025",
+      "frage": "Widerspruch klären (photo-vs-scan): photo-visible surfaces absent/discontinuous in capture",
+      "betrifft": [
+        "COMP-ARMS",
+        "COMP-KUEMPFE",
+        "COMP-RIMS",
+        "CLAIM-0258",
+        "CLAIM-0260",
+        "CLAIM-0262",
+        "CLAIM-0273",
+        "CLAIM-0274",
+        "CLAIM-0280"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CONFLICT-08",
+        "CLAIM-0351"
+      ]
+    },
+    {
+      "id": "F-026",
+      "frage": "Widerspruch klären (scan-vs-known-dimensions): drawing interpreted diameter 4.26/3.96 m vs full-cloud extent 6.03/7.03/4.50 export units",
+      "betrifft": [
+        "COMP-RIMS",
+        "CLAIM-0234",
+        "CLAIM-0235",
+        "CLAIM-0236",
+        "CLAIM-0237",
+        "CLAIM-0238",
+        "CLAIM-0239",
+        "CLAIM-0240",
+        "CLAIM-0241",
+        "CLAIM-0242",
+        "CLAIM-0243",
+        "CLAIM-0244",
+        "CLAIM-0245"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CONFLICT-09",
+        "CLAIM-0352"
+      ]
+    },
+    {
+      "id": "F-027",
+      "frage": "Widerspruch klären (scan-vs-scan): different XYZ bounds and vertex sets",
+      "betrifft": [
+        "SCAN-20261007-01-PLY",
+        "CLAIM-0324"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CONFLICT-10",
+        "CLAIM-0353"
+      ]
+    },
+    {
+      "id": "F-028",
+      "frage": "Widerspruch klären (drawing-vs-drawing): industrial/contact and board templates previously catalogued as Kumpf fasteners / shaft",
+      "betrifft": [
+        "REF-BOARD",
+        "REF-CONTACTSTRIPS",
+        "CLAIM-0189",
+        "CLAIM-0217",
+        "CLAIM-0218",
+        "CLAIM-0219",
+        "CLAIM-0220",
+        "CLAIM-0221",
+        "CLAIM-0222",
+        "CLAIM-0223",
+        "CLAIM-0224"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CONFLICT-11",
+        "CLAIM-0354"
+      ]
+    },
+    {
+      "id": "F-029",
+      "frage": "Widerspruch klären (drawing-vs-drawing): 250 overall dimension and parenthesized 244 coexist",
+      "betrifft": [
+        "COMP-TROUGH",
+        "CLAIM-0130",
+        "CLAIM-0131",
+        "CLAIM-0132",
+        "CLAIM-0133",
+        "CLAIM-0134",
+        "CLAIM-0135",
+        "CLAIM-0136",
+        "CLAIM-0137",
+        "CLAIM-0138",
+        "CLAIM-0139",
+        "CLAIM-0140",
+        "CLAIM-0141"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": "Mögliche Lesart (ungeprüft): 180 cm innere Bodenlänge + 2 × 30 cm Anstieg bei 45° + 2 × 3 cm × √2 schräge Brettstärke ≈ 248,5 cm ≈ 250 cm außen oben.",
+      "herkunft": [
+        "CONFLICT-12",
+        "CLAIM-0355"
+      ]
+    },
+    {
+      "id": "F-030",
+      "frage": "Widerspruch klären (expert-vs-model): Fachkenner korrigiert sichtbare Schaufelstellung auf 90° zum Rad; aktueller Code ist formal senkrecht zur Kranzebene, kann aber lokale radial/tangentiale Anstellung, Position oder Anschluss falsch darstellen.",
+      "betrifft": [
+        "COMP-PADDLES",
+        "CLAIM-0369",
+        "CLAIM-0261",
+        "CLAIM-0291",
+        "CLAIM-0298"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-THORSTEN",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": null,
+      "herkunft": [
+        "CONFLICT-13"
+      ]
+    },
+    {
+      "id": "F-031",
+      "frage": "Aufnahmelücke: Krümmlingstöße und reale Ringform",
+      "betrifft": [
+        "COMP-WHEEL"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-JOHANNES",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": "Für die Zeit vor dem Abbau formuliert; das Rad wurde am 10.10.2026 abgebaut. Prüfen, ob die Aufnahme vorliegt, sonst beim Frühjahrsaufbau nachholen. Ursprünglich: Jeden Stoß in Einbaupose von beiden Ringseiten und radial fotografieren, L/W und laufende physische IDs markieren. An jedem Stoß Verbindungspartner, Überblattung/Keil/Nagelrichtung, Kontaktflächen und Lochabstände vor und direkt nach Trennung sichern. Radiale Tiefe und axiale Breite getrennt messen. Reparaturverdacht als Beobachtung plus Monteur-Auskunft protokollieren.",
+      "herkunft": [
+        "GAP-03"
+      ]
+    },
+    {
+      "id": "F-032",
+      "frage": "Aufnahmelücke: Kumpf-Nut, Kumpfnagelwege, Überlappung und Varianten",
+      "betrifft": [
+        "COMP-WHEEL"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-JOHANNES",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": "Für die Zeit vor dem Abbau formuliert; das Rad wurde am 10.10.2026 abgebaut. Prüfen, ob die Aufnahme vorliegt, sonst beim Frühjahrsaufbau nachholen. Ursprünglich: Referenzwissen festhalten statt erneut grundsätzlich zu fragen: 12 Dauben, 1 Nutboden, 3 Metallbänder, 2 gelochte Dauben, 2 Kumpfnägel lang/kurz und Befestigung am Krümmling sind fachlich beschrieben. Vor dem Lösen mindestens drei benachbarte Kümpfe gemeinsam fotografieren: Überlappungsrichtung, lang/kurz-Nagelposition, Kopfseite und Einsteckrichtung. Direkt nach Ausbau beide Nagelwege, vier Lochpositionen, Krümmlingkontakt, Nut/Boden und Partnerflächen dokumentieren. Daubendicke, Außenquerschnitt an allen drei Bandsitzen, Bandüberlappung und Nagelmaße mit Einheit messen.",
+      "herkunft": [
+        "GAP-04"
+      ]
+    },
+    {
+      "id": "F-033",
+      "frage": "Aufnahmelücke: Flügelbrett-Pitch und Kontaktgeometrie",
+      "betrifft": [
+        "COMP-WHEEL"
+      ],
+      "blockiert": [],
+      "haengt_ab_von": [],
+      "entscheidet": "P-JOHANNES",
+      "status": "offen",
+      "antwort": [],
+      "hinweis": "Für die Zeit vor dem Abbau formuliert; das Rad wurde am 10.10.2026 abgebaut. Prüfen, ob die Aufnahme vorliegt, sonst beim Frühjahrsaufbau nachholen. Ursprünglich: 90° zur Kranzebene ist durch TH-06 geklärt. Radial-/Tangentialpitch, Anschrägung/Kollisionspartner, Gesamtspanne und U-Band-Sitze dokumentieren.",
+      "herkunft": [
+        "GAP-09"
+      ]
+    }
+  ]
+}
