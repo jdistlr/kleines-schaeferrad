@@ -1,0 +1,13 @@
+{
+  "hinweis": "Verzeichnis der Figuren. Jede Figur hat ein Build-Skript, das ihre Maße aus kern/ liest. Das Cockpit zeigt sie bei den genannten Fragen und Bauteilen.",
+  "figuren": [
+    {
+      "id": "armtypen",
+      "titel": "Drei Armtypen",
+      "beschreibung": "Mittelarm mit Hals und die zwei gekröpften Außenarme, wie sie beim Abbau vermessen wurden. Ein Zollstock zeigt nacheinander die Maße mit ihren Kern-IDs.",
+      "build": "figuren/armtypen/build.mjs",
+      "fragen": ["F-005", "F-034"],
+      "bauteile": ["COMP-ARMS"]
+    }
+  ]
+}

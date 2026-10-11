@@ -98,6 +98,11 @@ svg .wasserweg { fill: none; stroke: var(--wasser); stroke-width: 1.2; stroke-da
 .fragekarte img { width: 72px; height: 72px; object-fit: cover; border-radius: 4px; background: var(--linie); }
 .fragekarte b { display: block; font-weight: 500; line-height: 1.35; }
 .fragekarte span { display: block; margin-top: 4px; font-size: var(--m1); color: var(--leise); }
+.figurkachel { display: block; width: 100%; text-align: left; padding: 12px 14px; margin-top: 10px; background: var(--flaeche); border: 1px solid var(--linie); border-left: 3px solid var(--wasser); border-radius: 8px; cursor: pointer; }
+.figurkachel:hover { border-color: var(--wasser); }
+.figurkachel b { display: block; font: 500 var(--m3)/1.3 var(--serif); }
+.figurkachel span { display: block; margin-top: 4px; font-size: var(--m1); color: var(--leise); }
+.bildfenster iframe { display: block; width: min(980px, 100%); height: min(86vh, 900px); border: 0; border-radius: 6px; background: var(--papier); }
 .fragezeile { display: block; width: 100%; text-align: left; background: none; border: 0; border-top: 1px solid var(--linie); padding: 10px 2px; cursor: pointer; }
 .fragezeile:hover b { color: var(--wasser); }
 .fragezeile b { font-weight: 400; }
@@ -438,6 +443,21 @@ function start() {
     ${alt.length ? `<details class="gruppe"><summary>Aus der Zeit vor dem Abbau<small>${alt.length}</small></summary><div class="innen"><p class="leise klein">Aufnahmewünsche von vor dem Abbau. Prüfen, ob die Fotos vom Abbau sie schon beantworten, sonst beim Aufbau im Frühjahr nachholen.</p>${alt.map(fragezeile).join("")}</div></details>` : ""}`;
 }
 
+const FIGUREN = K.figuren || [];
+function figurKacheln(liste) {
+  return liste.map(f => `<button class="figurkachel" data-figur="${f.id}"><b>${esc(f.titel)}</b><span>${esc(f.beschreibung)}</span></button>`).join("");
+}
+function oeffneFigur(id) {
+  const fig = FIGUREN.find(f => f.id === id), f = $("#bildfenster"), vorher = document.activeElement;
+  const dunkel = document.documentElement.dataset.theme === "dark" || (!document.documentElement.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
+  f.innerHTML = `<button aria-label="Schließen" id="bild-zu">×</button><iframe src="figuren/${fig.id}${dunkel ? "" : "-hell"}.html" title="${esc(fig.titel)}"></iframe>`;
+  f.setAttribute("aria-label", fig.titel);
+  f.hidden = false; $("#bild-zu").focus();
+  const taste = e => { if (e.key === "Escape") zu(); };
+  const zu = () => { f.hidden = true; f.innerHTML = ""; f.setAttribute("aria-label", "Foto"); document.removeEventListener("keydown", taste); vorher?.focus?.(); };
+  $("#bild-zu").onclick = zu; f.onclick = e => { if (e.target === f) zu(); }; document.addEventListener("keydown", taste);
+}
+
 function fotostreifen(liste, max = 18) {
   if (!liste.length) return `<p class="leer-text">Noch keine Fotos zugeordnet.</p>`;
   return `<div class="fotos">${liste.slice(0, max).map(q => `<button data-foto="${q.id}" aria-label="Foto öffnen"><img src="${bildSrc(q)}" alt="" loading="lazy"><span class="art">${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}</span></button>`).join("")}</div>${liste.length > max ? `<p class="leer-text">und ${liste.length - max} weitere</p>` : ""}`;
@@ -479,6 +499,7 @@ function bauteil(id) {
     ${beg?.aliase?.length ? `<p class="auch">Im Verein auch: ${beg.aliase.map(esc).join(", ")}</p>` : ""}
     ${b.anzahl ? `<p class="auch">Anzahl: ${esc(b.anzahl)}</p>` : ""}
     ${b.hinweis ? `<p class="hinweis">${esc(b.hinweis)}</p>` : ""}
+    ${FIGUREN.some(x => x.bauteile.includes(id)) ? `<h3>Figur</h3>${figurKacheln(FIGUREN.filter(x => x.bauteile.includes(id)))}` : ""}
     <h3>Wichtigste Maße</h3>
     ${masse.length ? `<dl class="masse">${masse.map(a => `<div><dt>${esc(eig(a.eig))}</dt><dd>${esc(wertText(a))}<small>${GRUND[a.grund]}, ${a.guelt === "bestaetigt" ? "bestätigt" : "noch offen"}</small></dd></div>`).join("")}</dl>` : `<p class="leer-text">Noch keine Maße für dieses Teil.</p>`}
     ${fr.length ? `<h3>Offen<small>${fr.length}</small></h3>${fr.slice(0, 3).map(fragekarte).join("")}${fr.length > 3 ? `<details class="gruppe" style="margin-top:10px"><summary>Weitere Fragen zu diesem Teil<small>${fr.length - 3}</small></summary><div class="innen">${fr.slice(3).map(fragezeile).join("")}</div></details>` : ""}` : ""}
@@ -502,6 +523,7 @@ function frage(id) {
     ${frei.length ? `<p class="leise klein">Die Antwort macht diese Fragen beantwortbar:</p>${frei.map(fragezeile).join("")}` : ""}
     ${warte.length ? `<p class="leise klein" style="margin-top:14px">Leichter, wenn zuerst diese geklärt ist:</p>${warte.map(fragezeile).join("")}` : ""}
     ${bekannt.length ? `<h3>Bisheriger Stand</h3><dl class="masse">${bekannt.map(a => `<div><dt>${esc(eig(a.eig))}</dt><dd>${esc(wertText(a))}<small>${GRUND[a.grund]}, ${GUELT[a.guelt]}</small></dd></div>`).join("")}</dl>` : ""}
+    ${FIGUREN.some(x => x.fragen.includes(id)) ? `<h3>Figur</h3>${figurKacheln(FIGUREN.filter(x => x.fragen.includes(id)))}` : ""}
     ${bez.length ? `<h3>Betrifft</h3><div class="chips">${bez.map(t => `<button data-gehe="${t}">${esc(teile[t].name)}</button>`).join("")}</div>` : ""}
     <h3>Passende Fotos</h3>${fotostreifen(fotosZuFrage(f), 14)}
     <h3>Antworten</h3>${antwortBereich(id, "frage")}`;
@@ -527,6 +549,7 @@ $("#startlink").addEventListener("click", e => { e.preventDefault(); gehe(""); }
 document.addEventListener("click", e => {
   const g = e.target.closest("[data-gehe]"); if (g) { e.preventDefault(); gehe(g.dataset.gehe); return; }
   const f = e.target.closest("[data-foto]"); if (f) { oeffneFoto(f.dataset.foto); return; }
+  const fg = e.target.closest("[data-figur]"); if (fg) { oeffneFigur(fg.dataset.figur); return; }
   const w = e.target.closest(".wahl button"); if (w) w.parentElement.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b === w ? "true" : "false"));
 });
 document.addEventListener("submit", async e => {

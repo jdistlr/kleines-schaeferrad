@@ -42,6 +42,38 @@ def vorschau(q):
     return "bilder/" + q["id"] + ".jpg"
 
 
+def figuren():
+    """Baut die Figuren aus figuren/figuren.json (helles und dunkles Thema) und legt sie unter cockpit/figuren/ ab.
+
+    Braucht Node. Fehlt es oder scheitert ein Build, bleibt die Figur weg; das Cockpit funktioniert trotzdem.
+    """
+    import shutil
+    import subprocess
+    pfad = os.path.join(ROOT, "figuren", "figuren.json")
+    if not os.path.exists(pfad):
+        return []
+    with open(pfad, encoding="utf-8") as f:
+        liste = json.load(f)["figuren"]
+    ziel = os.path.join(ROOT, "cockpit", "figuren")
+    os.makedirs(ziel, exist_ok=True)
+    fertig = []
+    for fig in liste:
+        build = os.path.join(ROOT, fig["build"])
+        ordner = os.path.dirname(build)
+        ok = True
+        for thema, datei in (("--light", fig["id"] + "-hell.html"), (None, fig["id"] + ".html")):
+            try:
+                subprocess.run(["node", build] + ([thema] if thema else []), cwd=ROOT, check=True, capture_output=True, text=True)
+                shutil.copyfile(os.path.join(ordner, datei), os.path.join(ziel, datei))
+            except (OSError, subprocess.CalledProcessError) as e:
+                print(f"Figur {fig['id']} nicht gebaut: {e}", file=sys.stderr)
+                ok = False
+                break
+        if ok:
+            fertig.append({k: fig[k] for k in ("id", "titel", "beschreibung", "fragen", "bauteile")})
+    return fertig
+
+
 def main():
     api = sys.argv[sys.argv.index("--api") + 1] if "--api" in sys.argv else None
     kern_dir = os.path.join(ROOT, "kern")
@@ -70,6 +102,7 @@ def main():
                      "bauteil": q.get("bauteil"), "erschlossen": q["erschlossen"], "kopien": len(q.get("kopien", [])),
                      "bildart": q.get("bildart"), "bild": vorschau(q)} for q in d["quellen"]],
         "api": api,
+        "figuren": figuren(),
     }
     with open(os.path.join(HIER, "cockpit", "vorlage.html"), encoding="utf-8") as f:
         vorlage = f.read()
