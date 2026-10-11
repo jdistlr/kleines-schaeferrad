@@ -21,5 +21,5 @@ Gilt ab 11.10.2026 bis zum Abschluss von Phase 2 des [Ordnungsplans](docs/ordnun
 - **Kein Modellumbau:** Geometrie, Kalibrierung und Modellparameter bleiben eingefroren, bis Phase 2 abgeschlossen ist.
 - **Nichts still löschen:** Überholte Angaben bleiben mit Verweis auf den Nachfolger erhalten.
 - **Herkunft benennen:** Statt „Nutzer“ die Person angeben, die eine Angabe gemacht hat.
-- **Arbeit nur über Branches und PRs.** Jeder PR nennt die berührten Claim-IDs.
+- **Arbeit nur über kurzlebige Branches und PRs.** Präfix nach Zweck (`ordnung/`, `kern/`, `modell/`, `cockpit/`, `befund/`), höchstens ein offener Branch pro Thema, nach dem Merge löschen. Jeder PR nennt die berührten Kern-IDs. Siehe [Branch-Archiv](docs/ordnung/BRANCH-ARCHIV.md).
 - **Keine Veröffentlichung auf GitHub Pages** ohne ausdrückliche Freigabe des Nutzers.
