@@ -50,6 +50,7 @@ Nicht mehr: Nachträge an `state/NEXT-ASTRA-WORK-SESSION.md` oder andere Überga
 - Unter https://jdistlr.github.io/kleines-schaeferrad/ liegen zwei Dinge: die **Forschungsseite mit der 3D-Werkstatt** (Astro-Build: `/`, `/feld/`, `/werkstatt/` …) und das **Cockpit** unter `/cockpit/`. Beide kommen ausschließlich vom Branch `gh-pages`.
 - `gh-pages` wird **nur** mit `npm run cockpit:pages` geschrieben, und nur aus einem sauberen Stand von `main` nach einem Merge. Das Skript veröffentlicht immer beide Teile zusammen und bricht ab, wenn die Forschungsseite fehlt. Nie von Hand bearbeiten, nie mergen, nie aus einem Arbeitsbranch veröffentlichen.
 - Veröffentlichen nur, wenn Johannes es im jeweiligen Auftrag ausdrücklich verlangt.
+- Übergang (seit 12.10.2026, auf Auftrag von Johannes): Solange die Forschungsseite nicht gebaut werden kann, darf mit `python scripts/kern/veroeffentliche_cockpit.py --ohne-forschungsseite` veröffentlicht werden. Dann steht unter `/` nur eine Weiterleitung auf `/cockpit/`. Sobald ein Build vorliegt, wieder mit `--seite <ordner>` oder `npm run build` veröffentlichen.
 - Keine weiteren Seiten oder Vorschauen auf Pages legen.
 - Das Repository ist öffentlich: keine privaten Daten, Adressen oder Telefonnummern in Kern, Befunde oder Cockpit.
 

@@ -8,6 +8,10 @@ Keine GitHub Actions. Aufbau der veröffentlichten Seite:
 Die Forschungsseite kommt aus einem fertigen Build:
   --seite <ordner>   bereits gebauter Ordner (z. B. ein entpacktes altes Pages-Artefakt)
   sonst              npm run build (braucht installierte Abhängigkeiten) und dann dist/
+  --ohne-forschungsseite
+                     Übergang, solange kein Build der Forschungsseite vorliegt: Unter / steht
+                     dann nur eine Weiterleitung auf /cockpit/. Sobald gebaut werden kann,
+                     wieder mit --seite oder npm run build veröffentlichen.
 
 Aufruf: python scripts/kern/veroeffentliche_cockpit.py [--seite <ordner>] [--ohne-push]
 GitHub Pages: „Deploy from a branch“, Branch gh-pages, Ordner / (root).
@@ -20,6 +24,15 @@ import tempfile
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 BRANCH = "gh-pages"
+
+
+WEITERLEITUNG = """<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="0; url=cockpit/"><title>Kleines Schäferrad</title>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#edf1ec;color:#1c2726;font:17px/1.5 system-ui,sans-serif;padding:16px}
+a{color:#2b6a76}p{max-width:34ch}</style></head>
+<body><p>Weiter zum <a href="cockpit/">Cockpit des Kleinen Schäferrads</a>. Die Forschungsseite mit der 3D-Werkstatt wird neu gebaut.</p></body></html>
+"""
 
 
 def git(*args, cwd=ROOT, check=True):
@@ -36,7 +49,12 @@ def main():
     if not sauber:
         sys.exit("kern/ oder scripts/kern/ haben ungespeicherte Änderungen. Erst committen, dann veröffentlichen.")
 
-    if "--seite" in sys.argv:
+    ohne = "--ohne-forschungsseite" in sys.argv
+    if ohne:
+        seite = tempfile.mkdtemp()
+        with open(os.path.join(seite, "index.html"), "w", encoding="utf-8") as f:
+            f.write(WEITERLEITUNG)
+    elif "--seite" in sys.argv:
         seite = os.path.abspath(sys.argv[sys.argv.index("--seite") + 1])
     else:
         subprocess.run(["npm", "run", "build"], cwd=ROOT, check=True)
@@ -60,7 +78,7 @@ def main():
                 shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
         shutil.copytree(seite, tmp, dirs_exist_ok=True)
         shutil.copytree(os.path.join(ROOT, "cockpit"), os.path.join(tmp, "cockpit"), dirs_exist_ok=True,
-                        ignore=shutil.ignore_patterns("artefakt.html"))
+                        ignore=shutil.ignore_patterns("artefakt.html", "bilder-paket.json"))
         open(os.path.join(tmp, ".nojekyll"), "w").close()
         git("add", "-A", cwd=tmp)
         if not git("status", "--porcelain", cwd=tmp).stdout.strip():
