@@ -104,6 +104,14 @@ svg .wasserweg { fill: none; stroke: var(--wasser); stroke-width: 1.2; stroke-da
 .spurkarte:hover { border-color: var(--wasser); }
 .spurkarte b { display: block; font-weight: 500; line-height: 1.35; }
 .spurkarte span { display: block; margin-top: 4px; font-size: var(--m2); color: var(--leise); }
+.belege { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 7px; align-items: center; }
+.belege button { padding: 0; border: 1px solid var(--linie); background: var(--linie); border-radius: 4px; cursor: pointer; line-height: 0; }
+.belege button:hover { border-color: var(--wasser); }
+.belege img { width: 44px; height: 44px; object-fit: cover; border-radius: 3px; display: block; }
+.belege .text { font: 400 var(--m1)/1.3 var(--sans); color: var(--wasser); text-decoration: none; }
+.belege .mehr { font: 400 var(--m1) var(--sans); color: var(--leise); }
+table.angaben .belege img { width: 36px; height: 36px; }
+.bildfenster .abgelesen { display: block; width: 100%; color: #fff; font-size: var(--m3); }
 .abgleich { display: block; font: 400 var(--m1) var(--sans); margin-top: 3px; }
 .abgleich.gleich { color: var(--eiche); }
 .abgleich.anders { color: var(--roetel); }
@@ -305,8 +313,20 @@ function abgleich(a, alle) {
   const teile_ = andere.map(b => { const z = zahlenVon(b); if (!z || z.length !== za.length || !inMeter(b, z[0])) return null; return { b, gleich: gleichWerte(b, z) }; }).filter(Boolean);
   if (!teile_.length) return "";
   const g = teile_.filter(x => x.gleich), n = teile_.filter(x => !x.gleich);
-  return (g.length ? `<span class="abgleich gleich">${[...new Set(g.map(x => GRUND[x.b.grund]))].join(", ")} stützt das</span>` : "") +
-    (n.length ? `<span class="abgleich anders">${n.map(x => `${GRUND[x.b.grund]}: ${esc(wertText(x.b))}`).join("; ")}</span>` : "");
+  // Auch die Gegenquelle zum Nachprüfen vorlegen (je ein Beleg).
+  return (g.length ? `<span class="abgleich gleich">${[...new Set(g.map(x => GRUND[x.b.grund]))].join(", ")} stützt das</span>${g.slice(0, 2).map(x => belege(x.b, 1)).join("")}` : "") +
+    (n.length ? `<span class="abgleich anders">${n.map(x => `${GRUND[x.b.grund]}: ${esc(wertText(x.b))}`).join("; ")}</span>${n.slice(0, 2).map(x => belege(x.b, 1)).join("")}` : "");
+}
+// Belege: die Quellen einer Angabe als kleine Vorschaubilder (Fotos, Skizzen) oder Textverweise.
+const ARTNAME = { aussage: "Aussage", dokument: "Dokument", kontext: "Kontext", ableitung: "Herleitung", scan: "Scan", video: "Video" };
+function belege(a, max = 4) {
+  const liste = (a.quellen || []).map(([qid, stelle]) => ({ q: quellen[qid], stelle })).filter(x => x.q);
+  if (!liste.length) return "";
+  const bilder = liste.filter(x => x.q.bild), texte = liste.filter(x => !x.q.bild);
+  const b = bilder.slice(0, max).map(x => `<button data-foto="${x.q.id}" data-angabe="${esc(a.id)}" data-stelle="${esc(x.stelle || "")}" aria-label="Beleg öffnen: ${esc(x.q.titel || x.q.id)}"><img src="${bildSrc(x.q)}" alt="" loading="lazy"></button>`).join("");
+  const t = texte.slice(0, 2).map(x => x.q.pfad ? `<a class="text" href="${REPO + encodeURI(x.q.pfad)}" target="_blank" rel="noopener">${esc(ARTNAME[x.q.art] || "Quelle")}: ${esc(kurz(x.q.titel || x.q.id, 40))}</a>` : `<span class="mehr">${esc(ARTNAME[x.q.art] || "Quelle")}: ${esc(kurz(x.q.titel || x.q.id, 40))}</span>`).join("");
+  const rest = bilder.length - Math.min(bilder.length, max) + Math.max(0, texte.length - 2);
+  return `<span class="belege">${b}${t}${rest > 0 ? `<span class="mehr">+${rest}</span>` : ""}</span>`;
 }
 const istMass = a => (typeof a.wert === "number" || (Array.isArray(a.wert) && a.wert.length && a.wert.every(x => typeof x === "number"))) && a.einheit && a.einheit !== "exporteinheit";
 
@@ -503,7 +523,7 @@ function fotostreifen(liste, max = 18) {
 function angabenTabelle(liste, id) {
   const reihen = ["messung", "muendlich", "skizze", "foto", "ableitung", "annahme", "scan", "kontext", "holzliste", "fremdvorlage"];
   const bez = a => beziehungen[a.ziel] ? `${teile[beziehungen[a.ziel].von]?.name || ""} ${begriffe[beziehungen[a.ziel].art]?.name || ""} ${teile[beziehungen[a.ziel].zu]?.name || ""}` : a.ziel !== id && teile[a.ziel] ? teile[a.ziel].name : "";
-  const z = a => `<tr><td>${esc(eig(a.eig))}${bez(a) ? `<div class="bezug">${esc(bez(a))}</div>` : ""}</td><td class="wert">${esc(wertText(a))}</td><td><span class="status ${a.guelt}">${GUELT[a.guelt]}</span></td></tr>`;
+  const z = a => `<tr><td>${esc(eig(a.eig))}${bez(a) ? `<div class="bezug">${esc(bez(a))}</div>` : ""}</td><td class="wert">${esc(wertText(a))}${belege(a, 3)}</td><td><span class="status ${a.guelt}">${GUELT[a.guelt]}</span></td></tr>`;
   return `<table class="angaben"><tbody>${reihen.filter(g => liste.some(a => a.grund === g)).map(g => `<tr class="gruppe"><td colspan="3">${GRUND_LANG[g]}</td></tr>` + liste.filter(a => a.grund === g).map(z).join("")).join("")}</tbody></table>`;
 }
 
@@ -538,7 +558,7 @@ function bauteil(id) {
     ${b.hinweis ? `<p class="hinweis">${esc(b.hinweis)}</p>` : ""}
     ${FIGUREN.some(x => x.bauteile.includes(id)) ? `<h3>Figur</h3>${figurKacheln(FIGUREN.filter(x => x.bauteile.includes(id)))}` : ""}
     <h3>Wichtigste Maße</h3>
-    ${masse.length ? `<dl class="masse">${masse.map(a => `<div><dt>${esc(eig(a.eig))}</dt><dd>${esc(wertText(a))}<small>${GRUND[a.grund]}, ${a.guelt === "bestaetigt" ? "bestätigt" : "noch offen"}</small>${abgleich(a, direktJe[id] || [])}</dd></div>`).join("")}</dl>` : `<p class="leer-text">Noch keine Maße für dieses Teil.</p>`}
+    ${masse.length ? `<dl class="masse">${masse.map(a => `<div><dt>${esc(eig(a.eig))}</dt><dd>${esc(wertText(a))}<small>${GRUND[a.grund]}, ${a.guelt === "bestaetigt" ? "bestätigt" : "noch offen"}</small>${abgleich(a, direktJe[id] || [])}${belege(a)}</dd></div>`).join("")}</dl>` : `<p class="leer-text">Noch keine Maße für dieses Teil.</p>`}
     ${fr.length ? `<h3>Offen<small>${fr.length}</small></h3>${fr.slice(0, 3).map(fragekarte).join("")}${fr.length > 3 ? `<details class="gruppe" style="margin-top:10px"><summary>Weitere Fragen zu diesem Teil<small>${fr.length - 3}</small></summary><div class="innen">${fr.slice(3).map(fragezeile).join("")}</div></details>` : ""}` : ""}
     <h3>Fotos<small>${fotos.length}</small></h3>${fotostreifen(fotos)}
     ${unter.length ? `<h3>Besteht aus</h3><div class="chips">${unter.map(k => `<button data-gehe="${k.id}">${esc(k.name)}</button>`).join("")}</div>` : ""}
@@ -561,7 +581,7 @@ function frage(id) {
     ${frei.length || warte.length ? `<h3>Warum sie wichtig ist</h3>` : ""}
     ${frei.length ? `<p class="leise klein">Die Antwort macht diese Fragen beantwortbar:</p>${frei.map(fragezeile).join("")}` : ""}
     ${warte.length ? `<p class="leise klein" style="margin-top:14px">Leichter, wenn zuerst diese geklärt ist:</p>${warte.map(fragezeile).join("")}` : ""}
-    ${bekannt.length ? `<h3>Bisheriger Stand</h3><dl class="masse">${bekannt.map(a => `<div><dt>${esc(eig(a.eig))}</dt><dd>${esc(wertText(a))}<small>${GRUND[a.grund]}, ${GUELT[a.guelt]} · ${esc(a.id)}</small></dd></div>`).join("")}</dl>` : ""}
+    ${bekannt.length ? `<h3>Bisheriger Stand</h3><dl class="masse">${bekannt.map(a => `<div><dt>${esc(eig(a.eig))}</dt><dd>${esc(wertText(a))}<small>${GRUND[a.grund]}, ${GUELT[a.guelt]} · ${esc(a.id)}</small>${belege(a)}</dd></div>`).join("")}</dl>` : ""}
     ${FIGUREN.some(x => x.fragen.includes(id)) ? `<h3>Figur</h3>${figurKacheln(FIGUREN.filter(x => x.fragen.includes(id)))}` : ""}
     ${bez.length ? `<h3>Betrifft</h3><div class="chips">${bez.map(t => `<button data-gehe="${t}">${esc(teile[t].name)}</button>`).join("")}</div>` : ""}
     <h3>Passende Fotos</h3>${fotostreifen(fotosZuFrage(f), 14)}
@@ -587,7 +607,7 @@ window.addEventListener("hashchange", () => zeige());
 $("#startlink").addEventListener("click", e => { e.preventDefault(); gehe(""); });
 document.addEventListener("click", e => {
   const g = e.target.closest("[data-gehe]"); if (g) { e.preventDefault(); gehe(g.dataset.gehe); return; }
-  const f = e.target.closest("[data-foto]"); if (f) { oeffneFoto(f.dataset.foto); return; }
+  const f = e.target.closest("[data-foto]"); if (f) { oeffneFoto(f.dataset.foto, f.dataset.angabe, f.dataset.stelle); return; }
   const fg = e.target.closest("[data-figur]"); if (fg) { oeffneFigur(fg.dataset.figur); return; }
   const w = e.target.closest(".wahl button"); if (w) w.parentElement.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b === w ? "true" : "false"));
 });
@@ -605,9 +625,10 @@ document.addEventListener("submit", async e => {
 });
 Speicher.hoerer.push(() => { if (!document.activeElement?.closest("#antwort-form")) zeige({ neu: false }); });
 
-function oeffneFoto(id) {
-  const q = quellen[id], f = $("#bildfenster"), vorher = document.activeElement;
-  f.innerHTML = `<button aria-label="Schließen" id="bild-zu">×</button><figure><img src="${bildSrc(q)}" alt=""><figcaption><span>${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}${q.bauteil && teile[q.bauteil] ? ", " + esc(teile[q.bauteil].name) : ""}</span>${q.pfad ? `<a href="${REPO + encodeURI(q.pfad)}" target="_blank" rel="noopener">Original in voller Größe</a>` : ""}</figcaption></figure>`;
+function oeffneFoto(id, angabe, stelle) {
+  const q = quellen[id], f = $("#bildfenster"), vorher = document.activeElement, an = angabenById[angabe];
+  const gross = K.bilderPaket ? bildSrc(q) : q.bild;
+  f.innerHTML = `<button aria-label="Schließen" id="bild-zu">×</button><figure><img src="${gross}" alt=""><figcaption>${an ? `<span class="abgelesen">${esc(eig(an.eig))}: ${esc(wertText(an))}${stelle ? " – abgelesen: " + esc(stelle) : ""}</span>` : ""}<span>${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}${q.bauteil && teile[q.bauteil] ? ", " + esc(teile[q.bauteil].name) : ""}</span>${q.pfad ? `<a href="${REPO + encodeURI(q.pfad)}" target="_blank" rel="noopener">Original in voller Größe</a>` : ""}</figcaption></figure>`;
   f.hidden = false; $("#bild-zu").focus();
   const taste = e => { if (e.key === "Escape") zu(); };
   const zu = () => { f.hidden = true; document.removeEventListener("keydown", taste); vorher?.focus?.(); };

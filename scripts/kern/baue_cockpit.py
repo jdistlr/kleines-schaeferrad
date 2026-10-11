@@ -96,7 +96,7 @@ def main():
         "beziehungen": [{k: b.get(k) for k in ("id", "von", "art", "zu", "ueber")} for b in d["beziehungen"]],
         "angaben": [{"id": a["id"], "ziel": a["ziel"], "eig": a["eigenschaft"], "wert": a["wert"], "einheit": a["einheit"],
                      "tol": a.get("toleranz"), "grund": a["grundlage"], "guelt": a["gueltigkeit"],
-                     "quellen": [q["quelle"] for q in a["quellen"]]} for a in d["angaben"]],
+                     "quellen": [[q["quelle"], q.get("stelle")] for q in a["quellen"]]} for a in d["angaben"]],
         "fragen": [{k: f.get(k) for k in ("id", "frage", "betrifft", "blockiert", "haengt_ab_von", "entscheidet", "status", "hinweis", "herkunft")} for f in d["fragen"]],
         "quellen": [{"id": q["id"], "art": q["art"], "pfad": q["pfad"], "titel": q["titel"], "ordner": q["ordner"],
                      "bauteil": q.get("bauteil"), "erschlossen": q["erschlossen"], "kopien": len(q.get("kopien", [])),
