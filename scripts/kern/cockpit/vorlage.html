@@ -250,6 +250,9 @@ const fotosZuFrage = f => {
   const bez = [...new Set([...f.betrifft, ...f.blockiert].flatMap(bezugVon))].filter(t => teile[t] && teile[t].art !== "anlage");
   return [...new Set([...genannt, ...fotosVon(bez)])];
 };
+let paket = null;
+const bildSrc = q => K.bilderPaket ? (paket?.[q.id] || "") : q.bild;
+if (K.bilderPaket) fetch(K.bilderPaket).then(r => r.json()).then(p => { paket = p; zeige({ neu: false }); }).catch(() => {});
 const kurz = (s, n = 110) => s.length > n ? s.slice(0, n - 2).replace(/\s\S*$/, "") + " …" : s;
 const vorname = pid => (personen[pid]?.name || "").split(" ")[0];
 
@@ -412,7 +415,7 @@ const karte = $("#karte");
 function fragekarte(f) {
   const foto = fotosZuFrage(f)[0], frei = freischaltet(f.id).length;
   const meta = [vorname(f.entscheidet) && `${vorname(f.entscheidet)} entscheidet`, frei && `Schaltet ${frei} weitere ${frei === 1 ? "Frage" : "Fragen"} frei`, f.haengt_ab_von.length && "Wartet auf eine andere Antwort"].filter(Boolean).join(". ");
-  return `<button class="fragekarte${foto ? "" : " ohne-bild"}" data-gehe="${f.id}">${foto ? `<img src="${foto.bild}" alt="" loading="lazy">` : ""}<div><b>${esc(f.frage)}</b><span>${esc(meta)}${meta ? "." : ""}</span></div></button>`;
+  return `<button class="fragekarte${foto ? "" : " ohne-bild"}" data-gehe="${f.id}">${foto ? `<img src="${bildSrc(foto)}" alt="" loading="lazy">` : ""}<div><b>${esc(f.frage)}</b><span>${esc(meta)}${meta ? "." : ""}</span></div></button>`;
 }
 const fragezeile = f => `<button class="fragezeile" data-gehe="${f.id}"><b>${esc(kurz(f.frage, 140))}</b><span>${vorname(f.entscheidet) ? esc(vorname(f.entscheidet)) + " entscheidet" : ""}</span></button>`;
 
@@ -437,7 +440,7 @@ function start() {
 
 function fotostreifen(liste, max = 18) {
   if (!liste.length) return `<p class="leer-text">Noch keine Fotos zugeordnet.</p>`;
-  return `<div class="fotos">${liste.slice(0, max).map(q => `<button data-foto="${q.id}" aria-label="Foto öffnen"><img src="${q.bild}" alt="" loading="lazy"><span class="art">${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}</span></button>`).join("")}</div>${liste.length > max ? `<p class="leer-text">und ${liste.length - max} weitere</p>` : ""}`;
+  return `<div class="fotos">${liste.slice(0, max).map(q => `<button data-foto="${q.id}" aria-label="Foto öffnen"><img src="${bildSrc(q)}" alt="" loading="lazy"><span class="art">${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}</span></button>`).join("")}</div>${liste.length > max ? `<p class="leer-text">und ${liste.length - max} weitere</p>` : ""}`;
 }
 
 function angabenTabelle(liste, id) {
@@ -542,7 +545,7 @@ Speicher.hoerer.push(() => { if (!document.activeElement?.closest("#antwort-form
 
 function oeffneFoto(id) {
   const q = quellen[id], f = $("#bildfenster"), vorher = document.activeElement;
-  f.innerHTML = `<button aria-label="Schließen" id="bild-zu">×</button><figure><img src="${q.bild}" alt=""><figcaption><span>${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}${q.bauteil && teile[q.bauteil] ? ", " + esc(teile[q.bauteil].name) : ""}</span>${q.pfad ? `<a href="${REPO + encodeURI(q.pfad)}" target="_blank" rel="noopener">Original in voller Größe</a>` : ""}</figcaption></figure>`;
+  f.innerHTML = `<button aria-label="Schließen" id="bild-zu">×</button><figure><img src="${bildSrc(q)}" alt=""><figcaption><span>${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}${q.bauteil && teile[q.bauteil] ? ", " + esc(teile[q.bauteil].name) : ""}</span>${q.pfad ? `<a href="${REPO + encodeURI(q.pfad)}" target="_blank" rel="noopener">Original in voller Größe</a>` : ""}</figcaption></figure>`;
   f.hidden = false; $("#bild-zu").focus();
   const taste = e => { if (e.key === "Escape") zu(); };
   const zu = () => { f.hidden = true; document.removeEventListener("keydown", taste); vorher?.focus?.(); };

@@ -76,6 +76,24 @@ def main():
     json_text = json.dumps(daten, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     seite = vorlage.replace("/*__DATEN__*/null", json_text)
     if "--artefakt" in sys.argv:
+        # Die Arbeitsfassung bekommt die Vorschaubilder als eine Datei (Artefakte veröffentlichen
+        # einzelne Dateien nur in begrenzter Zahl); die Seite lädt sie nach dem ersten Bild nach.
+        import base64
+        from PIL import Image
+        import io
+        paket = {}
+        for q in daten["quellen"]:
+            if q["bild"]:
+                with Image.open(os.path.join(ROOT, "cockpit", q["bild"])) as im:
+                    im.thumbnail((360, 360))
+                    puffer = io.BytesIO()
+                    im.save(puffer, "JPEG", quality=62, optimize=True)
+                paket[q["id"]] = "data:image/jpeg;base64," + base64.b64encode(puffer.getvalue()).decode()
+        with open(os.path.join(ROOT, "cockpit", "bilder-paket.json"), "w") as f:
+            json.dump(paket, f, separators=(",", ":"))
+        daten["bilderPaket"] = "bilder-paket.json"
+        json_text = json.dumps(daten, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+        seite = vorlage.replace("/*__DATEN__*/null", json_text)
         ziel = os.path.join(ROOT, "cockpit", "artefakt.html")
     else:
         seite = ('<!doctype html>\n<html lang="de">\n<head>\n<meta charset="utf-8">\n'
