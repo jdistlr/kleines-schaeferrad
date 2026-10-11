@@ -22,6 +22,9 @@ def git(*args, cwd=ROOT, check=True):
 
 
 def main():
+    zweig = git("symbolic-ref", "--short", "-q", "HEAD", check=False).stdout.strip()
+    if zweig != "main" and "--erlaube-arbeitsbranch" not in sys.argv:
+        sys.exit(f"Veröffentlicht wird nur aus main (aktuell: {zweig or 'losgelöst'}). Erst mergen, dann auf main wechseln.")
     subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "kern", "baue_cockpit.py")], check=True)
     quelle = git("rev-parse", "--short", "HEAD").stdout.strip()
     sauber = not git("status", "--porcelain", "--", "kern", "scripts/kern").stdout.strip()
@@ -55,7 +58,8 @@ def main():
         if "--ohne-push" in sys.argv:
             print(f"Commit vorbereitet in {tmp}; nicht gepusht.")
             return
-        git("push", "origin", f"HEAD:refs/heads/{BRANCH}", cwd=tmp)
+        subprocess.run(["git", "push", "origin", f"HEAD:refs/heads/{BRANCH}"], cwd=tmp, check=True,
+                       env={**os.environ, "KS_PAGES_VEROEFFENTLICHUNG": "1"})
         print(f"Veröffentlicht auf {BRANCH} (Quelle {quelle}): https://jdistlr.github.io/kleines-schaeferrad/")
     finally:
         if "--ohne-push" not in sys.argv:

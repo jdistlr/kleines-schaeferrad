@@ -1,0 +1,12 @@
+#!/bin/sh
+# Kein Push direkt auf main; gh-pages nur über npm run cockpit:pages.
+while read lokal lsha ziel zsha; do
+  case "$ziel" in
+    refs/heads/main) echo "Abgelehnt: nicht direkt auf main pushen. Pull Request öffnen (siehe AGENTS.md)." >&2; exit 1 ;;
+    refs/heads/gh-pages)
+      if [ -z "$KS_PAGES_VEROEFFENTLICHUNG" ]; then
+        echo "Abgelehnt: gh-pages nur mit 'npm run cockpit:pages' aus main (siehe AGENTS.md)." >&2; exit 1
+      fi ;;
+  esac
+done
+exit 0

@@ -1,3 +1,5 @@
+> **Abgelöst am 11.10.2026.** Diese Datei ist kein Arbeitsauftrag mehr. Maßgeblich sind [AGENTS.md](../AGENTS.md), der [Wissenskern](../kern/README.md) und der [Ordnungsplan](../docs/ordnung/PLAN.md). Neue Fachangaben nicht hier anhängen, sondern wie in AGENTS.md beschrieben in `kern/` eintragen.
+
 # NEXT — KNOWLEDGE GRAPH & EVIDENCE CONSOLIDATION
 
 **Arbeitsauftrag für eine gesonderte umfangreiche Work-/Astra-Session.** Stand: 2026-10-10. Repository ausschließlich `jdistlr/kleines-schaeferrad`.

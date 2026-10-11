@@ -1,3 +1,5 @@
+> **Abgelöst am 11.10.2026.** Diese Datei ist kein Arbeitsauftrag mehr. Maßgeblich sind [AGENTS.md](../AGENTS.md), der [Wissenskern](../kern/README.md) und der [Ordnungsplan](../docs/ordnung/PLAN.md). Neue Fachangaben nicht hier anhängen, sondern wie in AGENTS.md beschrieben in `kern/` eintragen.
+
 # NEXT WORK SESSION — UX R1/R4 Recovery
 
 **Start condition:** PR #17 reviewed and merged to main **only after** Torsten's annotated photo has been stored with verified SHA-256 and the final CI matrix is green. If the original transfer remains blocked, stop and report `SOURCE TRANSFER PENDING`; do not infer a green evidence gate. Independently confirm current main SHA before work. PR #16 at `129a9a9` is the audit reference, not automatically merged.

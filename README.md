@@ -1,12 +1,15 @@
-# Kleines Schäferrad — evidenzbasierte Rekonstruktion
+# Kleines Schäferrad
 
-**BASELINE UNDERSTANDING READY** — Verständnis-/Capture-Human-Gate, keine fertige oder maßhaltige Rekonstruktion.
+Bestandsaufnahme des Kleinen Schäferrads, eines hölzernen Wasserschöpfrads an der Regnitz, das der Verein jeden Herbst ab- und jedes Frühjahr wieder aufbaut. Erstmals werden Skizzen, mündliche Überlieferung, Fotos und Messungen an einem Ort zusammengeführt.
 
-43 Originaldateien individuell geprüft; Zeichnungen, aktueller Bestand, Kontext und 3D-Exporte sind gleichberechtigte Evidenz mit sichtbaren Konflikten.
+- **Cockpit:** https://jdistlr.github.io/kleines-schaeferrad/ – das Rad als anwählbarer Aufriss, offene Fragen, Herkunft des Wissens.
+- **Wissenskern:** [`kern/`](kern/README.md) – die einzige Quelle für Fakten.
+- **Ordnungsplan:** [`docs/ordnung/PLAN.md`](docs/ordnung/PLAN.md) – wo das Projekt steht und was als Nächstes kommt.
+- **Für Agenten und Mitwirkende:** [`AGENTS.md`](AGENTS.md) – verbindliche Regeln.
 
-Start: [Baseline](docs/BASELINE.md), [Audit](docs/EVIDENCE-AUDIT.md), [Einzelanalysen](docs/SOURCE-ANALYSIS.md), [Conflict Matrix](docs/CONFLICT-MATRIX.md), [Human Calibration](docs/HUMAN-CALIBRATION.md), [Capture-Plan](docs/CAPTURE-BEFORE-DISASSEMBLY.md), [Fortsetzung](state/NEXT-WORK-SESSION.md).
+Prüfen: `npm run test:kern` und `python scripts/verify_evidence.py`. Cockpit lokal bauen: `npm run cockpit`.
 
-Originale nach Checkout prüfen: `python scripts/verify_evidence.py`. Keine externe Python-Abhängigkeit dafür. Für die Scanforensik: NumPy, Matplotlib, Pillow und `python scripts/audit_scans.py`. Alle Claims und alle Modellannahmen sind maschinenlesbar unter `data/`.
+Die folgenden Abschnitte und die Dokumente unter `docs/` und `state/` stammen aus der Phase vor dem Wissenskern und sind Geschichte.
 
 ## Originalquellen
 
