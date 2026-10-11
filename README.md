@@ -2,7 +2,8 @@
 
 Bestandsaufnahme des Kleinen Schäferrads, eines hölzernen Wasserschöpfrads an der Regnitz, das der Verein jeden Herbst ab- und jedes Frühjahr wieder aufbaut. Erstmals werden Skizzen, mündliche Überlieferung, Fotos und Messungen an einem Ort zusammengeführt.
 
-- **Cockpit:** https://jdistlr.github.io/kleines-schaeferrad/ – das Rad als anwählbarer Aufriss, offene Fragen, Herkunft des Wissens.
+- **Forschungsseite mit 3D-Werkstatt:** https://jdistlr.github.io/kleines-schaeferrad/
+- **Cockpit:** https://jdistlr.github.io/kleines-schaeferrad/cockpit/ – das Rad als anwählbarer Aufriss, offene Fragen, Herkunft des Wissens.
 - **Wissenskern:** [`kern/`](kern/README.md) – die einzige Quelle für Fakten.
 - **Ordnungsplan:** [`docs/ordnung/PLAN.md`](docs/ordnung/PLAN.md) – wo das Projekt steht und was als Nächstes kommt.
 - **Für Agenten und Mitwirkende:** [`AGENTS.md`](AGENTS.md) – verbindliche Regeln.

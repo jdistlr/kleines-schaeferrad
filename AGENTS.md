@@ -47,10 +47,10 @@ Nicht mehr: Nachträge an `state/NEXT-ASTRA-WORK-SESSION.md` oder andere Überga
 
 ## Veröffentlichung (GitHub Pages)
 
-- Die öffentliche Seite https://jdistlr.github.io/kleines-schaeferrad/ ist das Cockpit. Sie kommt ausschließlich vom Branch `gh-pages`.
-- `gh-pages` wird **nur** mit `npm run cockpit:pages` geschrieben, und nur aus einem sauberen Stand von `main` nach einem Merge. Nie von Hand bearbeiten, nie mergen, nie aus einem Arbeitsbranch veröffentlichen.
+- Unter https://jdistlr.github.io/kleines-schaeferrad/ liegen zwei Dinge: die **Forschungsseite mit der 3D-Werkstatt** (Astro-Build: `/`, `/feld/`, `/werkstatt/` …) und das **Cockpit** unter `/cockpit/`. Beide kommen ausschließlich vom Branch `gh-pages`.
+- `gh-pages` wird **nur** mit `npm run cockpit:pages` geschrieben, und nur aus einem sauberen Stand von `main` nach einem Merge. Das Skript veröffentlicht immer beide Teile zusammen und bricht ab, wenn die Forschungsseite fehlt. Nie von Hand bearbeiten, nie mergen, nie aus einem Arbeitsbranch veröffentlichen.
 - Veröffentlichen nur, wenn Johannes es im jeweiligen Auftrag ausdrücklich verlangt.
-- Keine anderen Seiten, Vorschauen oder Builds auf Pages legen. Die Astro-Forschungsseite ist derzeit nicht veröffentlicht.
+- Keine weiteren Seiten oder Vorschauen auf Pages legen.
 - Das Repository ist öffentlich: keine privaten Daten, Adressen oder Telefonnummern in Kern, Befunde oder Cockpit.
 
 ## Keine GitHub Actions

@@ -73,7 +73,7 @@ python scripts/kern/pruefe_kern.py --begriff Schetter
 
 `npm run cockpit` (oder `python scripts/kern/baue_cockpit.py`) erzeugt aus dem Kern eine Übersichtsseite unter `cockpit/index.html`: das Rad als anwählbarer Aufriss mit der Akte jedes Bauteils, die offenen Fragen nach dem, was ihre Antwort freischaltet, und die Herkunft des Wissens. Die Seite ist nur eine Ansicht und wird nie von Hand bearbeitet.
 
-**Veröffentlichen** (von Hand, ohne GitHub Actions): `npm run cockpit:pages` baut die Seite und legt sie als einzigen Inhalt auf den Branch `gh-pages`. Adresse: https://jdistlr.github.io/kleines-schaeferrad/. Nach jeder bestätigten Änderung am Kern erneut ausführen; die Seite nennt den Commit, aus dem sie erzeugt wurde.
+**Veröffentlichen** (von Hand, ohne GitHub Actions): `npm run cockpit:pages` baut Forschungsseite und Cockpit und legt beide auf den Branch `gh-pages`. Adressen: https://jdistlr.github.io/kleines-schaeferrad/ (Forschungsseite) und …/cockpit/ (Cockpit). Nach jeder bestätigten Änderung am Kern erneut ausführen; die Seite nennt den Commit, aus dem sie erzeugt wurde.
 
 ## Herkunft und Altdaten
 
