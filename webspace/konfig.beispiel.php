@@ -3,6 +3,8 @@
 // Nie mit echtem Schlüssel ins Repository legen.
 return [
     'export_schluessel' => 'hier-eine-lange-zufallszeichenfolge',
-    // Passwort für control.php aus dem GitHub-Secret KS_CONTROL_PASSWORD (mindestens 12 Zeichen).
-    'control_password' => 'hier-ein-passwort',
+    // GitHub-Anmeldung für control.php (OAuth-App von jdistlr, Secrets KS_GITHUB_CLIENT_ID/_SECRET).
+    'github_client_id' => 'Ov23li…',
+    'github_client_secret' => '…',
+    'allowed_github_ids' => [1959022, 72215618], // jdistlr, ThorstenHalsch
 ];

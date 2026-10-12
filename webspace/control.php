@@ -1,13 +1,19 @@
 <?php
 /*
- * Control plane for schaeferrad.jdistlr.de (operator only, read-only).
+ * Control plane for schaeferrad.jdistlr.de (read-only, GitHub sign-in for an allowlist).
  *
  * Shows every contribution (who, when, where, how, what) and the API request log
  * written by api.php (daten/log/YYYY-MM-DD.jsonl). Identifiers in English, all
  * visible text in German (AGENTS.md, naming rule).
  *
- *   control.php                 overview (password from konfig.php key "control_password")
+ *   control.php                 overview; without a session: sign-in page
+ *   control.php?signin=github   starts the GitHub OAuth flow (OAuth app owned by jdistlr)
+ *   control.php?code=…&state=…  OAuth callback (the app's callback URL is this page)
  *   control.php?format=csv      contributions as CSV (semicolon, UTF-8 BOM, opens in Excel)
+ *
+ * Access: konfig.php keys github_client_id, github_client_secret and allowed_github_ids
+ * (numeric GitHub user IDs, immune to renamed accounts). The access token is only used
+ * once to read the user profile and is never stored.
  *
  * Side files written by scripts/kern/baue_webspace.py:
  *   targets.json   titles for kern IDs and VORGEHEN
@@ -15,14 +21,19 @@
  */
 declare(strict_types=1);
 
-const MIN_PASSWORD_LENGTH = 12;
 const LOG_FILES_SHOWN = 30;
 const LOG_ROWS_SHOWN = 500;
 const TIMEZONE = 'Europe/Berlin';
 
 $DATA_DIR = __DIR__ . '/daten';
 $CONFIG = is_file(__DIR__ . '/konfig.php') ? require __DIR__ . '/konfig.php' : [];
-$PASSWORD = (string)($CONFIG['control_password'] ?? '');
+$CLIENT_ID = (string)($CONFIG['github_client_id'] ?? '');
+$CLIENT_SECRET = (string)($CONFIG['github_client_secret'] ?? '');
+$ALLOWED_IDS = array_map('intval', (array)($CONFIG['allowed_github_ids'] ?? []));
+// Overridable only for local tests against a fake GitHub; production uses the defaults.
+$GITHUB_WEB = rtrim((string)($CONFIG['github_web_url'] ?? 'https://github.com'), '/');
+$GITHUB_API = rtrim((string)($CONFIG['github_api_url'] ?? 'https://api.github.com'), '/');
+$CONFIGURED = $CLIENT_ID !== '' && $CLIENT_SECRET !== '' && $ALLOWED_IDS;
 
 header('X-Robots-Tag: noindex, nofollow');
 header('Cache-Control: no-store');
@@ -31,7 +42,7 @@ header('Referrer-Policy: same-origin');
 header("Content-Security-Policy: default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; frame-ancestors 'none'");
 
 session_name('ks_control');
-session_set_cookie_params(['lifetime' => 0, 'path' => dirname($_SERVER['SCRIPT_NAME'] ?? '/') ?: '/', 'secure' => !empty($_SERVER['HTTPS']), 'httponly' => true, 'samesite' => 'Strict']);
+session_set_cookie_params(['lifetime' => 0, 'path' => dirname($_SERVER['SCRIPT_NAME'] ?? '/') ?: '/', 'secure' => !empty($_SERVER['HTTPS']), 'httponly' => true, 'samesite' => 'Lax']); // Lax: the session must survive the redirect back from github.com
 session_start();
 if (empty($_SESSION['csrf'])) $_SESSION['csrf'] = bin2hex(random_bytes(16));
 
@@ -95,8 +106,8 @@ const KIND_LABELS = [
     'stimmt' => 'Stimmt so', 'stimmt_nicht' => 'Stimmt nicht', 'genauer' => 'Weiß es genauer',
     'ergaenzung' => 'Ergänzung', 'korrektur' => 'Korrektur', 'hinweis' => 'Hinweis',
 ];
-const OUTCOME_LABELS = ['saved' => 'gespeichert', 'exported' => 'abgeholt', 'honeypot' => 'Bot abgefangen'];
-const ACTION_LABELS = ['speichern' => 'Antwort', 'export' => 'Abholung'];
+const OUTCOME_LABELS = ['saved' => 'gespeichert', 'exported' => 'abgeholt', 'honeypot' => 'Bot abgefangen', 'signed_in' => 'angemeldet', 'denied' => 'kein Zutritt'];
+const ACTION_LABELS = ['speichern' => 'Antwort', 'export' => 'Abholung', 'control_signin' => 'Anmeldung Überblick'];
 
 function targetTitle(array $targets, string $id): string {
     if ($id === 'VORGEHEN') return 'Wie wir vorgehen';
@@ -104,26 +115,83 @@ function targetTitle(array $targets, string $id): string {
 }
 function targetLink(string $id): string { return './#' . ($id === 'VORGEHEN' ? 'vorgehen' : rawurlencode($id)); }
 
-// ---------- login / logout ----------
+// ---------- GitHub sign-in / sign-out ----------
 
-$loginError = '';
-if (($_POST['do'] ?? '') === 'login') {
-    if (strlen($PASSWORD) >= MIN_PASSWORD_LENGTH && hash_equals($PASSWORD, (string)($_POST['password'] ?? ''))) {
-        session_regenerate_id(true);
-        $_SESSION['signed_in'] = true;
-        header('Location: ' . strtok($_SERVER['REQUEST_URI'] ?? 'control.php', '?'), true, 303);
-        exit;
-    }
-    sleep(2);
-    $loginError = 'Das Passwort stimmt nicht.';
+function pageUrl(): string {
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+    return $scheme . '://' . $host . strtok($_SERVER['REQUEST_URI'] ?? '/control.php', '?');
 }
+function redirectTo(string $url): void { header('Location: ' . $url, true, 303); exit; }
+
+/** Minimal HTTPS client (curl if available, otherwise streams). Returns decoded JSON or null. */
+function httpJson(string $url, array $headers, ?array $form = null): ?array {
+    $headers[] = 'Accept: application/json';
+    $headers[] = 'User-Agent: kleines-schaeferrad-control';
+    if (function_exists('curl_init')) {
+        $ch = curl_init($url);
+        curl_setopt_array($ch, [CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 15, CURLOPT_HTTPHEADER => $headers]);
+        if ($form !== null) { curl_setopt($ch, CURLOPT_POST, true); curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($form)); }
+        $body = curl_exec($ch);
+        curl_close($ch);
+    } else {
+        $opts = ['method' => $form !== null ? 'POST' : 'GET', 'timeout' => 15, 'ignore_errors' => true, 'header' => implode("\r\n", $headers)];
+        if ($form !== null) { $opts['header'] .= "\r\nContent-Type: application/x-www-form-urlencoded"; $opts['content'] = http_build_query($form); }
+        $body = @file_get_contents($url, false, stream_context_create(['http' => $opts]));
+    }
+    $data = is_string($body) ? json_decode($body, true) : null;
+    return is_array($data) ? $data : null;
+}
+
+/** One line in the shared API log, so sign-ins show up next to the other reports. */
+function logSignIn(string $outcome, string $login): void {
+    global $DATA_DIR;
+    $dir = $DATA_DIR . '/log';
+    if (!is_dir($dir)) @mkdir($dir, 0775, true);
+    $entry = ['time' => gmdate('Y-m-d\TH:i:s\Z'), 'action' => 'control_signin', 'method' => 'GET', 'status' => $outcome === 'signed_in' ? 200 : 403,
+        'outcome' => $outcome, 'name' => $login, 'user_agent' => mb_substr((string)($_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 200)];
+    @file_put_contents($dir . '/' . gmdate('Y-m-d') . '.jsonl', json_encode($entry, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . "\n", FILE_APPEND | LOCK_EX);
+}
+
+$signInError = '';
+if ($CONFIGURED && ($_GET['signin'] ?? '') === 'github') {
+    $_SESSION['oauth_state'] = bin2hex(random_bytes(16));
+    redirectTo($GITHUB_WEB . '/login/oauth/authorize?' . http_build_query([
+        'client_id' => $CLIENT_ID, 'redirect_uri' => pageUrl(), 'state' => $_SESSION['oauth_state'], 'allow_signup' => 'false',
+    ]));
+}
+if ($CONFIGURED && isset($_GET['code'], $_GET['state'])) {
+    $expected = (string)($_SESSION['oauth_state'] ?? '');
+    unset($_SESSION['oauth_state']);
+    if ($expected === '' || !hash_equals($expected, (string)$_GET['state'])) {
+        $signInError = 'Die Anmeldung ist abgelaufen. Bitte noch einmal versuchen.';
+    } else {
+        $token = httpJson($GITHUB_WEB . '/login/oauth/access_token', [], [
+            'client_id' => $CLIENT_ID, 'client_secret' => $CLIENT_SECRET, 'code' => (string)$_GET['code'], 'redirect_uri' => pageUrl(),
+        ])['access_token'] ?? '';
+        $user = $token ? httpJson($GITHUB_API . '/user', ['Authorization: Bearer ' . $token]) : null;
+        if (!$user || empty($user['id'])) {
+            $signInError = 'GitHub hat die Anmeldung nicht bestätigt. Bitte noch einmal versuchen.';
+        } elseif (!in_array((int)$user['id'], $ALLOWED_IDS, true)) {
+            logSignIn('denied', (string)($user['login'] ?? ''));
+            $signInError = 'Mit dem GitHub-Konto „' . ($user['login'] ?? '') . '“ geht es hier leider nicht hinein. Der Überblick ist nur für Johannes und Thorsten.';
+        } else {
+            session_regenerate_id(true);
+            $_SESSION['user'] = ['id' => (int)$user['id'], 'login' => (string)$user['login'], 'name' => (string)($user['name'] ?? '')];
+            logSignIn('signed_in', (string)$user['login']);
+            redirectTo(pageUrl());
+        }
+    }
+}
+if (isset($_GET['error']) && !$signInError) $signInError = 'Die Anmeldung bei GitHub wurde abgebrochen.';
 if (($_POST['do'] ?? '') === 'logout' && hash_equals($_SESSION['csrf'], (string)($_POST['csrf'] ?? ''))) {
     $_SESSION = [];
     session_destroy();
-    header('Location: ' . strtok($_SERVER['REQUEST_URI'] ?? 'control.php', '?'), true, 303);
-    exit;
+    redirectTo(pageUrl());
 }
-$signedIn = !empty($_SESSION['signed_in']);
+$currentUser = $_SESSION['user'] ?? null;
+// Allowlist is re-checked on every request, so removing an ID locks out open sessions after the next deploy.
+$signedIn = $CONFIGURED && is_array($currentUser) && in_array((int)($currentUser['id'] ?? 0), $ALLOWED_IDS, true);
 
 // ---------- data ----------
 
@@ -242,9 +310,9 @@ td.was .wert { font-weight: 700; }
 .anmeldung { max-width: 380px; margin: 14vh auto 0; background: var(--flaeche); border: 1px solid var(--linie); border-radius: 10px; padding: 28px; }
 .anmeldung h1 { font: 700 var(--m5)/1.1 var(--serif); margin: 0 0 6px; }
 .anmeldung p { margin: 0 0 18px; color: var(--leise); font-size: var(--m2); }
-.anmeldung input { width: 100%; padding: 9px 12px; border: 1px solid var(--linie); border-radius: 6px; background: var(--papier); margin-bottom: 12px; }
-.anmeldung button { width: 100%; padding: 9px; border: 0; border-radius: 6px; background: var(--wasser); color: var(--papier); font-weight: 600; cursor: pointer; }
-.fehlertext { color: var(--roetel); font-size: var(--m2); margin: 0 0 12px; }
+.github-knopf { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 10px; border-radius: 6px; background: var(--tinte); color: var(--papier); font-weight: 600; text-decoration: none; }
+.github-knopf:hover { background: var(--wasser); }
+.anmeldung .fehlertext { color: var(--roetel); font-size: var(--m2); margin: 0 0 12px; }
 @media (max-width: 720px) {
   .leiste nav { margin-left: 0; }
   .tabelle-rahmen { overflow: visible; border: 0; background: none; }
@@ -261,26 +329,23 @@ td.was .wert { font-weight: 700; }
 <body>
 <?php if (!$signedIn): ?>
 <main>
-  <form class="anmeldung" method="post">
+  <div class="anmeldung">
     <h1>Überblick</h1>
-    <?php if (strlen($PASSWORD) < MIN_PASSWORD_LENGTH): ?>
-      <p>Diese Seite ist noch nicht eingerichtet. Es fehlt das Passwort (GitHub-Secret <code>KS_CONTROL_PASSWORD</code>, mindestens 12 Zeichen). Danach einmal neu veröffentlichen.</p>
+    <?php if (!$CONFIGURED): ?>
+      <p>Diese Seite ist noch nicht eingerichtet. Es fehlen die Zugangsdaten der GitHub-App (Secrets <code>KS_GITHUB_CLIENT_ID</code> und <code>KS_GITHUB_CLIENT_SECRET</code>). Danach einmal neu veröffentlichen.</p>
     <?php else: ?>
-      <p>Wer hat was wann eingebracht – und was hat die Schnittstelle gemeldet. Nur für Johannes.</p>
-      <?php if ($loginError): ?><p class="fehlertext"><?= h($loginError) ?></p><?php endif; ?>
-      <input type="hidden" name="do" value="login">
-      <label class="leise" for="pw" style="font-size:var(--m1)">Passwort</label>
-      <input id="pw" type="password" name="password" autocomplete="current-password" autofocus required>
-      <button type="submit">Anmelden</button>
+      <p>Wer hat was wann eingebracht – und was hat die Schnittstelle gemeldet. Für Johannes und Thorsten, Anmeldung mit dem GitHub-Konto.</p>
+      <?php if ($signInError): ?><p class="fehlertext"><?= h($signInError) ?></p><?php endif; ?>
+      <a class="github-knopf" href="?signin=github"><svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>Mit GitHub anmelden</a>
     <?php endif; ?>
     <p style="margin:18px 0 0"><a href="./">Zum Cockpit</a></p>
-  </form>
+  </div>
 </main>
 <?php else: ?>
 <main>
   <header class="leiste">
     <h1>Überblick der Beiträge</h1>
-    <span class="leise" style="font-size:var(--m2)">schaeferrad.jdistlr.de</span>
+    <span class="leise" style="font-size:var(--m2)">angemeldet als <?= h(($currentUser['name'] ?? '') ?: $currentUser['login']) ?> (<?= h($currentUser['login']) ?>)</span>
     <nav>
       <a href="./">Cockpit</a>
       <a href="?format=csv">Als Tabelle herunterladen</a>

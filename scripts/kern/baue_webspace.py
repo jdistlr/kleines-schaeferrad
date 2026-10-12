@@ -4,9 +4,10 @@
 Aufruf: python scripts/kern/baue_webspace.py [--ziel <ordner>]      (Standard: dist-webspace/)
 
 - Das Cockpit wird mit --api api.php gebaut, liegt also neben der Schnittstelle (gleiche Herkunft).
-- konfig.php entsteht nur, wenn KS_EXPORT_SCHLUESSEL oder KS_CONTROL_PASSWORD gesetzt ist (in der Veröffentlichung aus den Secrets).
-- control.php ist die passwortgeschützte Übersicht für Johannes; targets.json (Titel zu Kern-IDs) und
-  build.json (veröffentlichter Commit) sind ihre Hilfsdateien.
+- konfig.php entsteht nur, wenn KS_EXPORT_SCHLUESSEL oder die GitHub-App-Daten (KS_GITHUB_CLIENT_ID,
+  KS_GITHUB_CLIENT_SECRET) gesetzt sind (in der Veröffentlichung aus den Secrets).
+- control.php ist der Überblick mit GitHub-Anmeldung, nur für CONTROL_GITHUB_USERS; targets.json
+  (Titel zu Kern-IDs) und build.json (veröffentlichter Commit) sind seine Hilfsdateien.
 - impressum.html entsteht nur, wenn KS_IMPRESSUM (HTML, aus dem Secret) gesetzt ist; vorerst keines.
   Das Impressum steht nie im öffentlichen Repository.
 - Der Ordner daten/ enthält nur die .htaccess; Antworten auf dem Server werden nie überschrieben.
@@ -19,6 +20,8 @@ import sys
 from datetime import datetime, timezone
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+# Who may open control.php: numeric GitHub user IDs (a renamed or reclaimed login cannot get in).
+CONTROL_GITHUB_USERS = {"jdistlr": 1959022, "ThorstenHalsch": 72215618}
 
 
 def load_list(name, key):
@@ -79,8 +82,10 @@ def main():
     config = {}
     if os.environ.get("KS_EXPORT_SCHLUESSEL"):
         config["export_schluessel"] = os.environ["KS_EXPORT_SCHLUESSEL"]
-    if os.environ.get("KS_CONTROL_PASSWORD"):
-        config["control_password"] = os.environ["KS_CONTROL_PASSWORD"]
+    if os.environ.get("KS_GITHUB_CLIENT_ID") and os.environ.get("KS_GITHUB_CLIENT_SECRET"):
+        config["github_client_id"] = os.environ["KS_GITHUB_CLIENT_ID"]
+        config["github_client_secret"] = os.environ["KS_GITHUB_CLIENT_SECRET"]
+        config["allowed_github_ids"] = sorted(CONTROL_GITHUB_USERS.values())
     if config:
         with open(os.path.join(ziel, "konfig.php"), "w", encoding="utf-8") as f:
             f.write("<?php return json_decode(<<<'KONFIG'\n" + json.dumps(config) + "\nKONFIG, true);\n")
