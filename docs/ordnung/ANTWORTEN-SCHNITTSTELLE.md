@@ -53,7 +53,7 @@ Empfehlungen für die spätere Umsetzung:
   - Beim Tippen werden bereits verwendete Namen vorgeschlagen, öffentlich nur als **Vorname**. Gibt es denselben Vornamen mehrfach, wird ergänzt: erst Anfangsbuchstabe des Nachnamens („Thorsten H.“), reicht das nicht, weitere Buchstaben oder ein Kürzel.
   - Unordnung ist in Kauf genommen: Beim Einsammeln ordnet Claude Schreibvarianten derselben Person zu (Namensliste neben den Antworten, nicht im Kern); unklare Fälle entscheidet Johannes. Erst danach wird eine Antwort zur Aussage mit Person im Kern.
 - **Spamschutz ohne Hürde:** unsichtbares Fangfeld und Begrenzung pro Minute; kein Vereinscode, keine Rätselfrage.
-- **Recht:** Impressum und Datenschutzhinweis auf der Subdomain; Hinweis beim ersten Antworten, dass Name und Antwort gespeichert und für die Bestandsaufnahme verwendet werden.
+- **Recht:** Datenschutzhinweis auf der Subdomain; ein Impressum vorerst nicht (Entscheidung Johannes, 12.10.2026), vorbereitet über das Secret `KS_IMPRESSUM`; Hinweis beim ersten Antworten, dass Name und Antwort gespeichert und für die Bestandsaufnahme verwendet werden.
 
 ## Anforderungen vom 12.10.2026 (Johannes): wandernder Fragenkatalog, viele Stimmen
 
