@@ -352,7 +352,7 @@ const Speicher = {
   melde() { this.hoerer.forEach(f => f()); },
   async start() {
     if (K.api) return this.ladeServer();
-    if (typeof claude === "undefined" || !claude.use) return;
+    if (typeof claude === "undefined" || !claude.use) return this.ladeGithub();
     try {
       const db = await claude.use("db"); if (!db) return;
       const user = await claude.use("user");
@@ -368,6 +368,23 @@ const Speicher = {
       this.melde();
     } catch { this.modus = "lesen"; }
   },
+  // GitHub Pages: Antworten sind öffentliche Issues mit dem Label „antwort“. Lesen geht ohne Anmeldung,
+  // Schreiben öffnet ein vorausgefülltes Issue (GitHub-Konto nötig). Johannes und Claude sammeln sie ein.
+  GH: "jdistlr/kleines-schaeferrad",
+  async ladeGithub() {
+    this.modus = "github"; this.melde();
+    try {
+      const r = await fetch(`https://api.github.com/repos/${this.GH}/issues?state=all&per_page=100`, { headers: { Accept: "application/vnd.github+json" } });
+      if (!r.ok) throw new Error(String(r.status));
+      this.antworten = (await r.json()).map(i => {
+        const m = (i.body || "").match(/<!--\s*antwort([\s\S]*?)-->/), f = {};
+        if (m) m[1].split("\n").forEach(z => { const k = z.match(/^\s*(\w+):\s*(.*)$/); if (k) f[k[1]] = k[2].trim(); });
+        return { ziel: f.ziel, typ: f.typ, wert: f.wert || "", text: (i.body || "").replace(/<!--[\s\S]*?-->/, "").trim(), name: i.user?.login || "", am: i.created_at,
+          uebernommen: (i.labels || []).some(l => l.name === "im-kern"), link: i.html_url };
+      }).filter(a => a.ziel).sort((a, b) => a.am.localeCompare(b.am));
+      this.melde();
+    } catch { this.melde(); }
+  },
   async ladeServer() {
     try {
       const r = await fetch(K.api + "?aktion=liste", { credentials: "include" });
@@ -382,6 +399,12 @@ const Speicher = {
       const r = await fetch(K.api + "?aktion=speichern", { method: "POST", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify(eintrag) });
       if (!r.ok) throw new Error(String(r.status));
       return this.ladeServer();
+    }
+    if (this.modus === "github") {
+      const titel = `Antwort zu ${a.ziel}: ${(teile[a.ziel]?.name || fragen[a.ziel]?.frage || "").slice(0, 70)}`;
+      const body = `<!-- antwort\nziel: ${a.ziel}\ntyp: ${a.typ}\nwert: ${(a.wert || "").replace(/\n/g, " ")}\n-->\n${a.text || ""}\n\n_Aus dem Cockpit. Fotos können hier per Ziehen oder Einfügen angehängt werden._`;
+      window.open(`https://github.com/${this.GH}/issues/new?labels=antwort&title=${encodeURIComponent(titel)}&body=${encodeURIComponent(body)}`, "_blank", "noopener");
+      return "github";
     }
     throw new Error("nur lesen");
   },
@@ -546,14 +569,14 @@ function angabenTabelle(liste, id) {
 
 function antwortBereich(ziel, art) {
   const liste = Speicher.zu(ziel);
-  const vorhanden = liste.length ? liste.map(a => `<div class="antwort"><header><b>${esc(Speicher.name(a))}</b><span>${new Date(a.am).toLocaleString("de-DE", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}</span><span class="marker-art${a.typ === "stimmt_nicht" ? " nein" : ""}">${esc(TYPEN[a.typ] || a.typ || "")}</span>${a.uebernommen ? `<span class="status bestaetigt">im Wissenskern</span>` : ""}</header>${a.wert ? `<p><b>${esc(a.wert)}</b></p>` : ""}${a.text ? `<p>${esc(a.text)}</p>` : ""}</div>`).join("") : "";
+  const vorhanden = liste.length ? liste.map(a => `<div class="antwort"><header><b>${esc(Speicher.name(a))}</b><span>${new Date(a.am).toLocaleString("de-DE", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}</span><span class="marker-art${a.typ === "stimmt_nicht" ? " nein" : ""}">${esc(TYPEN[a.typ] || a.typ || "")}</span>${a.link ? `<a href="${esc(a.link)}" target="_blank" rel="noopener" style="font-size:var(--m1)">auf GitHub</a>` : ""}${a.uebernommen ? `<span class="status bestaetigt">im Wissenskern</span>` : ""}</header>${a.wert ? `<p><b>${esc(a.wert)}</b></p>` : ""}${a.text ? `<p>${esc(a.text)}</p>` : ""}</div>`).join("") : "";
   if (Speicher.modus === "lesen") return vorhanden + `<p class="nurlesen">Antworten und Ergänzungen gibt man in der Arbeitsfassung des Cockpits. Diese Seite ist zum Lesen.</p>`;
   const wahl = art === "frage" ? ["stimmt", "stimmt_nicht", "genauer"] : ["ergaenzung", "korrektur"];
   return vorhanden + `<form class="formular" id="antwort-form" data-ziel="${esc(ziel)}">
     <div class="wahl" role="group" aria-label="Art der Antwort">${wahl.map((w, i) => `<button type="button" data-typ="${w}" aria-pressed="${i === 0}">${TYPEN[w]}</button>`).join("")}</div>
     <label for="antwort-text">${art === "frage" ? "Was weißt du dazu?" : "Was möchtest du ergänzen?"}<textarea id="antwort-text" placeholder="${art === "frage" ? "Zum Beispiel: gemessen an der Innenkante, auf Höhe der Achse" : "Zum Beispiel: Die Keile werden von oben eingetrieben"}"></textarea></label>
     <div class="reihe"><label for="antwort-wert">Wert, falls es ein Maß ist<input id="antwort-wert" placeholder="z. B. 4,40 m"></label>${Speicher.modus === "server" ? `<label for="antwort-name">Dein Name<input id="antwort-name" autocomplete="name"></label>` : ""}</div>
-    <div class="reihe"><button class="knopf" type="submit">Antwort speichern</button><span class="leise" style="font-size:var(--m1)">Johannes übernimmt Antworten in den Wissenskern, Thorsten bestätigt sie.</span></div>
+    <div class="reihe"><button class="knopf" type="submit">${Speicher.modus === "github" ? "Weiter zu GitHub" : "Antwort speichern"}</button><span class="leise" style="font-size:var(--m1)">${Speicher.modus === "github" ? "GitHub öffnet die Antwort vorausgefüllt; dort Fotos anhängen und „Create“ tippen. Braucht ein GitHub-Konto." : "Johannes übernimmt Antworten in den Wissenskern, Thorsten bestätigt sie."}</span></div>
   </form>`;
 }
 
@@ -656,7 +679,8 @@ document.addEventListener("submit", async e => {
   if (!text && !wert && typ !== "stimmt") { $("#antwort-text").focus(); toast("Bitte kurz beschreiben, was du weißt."); return; }
   const knopf = fm.querySelector(".knopf"); knopf.disabled = true;
   try {
-    await Speicher.speichern({ ziel: fm.dataset.ziel, typ, text, wert, ...(Speicher.modus === "server" ? { name: $("#antwort-name")?.value.trim() || "" } : {}) });
+    const erg = await Speicher.speichern({ ziel: fm.dataset.ziel, typ, text, wert, ...(Speicher.modus === "server" ? { name: $("#antwort-name")?.value.trim() || "" } : {}) });
+    if (Speicher.modus === "github") { toast("GitHub ist geöffnet – dort absenden. Die Antwort erscheint danach hier."); knopf.disabled = false; return; }
     toast("Antwort gespeichert");
   } catch { toast("Speichern hat nicht geklappt. Bitte später noch einmal versuchen."); knopf.disabled = false; }
 });

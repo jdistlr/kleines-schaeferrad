@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """Veröffentlicht Forschungsseite und Cockpit von Hand auf GitHub Pages (Branch gh-pages).
 
-Keine GitHub Actions. Aufbau der veröffentlichten Seite:
-  /            Forschungsseite mit 3D-Werkstatt (Astro-Build, wie bisher: /, /feld/, /werkstatt/ …)
-  /cockpit/    Cockpit aus dem Wissenskern
+Keine GitHub Actions. Aufbau der veröffentlichten Seite (seit 12.10.2026):
+  /            Weiterleitung auf /cockpit/
+  /cockpit/    Cockpit aus dem Wissenskern (Arbeitsfassung für Thorsten; Antworten über GitHub-Issues)
+
+Astras Forschungsseite mit 3D-Werkstatt ist archiviert (Branch archiv/astra-forschungsseite-20261011,
+docs/ordnung/ARCHIV-FORSCHUNGSSEITE.md). Nur wenn sie ausdrücklich wieder veröffentlicht werden soll:
 
 Die Forschungsseite kommt aus einem fertigen Build:
   --seite <ordner>   bereits gebauter Ordner (z. B. ein entpacktes altes Pages-Artefakt)
-  sonst              npm run build (braucht installierte Abhängigkeiten) und dann dist/
+  --mit-forschungsseite  npm run build (braucht installierte Abhängigkeiten) und dann dist/
   --ohne-forschungsseite
                      Übergang, solange kein Build der Forschungsseite vorliegt: Unter / steht
                      dann nur eine Weiterleitung auf /cockpit/. Sobald gebaut werden kann,
@@ -31,7 +34,7 @@ WEITERLEITUNG = """<!doctype html>
 <meta http-equiv="refresh" content="0; url=cockpit/"><title>Kleines Schäferrad</title>
 <style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#edf1ec;color:#1c2726;font:17px/1.5 system-ui,sans-serif;padding:16px}
 a{color:#2b6a76}p{max-width:34ch}</style></head>
-<body><p>Weiter zum <a href="cockpit/">Cockpit des Kleinen Schäferrads</a>. Die Forschungsseite mit der 3D-Werkstatt wird neu gebaut.</p></body></html>
+<body><p>Weiter zum <a href="cockpit/">Cockpit des Kleinen Schäferrads</a>. Das Cockpit ist der Arbeitsstand der Bestandsaufnahme.</p></body></html>
 """
 
 
@@ -49,7 +52,7 @@ def main():
     if not sauber:
         sys.exit("kern/ oder scripts/kern/ haben ungespeicherte Änderungen. Erst committen, dann veröffentlichen.")
 
-    ohne = "--ohne-forschungsseite" in sys.argv
+    ohne = "--seite" not in sys.argv and "--mit-forschungsseite" not in sys.argv
     if ohne:
         seite = tempfile.mkdtemp()
         with open(os.path.join(seite, "index.html"), "w", encoding="utf-8") as f:
