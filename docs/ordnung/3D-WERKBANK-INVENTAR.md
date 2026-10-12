@@ -45,4 +45,5 @@ Mindestens alles aus der Tabelle oben. Dazu kommen:
 1. Jetzt erledigt: Bestandsaufnahme (diese Datei) und Brücke Modell ↔ Kern (`scripts/kern/modell_bruecke.py`).
 2. Nach den Antworten zu F-001, F-003, F-005 und F-034, also der Grundgeometrie: eine Parameterdatei, die aus dem Kern erzeugt wird und `hypothesis.parameters.json` ersetzt. Jeder Wert trägt dabei Kern-ID und Status.
 3. Danach das neue Modell schrittweise umstellen, zuerst Welle, Arme und Lager, dann Kranz und Kümpfe. Zum Schluss kommt der Aufbau-Ablauf.
-4. Parallel weitere Hero-Figuren: Welle mit Dorn, Schellen und Lagerschlitz; Krümmlingstoß mit Schetternbrett und Stoßkeil.
+4. Möglichkeiten und Ausbaustufen der Szene: [3D-VISION.md](3D-VISION.md).
+5. Parallel weitere Hero-Figuren: Welle mit Dorn, Schellen und Lagerschlitz; Krümmlingstoß mit Schetternbrett und Stoßkeil.
