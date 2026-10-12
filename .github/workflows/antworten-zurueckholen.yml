@@ -24,18 +24,22 @@ jobs:
               a.pop("ip", None)
               for f in a.get("dateien", []):
                   f["url"] = "https://schaeferrad.jdistlr.de/api.php?aktion=datei&id=" + f["id"]
-          json.dump({"hinweis": "Abzug der Webspace-Antworten. Erzeugt vom Workflow „Antworten zurückholen“. Nicht von Hand bearbeiten.",
-                     "antworten": d["antworten"]}, open("evidence/antworten/webspace.json", "w"), ensure_ascii=False, indent=2)
+          json.dump({"hinweis": "Abzug der Webspace-Antworten und Bestätigungen. Erzeugt vom Workflow „Antworten zurückholen“. Nicht von Hand bearbeiten.",
+                     "antworten": d["antworten"], "bestaetigungen": d.get("bestaetigungen", [])},
+                    open("evidence/antworten/webspace.json", "w"), ensure_ascii=False, indent=2)
           PY
+      - name: Bestätigungen von Johannes und Thorsten in den Kern übernehmen
+        run: python3 scripts/kern/apply_confirmations.py | tee /tmp/bestaetigungen.txt
       - name: Pull Request bei Änderungen
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          git diff --quiet -- evidence/antworten/webspace.json && git ls-files --error-unmatch evidence/antworten/webspace.json >/dev/null 2>&1 && exit 0
+          git diff --quiet -- evidence/antworten/webspace.json kern/angaben.json && git ls-files --error-unmatch evidence/antworten/webspace.json >/dev/null 2>&1 && exit 0
           zweig="antworten/webspace-$(date -u +%Y%m%d-%H%M)"
           git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$zweig"
-          git add evidence/antworten/webspace.json
-          git commit -m "Antworten vom Webspace ($(date -u +%d.%m.%Y %H:%M) UTC)"
+          git add evidence/antworten/webspace.json kern/angaben.json
+          git commit -m "Antworten und Bestätigungen vom Webspace ($(date -u "+%d.%m.%Y %H:%M") UTC)"
           git push origin "$zweig"
-          gh pr create --base main --head "$zweig" --title "Antworten vom Webspace" --body "Automatischer Abzug von schaeferrad.jdistlr.de. Übernahme in den Kern bleibt Handarbeit (AGENTS.md)."
+          { echo "Automatischer Abzug von schaeferrad.jdistlr.de."; echo; echo "Bestätigungen, die Johannes oder Thorsten angemeldet im Cockpit abgegeben haben, sind schon im Kern eingetragen (kern/angaben.json). Hinweise anderer Personen bleiben Hinweise (AGENTS.md)."; echo; echo '```'; cat /tmp/bestaetigungen.txt; echo '```'; } > /tmp/body.md
+          gh pr create --base main --head "$zweig" --title "Antworten und Bestätigungen vom Webspace" --body-file /tmp/body.md

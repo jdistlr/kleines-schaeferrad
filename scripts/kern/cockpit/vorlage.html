@@ -174,6 +174,14 @@ table.stueck { width: 100%; border-collapse: collapse; font-size: var(--m2); }
 .stimme-zeile { display: block; margin-top: 2px; }
 .stimme-zeile .ja { color: var(--eiche); font-weight: 500; }
 .stimme-zeile .nein { color: var(--roetel); font-weight: 500; }
+.stueck td.ok button.direkt[aria-pressed="true"] { background: var(--eiche); border-color: var(--eiche); color: var(--papier); }
+.stueck td.ok button.direkt:hover { color: var(--eiche); border-color: var(--eiche); }
+.stueck td.ok button.direkt[aria-pressed="true"]:hover { color: var(--papier); opacity: .85; }
+.anmeldung-leiste { display: flex; align-items: center; gap: 10px; font-size: var(--m2); white-space: nowrap; }
+.anmeldung-leiste .knopf-leise { padding: 0; color: var(--leise); }
+.anmeldung-leiste .knopf-leise:hover { color: var(--wasser); }
+.anmeldung-leiste .ich { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; }
+.punkt.gruen { background: var(--eiche); }
 .erklaerung { margin: 8px 0 0; font-size: var(--m1); color: var(--leise); }
 .zitatkarte { width: min(560px, 100%); max-height: 86vh; overflow-y: auto; background: var(--papier); color: var(--tinte); border-radius: 10px; padding: 22px 24px; box-shadow: 0 20px 60px rgb(0 0 0 / .35); }
 .zitatkarte h3 { font: 700 var(--m4)/1.25 var(--serif); margin: 0; }
@@ -344,6 +352,7 @@ table.angaben .belege img { width: 36px; height: 36px; }
   .app { display: block; height: auto; }
   .leiste { padding-block: 10px; position: sticky; top: 0; z-index: 20; flex-wrap: wrap; }
   .zaehler, .vorgehen-link { display: none; }
+  .anmeldung-leiste { margin-left: auto; font-size: var(--m1); }
   .suche { display: none; flex-basis: 100%; margin: 0; }
   .leiste.suche-offen .suche { display: block; }
   .arbeitsplatz { display: block; }
@@ -391,6 +400,7 @@ table.angaben .belege img { width: 36px; height: 36px; }
     <h1><a href="#" id="startlink">Kleines Schäferrad</a></h1>
     <nav class="zaehler" id="zaehler" aria-label="Stand"></nav>
     <a class="vorgehen-link" href="#vorgehen" data-gehe="vorgehen">Wie wir vorgehen</a>
+    <div class="anmeldung-leiste" id="anmeldung-leiste"></div>
     <div class="suche" role="search">
       <input id="suche" type="search" placeholder="Bauteil oder Frage suchen, z. B. Schetter" autocomplete="off" aria-label="Bauteil oder Frage suchen" aria-controls="treffer" aria-expanded="false">
       <ul class="treffer-liste" id="treffer" role="listbox" hidden></ul>
@@ -536,7 +546,7 @@ function oeffneZitat(aid, qid) {
     <h3>${esc(person || (q.art === "aussage" ? "Im Gespräch (wer, ist noch zu klären)" : q.titel || "Quelle"))}</h3>
     ${zitat ? `<blockquote>${esc(zitat)}</blockquote>` : `<p class="leise">${q.art === "aussage" ? "Diese Auskunft ist nicht wörtlich festgehalten, nur ihr Inhalt." : "Dazu gibt es keinen wörtlichen Auszug."}</p>`}
     ${a ? `<p class="eingetragen">Eingetragen als: <b>${esc(eig(a.eig))} = ${esc(wertText(a))}</b> <span class="leise">(${GUELT[a.guelt]})</span></p>` : ""}
-    <p class="knopfreihe">${q.text ? `<a href="#${q.id}" data-gehe="${q.id}" class="knopf-leise">Ganzes Protokoll lesen</a>` : ""}${a && Speicher.modus !== "lesen" ? `<button type="button" class="knopf-klein" data-bestaetige="${esc(a.id)}" data-typ="stimmt">✓ Stimmt</button><button type="button" class="knopf-klein" data-bestaetige="${esc(a.id)}" data-typ="stimmt_nicht">✗ Stimmt nicht</button>` : ""}</p>
+    <p class="knopfreihe">${q.text ? `<a href="#${q.id}" data-gehe="${q.id}" class="knopf-leise">Ganzes Protokoll lesen</a>` : ""}${a && darfBestaetigen() ? `<button type="button" class="knopf-klein" data-direkt="${esc(a.id)}" aria-pressed="${!!bestaetigtVon(a)}">${bestaetigtVon(a) ? "✓ Bestätigt – zurücknehmen" : "✓ Bestätigen"}</button>` : ""}${a && Speicher.modus !== "lesen" && !darfBestaetigen() ? `<button type="button" class="knopf-klein" data-bestaetige="${esc(a.id)}" data-typ="stimmt">✓ Stimmt</button><button type="button" class="knopf-klein" data-bestaetige="${esc(a.id)}" data-typ="stimmt_nicht">✗ Stimmt nicht</button>` : ""}</p>
     ${stelle && !zitat ? `<p class="leise" style="font-size:var(--m1)">Fundstelle: ${esc(stelle)}</p>` : ""}
   </div>`;
   f.setAttribute("aria-label", "Was gesagt wurde"); f.hidden = false; $("#bild-zu").focus();
@@ -558,7 +568,7 @@ function oeffneBestaetigung(aid, typ) {
     <label><span>Woher weißt du es? <span class="leise">(freiwillig)</span></span><textarea id="bestaetigung-text" placeholder="Zum Beispiel: selbst nachgemessen beim Aufbau 2025"></textarea></label>
     <label id="bestaetigung-wert-feld" ${typ === "stimmt" ? "hidden" : ""}>Richtiger Wert, falls du ihn weißt<input id="bestaetigung-wert" placeholder="z. B. 5,25 m"></label>
     ${server ? `<label>Dein Name<input id="bestaetigung-name" autocomplete="name" list="namen-liste-b" value="${esc(meinName())}" placeholder="z. B. Thorsten"><datalist id="namen-liste-b">${Speicher.vorschlaege.map(v => `<option value="${esc(v)}">`).join("")}</datalist></label><input type="text" id="bestaetigung-webseite" tabindex="-1" autocomplete="off" class="fangfeld" aria-hidden="true">` : ""}
-    <div class="reihe"><button class="knopf" type="submit">${Speicher.modus === "github" ? "Weiter zu GitHub" : "Absenden"}</button><span class="leise" style="font-size:var(--m1)">Bestätigt ist ein Wert, wenn Thorsten „Stimmt so“ sagt. Johannes trägt es danach in den Wissenskern ein.</span></div>
+    <div class="reihe"><button class="knopf" type="submit">${Speicher.modus === "github" ? "Weiter zu GitHub" : "Absenden"}</button><span class="leise" style="font-size:var(--m1)">Bestätigen können Thorsten und Johannes, wenn sie angemeldet sind. Dein Hinweis hilft ihnen dabei.</span></div>
   </form>`;
   f.setAttribute("aria-label", "Wert bestätigen"); f.hidden = false; $("#bestaetigung-text").focus();
   const taste = e => { if (e.key === "Escape") zu(); };
@@ -656,7 +666,12 @@ const Speicher = {
       roh.forEach(a => { a.kommentare = []; });
       this.antworten = [];
       roh.forEach(a => { const w = wurzel(a); if (w !== a) w.kommentare.push(a); else this.antworten.push(a); });
-      this.alleRoh = roh; this.modus = "server"; this.melde();
+      this.alleRoh = roh; this.modus = "server";
+      await Promise.all([
+        fetch(K.api + "?aktion=confirmations", { cache: "no-store" }).then(x => x.ok ? x.json() : []).then(l => { this.bestaetigungen = l; }).catch(() => {}),
+        fetch(K.api + "?aktion=me", { cache: "no-store", credentials: "same-origin" }).then(x => x.ok ? x.json() : {}).then(m => { this.ich = m.angemeldet ? m : null; }).catch(() => {}),
+      ]);
+      this.melde();
       fetch(K.api + "?aktion=namen").then(x => x.ok ? x.json() : []).then(n => { this.vorschlaege = n; const dl = $("#namen-liste"); if (dl) dl.innerHTML = n.map(v => `<option value="${esc(v)}">`).join(""); }).catch(() => {});
     } catch { this.modus = "lesen"; this.melde(); }
   },
@@ -678,6 +693,19 @@ const Speicher = {
       return "github";
     }
     throw new Error("nur lesen");
+  },
+  bestaetigungen: [], ich: null,
+  // Letzte Entscheidung von Johannes oder Thorsten zu einem Wert (bestätigt oder zurückgenommen)
+  live(ziel) { for (let i = this.bestaetigungen.length - 1; i >= 0; i--) if (this.bestaetigungen[i].ziel === ziel) return this.bestaetigungen[i]; return null; },
+  async bestaetige(ziel, aktion, text = "") {
+    const r = await fetch(K.api + "?aktion=confirm", { method: "POST", credentials: "same-origin", headers: { "Content-Type": "application/json", "X-CSRF-Token": this.ich?.token || "" }, body: JSON.stringify({ ziel, aktion, text }) });
+    let d = {}; try { d = await r.json(); } catch {}
+    if (!r.ok) throw new Error(d.fehler || String(r.status));
+    this.bestaetigungen.push(d); this.melde(); return d;
+  },
+  async abmelden() {
+    try { await fetch(K.api + "?aktion=signout", { method: "POST", credentials: "same-origin", headers: { "X-CSRF-Token": this.ich?.token || "" } }); } catch {}
+    this.ich = null; this.melde();
   },
   zu(ziel) { return this.antworten.filter(a => a.ziel === ziel || (a.betrifft_auch || []).includes(ziel)); },
   vorschlaege: [],
@@ -812,7 +840,15 @@ function setzeFilter(k) { filter = k; try { localStorage.setItem(FILTER_KEY, k);
 
 // ---------- Leiste oben und unten ----------
 const auftraege = () => nach(offen.filter(f => auftragVon(f.hinweis)), f => (ruht(f) ? 0 : 100) + (hatSpur(f) ? 50 : 0) + gewicht(f));
+function zeichneAnmeldung() {
+  const el = $("#anmeldung-leiste"); if (!el) return;
+  if (Speicher.modus !== "server") { el.innerHTML = ""; return; }
+  el.innerHTML = Speicher.ich
+    ? `<span class="ich" title="Angemeldet mit GitHub (${esc(Speicher.ich.login)})"><i class="punkt gruen"></i>${esc(vorname(Speicher.ich.person) || Speicher.ich.login)}</span><button type="button" class="knopf-leise" data-abmelden>Abmelden</button>`
+    : `<button type="button" class="knopf-leise" data-anmelden title="Für Thorsten und Johannes: mit GitHub anmelden, um Werte zu bestätigen">Anmelden</button>`;
+}
 function zeichneZaehler() {
+  zeichneAnmeldung();
   const spuren = offen.filter(hatSpur).length, a = auftraege().length;
   $("#zaehler").innerHTML = `<a href="#fragen" data-filter-gehe="alle"><b>${offen.length}</b> offene Fragen</a>${spuren ? `<button type="button" class="neu" data-filter-gehe="neu"><b>${spuren}</b> neue Spuren</button>` : ""}${a ? `<a href="#messliste" class="mess" data-gehe="messliste"><b>${erledigtZahl()}/${a}</b> Messliste</a>` : ""}`;
   const t = $('#tabs [data-tab="fragen"]'); if (t && !t.querySelector(".anzahl") && spuren) t.insertAdjacentHTML("beforeend", `<span class="anzahl">${spuren}</span>`);
@@ -864,9 +900,16 @@ function stueckliste(liste, bezugId, mitAbgleich = null) {
   return `<table class="stueck"><tbody>${liste.map(a => `<tr>
     <td class="mass">${esc(eig(a.eig))}${bez(a) ? `<small>${esc(bez(a))}</small>` : ""}</td>
     <td class="wert">${esc(wertText(a).replace(" (Einheit nicht angegeben)", ""))}${mitAbgleich ? abgleich(a, mitAbgleich) : ""}</td>
-    <td class="herkunft${a.guelt === "bestaetigt" ? " bestaetigt" : ""}" title="${esc(a.id)}">${GRUND[a.grund]}${wertText(a).includes("(Einheit nicht angegeben)") ? ", ohne Einheit" : ""} · ${GUELT[a.guelt]}${stimmenZeile(a.id)}</td>
-    <td>${belege(a, 3)}</td>${Speicher.modus !== "lesen" ? `<td class="ok"><button type="button" data-bestaetige="${esc(a.id)}" data-typ="stimmt" aria-label="Stimmt so" title="Stimmt so">✓</button><button type="button" data-bestaetige="${esc(a.id)}" data-typ="stimmt_nicht" aria-label="Stimmt nicht" title="Stimmt nicht">✗</button></td>` : ""}</tr>`).join("")}</tbody></table>${Speicher.modus !== "lesen" ? `<p class="erklaerung">„offen“ heißt: Thorsten hat den Wert noch nicht bestätigt. Mit ✓ oder ✗ sagst du, ob er stimmt.</p>` : ""}`;
+    <td class="herkunft${bestaetigtVon(a) ? " bestaetigt" : ""}" title="${esc(a.id)}">${GRUND[a.grund]}${wertText(a).includes("(Einheit nicht angegeben)") ? ", ohne Einheit" : ""} · ${bestaetigtVon(a) ? "bestätigt" + (bestaetigtVon(a).person ? " von " + esc(vorname(bestaetigtVon(a).person)) : "") : GUELT[a.guelt === "bestaetigt" ? "offen" : a.guelt]}${bestaetigtVon(a)?.live && a.grund === "muendlich" && !a.von ? ` <a href="#F-007" data-gehe="F-007" title="Im Kern erst, wenn klar ist, wer es gesagt hat">· wartet auf F-007</a>` : ""}${stimmenZeile(a.id)}</td>
+    <td>${belege(a, 3)}</td>${Speicher.modus !== "lesen" ? `<td class="ok">${darfBestaetigen() ? `<button type="button" class="direkt" data-direkt="${esc(a.id)}" aria-pressed="${!!bestaetigtVon(a)}" aria-label="${bestaetigtVon(a) ? "Bestätigung zurücknehmen" : "Bestätigen"}" title="${bestaetigtVon(a) ? "Bestätigung zurücknehmen" : "Bestätigen"}">✓</button>` : `<button type="button" data-bestaetige="${esc(a.id)}" data-typ="stimmt" aria-label="Stimmt so" title="Stimmt so">✓</button>`}<button type="button" data-bestaetige="${esc(a.id)}" data-typ="stimmt_nicht" aria-label="Stimmt nicht" title="Stimmt nicht">✗</button></td>` : ""}</tr>`).join("")}</tbody></table>${Speicher.modus !== "lesen" ? `<p class="erklaerung">${darfBestaetigen() ? `Du bist als ${esc(vorname(Speicher.ich.person))} angemeldet: ✓ bestätigt den Wert sofort, noch einmal tippen nimmt es zurück. ✗ schreibt einen Hinweis.` : "„offen“ heißt: Thorsten oder Johannes haben den Wert noch nicht bestätigt. Mit ✓ oder ✗ gibst du ihnen einen Hinweis."}</p>` : ""}`;
 }
+// Bestätigt ist ein Wert, wenn der Kern es sagt oder Johannes/Thorsten es angemeldet bestätigt haben (neuere Entscheidung zählt).
+function bestaetigtVon(a) {
+  const l = Speicher.live(a.id);
+  if (l) return l.aktion === "bestaetigt" ? { person: l.person, am: l.am, live: true } : null;
+  return a.guelt === "bestaetigt" ? { person: a.best?.von, am: a.best?.am, live: false } : null;
+}
+const darfBestaetigen = () => !!Speicher.ich?.person;
 function stimmenZeile(aid) {
   const l = Speicher.zu(aid).filter(x => x.typ === "stimmt" || x.typ === "stimmt_nicht" || x.typ === "genauer");
   if (!l.length) return "";
@@ -894,7 +937,7 @@ function start() {
       <li>Schema, nicht maßstäblich. Land rechts.</li>
     </ul>
     <p class="einstieg">Tippe ein Teil am Rad an oder wähle ${istHandy() ? "unten unter „Fragen“" : "links"} eine Frage.</p>
-    <p class="kennzeile"><span><b>${S.angaben}</b> Angaben</span><span><b>${best}</b> bestätigt</span><span><b>${neuSeitAbbau}</b> seit dem Abbau neu</span><span><b>${messAus}/${messfotos.length}</b> Messfotos ausgewertet</span><span>Abgebaut am 10.10.2026, Teile im Lager</span></p>
+    <p class="kennzeile"><span><b>${S.angaben}</b> Angaben</span><span><b>${K.angaben.filter(a => bestaetigtVon(a)).length}</b> bestätigt</span><span><b>${neuSeitAbbau}</b> seit dem Abbau neu</span><span><b>${messAus}/${messfotos.length}</b> Messfotos ausgewertet</span><span>Abgebaut am 10.10.2026, Teile im Lager</span></p>
     ${istSchmal() ? `<div class="kontext-unten">${startSpalte(mitSpur, a)}</div>` : ""}
     ${fuss()}</div>`;
   kontext.innerHTML = istSchmal() ? "" : startSpalte(mitSpur, a);
@@ -1148,6 +1191,16 @@ document.addEventListener("click", e => {
   const fg = e.target.closest("[data-figur]"); if (fg) { oeffneFigur(fg.dataset.figur); return; }
   const zi = e.target.closest("[data-zitat]"); if (zi) { oeffneZitat(zi.dataset.zitat, zi.dataset.quelle); return; }
   const be = e.target.closest("[data-bestaetige]"); if (be) { oeffneBestaetigung(be.dataset.bestaetige, be.dataset.typ); return; }
+  if (e.target.closest("[data-anmelden]")) { location.href = "control.php?signin=github&return=" + encodeURIComponent("./" + location.hash); return; }
+  if (e.target.closest("[data-abmelden]")) { Speicher.abmelden().then(() => toast("Abgemeldet.")); return; }
+  const dk = e.target.closest("[data-direkt]"); if (dk) {
+    const a = angabenById[dk.dataset.direkt], war = !!bestaetigtVon(a);
+    dk.disabled = true;
+    Speicher.bestaetige(a.id, war ? "zurueckgenommen" : "bestaetigt")
+      .then(() => { const f = $("#bildfenster"); if (!f.hidden) { f.hidden = true; f.innerHTML = ""; } toast(war ? "Bestätigung zurückgenommen." : `Bestätigt: ${eig(a.eig)} = ${wertText(a)}`); })
+      .catch(err => { dk.disabled = false; toast(err.message || "Das hat nicht geklappt."); });
+    return;
+  }
   const kl = e.target.closest("[data-klemme]"); if (kl) { const t = $("#" + kl.dataset.klemme); t.classList.toggle("offen"); kl.textContent = t.classList.contains("offen") ? "Weniger" : "Weiterlesen"; return; }
   const af = e.target.closest("[data-alle-fotos]"); if (af) { const r = $("#belegraster", af.parentElement) || af.previousElementSibling; r.insertAdjacentHTML("beforeend", fotoVorrat.slice(+af.dataset.alleFotos, 80).map(q => fotoKachel(q, false)).join("")); af.remove(); return; }
   const sn = e.target.closest("[data-schnell]"); if (sn) {

@@ -5,6 +5,6 @@ Options -Indexes
   RewriteCond %{HTTPS} !=on
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
-<FilesMatch "^(konfig\.php|.*\.tmp)$">
+<FilesMatch "^(konfig\.php|session\.php|.*\.tmp)$">
   Require all denied
 </FilesMatch>

@@ -10,6 +10,10 @@
  *   POST api.php?aktion=speichern        neue Antwort (multipart/form-data oder JSON)
  *   GET  api.php?aktion=datei&id=…       angehängtes Foto oder Sprachnachricht
  *   GET  api.php?aktion=export&schluessel=…   alles für die Übernahme ins Repository
+ *   GET  api.php?aktion=me               wer angemeldet ist (nur Johannes und Thorsten können sich anmelden)
+ *   GET  api.php?aktion=confirmations    alle Bestätigungen von Werten (öffentlich)
+ *   POST api.php?aktion=confirm          Wert bestätigen oder Bestätigung zurücknehmen (nur angemeldet)
+ *   POST api.php?aktion=signout          abmelden
  *
  * Speichern und Export schreiben je Aufruf eine Zeile nach daten/log/YYYY-MM-DD.jsonl
  * (Ansicht: control.php). Neuer Code nutzt englische Bezeichner (AGENTS.md).
@@ -28,6 +32,9 @@ const ANKER = '/^(VORGEHEN|[A-Z][A-Z0-9]*(?:-[A-Za-z0-9_]+)+)$/';
 
 $DATEN = __DIR__ . '/daten';
 $KONFIG = is_file(__DIR__ . '/konfig.php') ? require __DIR__ . '/konfig.php' : [];
+require __DIR__ . '/session.php';
+// Claims that can be confirmed (kern/angaben.json IDs)
+const CLAIM_ID = '/^(AN-\d{8}-\d{2}|TH-\d{8}-\d{2}|CLAIM-\d{4})$/';
 const LOG_KEEP_DAYS = 180;
 $REQUEST_LOG = ['started' => microtime(true)];
 
@@ -35,8 +42,8 @@ $REQUEST_LOG = ['started' => microtime(true)];
 function logRequest(int $status, $payload): void {
     global $REQUEST_LOG, $DATEN, $KONFIG;
     $action = $_GET['aktion'] ?? '';
-    if (!in_array($action, ['speichern', 'export'], true)) return;
-    $outcome = $REQUEST_LOG['outcome'] ?? ($status < 300 ? ($action === 'export' ? 'exported' : 'saved') : (string)($payload['fehler'] ?? 'error'));
+    if (!in_array($action, ['speichern', 'export', 'confirm'], true)) return;
+    $outcome = $REQUEST_LOG['outcome'] ?? ($status < 300 ? ($action === 'export' ? 'exported' : ($action === 'confirm' ? 'confirmed' : 'saved')) : (string)($payload['fehler'] ?? 'error'));
     $ip = $_SERVER['REMOTE_ADDR'] ?? '';
     $entry = [
         'time' => gmdate('Y-m-d\TH:i:s\Z'),
@@ -106,6 +113,17 @@ function alle(string $DATEN): array {
 function oeffentlich(array $a): array {
     unset($a['ip'], $a['geraet']);
     return $a;
+}
+
+/** All confirmations, oldest first. */
+function allConfirmations(string $dir): array {
+    $list = [];
+    foreach (glob($dir . '/bestaetigungen/*/*/*.json') ?: [] as $f) {
+        $c = json_decode((string)file_get_contents($f), true);
+        if (is_array($c) && !empty($c['id'])) $list[] = $c;
+    }
+    usort($list, fn($x, $y) => strcmp($x['am'] ?? '', $y['am'] ?? ''));
+    return $list;
 }
 
 /** Vorname, bei mehreren verschiedenen Personen gleichen Vornamens mit Nachnamensergänzung. */
@@ -208,7 +226,42 @@ if ($aktion === 'datei' && $methode === 'GET') {
 if ($aktion === 'export' && $methode === 'GET') {
     $soll = (string)($KONFIG['export_schluessel'] ?? '');
     if (strlen($soll) < 16 || !hash_equals($soll, (string)($_GET['schluessel'] ?? ''))) fehler(403, 'Kein Zugriff');
-    antwort(200, ['erzeugt' => gmdate('c'), 'antworten' => alle($DATEN)]);
+    antwort(200, ['erzeugt' => gmdate('c'), 'antworten' => alle($DATEN), 'bestaetigungen' => allConfirmations($DATEN)]);
+}
+
+// ---------- Bestätigungen durch Johannes und Thorsten ----------
+if ($aktion === 'confirmations' && $methode === 'GET') antwort(200, allConfirmations($DATEN));
+
+if ($aktion === 'me' && $methode === 'GET') {
+    if (!startSession(true)) antwort(200, ['angemeldet' => false]);
+    $who = currentAuthority($KONFIG);
+    antwort(200, $who ? ['angemeldet' => true, 'login' => $who['login'], 'name' => $who['name'], 'person' => $who['person'], 'token' => $_SESSION['csrf']] : ['angemeldet' => false]);
+}
+
+if ($aktion === 'signout' && $methode === 'POST') {
+    if (startSession(true) && hash_equals((string)($_SESSION['csrf'] ?? ''), (string)($_SERVER['HTTP_X_CSRF_TOKEN'] ?? ''))) { $_SESSION = []; session_destroy(); }
+    antwort(200, ['angemeldet' => false]);
+}
+
+if ($aktion === 'confirm' && $methode === 'POST') {
+    if (!startSession(true)) fehler(401, 'Bitte zuerst anmelden.');
+    $who = currentAuthority($KONFIG);
+    if (!$who || $who['person'] === '') fehler(403, 'Bestätigen können nur Johannes und Thorsten, angemeldet mit GitHub.');
+    if (!hash_equals((string)$_SESSION['csrf'], (string)($_SERVER['HTTP_X_CSRF_TOKEN'] ?? ''))) fehler(403, 'Die Seite ist veraltet. Bitte neu laden.');
+    $e = json_decode((string)file_get_contents('php://input'), true) ?: [];
+    $ziel = einzeilig($e['ziel'] ?? '', 40);
+    $REQUEST_LOG['target'] = $ziel; $REQUEST_LOG['name'] = $who['login'];
+    if (!preg_match(CLAIM_ID, $ziel)) fehler(400, 'Unbekannter Wert');
+    $was = ($e['aktion'] ?? '') === 'zurueckgenommen' ? 'zurueckgenommen' : 'bestaetigt';
+    $jetzt = new DateTimeImmutable('now', new DateTimeZone('UTC'));
+    $c = [
+        'id' => 'B-' . $jetzt->format('Ymd-His') . '-' . bin2hex(random_bytes(3)),
+        'ziel' => $ziel, 'aktion' => $was, 'person' => $who['person'], 'github' => $who['login'],
+        'name' => $who['name'] ?: $who['login'], 'am' => $jetzt->format('Y-m-d\TH:i:s\Z'),
+        'text' => mehrzeilig($e['text'] ?? '', 1000),
+    ];
+    schreibe($DATEN . '/bestaetigungen/' . $jetzt->format('Y/m') . '/' . $c['id'] . '.json', json_encode($c, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
+    antwort(201, $c);
 }
 
 if ($aktion === 'speichern' && $methode === 'POST') {
