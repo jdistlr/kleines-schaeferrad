@@ -191,6 +191,11 @@ table.angaben .bezug { font-size: var(--m1); color: var(--leise); }
 .antwort header b { font-weight: 500; }
 .antwort header span { color: var(--leise); font-size: var(--m1); }
 .antwort p { margin: 4px 0 0; white-space: pre-wrap; }
+.antwort-bilder { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.antwort-bilder img { width: 96px; height: 96px; object-fit: cover; border-radius: 6px; display: block; background: var(--linie); }
+.kommentar { margin: 8px 0 0 14px; padding: 6px 0 0 12px; border-left: 2px solid var(--linie); }
+.kommentar header { display: flex; gap: 8px; font-size: var(--m1); }
+.kommentar header span { color: var(--leise); }
 .antwort header .marker-art { font-size: var(--m1); padding: 0 7px; border-radius: 3px; background: var(--wasser-hauch); color: var(--wasser); }
 .antwort header .marker-art.nein { background: var(--roetel-hauch); color: var(--roetel); }
 .formular { margin-top: 12px; padding: 14px; border: 1px solid var(--linie); border-radius: 8px; background: var(--flaeche); display: grid; gap: 10px; }
@@ -395,16 +400,39 @@ const Speicher = {
   // Schreiben öffnet ein vorausgefülltes Issue (GitHub-Konto nötig). Johannes und Claude sammeln sie ein.
   GH: "jdistlr/kleines-schaeferrad",
   async ladeGithub() {
-    this.modus = "github"; this.melde();
+    this.modus = "github";
+    // Zuerst der Abzug aus dem Repository (evidence/antworten/antworten.json): sofort da, mit Kommentaren,
+    // ohne GitHub-Abfragegrenze. Danach live nur, was neu oder geändert ist.
+    const abzug = new Map((K.antwortenAbzug || []).map(a => [a.nr, a]));
+    this.antworten = [...abzug.values()]; this.melde();
+    const BILD = /!\[[^\]]*\]\((https?:\/\/[^)\s]+)\)|<img[^>]+src="(https?:\/\/[^"]+)"/g;
+    const bilder = t => [...(t || "").matchAll(BILD)].map(m => m[1] || m[2]);
+    const ohneBilder = t => (t || "").replace(BILD, "").trim();
+    const hole = async url => { const r = await fetch(url, { headers: { Accept: "application/vnd.github+json" } }); if (!r.ok) throw new Error(String(r.status)); return r.json(); };
     try {
-      const r = await fetch(`https://api.github.com/repos/${this.GH}/issues?state=all&per_page=100`, { headers: { Accept: "application/vnd.github+json" } });
-      if (!r.ok) throw new Error(String(r.status));
-      this.antworten = (await r.json()).map(i => {
-        const m = (i.body || "").match(/<!--\s*antwort([\s\S]*?)-->/), f = {};
-        if (m) m[1].split("\n").forEach(z => { const k = z.match(/^\s*(\w+):\s*(.*)$/); if (k) f[k[1]] = k[2].trim(); });
-        return { ziel: f.ziel, typ: f.typ, wert: f.wert || "", text: (i.body || "").replace(/<!--[\s\S]*?-->/, "").trim(), name: i.user?.login || "", am: i.created_at,
-          uebernommen: (i.labels || []).some(l => l.name === "im-kern"), link: i.html_url };
-      }).filter(a => a.ziel).sort((a, b) => a.am.localeCompare(b.am));
+      let issues = [];
+      for (let seite = 1; seite <= 5; seite++) {
+        const teil = await hole(`https://api.github.com/repos/${this.GH}/issues?state=all&per_page=100&page=${seite}`);
+        issues = issues.concat(teil); if (teil.length < 100) break;
+      }
+      let nachladen = 0;
+      const liste = [];
+      for (const i of issues) {
+        if (i.pull_request) continue;
+        const m = (i.body || "").match(/<!--\s*antwort([\s\S]*?)-->/); if (!m) continue;
+        const alt = abzug.get(i.number);
+        if (alt && alt.geaendert === i.updated_at) { liste.push(alt); continue; }
+        const f = {}; m[1].split("\n").forEach(z => { const k = z.match(/^\s*(\w+):\s*(.*)$/); if (k) f[k[1]] = k[2].trim(); });
+        const text = (i.body || "").replace(/<!--[\s\S]*?-->/, "").replace("_Aus dem Cockpit. Fotos können hier per Ziehen oder Einfügen angehängt werden._", "").trim();
+        let kommentare = alt?.kommentare || [];
+        if (i.comments && i.comments !== kommentare.length && nachladen < 8) {
+          nachladen++;
+          try { kommentare = (await hole(i.comments_url + "?per_page=100")).map(c => ({ name: c.user?.login || "", am: c.created_at, text: ohneBilder(c.body), bilder: bilder(c.body) })); } catch {}
+        }
+        liste.push({ nr: i.number, link: i.html_url, ziel: f.ziel, typ: f.typ, wert: f.wert || "", text: ohneBilder(text), bilder: bilder(text), name: i.user?.login || "", am: i.created_at, geaendert: i.updated_at,
+          uebernommen: (i.labels || []).some(l => l.name === "im-kern"), kommentare });
+      }
+      this.antworten = liste.filter(a => a.ziel).sort((a, b) => a.am.localeCompare(b.am));
       this.melde();
     } catch { this.melde(); }
   },
@@ -610,9 +638,11 @@ function angabenTabelle(liste, id) {
   return `<table class="angaben"><tbody>${reihen.filter(g => liste.some(a => a.grund === g)).map(g => `<tr class="gruppe"><td colspan="3">${GRUND_LANG[g]}</td></tr>` + liste.filter(a => a.grund === g).map(z).join("")).join("")}</tbody></table>`;
 }
 
+const datum = d => new Date(d).toLocaleString("de-DE", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+const antwortBilder = l => l?.length ? `<div class="antwort-bilder">${l.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener"><img src="${esc(u)}" alt="Angehängtes Bild" loading="lazy"></a>`).join("")}</div>` : "";
 function antwortBereich(ziel, art) {
   const liste = Speicher.zu(ziel);
-  const vorhanden = liste.length ? liste.map(a => `<div class="antwort"><header><b>${esc(Speicher.name(a))}</b><span>${new Date(a.am).toLocaleString("de-DE", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}</span><span class="marker-art${a.typ === "stimmt_nicht" ? " nein" : ""}">${esc(TYPEN[a.typ] || a.typ || "")}</span>${a.link ? `<a href="${esc(a.link)}" target="_blank" rel="noopener" style="font-size:var(--m1)">auf GitHub</a>` : ""}${a.uebernommen ? `<span class="status bestaetigt">im Wissenskern</span>` : ""}</header>${a.wert ? `<p><b>${esc(a.wert)}</b></p>` : ""}${a.text ? `<p>${esc(a.text)}</p>` : ""}</div>`).join("") : "";
+  const vorhanden = liste.length ? liste.map(a => `<div class="antwort"><header><b>${esc(Speicher.name(a))}</b><span>${new Date(a.am).toLocaleString("de-DE", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}</span><span class="marker-art${a.typ === "stimmt_nicht" ? " nein" : ""}">${esc(TYPEN[a.typ] || a.typ || "")}</span>${a.link ? `<a href="${esc(a.link)}" target="_blank" rel="noopener" style="font-size:var(--m1)">auf GitHub</a>` : ""}${a.uebernommen ? `<span class="status bestaetigt">im Wissenskern</span>` : ""}</header>${a.wert ? `<p><b>${esc(a.wert)}</b></p>` : ""}${a.text ? `<p>${esc(a.text)}</p>` : ""}${antwortBilder(a.bilder)}${(a.kommentare || []).map(k => `<div class="kommentar"><header><b>${esc(k.name)}</b><span>${datum(k.am)}</span></header>${k.text ? `<p>${esc(k.text)}</p>` : ""}${antwortBilder(k.bilder)}</div>`).join("")}</div>`).join("") : "";
   if (Speicher.modus === "lesen") return vorhanden + `<p class="nurlesen">Antworten und Ergänzungen gibt man in der Arbeitsfassung des Cockpits. Diese Seite ist zum Lesen.</p>`;
   const wahl = art === "frage" ? ["stimmt", "stimmt_nicht", "genauer"] : ["ergaenzung", "korrektur"];
   return vorhanden + `<form class="formular" id="antwort-form" data-ziel="${esc(ziel)}">

@@ -47,7 +47,7 @@ Nicht mehr: Nachträge an `state/NEXT-ASTRA-WORK-SESSION.md` oder andere Überga
 
 ## Veröffentlichung (GitHub Pages)
 
-- Unter https://jdistlr.github.io/kleines-schaeferrad/ liegt seit 12.10.2026 das **Cockpit** (`/cockpit/`, die Hauptadresse leitet dorthin). Es ist die Arbeitsfassung für Thorsten und das Team. Antworten entstehen dort als GitHub-Issues mit dem Label `antwort`; einsammeln mit `python scripts/kern/antworten_einsammeln.py`, nach Übernahme in den Kern Label `im-kern` setzen.
+- Unter https://jdistlr.github.io/kleines-schaeferrad/ liegt seit 12.10.2026 das **Cockpit** (`/cockpit/`, die Hauptadresse leitet dorthin). Es ist die Arbeitsfassung für Thorsten und das Team. Antworten entstehen dort als GitHub-Issues mit dem Label `antwort`; einsammeln mit `python scripts/kern/antworten_einsammeln.py` (`--offen` nur neue). Vor jeder Veröffentlichung `--sichern` ausführen und den Abzug `evidence/antworten/antworten.json` per PR committen; er ist Sicherung und erste Datenquelle des Cockpits. Nach Übernahme in den Kern Label `im-kern` setzen.
 - Astras **Forschungsseite mit 3D-Werkstatt ist archiviert**: Branch `archiv/astra-forschungsseite-20261011`, Beschreibung in `docs/ordnung/ARCHIV-FORSCHUNGSSEITE.md`. Nicht löschen, nicht weiterentwickeln; das neue Modell entsteht aus dem Kern.
 - `gh-pages` wird **nur** mit `npm run cockpit:pages` geschrieben, und nur aus einem sauberen Stand von `main` nach einem Merge. Nie von Hand bearbeiten, nie mergen, nie aus einem Arbeitsbranch veröffentlichen.
 - Veröffentlichen nur, wenn Johannes es im jeweiligen Auftrag ausdrücklich verlangt.

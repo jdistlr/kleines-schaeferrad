@@ -42,6 +42,15 @@ def vorschau(q):
     return "bilder/" + q["id"] + ".jpg"
 
 
+def antworten_abzug():
+    """Gesicherte Antworten (evidence/antworten/antworten.json), damit das Cockpit sie ohne GitHub-Abfrage zeigt."""
+    pfad = os.path.join(ROOT, "evidence", "antworten", "antworten.json")
+    if not os.path.exists(pfad):
+        return []
+    with open(pfad, encoding="utf-8") as f:
+        return json.load(f).get("antworten", [])
+
+
 def figuren():
     """Baut die Figuren aus figuren/figuren.json (helles und dunkles Thema) und legt sie unter cockpit/figuren/ ab.
 
@@ -103,6 +112,7 @@ def main():
                      "bildart": q.get("bildart"), "bild": vorschau(q)} for q in d["quellen"]],
         "api": api,
         "figuren": figuren(),
+        "antwortenAbzug": antworten_abzug(),
     }
     with open(os.path.join(HIER, "cockpit", "vorlage.html"), encoding="utf-8") as f:
         vorlage = f.read()

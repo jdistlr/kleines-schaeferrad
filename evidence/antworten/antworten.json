@@ -1,0 +1,4 @@
+{
+  "hinweis": "Abzug der Cockpit-Antworten (GitHub-Issues). Erzeugt von scripts/kern/antworten_einsammeln.py --sichern. Nicht von Hand bearbeiten.",
+  "antworten": []
+}
