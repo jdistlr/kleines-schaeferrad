@@ -46,7 +46,7 @@ Empfehlungen für die spätere Umsetzung:
 ## Entscheidungen vom 12.10.2026 (Johannes): Webspace statt Datenbank
 
 - **Ort:** eigene Subdomain bei UD Media; Cockpit und PHP-Schnittstelle unter derselben Adresse. GitHub Pages bleibt bis zum Umzug als Spiegel.
-- **Speicher:** keine Datenbank. Eine JSON-Datei je Antwort, nur anhängen, nie überschreiben (Korrektur = neue Antwort mit Verweis). Schreiben über Zwischendatei und Umbenennen. Fotos und Sprachnachrichten in eigenem Ordner, Fotos beim Hochladen verkleinert. Datenablage außerhalb des öffentlichen Webordners.
+- **Speicher:** keine Datenbank. Eine JSON-Datei je Antwort, nur anhängen, nie überschreiben (Korrektur = neue Antwort mit Verweis). Schreiben über Zwischendatei und Umbenennen. Fotos und Sprachnachrichten in eigenem Ordner, Fotos beim Hochladen verkleinert. Alles liegt im Webordner der Subdomain (Hobbyprojekt, Entscheidung Johannes); der Datenordner bekommt nur eine einzeilige `.htaccess`, die das direkte Aufrufen der Rohdateien verhindert.
 - **Transport:** Hinweg per SFTP nach jedem Merge in `main`; Rückweg: geschützter Export-Endpunkt, regelmäßig abgeholt, landet als Pull Request unter `evidence/antworten/`. Zugangsdaten nur in den GitHub-Secrets. Voraussetzung: Johannes lockert die Actions-Regel in `AGENTS.md` auf genau diese zwei Workflows (noch offen).
 - **Wer antwortet:** keine Konten, keine persönlichen Links. Name als **Freitext**, leer lassen erlaubt.
   - Das Gerät merkt sich den zuletzt eingegebenen Namen und füllt ihn vor.
