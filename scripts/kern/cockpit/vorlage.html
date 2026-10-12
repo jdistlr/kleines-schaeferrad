@@ -153,6 +153,7 @@ table.stueck { width: 100%; border-collapse: collapse; font-size: var(--m2); }
 .stueck .mass { width: 38%; }
 .stueck .mass small { display: block; color: var(--leise); font-size: var(--m1); }
 .stueck .wert { min-width: 130px; font: 500 var(--m3)/1.3 var(--serif); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.stueck .wert.text { font: 400 var(--m2)/1.45 var(--sans); }
 .stueck .herkunft { font-size: var(--m1); color: var(--leise); white-space: nowrap; }
 .stueck .herkunft.bestaetigt { color: var(--eiche); font-weight: 500; }
 .stueck .belege { margin-top: 0; flex-wrap: nowrap; }
@@ -166,17 +167,15 @@ table.stueck { width: 100%; border-collapse: collapse; font-size: var(--m2); }
 .zitat-knopf:hover { border-color: var(--wasser); }
 .belege .zitat-knopf { line-height: 1.5; background: var(--flaeche); border-color: var(--linie); border-radius: 999px; padding: 1px 9px 1px 7px; }
 .zitat-knopf svg { width: 11px; height: 11px; }
-.stueck td.ok { white-space: nowrap; padding-right: 0; }
-.stueck td.ok button { width: 30px; height: 28px; border: 1px solid var(--linie); background: var(--flaeche); border-radius: 6px; cursor: pointer; color: var(--leise); font-size: 14px; line-height: 1; }
-.stueck td.ok button + button { margin-left: 4px; }
-.stueck td.ok button:hover { color: var(--wasser); border-color: var(--wasser); }
-.stueck td.ok button[data-typ="stimmt_nicht"]:hover { color: var(--roetel); border-color: var(--roetel); }
+.stueck td.ok { white-space: nowrap; padding-right: 0; text-align: right; }
+.pruef { border: 1px solid var(--linie); background: var(--flaeche); border-radius: 999px; padding: 3px 12px; font-size: var(--m1); font-weight: 500; color: var(--wasser); cursor: pointer; white-space: nowrap; }
+.pruef:hover { border-color: var(--wasser); }
+.pruef.direkt { color: var(--eiche); }
+.pruef.direkt:hover { border-color: var(--eiche); }
+.pruef.direkt[aria-pressed="true"], .knopf-klein[aria-pressed="true"] { background: var(--eiche); border-color: var(--eiche); color: var(--papier); }
 .stimme-zeile { display: block; margin-top: 2px; }
 .stimme-zeile .ja { color: var(--eiche); font-weight: 500; }
 .stimme-zeile .nein { color: var(--roetel); font-weight: 500; }
-.stueck td.ok button.direkt[aria-pressed="true"] { background: var(--eiche); border-color: var(--eiche); color: var(--papier); }
-.stueck td.ok button.direkt:hover { color: var(--eiche); border-color: var(--eiche); }
-.stueck td.ok button.direkt[aria-pressed="true"]:hover { color: var(--papier); opacity: .85; }
 .anmeldung-leiste { display: flex; align-items: center; gap: 10px; font-size: var(--m2); white-space: nowrap; }
 .anmeldung-leiste .knopf-leise { padding: 0; color: var(--leise); }
 .anmeldung-leiste .knopf-leise:hover { color: var(--wasser); }
@@ -226,8 +225,8 @@ table.stueck { width: 100%; border-collapse: collapse; font-size: var(--m2); }
 /* Antwortleiste: bleibt am unteren Rand, solange man in der Frage liest */
 .antwortleiste { position: sticky; bottom: var(--tabs); z-index: 6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 32px calc(-1 * var(--rand)) 0; padding: 10px var(--rand); background: color-mix(in srgb, var(--papier) 90%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border-top: 1px solid var(--linie); }
 .antwortleiste > span { font-size: var(--m2); color: var(--leise); margin-right: 2px; }
-.antwortleiste button { border: 1px solid var(--linie); background: var(--flaeche); border-radius: 999px; padding: 6px 14px; cursor: pointer; font-weight: 500; }
-.antwortleiste button:hover { border-color: var(--wasser); color: var(--wasser); }
+.antwortleiste .haupt { border: 0; background: var(--wasser); color: var(--papier); border-radius: 999px; padding: 8px 20px; cursor: pointer; font-weight: 600; }
+.antwortleiste .haupt:hover { opacity: .9; }
 .antwortleiste .hinweise { margin-left: auto; font-size: var(--m1); color: var(--leise); background: none; border: 0; padding: 4px 0; font-weight: 400; }
 
 /* Antworten und Formular */
@@ -369,22 +368,24 @@ table.angaben .belege img { width: 36px; height: 36px; }
   .mitte h2 { font-size: 1.5rem; }
   .antwortleiste { flex-wrap: nowrap; gap: 6px; padding-block: 8px; }
   .antwortleiste > span { display: none; }
-  .antwortleiste button { flex: 1 1 auto; padding: 7px 8px; font-size: var(--m2); white-space: nowrap; }
-  .antwortleiste .hinweise { display: none; }
+  .antwortleiste .haupt { flex: 1 1 auto; }
+  .antwortleiste .hinweise { flex: none; }
   .kennzeile { gap: 2px 14px; }
-  .stueck .mass { width: auto; }
-  .stueck tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; border-top: 1px solid var(--linie); padding: 8px 0; }
-  .stueck td { border: 0; padding: 0; }
+  /* Stückliste auf dem Handy: Beschriftung, darunter Wert mit ✓/✗, Herkunft, Belege nebeneinander */
+  .stueck tbody, .stueck tr { display: block; }
+  .stueck tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "mass mass" "wert ok" "herk herk" "bel bel"; column-gap: 12px; row-gap: 3px; border-top: 1px solid var(--linie); padding: 10px 0; }
   .stueck tr:last-child { border-bottom: 1px solid var(--linie); }
-  .stueck tr:last-child td { border: 0; }
-  .stueck .wert { text-align: right; }
-  .stueck .herkunft { grid-column: 1; }
-  .stueck td:last-child { grid-column: 1 / -1; justify-self: end; max-width: 100%; }
-  .stueck td.ok { grid-column: 1 / -1; justify-self: end; margin-top: 4px; }
-  .stueck td:nth-child(4):not(:last-child) { grid-column: 1; justify-self: start; }
+  .stueck td, .stueck tr:last-child td { border: 0; padding: 0; min-width: 0; }
+  .stueck td.mass { grid-area: mass; width: auto; color: var(--leise); font-size: var(--m1); }
+  .stueck td.mass small { display: inline; }
+  .stueck td.mass small::before { content: " · "; }
+  .stueck td.wert { grid-area: wert; text-align: left; min-width: 0; }
+  .stueck td.herkunft { grid-area: herk; white-space: normal; }
+  .stueck td.bel { grid-area: bel; }
+  .stueck td.bel:empty { display: none; }
+  .stueck td.ok { grid-area: ok; align-self: start; }
+  .stueck .belege { flex-wrap: wrap; justify-content: flex-start; margin-top: 4px; }
   .zitatkarte { padding: 18px; }
-  .stueck td:last-child:empty { display: none; }
-  .stueck .belege { flex-wrap: wrap; justify-content: flex-end; margin-top: 4px; }
   .tabs { display: grid; grid-template-columns: repeat(4, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; height: var(--tabs); padding-bottom: env(safe-area-inset-bottom, 0px); background: var(--flaeche); border-top: 1px solid var(--linie); }
   .tabs button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: none; border: 0; font-size: 12px; color: var(--leise); cursor: pointer; position: relative; }
   .tabs svg { width: 22px; height: 22px; }
@@ -546,7 +547,7 @@ function oeffneZitat(aid, qid) {
     <h3>${esc(person || (q.art === "aussage" ? "Im Gespräch (wer, ist noch zu klären)" : q.titel || "Quelle"))}</h3>
     ${zitat ? `<blockquote>${esc(zitat)}</blockquote>` : `<p class="leise">${q.art === "aussage" ? "Diese Auskunft ist nicht wörtlich festgehalten, nur ihr Inhalt." : "Dazu gibt es keinen wörtlichen Auszug."}</p>`}
     ${a ? `<p class="eingetragen">Eingetragen als: <b>${esc(eig(a.eig))} = ${esc(wertText(a))}</b> <span class="leise">(${GUELT[a.guelt]})</span></p>` : ""}
-    <p class="knopfreihe">${q.text ? `<a href="#${q.id}" data-gehe="${q.id}" class="knopf-leise">Ganzes Protokoll lesen</a>` : ""}${a && darfBestaetigen() ? `<button type="button" class="knopf-klein" data-direkt="${esc(a.id)}" aria-pressed="${!!bestaetigtVon(a)}">${bestaetigtVon(a) ? "✓ Bestätigt – zurücknehmen" : "✓ Bestätigen"}</button>` : ""}${a && Speicher.modus !== "lesen" && !darfBestaetigen() ? `<button type="button" class="knopf-klein" data-bestaetige="${esc(a.id)}" data-typ="stimmt">✓ Stimmt</button><button type="button" class="knopf-klein" data-bestaetige="${esc(a.id)}" data-typ="stimmt_nicht">✗ Stimmt nicht</button>` : ""}</p>
+    <p class="knopfreihe">${q.text ? `<a href="#${q.id}" data-gehe="${q.id}" class="knopf-leise">Ganzes Protokoll lesen</a>` : ""}${a && darfBestaetigen() ? `<button type="button" class="knopf-klein" data-direkt="${esc(a.id)}" aria-pressed="${!!bestaetigtVon(a)}">${bestaetigtVon(a) ? "✓ Bestätigt" : "Bestätigen"}</button>` : ""}${a && Speicher.modus !== "lesen" && !darfBestaetigen() ? `<button type="button" class="knopf-klein" data-bestaetige="${esc(a.id)}" data-typ="">Prüfen</button>` : ""}</p>
     ${stelle && !zitat ? `<p class="leise" style="font-size:var(--m1)">Fundstelle: ${esc(stelle)}</p>` : ""}
   </div>`;
   f.setAttribute("aria-label", "Was gesagt wurde"); f.hidden = false; $("#bild-zu").focus();
@@ -564,13 +565,13 @@ function oeffneBestaetigung(aid, typ) {
     <h3>${esc(eig(a.eig))}: ${esc(wertText(a))}</h3>
     <p class="leise" style="margin:4px 0 0;font-size:var(--m2)">${GRUND_LANG[a.grund] || ""}${teile[a.ziel] ? " · " + esc(teile[a.ziel].name) : ""}</p>
     ${liste.length ? `<p class="stimmen" style="margin-top:10px">Schon gesagt: ${liste.map(x => `${esc(Speicher.name(x))} – ${esc(TYPEN[x.typ] || "Hinweis")}`).join("; ")}</p>` : ""}
-    <div class="wahl" role="group" aria-label="Deine Einschätzung" style="margin-top:12px">${["stimmt", "stimmt_nicht", "genauer"].map(t => `<button type="button" data-typ="${t}" aria-pressed="${t === typ}">${TYPEN[t]}</button>`).join("")}</div>
+    <div class="wahl" role="group" aria-label="Deine Einschätzung" style="margin-top:12px">${["stimmt", "stimmt_nicht", "genauer"].map(t => `<button type="button" data-typ="${t}" aria-pressed="${t === typ}">${{ stimmt: "Stimmt", stimmt_nicht: "Stimmt nicht", genauer: "Ich weiß es genauer" }[t]}</button>`).join("")}</div>
     <label><span>Woher weißt du es? <span class="leise">(freiwillig)</span></span><textarea id="bestaetigung-text" placeholder="Zum Beispiel: selbst nachgemessen beim Aufbau 2025"></textarea></label>
-    <label id="bestaetigung-wert-feld" ${typ === "stimmt" ? "hidden" : ""}>Richtiger Wert, falls du ihn weißt<input id="bestaetigung-wert" placeholder="z. B. 5,25 m"></label>
+    <label id="bestaetigung-wert-feld" ${typ !== "stimmt_nicht" && typ !== "genauer" ? "hidden" : ""}>Richtiger Wert, falls du ihn weißt<input id="bestaetigung-wert" placeholder="z. B. 5,25 m"></label>
     ${server ? `<label>Dein Name<input id="bestaetigung-name" autocomplete="name" list="namen-liste-b" value="${esc(meinName())}" placeholder="z. B. Thorsten"><datalist id="namen-liste-b">${Speicher.vorschlaege.map(v => `<option value="${esc(v)}">`).join("")}</datalist></label><input type="text" id="bestaetigung-webseite" tabindex="-1" autocomplete="off" class="fangfeld" aria-hidden="true">` : ""}
     <div class="reihe"><button class="knopf" type="submit">${Speicher.modus === "github" ? "Weiter zu GitHub" : "Absenden"}</button><span class="leise" style="font-size:var(--m1)">Bestätigen können Thorsten und Johannes, wenn sie angemeldet sind. Dein Hinweis hilft ihnen dabei.</span></div>
   </form>`;
-  f.setAttribute("aria-label", "Wert bestätigen"); f.hidden = false; $("#bestaetigung-text").focus();
+  f.setAttribute("aria-label", "Wert prüfen"); f.hidden = false; f.querySelector(".wahl button").focus();
   const taste = e => { if (e.key === "Escape") zu(); };
   const zu = () => { f.hidden = true; f.innerHTML = ""; f.setAttribute("aria-label", "Foto"); document.removeEventListener("keydown", taste); vorher?.focus?.(); };
   $("#bild-zu").onclick = zu; f.onclick = e => { if (e.target === f) zu(); }; document.addEventListener("keydown", taste);
@@ -579,6 +580,7 @@ function oeffneBestaetigung(aid, typ) {
     e.preventDefault();
     const fm = e.target, knopf = fm.querySelector(".knopf"), name = $("#bestaetigung-name")?.value.trim() || "";
     const t = fm.querySelector(".wahl [aria-pressed=true]")?.dataset.typ || typ;
+    if (!t) { toast("Bitte wählen: Stimmt, Stimmt nicht oder Ich weiß es genauer."); return; }
     knopf.disabled = true;
     if (server && name) { try { localStorage.setItem(NAME_KEY, name); } catch {} }
     try {
@@ -899,9 +901,9 @@ function stueckliste(liste, bezugId, mitAbgleich = null) {
   const bez = a => beziehungen[a.ziel] ? `${teile[beziehungen[a.ziel].von]?.name || ""} ${begriffe[beziehungen[a.ziel].art]?.name || ""} ${teile[beziehungen[a.ziel].zu]?.name || ""}` : a.ziel !== bezugId && teile[a.ziel] ? teile[a.ziel].name : "";
   return `<table class="stueck"><tbody>${liste.map(a => `<tr>
     <td class="mass">${esc(eig(a.eig))}${bez(a) ? `<small>${esc(bez(a))}</small>` : ""}</td>
-    <td class="wert">${esc(wertText(a).replace(" (Einheit nicht angegeben)", ""))}${mitAbgleich ? abgleich(a, mitAbgleich) : ""}</td>
+    <td class="wert${typeof a.wert === "string" && a.wert.length > 24 ? " text" : ""}">${esc(wertText(a).replace(" (Einheit nicht angegeben)", ""))}${mitAbgleich ? abgleich(a, mitAbgleich) : ""}</td>
     <td class="herkunft${bestaetigtVon(a) ? " bestaetigt" : ""}" title="${esc(a.id)}">${GRUND[a.grund]}${wertText(a).includes("(Einheit nicht angegeben)") ? ", ohne Einheit" : ""} · ${bestaetigtVon(a) ? "bestätigt" + (bestaetigtVon(a).person ? " von " + esc(vorname(bestaetigtVon(a).person)) : "") : GUELT[a.guelt === "bestaetigt" ? "offen" : a.guelt]}${bestaetigtVon(a)?.live && a.grund === "muendlich" && !a.von ? ` <a href="#F-007" data-gehe="F-007" title="Im Kern erst, wenn klar ist, wer es gesagt hat">· wartet auf F-007</a>` : ""}${stimmenZeile(a.id)}</td>
-    <td>${belege(a, 3)}</td>${Speicher.modus !== "lesen" ? `<td class="ok">${darfBestaetigen() ? `<button type="button" class="direkt" data-direkt="${esc(a.id)}" aria-pressed="${!!bestaetigtVon(a)}" aria-label="${bestaetigtVon(a) ? "Bestätigung zurücknehmen" : "Bestätigen"}" title="${bestaetigtVon(a) ? "Bestätigung zurücknehmen" : "Bestätigen"}">✓</button>` : `<button type="button" data-bestaetige="${esc(a.id)}" data-typ="stimmt" aria-label="Stimmt so" title="Stimmt so">✓</button>`}<button type="button" data-bestaetige="${esc(a.id)}" data-typ="stimmt_nicht" aria-label="Stimmt nicht" title="Stimmt nicht">✗</button></td>` : ""}</tr>`).join("")}</tbody></table>${Speicher.modus !== "lesen" ? `<p class="erklaerung">${darfBestaetigen() ? `Du bist als ${esc(vorname(Speicher.ich.person))} angemeldet: ✓ bestätigt den Wert sofort, noch einmal tippen nimmt es zurück. ✗ schreibt einen Hinweis.` : "„offen“ heißt: Thorsten oder Johannes haben den Wert noch nicht bestätigt. Mit ✓ oder ✗ gibst du ihnen einen Hinweis."}</p>` : ""}`;
+    <td class="bel">${belege(a, 3)}</td>${Speicher.modus !== "lesen" ? `<td class="ok">${darfBestaetigen() ? `<button type="button" class="pruef direkt" data-direkt="${esc(a.id)}" aria-pressed="${!!bestaetigtVon(a)}">${bestaetigtVon(a) ? "✓ Bestätigt" : "Bestätigen"}</button>` : `<button type="button" class="pruef" data-bestaetige="${esc(a.id)}" data-typ="">Prüfen</button>`}</td>` : ""}</tr>`).join("")}</tbody></table>${Speicher.modus !== "lesen" ? `<p class="erklaerung">${darfBestaetigen() ? `Du bist als ${esc(vorname(Speicher.ich.person))} angemeldet. „Bestätigen“ macht einen Wert gültig.` : "„offen“ heißt: Thorsten oder Johannes haben den Wert noch nicht bestätigt. Weißt du, ob er stimmt? Tippe auf „Prüfen“."}</p>` : ""}`;
 }
 // Bestätigt ist ein Wert, wenn der Kern es sagt oder Johannes/Thorsten es angemeldet bestätigt haben (neuere Entscheidung zählt).
 function bestaetigtVon(a) {
@@ -913,15 +915,16 @@ const darfBestaetigen = () => !!Speicher.ich?.person;
 function stimmenZeile(aid) {
   const l = Speicher.zu(aid).filter(x => x.typ === "stimmt" || x.typ === "stimmt_nicht" || x.typ === "genauer");
   if (!l.length) return "";
-  return `<span class="stimme-zeile">${l.slice(-3).map(x => `<span class="${x.typ === "stimmt" ? "ja" : "nein"}">${x.typ === "stimmt" ? "✓" : x.typ === "genauer" ? "≠" : "✗"} ${esc(Speicher.name(x))}</span>`).join(" ")}</span>`;
+  return `<span class="stimme-zeile">${l.slice(-3).map(x => `<span class="${x.typ === "stimmt" ? "ja" : "nein"}">${esc(Speicher.name(x))}: ${x.typ === "stimmt" ? "stimmt" : x.typ === "genauer" ? "weiß es genauer" : "stimmt nicht"}</span>`).join(", ")}</span>`;
 }
 
 // ---------- Antwortleiste ----------
 function antwortleiste(ziel, art) {
   const n = Speicher.zu(ziel).length;
-  const knoepfe = art === "frage" ? ["stimmt", "stimmt_nicht", "genauer"] : ["ergaenzung", "korrektur"];
-  if (Speicher.modus === "lesen") return n ? `<div class="antwortleiste"><button class="hinweise" type="button" data-zu-antworten>${n} ${n === 1 ? "Hinweis" : "Hinweise"} lesen</button></div>` : "";
-  return `<div class="antwortleiste"><span>${art === "frage" ? "Deine Antwort:" : "Du weißt mehr?"}</span>${knoepfe.map(t => `<button type="button" data-schnell="${t}">${TYPEN[t]}</button>`).join("")}${n ? `<button class="hinweise" type="button" data-zu-antworten>${n} ${n === 1 ? "Hinweis" : "Hinweise"}</button>` : ""}</div>`;
+  const lesen = n ? `<button class="hinweise" type="button" data-zu-antworten>${n} ${n === 1 ? "Antwort" : "Antworten"} lesen</button>` : "";
+  if (Speicher.modus === "lesen") return lesen ? `<div class="antwortleiste">${lesen}</div>` : "";
+  const text = { frage: "Antwort geben", bauteil: "Etwas ergänzen", quelle: "Etwas dazu sagen" }[art] || "Antwort geben";
+  return `<div class="antwortleiste"><button type="button" class="haupt" data-schnell>${text}</button>${lesen}</div>`;
 }
 
 // ---------- Start ----------
@@ -1039,9 +1042,9 @@ function quelleKarte(id) {
     ${q.text ? `<p class="wortlaut">${q.art === "aussage" ? `Gesprächsprotokoll${personen[q.person]?.name ? " mit " + esc(personen[q.person].name) : ""}${q.datum ? " vom " + esc(q.datum) : ""}. Wörtliche Aussagen sind eingerückt.` : esc(q.titel || "")}</p><div class="prosa protokoll">${md(q.text)}</div>` : ""}
     ${q.pfad && q.bild ? `<p class="wortlaut" style="font-size:var(--m2)"><a href="${REPO + encodeURI(q.pfad)}" target="_blank" rel="noopener">Original in voller Größe</a></p>` : ""}
     ${abschnitt("Was darauf gelesen wurde", l.length, l.length ? `<ul class="lesungen">${l.map(a => { const st = (a.quellen.find(([x]) => x === id) || [])[1]; const ziel = teile[a.ziel]?.name || ""; return `<li><span>${esc(eig(a.eig))}${ziel && a.ziel !== q.bauteil ? ` <small class="leise">(${esc(ziel)})</small>` : ""}</span><span class="w">${esc(wertText(a))}</span><span class="wo">${st ? "Stelle: " + esc(st) + " · " : ""}${GRUND[a.grund]}, ${GUELT[a.guelt]} · ${esc(a.id)}</span></li>`; }).join("")}</ul>` : `<p class="leer-text">Aus diesem Bild ist noch nichts abgelesen. Wer weiß, was es zeigt?</p>`)}
-    ${abschnitt("Stimmt das so?", "", `<p class="klein">Lesart prüfen, Bedeutung erklären oder ergänzen, was das Bild zeigt – auch ohne zu messen.</p>${antwortBereich(id, "frage")}`, "antworten")}
+    ${abschnitt("Was weißt du dazu?", "", `<p class="klein">Bedeutung erklären oder ergänzen, was das Bild zeigt – auch ohne zu messen. Einzelne abgelesene Werte prüfst du oben mit „Prüfen“.</p>${antwortBereich(id, "quelle")}`, "antworten")}
     ${istSchmal() && bez ? `<div class="kontext-unten">${quelleKontext(q, false)}</div>` : ""}
-    </div>${antwortleiste(id, "frage")}`;
+    </div>${antwortleiste(id, "quelle")}`;
   kontext.innerHTML = istSchmal() ? "" : quelleKontext(q, true);
   platziereRad("quelle", q.titel || q.id, bez ? bez.name : art);
 }
@@ -1078,12 +1081,11 @@ function antwortBereich(ziel, art) {
   const kopf = st.zahl ? `<p class="stimmen">${st.zahl} ${st.zahl === 1 ? "Hinweis" : "Hinweise"}${st.namen.length ? ": " + st.namen.map(esc).join(", ") : ""}${st.uneinig ? ` <span class="uneinig">uneinig</span>` : ""}</p>` : "";
   const vorhanden = kopf + liste.map(a => eintragHtml(a)).join("");
   if (Speicher.modus === "lesen") return vorhanden + `<p class="nurlesen">Antworten und Ergänzungen gibt man in der Arbeitsfassung des Cockpits. Diese Seite ist zum Lesen.</p>`;
-  const wahl = art === "frage" ? ["stimmt", "stimmt_nicht", "genauer"] : ["ergaenzung", "korrektur"];
+  const typ = art === "bauteil" ? "ergaenzung" : "hinweis";
   const server = Speicher.modus === "server";
   const wortlaut = fragen[ziel]?.frage || teile[ziel]?.name || quellen[ziel]?.titel || (ziel === "VORGEHEN" ? "Wie wir vorgehen" : ziel);
-  return vorhanden + `<form class="formular" id="antwort-form" data-ziel="${esc(ziel)}" data-wortlaut="${esc(wortlaut)}">
+  return vorhanden + `<form class="formular" id="antwort-form" data-ziel="${esc(ziel)}" data-typ="${typ}" data-wortlaut="${esc(wortlaut)}">
     <p class="antwort-auf" id="antwort-auf-anzeige" hidden></p><input type="hidden" id="antwort-auf">
-    <div class="wahl" role="group" aria-label="Art der Antwort">${wahl.map((w, i) => `<button type="button" data-typ="${w}" aria-pressed="${i === 0}">${TYPEN[w]}</button>`).join("")}</div>
     <label for="antwort-text">${art === "frage" ? "Was weißt du dazu?" : "Was möchtest du sagen?"}<textarea id="antwort-text" placeholder="${art === "frage" ? "Zum Beispiel: gemessen an der Innenkante, auf Höhe der Achse" : "Zum Beispiel: Die Keile werden von oben eingetrieben"}"></textarea></label>
     <div class="reihe"><label for="antwort-wert">Wert, falls es ein Maß ist<input id="antwort-wert" placeholder="z. B. 4,40 m"></label>${server ? `<label for="antwort-name">Dein Name<input id="antwort-name" autocomplete="name" list="namen-liste" value="${esc(meinName())}" placeholder="z. B. Thorsten"><datalist id="namen-liste">${Speicher.vorschlaege.map(v => `<option value="${esc(v)}">`).join("")}</datalist></label>` : ""}</div>
     ${server ? `<div class="reihe anhaenge"><label class="datei-knopf">Foto anhängen<input type="file" id="antwort-dateien" accept="image/*,audio/*" multiple hidden></label><button type="button" class="aufnahme-knopf" id="aufnahme">Sprachnachricht aufnehmen</button><span class="leise" id="anhang-info" style="font-size:var(--m1)"></span></div>
@@ -1195,6 +1197,7 @@ document.addEventListener("click", e => {
   if (e.target.closest("[data-abmelden]")) { Speicher.abmelden().then(() => toast("Abgemeldet.")); return; }
   const dk = e.target.closest("[data-direkt]"); if (dk) {
     const a = angabenById[dk.dataset.direkt], war = !!bestaetigtVon(a);
+    if (war && !confirm(`Bestätigung zurücknehmen?\n${eig(a.eig)} = ${wertText(a)}`)) return;
     dk.disabled = true;
     Speicher.bestaetige(a.id, war ? "zurueckgenommen" : "bestaetigt")
       .then(() => { const f = $("#bildfenster"); if (!f.hidden) { f.hidden = true; f.innerHTML = ""; } toast(war ? "Bestätigung zurückgenommen." : `Bestätigt: ${eig(a.eig)} = ${wertText(a)}`); })
@@ -1205,7 +1208,6 @@ document.addEventListener("click", e => {
   const af = e.target.closest("[data-alle-fotos]"); if (af) { const r = $("#belegraster", af.parentElement) || af.previousElementSibling; r.insertAdjacentHTML("beforeend", fotoVorrat.slice(+af.dataset.alleFotos, 80).map(q => fotoKachel(q, false)).join("")); af.remove(); return; }
   const sn = e.target.closest("[data-schnell]"); if (sn) {
     const form = $("#antwort-form"); if (!form) return;
-    form.querySelectorAll(".wahl button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.typ === sn.dataset.schnell)));
     form.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "end" });
     setTimeout(() => $("#antwort-text")?.focus({ preventScroll: true }), 350); return;
   }
@@ -1236,7 +1238,7 @@ document.addEventListener("submit", async e => {
   if (e.target.id !== "antwort-form") return;
   e.preventDefault();
   const fm = e.target, text = $("#antwort-text").value.trim(), wert = $("#antwort-wert").value.trim();
-  const typ = fm.querySelector(".wahl [aria-pressed=true]")?.dataset.typ;
+  const typ = fm.querySelector(".wahl [aria-pressed=true]")?.dataset.typ || fm.dataset.typ;
   if (!text && !wert && !anhaenge.length && typ !== "stimmt") { $("#antwort-text").focus(); toast("Bitte kurz beschreiben, was du weißt."); return; }
   const knopf = fm.querySelector(".knopf"); knopf.disabled = true;
   const server = Speicher.modus === "server", name = $("#antwort-name")?.value.trim() || "";
