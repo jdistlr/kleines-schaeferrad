@@ -310,10 +310,24 @@ table.angaben .belege img { width: 36px; height: 36px; }
 .bildfenster { position: fixed; inset: 0; z-index: 50; background: rgb(10 14 14 / .84); display: grid; place-items: center; padding: 24px 16px; }
 .bildfenster figure { margin: 0; max-width: min(960px, 100%); }
 .bildfenster img { max-width: 100%; max-height: 78vh; border-radius: 6px; display: block; margin: 0 auto; }
+.ablesungen { margin: 10px auto 0; max-width: 760px; background: #1f2826; border-radius: 8px; padding: 10px 12px; color: #e6ecea; font-size: var(--m2); }
+.ablesungen > b { display: block; font: 600 11px/1.4 var(--sans); letter-spacing: .09em; text-transform: uppercase; color: #b8c6c2; margin-bottom: 4px; }
+.ablesung { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 0; border-top: 1px solid rgb(255 255 255 / .12); }
+.ablesung:first-of-type { border-top: 0; }
+.ablesung.vorne .wert { color: #fff; }
+.ablesung .was { display: block; font-size: var(--m1); color: #b8c6c2; }
+.ablesung .wert { display: block; font: 500 var(--m3)/1.3 var(--serif); }
+.ablesungen .wo { display: block; font-size: var(--m1); color: #9fb0ac; }
+.ablesungen .pruef { background: rgb(255 255 255 / .1); border-color: rgb(255 255 255 / .3); color: #fff; flex: none; }
+.ablesungen .pruef.direkt[aria-pressed="true"] { background: var(--eiche); border-color: var(--eiche); }
+.pruef-belege { margin-top: 8px; }
+.pruef-belege .belege img { width: 64px; height: 64px; }
 .bildfenster figcaption { color: #e6ecea; font-size: var(--m2); margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
 .bildfenster a { color: #9fd0d8; }
 .bildfenster .abgelesen { display: block; width: 100%; color: #fff; font-size: var(--m3); }
 .bildfenster .betrachter { width: min(1100px, 100%); }
+.bildfenster { overflow-y: auto; background: rgb(10 14 14 / .94); }
+.betrachter:has(.ablesungen) .buehne { height: min(54vh, 680px); }
 .bildfenster iframe { display: block; width: min(980px, 100%); height: min(86vh, 900px); border: 0; border-radius: 6px; background: var(--papier); }
 .buehne { position: relative; height: min(72vh, 820px); overflow: hidden; display: grid; place-items: center; touch-action: none; cursor: grab; border-radius: 6px; background: rgb(0 0 0 / .25); }
 .buehne:active { cursor: grabbing; }
@@ -563,11 +577,12 @@ function oeffneBestaetigung(aid, typ) {
   f.innerHTML = `<button aria-label="Schließen" id="bild-zu">×</button><form class="zitatkarte formular-karte" id="bestaetigung-form" data-ziel="${esc(aid)}">
     <p class="augenbraue"><span>Stimmt dieser Wert?</span><span class="id">${esc(aid)}</span></p>
     <h3>${esc(eig(a.eig))}: ${esc(wertText(a))}</h3>
+    ${belege(a, 6) ? `<div class="pruef-belege">${belege(a, 6)}</div>` : ""}
     <p class="leise" style="margin:4px 0 0;font-size:var(--m2)">${GRUND_LANG[a.grund] || ""}${teile[a.ziel] ? " · " + esc(teile[a.ziel].name) : ""}</p>
     ${liste.length ? `<p class="stimmen" style="margin-top:10px">Schon gesagt: ${liste.map(x => `${esc(Speicher.name(x))} – ${esc(TYPEN[x.typ] || "Hinweis")}`).join("; ")}</p>` : ""}
     <div class="wahl" role="group" aria-label="Deine Einschätzung" style="margin-top:12px">${["stimmt", "stimmt_nicht", "genauer"].map(t => `<button type="button" data-typ="${t}" aria-pressed="${t === typ}">${{ stimmt: "Stimmt", stimmt_nicht: "Stimmt nicht", genauer: "Ich weiß es genauer" }[t]}</button>`).join("")}</div>
-    <label><span>Woher weißt du es? <span class="leise">(freiwillig)</span></span><textarea id="bestaetigung-text" placeholder="Zum Beispiel: selbst nachgemessen beim Aufbau 2025"></textarea></label>
-    <label id="bestaetigung-wert-feld" ${typ !== "stimmt_nicht" && typ !== "genauer" ? "hidden" : ""}>Richtiger Wert, falls du ihn weißt<input id="bestaetigung-wert" placeholder="z. B. 5,25 m"></label>
+    <label><span>Woher weißt du es? <span class="leise">(freiwillig)</span></span><textarea id="bestaetigung-text" placeholder="Zum Beispiel: Auf dem Foto steht der Zollstock bei 42, nicht bei 38."></textarea></label>
+    <label id="bestaetigung-wert-feld" ${typ !== "stimmt_nicht" && typ !== "genauer" ? "hidden" : ""}>Richtiger Wert<input id="bestaetigung-wert" placeholder="z. B. 0,42 m"></label>
     ${server ? `<label>Dein Name<input id="bestaetigung-name" autocomplete="name" list="namen-liste-b" value="${esc(meinName())}" placeholder="z. B. Thorsten"><datalist id="namen-liste-b">${Speicher.vorschlaege.map(v => `<option value="${esc(v)}">`).join("")}</datalist></label><input type="text" id="bestaetigung-webseite" tabindex="-1" autocomplete="off" class="fangfeld" aria-hidden="true">` : ""}
     <div class="reihe"><button class="knopf" type="submit">${Speicher.modus === "github" ? "Weiter zu GitHub" : "Absenden"}</button><span class="leise" style="font-size:var(--m1)">Bestätigen können Thorsten und Johannes, wenn sie angemeldet sind. Dein Hinweis hilft ihnen dabei.</span></div>
   </form>`;
@@ -1258,6 +1273,19 @@ const RAW = "https://raw.githubusercontent.com/jdistlr/kleines-schaeferrad/main/
 const DREH = "ks-drehung";
 const drehungVon = id => { try { return JSON.parse(localStorage.getItem(DREH) || "{}")[id] || 0; } catch { return 0; } };
 const merkeDrehung = (id, w) => { try { const d = JSON.parse(localStorage.getItem(DREH) || "{}"); if (w) d[id] = w; else delete d[id]; localStorage.setItem(DREH, JSON.stringify(d)); } catch {} };
+// Was aus einem Foto abgelesen wurde, mit dem Knopf zum Prüfen (oder Bestätigen für Johannes und Thorsten)
+function ablesungenAmFoto(qid, vorne) {
+  const liste = K.angaben.filter(a => (a.quellen || []).some(([q]) => q === qid));
+  if (!liste.length) return "";
+  liste.sort((x, y) => (y.id === vorne) - (x.id === vorne));
+  const knopf = a => Speicher.modus === "lesen" ? "" : darfBestaetigen()
+    ? `<button type="button" class="pruef direkt" data-direkt="${esc(a.id)}" aria-pressed="${!!bestaetigtVon(a)}">${bestaetigtVon(a) ? "✓ Bestätigt" : "Bestätigen"}</button>`
+    : `<button type="button" class="pruef" data-bestaetige="${esc(a.id)}" data-typ="" data-vom-foto="${esc(qid)}">Stimmt das?</button>`;
+  return `<div class="ablesungen"><b>Aus diesem Foto abgelesen</b>${liste.slice(0, 8).map(a => {
+    const st = (a.quellen.find(([q]) => q === qid) || [])[1];
+    return `<div class="ablesung${a.id === vorne ? " vorne" : ""}"><span><span class="was">${esc(eig(a.eig))}${teile[a.ziel] ? " · " + esc(teile[a.ziel].name) : ""}</span><span class="wert">${esc(wertText(a))}</span>${st ? `<span class="wo">abgelesen: ${esc(st)}</span>` : ""}</span>${knopf(a)}</div>`;
+  }).join("")}${liste.length > 8 ? `<span class="wo">und ${liste.length - 8} weitere – alle unter „Alles aus diesem Bild“</span>` : ""}</div>`;
+}
 function oeffneFoto(id, angabe, stelle) {
   const q = quellen[id], f = $("#bildfenster"), vorher = document.activeElement, an = angabenById[angabe];
   const gross = K.bilderPaket ? bildSrc(q) : q.bild;
@@ -1271,7 +1299,8 @@ function oeffneFoto(id, angabe, stelle) {
       <button data-bb="ein" aria-label="Vergrößern" title="Vergrößern (+)">+</button>
       <button data-bb="passen" title="Einpassen (0)">Einpassen</button>
     </div>
-    <figcaption>${an ? `<span class="abgelesen">${esc(eig(an.eig))}: ${esc(wertText(an))}${stelle ? " – abgelesen: " + esc(stelle) : ""}</span>` : ""}<span>${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}${q.bauteil && teile[q.bauteil] ? ", " + esc(teile[q.bauteil].name) : ""}</span><a href="#${q.id}" id="zur-quelle">Alles aus diesem Bild</a>${q.pfad ? `<a href="${REPO + encodeURI(q.pfad)}" target="_blank" rel="noopener">Original in voller Größe</a>` : ""}</figcaption></figure>`;
+    ${ablesungenAmFoto(id, angabe)}
+    <figcaption><span>${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}${q.bauteil && teile[q.bauteil] ? ", " + esc(teile[q.bauteil].name) : ""}</span><a href="#${q.id}" id="zur-quelle">Alles aus diesem Bild</a>${q.pfad ? `<a href="${REPO + encodeURI(q.pfad)}" target="_blank" rel="noopener">Original in voller Größe</a>` : ""}</figcaption></figure>`;
   f.hidden = false;
   const buehne = $("#buehne"), img = $("#bb-bild"), anzeige = $("#bb-zoom");
   const z = { s: 1, x: 0, y: 0, w: drehungVon(id) };
