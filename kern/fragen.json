@@ -21,7 +21,7 @@
       "entscheidet": "P-THORSTEN",
       "status": "offen",
       "antwort": [],
-      "hinweis": "Drehkreis mit Flügelbrettern 4,66–4,96 m. 4,40 m genügen nur, wenn die Balken mindestens 0,77–1,14 m über oder unter der Achse liegen. Herleitung: evidence/raw/Radstadt/MASSABGLEICH.md. Stand 12.10.2026: Liegt die Achse nur ≈ 0,35 m über den Radstadt-Balken (AN-20261012-30) und liegen alle Balken gleich hoch, braucht der Drehkreis eine lichte Weite von 4.61–4.91 m. Das spricht für 5,25 m (Zeichnung) und gegen 4,40 m – es sei denn, 4,40 m ist an anderer Stelle oder Höhe gemessen. Thorsten fragen, wo genau.",
+      "hinweis": "Drehkreis mit Flügelbrettern 4,66–4,96 m. 4,40 m genügen nur, wenn die Balken mindestens 0,77–1,14 m über oder unter der Achse liegen. Herleitung: evidence/raw/Radstadt/MASSABGLEICH.md. Stand 12.10.2026: Liegt die Achse nur ≈ 0,35 m über den Radstadt-Balken (AN-20261012-30) und liegen alle Balken gleich hoch, braucht der Drehkreis eine lichte Weite von 4.61–4.91 m. Das spricht für 5,25 m (Zeichnung) und gegen 4,40 m – es sei denn, 4,40 m ist an anderer Stelle oder Höhe gemessen. Thorsten fragen, wo genau. Messauftrag 12.10.2026: Lichte Weite der Radstadt parallel zum Ufer mit Maßband messen, Innenkante zu Innenkante, an beiden Enden (Land und Wasser) und, wenn möglich, auf Höhe der Balkenoberkante. Notieren, zwischen welchen Hölzern gemessen wurde. Ein Übersichtsfoto mit Maßband.",
       "herkunft": []
     },
     {
@@ -38,7 +38,7 @@
       "entscheidet": "P-THORSTEN",
       "status": "offen",
       "antwort": [],
-      "hinweis": "Bestimmt den Drehkreis.",
+      "hinweis": "Bestimmt den Drehkreis. Messauftrag 12.10.2026: An einem Flügelbrett messen: Länge, Breite, Lage der Befestigungslöcher; am Krümmling, wie weit das Brett über die Kranz-Außenkante hinaussteht (beim Aufbau, sonst aus Lochlage und Brettlänge).",
       "herkunft": []
     },
     {
@@ -58,7 +58,7 @@
       "entscheidet": "P-THORSTEN",
       "status": "offen",
       "antwort": [],
-      "hinweis": "Stand 12.10.2026: Landseitig liegt die Wellenmitte rund 0,31–0,38 m über der Oberkante des uferparallelen Radstadt-Balkens (AN-20261012-30, abgeleitet aus AN-20261012-27/28). Wasserseite und Mittigkeit noch offen.",
+      "hinweis": "Stand 12.10.2026: Landseitig liegt die Wellenmitte rund 0,31–0,38 m über der Oberkante des uferparallelen Radstadt-Balkens (AN-20261012-30, abgeleitet aus AN-20261012-27/28). Wasserseite und Mittigkeit noch offen. Messauftrag 12.10.2026: Wasserseite wie landseitig messen: Zollstock senkrecht auf den Radstadt-Balken unter dem Lagerbock, Oberkante Lagerklotz ablesen; dann im Schlitz von der Oberkante bis zum Schlitzgrund. Mit Wasserwaage oder Schlauchwaage prüfen, ob landseitiger und wasserseitiger Radstadt-Balken gleich hoch liegen. Je ein Foto mit Zollstock.",
       "herkunft": []
     },
     {
@@ -75,7 +75,7 @@
       "entscheidet": "P-THORSTEN",
       "status": "offen",
       "antwort": [],
-      "hinweis": "Befund Auffangtrog nennt dieselben Maße für den landseitigen Lagerbock. Stand 12.10.2026: Der wasserseitige Bock hat 14,5 cm starke Pfosten, aber einen 16,5 cm hohen Kopfbalken (AN-20261012-31/32); landseitig genannt sind 14 × 14 cm. Entweder sind die Böcke verschieden oder eine Angabe ist gerundet.",
+      "hinweis": "Befund Auffangtrog nennt dieselben Maße für den landseitigen Lagerbock. Stand 12.10.2026: Der wasserseitige Bock hat 14,5 cm starke Pfosten, aber einen 16,5 cm hohen Kopfbalken (AN-20261012-31/32); landseitig genannt sind 14 × 14 cm. Entweder sind die Böcke verschieden oder eine Angabe ist gerundet. Messauftrag 12.10.2026: Am landseitigen Lagerbock die Höhe des Kopfbalkens messen (wasserseitig 16,5 cm, genannt sind 14 × 14 cm).",
       "herkunft": []
     },
     {
@@ -94,7 +94,7 @@
       "entscheidet": "P-THORSTEN",
       "status": "offen",
       "antwort": [],
-      "hinweis": "scripts/audit-candidates.mjs schlägt deshalb seit ITER-003 fehl. Testannahme erst nach dieser Antwort ändern.",
+      "hinweis": "scripts/audit-candidates.mjs schlägt deshalb seit ITER-003 fehl. Testannahme erst nach dieser Antwort ändern. Messauftrag 12.10.2026: An der Welle die Armöffnungen messen: Breite und Höhe jeder Öffnung, Abstand der drei Öffnungen zueinander und zum Holzende (Skizze: 16 × 9, Versatz 25, mittlere 90 vom Ende). Ein Foto in jede Öffnung hinein.",
       "herkunft": []
     },
     {
@@ -258,7 +258,7 @@
       "entscheidet": "P-THORSTEN",
       "status": "offen",
       "antwort": [],
-      "hinweis": null,
+      "hinweis": "Messauftrag 12.10.2026: Im Lager Kümpfe und Flügelbretter zählen.",
       "herkunft": [
         "CLAIM-0339",
         "CLAIM-0340",
@@ -276,7 +276,7 @@
       "entscheidet": "P-THORSTEN",
       "status": "offen",
       "antwort": [],
-      "hinweis": "Stand 12.10.2026: Landseitig liegt der Dorn unten in einem offenen senkrechten Schlitz des Lagerklotzes (AN-20261012-26); der Schlitz sitzt nicht mittig im Klotz (AN-20261012-29). Dorn ≈ 7,5 cm stark, steht ≈ 17,5 cm über (AN-20261012-21/22).",
+      "hinweis": "Stand 12.10.2026: Landseitig liegt der Dorn unten in einem offenen senkrechten Schlitz des Lagerklotzes (AN-20261012-26); der Schlitz sitzt nicht mittig im Klotz (AN-20261012-29). Dorn ≈ 7,5 cm stark, steht ≈ 17,5 cm über (AN-20261012-21/22). Messauftrag 12.10.2026: Wasserseitigen Lagerklotz wie den landseitigen fotografieren: Schlitz von vorn mit senkrechtem Zollstock, Klotzlänge, Abstand des Schlitzes vom Klotzende.",
       "herkunft": [
         "CLAIM-0341",
         "GAP-06"
@@ -344,7 +344,7 @@
       "entscheidet": "P-THORSTEN",
       "status": "offen",
       "antwort": [],
-      "hinweis": null,
+      "hinweis": "Messauftrag 12.10.2026: Am Referenzkumpf Daubenstärke mit Messschieber und den Abstand der beiden Daubenbohrungen messen (Foto ergab ≈ 21 cm, Skizze 270).",
       "herkunft": [
         "CONFLICT-01",
         "CLAIM-0344"
@@ -432,7 +432,7 @@
       "entscheidet": "P-THORSTEN",
       "status": "offen",
       "antwort": [],
-      "hinweis": "Vermutlich kein Widerspruch: 14 cm ist die axiale Breite (entlang der Welle), 15 cm die radiale Kranzhöhe (213 − 198). Siehe evidence/raw/Radstadt/MASSABGLEICH.md; Bestätigung offen.",
+      "hinweis": "Vermutlich kein Widerspruch: 14 cm ist die axiale Breite (entlang der Welle), 15 cm die radiale Kranzhöhe (213 − 198). Siehe evidence/raw/Radstadt/MASSABGLEICH.md; Bestätigung offen. Messauftrag 12.10.2026: An einem Krümmling die radiale Höhe in der Mitte und an beiden Enden messen sowie die Sehnenlänge (Maßband gerade von Ende zu Ende).",
       "herkunft": [
         "CONFLICT-04",
         "CLAIM-0347"
@@ -733,7 +733,7 @@
       "entscheidet": "P-THORSTEN",
       "status": "offen",
       "antwort": [],
-      "hinweis": "Die Kerben sitzen in der Armmitte (AN-20261012-19). Ein starrer Arm, der durch die Welle geschoben wird, führt aber auf dem Weg seine volle Breite von 14 cm durch die Wellenmitte, wo schon der erste Arm liegt. Möglich wären eine bestimmte Reihenfolge, versetzte Armöffnungen (CLAIM-0004) oder die Kröpfung (AN-20261012-05). Rein geometrische Überlegung beim Ablesen der Fotos, keine Aussage.",
+      "hinweis": "Die Kerben sitzen in der Armmitte (AN-20261012-19). Ein starrer Arm, der durch die Welle geschoben wird, führt aber auf dem Weg seine volle Breite von 14 cm durch die Wellenmitte, wo schon der erste Arm liegt. Möglich wären eine bestimmte Reihenfolge, versetzte Armöffnungen (CLAIM-0004) oder die Kröpfung (AN-20261012-05). Rein geometrische Überlegung beim Ablesen der Fotos, keine Aussage. Messauftrag 12.10.2026: Die drei Arme einer Armzone so nebeneinanderlegen, wie sie in der Welle stecken (Mittelarm mit Hals in die Mitte). Fotografieren, wie die Kerben zueinander stehen, und erklären, welcher Arm zuerst eingeschoben wird.",
       "herkunft": []
     }
   ]
