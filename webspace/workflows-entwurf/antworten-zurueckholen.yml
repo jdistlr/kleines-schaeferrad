@@ -1,0 +1,46 @@
+# ENTWURF – noch nicht aktiv (siehe webspace-veroeffentlichen.yml).
+#
+# Holt die Antworten vom Webspace und legt sie als Pull Request unter evidence/antworten/webspace.json ab.
+# Fotos und Sprachnachrichten bleiben auf dem Server; die Datei enthält ihre Links.
+# Voraussetzung: Settings → Actions → General → „Allow GitHub Actions to create and approve pull requests“.
+name: Antworten zurückholen
+on:
+  schedule:
+    - cron: "17 */3 * * *"   # alle drei Stunden
+  workflow_dispatch:
+concurrency: antworten
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  holen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Export abrufen
+        env:
+          SCHLUESSEL: ${{ secrets.KS_EXPORT_SCHLUESSEL }}
+        run: |
+          curl -fsS --retry 3 "https://schaeferrad.jdistlr.de/api.php?aktion=export&schluessel=${SCHLUESSEL}" -o /tmp/export.json
+          python3 - <<'PY'
+          import json
+          d = json.load(open("/tmp/export.json"))
+          for a in d["antworten"]:
+              a.pop("ip", None)
+              for f in a.get("dateien", []):
+                  f["url"] = "https://schaeferrad.jdistlr.de/api.php?aktion=datei&id=" + f["id"]
+          json.dump({"hinweis": "Abzug der Webspace-Antworten. Erzeugt vom Workflow „Antworten zurückholen“. Nicht von Hand bearbeiten.",
+                     "antworten": d["antworten"]}, open("evidence/antworten/webspace.json", "w"), ensure_ascii=False, indent=2)
+          PY
+      - name: Pull Request bei Änderungen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git diff --quiet -- evidence/antworten/webspace.json && git ls-files --error-unmatch evidence/antworten/webspace.json >/dev/null 2>&1 && exit 0
+          zweig="antworten/webspace-$(date -u +%Y%m%d-%H%M)"
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$zweig"
+          git add evidence/antworten/webspace.json
+          git commit -m "Antworten vom Webspace ($(date -u +%d.%m.%Y %H:%M) UTC)"
+          git push origin "$zweig"
+          gh pr create --base main --head "$zweig" --title "Antworten vom Webspace" --body "Automatischer Abzug von schaeferrad.jdistlr.de. Übernahme in den Kern bleibt Handarbeit (AGENTS.md)."
