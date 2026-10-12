@@ -74,3 +74,4 @@ Empfehlungen für die spätere Umsetzung:
    - „Zuletzt“: die neuesten Hinweise quer über alles;
    - Ansicht je Person: alles, was jemand beigetragen hat;
    - **uneinig:** Widersprechen sich Hinweise („stimmt“ gegen „stimmt nicht“, verschiedene Werte), wird die Stelle markiert.
+7. **Hinweise zum Vorgehen selbst:** Neben den Kern-IDs gibt es den Anker `VORGEHEN` für Hinweise zur Taktik, zur Reihenfolge und zur Ordnung des Katalogs. Sie werden zuerst gelesen; Änderungen am Vorgehen stehen in `docs/ordnung/VORGEHEN.md`.

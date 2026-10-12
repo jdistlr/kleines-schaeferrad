@@ -140,6 +140,12 @@ table.angaben .belege img { width: 36px; height: 36px; }
 .lesungen li { padding: 9px 0; border-top: 1px solid var(--linie); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; }
 .lesungen .wo { grid-column: 1 / -1; font-size: var(--m1); color: var(--leise); }
 .lesungen .w { font-weight: 500; font-variant-numeric: tabular-nums; text-align: right; }
+.vorgehen-link { font-size: var(--m2); white-space: nowrap; }
+.prosa { max-width: 64ch; }
+.prosa h3 { margin-top: 24px; }
+.prosa ul, .prosa ol { padding-left: 1.2em; margin: 6px 0 0; }
+.prosa li { margin: 4px 0; }
+.prosa p { margin: 8px 0 0; }
 .fuss { margin-top: 36px; padding-top: 12px; border-top: 1px solid var(--linie); font-size: var(--m1); color: var(--leise); }
 .figurkachel { display: block; width: 100%; text-align: left; padding: 12px 14px; margin-top: 10px; background: var(--flaeche); border: 1px solid var(--linie); border-left: 3px solid var(--wasser); border-radius: 8px; cursor: pointer; }
 .figurkachel:hover { border-color: var(--wasser); }
@@ -248,6 +254,7 @@ table.angaben .bezug { font-size: var(--m1); color: var(--leise); }
   <header class="leiste">
     <h1><a href="#" id="startlink">Kleines Schäferrad</a></h1>
     <div class="stand-mini" id="stand-mini"></div>
+    <a class="vorgehen-link" href="#vorgehen" data-gehe="vorgehen">Wie wir vorgehen</a>
     <div class="suche" role="search">
       <input id="suche" type="search" placeholder="Bauteil oder Frage suchen, z. B. Schetter" autocomplete="off" aria-label="Bauteil oder Frage suchen" aria-controls="treffer" aria-expanded="false">
       <ul class="treffer-liste" id="treffer" role="listbox" hidden></ul>
@@ -452,7 +459,7 @@ const Speicher = {
       return this.ladeServer();
     }
     if (this.modus === "github") {
-      const titel = `Antwort zu ${a.ziel}: ${(teile[a.ziel]?.name || fragen[a.ziel]?.frage || quellen[a.ziel]?.titel || "").slice(0, 70)}`;
+      const titel = `Antwort zu ${a.ziel}: ${(teile[a.ziel]?.name || fragen[a.ziel]?.frage || quellen[a.ziel]?.titel || (a.ziel === "VORGEHEN" ? "Wie wir vorgehen" : "")).slice(0, 70)}`;
       const body = `<!-- antwort\nziel: ${a.ziel}\ntyp: ${a.typ}\nwert: ${(a.wert || "").replace(/\n/g, " ")}\n-->\n${a.text || ""}\n\n_Aus dem Cockpit. Fotos können hier per Ziehen oder Einfügen angehängt werden._`;
       window.open(`https://github.com/${this.GH}/issues/new?labels=antwort&title=${encodeURIComponent(titel)}&body=${encodeURIComponent(body)}`, "_blank", "noopener");
       return "github";
@@ -578,6 +585,7 @@ function start() {
       <dl><div><dt>bestätigt</dt><dd>${best}</dd></div><div><dt>noch offen</dt><dd>${off}</dd></div><div><dt>Messfotos ausgewertet</dt><dd>${messAus}<span> / ${messfotos.length}</span></dd></div></dl>
       <p class="leise">Das Rad wurde am 10. Oktober 2026 abgebaut. Bis zum Aufbau im Frühjahr liegen alle Teile einzeln im Lager.</p>
     </div>
+    <p class="leise klein" style="margin-top:14px">Du kennst das Rad und findest unser Vorgehen unlogisch? <a href="#vorgehen" data-gehe="vorgehen">Sag uns, wie du es machen würdest.</a></p>
     ${auftraege().length ? `<button class="messliste-knopf" data-gehe="messliste"><b>Messliste für den nächsten Gang ins Lager</b><span>${erledigtZahl()} / ${auftraege().length} erledigt</span></button>` : ""}
     ${mitSpur.length ? `<h3>Neue Spuren<small>${mitSpur.length}</small></h3><p class="leise klein">Was die Auswertung der Abbau-Fotos zu offenen Fragen ergeben hat. Entschieden ist damit noch nichts.</p>${mitSpur.map(f => { const sp = teileHinweis(f.hinweis).spuren.at(-1); return `<button class="spurkarte" data-gehe="${f.id}"><b>${esc(kurz(f.frage, 120))}</b><span>${esc(kurz(sp.text, 210))}</span></button>`; }).join("")}` : ""}
     <h3>Als Nächstes klären</h3>
@@ -703,6 +711,34 @@ function frage(id) {
     <h3>Antworten</h3>${antwortBereich(id, "frage")}`;
 }
 
+// ---------- Wie wir vorgehen (aus docs/ordnung/VORGEHEN.md) ----------
+function md(text) {
+  const zeilen = (text || "").split("\n"); let html = "", liste = null;
+  const inline = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/„/g, "„");
+  const schliessen = () => { if (liste) { html += `</${liste}>`; liste = null; } };
+  for (const z of zeilen) {
+    let m;
+    if (/^# /.test(z)) continue;
+    if ((m = z.match(/^## (.*)/))) { schliessen(); html += `<h3>${inline(m[1])}</h3>`; continue; }
+    if ((m = z.match(/^- (.*)/))) { if (liste !== "ul") { schliessen(); html += "<ul>"; liste = "ul"; } html += `<li>${inline(m[1])}</li>`; continue; }
+    if ((m = z.match(/^\d+\. (.*)/))) { if (liste !== "ol") { schliessen(); html += "<ol>"; liste = "ol"; } html += `<li>${inline(m[1])}</li>`; continue; }
+    if (!z.trim()) { schliessen(); continue; }
+    schliessen(); html += `<p>${inline(z)}</p>`;
+  }
+  schliessen(); return html;
+}
+function vorgehen() {
+  karte.innerHTML = `
+    <button class="zurueck" data-gehe="">Zurück zum Überblick</button>
+    <p class="pfad">Für alle, die mithelfen</p>
+    <h2>Wie wir vorgehen</h2>
+    <div class="prosa">${md(K.vorgehen)}</div>
+    <h3>Was würdest du anders machen?</h3>
+    <p class="leise klein">Wenn dir die Reihenfolge, die Fragen oder das ganze Vorgehen unlogisch vorkommen, weil du das Rad besser kennst: Schreib es hier. Das Vorgehen wird danach angepasst.</p>
+    ${antwortBereich("VORGEHEN", "bauteil")}
+    ${fuss()}`;
+}
+
 // ---------- Messliste ----------
 const auftraege = () => nach(offen.filter(f => auftragVon(f.hinweis)), f => (teileHinweis(f.hinweis).spuren.length ? 100 : 0) + gewicht(f));
 const HAKEN = "ks-messliste";
@@ -726,15 +762,15 @@ document.addEventListener("change", e => { const c = e.target.closest("[data-hak
 let aktuell = null;
 function zeige({ neu = true } = {}) {
   const z = decodeURIComponent(location.hash.slice(1));
-  const ziel = teile[z] || fragen[z] || quellen[z] || z === "messliste" ? z : "";
+  const ziel = teile[z] || fragen[z] || quellen[z] || z === "messliste" || z === "vorgehen" ? z : "";
   const gewechselt = ziel !== aktuell; aktuell = ziel;
   const markiert = teile[ziel] ? unterteile(ziel) : quellen[ziel] ? (quellen[ziel].bauteil ? [quellen[ziel].bauteil] : []) : fragen[ziel] ? [...new Set([...fragen[ziel].betrifft, ...fragen[ziel].blockiert].flatMap(bezugVon))] : [];
   Object.entries(gruppen).forEach(([k, g]) => g.classList.toggle("gewaehlt", markiert.includes(k)));
   const scroll = karte.scrollTop;
-  if (teile[ziel]) bauteil(ziel); else if (fragen[ziel]) frage(ziel); else if (ziel === "messliste") messliste(); else if (quellen[ziel]) quelleKarte(ziel); else start();
+  if (teile[ziel]) bauteil(ziel); else if (fragen[ziel]) frage(ziel); else if (ziel === "messliste") messliste(); else if (ziel === "vorgehen") vorgehen(); else if (quellen[ziel]) quelleKarte(ziel); else start();
   if (gewechselt && neu) { karte.scrollTop = 0; if (ziel && matchMedia("(max-width: 880px)").matches) window.scrollTo({ top: karte.offsetTop - $(".rad").offsetHeight - 8 }); }
   else karte.scrollTop = scroll;
-  document.title = (teile[ziel]?.name || (fragen[ziel] ? "Offene Frage" : ziel === "messliste" ? "Messliste" : quellen[ziel] ? (quellen[ziel].titel || "Quelle") : "")) + (ziel ? " – " : "") + "Kleines Schäferrad";
+  document.title = (teile[ziel]?.name || (fragen[ziel] ? "Offene Frage" : ziel === "messliste" ? "Messliste" : ziel === "vorgehen" ? "Wie wir vorgehen" : quellen[ziel] ? (quellen[ziel].titel || "Quelle") : "")) + (ziel ? " – " : "") + "Kleines Schäferrad";
 }
 function gehe(id) { if (decodeURIComponent(location.hash.slice(1)) === id) zeige(); else location.hash = id; }
 window.addEventListener("hashchange", () => zeige());

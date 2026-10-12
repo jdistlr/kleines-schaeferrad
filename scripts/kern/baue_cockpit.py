@@ -113,6 +113,7 @@ def main():
         "api": api,
         "figuren": figuren(),
         "antwortenAbzug": antworten_abzug(),
+        "vorgehen": open(os.path.join(ROOT, "docs", "ordnung", "VORGEHEN.md"), encoding="utf-8").read() if os.path.exists(os.path.join(ROOT, "docs", "ordnung", "VORGEHEN.md")) else "",
     }
     with open(os.path.join(HIER, "cockpit", "vorlage.html"), encoding="utf-8") as f:
         vorlage = f.read()

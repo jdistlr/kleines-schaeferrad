@@ -40,6 +40,10 @@ Wenn Thorsten oder jemand aus dem Verein etwas erklärt:
 
 Nicht mehr: Nachträge an `state/NEXT-ASTRA-WORK-SESSION.md` oder andere Übergabedateien anhängen.
 
+## Vorgehen gemeinsam abstimmen
+
+Das Vorgehen steht in einfachen Worten in [`docs/ordnung/VORGEHEN.md`](docs/ordnung/VORGEHEN.md) und erscheint im Cockpit unter „Wie wir vorgehen“. Hinweise dort (Anker `VORGEHEN`) und Hinweise zur Ordnung der Fragen werden beim Einsammeln zuerst gelesen. Wird das Vorgehen deshalb geändert, kommt die Änderung mit Datum und Anlass in den Abschnitt „Änderungen am Vorgehen“. Die Datei bleibt für Laien verständlich.
+
 ## Branches und Pull Requests
 
 - `main` ist der einzige dauerhafte Arbeitsbranch. **Nie direkt auf `main` committen oder pushen.**
