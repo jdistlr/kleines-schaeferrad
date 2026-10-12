@@ -42,3 +42,15 @@ Empfehlungen für die spätere Umsetzung:
 - Prepared Statements, Längenbegrenzung für `text` (z. B. 4.000 Zeichen), keine Ausführung von Inhalten.
 - Gleiche Herkunft wie die Seite, dann ist kein CORS nötig.
 - Ein Export `GET api.php?aktion=export` für die Übernahme in den Kern.
+
+## Entscheidungen vom 12.10.2026 (Johannes): Webspace statt Datenbank
+
+- **Ort:** eigene Subdomain bei UD Media; Cockpit und PHP-Schnittstelle unter derselben Adresse. GitHub Pages bleibt bis zum Umzug als Spiegel.
+- **Speicher:** keine Datenbank. Eine JSON-Datei je Antwort, nur anhängen, nie überschreiben (Korrektur = neue Antwort mit Verweis). Schreiben über Zwischendatei und Umbenennen. Fotos und Sprachnachrichten in eigenem Ordner, Fotos beim Hochladen verkleinert. Datenablage außerhalb des öffentlichen Webordners.
+- **Transport:** Hinweg per SFTP nach jedem Merge in `main`; Rückweg: geschützter Export-Endpunkt, regelmäßig abgeholt, landet als Pull Request unter `evidence/antworten/`. Zugangsdaten nur in den GitHub-Secrets. Voraussetzung: Johannes lockert die Actions-Regel in `AGENTS.md` auf genau diese zwei Workflows (noch offen).
+- **Wer antwortet:** keine Konten, keine persönlichen Links. Name als **Freitext**, leer lassen erlaubt.
+  - Das Gerät merkt sich den zuletzt eingegebenen Namen und füllt ihn vor.
+  - Beim Tippen werden bereits verwendete Namen vorgeschlagen, öffentlich nur als **Vorname**. Gibt es denselben Vornamen mehrfach, wird ergänzt: erst Anfangsbuchstabe des Nachnamens („Thorsten H.“), reicht das nicht, weitere Buchstaben oder ein Kürzel.
+  - Unordnung ist in Kauf genommen: Beim Einsammeln ordnet Claude Schreibvarianten derselben Person zu (Namensliste neben den Antworten, nicht im Kern); unklare Fälle entscheidet Johannes. Erst danach wird eine Antwort zur Aussage mit Person im Kern.
+- **Spamschutz ohne Hürde:** unsichtbares Fangfeld und Begrenzung pro Minute; kein Vereinscode, keine Rätselfrage.
+- **Recht:** Impressum und Datenschutzhinweis auf der Subdomain; Hinweis beim ersten Antworten, dass Name und Antwort gespeichert und für die Bestandsaufnahme verwendet werden.
