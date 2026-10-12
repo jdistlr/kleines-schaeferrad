@@ -54,3 +54,23 @@ Empfehlungen für die spätere Umsetzung:
   - Unordnung ist in Kauf genommen: Beim Einsammeln ordnet Claude Schreibvarianten derselben Person zu (Namensliste neben den Antworten, nicht im Kern); unklare Fälle entscheidet Johannes. Erst danach wird eine Antwort zur Aussage mit Person im Kern.
 - **Spamschutz ohne Hürde:** unsichtbares Fangfeld und Begrenzung pro Minute; kein Vereinscode, keine Rätselfrage.
 - **Recht:** Impressum und Datenschutzhinweis auf der Subdomain; Hinweis beim ersten Antworten, dass Name und Antwort gespeichert und für die Bestandsaufnahme verwendet werden.
+
+## Anforderungen vom 12.10.2026 (Johannes): wandernder Fragenkatalog, viele Stimmen
+
+**Der Katalog darf sich ständig ändern, die Antworten dürfen nie abreißen.**
+
+1. **Antworten hängen an festen Ankern, nie an der Darstellung.** Anker sind nur Kern-IDs: Frage (`F-…`), Bauteil (`COMP-…`), Quelle/Bild (`PHOTO-…`, `DATEI-…`), Angabe (`AN-…`, `TH-…`, `CLAIM-…`). Gruppe, Reihenfolge, Überschrift oder Position im Katalog werden nie gespeichert.
+2. **Die Antwort hält fest, was die Person gesehen hat:** Wortlaut der Frage zum Zeitpunkt der Antwort und die Ansicht, aus der sie kam. Wird eine Frage später umformuliert, bleibt verständlich, worauf sich die Antwort bezog.
+3. **Fragen werden nie gelöscht, nur weitergeleitet.** Wird eine Frage umformuliert, behält sie ihre ID. Wird sie aufgeteilt, zusammengelegt oder ersetzt, bekommt die alte einen Verweis auf die neue(n) (Prinzip wie `ersetzt_durch` bei Angaben). Das Cockpit zeigt alte Antworten bei der neuen Frage an. (Das Feld in `kern/fragen.json` ist eine Strukturänderung und wird mit Johannes festgelegt.)
+4. **Katalog getrennt von den Daten:** Die ergonomische Ordnung (Gruppen, Reihenfolge, Formulierung für Laien) ist eine eigene Darstellungsschicht des Cockpits. Umordnen ändert nur diese Schicht. Eine Prüfung stellt sicher, dass jede offene Frage im Katalog vorkommt und der Katalog nur existierende IDs nennt.
+
+**Viele Leute, kreuz und quer, mehrfach.**
+
+5. **Antworten aufeinander:** Eine Antwort kann auf eine andere antworten (`antwort_auf`) und weitere Anker nennen (`betrifft_auch`), wenn jemand an einer Stelle etwas zu einer anderen sagt. Mehrfachantworten derselben Person sind erlaubt und bleiben alle erhalten.
+6. **Sichtbar, wer schon etwas gesagt hat:**
+   - an jeder Frage, jedem Bauteil und jedem Bild: Namen und Zahl der Hinweise („3 Hinweise: Thorsten, Karl, Maria“);
+   - im Überblick und am Rad-Aufriss: Zähler je Frage und Bauteil;
+   - „Neu seit deinem letzten Besuch“ (auf dem Gerät gemerkt);
+   - „Zuletzt“: die neuesten Hinweise quer über alles;
+   - Ansicht je Person: alles, was jemand beigetragen hat;
+   - **uneinig:** Widersprechen sich Hinweise („stimmt“ gegen „stimmt nicht“, verschiedene Werte), wird die Stelle markiert.
