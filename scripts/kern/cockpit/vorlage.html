@@ -3,7 +3,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
 <style>
-/* Werkbank: oben eine schmale Leiste, links immer das Rad, rechts eine Karte, die nur in sich scrollt. */
+/* Arbeitsplatz: oben eine Leiste, links die Fragenliste, rechts daneben das Gewählte mit Lageplan und Belegen.
+   Jede Spalte scrollt für sich. Auf dem Handy: eine Spalte, Radstreifen oben, Leiste unten. */
 :root {
   --papier: #edf1ec; --flaeche: #f6f8f5; --tinte: #1c2726; --leise: #5f6d6a; --linie: #c9d1cc;
   --wasser: #2b6a76; --wasser-hauch: #d6e6e8; --roetel: #a5412a; --roetel-hauch: #f3e2dc;
@@ -11,6 +12,7 @@
   --serif: "Alegreya", "Iowan Old Style", Georgia, serif;
   --sans: "Alegreya Sans", "Gill Sans", "Segoe UI", system-ui, sans-serif;
   --m1: .8125rem; --m2: .9375rem; --m3: 1.0625rem; --m4: 1.3125rem; --m5: 1.75rem;
+  --kopf: 57px; --tabs: 0px; --rand: clamp(18px, 2.6vw, 36px);
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --papier: #121817; --flaeche: #1a2120; --tinte: #dfe6e2; --leise: #9aa8a4; --linie: #33403d;
@@ -31,30 +33,67 @@ a { color: var(--wasser); text-underline-offset: 3px; }
 .leise { color: var(--leise); }
 .zahl { font-variant-numeric: tabular-nums; }
 
-.app { height: 100%; display: grid; grid-template-rows: auto minmax(0, 1fr); max-width: 1440px; margin: 0 auto; padding-inline: clamp(16px, 3vw, 32px); }
+.app { height: 100%; display: grid; grid-template-rows: auto minmax(0, 1fr); }
 
-.leiste { display: flex; align-items: center; gap: 10px 24px; flex-wrap: wrap; padding-block: 14px; border-bottom: 1px solid var(--linie); }
-.leiste h1 { font: 700 var(--m4)/1 var(--serif); margin: 0; white-space: nowrap; }
+/* ---------- Leiste ---------- */
+.leiste { display: flex; align-items: center; gap: 8px 18px; padding: 10px var(--rand); border-bottom: 1px solid var(--linie); background: var(--papier); }
+.leiste h1 { font: 700 var(--m4)/1 var(--serif); margin: 0 6px 0 0; white-space: nowrap; }
 .leiste h1 a { color: inherit; text-decoration: none; }
-.stand-mini { display: flex; align-items: center; gap: 10px; font-size: var(--m2); color: var(--leise); }
-.stand-mini .balken { width: 120px; height: 6px; border-radius: 3px; background: var(--linie); overflow: hidden; display: flex; }
-.balken i { display: block; height: 100%; }
-.suche { position: relative; margin-left: auto; flex: 0 1 320px; min-width: 200px; }
-.suche input { width: 100%; padding: 8px 12px; border: 1px solid var(--linie); border-radius: 6px; background: var(--flaeche); }
+.zaehler { display: flex; gap: 2px; flex-wrap: wrap; }
+.zaehler > * { display: inline-flex; align-items: baseline; gap: 6px; padding: 6px 10px; border: 0; border-radius: 6px; background: none; cursor: pointer; color: var(--tinte); font-size: var(--m2); text-decoration: none; white-space: nowrap; }
+.zaehler > *:hover { background: var(--flaeche); }
+.zaehler b { font: 700 var(--m3)/1 var(--sans); font-variant-numeric: tabular-nums; }
+.zaehler .neu b { color: var(--wasser); }
+.zaehler .mess b { color: var(--roetel); }
+.vorgehen-link { font-size: var(--m2); white-space: nowrap; }
+.suche { position: relative; margin-left: auto; flex: 0 1 300px; min-width: 180px; }
+.suche input { width: 100%; padding: 7px 12px; border: 1px solid var(--linie); border-radius: 6px; background: var(--flaeche); }
 .suche input::placeholder { color: var(--leise); }
-.treffer-liste { position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 4px); margin: 0; padding: 4px; list-style: none; background: var(--flaeche); border: 1px solid var(--linie); border-radius: 6px; box-shadow: 0 8px 24px rgb(0 0 0 / .12); max-height: 60vh; overflow: auto; }
+.treffer-liste { position: absolute; z-index: 30; left: 0; right: 0; top: calc(100% + 4px); margin: 0; padding: 4px; list-style: none; background: var(--flaeche); border: 1px solid var(--linie); border-radius: 6px; box-shadow: 0 8px 24px rgb(0 0 0 / .12); max-height: 60vh; overflow: auto; }
 .treffer-liste li { padding: 7px 10px; border-radius: 4px; cursor: pointer; }
 .treffer-liste li[aria-selected="true"], .treffer-liste li:hover { background: var(--wasser-hauch); }
 .treffer-liste small { display: block; color: var(--leise); font-size: var(--m1); }
 
-.werkbank { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(340px, 1fr); gap: 32px; min-height: 0; padding-top: 16px; }
-.rad { min-height: 0; display: flex; flex-direction: column; position: relative; }
-.rad svg#aufriss { width: 100%; height: auto; max-height: calc(100% - 52px); display: block; }
-.legende { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 6px 0 0; padding: 0; list-style: none; font-size: var(--m1); color: var(--leise); }
+/* ---------- Arbeitsplatz ---------- */
+.arbeitsplatz { display: grid; grid-template-columns: 300px minmax(0, 1fr); min-height: 0; }
+.liste { min-height: 0; overflow-y: auto; border-right: 1px solid var(--linie); padding: 14px 0 48px; overscroll-behavior: contain; }
+.filter { display: flex; flex-wrap: wrap; gap: 4px; padding: 0 14px 4px; }
+.filter button { border: 1px solid var(--linie); background: none; border-radius: 999px; padding: 1px 8px; font-size: var(--m1); cursor: pointer; color: var(--leise); }
+.filter button:hover { border-color: var(--wasser); color: var(--wasser); }
+.filter button[aria-pressed="true"] { background: var(--tinte); border-color: var(--tinte); color: var(--papier); }
+.liste h2 { font: 600 11px/1 var(--sans); letter-spacing: .09em; text-transform: uppercase; color: var(--leise); margin: 16px 16px 6px; display: flex; justify-content: space-between; }
+.zeile { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1px 10px; width: 100%; text-align: left; background: none; border: 0; border-left: 3px solid transparent; padding: 7px 16px 7px 13px; cursor: pointer; color: var(--tinte); }
+.zeile:hover { background: var(--flaeche); }
+.zeile[aria-current="true"] { background: var(--wasser-hauch); border-left-color: var(--wasser); }
+.zeile b { font-weight: 500; font-size: var(--m2); line-height: 1.35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.zeile .meta { grid-column: 1; font-size: var(--m1); line-height: 1.35; color: var(--leise); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.zeile .rechts { grid-row: 1 / span 2; grid-column: 2; align-self: center; display: flex; gap: 6px; align-items: center; font-size: var(--m1); color: var(--leise); font-variant-numeric: tabular-nums; }
+.zeile.ruht b { font-weight: 400; color: var(--leise); }
+.zeile.im-text { border-left: 0; border-top: 1px solid var(--linie); padding: 8px 2px; }
+.zeile.im-text:last-child { border-bottom: 1px solid var(--linie); }
+.punkt { width: 7px; height: 7px; border-radius: 50%; background: var(--wasser); display: inline-block; flex: none; }
+.sprechblase { display: inline-flex; align-items: center; gap: 3px; }
+.sprechblase svg { width: 13px; height: 13px; }
+.leer-liste { padding: 8px 16px; font-size: var(--m2); color: var(--leise); }
+
+.inhalt { min-height: 0; overflow-y: auto; display: grid; grid-template-columns: minmax(0, 1fr) 336px; align-items: start; overscroll-behavior: contain; }
+.inhalt.ohne-kontext { grid-template-columns: minmax(0, 1fr); }
+.inhalt.ohne-kontext .kontext { display: none; }
+.mitte { min-width: 0; padding: 24px var(--rand) 0; }
+.mitte > .breite { max-width: 760px; }
+.kontext { position: sticky; top: 0; max-height: calc(100dvh - var(--kopf)); overflow-y: auto; padding: 20px 20px 48px; border-left: 1px solid var(--linie); }
+#rad-streifen { display: none; }
+
+/* ---------- Rad ---------- */
+.lageplan { position: relative; }
+.lageplan svg { width: 100%; height: auto; display: block; }
+.lageplan.mini { margin-bottom: 6px; }
+.lageplan.mini .marke, .lageplan.streifen .marke { display: none; }
+#rad-gross .lageplan svg { max-height: calc(100dvh - var(--kopf) - 190px); }
+.etikett { position: absolute; pointer-events: none; background: var(--tinte); color: var(--papier); font-size: var(--m2); padding: 3px 9px; border-radius: 4px; white-space: nowrap; transform: translate(-50%, calc(-100% - 10px)); z-index: 5; }
+.legende { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 8px 0 0; padding: 0; list-style: none; font-size: var(--m1); color: var(--leise); }
 .legende li { display: flex; align-items: center; gap: 6px; }
 .legende svg { width: 22px; height: 12px; }
-.etikett { position: absolute; pointer-events: none; background: var(--tinte); color: var(--papier); font-size: var(--m2); padding: 3px 9px; border-radius: 4px; white-space: nowrap; transform: translate(-50%, calc(-100% - 10px)); z-index: 5; }
-
 svg .teil { cursor: pointer; }
 svg .teil .form { fill: var(--holz); stroke: var(--tinte); stroke-width: 1.3; transition: fill .15s; }
 svg .teil .treffer { fill: none; stroke: transparent; stroke-width: 14; pointer-events: stroke; }
@@ -62,6 +101,7 @@ svg .teil.leer .form { fill: none; stroke-dasharray: 4 3; stroke: var(--leise); 
 svg .teil.bestaetigt .form { fill: color-mix(in srgb, var(--eiche) 32%, var(--holz)); }
 svg .teil:hover .form, svg .teil:focus-visible .form { fill: var(--wasser-hauch); }
 svg .teil.gewaehlt .form { stroke: var(--wasser); stroke-width: 2.4; fill: var(--wasser-hauch); }
+.lageplan.hat-wahl svg .teil:not(.gewaehlt) .form { opacity: .55; }
 svg .teil:focus-visible { outline: none; }
 svg .marke circle { fill: var(--roetel); stroke: var(--papier); stroke-width: 2; }
 svg .marke text { fill: #fff; font: 700 12px var(--sans); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
@@ -71,127 +111,91 @@ svg .gelaende { fill: none; stroke: var(--leise); stroke-width: 1.2; }
 svg .schraffur { stroke: var(--linie); stroke-width: 1; }
 svg .wasserweg { fill: none; stroke: var(--wasser); stroke-width: 1.2; stroke-dasharray: 2 5; stroke-linecap: round; }
 
-.karte { min-height: 0; overflow-y: auto; padding: 4px 6px 48px 2px; overscroll-behavior: contain; }
-.zurueck { background: none; border: 0; padding: 4px 0; color: var(--wasser); cursor: pointer; font-size: var(--m2); }
-.pfad { color: var(--leise); font-size: var(--m2); margin: 8px 0 2px; }
-.karte h2 { font: 700 var(--m5)/1.12 var(--serif); margin: 0; text-wrap: balance; }
-.karte h2.frage-titel { font-weight: 500; }
-.karte h3 { font: 500 var(--m4)/1.2 var(--serif); margin: 28px 0 10px; }
-.karte h3 small { font: 400 var(--m2) var(--sans); color: var(--leise); margin-left: 6px; }
-.definition { font: italic 400 var(--m3)/1.45 var(--serif); color: var(--leise); margin: 6px 0 0; max-width: 58ch; }
-.auch { font-size: var(--m2); color: var(--leise); margin: 6px 0 0; }
-.hinweis { margin: 12px 0 0; padding: 10px 14px; background: var(--flaeche); border-left: 3px solid var(--holz-dunkel); font-size: var(--m2); max-width: 62ch; }
-.einstieg { font: 400 var(--m4)/1.35 var(--serif); margin: 0; max-width: 36ch; text-wrap: balance; }
-.klein { font-size: var(--m2); margin: 0 0 4px; }
+/* ---------- Inhalt ---------- */
+.augenbraue { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: 0 0 8px; font-size: var(--m1); color: var(--leise); }
+.augenbraue a { color: var(--leise); }
+.augenbraue .id { font: 600 var(--m1) ui-monospace, "SF Mono", Menlo, monospace; color: var(--tinte); letter-spacing: .02em; }
+.kl { display: inline-block; padding: 0 8px; border-radius: 999px; border: 1px solid var(--linie); background: var(--flaeche); color: var(--tinte); }
+.kl.aufbau { color: var(--leise); border-style: dashed; background: none; }
+.neu-marke { display: inline-flex; align-items: center; gap: 5px; color: var(--wasser); font-weight: 500; }
+.mitte h2 { font: 700 var(--m5)/1.15 var(--serif); margin: 0; text-wrap: balance; }
+.wortlaut { margin: 8px 0 0; color: var(--leise); max-width: 68ch; }
+.einstieg { font: 400 var(--m4)/1.35 var(--serif); margin: 14px 0 0; max-width: 46ch; }
+.kennzeile { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 10px 0 0; font-size: var(--m2); color: var(--leise); }
+.kennzeile b { color: var(--tinte); font-weight: 500; font-variant-numeric: tabular-nums; }
 
-.wissen { margin: 18px 0 0; padding: 14px 16px; background: var(--flaeche); border: 1px solid var(--linie); border-radius: 8px; }
-.wissen .balken { display: flex; height: 10px; border-radius: 5px; overflow: hidden; background: var(--linie); }
-.wissen p { margin: 10px 0 0; font-size: var(--m2); }
-.wissen dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 12px 0 0; }
-.wissen dt { font-size: var(--m1); color: var(--leise); }
-.wissen dd { margin: 0; font: 500 var(--m4)/1.1 var(--serif); font-variant-numeric: tabular-nums; }
-.wissen dd span { font: 400 var(--m2) var(--sans); color: var(--leise); }
+.notiz { margin: 18px 0 0; padding: 1px 0 1px 14px; border-left: 3px solid var(--wasser); max-width: 68ch; }
+.notiz > b { display: block; font: 600 11px/1.5 var(--sans); letter-spacing: .09em; text-transform: uppercase; color: var(--wasser); }
+.notiz p { margin: 3px 0 0; }
+.notiz.auftrag { border-left-color: var(--roetel); }
+.notiz.auftrag > b { color: var(--roetel); }
+.notiz.herleitung { border-left-color: var(--holz-dunkel); }
+.notiz.herleitung > b { color: var(--leise); }
+.klemme { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.klemme.offen { display: block; }
+.knopf-leise { background: none; border: 0; padding: 4px 0 0; color: var(--wasser); cursor: pointer; font-size: var(--m2); }
 
-.fragekarte { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 12px; width: 100%; text-align: left; padding: 12px; margin-top: 10px; background: var(--flaeche); border: 1px solid var(--linie); border-radius: 8px; cursor: pointer; }
-.fragekarte:hover { border-color: var(--wasser); }
-.fragekarte.ohne-bild { grid-template-columns: minmax(0, 1fr); }
-.fragekarte img { width: 72px; height: 72px; object-fit: cover; border-radius: 4px; background: var(--linie); }
-.fragekarte b { display: block; font-weight: 500; line-height: 1.35; }
-.fragekarte span { display: block; margin-top: 4px; font-size: var(--m1); color: var(--leise); }
-.spur { margin-top: 10px; padding: 12px 14px; background: var(--wasser-hauch); border-radius: 8px; font-size: var(--m2); max-width: 62ch; }
-.spur b { display: block; font: 500 var(--m1)/1.2 var(--sans); letter-spacing: .04em; text-transform: uppercase; color: var(--wasser); margin-bottom: 4px; }
-.spurkarte { display: block; width: 100%; text-align: left; padding: 12px 14px; margin-top: 10px; background: var(--flaeche); border: 1px solid var(--linie); border-left: 3px solid var(--wasser); border-radius: 8px; cursor: pointer; }
-.spurkarte:hover { border-color: var(--wasser); }
-.spurkarte b { display: block; font-weight: 500; line-height: 1.35; }
-.spurkarte span { display: block; margin-top: 4px; font-size: var(--m2); color: var(--leise); }
-.belege { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 7px; align-items: center; }
+.abschnitt { margin-top: 30px; }
+.abschnitt > h3, .kontext h3, .kontext-unten h3 { display: flex; align-items: baseline; gap: 8px; margin: 0 0 10px; font: 600 11px/1.2 var(--sans); letter-spacing: .09em; text-transform: uppercase; color: var(--leise); }
+.abschnitt > h3 small, .kontext h3 small, .kontext-unten h3 small { font: 400 var(--m1) var(--sans); letter-spacing: 0; text-transform: none; }
+.kontext h3, .kontext-unten h3 { margin-top: 22px; }
+.kontext-unten { margin-top: 32px; padding-top: 4px; border-top: 1px solid var(--linie); }
+.kontext-unten .belegraster { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+.kontext-unten .belegraster button.gross { grid-column: span 2; }
+.kontext h3:first-child { margin-top: 0; }
+.abschnitt p.klein, .kontext p.klein, .kontext-unten p.klein, .breite > p.klein { margin: 0 0 8px; font-size: var(--m2); color: var(--leise); }
+.leer-text { color: var(--leise); font-size: var(--m2); margin: 0; }
+
+table.stueck { width: 100%; border-collapse: collapse; font-size: var(--m2); }
+.stueck td { padding: 8px 14px 8px 0; border-top: 1px solid var(--linie); vertical-align: top; }
+.stueck tr:last-child td { border-bottom: 1px solid var(--linie); }
+.stueck td:last-child { padding-right: 0; }
+.stueck .mass { width: 38%; }
+.stueck .mass small { display: block; color: var(--leise); font-size: var(--m1); }
+.stueck .wert { min-width: 130px; font: 500 var(--m3)/1.3 var(--serif); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.stueck .herkunft { font-size: var(--m1); color: var(--leise); white-space: nowrap; }
+.stueck .herkunft.bestaetigt { color: var(--eiche); font-weight: 500; }
+.stueck .belege { margin-top: 0; flex-wrap: nowrap; }
+.stueck .belege img { width: 34px; height: 34px; }
+
+.belege { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; align-items: center; }
 .belege button { padding: 0; border: 1px solid var(--linie); background: var(--linie); border-radius: 4px; cursor: pointer; line-height: 0; }
 .belege button:hover { border-color: var(--wasser); }
 .belege img { width: 44px; height: 44px; object-fit: cover; border-radius: 3px; display: block; }
 .belege .text { font: 400 var(--m1)/1.3 var(--sans); color: var(--wasser); text-decoration: none; }
 .belege .mehr { font: 400 var(--m1) var(--sans); color: var(--leise); }
-table.angaben .belege img { width: 36px; height: 36px; }
-.bildfenster .abgelesen { display: block; width: 100%; color: #fff; font-size: var(--m3); }
 .abgleich { display: block; font: 400 var(--m1) var(--sans); margin-top: 3px; }
 .abgleich.gleich { color: var(--eiche); }
 .abgleich.anders { color: var(--roetel); }
-.auftrag { margin-top: 10px; padding: 12px 14px; border: 1px dashed var(--roetel); border-radius: 8px; font-size: var(--m2); max-width: 62ch; }
-.auftrag b { display: block; font: 500 var(--m1)/1.2 var(--sans); letter-spacing: .04em; text-transform: uppercase; color: var(--roetel); margin-bottom: 4px; }
-.messliste-knopf { display: flex; gap: 12px; align-items: center; width: 100%; margin: 18px 0 0; padding: 12px 14px; text-align: left; background: var(--roetel-hauch); border: 1px solid var(--roetel); border-radius: 8px; cursor: pointer; color: var(--tinte); }
-.messliste-knopf b { font-weight: 500; }
-.messliste-knopf span { margin-left: auto; color: var(--roetel); font-weight: 500; white-space: nowrap; }
-.posten { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; padding: 14px 0; border-top: 1px solid var(--linie); }
-.posten input { width: 22px; height: 22px; margin: 2px 0 0; accent-color: var(--eiche); }
-.posten h4 { margin: 0; font: 500 var(--m3)/1.35 var(--sans); }
-.posten h4 a { color: inherit; text-decoration: none; }
-.posten p { margin: 6px 0 0; font-size: var(--m2); max-width: 62ch; }
-.posten .fotos img { width: 96px; height: 96px; }
-.posten.erledigt h4, .posten.erledigt p { color: var(--leise); text-decoration: line-through; text-decoration-thickness: 1px; }
-@media print { .rad, .leiste, .zurueck, .posten .fotos, .knopf-zeile { display: none !important; } .app, .werkbank { display: block; height: auto; } .karte { overflow: visible; } body { background: #fff; } }
-.blaetter { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
-.blatt { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px; padding: 10px; background: var(--flaeche); border: 1px solid var(--linie); border-radius: 8px; text-align: left; cursor: pointer; font: inherit; color: inherit; }
-.blatt:hover { border-color: var(--wasser); }
-.blatt img { width: 96px; height: 96px; object-fit: cover; border-radius: 4px; background: var(--linie); }
-.blatt b { display: block; font-weight: 500; font-size: var(--m2); line-height: 1.3; }
-.blatt ul { margin: 4px 0 0; padding: 0; list-style: none; font-size: var(--m1); color: var(--leise); }
-.blatt li { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.quellbild { display: block; width: 100%; max-height: 62vh; object-fit: contain; background: var(--linie); border-radius: 8px; margin-top: 12px; cursor: zoom-in; }
-.lesungen { margin: 0; padding: 0; list-style: none; }
-.lesungen li { padding: 9px 0; border-top: 1px solid var(--linie); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; }
-.lesungen .wo { grid-column: 1 / -1; font-size: var(--m1); color: var(--leise); }
-.lesungen .w { font-weight: 500; font-variant-numeric: tabular-nums; text-align: right; }
-.vorgehen-link { font-size: var(--m2); white-space: nowrap; }
-.prosa { max-width: 64ch; }
-.prosa h3 { margin-top: 24px; }
-.prosa ul, .prosa ol { padding-left: 1.2em; margin: 6px 0 0; }
-.prosa li { margin: 4px 0; }
-.prosa p { margin: 8px 0 0; }
-.fuss { margin-top: 36px; padding-top: 12px; border-top: 1px solid var(--linie); font-size: var(--m1); color: var(--leise); }
-.figurkachel { display: block; width: 100%; text-align: left; padding: 12px 14px; margin-top: 10px; background: var(--flaeche); border: 1px solid var(--linie); border-left: 3px solid var(--wasser); border-radius: 8px; cursor: pointer; }
-.figurkachel:hover { border-color: var(--wasser); }
-.figurkachel b { display: block; font: 500 var(--m3)/1.3 var(--serif); }
-.figurkachel span { display: block; margin-top: 4px; font-size: var(--m1); color: var(--leise); }
-.bildfenster iframe { display: block; width: min(980px, 100%); height: min(86vh, 900px); border: 0; border-radius: 6px; background: var(--papier); }
-.fragezeile { display: block; width: 100%; text-align: left; background: none; border: 0; border-top: 1px solid var(--linie); padding: 10px 2px; cursor: pointer; }
-.fragezeile:hover b { color: var(--wasser); }
-.fragezeile b { font-weight: 400; }
-.fragezeile span { display: block; font-size: var(--m1); color: var(--leise); margin-top: 2px; }
-details.gruppe { border-top: 1px solid var(--linie); }
-details.gruppe:last-of-type { border-bottom: 1px solid var(--linie); }
-details.gruppe > summary { cursor: pointer; padding: 11px 2px; list-style: none; display: flex; gap: 12px; font-weight: 500; }
-details.gruppe > summary::-webkit-details-marker { display: none; }
-details.gruppe > summary::after { content: "+"; color: var(--leise); width: 1ch; text-align: center; }
-details.gruppe[open] > summary::after { content: "–"; }
-details.gruppe > summary small { margin-left: auto; color: var(--leise); font-weight: 400; }
-details.gruppe .innen { padding-bottom: 8px; }
 
-.masse { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin: 0; }
-.masse div { background: var(--flaeche); border: 1px solid var(--linie); border-radius: 6px; padding: 10px 12px; min-width: 0; }
-.masse dt { font-size: var(--m1); color: var(--leise); line-height: 1.3; }
-.masse dd { margin: 4px 0 0; font: 500 var(--m4)/1.15 var(--serif); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
-.masse dd small { display: block; font: 400 var(--m1) var(--sans); color: var(--leise); margin-top: 3px; }
-.leer-text { color: var(--leise); font-size: var(--m2); margin: 0; }
-
-.fotos { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; scroll-snap-type: x proximity; }
-.fotos button { flex: none; padding: 0; border: 0; background: none; cursor: pointer; position: relative; scroll-snap-align: start; border-radius: 6px; }
-.fotos img { width: 128px; height: 128px; object-fit: cover; border-radius: 6px; display: block; background: var(--linie); }
-.fotos .art { position: absolute; left: 6px; bottom: 6px; background: rgb(0 0 0 / .62); color: #fff; font-size: 11px; padding: 1px 6px; border-radius: 3px; }
-
-.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chips button { border: 1px solid var(--linie); background: var(--flaeche); border-radius: 999px; padding: 2px 11px; font-size: var(--m2); cursor: pointer; }
 .chips button:hover { border-color: var(--wasser); color: var(--wasser); }
 
-details.alle { margin-top: 24px; border-top: 1px solid var(--linie); }
-details.alle > summary { cursor: pointer; padding: 12px 0; color: var(--wasser); }
-table.angaben { width: 100%; border-collapse: collapse; font-size: var(--m2); }
-table.angaben td { padding: 7px 10px 7px 0; border-bottom: 1px solid var(--linie); vertical-align: top; }
-table.angaben td:first-child { width: 50%; overflow-wrap: anywhere; }
-table.angaben td.wert { font-variant-numeric: tabular-nums; font-weight: 500; overflow-wrap: anywhere; }
-table.angaben .gruppe td { padding-top: 14px; color: var(--leise); font: italic var(--m2) var(--serif); border-bottom: 0; }
-table.angaben .bezug { font-size: var(--m1); color: var(--leise); }
-.status { white-space: nowrap; color: var(--leise); font-size: var(--m1); }
-.status.bestaetigt { color: var(--eiche); font-weight: 500; }
+.belegraster { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.belegraster button { position: relative; padding: 0; border: 0; background: var(--linie); border-radius: 6px; overflow: hidden; aspect-ratio: 1; cursor: pointer; }
+.belegraster button.gross { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+.belegraster img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.belegraster .art { position: absolute; left: 6px; bottom: 6px; background: rgb(0 0 0 / .62); color: #fff; font-size: 11px; padding: 1px 6px; border-radius: 3px; }
 
+.spurzeile, .figurzeile { display: block; width: 100%; text-align: left; background: none; border: 0; border-top: 1px solid var(--linie); padding: 10px 0; cursor: pointer; color: inherit; }
+.spurzeile:last-of-type, .figurzeile:last-of-type { border-bottom: 1px solid var(--linie); }
+.spurzeile b, .figurzeile b { display: flex; align-items: center; gap: 7px; font-weight: 500; font-size: var(--m2); }
+.spurzeile span, .figurzeile span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-top: 2px; font-size: var(--m1); color: var(--leise); }
+.spurzeile:hover b, .figurzeile:hover b { color: var(--wasser); }
+.messliste-knopf { display: flex; gap: 12px; align-items: baseline; width: 100%; margin: 0; padding: 11px 14px; text-align: left; background: var(--roetel-hauch); border: 0; border-radius: 8px; cursor: pointer; color: var(--tinte); }
+.messliste-knopf b { font-weight: 500; }
+.messliste-knopf span { margin-left: auto; color: var(--roetel); font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.fuss { margin: 36px 0 0; padding: 12px 0 24px; border-top: 1px solid var(--linie); font-size: var(--m1); color: var(--leise); }
+
+/* Antwortleiste: bleibt am unteren Rand, solange man in der Frage liest */
+.antwortleiste { position: sticky; bottom: var(--tabs); z-index: 6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 32px calc(-1 * var(--rand)) 0; padding: 10px var(--rand); background: color-mix(in srgb, var(--papier) 90%, transparent); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border-top: 1px solid var(--linie); }
+.antwortleiste > span { font-size: var(--m2); color: var(--leise); margin-right: 2px; }
+.antwortleiste button { border: 1px solid var(--linie); background: var(--flaeche); border-radius: 999px; padding: 6px 14px; cursor: pointer; font-weight: 500; }
+.antwortleiste button:hover { border-color: var(--wasser); color: var(--wasser); }
+.antwortleiste .hinweise { margin-left: auto; font-size: var(--m1); color: var(--leise); background: none; border: 0; padding: 4px 0; font-weight: 400; }
+
+/* Antworten und Formular */
 .antwort { padding: 10px 0; border-top: 1px solid var(--linie); }
 .antwort header { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; font-size: var(--m2); }
 .antwort header b { font-weight: 500; }
@@ -214,7 +218,9 @@ table.angaben .bezug { font-size: var(--m1); color: var(--leise); }
 .kommentar header span { color: var(--leise); }
 .antwort header .marker-art { font-size: var(--m1); padding: 0 7px; border-radius: 3px; background: var(--wasser-hauch); color: var(--wasser); }
 .antwort header .marker-art.nein { background: var(--roetel-hauch); color: var(--roetel); }
-.formular { margin-top: 12px; padding: 14px; border: 1px solid var(--linie); border-radius: 8px; background: var(--flaeche); display: grid; gap: 10px; }
+.status { white-space: nowrap; color: var(--leise); font-size: var(--m1); }
+.status.bestaetigt { color: var(--eiche); font-weight: 500; }
+.formular { margin-top: 12px; padding: 14px; border: 1px solid var(--linie); border-radius: 8px; background: var(--flaeche); display: grid; gap: 10px; scroll-margin-bottom: 90px; }
 .wahl { display: flex; flex-wrap: wrap; gap: 6px; }
 .wahl button { border: 1px solid var(--linie); background: var(--papier); border-radius: 999px; padding: 5px 14px; cursor: pointer; }
 .wahl button[aria-pressed="true"] { background: var(--tinte); color: var(--papier); border-color: var(--tinte); }
@@ -227,12 +233,54 @@ table.angaben .bezug { font-size: var(--m1); color: var(--leise); }
 .knopf:disabled { opacity: .5; cursor: default; }
 .nurlesen { font-size: var(--m2); color: var(--leise); margin: 10px 0 0; }
 
+/* Skizzen, Quellen, Messliste, Vorgehen */
+.blaetter { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; }
+.blatt { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 10px; padding: 8px; background: var(--flaeche); border: 1px solid var(--linie); border-radius: 8px; text-align: left; cursor: pointer; font: inherit; color: inherit; }
+.blatt:hover { border-color: var(--wasser); }
+.blatt img { width: 72px; height: 72px; object-fit: cover; border-radius: 4px; background: var(--linie); }
+.blatt b { display: block; font-weight: 500; font-size: var(--m2); line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.blatt ul { margin: 4px 0 0; padding: 0; list-style: none; font-size: var(--m1); color: var(--leise); }
+.blatt li { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.quellbild { display: block; width: 100%; max-height: 62vh; object-fit: contain; background: var(--linie); border-radius: 8px; margin-top: 16px; cursor: zoom-in; }
+.lesungen { margin: 0; padding: 0; list-style: none; }
+.lesungen li { padding: 9px 0; border-top: 1px solid var(--linie); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; }
+.lesungen .wo { grid-column: 1 / -1; font-size: var(--m1); color: var(--leise); }
+.lesungen .w { font-weight: 500; font-variant-numeric: tabular-nums; text-align: right; }
+.posten { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; padding: 14px 0; border-top: 1px solid var(--linie); }
+.posten input { width: 22px; height: 22px; margin: 2px 0 0; accent-color: var(--eiche); }
+.posten h4 { margin: 0; font: 500 var(--m3)/1.35 var(--sans); }
+.posten h4 a { color: inherit; text-decoration: none; }
+.posten h4 small { font-weight: 400; color: var(--leise); font-size: var(--m1); margin-left: 6px; }
+.posten p { margin: 6px 0 0; font-size: var(--m2); max-width: 64ch; }
+.posten .fotos { display: flex; gap: 6px; margin-top: 8px; }
+.posten .fotos button { padding: 0; border: 0; background: none; cursor: pointer; }
+.posten .fotos img { width: 80px; height: 80px; object-fit: cover; border-radius: 6px; display: block; }
+.posten.erledigt h4, .posten.erledigt p { color: var(--leise); text-decoration: line-through; text-decoration-thickness: 1px; }
+.trenner { margin: 26px 0 0; font: 600 11px/1.2 var(--sans); letter-spacing: .09em; text-transform: uppercase; color: var(--leise); }
+.prosa { max-width: 66ch; }
+.prosa h3 { font: 500 var(--m4)/1.25 var(--serif); margin: 26px 0 6px; }
+.prosa ul, .prosa ol { padding-left: 1.2em; margin: 6px 0 0; }
+.prosa li { margin: 4px 0; }
+.prosa p { margin: 8px 0 0; }
+details.alle { margin-top: 30px; border-top: 1px solid var(--linie); }
+details.alle > summary { cursor: pointer; padding: 12px 0; color: var(--wasser); font-size: var(--m2); }
+table.angaben { width: 100%; border-collapse: collapse; font-size: var(--m2); }
+table.angaben td { padding: 7px 10px 7px 0; border-bottom: 1px solid var(--linie); vertical-align: top; }
+table.angaben td:first-child { width: 50%; overflow-wrap: anywhere; }
+table.angaben td.wert { font-variant-numeric: tabular-nums; font-weight: 500; overflow-wrap: anywhere; }
+table.angaben .gruppe td { padding-top: 14px; color: var(--leise); font: italic var(--m2) var(--serif); border-bottom: 0; }
+table.angaben .bezug { font-size: var(--m1); color: var(--leise); }
+table.angaben .belege img { width: 36px; height: 36px; }
+
+/* Bildbetrachter */
 .bildfenster { position: fixed; inset: 0; z-index: 50; background: rgb(10 14 14 / .84); display: grid; place-items: center; padding: 24px 16px; }
 .bildfenster figure { margin: 0; max-width: min(960px, 100%); }
 .bildfenster img { max-width: 100%; max-height: 78vh; border-radius: 6px; display: block; margin: 0 auto; }
 .bildfenster figcaption { color: #e6ecea; font-size: var(--m2); margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
 .bildfenster a { color: #9fd0d8; }
+.bildfenster .abgelesen { display: block; width: 100%; color: #fff; font-size: var(--m3); }
 .bildfenster .betrachter { width: min(1100px, 100%); }
+.bildfenster iframe { display: block; width: min(980px, 100%); height: min(86vh, 900px); border: 0; border-radius: 6px; background: var(--papier); }
 .buehne { position: relative; height: min(72vh, 820px); overflow: hidden; display: grid; place-items: center; touch-action: none; cursor: grab; border-radius: 6px; background: rgb(0 0 0 / .25); }
 .buehne:active { cursor: grabbing; }
 .buehne img { max-width: 100%; max-height: 100%; border-radius: 0; user-select: none; -webkit-user-drag: none; transform-origin: center; will-change: transform; }
@@ -243,47 +291,100 @@ table.angaben .bezug { font-size: var(--m1); color: var(--leise); }
 .werkzeuge button[data-bb="passen"] { font-size: var(--m2); }
 .zoomwert { color: #e6ecea; font-size: var(--m2); min-width: 52px; text-align: center; font-variant-numeric: tabular-nums; }
 .bildfenster > button { position: absolute; top: calc(env(safe-area-inset-top, 0px) + 10px); right: 16px; background: none; border: 0; color: #fff; font-size: 30px; line-height: 1; cursor: pointer; padding: 6px 10px; }
-.toast { position: fixed; bottom: calc(env(safe-area-inset-bottom, 0px) + 20px); left: 50%; transform: translateX(-50%); background: var(--tinte); color: var(--papier); padding: 9px 18px; border-radius: 6px; font-size: var(--m2); z-index: 60; max-width: calc(100% - 32px); }
+.toast { position: fixed; bottom: calc(var(--tabs) + env(safe-area-inset-bottom, 0px) + 20px); left: 50%; transform: translateX(-50%); background: var(--tinte); color: var(--papier); padding: 9px 18px; border-radius: 6px; font-size: var(--m2); z-index: 60; max-width: calc(100% - 32px); }
 
-@media (max-width: 880px) {
-  html, body { height: auto; }
-  .app { height: auto; display: block; }
-  .leiste { padding-block: 10px; }
-  .stand-mini { display: none; }
-  .suche { flex-basis: 100%; margin-left: 0; }
-  .werkbank { display: block; padding-top: 0; }
-  .rad { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--papier); height: 34vh; padding-top: 6px; border-bottom: 1px solid var(--linie); }
-  .rad svg#aufriss { height: 100%; max-height: none; }
-  .legende { display: none; }
-  .karte { overflow: visible; padding: 14px 0 64px; }
+.tabs { display: none; }
+
+/* Mittlere Breite: Belege wandern unter das Gewählte, das Rad wird zum Streifen */
+@media (max-width: 1179px) {
+  .inhalt { grid-template-columns: minmax(0, 1fr); }
+  .kontext { position: static; max-height: none; overflow: visible; border-left: 0; border-top: 1px solid var(--linie); margin: 28px var(--rand) 0; padding: 20px 0 48px; }
+  .arbeitsplatz { grid-template-columns: 272px minmax(0, 1fr); }
+  .zaehler > :first-child { display: none; }
 }
+#rad-streifen.an { display: flex; position: sticky; top: 0; z-index: 7; align-items: center; gap: 12px; height: 76px; margin: -24px calc(-1 * var(--rand)) 18px; padding: 6px var(--rand); background: var(--papier); border-bottom: 1px solid var(--linie); }
+#rad-streifen .lageplan { height: 100%; aspect-ratio: 2.2; flex: none; }
+#rad-streifen .lageplan svg { height: 100%; width: 100%; }
+#rad-streifen .streifen-text { min-width: 0; font-size: var(--m2); }
+#rad-streifen .streifen-text b { display: block; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#rad-streifen .streifen-text span { font-size: var(--m1); color: var(--leise); }
+
+/* Handy: eine Spalte, Liste als eigene Seite, Leiste unten */
+@media (max-width: 879px) {
+  :root { --tabs: calc(58px + env(safe-area-inset-bottom, 0px)); --rand: 16px; }
+  html, body { height: auto; }
+  body { padding-bottom: var(--tabs); }
+  .app { display: block; height: auto; }
+  .leiste { padding-block: 10px; position: sticky; top: 0; z-index: 20; flex-wrap: wrap; }
+  .zaehler, .vorgehen-link { display: none; }
+  .suche { display: none; flex-basis: 100%; margin: 0; }
+  .leiste.suche-offen .suche { display: block; }
+  .arbeitsplatz { display: block; }
+  .liste { display: none; border: 0; overflow: visible; padding: 14px 0 24px; }
+  .arbeitsplatz[data-ansicht="fragen"] .liste { display: block; }
+  .arbeitsplatz[data-ansicht="fragen"] .inhalt { display: none; }
+  .zeile { padding-block: 10px; }
+  .inhalt { display: block; overflow: visible; }
+  .mitte { padding-top: 16px; }
+  .kontext { margin: 28px 16px 0; padding-bottom: 24px; }
+  #rad-streifen.an { top: var(--leiste-hoehe, 57px); margin-top: -16px; height: 68px; }
+  #rad-gross .lageplan svg { max-height: 48vh; }
+  .legende { display: none; }
+  .mitte h2 { font-size: 1.5rem; }
+  .antwortleiste { flex-wrap: nowrap; gap: 6px; padding-block: 8px; }
+  .antwortleiste > span { display: none; }
+  .antwortleiste button { flex: 1 1 auto; padding: 7px 8px; font-size: var(--m2); white-space: nowrap; }
+  .antwortleiste .hinweise { display: none; }
+  .kennzeile { gap: 2px 14px; }
+  .stueck .mass { width: auto; }
+  .stueck tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; border-top: 1px solid var(--linie); padding: 8px 0; }
+  .stueck td { border: 0; padding: 0; }
+  .stueck tr:last-child { border-bottom: 1px solid var(--linie); }
+  .stueck tr:last-child td { border: 0; }
+  .stueck .wert { text-align: right; }
+  .stueck .herkunft { grid-column: 1; }
+  .stueck td:last-child { grid-column: 1 / -1; justify-self: end; max-width: 100%; }
+  .stueck td:last-child:empty { display: none; }
+  .stueck .belege { flex-wrap: wrap; justify-content: flex-end; margin-top: 4px; }
+  .tabs { display: grid; grid-template-columns: repeat(4, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; height: var(--tabs); padding-bottom: env(safe-area-inset-bottom, 0px); background: var(--flaeche); border-top: 1px solid var(--linie); }
+  .tabs button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: none; border: 0; font-size: 12px; color: var(--leise); cursor: pointer; position: relative; }
+  .tabs svg { width: 22px; height: 22px; }
+  .tabs button[aria-current="true"] { color: var(--wasser); font-weight: 600; }
+  .tabs .anzahl { position: absolute; top: 6px; left: calc(50% + 6px); min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: var(--roetel); color: #fff; font: 700 10px/17px var(--sans); }
+}
+@media print { .liste, .leiste, .kontext, .antwortleiste, .tabs, #rad-streifen, .posten .fotos, .knopf-zeile { display: none !important; } .app, .arbeitsplatz, .inhalt { display: block; height: auto; overflow: visible; } body { background: #fff; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
 <div class="app">
-  <header class="leiste">
+  <header class="leiste" id="leiste">
     <h1><a href="#" id="startlink">Kleines Schäferrad</a></h1>
-    <div class="stand-mini" id="stand-mini"></div>
+    <nav class="zaehler" id="zaehler" aria-label="Stand"></nav>
     <a class="vorgehen-link" href="#vorgehen" data-gehe="vorgehen">Wie wir vorgehen</a>
     <div class="suche" role="search">
       <input id="suche" type="search" placeholder="Bauteil oder Frage suchen, z. B. Schetter" autocomplete="off" aria-label="Bauteil oder Frage suchen" aria-controls="treffer" aria-expanded="false">
       <ul class="treffer-liste" id="treffer" role="listbox" hidden></ul>
     </div>
   </header>
-  <main class="werkbank">
-    <section class="rad" aria-label="Das Rad">
-      <svg id="aufriss" viewBox="0 0 780 560" role="group" aria-label="Schematischer Aufriss des Kleinen Schäferrads. Jedes Teil lässt sich anwählen."></svg>
-      <div class="etikett" id="etikett" hidden></div>
-      <ul class="legende" aria-label="Legende">
-        <li><svg viewBox="0 0 22 12"><rect x="1" y="1" width="20" height="10" fill="var(--holz)" stroke="var(--tinte)"/></svg>beschrieben</li>
-        <li><svg viewBox="0 0 22 12"><rect x="1" y="1" width="20" height="10" fill="none" stroke="var(--leise)" stroke-dasharray="4 3"/></svg>noch unbekannt</li>
-        <li><svg viewBox="0 0 22 12"><rect x="1" y="1" width="20" height="10" fill="color-mix(in srgb, var(--eiche) 32%, var(--holz))" stroke="var(--tinte)"/></svg>bestätigt</li>
-        <li><svg viewBox="0 0 22 12"><circle cx="11" cy="6" r="5" fill="var(--roetel)"/></svg>offene Fragen</li>
-        <li>Schema, nicht maßstäblich. Land rechts.</li>
-      </ul>
-    </section>
-    <section class="karte" id="karte" aria-live="polite"></section>
-  </main>
+  <div class="arbeitsplatz" id="arbeitsplatz" data-ansicht="start">
+    <nav class="liste" id="liste" aria-label="Offene Fragen"></nav>
+    <div class="inhalt" id="inhalt">
+      <main class="mitte" id="karte" aria-live="polite"></main>
+      <aside class="kontext" id="kontext" aria-label="Lageplan und Belege"></aside>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs" aria-label="Bereiche">
+    <button type="button" data-tab="start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2"/><path d="M12 4v16M4 12h16M6.3 6.3l11.4 11.4M17.7 6.3 6.3 17.7"/></svg>Rad</button>
+    <button type="button" data-tab="fragen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 6h14M5 12h14M5 18h9"/></svg>Fragen</button>
+    <button type="button" data-tab="messliste"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 9l2 2 4-4M9 15h6"/></svg>Messliste</button>
+    <button type="button" data-tab="suche"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg>Suche</button>
+  </nav>
+</div>
+<div id="rad-ablage" hidden>
+  <div class="lageplan" id="lageplan">
+    <svg id="aufriss" viewBox="0 0 780 560" role="group" aria-label="Schematischer Aufriss des Kleinen Schäferrads. Jedes Teil lässt sich anwählen."></svg>
+    <div class="etikett" id="etikett" hidden></div>
+  </div>
 </div>
 <div class="bildfenster" id="bildfenster" hidden role="dialog" aria-modal="true" aria-label="Foto"></div>
 <div class="toast" id="toast" hidden role="status"></div>
@@ -502,7 +603,7 @@ const pfad = pts => "M" + pts.map(p => p.map(v => v.toFixed(1)).join(" ")).join(
 const gruppen = {};
 function zeigeEtikett(id, e) {
   if (matchMedia("(hover: none)").matches) return;
-  const box = $(".rad").getBoundingClientRect(), et = $("#etikett");
+  const box = $("#lageplan").getBoundingClientRect(), et = $("#etikett");
   let x, y;
   if (e) { x = e.clientX - box.left; y = e.clientY - box.top; }
   else { const r = gruppen[id].getBoundingClientRect(); x = r.left + r.width / 2 - box.left; y = r.top - box.top; }
@@ -581,51 +682,200 @@ Object.entries(gruppen).forEach(([id, g]) => {
 
 // ---------- Wissensstand ----------
 const S = K.statistik, G = S.gueltigkeit;
-const best = G.bestaetigt || 0, off = G.offen || 0, unterlage = G.historisch || 0;
+const best = G.bestaetigt || 0, off = G.offen || 0;
 const messfotos = K.quellen.filter(q => q.bildart === "messfoto"), messAus = messfotos.filter(q => q.erschlossen).length;
-const balken = `<i style="width:${best / S.angaben * 100}%;background:var(--eiche)"></i><i style="width:${off / S.angaben * 100}%;background:var(--holz-dunkel)"></i>`;
-$("#stand-mini").innerHTML = `<span class="balken" aria-hidden="true"><i style="width:${best / S.angaben * 100}%;background:var(--eiche)"></i></span><span class="zahl">${best} von ${S.angaben} bestätigt</span>`;
-
-// ---------- Karten ----------
-const karte = $("#karte");
-function fragekarte(f) {
-  const foto = fotosZuFrage(f)[0], frei = freischaltet(f.id).length;
-  const meta = [vorname(f.entscheidet) && `${vorname(f.entscheidet)} entscheidet`, frei && `Schaltet ${frei} weitere ${frei === 1 ? "Frage" : "Fragen"} frei`, f.haengt_ab_von.length && "Wartet auf eine andere Antwort"].filter(Boolean).join(". ");
-  return `<button class="fragekarte${foto ? "" : " ohne-bild"}" data-gehe="${f.id}">${foto ? `<img src="${bildSrc(foto)}" alt="" loading="lazy">` : ""}<div><b>${esc(f.frage)}</b><span>${esc(meta)}${meta ? "." : ""}</span></div></button>`;
-}
-const fragezeile = f => `<button class="fragezeile" data-gehe="${f.id}"><b>${esc(kurz(f.frage, 140))}</b><span>${vorname(f.entscheidet) ? esc(vorname(f.entscheidet)) + " entscheidet" : ""}</span></button>`;
-
-function start() {
-  const reihe = nach(offen.filter(f => !altLuecke(f)), gewicht);
-  const zuerst = reihe.slice(0, 3), rest = reihe.slice(3), alt = offen.filter(altLuecke);
-  const gruppeVon = f => { const t = [...f.betrifft, ...f.blockiert].flatMap(bezugVon).find(x => teile[x]); const v = t ? [...vorfahren(t), t] : []; return v.includes("COMP-WHEEL") ? "Wasserrad" : v.includes("COMP-RADSTATT") ? "Radstadt" : v.includes("COMP-WATERWAY") ? "Wasserführung" : "Allgemein"; };
-  const gruppiert = {}; rest.forEach(f => (gruppiert[gruppeVon(f)] ||= []).push(f));
-  const mitSpur = nach(offen.filter(f => teileHinweis(f.hinweis).spuren.length), gewicht);
-  karte.innerHTML = `
-    <p class="einstieg">Tippe ein Teil am Rad an, um zu sehen, was darüber bekannt ist. Oder beginne mit den Fragen, deren Antwort am meisten weiterhilft.</p>
-    <div class="wissen">
-      <div class="balken" role="img" aria-label="${best} bestätigt, ${off} offen, ${unterlage} aus allgemeinen Unterlagen">${balken}</div>
-      <dl><div><dt>bestätigt</dt><dd>${best}</dd></div><div><dt>noch offen</dt><dd>${off}</dd></div><div><dt>Messfotos ausgewertet</dt><dd>${messAus}<span> / ${messfotos.length}</span></dd></div></dl>
-      <p class="leise">Das Rad wurde am 10. Oktober 2026 abgebaut. Bis zum Aufbau im Frühjahr liegen alle Teile einzeln im Lager.</p>
-    </div>
-    <p class="leise klein" style="margin-top:14px">Du kennst das Rad und findest unser Vorgehen unlogisch? <a href="#vorgehen" data-gehe="vorgehen">Sag uns, wie du es machen würdest.</a></p>
-    ${auftraege().length ? `<button class="messliste-knopf" data-gehe="messliste"><b>Messliste für den nächsten Gang ins Lager</b><span>${erledigtZahl()} / ${auftraege().length} erledigt</span></button>` : ""}
-    ${mitSpur.length ? `<h3>Neue Spuren<small>${mitSpur.length}</small></h3><p class="leise klein">Was die Auswertung der Abbau-Fotos zu offenen Fragen ergeben hat. Entschieden ist damit noch nichts.</p>${mitSpur.map(f => { const sp = teileHinweis(f.hinweis).spuren.at(-1); return `<button class="spurkarte" data-gehe="${f.id}"><b>${esc(kurz(f.frage, 120))}</b><span>${esc(kurz(sp.text, 210))}</span></button>`; }).join("")}` : ""}
-    <h3>Als Nächstes klären</h3>
-    ${zuerst.map(fragekarte).join("")}
-    ${FIGUREN.length ? `<h3>Figuren<small>${FIGUREN.length}</small></h3><p class="leise klein">Gezeichnet aus den Maßen im Wissenskern. Was offen ist, steht in der Bildunterschrift.</p>${figurKacheln(FIGUREN)}` : ""}
-    <h3>Weitere offene Fragen<small>${rest.length}</small></h3>
-    ${["Wasserrad", "Radstadt", "Wasserführung", "Allgemein"].filter(g => gruppiert[g]).map(g => `<details class="gruppe"><summary>${g}<small>${gruppiert[g].length}</small></summary><div class="innen">${gruppiert[g].map(fragezeile).join("")}</div></details>`).join("")}
-    ${alt.length ? `<details class="gruppe"><summary>Aus der Zeit vor dem Abbau<small>${alt.length}</small></summary><div class="innen"><p class="leise klein">Aufnahmewünsche von vor dem Abbau. Prüfen, ob die Fotos vom Abbau sie schon beantworten, sonst beim Aufbau im Frühjahr nachholen.</p>${alt.map(fragezeile).join("")}</div></details>` : ""}
-    ${fuss()}`;
-}
 const neuSeitAbbau = K.angaben.filter(a => /^AN-2026101[1-9]/.test(a.id)).length;
+
+// ---------- Bausteine ----------
+const karte = $("#karte"), kontext = $("#kontext"), inhalt = $("#inhalt"), arbeitsplatz = $("#arbeitsplatz");
+const KLAERUNG = { wissen: "Wissen", radstadt: "an der Radstadt", foto: "am Foto", rechnen: "am Rechner", aufbau: "ruht bis zum Aufbau" };
+const KLAERUNG_LANG = { wissen: "Lässt sich mit Wissen beantworten", radstadt: "An der Radstadt im Wasser messbar", foto: "Auf vorhandenen Fotos prüfbar", rechnen: "Am Rechner prüfbar", aufbau: "Erst beim Aufbau im Frühjahr messbar" };
+const kurzTitel = f => f.kurztitel || kurz(f.frage, 60);
+const ruht = f => f.klaerung === "aufbau";
+const hatSpur = f => teileHinweis(f.hinweis).spuren.length > 0;
+const bauteilVon = f => { const t = [...f.betrifft, ...f.blockiert].flatMap(bezugVon).find(x => teile[x] && teile[x].art !== "anlage"); return t ? teile[t].name : "Allgemein"; };
+const BLASE = `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 3h10v7H7l-3 3v-3H3z"/></svg>`;
+const abschnitt = (titel, zahl, html, id = "") => html ? `<section class="abschnitt"${id ? ` id="${id}"` : ""}><h3>${titel}${zahl ? `<small>${zahl}</small>` : ""}</h3>${html}</section>` : "";
+const reihenfolge = () => nach(offen, f => (ruht(f) ? -1000 : 0) + (hatSpur(f) ? 40 : 0) + gewicht(f));
+
+function frageZeile(f, imText = false) {
+  const n = Speicher.zu(f.id).length;
+  return `<button class="zeile${ruht(f) ? " ruht" : ""}${imText ? " im-text" : ""}" data-gehe="${f.id}"${aktuell === f.id ? ' aria-current="true"' : ""}>
+    <b>${esc(kurzTitel(f))}</b><span class="meta">${esc(bauteilVon(f))} · ${esc(KLAERUNG[f.klaerung] || "")}</span>
+    <span class="rechts">${hatSpur(f) ? `<i class="punkt" title="Neue Spur"></i>` : ""}${n ? `<span class="sprechblase" title="${n} ${n === 1 ? "Antwort" : "Antworten"}">${BLASE}${n}</span>` : ""}</span></button>`;
+}
+
+// ---------- Fragenliste (links, auf dem Handy eigene Seite) ----------
+const FILTER_KEY = "ks-filter";
+let filter = (() => { try { return localStorage.getItem(FILTER_KEY) || "alle"; } catch { return "alle"; } })();
+const FILTER = [["alle", "Alle"], ["neu", "Neu"], ["wissen", "Wissen"], ["radstadt", "Radstadt"], ["foto", "Foto"], ["rechnen", "Rechner"], ["aufbau", "Aufbau"]];
+const passt = f => filter === "alle" || (filter === "neu" ? hatSpur(f) : f.klaerung === filter);
+function zeichneListe() {
+  const alle = reihenfolge().filter(passt), jetzt = alle.filter(f => !ruht(f)), spaeter = alle.filter(ruht);
+  $("#liste").innerHTML = `
+    <div class="filter" role="group" aria-label="Fragen filtern">${FILTER.map(([k, t]) => `<button type="button" data-filter="${k}" aria-pressed="${filter === k}">${t}</button>`).join("")}</div>
+    ${jetzt.length ? `<h2><span>Jetzt klärbar</span><span>${jetzt.length}</span></h2>${jetzt.map(f => frageZeile(f)).join("")}` : ""}
+    ${spaeter.length ? `<h2><span>Ruht bis zum Aufbau</span><span>${spaeter.length}</span></h2>${spaeter.map(f => frageZeile(f)).join("")}` : ""}
+    ${alle.length ? "" : `<p class="leer-liste">Keine Frage passt zu diesem Filter.</p>`}`;
+}
+function setzeFilter(k) { filter = k; try { localStorage.setItem(FILTER_KEY, k); } catch {} zeichneListe(); }
+
+// ---------- Leiste oben und unten ----------
+const auftraege = () => nach(offen.filter(f => auftragVon(f.hinweis)), f => (ruht(f) ? 0 : 100) + (hatSpur(f) ? 50 : 0) + gewicht(f));
+function zeichneZaehler() {
+  const spuren = offen.filter(hatSpur).length, a = auftraege().length;
+  $("#zaehler").innerHTML = `<a href="#fragen" data-filter-gehe="alle"><b>${offen.length}</b> offene Fragen</a>${spuren ? `<button type="button" class="neu" data-filter-gehe="neu"><b>${spuren}</b> neue Spuren</button>` : ""}${a ? `<a href="#messliste" class="mess" data-gehe="messliste"><b>${erledigtZahl()}/${a}</b> Messliste</a>` : ""}`;
+  const t = $('#tabs [data-tab="fragen"]'); if (t && !t.querySelector(".anzahl") && spuren) t.insertAdjacentHTML("beforeend", `<span class="anzahl">${spuren}</span>`);
+}
+
+// ---------- Rad: groß auf dem Start, sonst Lageplan rechts oder Streifen oben ----------
+const istHandy = () => matchMedia("(max-width: 879px)").matches;
+const istSchmal = () => matchMedia("(max-width: 1179px)").matches;
+let markiert = [];
+function platziereRad(ansicht, titel = "", unter = "") {
+  const lp = $("#lageplan"), streifen = $("#rad-streifen");
+  lp.classList.remove("mini", "streifen");
+  lp.classList.toggle("hat-wahl", markiert.length > 0 && ansicht !== "start");
+  if (ansicht === "start") { $("#rad-gross")?.appendChild(lp); zoomRad(false); return; }
+  if (!["frage", "bauteil", "quelle"].includes(ansicht)) { $("#rad-ablage").appendChild(lp); return; }
+  if (istSchmal() && streifen) {
+    streifen.classList.add("an");
+    streifen.innerHTML = `<div class="streifen-text"><b>${esc(titel)}</b><span>${esc(unter)}</span></div>`;
+    streifen.prepend(lp); lp.classList.add("streifen"); zoomRad(true);
+  } else { const ort = $("#kontext-rad"); if (ort) { ort.appendChild(lp); lp.classList.add("mini"); } zoomRad(false); }
+}
+// Im Streifen auf die gewählten Teile zoomen, sonst das ganze Rad zeigen.
+function zoomRad(nah) {
+  if (!nah || !markiert.length) { svg.setAttribute("viewBox", "0 0 780 560"); return; }
+  const boxen = markiert.map(id => gruppen[id]).filter(Boolean).map(g => { try { return g.getBBox(); } catch { return null; } }).filter(b => b && b.width);
+  if (!boxen.length) { svg.setAttribute("viewBox", "0 0 780 560"); return; }
+  let x0 = Math.min(...boxen.map(b => b.x)), y0 = Math.min(...boxen.map(b => b.y)), x1 = Math.max(...boxen.map(b => b.x + b.width)), y1 = Math.max(...boxen.map(b => b.y + b.height));
+  const rand = 30, verh = 2.2; x0 -= rand; y0 -= rand; x1 += rand; y1 += rand;
+  let w = x1 - x0, h = y1 - y0;
+  if (w / h < verh) { const nw = h * verh; x0 -= (nw - w) / 2; w = nw; } else { const nh = w / verh; y0 -= (nh - h) / 2; h = nh; }
+  svg.setAttribute("viewBox", `${x0.toFixed(0)} ${y0.toFixed(0)} ${w.toFixed(0)} ${h.toFixed(0)}`);
+}
+const radSlot = () => `<div id="rad-streifen"></div>`;
+const kontextRad = () => `<div id="kontext-rad"></div>`;
+
+// ---------- Fotos und Figuren rechts ----------
+function belegraster(liste, titel = "Belege", max = 7) {
+  if (!liste.length) return `<h3>${titel}</h3><p class="leer-text">Noch keine Fotos zugeordnet.</p>`;
+  const zeig = liste.slice(0, max);
+  return `<h3>${titel}<small>${liste.length}</small></h3><div class="belegraster" id="belegraster">${zeig.map((q, i) => fotoKachel(q, i === 0)).join("")}</div>${liste.length > max ? `<button class="knopf-leise" type="button" data-alle-fotos="${max}">Alle ${liste.length} Fotos zeigen</button>` : ""}`;
+}
+const fotoKachel = (q, gross) => `<button class="${gross ? "gross" : ""}" data-foto="${q.id}" aria-label="Foto öffnen"><img src="${bildSrc(q)}" alt="" loading="lazy"><span class="art">${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}</span></button>`;
+let fotoVorrat = [];
+const figurZeilen = liste => liste.map(f => `<button class="figurzeile" data-figur="${f.id}"><b>${esc(f.titel)}</b><span>${esc(f.beschreibung)}</span></button>`).join("");
+
+// ---------- Stückliste: ein Wert pro Zeile ----------
+function stueckliste(liste, bezugId, mitAbgleich = null) {
+  const bez = a => beziehungen[a.ziel] ? `${teile[beziehungen[a.ziel].von]?.name || ""} ${begriffe[beziehungen[a.ziel].art]?.name || ""} ${teile[beziehungen[a.ziel].zu]?.name || ""}` : a.ziel !== bezugId && teile[a.ziel] ? teile[a.ziel].name : "";
+  return `<table class="stueck"><tbody>${liste.map(a => `<tr>
+    <td class="mass">${esc(eig(a.eig))}${bez(a) ? `<small>${esc(bez(a))}</small>` : ""}</td>
+    <td class="wert">${esc(wertText(a).replace(" (Einheit nicht angegeben)", ""))}${mitAbgleich ? abgleich(a, mitAbgleich) : ""}</td>
+    <td class="herkunft${a.guelt === "bestaetigt" ? " bestaetigt" : ""}" title="${esc(a.id)}">${GRUND[a.grund]}${wertText(a).includes("(Einheit nicht angegeben)") ? ", ohne Einheit" : ""} · ${GUELT[a.guelt]}</td>
+    <td>${belege(a, 3)}</td></tr>`).join("")}</tbody></table>`;
+}
+
+// ---------- Antwortleiste ----------
+function antwortleiste(ziel, art) {
+  const n = Speicher.zu(ziel).length;
+  const knoepfe = art === "frage" ? ["stimmt", "stimmt_nicht", "genauer"] : ["ergaenzung", "korrektur"];
+  if (Speicher.modus === "lesen") return n ? `<div class="antwortleiste"><button class="hinweise" type="button" data-zu-antworten>${n} ${n === 1 ? "Hinweis" : "Hinweise"} lesen</button></div>` : "";
+  return `<div class="antwortleiste"><span>${art === "frage" ? "Deine Antwort:" : "Du weißt mehr?"}</span>${knoepfe.map(t => `<button type="button" data-schnell="${t}">${TYPEN[t]}</button>`).join("")}${n ? `<button class="hinweise" type="button" data-zu-antworten>${n} ${n === 1 ? "Hinweis" : "Hinweise"}</button>` : ""}</div>`;
+}
+
+// ---------- Start ----------
+function start() {
+  const mitSpur = nach(offen.filter(hatSpur), gewicht), a = auftraege();
+  karte.innerHTML = `<div class="breite" style="max-width:none">
+    <div id="rad-gross"></div>
+    <ul class="legende" aria-label="Legende">
+      <li><svg viewBox="0 0 22 12"><rect x="1" y="1" width="20" height="10" fill="var(--holz)" stroke="var(--tinte)"/></svg>beschrieben</li>
+      <li><svg viewBox="0 0 22 12"><rect x="1" y="1" width="20" height="10" fill="none" stroke="var(--leise)" stroke-dasharray="4 3"/></svg>noch unbekannt</li>
+      <li><svg viewBox="0 0 22 12"><rect x="1" y="1" width="20" height="10" fill="color-mix(in srgb, var(--eiche) 32%, var(--holz))" stroke="var(--tinte)"/></svg>bestätigt</li>
+      <li><svg viewBox="0 0 22 12"><circle cx="11" cy="6" r="5" fill="var(--roetel)"/></svg>offene Fragen</li>
+      <li>Schema, nicht maßstäblich. Land rechts.</li>
+    </ul>
+    <p class="einstieg">Tippe ein Teil am Rad an oder wähle ${istHandy() ? "unten unter „Fragen“" : "links"} eine Frage.</p>
+    <p class="kennzeile"><span><b>${S.angaben}</b> Angaben</span><span><b>${best}</b> bestätigt</span><span><b>${neuSeitAbbau}</b> seit dem Abbau neu</span><span><b>${messAus}/${messfotos.length}</b> Messfotos ausgewertet</span><span>Abgebaut am 10.10.2026, Teile im Lager</span></p>
+    ${istSchmal() ? `<div class="kontext-unten">${startSpalte(mitSpur, a)}</div>` : ""}
+    ${fuss()}</div>`;
+  kontext.innerHTML = istSchmal() ? "" : startSpalte(mitSpur, a);
+}
+const startSpalte = (mitSpur, a) => `
+  ${a.length ? `<h3>Messliste</h3><button class="messliste-knopf" data-gehe="messliste"><b>An der Radstadt und beim Aufbau messen</b><span>${erledigtZahl()}/${a.length}</span></button>` : ""}
+  ${mitSpur.length ? `<h3>Neue Spuren<small>${mitSpur.length}</small></h3><p class="klein">Was die Abbau-Fotos zu offenen Fragen ergeben haben. Entschieden ist damit noch nichts.</p>${mitSpur.map(f => { const sp = teileHinweis(f.hinweis).spuren.at(-1); return `<button class="spurzeile" data-gehe="${f.id}"><b><i class="punkt"></i>${esc(kurzTitel(f))}</b><span>${esc(sp.text)}</span></button>`; }).join("")}` : ""}
+  ${FIGUREN.length ? `<h3>Figuren<small>${FIGUREN.length}</small></h3>${figurZeilen(FIGUREN)}` : ""}
+  <h3>Mitreden</h3><p class="klein">Du kennst das Rad und findest unser Vorgehen unlogisch? <a href="#vorgehen" data-gehe="vorgehen">Sag uns, wie du es machen würdest.</a></p>`;
 const fuss = () => `<p class="fuss">Erzeugt aus dem Wissenskern${K.commit ? ", Stand " + esc(K.commit) : ""}. ${S.angaben} Angaben, davon ${neuSeitAbbau} seit dem Abbau neu; ${K.quellen.length} Quellen; ${offen.length} offene Fragen. Fachlich gültig ist erst, was Thorsten bestätigt.${K.api ? `${K.impressum ? ` · <a href="impressum.html">Impressum</a>` : ""} · <a href="datenschutz.html">Datenschutz</a>` : ""}</p>`;
 
-const FIGUREN = K.figuren || [];
-function figurKacheln(liste) {
-  return liste.map(f => `<button class="figurkachel" data-figur="${f.id}"><b>${esc(f.titel)}</b><span>${esc(f.beschreibung)}</span></button>`).join("");
+// ---------- Frage ----------
+function frage(id) {
+  const f = fragen[id];
+  const frei = freischaltet(id).map(x => fragen[x]).filter(Boolean), warte = f.haengt_ab_von.map(x => fragen[x]).filter(Boolean);
+  const bez = [...new Set([...f.betrifft, ...f.blockiert].flatMap(bezugVon))].filter(t => teile[t]);
+  const { alt: hinweisAlt, spuren } = teileHinweis(f.hinweis), letzte = spuren.at(-1), auftrag = auftragVon(f.hinweis);
+  const bekannt = [...new Set([...f.betrifft.map(x => angabenById[x]).filter(Boolean), ...genannteAngabenVoll(f.hinweis)])];
+  const n = Speicher.zu(id).length;
+  karte.innerHTML = `${radSlot()}<div class="breite">
+    <p class="augenbraue"><span class="id">${esc(f.id)}</span>${vorname(f.entscheidet) ? `<span>${esc(vorname(f.entscheidet))} entscheidet</span>` : ""}<span class="kl ${esc(f.klaerung || "")}" title="${esc(KLAERUNG_LANG[f.klaerung] || "")}">${esc(KLAERUNG[f.klaerung] || "offen")}</span>${letzte ? `<span class="neu-marke"><i class="punkt"></i>neue Spur</span>` : ""}</p>
+    <h2>${esc(kurzTitel(f))}</h2>
+    <p class="wortlaut">${esc(f.frage)}</p>
+    ${letzte ? `<div class="notiz"><b>Stand ${esc(letzte.datum)}</b><p class="klemme" id="stand-text">${esc(letzte.text)}</p><button class="knopf-leise" type="button" data-klemme="stand-text" hidden>Weiterlesen</button></div>` : ""}
+    ${auftrag ? `<div class="notiz auftrag"><b>Messauftrag · ${esc(auftrag.datum)}${ruht(f) ? " · ruht bis zum Aufbau" : ""}</b><p>${esc(auftrag.text)} <a href="#messliste" data-gehe="messliste">Zur Messliste</a></p></div>` : ""}
+    ${abschnitt("Bisheriger Stand", bekannt.length, bekannt.length ? stueckliste(bekannt, null) : "")}
+    ${abschnitt("Herleitung", "", hinweisAlt ? `<div class="notiz herleitung" style="margin-top:0"><p>${esc(hinweisAlt)}</p></div>` : "")}
+    ${abschnitt("Frühere Spuren", spuren.length - 1, spuren.length > 1 ? spuren.slice(0, -1).reverse().map(sp => `<div class="notiz" style="margin-top:10px"><b>Stand ${esc(sp.datum)}</b><p>${esc(sp.text)}</p></div>`).join("") : "")}
+    ${abschnitt("Zusammenhang", "", (frei.length ? `<p class="klein">Die Antwort macht diese Fragen beantwortbar:</p><div>${frei.map(x => frageZeile(x, true)).join("")}</div>` : "") + (warte.length ? `<p class="klein" style="margin-top:${frei.length ? 16 : 0}px">Leichter, wenn zuerst diese geklärt ist:</p><div>${warte.map(x => frageZeile(x, true)).join("")}</div>` : ""))}
+    ${abschnitt("Betrifft", "", bez.length ? `<div class="chips">${bez.map(t => `<button data-gehe="${t}">${esc(teile[t].name)}</button>`).join("")}</div>` : "")}
+    ${abschnitt("Antworten", n || "", antwortBereich(id, "frage"), "antworten")}
+    ${istSchmal() ? `<div class="kontext-unten">${frageKontext(f, false)}</div>` : ""}
+    </div>${antwortleiste(id, "frage")}`;
+  kontext.innerHTML = istSchmal() ? "" : frageKontext(f, true);
+  platziereRad("frage", kurzTitel(f), bez.map(t => teile[t].name).join(", ") || "Ganzes Rad");
+  const st = $("#stand-text"); if (st && st.scrollHeight > st.clientHeight + 2) $('[data-klemme="stand-text"]').hidden = false;
 }
+function frageKontext(f, mitRad) {
+  fotoVorrat = fotosZuFrage(f);
+  const fig = FIGUREN.filter(x => x.fragen.includes(f.id));
+  return `${mitRad ? kontextRad() : ""}${belegraster(fotoVorrat, "Passende Fotos")}${fig.length ? `<h3>Figur</h3>${figurZeilen(fig)}` : ""}`;
+}
+
+// ---------- Bauteil ----------
+function bauteil(id) {
+  const b = teile[id], beg = begriffe[b.begriff];
+  const ang = sammle(angabenJe, id), anzBest = ang.filter(a => a.guelt === "bestaetigt").length;
+  const masse = nach((direktJe[id] || []).filter(a => istMass(a) && !["holzliste", "fremdvorlage", "scan"].includes(a.grund) && a.guelt !== "ueberholt"), a => ({ messung: 5, muendlich: 4, skizze: 3, foto: 2, ableitung: 1 }[a.grund] || 0)).filter((a, i, l) => l.findIndex(x => x.eig.replace(/_skizze$/, "") === a.eig.replace(/_skizze$/, "")) === i).slice(0, 12);
+  const fr = reihenfolge().filter(f => sammle(fragenJe, id).includes(f));
+  const skizzen = skizzenVon(id), unter = (kinder[id] || []).map(k => teile[k]), pfadK = vorfahren(id);
+  const definition = beg && !["B-VORLAGE", "B-HOLZLISTENPOSTEN"].includes(beg.id) ? beg.definition : "";
+  karte.innerHTML = `${radSlot()}<div class="breite">
+    <p class="augenbraue">${pfadK.length ? pfadK.map(k => `<a href="#${k}" data-gehe="${k}">${esc(teile[k].name)}</a>`).join(" / ") : "<span>Bauteil</span>"}${b.anzahl ? `<span>Anzahl: ${esc(b.anzahl)}</span>` : ""}${anzBest ? `<span class="status bestaetigt">${anzBest} bestätigt</span>` : ""}</p>
+    <h2>${esc(b.name)}</h2>
+    ${definition ? `<p class="wortlaut">${esc(definition)}</p>` : ""}
+    ${beg?.aliase?.length ? `<p class="wortlaut" style="margin-top:4px;font-size:var(--m2)">Im Verein auch: ${beg.aliase.map(esc).join(", ")}</p>` : ""}
+    ${b.hinweis ? `<div class="notiz herleitung"><b>Hinweis</b><p>${esc(b.hinweis)}</p></div>` : ""}
+    ${abschnitt("Maße", masse.length || "", masse.length ? stueckliste(masse, id, direktJe[id] || []) : `<p class="leer-text">Noch keine Maße für dieses Teil.</p>`)}
+    ${abschnitt("Offene Fragen", fr.length, fr.length ? `<div>${fr.map(f => frageZeile(f, true)).join("")}</div>` : "")}
+    ${abschnitt("Besteht aus", unter.length, unter.length ? `<div class="chips">${unter.map(k => `<button data-gehe="${k.id}">${esc(k.name)}</button>`).join("")}</div>` : "")}
+    ${abschnitt("Skizzen und Zeichnungen", skizzen.length, skizzen.length ? `<div class="blaetter">${skizzen.slice(0, 6).map(blatt).join("")}</div>${skizzen.length > 6 ? `<p class="leer-text" style="margin-top:6px">und ${skizzen.length - 6} weitere</p>` : ""}` : "")}
+    ${abschnitt("Ergänzen", "", antwortBereich(id, "bauteil"), "antworten")}
+    ${ang.length ? `<details class="alle"><summary>Alle ${ang.length} Angaben anzeigen, ${anzBest ? anzBest + " bestätigt" : "keine bestätigt"}</summary>${angabenTabelle(ang, id)}</details>` : ""}
+    ${istSchmal() ? `<div class="kontext-unten">${bauteilKontext(id, false)}</div>` : ""}
+    </div>${antwortleiste(id, "bauteil")}`;
+  kontext.innerHTML = istSchmal() ? "" : bauteilKontext(id, true);
+  platziereRad("bauteil", b.name, pfadK.map(k => teile[k].name).join(" / ") || "Bauteil");
+}
+function bauteilKontext(id, mitRad) {
+  fotoVorrat = fotosVon([id]).filter(q => q.art !== "skizze");
+  const fig = FIGUREN.filter(x => x.bauteile.includes(id));
+  return `${mitRad ? kontextRad() : ""}${belegraster(fotoVorrat, "Fotos")}${fig.length ? `<h3>Figur</h3>${figurZeilen(fig)}` : ""}`;
+}
+
+// ---------- Figuren ----------
+const FIGUREN = K.figuren || [];
 function oeffneFigur(id) {
   const fig = FIGUREN.find(f => f.id === id), f = $("#bildfenster"), vorher = document.activeElement;
   const dunkel = document.documentElement.dataset.theme === "dark" || (!document.documentElement.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
@@ -637,30 +887,31 @@ function oeffneFigur(id) {
   $("#bild-zu").onclick = zu; f.onclick = e => { if (e.target === f) zu(); }; document.addEventListener("keydown", taste);
 }
 
-// Skizzen und Zeichnungen: jede als Blatt mit dem, was darauf gelesen wurde.
+// ---------- Quelle (Foto, Skizze, Dokument) ----------
 const lesungenVon = qid => K.angaben.filter(a => (a.quellen || []).some(([q]) => q === qid));
 const skizzenVon = id => { const s = new Set(unterteile(id)); const ids = new Set(K.quellen.filter(q => q.art === "skizze" && q.bild && s.has(q.bauteil)).map(q => q.id)); (sammle(angabenJe, id)).forEach(a => (a.quellen || []).forEach(([q]) => { if (quellen[q]?.art === "skizze" && quellen[q].bild) ids.add(q); })); return nach([...ids].map(q => quellen[q]), q => (s.has(q.bauteil) ? 1000 : 0) + Math.min(lesungenVon(q.id).filter(x => s.has(x.ziel)).length, 50)); };
-const blatt = q => { const l = lesungenVon(q.id); return `<button class="blatt" data-gehe="${q.id}"><img src="${bildSrc(q)}" alt="" loading="lazy"><span><b>${esc(kurz(q.titel || q.id, 60))}</b><ul>${l.slice(0, 4).map(a => `<li>${esc(eig(a.eig))}: ${esc(wertText(a))}</li>`).join("")}${l.length > 4 ? `<li>und ${l.length - 4} weitere</li>` : l.length ? "" : "<li>noch nichts abgelesen</li>"}</ul></span></button>`; };
+const blatt = q => { const l = lesungenVon(q.id); return `<button class="blatt" data-gehe="${q.id}"><img src="${bildSrc(q)}" alt="" loading="lazy"><span><b>${esc(q.titel || q.id)}</b><ul>${l.slice(0, 3).map(a => `<li>${esc(eig(a.eig))}: ${esc(wertText(a))}</li>`).join("")}${l.length > 3 ? `<li>und ${l.length - 3} weitere</li>` : l.length ? "" : "<li>noch nichts abgelesen</li>"}</ul></span></button>`; };
 function quelleKarte(id) {
   const q = quellen[id], l = lesungenVon(id), bez = q.bauteil && teile[q.bauteil];
   const art = q.art === "skizze" ? "Skizze" : BILDART[q.bildart] || ARTNAME[q.art] || "Foto";
-  karte.innerHTML = `
-    <button class="zurueck" data-gehe="${bez ? q.bauteil : ""}">${bez ? "Zurück zu " + esc(bez.name) : "Zurück zum Überblick"}</button>
-    <p class="pfad">${esc(art)}${bez ? " · " + esc(bez.name) : ""}${q.kopien ? ` · ${q.kopien} weitere Kopie${q.kopien > 1 ? "n" : ""}` : ""}</p>
+  karte.innerHTML = `${radSlot()}<div class="breite">
+    <p class="augenbraue"><span class="id">${esc(art)}</span>${bez ? `<a href="#${q.bauteil}" data-gehe="${q.bauteil}">${esc(bez.name)}</a>` : ""}${q.kopien ? `<span>${q.kopien} weitere Kopie${q.kopien > 1 ? "n" : ""}</span>` : ""}</p>
     <h2>${esc(q.titel || q.id)}</h2>
     ${q.bild ? `<img class="quellbild" src="${bildSrc(q)}" alt="" data-foto="${q.id}">` : ""}
-    ${q.pfad ? `<p class="auch"><a href="${REPO + encodeURI(q.pfad)}" target="_blank" rel="noopener">Original in voller Größe</a></p>` : ""}
-    <h3>Was darauf gelesen wurde<small>${l.length}</small></h3>
-    ${l.length ? `<ul class="lesungen">${l.map(a => { const st = (a.quellen.find(([x]) => x === id) || [])[1]; const ziel = teile[a.ziel]?.name || ""; return `<li><span>${esc(eig(a.eig))}${ziel && a.ziel !== q.bauteil ? ` <small class="leise">(${esc(ziel)})</small>` : ""}</span><span class="w">${esc(wertText(a))}</span><span class="wo">${st ? "Stelle: " + esc(st) + " · " : ""}${GRUND[a.grund]}, ${GUELT[a.guelt]} · ${esc(a.id)}</span></li>`; }).join("")}</ul>` : `<p class="leer-text">Aus diesem Bild ist noch nichts abgelesen. Wer weiß, was es zeigt?</p>`}
-    <h3>Stimmt das so?</h3>
-    <p class="leise klein">Lesart prüfen, Bedeutung erklären oder ergänzen, was das Bild zeigt – auch ohne zu messen.</p>
-    ${antwortBereich(id, "frage")}`;
+    ${q.pfad ? `<p class="wortlaut" style="font-size:var(--m2)"><a href="${REPO + encodeURI(q.pfad)}" target="_blank" rel="noopener">Original in voller Größe</a></p>` : ""}
+    ${abschnitt("Was darauf gelesen wurde", l.length, l.length ? `<ul class="lesungen">${l.map(a => { const st = (a.quellen.find(([x]) => x === id) || [])[1]; const ziel = teile[a.ziel]?.name || ""; return `<li><span>${esc(eig(a.eig))}${ziel && a.ziel !== q.bauteil ? ` <small class="leise">(${esc(ziel)})</small>` : ""}</span><span class="w">${esc(wertText(a))}</span><span class="wo">${st ? "Stelle: " + esc(st) + " · " : ""}${GRUND[a.grund]}, ${GUELT[a.guelt]} · ${esc(a.id)}</span></li>`; }).join("")}</ul>` : `<p class="leer-text">Aus diesem Bild ist noch nichts abgelesen. Wer weiß, was es zeigt?</p>`)}
+    ${abschnitt("Stimmt das so?", "", `<p class="klein">Lesart prüfen, Bedeutung erklären oder ergänzen, was das Bild zeigt – auch ohne zu messen.</p>${antwortBereich(id, "frage")}`, "antworten")}
+    ${istSchmal() && bez ? `<div class="kontext-unten">${quelleKontext(q, false)}</div>` : ""}
+    </div>${antwortleiste(id, "frage")}`;
+  kontext.innerHTML = istSchmal() ? "" : quelleKontext(q, true);
+  platziereRad("quelle", q.titel || q.id, bez ? bez.name : art);
+}
+function quelleKontext(q, mitRad) {
+  fotoVorrat = q.bauteil ? fotosVon([q.bauteil]).filter(x => x.id !== q.id) : [];
+  return `${mitRad ? kontextRad() : ""}${fotoVorrat.length ? belegraster(fotoVorrat, "Weitere Bilder vom Teil", 6) : ""}`;
 }
 
-function fotostreifen(liste, max = 18) {
-  if (!liste.length) return `<p class="leer-text">Noch keine Fotos zugeordnet.</p>`;
-  return `<div class="fotos">${liste.slice(0, max).map(q => `<button data-foto="${q.id}" aria-label="Foto öffnen"><img src="${bildSrc(q)}" alt="" loading="lazy"><span class="art">${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}</span></button>`).join("")}</div>${liste.length > max ? `<p class="leer-text">und ${liste.length - max} weitere</p>` : ""}`;
-}
+const datum = d => new Date(d).toLocaleString("de-DE", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
 
 function angabenTabelle(liste, id) {
   const reihen = ["messung", "muendlich", "skizze", "foto", "ableitung", "annahme", "scan", "kontext", "holzliste", "fremdvorlage"];
@@ -669,7 +920,6 @@ function angabenTabelle(liste, id) {
   return `<table class="angaben"><tbody>${reihen.filter(g => liste.some(a => a.grund === g)).map(g => `<tr class="gruppe"><td colspan="3">${GRUND_LANG[g]}</td></tr>` + liste.filter(a => a.grund === g).map(z).join("")).join("")}</tbody></table>`;
 }
 
-const datum = d => new Date(d).toLocaleString("de-DE", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
 const antwortBilder = l => l?.length ? `<div class="antwort-bilder">${l.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener"><img src="${esc(u)}" alt="Angehängtes Bild" loading="lazy"></a>`).join("")}</div>` : "";
 const antwortToene = l => l?.length ? l.map(u => `<audio controls preload="none" src="${esc(u)}"></audio>`).join("") : "";
 const NAME_KEY = "ks-name";
@@ -703,60 +953,10 @@ function antwortBereich(ziel, art) {
   </form>`;
 }
 
-function bauteil(id) {
-  const b = teile[id], beg = begriffe[b.begriff];
-  const ang = sammle(angabenJe, id), anzBest = ang.filter(a => a.guelt === "bestaetigt").length;
-  const masse = nach((direktJe[id] || []).filter(a => istMass(a) && !["holzliste", "fremdvorlage", "scan"].includes(a.grund) && a.guelt !== "ueberholt"), a => ({ messung: 5, muendlich: 4, skizze: 3, foto: 2, ableitung: 1 }[a.grund] || 0)).filter((a, i, l) => l.findIndex(b => b.eig.replace(/_skizze$/, "") === a.eig.replace(/_skizze$/, "")) === i).slice(0, 6);
-  const fr = nach(sammle(fragenJe, id).filter(f => !altLuecke(f)), gewicht);
-  const fotos = fotosVon([id]).filter(q => q.art !== "skizze"), skizzen = skizzenVon(id);
-  const unter = (kinder[id] || []).map(k => teile[k]);
-  const pfadK = vorfahren(id);
-  karte.innerHTML = `
-    <button class="zurueck" data-gehe="">Zurück zum Überblick</button>
-    ${pfadK.length ? `<p class="pfad">${pfadK.map(k => `<a href="#${k}" data-gehe="${k}">${esc(teile[k].name)}</a>`).join(" / ")}</p>` : ""}
-    <h2>${esc(b.name)}</h2>
-    ${beg && !["B-VORLAGE", "B-HOLZLISTENPOSTEN"].includes(beg.id) ? `<p class="definition">${esc(beg.definition)}</p>` : ""}
-    ${beg?.aliase?.length ? `<p class="auch">Im Verein auch: ${beg.aliase.map(esc).join(", ")}</p>` : ""}
-    ${b.anzahl ? `<p class="auch">Anzahl: ${esc(b.anzahl)}</p>` : ""}
-    ${b.hinweis ? `<p class="hinweis">${esc(b.hinweis)}</p>` : ""}
-    ${FIGUREN.some(x => x.bauteile.includes(id)) ? `<h3>Figur</h3>${figurKacheln(FIGUREN.filter(x => x.bauteile.includes(id)))}` : ""}
-    <h3>Wichtigste Maße</h3>
-    ${masse.length ? `<dl class="masse">${masse.map(a => `<div><dt>${esc(eig(a.eig))}</dt><dd>${esc(wertText(a))}<small>${GRUND[a.grund]}, ${a.guelt === "bestaetigt" ? "bestätigt" : "noch offen"}</small>${abgleich(a, direktJe[id] || [])}${belege(a)}</dd></div>`).join("")}</dl>` : `<p class="leer-text">Noch keine Maße für dieses Teil.</p>`}
-    ${fr.length ? `<h3>Offen<small>${fr.length}</small></h3>${fr.slice(0, 3).map(fragekarte).join("")}${fr.length > 3 ? `<details class="gruppe" style="margin-top:10px"><summary>Weitere Fragen zu diesem Teil<small>${fr.length - 3}</small></summary><div class="innen">${fr.slice(3).map(fragezeile).join("")}</div></details>` : ""}` : ""}
-    ${skizzen.length ? `<h3>Skizzen und Zeichnungen<small>${skizzen.length}</small></h3><div class="blaetter">${skizzen.slice(0, 6).map(blatt).join("")}</div>${skizzen.length > 6 ? `<p class="leer-text" style="margin-top:6px">und ${skizzen.length - 6} weitere</p>` : ""}` : ""}
-    <h3>Fotos<small>${fotos.length}</small></h3>${fotostreifen(fotos)}
-    ${unter.length ? `<h3>Besteht aus</h3><div class="chips">${unter.map(k => `<button data-gehe="${k.id}">${esc(k.name)}</button>`).join("")}</div>` : ""}
-    <h3>Ergänzen</h3>${antwortBereich(id, "bauteil")}
-    ${ang.length ? `<details class="alle"><summary>Alle ${ang.length} Angaben anzeigen, ${anzBest ? anzBest + " bestätigt" : "keine bestätigt"}</summary>${angabenTabelle(ang, id)}</details>` : ""}`;
-}
-
-function frage(id) {
-  const f = fragen[id];
-  const frei = freischaltet(id).map(x => fragen[x]), warte = f.haengt_ab_von.map(x => fragen[x]);
-  const bez = [...new Set([...f.betrifft, ...f.blockiert].flatMap(bezugVon))].filter(t => teile[t]);
-  const { alt: hinweisAlt, spuren } = teileHinweis(f.hinweis);
-  const bekannt = [...new Set([...f.betrifft.map(x => angabenById[x]).filter(Boolean), ...genannteAngabenVoll(f.hinweis)])];
-  karte.innerHTML = `
-    <button class="zurueck" data-gehe="">Zurück zum Überblick</button>
-    <p class="pfad">${vorname(f.entscheidet) ? esc(vorname(f.entscheidet)) + " entscheidet" : "Offene Frage"}</p>
-    <h2 class="frage-titel">${esc(f.frage)}</h2>
-    ${spuren.map(sp => `<div class="spur"><b>Neue Spur${sp.datum ? " · " + esc(sp.datum) : ""}</b>${esc(sp.text)}</div>`).join("")}
-    ${auftragVon(f.hinweis) ? `<div class="auftrag"><b>Messauftrag · ${esc(auftragVon(f.hinweis).datum)}</b>${esc(auftragVon(f.hinweis).text)} <a href="#messliste" data-gehe="messliste">Zur Messliste</a></div>` : ""}
-    ${hinweisAlt ? `<p class="hinweis">${esc(hinweisAlt)}</p>` : ""}
-    ${frei.length || warte.length ? `<h3>Warum sie wichtig ist</h3>` : ""}
-    ${frei.length ? `<p class="leise klein">Die Antwort macht diese Fragen beantwortbar:</p>${frei.map(fragezeile).join("")}` : ""}
-    ${warte.length ? `<p class="leise klein" style="margin-top:14px">Leichter, wenn zuerst diese geklärt ist:</p>${warte.map(fragezeile).join("")}` : ""}
-    ${bekannt.length ? `<h3>Bisheriger Stand</h3><dl class="masse">${bekannt.map(a => `<div><dt>${esc(eig(a.eig))}</dt><dd>${esc(wertText(a))}<small>${GRUND[a.grund]}, ${GUELT[a.guelt]} · ${esc(a.id)}</small>${belege(a)}</dd></div>`).join("")}</dl>` : ""}
-    ${FIGUREN.some(x => x.fragen.includes(id)) ? `<h3>Figur</h3>${figurKacheln(FIGUREN.filter(x => x.fragen.includes(id)))}` : ""}
-    ${bez.length ? `<h3>Betrifft</h3><div class="chips">${bez.map(t => `<button data-gehe="${t}">${esc(teile[t].name)}</button>`).join("")}</div>` : ""}
-    <h3>Passende Fotos</h3>${fotostreifen(fotosZuFrage(f), 14)}
-    <h3>Antworten</h3>${antwortBereich(id, "frage")}`;
-}
-
 // ---------- Wie wir vorgehen (aus docs/ordnung/VORGEHEN.md) ----------
 function md(text) {
   const zeilen = (text || "").split("\n"); let html = "", liste = null;
-  const inline = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/„/g, "„");
+  const inline = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
   const schliessen = () => { if (liste) { html += `</${liste}>`; liste = null; } };
   for (const z of zeilen) {
     let m;
@@ -770,59 +970,90 @@ function md(text) {
   schliessen(); return html;
 }
 function vorgehen() {
-  karte.innerHTML = `
-    <button class="zurueck" data-gehe="">Zurück zum Überblick</button>
-    <p class="pfad">Für alle, die mithelfen</p>
+  karte.innerHTML = `<div class="breite">
+    <p class="augenbraue"><span>Für alle, die mithelfen</span></p>
     <h2>Wie wir vorgehen</h2>
     <div class="prosa">${md(K.vorgehen)}</div>
-    <h3>Was würdest du anders machen?</h3>
-    <p class="leise klein">Wenn dir die Reihenfolge, die Fragen oder das ganze Vorgehen unlogisch vorkommen, weil du das Rad besser kennst: Schreib es hier. Das Vorgehen wird danach angepasst.</p>
-    ${antwortBereich("VORGEHEN", "bauteil")}
-    ${fuss()}`;
+    ${abschnitt("Was würdest du anders machen?", "", `<p class="klein">Wenn dir die Reihenfolge, die Fragen oder das ganze Vorgehen unlogisch vorkommen, weil du das Rad besser kennst: Schreib es hier. Das Vorgehen wird danach angepasst.</p>${antwortBereich("VORGEHEN", "bauteil")}`, "antworten")}
+    ${fuss()}</div>`;
+  kontext.innerHTML = "";
 }
 
 // ---------- Messliste ----------
-const auftraege = () => nach(offen.filter(f => auftragVon(f.hinweis)), f => (teileHinweis(f.hinweis).spuren.length ? 100 : 0) + gewicht(f));
 const HAKEN = "ks-messliste";
 const haken = () => { try { return JSON.parse(localStorage.getItem(HAKEN) || "{}"); } catch { return {}; } };
 const setzeHaken = (id, an) => { try { const h = haken(); if (an) h[id] = true; else delete h[id]; localStorage.setItem(HAKEN, JSON.stringify(h)); } catch {} };
 const erledigtZahl = () => { const h = haken(); return auftraege().filter(f => h[f.id]).length; };
 function messliste() {
-  const h = haken();
-  karte.innerHTML = `
-    <button class="zurueck" data-gehe="">Zurück zum Überblick</button>
-    <p class="pfad">Für Thorsten und alle, die ins Lager oder an die Radstadt gehen</p>
+  const h = haken(), liste = auftraege(), jetzt = liste.filter(f => !ruht(f)), spaeter = liste.filter(ruht);
+  let nr = 0;
+  const posten = f => { const a = auftragVon(f.hinweis), fotos = fotosZuFrage(f).slice(0, 3); nr++; return `<div class="posten${h[f.id] ? " erledigt" : ""}"><input type="checkbox" data-haken="${f.id}" ${h[f.id] ? "checked" : ""} aria-label="Posten ${nr} erledigt"><div><h4><a href="#${f.id}" data-gehe="${f.id}">${nr}. ${esc(kurzTitel(f))}</a><small>${esc(f.id)}</small></h4><p>${esc(a.text)}</p>${fotos.length ? `<div class="fotos">${fotos.map(q => `<button data-foto="${q.id}" aria-label="Foto öffnen"><img src="${bildSrc(q)}" alt="" loading="lazy"></button>`).join("")}</div>` : ""}</div></div>`; };
+  karte.innerHTML = `<div class="breite">
+    <p class="augenbraue"><span>Für Thorsten und alle, die an die Radstadt gehen</span></p>
     <h2>Messliste</h2>
-    <p class="leise klein" style="margin-top:8px">Jeder Posten beantwortet eine offene Frage. Bitte zu jedem Maß ein Foto mit angelegtem Zollstock machen und sagen, wo der Nullpunkt liegt. Das Abhaken merkt sich nur dieses Gerät. Ergebnisse trägt man in der Frage unter „Antworten“ ein.</p>
-    ${auftraege().map((f, i) => { const a = auftragVon(f.hinweis), fotos = fotosZuFrage(f).slice(0, 3); return `<div class="posten${h[f.id] ? " erledigt" : ""}"><input type="checkbox" data-haken="${f.id}" ${h[f.id] ? "checked" : ""} aria-label="Posten ${i + 1} erledigt"><div><h4><a href="#${f.id}" data-gehe="${f.id}">${i + 1}. ${esc(f.frage)}</a></h4><p>${esc(a.text)}</p>${fotos.length ? `<div class="fotos" style="margin-top:8px">${fotos.map(q => `<button data-foto="${q.id}" aria-label="Foto öffnen"><img src="${bildSrc(q)}" alt="" loading="lazy"></button>`).join("")}</div>` : ""}</div></div>`; }).join("")}
+    <p class="wortlaut">Jeder Posten beantwortet eine offene Frage. Bitte zu jedem Maß ein Foto mit angelegtem Zollstock machen und sagen, wo der Nullpunkt liegt. Das Abhaken merkt sich nur dieses Gerät. Ergebnisse trägt man in der Frage unter „Antworten“ ein.</p>
+    ${jetzt.length ? `<p class="trenner">Jetzt möglich · ${jetzt.length}</p>${jetzt.map(posten).join("")}` : ""}
+    ${spaeter.length ? `<p class="trenner">Beim Aufbau im Frühjahr · ${spaeter.length}</p>${spaeter.map(posten).join("")}` : ""}
     <p class="knopf-zeile" style="margin-top:18px"><button class="knopf" type="button" onclick="print()">Drucken</button></p>
-    ${fuss()}`;
+    ${fuss()}</div>`;
+  kontext.innerHTML = "";
 }
-document.addEventListener("change", e => { const c = e.target.closest("[data-haken]"); if (!c) return; setzeHaken(c.dataset.haken, c.checked); c.closest(".posten").classList.toggle("erledigt", c.checked); });
+document.addEventListener("change", e => { const c = e.target.closest("[data-haken]"); if (!c) return; setzeHaken(c.dataset.haken, c.checked); c.closest(".posten").classList.toggle("erledigt", c.checked); zeichneZaehler(); });
 
 // ---------- Navigation ----------
 let aktuell = null;
 function zeige({ neu = true } = {}) {
   const z = decodeURIComponent(location.hash.slice(1));
-  const ziel = teile[z] || fragen[z] || quellen[z] || z === "messliste" || z === "vorgehen" ? z : "";
+  const ziel = teile[z] || fragen[z] || quellen[z] || ["messliste", "vorgehen", "fragen"].includes(z) ? z : "";
   const gewechselt = ziel !== aktuell; aktuell = ziel;
-  const markiert = teile[ziel] ? unterteile(ziel) : quellen[ziel] ? (quellen[ziel].bauteil ? [quellen[ziel].bauteil] : []) : fragen[ziel] ? [...new Set([...fragen[ziel].betrifft, ...fragen[ziel].blockiert].flatMap(bezugVon))] : [];
+  const ansicht = teile[ziel] ? "bauteil" : fragen[ziel] ? "frage" : quellen[ziel] ? "quelle" : ziel || "start";
+  if (ansicht === "fragen" && !istHandy()) { location.replace("#"); return; }
+  arbeitsplatz.dataset.ansicht = ansicht;
+  markiert = teile[ziel] ? unterteile(ziel) : quellen[ziel] ? (quellen[ziel].bauteil ? [quellen[ziel].bauteil] : []) : fragen[ziel] ? [...new Set([...fragen[ziel].betrifft, ...fragen[ziel].blockiert].flatMap(bezugVon).filter(t => teile[t] && teile[t].art !== "anlage").flatMap(unterteile))] : [];
   Object.entries(gruppen).forEach(([k, g]) => g.classList.toggle("gewaehlt", markiert.includes(k)));
-  const scroll = karte.scrollTop;
-  if (teile[ziel]) bauteil(ziel); else if (fragen[ziel]) frage(ziel); else if (ziel === "messliste") messliste(); else if (ziel === "vorgehen") vorgehen(); else if (quellen[ziel]) quelleKarte(ziel); else start();
-  if (gewechselt && neu) { karte.scrollTop = 0; if (ziel && matchMedia("(max-width: 880px)").matches) window.scrollTo({ top: karte.offsetTop - $(".rad").offsetHeight - 8 }); }
-  else karte.scrollTop = scroll;
-  document.title = (teile[ziel]?.name || (fragen[ziel] ? "Offene Frage" : ziel === "messliste" ? "Messliste" : ziel === "vorgehen" ? "Wie wir vorgehen" : quellen[ziel] ? (quellen[ziel].titel || "Quelle") : "")) + (ziel ? " – " : "") + "Kleines Schäferrad";
+  inhalt.classList.toggle("ohne-kontext", istSchmal() || ["vorgehen", "messliste"].includes(ansicht));
+  const scrollInhalt = inhalt.scrollTop, scrollListe = $("#liste").scrollTop;
+  $("#rad-ablage").appendChild($("#lageplan")); // Rad vor dem Neuzeichnen in Sicherheit bringen
+  zeichneListe(); zeichneZaehler();
+  if (ansicht === "bauteil") bauteil(ziel); else if (ansicht === "frage") frage(ziel); else if (ansicht === "quelle") quelleKarte(ziel);
+  else if (ansicht === "messliste") messliste(); else if (ansicht === "vorgehen") vorgehen(); else if (ansicht === "start") start();
+  if (["start", "messliste", "vorgehen", "fragen"].includes(ansicht)) platziereRad(ansicht);
+  $("#liste").scrollTop = scrollListe;
+  if (gewechselt && neu) { inhalt.scrollTop = 0; if (istHandy()) window.scrollTo({ top: 0 }); else $('#liste [aria-current="true"]')?.scrollIntoView({ block: "nearest" }); }
+  else inhalt.scrollTop = scrollInhalt;
+  const tab = ansicht === "start" ? "start" : ansicht === "messliste" ? "messliste" : ansicht === "fragen" || ansicht === "frage" ? "fragen" : "";
+  document.querySelectorAll("#tabs [data-tab]").forEach(b => b.setAttribute("aria-current", String(b.dataset.tab === tab)));
+  document.title = (teile[ziel]?.name || (fragen[ziel] ? kurzTitel(fragen[ziel]) : ziel === "messliste" ? "Messliste" : ziel === "vorgehen" ? "Wie wir vorgehen" : ziel === "fragen" ? "Offene Fragen" : quellen[ziel] ? (quellen[ziel].titel || "Quelle") : "")) + (ziel ? " – " : "") + "Kleines Schäferrad";
 }
 function gehe(id) { if (decodeURIComponent(location.hash.slice(1)) === id) zeige(); else location.hash = id; }
 window.addEventListener("hashchange", () => zeige());
 $("#startlink").addEventListener("click", e => { e.preventDefault(); gehe(""); });
+const misseKopf = () => { const h = $("#leiste").offsetHeight; document.documentElement.style.setProperty("--kopf", h + "px"); document.documentElement.style.setProperty("--leiste-hoehe", h + "px"); };
+let breiteVorher = [istHandy(), istSchmal()];
+window.addEventListener("resize", () => { misseKopf(); const jetzt = [istHandy(), istSchmal()]; if (jetzt[0] !== breiteVorher[0] || jetzt[1] !== breiteVorher[1]) { breiteVorher = jetzt; zeige({ neu: false }); } });
 document.addEventListener("click", e => {
-  const g = e.target.closest("[data-gehe]"); if (g) { e.preventDefault(); gehe(g.dataset.gehe); return; }
+  const g = e.target.closest("[data-gehe]"); if (g) { e.preventDefault(); $("#leiste").classList.remove("suche-offen"); gehe(g.dataset.gehe); return; }
+  const fi = e.target.closest("[data-filter]"); if (fi) { setzeFilter(fi.dataset.filter); return; }
+  const fg2 = e.target.closest("[data-filter-gehe]"); if (fg2) { e.preventDefault(); setzeFilter(fg2.dataset.filterGehe); if (istHandy()) gehe("fragen"); else $("#liste").scrollTop = 0; return; }
+  const tb = e.target.closest("[data-tab]"); if (tb) {
+    const t = tb.dataset.tab;
+    if (t === "suche") { const l = $("#leiste"); l.classList.toggle("suche-offen"); if (l.classList.contains("suche-offen")) { window.scrollTo({ top: 0 }); $("#suche").focus(); } misseKopf(); return; }
+    gehe(t === "start" ? "" : t); return;
+  }
   const f = e.target.closest("[data-foto]"); if (f) { oeffneFoto(f.dataset.foto, f.dataset.angabe, f.dataset.stelle); return; }
   const fg = e.target.closest("[data-figur]"); if (fg) { oeffneFigur(fg.dataset.figur); return; }
+  const kl = e.target.closest("[data-klemme]"); if (kl) { const t = $("#" + kl.dataset.klemme); t.classList.toggle("offen"); kl.textContent = t.classList.contains("offen") ? "Weniger" : "Weiterlesen"; return; }
+  const af = e.target.closest("[data-alle-fotos]"); if (af) { const r = $("#belegraster", af.parentElement) || af.previousElementSibling; r.insertAdjacentHTML("beforeend", fotoVorrat.slice(+af.dataset.alleFotos, 80).map(q => fotoKachel(q, false)).join("")); af.remove(); return; }
+  const sn = e.target.closest("[data-schnell]"); if (sn) {
+    const form = $("#antwort-form"); if (!form) return;
+    form.querySelectorAll(".wahl button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.typ === sn.dataset.schnell)));
+    form.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "end" });
+    setTimeout(() => $("#antwort-text")?.focus({ preventScroll: true }), 350); return;
+  }
+  if (e.target.closest("[data-zu-antworten]")) { $("#antworten")?.scrollIntoView({ behavior: "smooth", block: "start" }); return; }
   const w = e.target.closest(".wahl button"); if (w) w.parentElement.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b === w ? "true" : "false"));
 });
+
 // Anhänge und Sprachaufnahme (nur Webspace)
 let anhaenge = [], rekorder = null, tonStuecke = [];
 const zeigeAnhaenge = () => { const i = $("#anhang-info"); if (i) i.textContent = anhaenge.length ? anhaenge.map(f => f.name || "Sprachnachricht").join(", ") : ""; };
@@ -942,7 +1173,7 @@ function toast(t) { const n = $("#toast"); n.textContent = t; n.hidden = false; 
 // Suche: kennt Vereinsbegriffe und Schreibvarianten
 const index = [
   ...K.bauteile.filter(b => b.art !== "listenposten").map(b => ({ id: b.id, titel: b.name, text: [b.name, ...(begriffe[b.begriff]?.aliase || [])].join(" "), art: "Bauteil" })),
-  ...offen.map(f => ({ id: f.id, titel: kurz(f.frage, 90), text: f.frage, art: "Offene Frage" })),
+  ...offen.map(f => ({ id: f.id, titel: kurzTitel(f), text: kurzTitel(f) + " " + f.frage, art: "Offene Frage · " + f.id })),
 ];
 const suche = $("#suche"), trefferListe = $("#treffer"); let auswahl = 0, liste = [];
 function sucheAus() {
@@ -963,6 +1194,7 @@ trefferListe.addEventListener("click", () => { suche.value = ""; sucheAus(); });
 document.addEventListener("keydown", e => { if (e.key === "/" && !/INPUT|TEXTAREA/.test(document.activeElement?.tagName || "")) { e.preventDefault(); suche.focus(); } });
 document.addEventListener("click", e => { if (!e.target.closest(".suche")) trefferListe.hidden = true; });
 
+misseKopf();
 zeige();
 Speicher.start();
 </script>

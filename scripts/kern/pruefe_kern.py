@@ -22,6 +22,9 @@ EINHEITEN = {None, "m", "cm", "mm", "grad", "anzahl", "exporteinheit"}
 BAUTEIL_ARTEN = {"anlage", "baugruppe", "teil", "zone", "werkzeug", "vorlage", "listenposten"}
 QUELLEN_ARTEN = {"foto", "skizze", "scan", "video", "aussage", "kontext", "ableitung", "dokument"}
 FRAGE_STATUS = {"offen", "beantwortet", "verworfen"}
+# Wo sich eine Frage klären lässt (Freigabe Johannes 12.10.2026); „aufbau“ ruht bis zum Frühjahr.
+KLAERUNG = {"wissen", "radstadt", "foto", "rechnen", "aufbau"}
+KURZTITEL_MAX = 40
 PHASEN = {"aufbau", "abbau", "pflege"}
 BILDARTEN = {"messfoto", "konstruktionsfoto", "uebersicht"}
 TOLERANZ_ARTEN = {"bereich", "plusminus", "ungefaehr", "vereinfachung"}
@@ -260,6 +263,13 @@ def pruefe(kern_dir, root=ROOT, altdaten=True):
             if x not in fragen:
                 F(f"{wo}: haengt_ab_von {x} ist keine Frage")
         person_ok(f.get("entscheidet"), wo)
+        kurz = f.get("kurztitel")
+        if not kurz:
+            F(f"{wo}: kurztitel fehlt (höchstens {KURZTITEL_MAX} Zeichen)")
+        elif len(kurz) > KURZTITEL_MAX:
+            F(f"{wo}: kurztitel hat {len(kurz)} Zeichen, höchstens {KURZTITEL_MAX}")
+        if f.get("klaerung") not in KLAERUNG:
+            F(f"{wo}: klaerung {f.get('klaerung')} unbekannt (erlaubt: {', '.join(sorted(KLAERUNG))})")
         if f["status"] == "beantwortet" and not f.get("antwort"):
             F(f"{wo}: beantwortet, aber keine Antwort-Angabe")
         for x in f.get("antwort", []):
