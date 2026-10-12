@@ -1,6 +1,12 @@
 # Das Kleine Schäferrad in 3D: Möglichkeiten und Ausbaustufen
 
-Stand 12.10.2026. Ideensammlung als Grundlage für spätere Entscheidungen von Johannes. **Kein Bauauftrag.** Ergänzt die Bestandsaufnahme in [3D-WERKBANK-INVENTAR.md](3D-WERKBANK-INVENTAR.md) und die Brücke zum Kern in [MODELL-BRUECKE.md](MODELL-BRUECKE.md).
+**Verbindliche Vision**, von Johannes am 12.10.2026 festgelegt: Das ist die Zielstufe für das 3D-Modell, und sie darf übertroffen werden, nie unterschritten. Jede Arbeit am Modell, an Figuren und an der Szene richtet sich danach. Die Vision selbst ist **kein Bauauftrag**: Gebaut wird erst auf ausdrücklichen Auftrag und in den Ausbaustufen unten. Ergänzt die Bestandsaufnahme in [3D-WERKBANK-INVENTAR.md](3D-WERKBANK-INVENTAR.md) und die Brücke zum Kern in [MODELL-BRUECKE.md](MODELL-BRUECKE.md).
+
+## Für jeden, der später am Modell baut
+
+- Vor jeder Arbeit an Modell, Figuren oder Szene diese Datei ganz lesen.
+- Jeder Schritt muss auf eine Ausbaustufe und einen Abschnitt hier einzahlen. Was der Vision widerspricht (Geometrie ohne Kern, versteckte Unsicherheit, Effekt statt Wahrheit), wird nicht gebaut.
+- Neue Ideen, die darüber hinausgehen, werden hier ergänzt, nicht in Übergabedateien.
 
 ## Leitgedanke
 
