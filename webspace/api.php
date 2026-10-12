@@ -10,6 +10,9 @@
  *   POST api.php?aktion=speichern        neue Antwort (multipart/form-data oder JSON)
  *   GET  api.php?aktion=datei&id=…       angehängtes Foto oder Sprachnachricht
  *   GET  api.php?aktion=export&schluessel=…   alles für die Übernahme ins Repository
+ *
+ * Speichern und Export schreiben je Aufruf eine Zeile nach daten/log/YYYY-MM-DD.jsonl
+ * (Ansicht: control.php). Neuer Code nutzt englische Bezeichner (AGENTS.md).
  */
 declare(strict_types=1);
 
@@ -25,8 +28,41 @@ const ANKER = '/^(VORGEHEN|[A-Z][A-Z0-9]*(?:-[A-Za-z0-9_]+)+)$/';
 
 $DATEN = __DIR__ . '/daten';
 $KONFIG = is_file(__DIR__ . '/konfig.php') ? require __DIR__ . '/konfig.php' : [];
+const LOG_KEEP_DAYS = 180;
+$REQUEST_LOG = ['started' => microtime(true)];
+
+/** Appends one JSON line per logged request; never breaks the response. */
+function logRequest(int $status, $payload): void {
+    global $REQUEST_LOG, $DATEN, $KONFIG;
+    $action = $_GET['aktion'] ?? '';
+    if (!in_array($action, ['speichern', 'export'], true)) return;
+    $outcome = $REQUEST_LOG['outcome'] ?? ($status < 300 ? ($action === 'export' ? 'exported' : 'saved') : (string)($payload['fehler'] ?? 'error'));
+    $ip = $_SERVER['REMOTE_ADDR'] ?? '';
+    $entry = [
+        'time' => gmdate('Y-m-d\TH:i:s\Z'),
+        'action' => $action,
+        'method' => $_SERVER['REQUEST_METHOD'] ?? '',
+        'status' => $status,
+        'outcome' => $outcome,
+        'answer_id' => is_array($payload) && isset($payload['id']) && $payload['id'] !== 'ok' ? $payload['id'] : null,
+        'target' => $REQUEST_LOG['target'] ?? null,
+        'name' => $REQUEST_LOG['name'] ?? null,
+        'view' => $REQUEST_LOG['view'] ?? null,
+        'files' => $REQUEST_LOG['files'] ?? 0,
+        'request_bytes' => (int)($_SERVER['CONTENT_LENGTH'] ?? 0),
+        'duration_ms' => (int)round((microtime(true) - $REQUEST_LOG['started']) * 1000),
+        'user_agent' => mb_substr((string)($_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 200),
+        // Short daily pseudonym instead of the IP address: groups requests of one day, not reversible.
+        'client' => $ip === '' ? null : substr(hash('sha256', $ip . gmdate('Ymd') . ($KONFIG['export_schluessel'] ?? '')), 0, 8),
+    ];
+    $dir = $DATEN . '/log';
+    if (!is_dir($dir)) @mkdir($dir, 0775, true);
+    @file_put_contents($dir . '/' . gmdate('Y-m-d') . '.jsonl', json_encode($entry, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . "\n", FILE_APPEND | LOCK_EX);
+    if (random_int(0, 100) === 0) foreach (glob($dir . '/*.jsonl') ?: [] as $old) if (filemtime($old) < time() - LOG_KEEP_DAYS * 86400) @unlink($old);
+}
 
 function antwort(int $status, $daten): void {
+    logRequest($status, $daten);
     http_response_code($status);
     header('Content-Type: application/json; charset=utf-8');
     header('Cache-Control: no-store');
@@ -178,7 +214,11 @@ if ($aktion === 'export' && $methode === 'GET') {
 if ($aktion === 'speichern' && $methode === 'POST') {
     $json = str_starts_with($_SERVER['CONTENT_TYPE'] ?? '', 'application/json');
     $e = $json ? (json_decode((string)file_get_contents('php://input'), true) ?: []) : $_POST;
-    if (!empty($e['webseite'])) antwort(201, ['id' => 'ok']); // Fangfeld: Bots bekommen „ok“, nichts wird gespeichert
+    $REQUEST_LOG['target'] = einzeilig($e['ziel'] ?? '', 80);
+    $REQUEST_LOG['name'] = einzeilig($e['name'] ?? '', 80);
+    $REQUEST_LOG['view'] = einzeilig($e['ansicht'] ?? '', 120);
+    $REQUEST_LOG['files'] = (!$json && !empty($_FILES['dateien']['name'])) ? count(array_filter((array)$_FILES['dateien']['name'], fn($n) => $n !== '')) : 0;
+    if (!empty($e['webseite'])) { $REQUEST_LOG['outcome'] = 'honeypot'; antwort(201, ['id' => 'ok']); } // Fangfeld: Bots bekommen „ok“, nichts wird gespeichert
     $ziel = einzeilig($e['ziel'] ?? '', 80);
     if (!preg_match(ANKER, $ziel)) fehler(400, 'Unbekanntes Ziel');
     $typ = einzeilig($e['typ'] ?? '', 20);

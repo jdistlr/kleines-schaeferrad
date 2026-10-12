@@ -20,6 +20,7 @@ jobs:
         env:
           KS_EXPORT_SCHLUESSEL: ${{ secrets.KS_EXPORT_SCHLUESSEL }}
           KS_IMPRESSUM: ${{ secrets.KS_IMPRESSUM }}
+          KS_CONTROL_PASSWORD: ${{ secrets.KS_CONTROL_PASSWORD }}
         run: python scripts/kern/baue_webspace.py --ziel paket
       - run: sudo apt-get update && sudo apt-get install -y lftp
       - name: Hochladen (FTPES)
