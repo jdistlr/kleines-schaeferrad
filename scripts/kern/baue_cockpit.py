@@ -111,6 +111,7 @@ def main():
                      "bauteil": q.get("bauteil"), "erschlossen": q["erschlossen"], "kopien": len(q.get("kopien", [])),
                      "bildart": q.get("bildart"), "bild": vorschau(q)} for q in d["quellen"]],
         "api": api,
+        "impressum": bool(os.environ.get("KS_IMPRESSUM")),
         "figuren": figuren(),
         "antwortenAbzug": antworten_abzug(),
         "vorgehen": open(os.path.join(ROOT, "docs", "ordnung", "VORGEHEN.md"), encoding="utf-8").read() if os.path.exists(os.path.join(ROOT, "docs", "ordnung", "VORGEHEN.md")) else "",
