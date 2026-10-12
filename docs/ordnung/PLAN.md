@@ -83,3 +83,6 @@ Das Projekt hat in fünf Tagen viel Wissen gesammelt, aber die Wahrheit liegt ve
 
 - **12.10.2026 – Hosting:** Johannes erwägt, Cockpit und Forschungsseite von GitHub Pages auf seinen eigenen Webspace mit PHP und MySQL zu übertragen. Dort sollen Antworten und Mehrfachantworten dauerhaft gespeichert werden. Das Cockpit ist darauf vorbereitet (`--api`), die Schnittstelle steht in [ANTWORTEN-SCHNITTSTELLE.md](ANTWORTEN-SCHNITTSTELLE.md). Bis dahin: Arbeitsfassung als Claude-Artefakt, öffentliche Seite nur zum Lesen.
 
+## 12.10.2026 – Vision für das 3D-Modell
+
+Johannes hat [3D-VISION.md](3D-VISION.md) als verbindliche Zielstufe festgelegt (Maximum, darf übertroffen werden). Phase 3 (Modell aus dem Kern) arbeitet auf Stufe 1 „Wahrheit“ hin; „Leben“ und „Erlebnis“ folgen darauf.

@@ -9,6 +9,7 @@ Gilt für jedes KI-Modell und jedes Werkzeug, das in diesem Repository arbeitet:
 1. Diese Datei.
 2. [`kern/README.md`](kern/README.md) – wie Wissen abgelegt wird.
 3. [`docs/ordnung/PLAN.md`](docs/ordnung/PLAN.md) – in welcher Phase das Projekt steht.
+4. Bei Arbeit an Modell oder Figuren: [`docs/ordnung/3D-VISION.md`](docs/ordnung/3D-VISION.md) – die verbindliche Vision.
 
 Ältere Übergaben (`state/NEXT-*.md`, `state/CURRENT-STATE.md`, `state/reconstruction-loop/`, `docs/workbench/`) sind Geschichte, keine Arbeitsaufträge.
 
@@ -53,6 +54,14 @@ Nicht mehr: Nachträge an `state/NEXT-ASTRA-WORK-SESSION.md` oder andere Überga
 - Veröffentlichen nur, wenn Johannes es im jeweiligen Auftrag ausdrücklich verlangt.
 - Keine weiteren Seiten oder Vorschauen auf Pages legen.
 - Das Repository ist öffentlich: keine privaten Daten, Adressen oder Telefonnummern in Kern, Befunde oder Cockpit.
+
+## Vision für 3D-Modell und Szene
+
+Verbindliche Zielstufe, festgelegt von Johannes am 12.10.2026: [`docs/ordnung/3D-VISION.md`](docs/ordnung/3D-VISION.md). Das Maximum dort darf übertroffen, nicht unterschritten werden.
+
+- Vor jeder Arbeit am 3D-Modell, an Figuren oder an der Szene die Vision ganz lesen und den Schritt einer Ausbaustufe (Wahrheit → Leben → Erlebnis) zuordnen.
+- Grundsatz: Der Wow-Effekt kommt aus der Wahrheit. Geometrie nur aus dem Kern, Unsicherheit sichtbar, eine Datenquelle für Cockpit, Figuren und Modell.
+- Die Vision ist kein Bauauftrag. Gebaut wird auf ausdrücklichen Auftrag; die Phasenregel (kein Modellumbau vor Abschluss von Phase 2) gilt weiter.
 
 ## Figuren mit dem Anatomie-Skill
 
