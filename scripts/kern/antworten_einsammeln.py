@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Sammelt Antworten aus dem Cockpit ein (GitHub-Issues mit Antwort-Block) und sichert sie.
 
+Quellen: GitHub-Issues und, falls vorhanden, evidence/antworten/webspace.json (Webspace).
 Eine Antwort ist ein Issue, dessen Text einen Block <!-- antwort … --> enthält (Felder ziel, typ, wert).
 Das Label „antwort“ setzt GitHub nur bei Mitarbeitern; erkannt wird deshalb der Block.
 Kommentare unter dem Issue gehören zur Antwort, angehängte Bilder werden mitgeführt.
@@ -65,8 +66,23 @@ def lesen():
     return sorted(antworten, key=lambda a: a["am"])
 
 
+def webspace():
+    """Antworten vom Webspace (evidence/antworten/webspace.json, vom Workflow „Antworten zurückholen“)."""
+    pfad = os.path.join(ROOT, "evidence", "antworten", "webspace.json")
+    if not os.path.exists(pfad):
+        return []
+    liste = json.load(open(pfad, encoding="utf-8")).get("antworten", [])
+    for a in liste:
+        a.setdefault("kommentare", [])
+        a["nr"] = a.get("id")
+        a["bilder"] = [f.get("url", f["id"]) for f in a.get("dateien", []) if f.get("art") == "bild"]
+    return liste
+
+
 def main():
     antworten = lesen()
+    if "--sichern" not in sys.argv:
+        antworten += webspace()
     if "--sichern" in sys.argv:
         os.makedirs(os.path.dirname(ZIEL), exist_ok=True)
         with open(ZIEL, "w", encoding="utf-8") as f:
@@ -83,7 +99,7 @@ def main():
     for ziel, liste in sorted(gruppen.items()):
         print(f"\n## {ziel}")
         for a in liste:
-            print(f"- #{a['nr']} {a['name']} {a['am'][:10]} [{a['typ']}]{' ' + a['wert'] if a['wert'] else ''}{' (im Kern)' if a['uebernommen'] else ''}"
+            print(f"- {'#' if isinstance(a['nr'], int) else ''}{a['nr']} {a['name'] or 'ohne Namen'} {a['am'][:10]} [{a['typ']}]{' ' + a['wert'] if a['wert'] else ''}{' (im Kern)' if a['uebernommen'] else ''}"
                   f"{' · ' + str(len(a['bilder'])) + ' Bild(er)' if a['bilder'] else ''}\n  {a['text'][:400]}")
             for k in a["kommentare"]:
                 print(f"    ↳ {k['name']} {k['am'][:10]}: {k['text'][:300]}")

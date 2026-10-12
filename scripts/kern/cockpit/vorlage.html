@@ -197,6 +197,16 @@ table.angaben .bezug { font-size: var(--m1); color: var(--leise); }
 .antwort header b { font-weight: 500; }
 .antwort header span { color: var(--leise); font-size: var(--m1); }
 .antwort p { margin: 4px 0 0; white-space: pre-wrap; }
+.stimmen { margin: 0 0 4px; font-size: var(--m2); color: var(--leise); }
+.uneinig { display: inline-block; margin-left: 6px; padding: 0 7px; border-radius: 3px; background: var(--roetel-hauch); color: var(--roetel); font-size: var(--m1); }
+.antworten-knopf { margin-top: 6px; background: none; border: 0; padding: 2px 0; color: var(--wasser); cursor: pointer; font-size: var(--m1); }
+.antwort audio, .kommentar audio { display: block; margin-top: 8px; width: min(320px, 100%); }
+.antwort-auf { margin: 0; font-size: var(--m2); color: var(--wasser); }
+.antwort-auf button { background: none; border: 0; color: var(--leise); text-decoration: underline; cursor: pointer; }
+.anhaenge { gap: 8px; }
+.datei-knopf, .aufnahme-knopf { display: inline-block; border: 1px solid var(--linie); background: var(--papier); border-radius: 999px; padding: 5px 14px; cursor: pointer; font-size: var(--m2); color: var(--tinte); }
+.aufnahme-knopf.laeuft { border-color: var(--roetel); color: var(--roetel); }
+.fangfeld { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .antwort-bilder { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
 .antwort-bilder img { width: 96px; height: 96px; object-fit: cover; border-radius: 6px; display: block; background: var(--linie); }
 .kommentar { margin: 8px 0 0 14px; padding: 6px 0 0 12px; border-left: 2px solid var(--linie); }
@@ -444,18 +454,30 @@ const Speicher = {
     } catch { this.melde(); }
   },
   async ladeServer() {
+    // Webspace (api.php): Antworten mit Dateien; Antworten auf Antworten werden unter die erste gehängt.
     try {
-      const r = await fetch(K.api + "?aktion=liste", { credentials: "include" });
+      const r = await fetch(K.api + "?aktion=liste", { cache: "no-store" });
       if (!r.ok) throw new Error(String(r.status));
-      this.antworten = await r.json(); this.modus = "server"; this.melde();
+      const datei = d => K.api + "?aktion=datei&id=" + encodeURIComponent(d.id);
+      const roh = (await r.json()).map(a => ({ ...a, bilder: (a.dateien || []).filter(d => d.art === "bild").map(datei), toene: (a.dateien || []).filter(d => d.art === "ton").map(datei) }));
+      const nachId = new Map(roh.map(a => [a.id, a]));
+      const wurzel = a => { let x = a, n = 0; while (x.antwort_auf && nachId.has(x.antwort_auf) && n++ < 20) x = nachId.get(x.antwort_auf); return x; };
+      roh.forEach(a => { a.kommentare = []; });
+      this.antworten = [];
+      roh.forEach(a => { const w = wurzel(a); if (w !== a) w.kommentare.push(a); else this.antworten.push(a); });
+      this.alleRoh = roh; this.modus = "server"; this.melde();
+      fetch(K.api + "?aktion=namen").then(x => x.ok ? x.json() : []).then(n => { this.vorschlaege = n; const dl = $("#namen-liste"); if (dl) dl.innerHTML = n.map(v => `<option value="${esc(v)}">`).join(""); }).catch(() => {});
     } catch { this.modus = "lesen"; this.melde(); }
   },
   async speichern(a) {
     const eintrag = { ...a, am: new Date().toISOString(), uebernommen: false };
     if (this.modus === "claude") { eintrag.von = this.uid; await this.col.add(eintrag); return; }
     if (this.modus === "server") {
-      const r = await fetch(K.api + "?aktion=speichern", { method: "POST", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify(eintrag) });
-      if (!r.ok) throw new Error(String(r.status));
+      const fd = new FormData();
+      for (const [k, v] of Object.entries(a)) if (k !== "dateien" && v != null) fd.append(k, Array.isArray(v) ? v.join(" ") : v);
+      (a.dateien || []).forEach(f => fd.append("dateien[]", f, f.name || "aufnahme.webm"));
+      const r = await fetch(K.api + "?aktion=speichern", { method: "POST", body: fd });
+      if (!r.ok) { let t = ""; try { t = (await r.json()).fehler; } catch {} throw new Error(t || String(r.status)); }
       return this.ladeServer();
     }
     if (this.modus === "github") {
@@ -466,7 +488,8 @@ const Speicher = {
     }
     throw new Error("nur lesen");
   },
-  zu(ziel) { return this.antworten.filter(a => a.ziel === ziel); },
+  zu(ziel) { return this.antworten.filter(a => a.ziel === ziel || (a.betrifft_auch || []).includes(ziel)); },
+  vorschlaege: [],
   name(a) { return a.name || this.namen[a.von] || "Jemand"; },
 };
 
@@ -597,7 +620,7 @@ function start() {
     ${fuss()}`;
 }
 const neuSeitAbbau = K.angaben.filter(a => /^AN-2026101[1-9]/.test(a.id)).length;
-const fuss = () => `<p class="fuss">Erzeugt aus dem Wissenskern${K.commit ? ", Stand " + esc(K.commit) : ""}. ${S.angaben} Angaben, davon ${neuSeitAbbau} seit dem Abbau neu; ${K.quellen.length} Quellen; ${offen.length} offene Fragen. Fachlich gültig ist erst, was Thorsten bestätigt.</p>`;
+const fuss = () => `<p class="fuss">Erzeugt aus dem Wissenskern${K.commit ? ", Stand " + esc(K.commit) : ""}. ${S.angaben} Angaben, davon ${neuSeitAbbau} seit dem Abbau neu; ${K.quellen.length} Quellen; ${offen.length} offene Fragen. Fachlich gültig ist erst, was Thorsten bestätigt.${K.api ? ` · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a>` : ""}</p>`;
 
 const FIGUREN = K.figuren || [];
 function figurKacheln(liste) {
@@ -648,16 +671,35 @@ function angabenTabelle(liste, id) {
 
 const datum = d => new Date(d).toLocaleString("de-DE", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
 const antwortBilder = l => l?.length ? `<div class="antwort-bilder">${l.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener"><img src="${esc(u)}" alt="Angehängtes Bild" loading="lazy"></a>`).join("")}</div>` : "";
+const antwortToene = l => l?.length ? l.map(u => `<audio controls preload="none" src="${esc(u)}"></audio>`).join("") : "";
+const NAME_KEY = "ks-name";
+const meinName = () => { try { return localStorage.getItem(NAME_KEY) || ""; } catch { return ""; } };
+function stimmen(liste) {
+  const alle = liste.flatMap(a => [a, ...(a.kommentare || [])]);
+  const namen = [...new Set(alle.map(a => Speicher.name(a)).filter(n => n && n !== "Jemand"))];
+  const ja = alle.some(a => a.typ === "stimmt"), nein = alle.some(a => a.typ === "stimmt_nicht");
+  const werte = new Set(alle.map(a => (a.wert || "").replace(/\s/g, "").toLowerCase()).filter(Boolean));
+  return { zahl: alle.length, namen, uneinig: (ja && nein) || werte.size > 1 };
+}
+function eintragHtml(a, tief = false) {
+  return `<div class="${tief ? "kommentar" : "antwort"}" id="antwort-${esc(a.id || "")}"><header><b>${esc(Speicher.name(a))}</b><span>${datum(a.am)}</span>${a.typ && TYPEN[a.typ] && !tief ? `<span class="marker-art${a.typ === "stimmt_nicht" ? " nein" : ""}">${esc(TYPEN[a.typ])}</span>` : ""}${a.link ? `<a href="${esc(a.link)}" target="_blank" rel="noopener" style="font-size:var(--m1)">auf GitHub</a>` : ""}${a.uebernommen ? `<span class="status bestaetigt">im Wissenskern</span>` : ""}</header>${a.wert ? `<p><b>${esc(a.wert)}</b></p>` : ""}${a.text ? `<p>${esc(a.text)}</p>` : ""}${antwortBilder(a.bilder)}${antwortToene(a.toene)}${(a.kommentare || []).map(k => eintragHtml(k, true)).join("")}${!tief && Speicher.modus === "server" && a.id ? `<button class="antworten-knopf" type="button" data-antwort-auf="${esc(a.id)}" data-name="${esc(Speicher.name(a))}">Darauf antworten</button>` : ""}</div>`;
+}
 function antwortBereich(ziel, art) {
-  const liste = Speicher.zu(ziel);
-  const vorhanden = liste.length ? liste.map(a => `<div class="antwort"><header><b>${esc(Speicher.name(a))}</b><span>${new Date(a.am).toLocaleString("de-DE", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}</span><span class="marker-art${a.typ === "stimmt_nicht" ? " nein" : ""}">${esc(TYPEN[a.typ] || a.typ || "")}</span>${a.link ? `<a href="${esc(a.link)}" target="_blank" rel="noopener" style="font-size:var(--m1)">auf GitHub</a>` : ""}${a.uebernommen ? `<span class="status bestaetigt">im Wissenskern</span>` : ""}</header>${a.wert ? `<p><b>${esc(a.wert)}</b></p>` : ""}${a.text ? `<p>${esc(a.text)}</p>` : ""}${antwortBilder(a.bilder)}${(a.kommentare || []).map(k => `<div class="kommentar"><header><b>${esc(k.name)}</b><span>${datum(k.am)}</span></header>${k.text ? `<p>${esc(k.text)}</p>` : ""}${antwortBilder(k.bilder)}</div>`).join("")}</div>`).join("") : "";
+  const liste = Speicher.zu(ziel), st = stimmen(liste);
+  const kopf = st.zahl ? `<p class="stimmen">${st.zahl} ${st.zahl === 1 ? "Hinweis" : "Hinweise"}${st.namen.length ? ": " + st.namen.map(esc).join(", ") : ""}${st.uneinig ? ` <span class="uneinig">uneinig</span>` : ""}</p>` : "";
+  const vorhanden = kopf + liste.map(a => eintragHtml(a)).join("");
   if (Speicher.modus === "lesen") return vorhanden + `<p class="nurlesen">Antworten und Ergänzungen gibt man in der Arbeitsfassung des Cockpits. Diese Seite ist zum Lesen.</p>`;
   const wahl = art === "frage" ? ["stimmt", "stimmt_nicht", "genauer"] : ["ergaenzung", "korrektur"];
-  return vorhanden + `<form class="formular" id="antwort-form" data-ziel="${esc(ziel)}">
+  const server = Speicher.modus === "server";
+  const wortlaut = fragen[ziel]?.frage || teile[ziel]?.name || quellen[ziel]?.titel || (ziel === "VORGEHEN" ? "Wie wir vorgehen" : ziel);
+  return vorhanden + `<form class="formular" id="antwort-form" data-ziel="${esc(ziel)}" data-wortlaut="${esc(wortlaut)}">
+    <p class="antwort-auf" id="antwort-auf-anzeige" hidden></p><input type="hidden" id="antwort-auf">
     <div class="wahl" role="group" aria-label="Art der Antwort">${wahl.map((w, i) => `<button type="button" data-typ="${w}" aria-pressed="${i === 0}">${TYPEN[w]}</button>`).join("")}</div>
-    <label for="antwort-text">${art === "frage" ? "Was weißt du dazu?" : "Was möchtest du ergänzen?"}<textarea id="antwort-text" placeholder="${art === "frage" ? "Zum Beispiel: gemessen an der Innenkante, auf Höhe der Achse" : "Zum Beispiel: Die Keile werden von oben eingetrieben"}"></textarea></label>
-    <div class="reihe"><label for="antwort-wert">Wert, falls es ein Maß ist<input id="antwort-wert" placeholder="z. B. 4,40 m"></label>${Speicher.modus === "server" ? `<label for="antwort-name">Dein Name<input id="antwort-name" autocomplete="name"></label>` : ""}</div>
-    <div class="reihe"><button class="knopf" type="submit">${Speicher.modus === "github" ? "Weiter zu GitHub" : "Antwort speichern"}</button><span class="leise" style="font-size:var(--m1)">${Speicher.modus === "github" ? "GitHub öffnet die Antwort vorausgefüllt; dort Fotos anhängen und „Create“ tippen. Braucht ein GitHub-Konto." : "Johannes übernimmt Antworten in den Wissenskern, Thorsten bestätigt sie."}</span></div>
+    <label for="antwort-text">${art === "frage" ? "Was weißt du dazu?" : "Was möchtest du sagen?"}<textarea id="antwort-text" placeholder="${art === "frage" ? "Zum Beispiel: gemessen an der Innenkante, auf Höhe der Achse" : "Zum Beispiel: Die Keile werden von oben eingetrieben"}"></textarea></label>
+    <div class="reihe"><label for="antwort-wert">Wert, falls es ein Maß ist<input id="antwort-wert" placeholder="z. B. 4,40 m"></label>${server ? `<label for="antwort-name">Dein Name<input id="antwort-name" autocomplete="name" list="namen-liste" value="${esc(meinName())}" placeholder="z. B. Thorsten"><datalist id="namen-liste">${Speicher.vorschlaege.map(v => `<option value="${esc(v)}">`).join("")}</datalist></label>` : ""}</div>
+    ${server ? `<div class="reihe anhaenge"><label class="datei-knopf">Foto anhängen<input type="file" id="antwort-dateien" accept="image/*,audio/*" multiple hidden></label><button type="button" class="aufnahme-knopf" id="aufnahme">Sprachnachricht aufnehmen</button><span class="leise" id="anhang-info" style="font-size:var(--m1)"></span></div>
+    <input type="text" name="webseite" id="antwort-webseite" tabindex="-1" autocomplete="off" class="fangfeld" aria-hidden="true">` : ""}
+    <div class="reihe"><button class="knopf" type="submit">${Speicher.modus === "github" ? "Weiter zu GitHub" : "Antwort speichern"}</button><span class="leise" style="font-size:var(--m1)">${Speicher.modus === "github" ? "GitHub öffnet die Antwort vorausgefüllt; dort Fotos anhängen und „Create“ tippen. Braucht ein GitHub-Konto." : server ? "Name und Antwort werden gespeichert und für die Bestandsaufnahme verwendet. <a href=\"datenschutz.html\">Datenschutz</a>" : "Johannes übernimmt Antworten in den Wissenskern, Thorsten bestätigt sie."}</span></div>
   </form>`;
 }
 
@@ -781,19 +823,41 @@ document.addEventListener("click", e => {
   const fg = e.target.closest("[data-figur]"); if (fg) { oeffneFigur(fg.dataset.figur); return; }
   const w = e.target.closest(".wahl button"); if (w) w.parentElement.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b === w ? "true" : "false"));
 });
+// Anhänge und Sprachaufnahme (nur Webspace)
+let anhaenge = [], rekorder = null, tonStuecke = [];
+const zeigeAnhaenge = () => { const i = $("#anhang-info"); if (i) i.textContent = anhaenge.length ? anhaenge.map(f => f.name || "Sprachnachricht").join(", ") : ""; };
+document.addEventListener("change", e => { if (e.target.id === "antwort-dateien") { anhaenge = [...anhaenge, ...e.target.files].slice(0, 6); zeigeAnhaenge(); } });
+document.addEventListener("click", async e => {
+  const auf = e.target.closest("[data-antwort-auf]");
+  if (auf) { $("#antwort-auf").value = auf.dataset.antwortAuf; const z = $("#antwort-auf-anzeige"); z.hidden = false; z.innerHTML = `Antwort an ${esc(auf.dataset.name)} <button type="button" id="antwort-auf-weg">aufheben</button>`; $("#antwort-text").focus(); return; }
+  if (e.target.id === "antwort-auf-weg") { $("#antwort-auf").value = ""; $("#antwort-auf-anzeige").hidden = true; return; }
+  if (e.target.id !== "aufnahme") return;
+  const k = e.target;
+  if (rekorder) { rekorder.stop(); return; }
+  try {
+    const strom = await navigator.mediaDevices.getUserMedia({ audio: true });
+    rekorder = new MediaRecorder(strom); tonStuecke = [];
+    rekorder.ondataavailable = ev => tonStuecke.push(ev.data);
+    rekorder.onstop = () => { strom.getTracks().forEach(t => t.stop()); const typ = rekorder.mimeType || "audio/webm"; const f = new File(tonStuecke, "sprachnachricht." + (typ.includes("mp4") ? "m4a" : "webm"), { type: typ }); anhaenge.push(f); rekorder = null; k.textContent = "Sprachnachricht aufnehmen"; k.classList.remove("laeuft"); zeigeAnhaenge(); };
+    rekorder.start(); k.textContent = "Aufnahme beenden"; k.classList.add("laeuft");
+  } catch { toast("Das Mikrofon ist nicht freigegeben. Du kannst auch eine Tondatei anhängen."); }
+});
 document.addEventListener("submit", async e => {
   if (e.target.id !== "antwort-form") return;
   e.preventDefault();
   const fm = e.target, text = $("#antwort-text").value.trim(), wert = $("#antwort-wert").value.trim();
   const typ = fm.querySelector(".wahl [aria-pressed=true]")?.dataset.typ;
-  if (!text && !wert && typ !== "stimmt") { $("#antwort-text").focus(); toast("Bitte kurz beschreiben, was du weißt."); return; }
+  if (!text && !wert && !anhaenge.length && typ !== "stimmt") { $("#antwort-text").focus(); toast("Bitte kurz beschreiben, was du weißt."); return; }
   const knopf = fm.querySelector(".knopf"); knopf.disabled = true;
+  const server = Speicher.modus === "server", name = $("#antwort-name")?.value.trim() || "";
+  if (server && name) { try { localStorage.setItem(NAME_KEY, name); } catch {} }
   try {
-    const erg = await Speicher.speichern({ ziel: fm.dataset.ziel, typ, text, wert, ...(Speicher.modus === "server" ? { name: $("#antwort-name")?.value.trim() || "" } : {}) });
+    await Speicher.speichern({ ziel: fm.dataset.ziel, typ, text, wert, ...(server ? { name, antwort_auf: $("#antwort-auf").value || null, frage_wortlaut: fm.dataset.wortlaut, ansicht: location.hash.slice(1) || "start", webseite: $("#antwort-webseite")?.value || "", dateien: anhaenge } : {}) });
     if (Speicher.modus === "github") { toast("GitHub ist geöffnet – dort absenden. Die Antwort erscheint danach hier."); knopf.disabled = false; return; }
-    toast("Antwort gespeichert");
-  } catch { toast("Speichern hat nicht geklappt. Bitte später noch einmal versuchen."); knopf.disabled = false; }
+    anhaenge = []; toast("Antwort gespeichert. Danke!");
+  } catch (err) { toast(err?.message && !/^\d+$/.test(err.message) ? err.message : "Speichern hat nicht geklappt. Bitte später noch einmal versuchen."); knopf.disabled = false; }
 });
+
 Speicher.hoerer.push(() => { if (!document.activeElement?.closest("#antwort-form")) zeige({ neu: false }); });
 
 // Bildbetrachter: Drehen (Schritte zu 90°, je Bild auf diesem Gerät gemerkt), Zoomen (Rad, Knöpfe,

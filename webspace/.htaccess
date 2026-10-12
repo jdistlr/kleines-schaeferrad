@@ -1,0 +1,10 @@
+# schaeferrad.jdistlr.de
+Options -Indexes
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+<FilesMatch "^(konfig\.php|.*\.tmp)$">
+  Require all denied
+</FilesMatch>

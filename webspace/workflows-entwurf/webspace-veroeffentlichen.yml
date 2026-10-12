@@ -1,0 +1,44 @@
+# ENTWURF – noch nicht aktiv. Aktiv wird er erst, wenn Johannes die Actions-Regel in AGENTS.md
+# lockert und die Datei nach .github/workflows/ verschoben wird.
+#
+# Baut Cockpit + api.php und lädt sie per FTPES (FTP mit TLS, Port 21) auf schaeferrad.jdistlr.de.
+# Der Ordner daten/ auf dem Server (die Antworten) wird nie gelöscht oder überschrieben.
+name: Webspace veröffentlichen
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+concurrency: webspace
+permissions:
+  contents: read
+jobs:
+  hochladen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - run: pip install pillow
+      - name: Paket bauen
+        env:
+          KS_EXPORT_SCHLUESSEL: ${{ secrets.KS_EXPORT_SCHLUESSEL }}
+          KS_IMPRESSUM: ${{ secrets.KS_IMPRESSUM }}
+        run: python scripts/kern/baue_webspace.py --ziel paket
+      - run: sudo apt-get update && sudo apt-get install -y lftp
+      - name: Hochladen (FTPES)
+        env:
+          HOST: ${{ secrets.KS_FTP_HOST }}
+          PORT: ${{ secrets.KS_FTP_PORT }}
+          BENUTZER: ${{ secrets.KS_FTP_USER }}
+          PASSWORT: ${{ secrets.KS_FTP_PASSWORT }}
+          ZIEL: ${{ secrets.KS_FTP_ZIEL }}
+        run: |
+          lftp -u "$BENUTZER","$PASSWORT" -p "${PORT:-21}" "$HOST" -e "
+            set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate yes;
+            set net:max-retries 2; set net:timeout 30;
+            mkdir -pf ${ZIEL:-/}/daten;
+            mirror -R --delete --verbose --exclude-glob daten/ --exclude-glob daten/* paket ${ZIEL:-/};
+            put -O ${ZIEL:-/}/daten paket/daten/.htaccess;
+            bye"
