@@ -1,11 +1,13 @@
 {
   "schema": "ks-kern-fragen/v1",
-  "stand": "2026-10-11",
+  "stand": "2026-10-12",
   "hinweis": "Handgepflegt seit der Migration vom 11.10.2026 (scripts/kern/migriere_v1.py).",
   "fragen": [
     {
       "id": "F-001",
       "frage": "Wie groß ist die lichte Weite der Radstadt parallel zum Ufer wirklich – 4,40 m (Aussage) oder 5,25 m (Zeichnung)? Welche Innenkanten, auf welcher Höhe?",
+      "kurztitel": "Lichte Weite der Radstadt",
+      "klaerung": "radstadt",
       "betrifft": [
         "COMP-RADSTATT",
         "AN-20261011-04"
@@ -27,6 +29,8 @@
     {
       "id": "F-002",
       "frage": "Wie weit stehen die Flügelbretter radial über die Kranz-Außenkante hinaus?",
+      "kurztitel": "Überstand der Flügelbretter",
+      "klaerung": "aufbau",
       "betrifft": [
         "COMP-PADDLES",
         "COMP-RIMS"
@@ -44,6 +48,8 @@
     {
       "id": "F-003",
       "frage": "Wie hoch liegt die Wellenmitte über der Oberkante der Radstadt-Balken, und liegt die Achse mittig?",
+      "kurztitel": "Achshöhe über der Radstadt",
+      "klaerung": "radstadt",
       "betrifft": [
         "COMP-SHAFT",
         "COMP-RADSTATT",
@@ -64,6 +70,8 @@
     {
       "id": "F-004",
       "frage": "Ist der „Bock am Rad“ (14 × 14 cm, Querbalken 1,20 m) derselbe Bauteil wie der landseitige Lagerbock der Radstadt?",
+      "kurztitel": "Bock am Rad oder Lagerbock?",
+      "klaerung": "radstadt",
       "betrifft": [
         "COMP-TROUGH-SUPPORT",
         "COMP-BEARING-STANDS"
@@ -81,6 +89,8 @@
     {
       "id": "F-005",
       "frage": "Wie genau greifen die drei Arme einer Armzone ineinander? Das Modell-Audit verlangt bisher, dass sich kreuzende Arme kollidieren.",
+      "kurztitel": "Wie die Arme ineinandergreifen",
+      "klaerung": "wissen",
       "betrifft": [
         "COMP-ARMS",
         "COMP-SHAFT"
@@ -100,6 +110,8 @@
     {
       "id": "F-006",
       "frage": "Wie lang ist Rinne 2, und wie lang ist die Überlappung der beiden Rinnenteile?",
+      "kurztitel": "Länge von Rinne 2 und Überlappung",
+      "klaerung": "aufbau",
       "betrifft": [
         "COMP-RINNE",
         "COMP-RINNE-2",
@@ -119,6 +131,8 @@
     {
       "id": "F-007",
       "frage": "Wer hat die in den Befunden vom 11.10.2026 als „Nutzer“ bezeichneten Angaben gemacht?",
+      "kurztitel": "Wer steckt hinter „Nutzer“?",
+      "klaerung": "wissen",
       "betrifft": [
         "AN-20261011-01",
         "AN-20261011-02",
@@ -137,6 +151,8 @@
     {
       "id": "F-008",
       "frage": "Gelten die Skizzen von Welle (IMG_6816/6817), Schöpftrog (IMG_6828/6829) und Rinne 1 (IMG_6830) für das heutige Rad?",
+      "kurztitel": "Gelten die alten Skizzen noch?",
+      "klaerung": "wissen",
       "betrifft": [
         "PHOTO-6816",
         "PHOTO-6817",
@@ -155,6 +171,8 @@
     {
       "id": "F-009",
       "frage": "Zu welchen Bauteilen gehören die Holzlisten-Posten Anwelle, Bänder, Nägel, Fangbaum, Laufsteg, Zwergrinne, Zwergsteg, Landrinne, Pfosten, Rüst- und Landestange und Flügel-Versatz?",
+      "kurztitel": "Holzliste den Bauteilen zuordnen",
+      "klaerung": "wissen",
       "betrifft": [
         "HL-Anwelle",
         "HL-Bänder",
@@ -173,6 +191,8 @@
     {
       "id": "F-010",
       "frage": "Die Angabe „Flügelbrett 90°“ steht doppelt (CLAIM-0369, TH-20261009-06). Worauf genau beziehen sich die 90°?",
+      "kurztitel": "Worauf beziehen sich die 90°?",
+      "klaerung": "wissen",
       "betrifft": [
         "CLAIM-0369",
         "TH-20261009-06"
@@ -192,6 +212,8 @@
     {
       "id": "F-011",
       "frage": "Welche Werkzeuge werden beim Auf- und Abbau verwendet, und für welchen Schritt?",
+      "kurztitel": "Werkzeuge beim Auf- und Abbau",
+      "klaerung": "wissen",
       "betrifft": [
         "COMP-WHEEL"
       ],
@@ -213,6 +235,8 @@
     {
       "id": "F-012",
       "frage": "Wie sehen die Armöffnungen der Welle innen aus, und welche Arme gehören in welcher Reihenfolge zusammen?",
+      "kurztitel": "Armöffnungen der Welle",
+      "klaerung": "aufbau",
       "betrifft": [
         "COMP-ARMS",
         "COMP-SHAFT"
@@ -232,6 +256,8 @@
     {
       "id": "F-013",
       "frage": "Wo liegen die beiden Kranzebenen und die festen Bezugspunkte des Rades im Raum?",
+      "kurztitel": "Kranzebenen und Bezugspunkte",
+      "klaerung": "rechnen",
       "betrifft": [
         "COMP-RIMS"
       ],
@@ -249,6 +275,8 @@
     {
       "id": "F-014",
       "frage": "Wie viele Kümpfe und Flügelbretter hat das Rad, und in welcher Folge sitzen sie am Umfang?",
+      "kurztitel": "Zahl und Folge der Kümpfe",
+      "klaerung": "aufbau",
       "betrifft": [
         "COMP-KUEMPFE",
         "COMP-PADDLES"
@@ -268,6 +296,8 @@
     {
       "id": "F-015",
       "frage": "Wo liegen die Lagermitten, und wie liegt der Dorn im Lager auf?",
+      "kurztitel": "Lagermitten und Dorn",
+      "klaerung": "radstadt",
       "betrifft": [
         "COMP-BEARINGS"
       ],
@@ -285,6 +315,8 @@
     {
       "id": "F-016",
       "frage": "Wo steht das Wasser im Betrieb relativ zur Achse, und wie liegen Trog und Rinne dazu?",
+      "kurztitel": "Wasserstand im Betrieb",
+      "klaerung": "wissen",
       "betrifft": [
         "ANLAGE"
       ],
@@ -302,6 +334,8 @@
     {
       "id": "F-017",
       "frage": "In welcher Reihenfolge wird das Rad abgebaut und aufgebaut?",
+      "kurztitel": "Reihenfolge von Ab- und Aufbau",
+      "klaerung": "wissen",
       "betrifft": [
         "ANLAGE"
       ],
@@ -327,6 +361,8 @@
     {
       "id": "F-018",
       "frage": "Zwei Kumpfskizzen widersprechen sich: Dauben 24 oder 22 mm, Nutdurchmesser 244/264 oder 248/268. Welche gilt für den Referenz-Kumpf?",
+      "kurztitel": "Welche Kumpfskizze gilt?",
+      "klaerung": "wissen",
       "betrifft": [
         "COMP-KUMPF-BASE",
         "COMP-KUMPF-STAVES",
@@ -353,6 +389,8 @@
     {
       "id": "F-019",
       "frage": "Zwei Reihen von Reifenlängen (780/875/968 und 784/880/972). Laut Fachauskunft gibt es Maßvarianten – welche Reihe gehört zum fotografierten Referenz-Kumpf?",
+      "kurztitel": "Welche Reihe der Reifenlängen?",
+      "klaerung": "wissen",
       "betrifft": [
         "COMP-FASTENERS",
         "COMP-KUMPF-HOOPS",
@@ -383,6 +421,8 @@
     {
       "id": "F-020",
       "frage": "Wellenskizze 370/37 gegen Holzliste 4,50 m / 50 cm (Einbau 40 cm): Beschreibt die Holzliste nur das Rohholz?",
+      "kurztitel": "Welle: Skizze oder Rohholz?",
+      "klaerung": "wissen",
       "betrifft": [
         "COMP-SHAFT",
         "CLAIM-0001",
@@ -412,6 +452,8 @@
     {
       "id": "F-021",
       "frage": "Krümmling 14 cm breit gegen 15 cm Ringdifferenz (213 − 198) in der Skizze.",
+      "kurztitel": "Krümmling: 14 oder 15 cm?",
+      "klaerung": "aufbau",
       "betrifft": [
         "COMP-RIMS",
         "CLAIM-0234",
@@ -441,6 +483,8 @@
     {
       "id": "F-022",
       "frage": "Die Zahlen auf der Armskizze (gerade/schräg) und die drei Durchtritte je Armzone lassen sich nicht allen heutigen Armen zuordnen.",
+      "kurztitel": "Armskizze den Armen zuordnen",
+      "klaerung": "foto",
       "betrifft": [
         "COMP-ARMS",
         "COMP-SHAFT",
@@ -471,6 +515,8 @@
     {
       "id": "F-023",
       "frage": "Befestigungsbegriffe waren vermischt. Kumpfnägel sind inzwischen geklärt; welche Funktion haben die übrigen Keile und Bänder?",
+      "kurztitel": "Wozu Keile und Bänder?",
+      "klaerung": "wissen",
       "betrifft": [
         "COMP-FASTENERS",
         "COMP-KUMPF-HOOPS",
@@ -501,6 +547,8 @@
     {
       "id": "F-024",
       "frage": "Veröffentlicht sind 24 Kümpfe und 24 Flügelbretter; auf den Fotos lassen sie sich nicht vollständig zählen.",
+      "kurztitel": "Wirklich 24 Kümpfe und Flügel?",
+      "klaerung": "aufbau",
       "betrifft": [
         "COMP-KUEMPFE",
         "COMP-PADDLES",
@@ -526,6 +574,8 @@
     {
       "id": "F-025",
       "frage": "Auf Fotos sichtbare Flächen fehlen im 3D-Scan oder sind lückenhaft. Taugt der Scan für Maße?",
+      "kurztitel": "Taugt der 3D-Scan für Maße?",
+      "klaerung": "rechnen",
       "betrifft": [
         "COMP-ARMS",
         "COMP-KUEMPFE",
@@ -551,6 +601,8 @@
     {
       "id": "F-026",
       "frage": "Kranzdurchmesser laut Skizze 4,26 / 3,96 m, der Scan hat eine Ausdehnung von 6,03 / 7,03 / 4,50 Exporteinheiten. Wie sind Scan-Einheiten und Maßstab zu lesen?",
+      "kurztitel": "Maßstab des 3D-Scans",
+      "klaerung": "rechnen",
       "betrifft": [
         "COMP-RIMS",
         "CLAIM-0234",
@@ -580,6 +632,8 @@
     {
       "id": "F-027",
       "frage": "Die beiden Scan-Exporte (PLY und GLB) haben unterschiedliche Ausdehnung und Punktmengen. Welcher ist maßgeblich?",
+      "kurztitel": "Welcher Scan-Export gilt?",
+      "klaerung": "rechnen",
       "betrifft": [
         "SCAN-20261007-01-PLY",
         "CLAIM-0324"
@@ -598,6 +652,8 @@
     {
       "id": "F-028",
       "frage": "Industrielle Kontaktstreifen- und Brettvorlagen waren früher als Kumpfbefestigung bzw. Welle eingeordnet. Gehören sie überhaupt zum Rad?",
+      "kurztitel": "Gehören die Industrievorlagen dazu?",
+      "klaerung": "wissen",
       "betrifft": [
         "REF-BOARD",
         "REF-CONTACTSTRIPS",
@@ -625,6 +681,8 @@
     {
       "id": "F-029",
       "frage": "Die Trogskizze nennt 250 cm Gesamtlänge und daneben 244 cm in Klammern. Welche Kanten sind jeweils gemeint?",
+      "kurztitel": "Trog: 250 oder 244 cm?",
+      "klaerung": "wissen",
       "betrifft": [
         "COMP-TROUGH",
         "CLAIM-0130",
@@ -654,6 +712,8 @@
     {
       "id": "F-030",
       "frage": "Flügelbretter stehen laut Fachkenner 90° zum Rad. Das Modell stellt sie formal senkrecht zur Kranzebene, Lage und Anstellung können trotzdem falsch sein.",
+      "kurztitel": "Anstellung der Flügelbretter",
+      "klaerung": "wissen",
       "betrifft": [
         "COMP-PADDLES",
         "CLAIM-0369",
@@ -674,6 +734,8 @@
     {
       "id": "F-031",
       "frage": "Aufnahmelücke: Krümmlingstöße und reale Ringform",
+      "kurztitel": "Krümmlingstöße und Ringform",
+      "klaerung": "aufbau",
       "betrifft": [
         "COMP-WHEEL"
       ],
@@ -690,6 +752,8 @@
     {
       "id": "F-032",
       "frage": "Aufnahmelücke: Kumpf-Nut, Kumpfnagelwege, Überlappung und Varianten",
+      "kurztitel": "Kumpf-Nut und Nagelwege",
+      "klaerung": "aufbau",
       "betrifft": [
         "COMP-WHEEL"
       ],
@@ -706,6 +770,8 @@
     {
       "id": "F-033",
       "frage": "Aufnahmelücke: Flügelbrett-Pitch und Kontaktgeometrie",
+      "kurztitel": "Flügelbrett-Teilung und Anlage",
+      "klaerung": "aufbau",
       "betrifft": [
         "COMP-WHEEL"
       ],
@@ -722,6 +788,8 @@
     {
       "id": "F-034",
       "frage": "Wie kommen beim Einbau der zweite und der dritte Arm an der Kerbe des schon eingeschobenen Arms vorbei?",
+      "kurztitel": "Arme an der Kerbe vorbei einbauen",
+      "klaerung": "wissen",
       "betrifft": [
         "COMP-ARMS",
         "COMP-SHAFT"

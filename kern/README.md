@@ -12,7 +12,7 @@ Das Rad ist eine Überlieferung des Vereins: Skizzen, mündliches Wissen und jä
 | **Beziehung** | `beziehungen.json` | Wie zwei Bauteile zusammengehören | `COMP-TROUGH` *liegt auf* `COMP-RINNE` |
 | **Angabe** | `angaben.json` | Ein Wert zu Bauteil, Beziehung oder Quelle | Arme 14 × 6,5 cm, mündlich, Thorsten |
 | **Quelle** | `quellen.json` | Foto, Skizze, Scan, Video, Aussage, Kontext | `PHOTO-6816` Wellenskizze |
-| **Offene Frage** | `fragen.json` | Was zu entscheiden oder zu messen ist; mit Abhängigkeiten | `F-001` lichte Weite der Radstadt |
+| **Offene Frage** | `fragen.json` | Was zu entscheiden oder zu messen ist; mit Abhängigkeiten, `kurztitel` (höchstens 40 Zeichen, für Listen und Überschriften) und `klaerung` (wo es sich klären lässt: `wissen`, `radstadt`, `foto`, `rechnen`, `aufbau` – Letzteres ruht bis zum Frühjahr) | `F-001` lichte Weite der Radstadt |
 | **Arbeitsschritt** | `arbeitsschritte.json` | Ein Schritt beim Aufbau oder Abbau | `AS-AUF-02` Arme mit Wellenkeil sichern |
 | **Wissensträger** | `personen.json` | Wer Wissen beiträgt und bestätigt | `P-THORSTEN` |
 | **Begründung** | `begruendungen.json` | Warum es so gebaut wird | `G-001` ungleich lange Kumpfnägel |

@@ -57,6 +57,17 @@ class KernTest(unittest.TestCase):
                     self.assertIsNotNone(a["bestaetigt"])
 
     # --- kaputte Varianten -------------------------------------------------
+    def frage(self, daten, fid):
+        return next(f for f in daten["fragen"] if f["id"] == fid)
+
+    def test_kurztitel_zu_lang(self):
+        self.aendere("fragen", lambda d: self.frage(d, "F-001").update(kurztitel="x" * 41))
+        self.erwarte_fehler("kurztitel hat 41 Zeichen")
+
+    def test_klaerung_unbekannt(self):
+        self.aendere("fragen", lambda d: self.frage(d, "F-001").update(klaerung="irgendwo"))
+        self.erwarte_fehler("klaerung irgendwo unbekannt")
+
     def test_unbekanntes_ziel(self):
         self.aendere("angaben", lambda d: self.angabe(d, "CLAIM-0001").update(ziel="COMP-GIBTESNICHT"))
         self.erwarte_fehler("weder Bauteil, Beziehung noch Quelle")
