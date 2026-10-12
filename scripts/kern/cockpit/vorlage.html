@@ -620,7 +620,7 @@ function start() {
     ${fuss()}`;
 }
 const neuSeitAbbau = K.angaben.filter(a => /^AN-2026101[1-9]/.test(a.id)).length;
-const fuss = () => `<p class="fuss">Erzeugt aus dem Wissenskern${K.commit ? ", Stand " + esc(K.commit) : ""}. ${S.angaben} Angaben, davon ${neuSeitAbbau} seit dem Abbau neu; ${K.quellen.length} Quellen; ${offen.length} offene Fragen. Fachlich gültig ist erst, was Thorsten bestätigt.${K.api ? ` · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a>` : ""}</p>`;
+const fuss = () => `<p class="fuss">Erzeugt aus dem Wissenskern${K.commit ? ", Stand " + esc(K.commit) : ""}. ${S.angaben} Angaben, davon ${neuSeitAbbau} seit dem Abbau neu; ${K.quellen.length} Quellen; ${offen.length} offene Fragen. Fachlich gültig ist erst, was Thorsten bestätigt.${K.api ? `${K.impressum ? ` · <a href="impressum.html">Impressum</a>` : ""} · <a href="datenschutz.html">Datenschutz</a>` : ""}</p>`;
 
 const FIGUREN = K.figuren || [];
 function figurKacheln(liste) {
