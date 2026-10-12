@@ -65,7 +65,7 @@ def main():
         shutil.rmtree(ziel)
     shutil.copytree(os.path.join(ROOT, "cockpit"), ziel, ignore=shutil.ignore_patterns("artefakt.html", "bilder-paket.json"))
     ws = os.path.join(ROOT, "webspace")
-    for name in ("api.php", "control.php", ".htaccess", "datenschutz.html"):
+    for name in ("api.php", "control.php", "session.php", ".htaccess", "datenschutz.html"):
         shutil.copy(os.path.join(ws, name), os.path.join(ziel, name))
     os.makedirs(os.path.join(ziel, "daten"), exist_ok=True)
     shutil.copy(os.path.join(ws, "daten", ".htaccess"), os.path.join(ziel, "daten", ".htaccess"))
@@ -86,6 +86,10 @@ def main():
         config["github_client_id"] = os.environ["KS_GITHUB_CLIENT_ID"]
         config["github_client_secret"] = os.environ["KS_GITHUB_CLIENT_SECRET"]
         config["allowed_github_ids"] = sorted(CONTROL_GITHUB_USERS.values())
+        # Who may confirm values: GitHub ID -> person in kern/personen.json (darf_bestaetigen).
+        people = {p.get("github"): p for p in load_list("personen", "personen")}
+        config["github_people"] = {str(i): people[login]["id"] for login, i in CONTROL_GITHUB_USERS.items()
+                                   if login in people and people[login].get("darf_bestaetigen")}
     if config:
         with open(os.path.join(ziel, "konfig.php"), "w", encoding="utf-8") as f:
             f.write("<?php return json_decode(<<<'KONFIG'\n" + json.dumps(config) + "\nKONFIG, true);\n")

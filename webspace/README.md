@@ -6,6 +6,7 @@ Cockpit plus Antworten-Schnittstelle in PHP, ohne Datenbank. Entscheidungen und 
 |---|---|
 | `api.php` | Antworten speichern (Text, Wert, Name, Fotos, Sprachnachrichten, Antwort auf Antwort), Liste, Namensvorschläge, Dateien, geschützter Export |
 | `control.php` | Überblick mit GitHub-Anmeldung, nur für jdistlr und ThorstenHalsch (Liste `CONTROL_GITHUB_USERS` in `scripts/kern/baue_webspace.py`): wer hat wann was wo eingebracht, und was die Schnittstelle gemeldet hat (Protokoll `daten/log/JJJJ-MM-TT.jsonl`); CSV-Download mit `?format=csv` |
+| `session.php` | gemeinsame Anmeldung für `control.php` und `api.php`; Johannes und Thorsten melden sich über `control.php` mit GitHub an und können danach im Cockpit Werte bestätigen (`api.php?aktion=confirm`, abgelegt unter `daten/bestaetigungen/JJJJ/MM/`) |
 | `targets.json`, `build.json` | entstehen beim Bauen: Titel zu allen Kern-IDs, veröffentlichter Commit |
 | `daten/.htaccess` | verhindert direktes Aufrufen der Rohdateien; Antworten liegen auf dem Server unter `daten/antworten/JJJJ/MM/` |
 | `.htaccess` | https erzwingen, kein Verzeichnislisting, `konfig.php` gesperrt |

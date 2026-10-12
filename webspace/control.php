@@ -7,7 +7,8 @@
  * visible text in German (AGENTS.md, naming rule).
  *
  *   control.php                 overview; without a session: sign-in page
- *   control.php?signin=github   starts the GitHub OAuth flow (OAuth app owned by jdistlr)
+ *   control.php?signin=github   starts the GitHub OAuth flow (OAuth app owned by jdistlr);
+ *                               &return=./#F-001 sends the person back into the cockpit afterwards
  *   control.php?code=…&state=…  OAuth callback (the app's callback URL is this page)
  *   control.php?format=csv      contributions as CSV (semicolon, UTF-8 BOM, opens in Excel)
  *
@@ -41,10 +42,8 @@ header('X-Content-Type-Options: nosniff');
 header('Referrer-Policy: same-origin');
 header("Content-Security-Policy: default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; frame-ancestors 'none'");
 
-session_name('ks_control');
-session_set_cookie_params(['lifetime' => 0, 'path' => dirname($_SERVER['SCRIPT_NAME'] ?? '/') ?: '/', 'secure' => !empty($_SERVER['HTTPS']), 'httponly' => true, 'samesite' => 'Lax']); // Lax: the session must survive the redirect back from github.com
-session_start();
-if (empty($_SESSION['csrf'])) $_SESSION['csrf'] = bin2hex(random_bytes(16));
+require __DIR__ . '/session.php';
+startSession();
 
 function h($value): string { return htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 
@@ -156,6 +155,7 @@ function logSignIn(string $outcome, string $login): void {
 $signInError = '';
 if ($CONFIGURED && ($_GET['signin'] ?? '') === 'github') {
     $_SESSION['oauth_state'] = bin2hex(random_bytes(16));
+    $_SESSION['return_to'] = safeReturnPath($_GET['return'] ?? null);
     redirectTo($GITHUB_WEB . '/login/oauth/authorize?' . http_build_query([
         'client_id' => $CLIENT_ID, 'redirect_uri' => pageUrl(), 'state' => $_SESSION['oauth_state'], 'allow_signup' => 'false',
     ]));
@@ -179,19 +179,26 @@ if ($CONFIGURED && isset($_GET['code'], $_GET['state'])) {
             session_regenerate_id(true);
             $_SESSION['user'] = ['id' => (int)$user['id'], 'login' => (string)$user['login'], 'name' => (string)($user['name'] ?? '')];
             logSignIn('signed_in', (string)$user['login']);
-            redirectTo(pageUrl());
+            $back = $_SESSION['return_to'] ?? null;
+            unset($_SESSION['return_to']);
+            redirectTo($back ?: pageUrl());
         }
     }
 }
-if (isset($_GET['error']) && !$signInError) $signInError = 'Die Anmeldung bei GitHub wurde abgebrochen.';
+if (isset($_GET['error']) && !$signInError) {
+    $back = $_SESSION['return_to'] ?? null;
+    unset($_SESSION['return_to']);
+    if ($back) redirectTo($back); // cancelled from the cockpit: just go back there
+    $signInError = 'Die Anmeldung bei GitHub wurde abgebrochen.';
+}
 if (($_POST['do'] ?? '') === 'logout' && hash_equals($_SESSION['csrf'], (string)($_POST['csrf'] ?? ''))) {
     $_SESSION = [];
     session_destroy();
-    redirectTo(pageUrl());
+    redirectTo(safeReturnPath($_POST['return'] ?? null) ?: pageUrl());
 }
-$currentUser = $_SESSION['user'] ?? null;
 // Allowlist is re-checked on every request, so removing an ID locks out open sessions after the next deploy.
-$signedIn = $CONFIGURED && is_array($currentUser) && in_array((int)($currentUser['id'] ?? 0), $ALLOWED_IDS, true);
+$currentUser = currentAuthority($CONFIG);
+$signedIn = $CONFIGURED && $currentUser !== null;
 
 // ---------- data ----------
 

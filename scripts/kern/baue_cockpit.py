@@ -248,7 +248,7 @@ def main():
         "angaben": [{"id": a["id"], "ziel": a["ziel"], "eig": a["eigenschaft"], "wert": a["wert"], "einheit": a["einheit"],
                      "tol": a.get("toleranz"), "grund": a["grundlage"], "guelt": a["gueltigkeit"],
                      "quellen": [[q["quelle"], q.get("stelle"), statement_for(quellen_by_id[q["quelle"]], q.get("stelle")) if quellen_by_id.get(q["quelle"], {}).get("art") in TEXT_KINDS else None] for q in a["quellen"]],
-                     "von": a.get("aussage_von")} for a in d["angaben"]],
+                     "von": a.get("aussage_von"), "best": a.get("bestaetigt")} for a in d["angaben"]],
         "fragen": [{k: f.get(k) for k in ("id", "frage", "kurztitel", "klaerung", "betrifft", "blockiert", "haengt_ab_von", "entscheidet", "status", "hinweis", "herkunft")} for f in d["fragen"]],
         "quellen": [{"id": q["id"], "art": q["art"], "pfad": q["pfad"], "titel": q["titel"], "ordner": q["ordner"],
                      "bauteil": q.get("bauteil"), "erschlossen": q["erschlossen"], "kopien": len(q.get("kopien", [])),
