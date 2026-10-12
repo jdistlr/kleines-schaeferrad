@@ -4,8 +4,10 @@ ast=$(git symbolic-ref --short -q HEAD)
 if [ "$ast" = "main" ] || [ "$ast" = "gh-pages" ]; then
   echo "Abgelehnt: nicht direkt auf '$ast' committen. Arbeitsbranch anlegen (siehe AGENTS.md)." >&2; exit 1
 fi
-if git diff --cached --name-only --diff-filter=AM | grep -q '^\.github/workflows/'; then
-  echo "Abgelehnt: keine GitHub-Actions-Workflows (siehe AGENTS.md)." >&2; exit 1
+# Erlaubt sind genau zwei Workflows (Freigabe Johannes, 12.10.2026); alles andere unter .github/workflows/ wird abgelehnt.
+fremd=$(git diff --cached --name-only --diff-filter=AM | grep '^\.github/workflows/' | grep -v -E '^\.github/workflows/(webspace-veroeffentlichen|antworten-zurueckholen)\.yml$')
+if [ -n "$fremd" ]; then
+  echo "Abgelehnt: nur die zwei freigegebenen Workflows sind erlaubt (siehe AGENTS.md):" >&2; echo "$fremd" >&2; exit 1
 fi
 eingefroren=$(git diff --cached --name-only | grep -E '^(data/(geometry\.claims|components|conflicts|knowledge-gaps)\.json|evidence/contributions/)')
 if [ -n "$eingefroren" ] && [ -z "$KS_ALTDATEN_FREIGABE" ]; then

@@ -76,13 +76,18 @@ Der Skill liegt unter `.claude/skills/anatomy/` (MIT, Herkunft in `HERKUNFT.md`)
 - **Größe ansagen.** Das ganze Rad ist ein „Epic“ und wird nur auf ausdrücklichen Auftrag begonnen; einzelne Baugruppen sind „Hero“-Figuren.
 - Figuren liegen unter `figuren/<name>/`, mit Build-Skript; gebaute Seiten werden nicht versioniert. Veröffentlichung nur über `npm run cockpit:pages`.
 
-## Keine GitHub Actions
+## GitHub Actions: nur zwei Workflows
 
-Ausdrückliche Vorgabe vom 11.10.2026: Für dieses Projekt sind keine GitHub Actions gewünscht; Actions sind gesperrt.
+Vorgabe vom 11.10.2026: keine GitHub Actions. Gelockert am 12.10.2026 durch Johannes für **genau zwei** Workflows:
 
-- Keine Workflows anlegen, aktivieren, starten oder erneut ausführen. Keine Dateien nach `.github/workflows/`. Historische Definitionen liegen nur unter `docs/archive/github-actions/`.
+- `.github/workflows/webspace-veroeffentlichen.yml`: nach jedem Merge in `main` Cockpit und `api.php` per FTPES auf https://schaeferrad.jdistlr.de laden. Der Ordner `daten/` auf dem Server (die Antworten) wird nie gelöscht oder überschrieben.
+- `.github/workflows/antworten-zurueckholen.yml`: alle drei Stunden die Antworten vom Webspace holen und als Pull Request unter `evidence/antworten/webspace.json` ablegen.
+
+Für alles andere gilt die Sperre weiter:
+
+- Keine weiteren Workflows anlegen, aktivieren oder starten. Die zwei erlaubten nur ändern, wenn Johannes es verlangt. Historische Definitionen liegen nur unter `docs/archive/github-actions/`. Der Pre-commit-Hook lehnt jede andere Datei unter `.github/workflows/` ab.
+- Zugangsdaten nur als GitHub-Secrets (`KS_FTP_HOST`, `KS_FTP_PORT`, `KS_FTP_USER`, `KS_FTP_PASSWORT`, `KS_FTP_ZIEL`, `KS_EXPORT_SCHLUESSEL`, optional `KS_IMPRESSUM`), nie im Repository.
 - Fehlende Actions-Läufe sind kein Grund zu warten. Prüfungen selbst ausführen und das Ergebnis berichten; nicht ausführbare Prüfungen als ungeprüft kennzeichnen.
-- Keine automatische Veröffentlichung einrichten.
 
 ## Prüfungen vor jedem Commit
 

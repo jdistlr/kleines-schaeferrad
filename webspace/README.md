@@ -9,7 +9,7 @@ Cockpit plus Antworten-Schnittstelle in PHP, ohne Datenbank. Entscheidungen und 
 | `.htaccess` | https erzwingen, kein Verzeichnislisting, `konfig.php` gesperrt |
 | `datenschutz.html`, `impressum.vorlage.html` | Datenschutzhinweis; ein Impressum entsteht nur, wenn das Secret `KS_IMPRESSUM` gesetzt ist (vorerst nicht) |
 | `konfig.beispiel.php` | Vorlage; die echte `konfig.php` schreibt die Veröffentlichung aus `KS_EXPORT_SCHLUESSEL` |
-| `workflows-entwurf/` | die zwei Workflows, **noch nicht aktiv** |
+| `.github/workflows/webspace-veroeffentlichen.yml`, `antworten-zurueckholen.yml` | Hochladen nach jedem Merge, Antworten alle drei Stunden zurückholen (freigegeben am 12.10.2026) |
 
 Paket lokal bauen und testen:
 

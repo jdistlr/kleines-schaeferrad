@@ -1,8 +1,3 @@
-# ENTWURF – noch nicht aktiv. Aktiv wird er erst, wenn Johannes die Actions-Regel in AGENTS.md
-# lockert und die Datei nach .github/workflows/ verschoben wird.
-#
-# Baut Cockpit + api.php und lädt sie per FTPES (FTP mit TLS, Port 21) auf schaeferrad.jdistlr.de.
-# Der Ordner daten/ auf dem Server (die Antworten) wird nie gelöscht oder überschrieben.
 name: Webspace veröffentlichen
 on:
   push:
