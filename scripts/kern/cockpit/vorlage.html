@@ -211,6 +211,16 @@ table.angaben .bezug { font-size: var(--m1); color: var(--leise); }
 .bildfenster img { max-width: 100%; max-height: 78vh; border-radius: 6px; display: block; margin: 0 auto; }
 .bildfenster figcaption { color: #e6ecea; font-size: var(--m2); margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
 .bildfenster a { color: #9fd0d8; }
+.bildfenster .betrachter { width: min(1100px, 100%); }
+.buehne { position: relative; height: min(72vh, 820px); overflow: hidden; display: grid; place-items: center; touch-action: none; cursor: grab; border-radius: 6px; background: rgb(0 0 0 / .25); }
+.buehne:active { cursor: grabbing; }
+.buehne img { max-width: 100%; max-height: 100%; border-radius: 0; user-select: none; -webkit-user-drag: none; transform-origin: center; will-change: transform; }
+.bildfenster .buehne img { max-height: 100%; margin: 0; }
+.werkzeuge { display: flex; gap: 6px; justify-content: center; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+.werkzeuge button { min-width: 40px; height: 36px; padding: 0 12px; border: 1px solid rgb(255 255 255 / .28); background: rgb(255 255 255 / .08); color: #fff; border-radius: 6px; cursor: pointer; font-size: 17px; }
+.werkzeuge button:hover { background: rgb(255 255 255 / .18); }
+.werkzeuge button[data-bb="passen"] { font-size: var(--m2); }
+.zoomwert { color: #e6ecea; font-size: var(--m2); min-width: 52px; text-align: center; font-variant-numeric: tabular-nums; }
 .bildfenster > button { position: absolute; top: calc(env(safe-area-inset-top, 0px) + 10px); right: 16px; background: none; border: 0; color: #fff; font-size: 30px; line-height: 1; cursor: pointer; padding: 6px 10px; }
 .toast { position: fixed; bottom: calc(env(safe-area-inset-bottom, 0px) + 20px); left: 50%; transform: translateX(-50%); background: var(--tinte); color: var(--papier); padding: 9px 18px; border-radius: 6px; font-size: var(--m2); z-index: 60; max-width: calc(100% - 32px); }
 
@@ -720,13 +730,81 @@ document.addEventListener("submit", async e => {
 });
 Speicher.hoerer.push(() => { if (!document.activeElement?.closest("#antwort-form")) zeige({ neu: false }); });
 
+// Bildbetrachter: Drehen (Schritte zu 90°, je Bild auf diesem Gerät gemerkt), Zoomen (Rad, Knöpfe,
+// Doppelklick, zwei Finger), Verschieben (Ziehen). Beim Hineinzoomen wird das Original nachgeladen.
+const RAW = "https://raw.githubusercontent.com/jdistlr/kleines-schaeferrad/main/";
+const DREH = "ks-drehung";
+const drehungVon = id => { try { return JSON.parse(localStorage.getItem(DREH) || "{}")[id] || 0; } catch { return 0; } };
+const merkeDrehung = (id, w) => { try { const d = JSON.parse(localStorage.getItem(DREH) || "{}"); if (w) d[id] = w; else delete d[id]; localStorage.setItem(DREH, JSON.stringify(d)); } catch {} };
 function oeffneFoto(id, angabe, stelle) {
   const q = quellen[id], f = $("#bildfenster"), vorher = document.activeElement, an = angabenById[angabe];
   const gross = K.bilderPaket ? bildSrc(q) : q.bild;
-  f.innerHTML = `<button aria-label="Schließen" id="bild-zu">×</button><figure><img src="${gross}" alt=""><figcaption>${an ? `<span class="abgelesen">${esc(eig(an.eig))}: ${esc(wertText(an))}${stelle ? " – abgelesen: " + esc(stelle) : ""}</span>` : ""}<span>${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}${q.bauteil && teile[q.bauteil] ? ", " + esc(teile[q.bauteil].name) : ""}</span><a href="#${q.id}" id="zur-quelle">Alles aus diesem Bild</a>${q.pfad ? `<a href="${REPO + encodeURI(q.pfad)}" target="_blank" rel="noopener">Original in voller Größe</a>` : ""}</figcaption></figure>`;
-  f.hidden = false; $("#bild-zu").focus();
-  const taste = e => { if (e.key === "Escape") zu(); };
-  const zu = () => { f.hidden = true; document.removeEventListener("keydown", taste); vorher?.focus?.(); };
+  f.innerHTML = `<button aria-label="Schließen" id="bild-zu">×</button><figure class="betrachter">
+    <div class="buehne" id="buehne" tabindex="0" aria-label="Bild. Ziehen verschiebt, Mausrad oder zwei Finger zoomen, R dreht."><img id="bb-bild" src="${gross}" alt="" draggable="false"></div>
+    <div class="werkzeuge" role="toolbar" aria-label="Bild bearbeiten">
+      <button data-bb="links" aria-label="Nach links drehen" title="Nach links drehen">⟲</button>
+      <button data-bb="rechts" aria-label="Nach rechts drehen" title="Nach rechts drehen (R)">⟳</button>
+      <button data-bb="aus" aria-label="Verkleinern" title="Verkleinern (−)">−</button>
+      <span class="zoomwert" id="bb-zoom">100 %</span>
+      <button data-bb="ein" aria-label="Vergrößern" title="Vergrößern (+)">+</button>
+      <button data-bb="passen" title="Einpassen (0)">Einpassen</button>
+    </div>
+    <figcaption>${an ? `<span class="abgelesen">${esc(eig(an.eig))}: ${esc(wertText(an))}${stelle ? " – abgelesen: " + esc(stelle) : ""}</span>` : ""}<span>${esc(BILDART[q.bildart] || (q.art === "skizze" ? "Skizze" : "Foto"))}${q.bauteil && teile[q.bauteil] ? ", " + esc(teile[q.bauteil].name) : ""}</span><a href="#${q.id}" id="zur-quelle">Alles aus diesem Bild</a>${q.pfad ? `<a href="${REPO + encodeURI(q.pfad)}" target="_blank" rel="noopener">Original in voller Größe</a>` : ""}</figcaption></figure>`;
+  f.hidden = false;
+  const buehne = $("#buehne"), img = $("#bb-bild"), anzeige = $("#bb-zoom");
+  const z = { s: 1, x: 0, y: 0, w: drehungVon(id) };
+  const zeichne = (weich = false) => {
+    img.style.transition = weich && !matchMedia("(prefers-reduced-motion: reduce)").matches ? "transform .18s ease-out" : "none";
+    img.style.transform = `translate(${z.x}px, ${z.y}px) scale(${z.s}) rotate(${z.w}deg)`;
+    anzeige.textContent = Math.round(z.s * 100) + " %";
+    buehne.classList.toggle("gezoomt", z.s > 1.01);
+  };
+  let original = false;
+  const ladeOriginal = () => { if (original || !q.pfad || K.bilderPaket) return; original = true; const o = new Image(); o.onload = () => { img.src = o.src; }; o.src = RAW + q.pfad.split("/").map(encodeURIComponent).join("/"); };
+  const zoomUm = (faktor, cx, cy) => {
+    const r = buehne.getBoundingClientRect(), mx = (cx ?? r.left + r.width / 2) - r.left - r.width / 2, my = (cy ?? r.top + r.height / 2) - r.top - r.height / 2;
+    const neu = Math.min(12, Math.max(1, z.s * faktor)), k = neu / z.s;
+    z.x = mx - (mx - z.x) * k; z.y = my - (my - z.y) * k; z.s = neu;
+    if (z.s === 1) { z.x = 0; z.y = 0; }
+    if (z.s > 1.4) ladeOriginal();
+  };
+  const tun = was => {
+    if (was === "links") { z.w -= 90; merkeDrehung(id, ((z.w % 360) + 360) % 360); }
+    if (was === "rechts") { z.w += 90; merkeDrehung(id, ((z.w % 360) + 360) % 360); }
+    if (was === "ein") zoomUm(1.5); if (was === "aus") zoomUm(1 / 1.5);
+    if (was === "passen") { z.s = 1; z.x = 0; z.y = 0; }
+    zeichne(true);
+  };
+  f.querySelector(".werkzeuge").onclick = e => { const b = e.target.closest("[data-bb]"); if (b) tun(b.dataset.bb); };
+  buehne.addEventListener("wheel", e => { e.preventDefault(); zoomUm(Math.exp(-e.deltaY * 0.0018), e.clientX, e.clientY); zeichne(); }, { passive: false });
+  buehne.addEventListener("dblclick", e => { if (z.s > 1.01) { z.s = 1; z.x = 0; z.y = 0; } else zoomUm(2.5, e.clientX, e.clientY); zeichne(true); });
+  const zeiger = new Map(); let start = null;
+  buehne.addEventListener("pointerdown", e => { buehne.setPointerCapture(e.pointerId); zeiger.set(e.pointerId, [e.clientX, e.clientY]); start = { z: { ...z }, p: [...zeiger.values()].map(v => [...v]) }; });
+  buehne.addEventListener("pointermove", e => {
+    if (!zeiger.has(e.pointerId)) return; zeiger.set(e.pointerId, [e.clientX, e.clientY]);
+    const p = [...zeiger.values()];
+    if (p.length === 1 && start.p.length === 1) { z.x = start.z.x + p[0][0] - start.p[0][0]; z.y = start.z.y + p[0][1] - start.p[0][1]; }
+    if (p.length === 2 && start.p.length === 2) {
+      const d = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]), m = a => [(a[0][0] + a[1][0]) / 2, (a[0][1] + a[1][1]) / 2];
+      Object.assign(z, start.z); zoomUm(d(p[0], p[1]) / Math.max(1, d(start.p[0], start.p[1])), ...m(start.p));
+      const m0 = m(start.p), m1 = m(p); z.x += m1[0] - m0[0]; z.y += m1[1] - m0[1];
+    }
+    zeichne();
+  });
+  const los = e => { zeiger.delete(e.pointerId); start = { z: { ...z }, p: [...zeiger.values()].map(v => [...v]) }; };
+  buehne.addEventListener("pointerup", los); buehne.addEventListener("pointercancel", los);
+  zeichne(); $("#bild-zu").focus();
+  const taste = e => {
+    if (e.key === "Escape") return zu();
+    if (/INPUT|TEXTAREA/.test(document.activeElement?.tagName || "")) return;
+    const schritt = 60;
+    if (e.key === "r" || e.key === "R") tun(e.shiftKey ? "links" : "rechts");
+    else if (e.key === "+" || e.key === "=") tun("ein"); else if (e.key === "-") tun("aus"); else if (e.key === "0") tun("passen");
+    else if (e.key.startsWith("Arrow") && z.s > 1.01) { z.x += e.key === "ArrowLeft" ? schritt : e.key === "ArrowRight" ? -schritt : 0; z.y += e.key === "ArrowUp" ? schritt : e.key === "ArrowDown" ? -schritt : 0; zeichne(true); }
+    else return;
+    e.preventDefault();
+  };
+  const zu = () => { f.hidden = true; f.innerHTML = ""; document.removeEventListener("keydown", taste); vorher?.focus?.(); };
   $("#bild-zu").onclick = zu; $("#zur-quelle").onclick = () => { f.hidden = true; document.removeEventListener("keydown", taste); }; f.onclick = e => { if (e.target === f) zu(); }; document.addEventListener("keydown", taste);
 }
 function toast(t) { const n = $("#toast"); n.textContent = t; n.hidden = false; clearTimeout(toast.z); toast.z = setTimeout(() => { n.hidden = true; }, 2600); }
